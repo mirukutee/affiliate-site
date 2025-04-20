@@ -1,0 +1,38 @@
+.anime-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+  }
+  
+  .anime-title {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 0.5em;
+  }
+  
+
+
+  
+  aside a {
+    display: block;
+    padding: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  
+  aside a:hover {
+    background: #2e2b2b;
+  }
+  
+
+  main {
+    background: #7e7b7b;       /* コンテンツ部分は白背景 */
+    color: #222;               /* 読みやすい文字色 */
+    border-radius: 8px;
+    padding: 2em;
+}
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>moomoo証券：初心者とプロにに最適な証券アプリの特徴とは？</title>
+  <title>moomoo証券：初心者とプロに最適な証券アプリの特徴とは？</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; }
@@ -16,14 +16,12 @@
     a { color: inherit; text-decoration: none; }
     h1.title { color: #333; }
 
-    /* スマホ表示用 */
     @media screen and (max-width: 768px) {
       aside {
-        display: none; /* サイドバーを非表示にする */
+        display: none;
       }
-
       main {
-        width: 100%; /* メインコンテンツを100%幅に広げる */
+        width: 100%;
       }
     }
   </style>
@@ -32,30 +30,18 @@
 
   <header>
     <div class="wrapper">
-    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-  </div>
+      <h1><a href="index.html">簡潔な紹介サイト</a></h1>
+    </div>
   </header>
 
-  <div class="container">
+  <div class="container wrapper">
     <aside id="sidebar"></aside>
-
-    <script>
-      fetch('sidebar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-        });
-    </script>
-<div class="container wrapper">
-
     <main>
-      <h2 class="title">moomoo証券：初心者とプロにに最適な証券アプリの特徴とは？</h2>
-
-
+      <h2 class="title">moomoo証券：初心者とプロに最適な証券アプリの特徴とは？</h2>
 
       <div class="anime-item">
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl000od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
-          <img src="https://h.accesstrade.net/sp/rr?rk=0100pnl000od67" alt="moomoo証券【WEB】" style="width: 500px; height: auto;">
+        <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl000od67" rel="nofollow" referrerpolicy="no-referrer">
+          <img src="https://h.accesstrade.net/sp/rr?rk=0100pnl000od67" alt="moomoo証券の広告バナー" style="width: 500px; height: auto;">
         </a>
         <h3>初心者やプロにもおすすめのmoomoo証券について</h3>
         <p>
@@ -64,9 +50,8 @@
         </p>
       </div>
 
-
       <div class="anime-item">
-        <img src="moomoo/stock-exchange-3972311_640.jpg" width="300" height="200" alt="証券のイメージ">
+        <img src="moomoo/stock-exchange-3972311_640.jpg" width="300" height="200" alt="証券取引のイメージ">
         <h4>そもそも「証券」ってなに？</h4>
         <p>
           証券とは、株や債券などの「お金の代わりになる権利」のことです。<br>
@@ -74,7 +59,6 @@
           つまり、証券会社は「投資の入り口」となる存在です。
         </p>
       </div>
-
 
       <div class="anime-item">
         <h5>【初心者向け】moomoo証券がおすすめな理由</h5>
@@ -91,22 +75,26 @@
           <li>その他にもお得なキャンペーン多数実施中！</li>
         </ul>
         <p>気になった方はこちらの広告から無料で口座開設できます！</p>
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl100od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
-          <img src="https://h.accesstrade.net/sp/rr?rk=0100pnl100od67" alt="moomoo証券【WEB】" style="width: 750px; height: auto;" aria-label="moomoo証券の口座開設ページへ">
+        <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl100od67" rel="nofollow" referrerpolicy="no-referrer">
+          <img src="https://h.accesstrade.net/sp/rr?rk=0100pnl100od67" alt="moomoo証券の公式口座開設バナー" style="width: 750px; height: auto;">
         </a>
       </div>
-
-
     </main>
   </div>
 
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  </script>
 
   <footer>
     <div class="wrapper">
-    &copy; 2025 サイト名 All Rights Reserved.
-  </div>
+      &copy; 2025 サイト名 All Rights Reserved.
+    </div>
   </footer>
-
 
 </body>
 </html>

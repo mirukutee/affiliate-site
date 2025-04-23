@@ -121,3 +121,255 @@ img {
     font-size: 1.2em;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダー・フッター */
+header, footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: 50px;
+  margin-top: auto;
+}
+
+/* レイアウト */
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+aside {
+  width: 250px;
+  background: #e2e2e2;
+  padding: 1em;
+  border-right: 1px solid #ccc;
+}
+
+main {
+  flex: 1;
+  background: #7e7b7b;
+  color: #222;
+  padding: 1em;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* カード表示 */
+.anime-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+}
+
+.anime-title {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-top: 0.5em;
+}
+
+/* テキスト・リンク装飾 */
+h2.title {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #f39c12;
+}
+
+aside a {
+  display: block;
+  padding: 8px;
+  background: #ddd;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+aside a:hover {
+  background: #2e2b2b;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  h2, h3, h4, h5 {
+    font-size: 1.2em;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダー・フッター */
+header, footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: 50px;
+  margin-top: auto;
+}
+
+/* レイアウト */
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+aside {
+  width: 250px;
+  background: #e2e2e2;
+  padding: 1em;
+  border-right: 1px solid #ccc;
+}
+
+main {
+  flex: 1;
+  background: #7e7b7b;
+  color: #222;
+  padding: 1em;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* カード表示 */
+.anime-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+}
+
+.anime-title {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-top: 0.5em;
+}
+
+/* テキスト・リンク装飾 */
+h2.title {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #f39c12;
+}
+
+aside a {
+  display: block;
+  padding: 8px;
+  background: #ddd;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+aside a:hover {
+  background: #2e2b2b;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  h2, h3, h4, h5 {
+    font-size: 1.2em;
+  }
+}

@@ -44,6 +44,15 @@ aside a:hover {
   color: #fff;
 }
 
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
 /* フッター */
 footer {
   background: #333;
@@ -89,6 +98,13 @@ a:hover {
   body {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 768px) {
+    main {
+      margin-top: 80px; /* headerの高さと合わせて調整。必要に応じて増減 */
+    }
+  }
+  
 
   .container {
     flex-direction: column;

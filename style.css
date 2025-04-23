@@ -117,3 +117,11 @@ a:hover {
     font-size: 1.2em;
   }
 }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1em; /* スマホの余白用に少しだけ内側に余裕つけるとGood */
+}
+

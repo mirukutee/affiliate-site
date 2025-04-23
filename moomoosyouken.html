@@ -15,6 +15,16 @@
     <aside id="sidebar"></aside>
 
     <main>
+
+      <script>
+        fetch('sidebar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('sidebar').innerHTML = data;
+          });
+      </script>
+
+
       <h2 class="title">moomoo証券：初心者とプロに最適な証券アプリの特徴とは？</h2>
 
       <div class="anime-item">

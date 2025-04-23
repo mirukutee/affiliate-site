@@ -1,114 +1,66 @@
-/* リセットと基本設定 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-/* 全体のレイアウト設定 */
 html, body {
   height: 100%;
-  margin: 0;
   font-family: sans-serif;
 }
 
-/* 全体のレイアウト */
 body {
-  display: 0;
-  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ヘッダー・フッター */
+header, footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+footer {
+  height: 50px;
+  margin-top: auto;
+}
 
+/* レイアウト */
 .container {
   display: flex;
   flex: 1;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
-/* メインコンテンツ */
-/* メイン */
+aside {
+  width: 250px;
+  background: #e2e2e2;
+  padding: 1em;
+  border-right: 1px solid #ccc;
+}
+
 main {
   flex: 1;
   background: #7e7b7b;
   color: #222;
-  border-radius: 8px;
-  padding: auto;
-  overflow-y: auto;
-}
-
-
-/* サイドバー */
-aside {
-  width: 250px;
-  background: #e2e2e2;
-  border-right: 2px solid #ccc;
   padding: 1em;
-}
-
-aside a {
-  display: block;
-  padding: 8px;
-  background: #ddd;
-  border-radius: 4px;
-  transition: background 0.2s;
-  text-decoration: none;
-  color: inherit;
-}
-
-aside a:hover {
-  background: #2e2b2b;
-  color: #fff;
-}
-
-
-/* 固定ヘッダー */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: #333;
-  color: #fff;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 固定フッター */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ヘッダーとフッターの間でスクロールするメイン領域 */
-.container {
-  flex: 1;
-  margin-top: 60px; /* ヘッダーの高さ分 */
-  margin-bottom: 50px; /* フッターの高さ分 */
   overflow-y: auto;
-  display: flex;
-  }
+  border-radius: 8px;
+}
 
-
-
-/* アニメアイテム */
+/* カード表示 */
 .anime-item {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-bottom: 2em;
 }
 
@@ -118,50 +70,54 @@ footer {
   margin-top: 0.5em;
 }
 
-/* 画像設定 */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 見出しなど */
+/* テキスト・リンク装飾 */
 h2.title {
   color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
   color: #f39c12;
 }
 
+aside a {
+  display: block;
+  padding: 8px;
+  background: #ddd;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+aside a:hover {
+  background: #2e2b2b;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* レスポンシブ対応 */
-
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  main {
-    margin-top: 80px; /* ←コレが効くようになる！ */
-    width: 100%;
+  aside {
+    display: none;
   }
 
   .container {
     flex-direction: column;
   }
 
-  aside {
-    display: none;
+  main {
+    width: 100%;
   }
 
   h2, h3, h4, h5 {
     font-size: 1.2em;
   }
 }
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 1em; /* スマホの余白用に少しだけ内側に余裕つけるとGood */
-}
-

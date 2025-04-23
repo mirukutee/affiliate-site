@@ -94,17 +94,16 @@ a:hover {
 }
 
 /* レスポンシブ対応 */
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 16px;
   }
 
-  @media screen and (max-width: 768px) {
-    main {
-      margin-top: 80px; /* headerの高さと合わせて調整。必要に応じて増減 */
-    }
+  main {
+    margin-top: 80px; /* ←コレが効くようになる！ */
+    width: 100%;
   }
-  
 
   .container {
     flex-direction: column;
@@ -112,10 +111,6 @@ a:hover {
 
   aside {
     display: none;
-  }
-
-  main {
-    width: 100%;
   }
 
   h2, h3, h4, h5 {

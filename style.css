@@ -39,3 +39,13 @@
 h2.title {
   color: #fff;
 }
+
+a:hover {
+  color: #f39c12;
+}
+
+
+aside {
+  background: #e2e2e2;
+  border-right: 2px solid #ccc;
+}

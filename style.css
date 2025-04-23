@@ -103,6 +103,11 @@ img {
   height: auto;
 }
 
+ul li {
+  margin-left: 1em;
+  text-indent: -0.5em;
+}
+
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
   aside {

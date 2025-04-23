@@ -15,33 +15,39 @@
     .anime-item img { max-width: 100%; height: auto; }
     a { color: inherit; text-decoration: none; }
     h1.title { color: #333; }
+
+    /* スマホ表示用 */
+    @media screen and (max-width: 768px) {
+      aside {
+        display: none; /* サイドバーを非表示にする */
+      }
+
+      main {
+        width: 100%; /* メインコンテンツを100%幅に広げる */
+      }
+    }
   </style>
 </head>
 <body>
-
 
   <header>
     <h1><a href="index.html">簡潔な紹介サイト</a></h1>
   </header>
 
-
   <div class="container">
-
-
     <aside id="sidebar"></aside>
 
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
-    });
-</script>
-
-
+    <script>
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+    </script>
 
     <main>
       <h2 class="title">moomoo証券：初心者とプロにに最適な証券アプリの特徴とは？</h2>
+
 
 
       <div class="anime-item">

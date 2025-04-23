@@ -15,8 +15,8 @@ html, body {
 
 /* 全体のレイアウト */
 body {
-  display: flex;
-  flex-direction: column;
+  display: 0;
+  font-family: sans-serif;
 }
 
 
@@ -33,7 +33,7 @@ main {
   background: #7e7b7b;
   color: #222;
   border-radius: 8px;
-  padding: 2em;
+  padding: auto;
   overflow-y: auto;
 }
 

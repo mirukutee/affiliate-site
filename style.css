@@ -65,7 +65,7 @@ aside {
     flex-direction: column;
   }
 
-  
+
   aside {
     width: 100%;
     margin-bottom: 1em;
@@ -84,4 +84,23 @@ img {
     font-size: 1.2em;
   }
 }
+
+aside {
+  width: 100%;
+  order: 2; /* mainの後に表示させる */
+  background: #f0f0f0;
+  padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+}
+
+
 

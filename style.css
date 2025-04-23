@@ -94,13 +94,11 @@ aside {
 
 @media screen and (max-width: 768px) {
   aside {
-    display: none;
+    display: none; /* サイドバーを非表示にする */
   }
 
   main {
-    width: 100%;
+    width: 100%; /* メインコンテンツを100%幅に広げる */
   }
 }
-
-
 

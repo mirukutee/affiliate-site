@@ -9,9 +9,16 @@
 /* 全体のレイアウト設定 */
 html, body {
   height: 100%;
+  margin: 0;
   font-family: sans-serif;
-  overflow: hidden; /* ページ全体にスクロールバーが出ないように */
 }
+
+/* 全体のレイアウト */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 .container {
@@ -20,13 +27,16 @@ html, body {
 }
 
 /* メインコンテンツ */
+/* メイン */
 main {
   flex: 1;
   background: #7e7b7b;
   color: #222;
   border-radius: 8px;
   padding: 2em;
+  overflow-y: auto;
 }
+
 
 /* サイドバー */
 aside {
@@ -51,6 +61,7 @@ aside a:hover {
   color: #fff;
 }
 
+
 /* 固定ヘッダー */
 header {
   position: fixed;
@@ -59,11 +70,11 @@ header {
   width: 100%;
   height: 60px;
   background: #333;
-  color: white;
+  color: #fff;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 /* 固定フッター */
@@ -74,12 +85,20 @@ footer {
   width: 100%;
   height: 50px;
   background: #333;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
+
+/* ヘッダーとフッターの間でスクロールするメイン領域 */
+.container {
+  flex: 1;
+  margin-top: 60px; /* ヘッダーの高さ分 */
+  margin-bottom: 50px; /* フッターの高さ分 */
+  overflow-y: auto;
+  display: flex;
+
 
 
 /* アニメアイテム */

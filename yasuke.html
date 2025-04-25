@@ -22,20 +22,23 @@
     <header>
       <h1><a href="index.html">簡潔な紹介サイト</a></h1>
     </header>
-  
+
     <div class="container">
-      <aside>
-        <nav>
-          <ul>
-            <li><a href="anime2025.html">2025年春アニメ新作紹介</a></li>
-            <li><a href="yasuke.html">弥助を語るページ</a></li>
-            <li><a href="moomoosyouken.html">moomoo証券紹介</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <aside id="sidebar"></aside>
   
       <main>
-      `
+  
+        <script>
+          fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('sidebar').innerHTML = data;
+            });
+        </script>
+  
+  
+      <main>
+      
   <h1>伝説の黒人侍！！弥助！！！</h1>
 
         <div class="anime-item">
@@ -101,6 +104,12 @@
     <footer>
       &copy; 2025 サイト名 All Rights Reserved.
     </footer>
-  
+    <script>
+      fetch('sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
   </body>
   </html>

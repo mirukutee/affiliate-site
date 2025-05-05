@@ -1,30 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja"></html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2025年春のおすすめアニメを一覧でご紹介します。</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
+  </header>
 
-<link rel="stylesheet" href="style.css">
+  <div class="container">
+    <aside id="sidebar"></aside>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>サイト名 - アフィリエイト紹介サイト</title>
-    <style>
-      body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; }
-      header, footer { background: #333; color: #fff; padding: 1em; text-align: center; }
-      .container { display: flex; flex: 1; }
-      aside { width: 200px; background: #f4f4f4; padding: 1em; }
-      main { flex: 1; padding: 1em; }
-      .product { margin-bottom: 2em; }
-      .product img { max-width: 100%; height: auto; }
-      a { color: inherit; text-decoration: none; }
-    </style>
-  </head>
-  <body>
-  
-    <header>
-      <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-    </header>
-  
-    <div class="container">
-      <aside id="sidebar"></aside>
+    <main>
 
       <script>
         fetch('sidebar.html')
@@ -33,11 +23,9 @@
             document.getElementById('sidebar').innerHTML = data;
           });
       </script>
-      
-  
-      <main>
-      `
-  <h1>2025年春アニメ新作紹介</h1>
+
+
+      <h2 class="title">おすすめアニメ一覧</h2>
 
         <div class="anime-item">
           <img src="アニメ紹介画像/ウィッチウォッチ.webp">

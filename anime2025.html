@@ -97,6 +97,13 @@
       &copy; 2025 サイト名 All Rights Reserved.
     </footer>
   
+    <script>
+      fetch('sidebar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+        });
+    </script>
   </body>
   </html>
   

@@ -30,15 +30,14 @@
 
     <main>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-  });
-</script>
+      <script>
+        fetch('sidebar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('sidebar').innerHTML = data;
+          });
+      </script>
+
 
       <h2 class="title">簡潔に紹介するサイト</h2>
 

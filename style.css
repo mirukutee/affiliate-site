@@ -14,18 +14,6 @@ body {
   flex-direction: column;
 }
 
-.container {
-  display: flex;
-}
-
-#sidebar {
-  width: 250px;
-}
-
-main {
-  flex: 1;
-}
-
 /* ヘッダー・フッター */
 header, footer {
   background: #333;
@@ -55,6 +43,7 @@ aside {
   background: #e2e2e2;
   padding: 1em;
   border-right: 1px solid #ccc;
+  order: 1; /* PCでは左に表示 */
 }
 
 main {
@@ -64,6 +53,7 @@ main {
   padding: 1em;
   overflow-y: auto;
   border-radius: 8px;
+  order: 2;
 }
 
 /* カード表示 */
@@ -133,16 +123,22 @@ li {
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
-  aside {
-    display: none;
-  }
-
   .container {
     flex-direction: column;
   }
 
   main {
+    order: 1;
     width: 100%;
+  }
+
+  aside {
+    order: 2;
+    display: block;
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
   }
 
   h1, h2, h3, h4, h5, h6 {

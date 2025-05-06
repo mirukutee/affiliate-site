@@ -133,11 +133,12 @@ li {
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
-  /* サイドバーを非表示にしない */
+  /* サイドバーを表示する */
   aside {
     display: block;
     width: 100%;
     margin-top: 1em;
+    order: 2; /* サイドバーがメインコンテンツの後に来るように */
   }
 
   .container {
@@ -146,10 +147,12 @@ li {
 
   main {
     width: 100%;
+    order: 1; /* メインコンテンツがサイドバーの前に来るように */
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
   }
 }
+
 

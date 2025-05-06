@@ -1,13 +1,68 @@
 <!-- sidebar.html -->
-<nav>
-    <ul>
-      <li><a href="anime2025.html">2025年春アニメ新作紹介</a></li>
-      <li><a href="moomoosyouken.html">moomoo証券紹介</a></li>
-      <li><a href="matui.html">松井証券のiDeCoとは？</a></li>
-      <li><a href="matuikabu.html">初心者が投資を始めやすい松井証券</a></li>
-      <li><a href="saxo.html">上級者向け。米国株式に特化したサクソバンク証券</a></li>
-      <li><a href="neitebukyannpu.html">英会話ネイティブキャンプ登録でアマギフ5,000貰える</a></li>
-      <li><a href="ryokou.html">おすすめの旅行サイトまとめて紹介</a></li>
-    </ul>
-  </nav>
- 
+  <style>
+    .dropdown {
+      margin-bottom: 10px;
+    }
+  
+    .dropdown-button {
+      background-color: #eee;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  
+    .dropdown-content {
+      display: none;
+      padding-left: 15px;
+    }
+  
+    .dropdown-content a {
+      display: block;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+  </style>
+  
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown('anime')">アニメ</button>
+    <div class="dropdown-content" id="anime">
+      <a href="anime2025.html">2025年春アニメ新作紹介</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown('securities')">証券</button>
+    <div class="dropdown-content" id="securities">
+      <a href="moomoosyouken.html">moomoo証券紹介</a>
+      <a href="matui.html">松井証券のiDeCoとは？</a>
+      <a href="matuikabu.html">初心者向け松井証券</a>
+      <a href="saxo.html">サクソバンク証券</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown('English')">英会話</button>
+    <div class="dropdown-content" id="English">
+      <a href="neitebukyannpu.html">ネイティブキャンプ紹介</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown('travel')">旅行</button>
+    <div class="dropdown-content" id="travel">
+      <a href="ryokou.html">おすすめ旅行サイト一覧</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  
+
+  

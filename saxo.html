@@ -29,16 +29,6 @@
     <aside id="sidebar"></aside>
 
     <main>
-
-      <script>
-        fetch('sidebar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-          });
-      </script>
-
-
       
     <h2 class="title">米国株式の取引に特化した証券。サクソバンク証券とは？</h2>
       <div class="securities">
@@ -100,11 +90,14 @@
   </footer>
 
   <script>
-    fetch('sidebar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sidebar').innerHTML = html;
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+    });
   </script>
+  
 </body>
 </html>

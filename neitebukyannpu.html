@@ -31,15 +31,6 @@
 
     <main>
 
-      <script>
-        fetch('sidebar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-          });
-      </script>
-
-
       
     <h2 class="title">オンライン英会話　ネイティブキャンプ</h2>
       <div class="English">
@@ -104,11 +95,14 @@
   </footer>
 
   <script>
-    fetch('sidebar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sidebar').innerHTML = html;
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+    });
   </script>
+  
 </body>
 </html>

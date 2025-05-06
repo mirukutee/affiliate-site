@@ -31,16 +31,6 @@
 
     <main>
 
-
-      <script>
-        fetch('sidebar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-          });
-      </script>
-
-
       <h2 class="title">おすすめの旅行サイト一覧</h2>
 
         <div class="travel">
@@ -166,12 +156,15 @@
           </footer>
         
           <script>
-            fetch('sidebar.html')
-              .then(res => res.text())
-              .then(html => {
-                document.getElementById('sidebar').innerHTML = html;
-              });
+            document.addEventListener("DOMContentLoaded", function() {
+              fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById('sidebar').innerHTML = data;
+                });
+            });
           </script>
+          
         </body>
         </html>
         

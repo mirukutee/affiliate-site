@@ -30,16 +30,7 @@
 
     <main>
 
-      <script>
-        fetch('sidebar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-          });
-      </script>
-
-
-      
+    
     <h2 class="title">初心者に優しく、しかもお得に投資をはじめる松井</h2>
       <div class="securities">
         <a href="https://h.accesstrade.net/sp/cc?rk=0100p6px00od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100p6px00od67" alt="松井証券" border="0" /></a>
@@ -94,11 +85,14 @@
   </footer>
 
   <script>
-    fetch('sidebar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('sidebar').innerHTML = html;
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+    });
   </script>
+  
 </body>
 </html>

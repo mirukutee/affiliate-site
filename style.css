@@ -104,6 +104,10 @@ main {
   text-decoration: underline;
 }
 
+.dropdown-content a { 
+  color: #0077cc; 
+}
+
 /* カード表示 */
 .anime-item {
   margin-bottom: 30px;

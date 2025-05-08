@@ -184,6 +184,13 @@ main {
   margin-bottom: 6px;
   line-height: 1.5;
 }
+ 
+
+/*お試し色指定 */
+.font_red {
+  color: #f32121;     /* 文字色指定 */
+}
+
 
 /* テキスト・リンク装飾 */
 p {

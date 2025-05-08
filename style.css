@@ -44,10 +44,26 @@ footer {
 
 /* サイドバー */
 aside {
-  width: 250px;
-  background: #e2e2e2;
+  background: #2c3e50; /* 落ち着いたダークネイビー */
   padding: 1em;
-  border-right: 1px solid #ccc;
+  border-right: none;
+  color: #f5f5f5;
+}
+
+aside a {
+  display: block;
+  padding: 10px 12px;
+  background: #34495e; /* 少し明るめのネイビー */
+  margin-bottom: 0.5em;
+  border-radius: 6px;
+  color: #ecf0f1;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+aside a:hover {
+  background: #1abc9c; /* アクセントカラー：ティール */
+  color: #fff;
 }
 
 /* メインコンテンツ */
@@ -102,10 +118,6 @@ main {
 
 .dropdown-content a:hover {
   text-decoration: underline;
-}
-
-.dropdown-content a { 
-  color: #0077cc; 
 }
 
 /* カード表示 */

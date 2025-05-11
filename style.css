@@ -275,6 +275,15 @@ tbody > tr:nth-of-type(even) {
   background-color: rgb(237 238 242);
 }
 
+/*　ulの点を消す*/
+ul{
+  padding-left:0;
+}
+
+li{
+  list-style:none;
+}
+
 
 
 /* レスポンシブ対応 */

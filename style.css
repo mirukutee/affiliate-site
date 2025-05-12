@@ -20,6 +20,12 @@ html, body {
   min-height: 100vh;
 }
 
+/* 画像の設定 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ノイズパターンをオーバーレイとして追加 */
 body::before {
   content: "";

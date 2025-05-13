@@ -240,10 +240,6 @@ li{
     flex-grow: 1; /* メインコンテンツを広げる */
   }
 
-  /* 見出しサイズ調整 */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 1.2em;
-  }
 
   /* ドロップダウンメニュー */
   .dropdown-content {
@@ -262,7 +258,25 @@ li{
   body {
   font-size: 85%;
 }
+
 .anime-item p {
   font-size: 0.85rem;
 }
+
+ /*見出しサイズ*/
+  .anime-item h1 {
+    font-size: 1.4em;
+  }
+  .anime-item h2 {
+    font-size: 1.2em;
+  }
+  .anime-item h3 {
+    font-size: 1.1em;
+  }
+  .anime-item h4,
+  .anime-item h5,
+  .anime-item h6 {
+    font-size: 1em;
+  }
+
 }

@@ -257,7 +257,11 @@ li{
   /* 文字サイズ*/
   body {
   font-size: 85%;
-}
+   line-height: 1.5;  /* 行間を広げて読みやすく */
+    letter-spacing: 0.03em; /* 字間もほんのり */
+    padding: 0.1; /* スマホ左右に少し余白 */
+  }
+
 
 .anime-item p {
   font-size: 0.85rem;

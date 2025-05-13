@@ -260,9 +260,9 @@ li{
 
   /* 文字サイズ*/
   body {
-  font-size: 95%;
+  font-size: 10%;
 }
 .anime-item p {
-  font-size: 0.95rem;
+  font-size: 0.10rem;
 }
 }

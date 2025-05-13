@@ -13,7 +13,6 @@ html, body {
   display: flex;
   flex-direction: column;
 
-  /* 背景色を明るく落ち着いたグラデーションに */
   background: linear-gradient(135deg, #9ec5ff, #d9e2ec);
   background-attachment: fixed;
   position: relative;
@@ -39,7 +38,6 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
 
 header, footer {
   background-color: #2c3e50;
@@ -71,16 +69,17 @@ footer {
 
 /* サイドバー */
 aside {
-  background: #506171; /* 落ち着いたダークネイビー */
+  background: #506171;
   padding: 1em;
   border-right: none;
   color: #5e5a5a;
+  width: 250px; /* 明確な幅を指定 */
 }
 
 aside a {
   display: block;
   padding: 10px 12px;
-  background: #6a92b9; /* 少し明るめのネイビー */  
+  background: #6a92b9;
   margin-bottom: 0.5em;
   border-radius: 6px;
   color: #ecf0f1;
@@ -89,7 +88,7 @@ aside a {
 }
 
 aside a:hover {
-  background: #1abc9c; /* アクセントカラー：ティール */
+  background: #1abc9c;
   color: #fff;
 }
 
@@ -101,53 +100,10 @@ main {
   padding: 1em;
   overflow-y: auto;
   border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ドロップダウンボタン */
-.dropdown {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.dropdown-button {
-  background-color: #f0f0f0;
-  padding: 12px 16px;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 16px;
-  transition: background 0.3s, transform 0.2s ease;
-}
-
-.dropdown-button:hover {
-  background-color: #e0e0e0;
-  transform: translateX(5px);
-}
-
-.dropdown-content {
-  display: none;
-  padding: 10px 15px;
-  background-color: #fcfcfc;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 8px 0;
-  text-decoration: none;
-  color: #0077cc;
-}
-
-.dropdown-content a:hover {
-  text-decoration: underline;
-}
-
-/* カード表示 */
 .anime-item {
   margin-bottom: 30px;
   padding: 20px;
@@ -190,15 +146,11 @@ main {
   margin-bottom: 6px;
   line-height: 1.5;
 }
- 
 
-/*お試し色指定 */
 .font_red {
-  color: #f32121;     /* 文字色指定 */
+  color: #f32121;
 }
 
-
-/* テキスト・リンク装飾 */
 p {
   margin-bottom: 1.5em;
 }
@@ -219,32 +171,6 @@ a {
 
 a:hover {
   color: #f39c12;
-}
-
-aside a {
-  display: block;
-  padding: 8px;
-  background: #ddd;
-  margin-bottom: 0.5em;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-aside a:hover {
-  background: #2e2b2b;
-  color: #fff;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-li {
-  margin-bottom: 1em;
-  line-height: 1.7;
-  margin-left: 1em;
-  text-indent: -0.5em;
 }
 
 /* 表 */
@@ -290,25 +216,31 @@ li{
   list-style:none;
 }
 
-
-
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
+  /* サイドバー */
   aside {
     width: 100%;
     margin-top: 1em;
     order: 2;
   }
 
+  /* メインコンテナ */
   .container {
     flex-direction: column;
+    width: 100%;  /* コンテナを100%にして広げる */
+    padding: 0 10px;  /* サイドに余白を追加 */
   }
 
+  /* メイン部分 */
   main {
     width: 100%;
     order: 1;
+    padding: 1em; /* 少しの余白を追加 */
+    flex-grow: 1; /* メインコンテンツを広げる */
   }
 
+  /* 見出しサイズ調整 */
   h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
   }
@@ -325,4 +257,12 @@ li{
     max-height: 200px;
     opacity: 1;
   }
+
+  /* 文字サイズ*/
+  body {
+  font-size: 95%;
+}
+.anime-item p {
+  font-size: 0.95rem;
+}
 }

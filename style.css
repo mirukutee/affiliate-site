@@ -114,7 +114,7 @@ aside a:hover {
 }
 
 .dropdown-button {
-  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  background: linear-gradient(145deg, #3a84f1, #ffffff);
   border-radius: 6px;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);

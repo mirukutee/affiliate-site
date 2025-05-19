@@ -169,15 +169,15 @@ aside a:hover {
 }
 
 .dropdown-content a {
-  border-bottom: 1px solid #4fe210;
+  border-bottom: 1px solid #eee;
   padding: 10px 0;
   display: block;
-  color: #333;
+  color: #ffffff;
   transition: background 0.2s;
 }
 
 .dropdown-content a:hover {
-  background: #f0f8ff;
+  background: #07dd47;
 }
 
 /* メインコンテンツ */

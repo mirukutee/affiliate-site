@@ -1,25 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".dropdown-button");
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
 
-  buttons.forEach(button => {
-    button.addEventListener("click", function () {
-      const content = this.nextElementSibling;
+      // ドロップダウンのイベントリスナーを設定
+      const buttons = document.querySelectorAll(".dropdown-button");
 
-      if (content.classList.contains("open")) {
-        content.classList.remove("open");
-        content.style.maxHeight = null;
-      } else {
-        // この行を削除して↓
-        // document.querySelectorAll(".dropdown-content.open").forEach(c => c.classList.remove("open"));
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          const content = this.nextElementSibling;
 
-        content.classList.add("open");
+          if (content.classList.contains("open")) {
+            content.classList.remove("open");
+            content.style.maxHeight = null;
+          } else {
+            // すでに開いているものを閉じる
+            document.querySelectorAll(".dropdown-content.open").forEach(c => {
+              c.classList.remove("open");
+              c.style.maxHeight = null;
+            });
 
-        if (window.innerWidth > 768) {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          content.style.maxHeight = "none";
-        }
-      }
+            content.classList.add("open");
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      });
     });
-  });
 });

@@ -161,7 +161,7 @@ aside a:hover {
   border-radius: 4px;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb {
-  background-color: #007acc;
+  background-color: #f6f8f9;
   border-radius: 4px;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb:hover {

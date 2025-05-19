@@ -108,19 +108,19 @@ aside a:hover {
   margin-bottom: 15px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-button {
   background: linear-gradient(145deg, #f0f0f0, #ffffff);
   border-radius: 6px;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-size: 16px;
   color: #333;
-  padding: 10px;
+  padding: 10px 15px;
   width: 100%;
   text-align: left;
   cursor: pointer;
@@ -135,47 +135,51 @@ aside a:hover {
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
   background-color: #fafafa;
-  padding-left: 16px;
+  padding: 0 16px;
+  opacity: 0;
 }
 
 .dropdown-content.open {
-  max-height: calc(100vh - 150px);
-  overflow-y: auto;
+  opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
+
+  /* PC用：スクロール対応 */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+
+  /* スクロールバー見やすく */
   scrollbar-width: thin;
   scrollbar-color: #007acc #f0f0f0;
-  box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.1);
 }
 
 .dropdown-content.open::-webkit-scrollbar {
   width: 8px;
 }
-
 .dropdown-content.open::-webkit-scrollbar-track {
   background: #f0f0f0;
   border-radius: 4px;
 }
-
 .dropdown-content.open::-webkit-scrollbar-thumb {
   background-color: #007acc;
   border-radius: 4px;
 }
-
 .dropdown-content.open::-webkit-scrollbar-thumb:hover {
   background-color: #005f99;
 }
 
 .dropdown-content a {
   border-bottom: 1px solid #eee;
-  padding: 10px 8px;
-  transition: background 0.2s;
+  padding: 10px 0;
   display: block;
+  color: #333;
+  transition: background 0.2s;
 }
 
 .dropdown-content a:hover {
   background: #f0f8ff;
 }
+
 
 /* メインコンテンツ */
 main {
@@ -334,38 +338,9 @@ li {
   }
 
   /* ドロップダウンメニュー */
-  .dropdown-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.2s ease-in-out;
-  }
-
   .dropdown-content.open {
-    max-height: calc(100vh - 150px); /* 見切れ防止 */
-    opacity: 1;
-    overflow-y: auto;
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    /* スクロールバーの装飾（モバイル対応） */
-    scrollbar-width: thin;
-    scrollbar-color: #007acc #f0f0f0;
-  }
-
-  .dropdown-content.open::-webkit-scrollbar {
-    width: 8px;
-  }
-  .dropdown-content.open::-webkit-scrollbar-track {
-    background: #f0f0f0;
-    border-radius: 4px;
-  }
-  .dropdown-content.open::-webkit-scrollbar-thumb {
-    background-color: #007acc;
-    border-radius: 4px;
-  }
-  .dropdown-content.open::-webkit-scrollbar-thumb:hover {
-    background-color: #005f99;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 
   /* 文字サイズと可読性 */

@@ -10,7 +10,7 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(135deg, #9ec5ff, #d9e2ec);
+  background: linear-gradient(135deg, #206ee2, #d9e2ec);
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
@@ -70,7 +70,7 @@ footer {
 .sidebar {
   width: 240px;
   padding: 10px;
-  background-color: #f2f2f2;
+  background-color: #6c6b74;
   border-right: 1px solid #ccc;
   height: 100vh;
   overflow-y: auto;
@@ -134,7 +134,7 @@ aside a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
-  background-color: #fafafa;
+  background-color: #10e028;
   padding: 0 16px;
   opacity: 0;
 }
@@ -304,6 +304,15 @@ ul {
 
 li {
   list-style: none;
+}
+/* アイコン */
+.sns-icons a {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+.sns-icons a:hover {
+  color: #1da1f2;
 }
 
 @media screen and (max-width: 768px) {

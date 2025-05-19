@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>様々な商品サービスを、簡潔にご紹介するサイト</title>
 
-  <meta property="og:title" content="様々な商品サービスを、簡潔にご紹介するサイト" />
+<meta property="og:title" content="様々な商品サービスを、簡潔にご紹介するサイト" />
 <meta property="og:description" content="当サイトは、各種商品・サービスの要点を簡潔にまとめ、短時間で理解できる情報提供を目的として運営しております。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/index.html" />
@@ -19,6 +19,8 @@
 <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
 
   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 </head>
 
 <body>
@@ -49,16 +51,18 @@
             &copy; 2025 サイト名 All Rights Reserved.
           </footer>
         
-          <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              fetch('sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                  document.getElementById('sidebar').innerHTML = data;
-                });
+           <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         fetch('sidebar.html')
+         .then(response => response.text())
+          .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
             });
-          </script>
-          <script src="sidebar.js"></script>
+          });
+         </script>
+
+          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
+        <script src="sidebar.js"></script>
         
         </body>
 

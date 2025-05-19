@@ -19,6 +19,7 @@
 <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/syouken/sumaho.webp" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
  
@@ -149,16 +150,18 @@
             &copy; 2025 サイト名 All Rights Reserved.
           </footer>
         
-          <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              fetch('sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                  document.getElementById('sidebar').innerHTML = data;
-                });
+           <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         fetch('sidebar.html')
+         .then(response => response.text())
+          .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
             });
-          </script>
-          <script src="sidebar.js"></script>
+          });
+         </script>
+
+          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
+        <script src="sidebar.js"></script>
           
         </body>
         </html>

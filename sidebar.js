@@ -5,21 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const content = this.nextElementSibling;
 
-      // 展開済みなら閉じる
       if (content.classList.contains("open")) {
         content.classList.remove("open");
         content.style.maxHeight = null;
       } else {
-        // 一度すべて閉じる（状態リセット）
-        document.querySelectorAll(".dropdown-content.open").forEach(c => {
-          c.classList.remove("open");
-          c.style.maxHeight = null;
-        });
+        // この行を削除して↓
+        // document.querySelectorAll(".dropdown-content.open").forEach(c => c.classList.remove("open"));
 
-        // クリックされた項目だけ展開
         content.classList.add("open");
 
-        // スクロール高さを設定（モバイルは max-height 無制限）
         if (window.innerWidth > 768) {
           content.style.maxHeight = content.scrollHeight + "px";
         } else {
@@ -29,4 +23,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

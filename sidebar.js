@@ -1,4 +1,6 @@
 function toggleDropdown(id) {
-  const content = document.getElementById(id);
-  content.classList.toggle('open');
+  document.querySelectorAll('.dropdown-content').forEach(el => {
+    if (el.id !== id) el.classList.remove('open');
+  });
+  document.getElementById(id).classList.toggle('open');
 }

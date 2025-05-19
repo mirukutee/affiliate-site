@@ -161,11 +161,11 @@ aside a:hover {
   border-radius: 4px;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb {
-  background-color: #042c92;
+  background-color: #3a84f1;
   border-radius: 4px;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb:hover {
-  background-color: #042c92;
+  background-color: #3a84f1;
 }
 
 .dropdown-content a {

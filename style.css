@@ -1,3 +1,4 @@
+/* 共通リセット */
 * {
   margin: 0;
   padding: 0;
@@ -6,18 +7,14 @@
 
 html, body {
   height: 100%;
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 100px; /* スクロール時の余白確保 */
-
   background: linear-gradient(135deg, #9ec5ff, #d9e2ec);
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 /* 画像の設定 */
@@ -26,7 +23,7 @@ img {
   height: auto;
 }
 
-/* ノイズパターンをオーバーレイとして追加 */
+/* ノイズパターンのオーバーレイ */
 body::before {
   content: "";
   position: absolute;
@@ -40,6 +37,7 @@ body::before {
   z-index: 0;
 }
 
+/* ヘッダーとフッター */
 header, footer {
   background-color: #2c3e50;
   color: white;
@@ -85,9 +83,8 @@ footer {
 aside {
   background: #506171;
   padding: 1em;
-  border-right: none;
   color: #5e5a5a;
-  width: 250px; /* 明確な幅を指定 */
+  width: 250px;
 }
 
 aside a {
@@ -107,7 +104,6 @@ aside a:hover {
 }
 
 /* ドロップダウンリスト */
-
 .dropdown {
   margin-bottom: 15px;
   border-radius: 8px;
@@ -124,8 +120,11 @@ aside a:hover {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   font-size: 16px;
   color: #333;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
 }
-
 
 .dropdown-button:hover {
   background-color: #e0e0e0;
@@ -140,16 +139,38 @@ aside a:hover {
 }
 
 .dropdown-content.open {
-  max-height: 500px; /* 必要に応じて調整 */
+  max-height: calc(100vh - 150px);
   overflow-y: auto;
   padding-top: 8px;
   padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #007acc #f0f0f0;
+  box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.1);
+}
+
+.dropdown-content.open::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content.open::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.dropdown-content.open::-webkit-scrollbar-thumb {
+  background-color: #007acc;
+  border-radius: 4px;
+}
+
+.dropdown-content.open::-webkit-scrollbar-thumb:hover {
+  background-color: #005f99;
 }
 
 .dropdown-content a {
   border-bottom: 1px solid #eee;
   padding: 10px 8px;
   transition: background 0.2s;
+  display: block;
 }
 
 .dropdown-content a:hover {
@@ -244,6 +265,7 @@ table {
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  width: 100%;
 }
 
 caption {
@@ -271,78 +293,94 @@ tbody > tr:nth-of-type(even) {
   background-color: rgb(237 238 242);
 }
 
-/*　ulの点を消す */
-ul{
-  padding-left:0;
+/* リストのスタイル */
+ul {
+  padding-left: 0;
 }
 
-li{
-  list-style:none;
+li {
+  list-style: none;
 }
 
-/* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
   /* サイドバー */
-  aside {
-    width: 100%;
-    margin-top: 1em;
-    order: 2;
-  }
-.sidebar {
+  .sidebar {
     width: 100%;
     height: auto;
     position: relative;
     border-right: none;
     border-bottom: 1px solid #ccc;
+    z-index: 10;
   }
+
+  aside {
+    width: 100%;
+    margin-top: 1em;
+    order: 2;
+  }
+
   /* メインコンテナ */
   .container {
     flex-direction: column;
-    width: 100%;  /* コンテナを100%にして広げる */
-    padding: 0 10px;  /* サイドに余白を追加 */
+    width: 100%;
+    padding: 0 10px;
   }
 
-  /* メイン部分 */
   main {
     width: 100%;
     order: 1;
-    padding: 1em; /* 少しの余白を追加 */
-    flex-grow: 1; /* メインコンテンツを広げる */
+    padding: 1em;
+    flex-grow: 1;
   }
 
-
   /* ドロップダウンメニュー */
-    .dropdown-content {
+  .dropdown-content {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, opacity 0.2s ease-in-out;
   }
 
-  .dropdown:hover .dropdown-content {
-    max-height: 200px;
-    opacity: 1;
-  }
-
   .dropdown-content.open {
-    max-height: 500px; /* 任意調整 */
+    max-height: calc(100vh - 150px); /* 見切れ防止 */
     opacity: 1;
     overflow-y: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    /* スクロールバーの装飾（モバイル対応） */
+    scrollbar-width: thin;
+    scrollbar-color: #007acc #f0f0f0;
   }
 
-  /* 文字サイズ*/
+  .dropdown-content.open::-webkit-scrollbar {
+    width: 8px;
+  }
+  .dropdown-content.open::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  .dropdown-content.open::-webkit-scrollbar-thumb {
+    background-color: #007acc;
+    border-radius: 4px;
+  }
+  .dropdown-content.open::-webkit-scrollbar-thumb:hover {
+    background-color: #005f99;
+  }
+
+  /* 文字サイズと可読性 */
   body {
-  font-size: 85%;
-   line-height: 1.5;  /* 行間を広げて読みやすく */
-    letter-spacing: 0.03em; /* 字間もほんのり */
-    padding: 0.1; /* スマホ左右に少し余白 */
+    font-size: 85%;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    padding: 0.1em;
   }
 
-.anime-item p {
-  font-size: 0.85rem;
-}
+  .anime-item p {
+    font-size: 0.85rem;
+  }
 
- /*見出しサイズ*/
+  /* 見出しサイズ */
   .anime-item h1 {
     font-size: 1.4em;
   }
@@ -358,16 +396,14 @@ li{
     font-size: 1em;
   }
 
-   /*領域の設定*/
-.anime-item {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  width: 100%;
-  box-sizing: border-box; /* paddingを含めて幅を計算する */
-}
-
-
+  /* アニメアイテム領域調整 */
+  .anime-item {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

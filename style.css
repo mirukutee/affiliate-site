@@ -143,8 +143,42 @@ aside a:hover {
   opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
+
+  /* PC用：スクロール対応 */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+
+  /* スクロールバー見やすく */
+  scrollbar-width: thin;
+  scrollbar-color: #007acc #f0f0f0;
 }
 
+.dropdown-content.open::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown-content.open::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.dropdown-content.open::-webkit-scrollbar-thumb {
+  background-color: #007acc;
+  border-radius: 4px;
+}
+.dropdown-content.open::-webkit-scrollbar-thumb:hover {
+  background-color: #005f99;
+}
+
+.dropdown-content a {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  display: block;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: #f0f8ff;
+}
 
 /* メインコンテンツ */
 main {

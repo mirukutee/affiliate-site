@@ -150,7 +150,7 @@ aside a:hover {
 
   /* スクロールバー見やすく */
   scrollbar-width: thin;
-  scrollbar-color: #007acc #f0f0f0;
+  scrollbar-color: #3a84f1, #ffffff;
 }
 
 .dropdown-content.open::-webkit-scrollbar {
@@ -172,12 +172,12 @@ aside a:hover {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
   display: block;
-  color: #ffffff;
+  color: #333;
   transition: background 0.2s;
 }
 
 .dropdown-content a:hover {
-  background: #07dd47;
+  background: #1abc9c;
 }
 
 /* メインコンテンツ */

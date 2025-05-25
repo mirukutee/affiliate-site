@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huluで映画やドラマを楽しもう</title>
+
+  <meta property="og:title" content="Huluで映画やドラマを楽しもう" />
+  <meta property="og:description" content="Huluは、豊富な映画、ドラマ、アニメなどのコンテンツを楽しめる動画配信サービスです。今すぐ無料体験を始めましょう！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/Hulu.html" />
+  <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/movie.webp" />
+  <meta property="og:site_name" content="Hulu - 動画配信サービス" />
+
+   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="uluで映画やドラマを楽しもう" />
+  <meta name="twitter:description" content="Huluは、豊富な映画、ドラマ、アニメなどのコンテンツを楽しめる動画配信サービスです。今すぐ無料体験を始めましょう！" />
+  <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/movie.webp" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Hulu - 映画・ドラマ・アニメを楽しむ</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main>
+      <nav class="breadcrumb">
+        <a href="index.html">トップ</a> &gt;
+        <span>Huluの魅力</span>
+      </nav>
+
+      <h2 class="title">Huluで映画やドラマを楽しもう</h2>
+
+      <div class="anime-item">
+        <h3 class="anime-title">1. Huluとは？</h3>
+        <img src="sonota/movie.webp" alt="映像のイメージ" width="1200" height="628">
+        <p>Huluは、国内外の映画、ドラマ、アニメを月額料金で見放題で楽しめる動画配信サービスです。ジャンル豊富なコンテンツが揃っており、どんな好みにも応えます。</p>
+      </div>
+
+      <div class="anime-item">
+        <h3 class="anime-title">2. Huluの特徴</h3>
+        <ul>
+          <li><b>豊富なラインナップ</b></li>
+          <li>：映画、ドラマ、アニメ、ドキュメンタリーなど、ジャンルを問わず多彩なコンテンツを提供。</li>
+          <li><b>オリジナル作品</b></li>
+           <li>：Hulu独占配信のオリジナル映画やドラマもあり。</li>
+          <li><b>いつでもどこでも視聴可能</b></li>
+           <li>：PC、スマホ、テレビなど、好きなデバイスで視聴できる。</li>
+          <li><b>無料体験</b></li>
+           <li>：初めての方には、2週間の無料体験が提供されており、気軽に試すことができます。</li>
+        </ul>
+      </div>
+
+      <div class="anime-item">
+        <h3 class="anime-title">3. 料金プラン</h3>
+        <table>
+          <caption>💰 Huluの料金プラン</caption>
+          <thead>
+            <tr>
+              <th scope="col">プラン名</th>
+              <th scope="col">内容</th>
+              <th scope="col">料金</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">スタンダードプラン</th>
+              <td>広告付きで全コンテンツ視聴可能</td>
+              <td>月額1,026円（税込）</td>
+            </tr>
+            <tr>
+              <th scope="row">プレミアムプラン</th>
+              <td>広告なしで快適に視聴可能</td>
+              <td>月額1,650円（税込）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="anime-item">
+        <h3 class="anime-title">4. 無料体験あり！！</h3>
+        <p>Huluでは、新規登録者向けに2週間の無料体験を提供しています。まずはお試しとして、映画やドラマ、アニメを気軽に楽しんでみるのはいかがでしょうか？。</p>
+        
+      </div>
+
+      <div class="anime-item">
+        <h3 class="anime-title">5. 受講者の声</h3>
+        <p>😄「Huluのおかげで、観たい映画やドラマを手軽に楽しめるようになりました。好きなときに好きな作品を見れるので、とても便利です。」</p>
+      </div>
+
+      <div class="anime-item">
+        <h3 class="anime-title">6. 結論</h3>
+        <p>Huluは、映画、ドラマ、アニメなどをお好きなタイミングで視聴できる便利な動画配信サービスです。無料体験を活用して、今すぐにその魅力を体験しましょう。</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Hulu All Rights Reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+    });
+  </script>
+  <script src="sidebar.js"></script>
+</body>
+</html>

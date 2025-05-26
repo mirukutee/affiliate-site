@@ -262,10 +262,12 @@ p {
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   margin: 0.8em 0;
   font-size: 1.5em;
 }
+
+
 
 h2.title {
   color: #fff;
@@ -278,6 +280,12 @@ a {
 
 a:hover {
   color: #f39c12;
+}
+
+
+/* サブタイトル */
+h4 {
+  font-size: 2.2me;
 }
 
 /* 表 */
@@ -323,6 +331,7 @@ ul {
 li {
   list-style: none;
 }
+
 /* アイコン */
 .sns-icons a {
   margin-right: 10px;
@@ -331,6 +340,22 @@ li {
 }
 .sns-icons a:hover {
   color: #1da1f2;
+}
+
+/* リンクバナー */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e63946;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background-color: #d62828;
 }
 
 @media screen and (max-width: 768px) {

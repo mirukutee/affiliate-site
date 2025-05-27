@@ -316,7 +316,7 @@ h4 {
 /* 表 */
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
+  border: 2px solid rgb(140, 140, 140); /* カンマで区切り */
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -336,7 +336,7 @@ thead {
 
 th,
 td {
-  border: 1px solid rgb(160 160 160);
+  border: 1px solid rgb(160, 160, 160);
   padding: 8px 10px;
 }
 
@@ -345,8 +345,33 @@ td:last-of-type {
 }
 
 tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
+  background-color: rgb(237, 238, 242);
 }
+
+/* 横スクロールを許可するコンテナ */
+.large-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS対応 */
+  margin-bottom: 1em;
+}
+
+/* テーブルの最小幅を指定して、スクロール発生させる */
+.large-table-container table {
+  min-width: 700px; /* 必要に応じて調整 */
+}
+
+/* 横スクロールを許可するコンテナ */
+.large-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS対応 */
+  margin-bottom: 1em;
+}
+
+/* テーブルの最小幅を指定して、スクロール発生させる */
+.large-table-container table {
+  min-width: 700px; /* 必要に応じて調整 */
+}
+
 
 /* リストのスタイル */
 ul {
@@ -458,4 +483,19 @@ li {
     width: 100%;
     box-sizing: border-box;
   }
+
+    /* スマホ対応でテーブルのサイズ調整 */
+  .large-table-container table {
+    font-size: 0.7rem;
+  }
+
+  .large-table-container th, td {
+    padding: 6px 8px;
+  }
+
+  .large-table-container caption {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
 }
+

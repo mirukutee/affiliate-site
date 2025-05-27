@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mirukutee.github.io/affiliate-site/sitemap.txt
+Sitemap: https://mirukutee.github.io/affiliate-site/sitemap.xml

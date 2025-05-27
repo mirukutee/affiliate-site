@@ -7,7 +7,25 @@
 
 /* 未実装 */
 
+/* 未実装ここまで */
 
+/* 上下の幅を消したいときの指定 */
+.margin_min{
+  margin-top: 1px;
+margin-bottom: 1px;
+}
+
+/* リンクバナーを上の文章 */
+.font_red_r {
+  background-color: #e53935;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /* 未実装ここまで */
 

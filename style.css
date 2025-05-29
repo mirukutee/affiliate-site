@@ -270,24 +270,25 @@ aside a:hover {
   overflow: hidden;
   opacity: 0;
   padding: 0 16px;
-  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
   background-color: #fafafa;
-  transform-origin: top;
+  transition: all 0.4s ease;
   transform: scaleY(0);
+  transform-origin: top;
+  pointer-events: none;
+  visibility: hidden;
 }
+
 
 /* 開いた状態 */
 .dropdown-content.open {
-  max-height: calc(100vh - 150px);
-  overflow-y: auto;
+  max-height: 500px; /* 適宜調整 */
   opacity: 1;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   transform: scaleY(1);
-
-  /* スクロールバー（Firefox用） */
-  scrollbar-width: thin;
-  scrollbar-color: #3a84f1 #ffffff;
+  pointer-events: auto;
+  visibility: visible;
+  background-color: #fafafa; /* 明示的に背景を維持 */
 }
 
 /* スクロールバー（Chrome用） */
@@ -311,19 +312,22 @@ aside a:hover {
   display: block;
   background: white;
   margin: 6px 0;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* 常時視認性UP */
+  border: 1px solid #e0e0e0;
   color: #333;
-  transition: background 0.2s ease, transform 0.2s ease;
   text-decoration: none;
   font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* ホバー時だけ動きをつける */
 .dropdown-content a:hover {
   background: #1abc9c;
   color: white;
   transform: translateX(5px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* 影も強調 */
 }
 
 /* 閉じるボタン（オプション） */

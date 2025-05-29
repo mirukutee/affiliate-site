@@ -120,7 +120,7 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(135deg, #0e2349, #c1f0f6, #f5fafd);  
+  background: linear-gradient(135deg, #03112b, #c1f0f6, #f5fafd);  
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   background-attachment: fixed;

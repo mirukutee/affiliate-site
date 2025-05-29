@@ -301,16 +301,15 @@ main {
   padding: 20px;
   border-radius: 10px;
   background-color: #ffffff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(2, 7, 103, 0.3);
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #00c6ff, #0072ff) 1;
   transition: all 0.3s ease;
 }
-
 .anime-item:hover {
-  box-shadow: 0 6px 18px rgba(173, 216, 230, 0.4);
+  box-shadow: 0 6px 18px rgba(53, 95, 231, 0.4);
   transform: translateY(-5px);
 }
-
 .anime-title {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -338,6 +337,7 @@ main {
   margin-bottom: 6px;
   line-height: 1.5;
 }
+
 
 .font_red {
   color: #f32121;

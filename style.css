@@ -1,51 +1,64 @@
-/* 共通リセット */
+/* ===== 共通リセット ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 未実装 */
-
-/* 未実装ここまで */
-
-/* 上下の幅を消したいときの指定 */
-.margin_min{
+/* ===== 汎用クラス ===== */
+.margin_min {
   margin-top: 1px;
-margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
-/* リンクバナーを上の文章 */
+/* ===== 発光リンクバナー ===== */
 .font_red_r {
-  background-color: #e53935;
+  background-color: #2c2c2c;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
   display: inline-block;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
-  /* 発光のアニメーション */
-  border: 2px solid #00ffff;
-  border-radius: 10px;
-  background-color: #2c2c2c;
-  padding: 20px;
-  color: white;
   animation: soft-glow 2s ease-in-out infinite alternate;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
 }
 
-/* アニメーション定義 */
 @keyframes soft-glow {
-  from {
-    box-shadow: 0 0 0px #00ffff;
-  }
-  to {
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-  }
+  from { box-shadow: 0 0 0px #00ffff; }
+  to { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
 }
 
-/* 未実装ここまで */
+@keyframes subtle-bg {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glow-text {
+  background: linear-gradient(to right, #00ffff, #ffffff, #00ffff);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
 
 html, body {
   height: 100%;
@@ -59,46 +72,24 @@ html, body {
   padding-bottom: 100px;
 }
 
-.breadcrumb {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #3a84f1;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb span {
-  color: #999;
-}
-
-/* 画像の設定 */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ノイズパターンのオーバーレイ */
 body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
     radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 40px 40px, 20px 20px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 0;
+  animation: noiseMove 60s linear infinite;
+}
+@keyframes noiseMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* ヘッダーとフッター */
 header, footer {
   background-color: #2c3e50;
   color: white;
@@ -106,28 +97,44 @@ header, footer {
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 header h1 a {
   color: white;
   text-decoration: none;
 }
-
 footer {
   margin-top: auto;
   height: 50px;
 }
 
-/* メインコンテナ */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: #3a84f1;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #999;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   display: flex;
   flex: 1;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin: 60px 0 50px;
   flex-wrap: wrap;
   padding: 20px;
 }
 
-/* サイドバー */
 .sidebar {
   width: 240px;
   padding: 10px;
@@ -158,13 +165,13 @@ aside a {
   transition: background 0.3s, color 0.3s;
   font-weight: bold;
 }
-
 aside a:hover {
   background: #1abc9c;
   color: #fff;
 }
 
-/* ドロップダウンリスト */
+
+/* ドロップダウン */
 .dropdown {
   margin-bottom: 15px;
   border-radius: 8px;
@@ -178,7 +185,6 @@ aside a:hover {
   background: linear-gradient(145deg, #3a84f1, #ffffff);
   border-radius: 6px;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-size: 16px;
   color: #333;
   padding: 10px 15px;
@@ -186,7 +192,6 @@ aside a:hover {
   text-align: left;
   cursor: pointer;
 }
-
 .dropdown-button:hover {
   background-color: #e0e0e0;
 }
@@ -199,21 +204,15 @@ aside a:hover {
   padding: 0 16px;
   opacity: 0;
 }
-
 .dropdown-content.open {
   opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
-
-  /* PC用：スクロール対応 */
   max-height: calc(100vh - 150px);
   overflow-y: auto;
-
-  /* スクロールバー見やすく */
   scrollbar-width: thin;
-  scrollbar-color: #3a84f1, #ffffff;
+  scrollbar-color: #3a84f1 #ffffff;
 }
-
 .dropdown-content.open::-webkit-scrollbar {
   width: 8px;
 }
@@ -226,22 +225,33 @@ aside a:hover {
   border-radius: 4px;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb:hover {
-  background-color: #3a84f1;
+  background-color: #2566cc;
 }
-
 .dropdown-content a {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-  display: block;
-  color: #333;
-  transition: background 0.2s;
+  background: white;
+  margin: 6px 0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
-
 .dropdown-content a:hover {
+  transform: translateX(4px);
   background: #1abc9c;
+  color: white;
 }
 
-/* メインコンテンツ */
+.dropdown-button::after {
+  content: '▼';
+  float: right;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+.dropdown-button.active::after {
+  transform: rotate(180deg);
+}
+
+/* メイン */
 main {
   flex: 1;
   background: #7e7b7b;
@@ -258,16 +268,15 @@ main {
   padding: 20px;
   border-radius: 10px;
   background-color: #ffffff;
-  border: 5px solid #f3d0a9;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #00c6ff, #0072ff) 1;
   transition: all 0.3s ease;
 }
-
 .anime-item:hover {
   box-shadow: 0 6px 18px rgba(53, 95, 231, 0.4);
   transform: translateY(-5px);
 }
-
 .anime-title {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -309,52 +318,63 @@ h1, h2, h3 {
   font-size: 1.5em;
 }
 
-
-
 h2.title {
   color: #fff;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover {
   color: #f39c12;
 }
 
-
-/* サブタイトル */
+/* サブタイトル調整 */
 h4 {
-  font-size: 2.2me;
+  font-size: 1.2em;
 }
+
 
 /* 表 */
 table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140); /* カンマで区切り */
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
   width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+thead {
+  background: linear-gradient(135deg, #005BAC, #0078D7);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tbody tr:hover {
+  background-color: #eaf6ff;
+  transition: background-color 0.3s ease;
 }
 
 caption {
   caption-side: bottom;
-  padding: 10px;
-  font-weight: bold;
+  padding: 12px;
+  font-style: italic;
+  color: #555;
+  text-align: right;
 }
 
-thead {
-  background-color: #005BAC;
-  color: white;
-}
-
-th,
-td {
-  border: 1px solid rgb(160, 160, 160);
-  padding: 8px 10px;
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
 }
 
 td:last-of-type {
@@ -370,6 +390,10 @@ tbody > tr:nth-of-type(even) {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* iOS対応 */
   margin-bottom: 1em;
+   border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
 }
 
 /* テーブルの最小幅を指定して、スクロール発生させる */
@@ -413,7 +437,7 @@ li {
 .cta-button {
   display: inline-block;
   padding: 14px 28px;
-  background-color: #2c2c2c;  /* 背景グレー */
+  background-color: #3f2a03;  /* 背景グレー */
   color: #ffffff;
   font-weight: bold;
   text-align: center;

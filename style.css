@@ -194,6 +194,7 @@ aside a:hover {
   position: relative;
   transition: background 0.3s ease;
   box-sizing: border-box; /* 追加: padding と border を含む */
+  margin-bottom: 10px; /* 追加: ボタン同士の間にマージンを設定 */
 }
 
 /* ドロップダウン内容のスタイル */

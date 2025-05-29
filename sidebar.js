@@ -10,23 +10,30 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
           const content = this.nextElementSibling;
 
-          // 他のドロップダウンを閉じる
+          // すべて閉じる（自分以外）
           document.querySelectorAll(".dropdown-content.open").forEach(c => {
             if (c !== content) {
               c.classList.remove("open");
               c.style.maxHeight = null;
-              c.style.display = "none";  // 追加
+              c.style.display = "none";
+              c.style.opacity = "0";
             }
           });
 
+          // トグル開閉
           if (content.classList.contains("open")) {
             content.classList.remove("open");
             content.style.maxHeight = null;
-            content.style.display = "none";  // 追加
+            content.style.display = "none";
+            content.style.opacity = "0";
           } else {
-            content.classList.add("open");
-            content.style.maxHeight = content.scrollHeight + "px";
-            content.style.display = "block";  // 追加
+            content.style.display = "block";
+            // 一旦高さ確定のため遅延させる（ココ重要）
+            requestAnimationFrame(() => {
+              content.classList.add("open");
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.style.opacity = "1";
+            });
           }
         });
       });

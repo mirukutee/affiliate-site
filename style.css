@@ -199,29 +199,24 @@ aside a:hover {
 
 /* ドロップダウン内容のスタイル */
 .dropdown-content {
-  display: none; /* 最初は非表示 */
-  max-height: 0;
-  overflow: hidden;
+  display: none;
   opacity: 0;
+  overflow: hidden;
+  max-height: 0;
   padding: 0 16px;
-  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
   background-color: #5e5a5a;
-  transform-origin: top;
-  transform: scaleY(0);
-  box-sizing: border-box; /* 追加: padding と border を含む */
+  box-sizing: border-box;
 }
 
 /* 開いた状態 */
 .dropdown-content.open {
-  display: block; /* 開いたら表示 */
+  display: block;
   opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
-  transform: scaleY(1);
+  max-height: 600px; /* 充分に大きくしておく */
   overflow-y: auto;
-  max-height: 300px; /* 必要に応じて変更 */
-  scrollbar-width: thin;
-  scrollbar-color: #3a84f1 #f0f0f0;
 }
 
 /* スクロールバー（Chrome用） */

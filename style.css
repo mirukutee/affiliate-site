@@ -216,34 +216,35 @@ aside a:hover {
   overflow: hidden;
   opacity: 0;
   padding: 0 16px;
-  background-color: #5f5f5f;
-  transition: all 0.4s ease;
-  transform: scaleY(0);
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+  background-color: #5e5a5a;
   transform-origin: top;
-  pointer-events: none;
-  visibility: hidden;
+  transform: scaleY(0);
 }
 
 
 /* 開いた状態 */
 .dropdown-content.open {
-  max-height: 500px; /* 適宜調整 */
   opacity: 1;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   transform: scaleY(1);
-  pointer-events: auto;
-  visibility: visible;
-  background-color: #5f5f5f; /* 明示的に背景を維持 */
+  overflow-y: auto;
+  /* この max-height は fallback 用（JSが動かないとき） */
+  max-height: 300px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #3a84f1 #f0f0f0;
 }
+
+
 
 /* スクロールバー（Chrome用） */
 .dropdown-content.open::-webkit-scrollbar {
   width: 8px;
 }
 .dropdown-content.open::-webkit-scrollbar-track {
-  background: #4e4d4d;
-  border-radius: 4px;
+  background: #f0f0f0;
 }
 .dropdown-content.open::-webkit-scrollbar-thumb {
   background-color: #3a84f1;

@@ -179,60 +179,6 @@ aside a:hover {
   color: #fff;
 }
 
-
-/* ドロップダウン全体のボックス */
-.dropdown {
-  margin-bottom: 15px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-/* ドロップダウンボタン */
-.dropdown-button {
-  background: linear-gradient(145deg, #3a84f1, #ffffff);
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  font-size: 16px;
-  color: #333;
-  padding: 10px 15px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.3s ease;
-}
-
-/* ボタンの矢印 */
-.dropdown-button::after {
-  content: '▼';
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease;
-  color: #555;
-}
-
-.dropdown-button.active::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-
-/* ドロップダウン全体のボックス */
-.dropdown {
-  margin-bottom: 15px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
 /* ドロップダウンボタン */
 .dropdown-button {
   background: linear-gradient(145deg, #3a84f1, #ffffff);
@@ -270,7 +216,7 @@ aside a:hover {
   overflow: hidden;
   opacity: 0;
   padding: 0 16px;
-  background-color: #636262;
+  background-color: #5f5f5f;
   transition: all 0.4s ease;
   transform: scaleY(0);
   transform-origin: top;
@@ -347,18 +293,8 @@ aside a:hover {
   background: #bbb;
 }
 
-/* メイン */
-main {
-  flex: 1;
-  background: #7e7b7b;
-  color: #222;
-  padding: 1em;
-  overflow-y: auto;
-  border-radius: 8px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
+/*メインコンテナ*/
 .anime-item {
   margin-bottom: 30px;
   padding: 20px;

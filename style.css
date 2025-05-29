@@ -179,7 +179,7 @@ aside a:hover {
   color: #fff;
 }
 
-/* ドロップダウンボタン */
+/* ドロップダウンボタンのスタイル */
 .dropdown-button {
   background: linear-gradient(145deg, #3a84f1, #ffffff);
   border-radius: 6px;
@@ -193,25 +193,12 @@ aside a:hover {
   cursor: pointer;
   position: relative;
   transition: background 0.3s ease;
+  box-sizing: border-box; /* 追加: padding と border を含む */
 }
 
-/* ボタンの矢印 */
-.dropdown-button::after {
-  content: '▼';
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease;
-  color: #555;
-}
-
-.dropdown-button.active::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-
-/* ドロップダウンの中身 */
+/* ドロップダウン内容のスタイル */
 .dropdown-content {
+  display: none; /* 最初は非表示 */
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -220,36 +207,36 @@ aside a:hover {
   background-color: #5e5a5a;
   transform-origin: top;
   transform: scaleY(0);
+  box-sizing: border-box; /* 追加: padding と border を含む */
 }
-
 
 /* 開いた状態 */
 .dropdown-content.open {
+  display: block; /* 開いたら表示 */
   opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
   transform: scaleY(1);
   overflow-y: auto;
-  /* この max-height は fallback 用（JSが動かないとき） */
-  max-height: 300px;
-
+  max-height: 300px; /* 必要に応じて変更 */
   scrollbar-width: thin;
   scrollbar-color: #3a84f1 #f0f0f0;
 }
-
-
 
 /* スクロールバー（Chrome用） */
 .dropdown-content.open::-webkit-scrollbar {
   width: 8px;
 }
+
 .dropdown-content.open::-webkit-scrollbar-track {
   background: #f0f0f0;
 }
+
 .dropdown-content.open::-webkit-scrollbar-thumb {
   background-color: #3a84f1;
   border-radius: 4px;
 }
+
 .dropdown-content.open::-webkit-scrollbar-thumb:hover {
   background-color: #2566cc;
 }
@@ -261,7 +248,7 @@ aside a:hover {
   margin: 6px 0;
   padding: 12px 15px;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* 常時視認性UP */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   border: 1px solid #e0e0e0;
   color: #333;
   text-decoration: none;
@@ -274,7 +261,7 @@ aside a:hover {
   background: #1abc9c;
   color: white;
   transform: translateX(5px);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* 影も強調 */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 /* 閉じるボタン（オプション） */
@@ -290,26 +277,39 @@ aside a:hover {
   border-top: 1px solid #ccc;
   border-radius: 0 0 6px 6px;
 }
+
 .dropdown-close:hover {
   background: #bbb;
 }
 
 
-/*メインコンテナ*/
+/* メインコンテンツ */
+main {
+  flex: 1;
+  background: #7e7b7b;
+  color: #222;
+  padding: 1em;
+  overflow-y: auto;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .anime-item {
   margin-bottom: 30px;
   padding: 20px;
   border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-  border-left: 5px solid;
-  border-image: linear-gradient(to bottom, #00c6ff, #0072ff) 1;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(2, 7, 103, 0.3);
   transition: all 0.3s ease;
 }
+
 .anime-item:hover {
-  box-shadow: 0 6px 18px rgba(53, 95, 231, 0.4);
+  box-shadow: 0 6px 18px rgba(173, 216, 230, 0.4);
   transform: translateY(-5px);
 }
+
 .anime-title {
   font-size: 1.4rem;
   margin-bottom: 10px;

@@ -10,23 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
           const content = this.nextElementSibling;
 
-          // 他を閉じる
+          // 他のドロップダウンを閉じる
           document.querySelectorAll(".dropdown-content.open").forEach(c => {
             if (c !== content) {
               c.classList.remove("open");
               c.style.maxHeight = null;
-              c.previousElementSibling.classList.remove("active"); // 対応するボタンも非アクティブ
+              c.style.display = "none";  // 追加
             }
           });
 
           if (content.classList.contains("open")) {
             content.classList.remove("open");
             content.style.maxHeight = null;
-            this.classList.remove("active");
+            content.style.display = "none";  // 追加
           } else {
             content.classList.add("open");
             content.style.maxHeight = content.scrollHeight + "px";
-            this.classList.add("active");
+            content.style.display = "block";  // 追加
           }
         });
       });

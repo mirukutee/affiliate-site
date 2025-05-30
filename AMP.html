@@ -1,0 +1,874 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <title>要点だけを、サッと理解｜簡潔な紹介サイト</title>
+
+    <!-- AMP 必須スクリプト -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!-- 表示スケーリング -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+
+    <!-- AMP boilerplate -->
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+          visibility: visible;
+        }
+      </style>
+    </noscript>
+
+    <!-- カノニカルURL -->
+    <link rel="canonical" href="https://mirukutee.github.io/affiliate-site/" />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="要点だけを、サッと理解｜簡潔な紹介サイト" />
+    <meta property="og:description" content="当サイトは、各種商品・サービスの要点を簡潔にまとめ、短時間で理解できる情報提供を目的として運営しております。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/" />
+    <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
+    <meta property="og:site_name" content="簡潔な紹介サイト" />
+
+    <!-- Twitterカード設定 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="要点だけを、サッと理解｜簡潔な紹介サイト" />
+    <meta name="twitter:description" content="当サイトは、各種商品・サービスの要点を簡潔にまとめ、短時間で理解できる情報提供を目的として運営しております。" />
+    <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
+
+    <!-- ファビコンやCSSは必要に応じて追記 -->
+    <link rel="icon" href="/favicon.ico" />
+ 
+
+    <style amp-custom>
+ /* ===== 共通リセット ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== 汎用クラス ===== */
+.margin_min {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* ===== h1下のスタイル ===== */
+header.main-hero {
+  background: linear-gradient(135deg, #f9f9ff 0%, #e6f7ff 100%);
+  padding: 2rem 1rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* ===== topのおすすめ ===== */
+.card-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-link {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  width: 200px;
+}
+
+.card-link i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.card-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 140, 255, 0.3);
+}
+
+
+.sub-copy {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 発光リンクバナー ===== */
+.font_red_r {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  animation: soft-glow 2s ease-in-out infinite alternate;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+}
+
+@keyframes soft-glow {
+  from { box-shadow: 0 0 0px #00ffff; }
+  to { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+}
+
+@keyframes subtle-bg {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glow-text {
+  background: linear-gradient(to right, #00ffff, #ffffff, #00ffff);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #03112b, #c1f0f6, #f5fafd);  
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px, 20px 20px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+  animation: noiseMove 60s linear infinite;
+}
+@keyframes noiseMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+footer {
+  margin-top: auto;
+  height: 50px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: #3a84f1;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #999;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  margin: 60px 0 50px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 240px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+aside {
+  background: #506171;
+  padding: 1em;
+  color: #5e5a5a;
+  width: 250px;
+}
+
+aside a {
+  display: block;
+  padding: 10px 12px;
+  background: #6a92b9;
+  margin-bottom: 0.5em;
+  border-radius: 6px;
+  color: #ecf0f1;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+aside a:hover {
+  background: #1abc9c;
+  color: #fff;
+}
+
+/* ドロップダウンボタンのスタイル */
+.dropdown-button {
+  background: linear-gradient(145deg, #3a84f1, #ffffff);
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  color: #333;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  box-sizing: border-box; /* 追加: padding と border を含む */
+  margin-bottom: 10px; /* 追加: ボタン同士の間にマージンを設定 */
+}
+
+/* ドロップダウン内容のスタイル */
+.dropdown-content {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 16px;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  background-color: #5e5a5a;
+  box-sizing: border-box;
+}
+
+/* 開いた状態 */
+.dropdown-content.open {
+  display: block;
+  opacity: 1;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  max-height: 600px; /* 充分に大きくしておく */
+  overflow-y: auto;
+}
+
+/* スクロールバー（Chrome用） */
+.dropdown-content.open::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content.open::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.dropdown-content.open::-webkit-scrollbar-thumb {
+  background-color: #3a84f1;
+  border-radius: 4px;
+}
+
+.dropdown-content.open::-webkit-scrollbar-thumb:hover {
+  background-color: #2566cc;
+}
+
+/* リスト項目（カード風） */
+.dropdown-content a {
+  display: block;
+  background: white;
+  margin: 6px 0;
+  padding: 12px 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ホバー時だけ動きをつける */
+.dropdown-content a:hover {
+  background: #1abc9c;
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* 閉じるボタン（オプション） */
+.dropdown-close {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #ddd;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdown-close:hover {
+  background: #bbb;
+}
+
+
+/* メインコンテンツ */
+main {
+  flex: 1;
+  background: #7e7b7b;
+  color: #222;
+  padding: 1em;
+  overflow-y: auto;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden; /* ← 追加！ */
+}
+
+.anime-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #00c6ff, #0072ff) 1;
+  transition: all 0.3s ease;
+}
+.anime-item:hover {
+  box-shadow: 0 6px 18px rgba(53, 95, 231, 0.4);
+  transform: translateY(-5px);
+}
+.anime-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2c3e50;
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+}
+
+.anime-item img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  margin: 15px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.anime-item ul {
+  padding-left: 1.2rem;
+  margin-top: 10px;
+}
+
+.anime-item li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+
+.font_red {
+  color: #f32121;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+h1, h2, h3 {
+  margin: 0.8em 0;
+  font-size: 1.5em;
+}
+
+h2.title {
+  color: #fff;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #f39c12;
+}
+
+/* サブタイトル調整 */
+h4 {
+  font-size: 1.2em;
+}
+
+
+/* 表 */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+thead {
+  background: linear-gradient(135deg, #005BAC, #0078D7);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tbody tr:hover {
+  background-color: #eaf6ff;
+  transition: background-color 0.3s ease;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 12px;
+  font-style: italic;
+  color: #555;
+  text-align: right;
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237, 238, 242);
+}
+
+/* 横スクロールを許可するコンテナ */
+.large-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS対応 */
+  margin-bottom: 1em;
+   border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+/* テーブルの最小幅を指定して、スクロール発生させる */
+.large-table-container table {
+  min-width: 700px; /* 必要に応じて調整 */
+}
+
+/* 横スクロールを許可するコンテナ */
+.large-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS対応 */
+  margin-bottom: 1em;
+}
+
+/* テーブルの最小幅を指定して、スクロール発生させる */
+.large-table-container table {
+  min-width: 700px; /* 必要に応じて調整 */
+}
+
+
+/* リストのスタイル */
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* アイコン */
+.sns-icons a {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+.sns-icons a:hover {
+  color: #1da1f2;
+}
+
+/* リンクバナー */
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #3f2a03;  /* 背景グレー */
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #00ffff;
+ 
+   /* 発光のアニメーション */
+    border-radius: 10px;
+  animation: soft-glow 2s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.05); /* ホバーで拡大 */
+}
+
+@media screen and (max-width: 768px) {
+  /* サイドバー */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    z-index: 10;
+  }
+
+  aside {
+    width: 100%;
+    margin-top: 1em;
+    order: 2;
+  }
+
+  /* メインコンテナ */
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    order: 1;
+    padding: 1em;
+    flex-grow: 1;
+      margin-left: 0;
+    overflow-x: hidden; /* ← はみ出し防止用の補助 */
+  }
+
+  /* ドロップダウンメニュー */
+  .dropdown-content.open {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+
+  /* 文字サイズと可読性 */
+  body {
+    font-size: 85%;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    padding: 0.1em;
+  }
+
+  .anime-item p {
+    font-size: 0.85rem;
+  }
+
+  /* 見出しサイズ */
+  .anime-item h1 {
+    font-size: 1.4em;
+  }
+  .anime-item h2 {
+    font-size: 1.2em;
+  }
+  .anime-item h3 {
+    font-size: 1.1em;
+  }
+  .anime-item h4,
+  .anime-item h5,
+  .anime-item h6 {
+    font-size: 1em;
+  }
+
+  /* アニメアイテム領域調整 */
+  .anime-item {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+    /* スマホ対応でテーブルのサイズ調整 */
+  .large-table-container table {
+    font-size: 0.7rem;
+  }
+
+  .large-table-container th, td {
+    padding: 6px 8px;
+  }
+
+  .large-table-container caption {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+}
+   </style>
+
+  </head>
+
+
+  <body>
+    <!-- ヘッダーの内容 -->
+    <header>
+    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
+    <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
+    </header>
+ 
+
+    <!-- トップページ案内 -->
+<nav class="breadcrumb">
+  <a href="index.html">ホーム</a> &gt;
+  <span>トップページ</span>
+</nav>
+
+  <!-- サイドバー呼び出し -->
+   <div class="container">
+    <aside id="sidebar"></aside>
+
+
+   <!-- メインの内容 -->
+    <main>
+
+           <!-- 見出し -->
+         <h2 class="title">>AMP用の文字</h2>
+
+
+        <!-- メインのコンテンツ -->
+       <div class="anime-item">
+         <amp-img src="sonota/top.webp" width="1200" height="628" alt="AMP用の文字" layout="responsive"></amp-img>
+          <h2 class="anime-title">AMP用のタイトル</h2>
+        <p>
+         <br>AMP用の文字
+        </p>
+        </div>
+     
+        <!-- 段落とアイコン（外部CSSのHTML内の文章 -->
+  <ul>
+    <li> 仮の項目A</li>
+
+     <li><strong>AMP用の文字:</strong><br> AMP用の文字</li>
+  </ul>
+
+
+     <!-- ▼ FAQ構成の雛形-->
+	  <dl>
+ 	   <dt>Q.〇〇は無料ですか？</dt>
+ 	 </dl>
+
+     <!-- ▼  レビューや口コミの雛形-->
+  	<blockquote>
+   	 <p>「担当者がとても丁寧で安心して相談できました！」</p>
+   	 <cite>— 30代・女性</cite>
+  	</blockquote>
+     
+     
+
+
+  <!-- 小規模のテーブル -->
+  <table>
+    <caption>仮の基本情報</caption>
+    <thead>
+      <tr>
+        <th scope="col">特徴</th>
+        <th scope="col">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">なんか</th>
+        <td>あれ</td>
+      </tr>
+
+      <tr>
+        <th scope="row">なにか</th>
+        <td>それ</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- 大型のテーブルのクラス指定の時 -->
+  <div class="large-table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>AMP用の文字</th>
+          <th>AMP用の文字</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td><strong>AMP用の文字</strong></td>
+          <td>
+           AMP用の文字
+          </td>
+
+          <tr>
+          <td>AMP用の文字<br><small>※AMP用の文字</small></td>
+          <td>
+            AMP用の文字
+            <strong>AMP用の文字</strong>
+          </td>
+          
+
+      </tbody>
+    </table>
+  </div>
+
+
+    <!-- CTAボタン：クリックしやすく目立たせる -->
+    <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button font_red" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
+    サンプルボタン
+    </a>
+   <!-- CTA画像バナー：視覚重視の導線 -->
+        <br />
+       <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
+          <img src="https://mirukutee.github.io/affiliate-site/sonota/top.webp" alt="AMP用の文字" border="0" />
+        </a>
+
+<!-- サイドバーの記述 -->
+
+<div class="container">
+    <aside id="sidebar"></aside>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-button">AMP用の文字</button>
+  <div class="dropdown-content" id="top">
+    <a href="index.html">AMP用の文字</a>
+  </div>
+</div>
+
+<!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+ </main>
+    </div>
+
+        <footer>
+            &copy; 2025 簡潔な紹介サイト All Rights Reserved.
+          </footer>
+</body>
+
+</html>

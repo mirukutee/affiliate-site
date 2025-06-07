@@ -1,163 +1,220 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>タイトル</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://mirukutee.github.io/affiliate-site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "トップページ"
+    }
+  ]
+}
+</script>
 
-  <!-- ▼ Google用SEO meta（検索結果の説明） -->
-  <meta name="description" content="ページの簡単な説明文（120文字程度）" />
+<link rel="canonical" href="https://mirukutee.github.io/affiliate-site/">
+  
+  
 
-  <!-- ▼ OGPカード設定（SNSシェア時の表示） -->
-  <meta property="og:title" content="タイトル" />
-  <meta property="og:description" content="ページの説明文" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/〇〇.html" /> <!-- ←URL忘れず変更 -->
-  <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/shutterstock_1300314082-min.jpg" />
-  <meta property="og:site_name" content="簡潔な紹介サイト" />
+<meta property="og:title" content="要点だけを、サッと理解｜簡潔な紹介サイト" />
+<meta property="og:description" content="当サイトは、各種商品・サービスの要点を簡潔にまとめ、短時間で理解できる情報提供を目的として運営しております。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mirukutee.github.io/affiliate-site/" />
+<meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
+<meta property="og:site_name" content="簡潔な紹介サイト" />
 
-  <!-- ▼ Twitterカード設定 -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="タイトル" />
-  <meta name="twitter:description" content="ページの説明文" />
-  <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/shutterstock_1300314082-min.jpg" />
+<!-- ▼ Twitterカード設定（あるとさらに良い） -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="要点だけを、サッと理解｜簡潔な紹介サイト" />
+<meta name="twitter:description" content="当サイトは、各種商品・サービスの要点を簡潔にまとめ、短時間で理解できる情報提供を目的として運営しております。" />
+<meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
 
-  <!-- ▼ スタイルシートとアイコン -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="amphtml" href="AMP.html">
+
+
+<title>要点だけを、サッと理解｜簡潔な紹介サイト</title>
+
 </head>
+ 
 
-<body>
 
-  <header>
+ <body>
+    <!-- ヘッダーの内容 -->
+    <header>
     <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-  </header>
+    <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
+    </header>
+ 
 
-  <div class="container">
+    <!-- トップページ案内 -->
+<nav class="breadcrumb">
+  <a href="index.html">ホーム</a> &gt;
+  <span>トップページ</span>
+</nav>
+
+  <!-- サイドバー呼び出し -->
+   <div class="container">
     <aside id="sidebar"></aside>
 
+
+   <!-- メインの内容 -->
     <main>
+       
+             <!-- パンくず -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+    <li class="breadcrumb-item"><a href="kabukaisetu.html">株を始める初心者の方へ基礎を解説</a></li>
+     <li class="breadcrumb-item active" aria-current="page">株を始める初心者の方へ基礎を解説します。</li>
+  </ol>
+</nav>
 
-      <h2 class="title">ページ全体の見出し</h2>
-
-      <!-- ▼ サンプル紹介項目（画像＋文章） -->
-      <div class="anime-item">
-        <h3 class="anime-title">商品やサービスのタイトル</h3>
-        <img src="sonota/sample.jpg" alt="〇〇のイメージ" style="max-width: 100%; height: auto;" />
-        <p>ここに紹介文を記載します。メリット、特徴、他との違いなど。</p>
-      </div>
-
-      <!-- ▼ 箇条書き紹介（ポイント整理） -->
-      <div class="anime-item">
-        <h3 class="anime-title">特徴やメリット一覧</h3>
-        <ul>
-          <li><strong>特徴1:</strong><br> 内容説明</li>
-          <li><strong>特徴2:</strong><br> 内容説明</li>
-          <li><strong>特徴3:</strong><br> 内容説明</li>
-          <li><strong>特徴4:</strong><br> 内容説明</li>
-          <li><strong>特徴5:</strong><br> 内容説明</li>
-        </ul>
-      </div>
-
-      <!-- ▼ 比較や仕組みを説明する表 -->
-      <div class="anime-item">
-        <h3 class="anime-title">詳細比較・概要</h3>
-        <table>
-          <caption>スペックや詳細情報の比較などに便利です。</caption>
-          <thead>
-            <tr>
-              <th scope="col">項目</th>
-              <th scope="col">詳細</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">料金</th>
-              <td>無料 / 有料など</td>
-            </tr>
-            <tr>
-              <th scope="row">対応エリア</th>
-              <td>全国 / 地域限定</td>
-            </tr>
-            <tr>
-              <th scope="row">相談形式</th>
-              <td>オンライン / 対面 など</td>
-            </tr>
-            <tr>
-              <th scope="row">運営会社</th>
-              <td>〇〇株式会社</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+           <!-- 見出し -->
+         <h2 class="title">>AMP用の文字</h2>
 
 
+        <!-- メインのコンテンツ -->
+       <div class="anime-item">
+          <img src="sonota/top.webp" width="1200" height="628" alt="AMP用の文字">
+          <h2 class="anime-title">AMP用のタイトル</h2>
+        <p>
+         <br>AMP用の文字
+        </p>
+        </div>
+     
+        <!-- 段落とアイコン（外部CSSのHTML内の文章 -->
+  <ul>
+    <li><i class="fa-solid fa-pen"></i> 仮の項目A</li>
 
-      <!-- ▼ FAQ構成の雛形-->
-	     <div class="anime-item">
-	  <h3 class="anime-title">よくある質問</h3>
+     <li><strong>AMP用の文字:</strong><br> AMP用の文字</li>
+  </ul>
+
+
+     <!-- ▼ FAQ構成の雛形-->
 	  <dl>
  	   <dt>Q.〇〇は無料ですか？</dt>
- 	   <dd>A. はい、完全無料で利用できます。</dd>
- 	   <dt>Q. 申し込みに必要な書類は？</dt>
-  	  <dd>A. 身分証明書のみでOKです。</dd>
  	 </dl>
-	</div>
 
-
-
- 	 <!-- ▼  レビューや口コミの雛形-->
-	<div class="anime-item">
-  	<h3 class="anime-title">実際の利用者の声</h3>
+     <!-- ▼  レビューや口コミの雛形-->
   	<blockquote>
    	 <p>「担当者がとても丁寧で安心して相談できました！」</p>
    	 <cite>— 30代・女性</cite>
   	</blockquote>
-	</div>
+     
+     
 
 
+  <!-- 小規模のテーブル -->
+  <table>
+    <caption>仮の基本情報</caption>
+    <thead>
+      <tr>
+        <th scope="col">特徴</th>
+        <th scope="col">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">なんか</th>
+        <td>あれ</td>
+      </tr>
+      <tr>
+        <th scope="row">なにか</th>
+        <td>それ</td>
+      </tr>
+    </tbody>
+  </table>
 
 
-      <!-- ▼ 結論パート（まとめとアクション誘導） -->
-      <div class="anime-item">
-        <h3 class="anime-title">まとめ ＆ 公式リンク</h3>
-        <p>
-          要点のまとめ・このサービスを使うべき人・行動の後押しなどを簡潔に記載します。
-        </p>
+  <!-- 大型のテーブルのクラス指定の時 -->
+  <div class="large-table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>AMP用の文字</th>
+          <th>AMP用の文字</th>
+        </tr>
+      </thead>
 
-        <!-- CTAボタン：クリックしやすく目立たせる -->
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100ped900od67" class="cta-button font_red" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
-          ▼ 公式サイトで無料相談を始めるならこちらから！
-        </a>
+      <tbody>
 
-        <!-- CTA画像バナー：視覚重視の導線 -->
-        <br />
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100ped900od67" class="cta-button" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
-          <img src="https://h.accesstrade.net/sp/rr?rk=0100ped900od67" alt="公式バナーの代替テキスト" border="0" style="max-width: 100%; height: auto;" />
-        </a>
-      </div>
+        <tr>
+          <td><strong>AMP用の文字</strong></td>
+          <td>
+           AMP用の文字
+          </td>
 
-    </main>
+          <td>AMP用の文字<br><small>※AMP用の文字</small></td>
+          <td>
+            AMP用の文字
+            <strong>AMP用の文字</strong>
+          </td>
+          
+
+      </tbody>
+    </table>
   </div>
 
-  <footer>
-    &copy; 2025 簡潔な紹介サイト All Rights Reserved.
-  </footer>
 
-  <!-- ▼ サイドバー読み込み -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch('sidebar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-        });
-    });
-  </script>
+     <!-- CTAボタン：クリックしやすく目立たせる -->
+    <a href="https://h.accesstrade.net/sp/cc?rk=0100pdp200od67" class="cta-button font_red_r" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
+     ▼こちらから公式サイトへ▼
+     </a>
+   <!-- CTA画像バナー：視覚重視の導線 -->
+        <br>
+       <a href="https://h.accesstrade.net/sp/cc?rk=0100pdp200od67"  class="cta-button" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100pdp200od67" alt="ジゲンオールインワンフェイスジェル" border="0" /></a>
 
-  <script src="sidebar.js"></script>
+<!-- サイドバーの記述 -->
+
+<div class="container">
+    <aside id="sidebar"></aside>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-button">AMP用の文字</button>
+  <div class="dropdown-content" id="top">
+    <a href="index.html">AMP用の文字</a>
+  </div>
+</div>
+
+<!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+ </main>
+    </div>
+
+        <footer>
+            &copy; 2025 簡潔な紹介サイト All Rights Reserved.
+          </footer>
 </body>
 
-</html>
+<!-- サイドバーのスクリプト -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         fetch('sidebar.html')
+         .then(response => response.text())
+          .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+            });
+          });
+         </script>
+
+          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
+        <script src="sidebar.js"></script>
+        
+        </body>
+
+        </html>

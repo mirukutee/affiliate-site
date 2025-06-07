@@ -179,21 +179,45 @@ header h1 a {
   text-decoration: none;
 }
 
+/*パンくず*/
+
 .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
-  margin-bottom: 10px;
-  color: #555;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
 }
-.breadcrumb a {
+
+.breadcrumb-item {
+  color: #666;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  margin: 0 0.5em;
+  color: #aaa;
+}
+
+.breadcrumb-item a {
   text-decoration: none;
-  color: #3a84f1;
+  color: #007bff;
 }
-.breadcrumb a:hover {
+
+.breadcrumb-item a:hover {
   text-decoration: underline;
 }
-.breadcrumb span {
-  color: #999;
+
+.breadcrumb-item.active {
+  color: #333;
+  font-weight: bold;
+  pointer-events: none;
 }
+
+
+
+
 
 img {
   max-width: 100%;

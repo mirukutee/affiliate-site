@@ -561,12 +561,24 @@ li {
   text-align: center;
   text-decoration: none;
   border: 2px solid #00ffff;
+
+  margin : 10px ;
  
    /* 発光のアニメーション */
     border-radius: 10px;
   animation: soft-glow 2s ease-in-out infinite alternate;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
   transition: transform 0.2s ease-in-out;
+}
+
+.cta-button:hover::after {
+  content: "💥";
+  margin-left: 5px;
+  animation: pop 0.3s ease;
+}
+@keyframes pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
 }
 
 .cta-button:hover {

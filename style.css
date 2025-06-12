@@ -101,7 +101,8 @@ body::before {
 
 
 /* ========== ▼ ヘッダー（統一） ========== */
-header, footer {
+/* ヘッダー全体 */
+.site-header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
@@ -109,67 +110,85 @@ header, footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-header, footer {
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* ロゴと見出し */
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-header h1 a {
+.site-header h1 a {
   color: white;
   text-decoration: none;
+}
+
+/* ナビゲーション */
+.main-nav {
+  margin-top: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* ドロップダウン（名前を完全に分ける） */
+.nav-dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #34495e;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-list li a {
+  padding: 10px 15px;
+  color: white;
+  text-align: left;
+}
+
+.dropdown-list li a:hover {
+  background-color: #1abc9c;
+}
+
+
+/* ========== ▼ フッター（統一） ========== */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 footer {
   margin-top: auto;
   height: 50px;
 }
-
-/* ========== ▼ ヘッダーメニュー用ドロップダウン ========== */
-.header-dropdown {
-  position: relative;
-}
-
-.header-dropbtn {
-  padding: 10px 15px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.header-dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.header-dropdown-content a {
-  padding: 10px 15px;
-  display: block;
-  color: #333;
-  text-decoration: none;
-}
-
-.header-dropdown-content a:hover {
-  background-color: #007BFF;
-  color: white;
-}
-
-.header-dropdown:hover .header-dropdown-content {
-  display: block;
-}
-
-
-
 
 
 /* メインコンテナ */

@@ -65,13 +65,14 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(135deg, #f5fafd, #c1f0f6, #0e2349);
+  background: linear-gradient(135deg, #51b5f8, #579ef0, #112074);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 @keyframes gradientShift {

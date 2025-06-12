@@ -147,11 +147,11 @@ body::before {
 }
 
 /* ドロップダウン（名前を完全に分ける） */
-.nav-dropdown:hover .dropdown-list {
-  display: block;
+.nav-dropdown {
+  position: relative;
 }
 
-.dropdown-list {
+.nav-dropdown .dropdown-list {
   display: none;
   position: absolute;
   top: 100%;
@@ -161,19 +161,25 @@ body::before {
   padding: 0;
   margin: 0;
   min-width: 150px;
+  z-index: 1000;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
+}
+
+.nav-dropdown:hover .dropdown-list {
+  display: block;
 }
 
 .dropdown-list li a {
+  display: block;
   padding: 10px 15px;
   color: white;
-  text-align: left;
+  text-decoration: none;
 }
 
 .dropdown-list li a:hover {
   background-color: #1abc9c;
 }
+
 
 
 /* ========== ▼ フッター（統一） ========== */

@@ -150,45 +150,24 @@ body::before {
 }
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーードロップダウンメニュー */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background-color: #f8f8f8;
-  color: #333;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown:hover .dropbtn {
-  color: #007BFF;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f8f8f8;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+/* 個別ドロップダウンのスタイル */
+.menu-1 .dropbtn {
+  background-color: #f1f1f1;
   color: #333;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+.menu-2 .dropbtn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* メニューをホバー時に表示する */
+.menu-1:hover .dropdown-content {
+  display: block;
+}
+
+.menu-2:hover .dropdown-content {
+  display: block;
 }
 
 /*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー レスポンシブ対応 */

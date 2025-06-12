@@ -65,7 +65,7 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(135deg, #51b5f8, #579ef0, #112074);
+  background: linear-gradient(135deg, #76c8ff, #13fcae, #112074);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   background-attachment: fixed;
@@ -190,11 +190,6 @@ footer {
   text-align: center;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-footer {
-  margin-top: auto;
-  height: 50px;
 }
 
 

@@ -60,6 +60,50 @@
   100% { background-position: 200% center; }
 }
 
+/* パンくずリスト全体 */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* パンくずリストの項目 */
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+/* 区切りスラッシュ */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›"; /* → or / でもOK */
+  margin: 0 8px;
+  color: #999;
+}
+
+/* リンク */
+.breadcrumb-item a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+/* 現在のページ */
+.breadcrumb-item.active {
+  color: #333;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* ボディ全体の設定 */
 html, body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;

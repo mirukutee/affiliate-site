@@ -48,10 +48,10 @@
 </head>
 
 <body>
-  <header>
-    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-    <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
-  </header>
+   <div id="header"></div>
+
+   
+</body>
 
   <div class="container">
     <aside id="sidebar"></aside>
@@ -99,6 +99,7 @@
           <div class="anime-item">
             <img src="sonota/kontent.jpg" alt="コンテンツのイメージ" width="1200" height="628">
         <h3 class="anime-title">具体的なコンテンツ</h3>
+        <P>証券ジャンルを中心とし幅広く展開してをります。</P>
         <h4>▼ 取り扱いジャンル</h4>
         <ul>
           <li><i class="fa-solid fa-money-bill"></i>・証券</li>
@@ -117,9 +118,16 @@
 
       <div class="anime-item">
         <h3 class="anime-title">おすすめページ</h3>
+        <p>株取引の基礎を解説するページから各証券、FX、暗号通貨のページ等の流れがあり、投資を考えている方に助けとなるページ作成を目指しています。</p>
             <section class="card-section">
+
+               <div class="card-grid">
+                
+                <a href="kabukaisetu" class="card-link">
+             <i class="fa-regular fa-handshake"></i>
+             <span>株取引の基礎を解説するページ</span>
+             </a>
   
-           <div class="card-grid">
                <a href="saxo.html" class="card-link">
                   <i class="fa-solid fa-chart-line"></i>
             <span>米国株特化のサクソバンク証券</span>
@@ -129,11 +137,8 @@
                <i class="fa-solid fa-book"></i>
                  <span>プロパティエージェントの不動産投資セミナー</span>
                  </a>
-
-             <a href="kabukaisetu" class="card-link">
-             <i class="fa-regular fa-handshake"></i>
-             <span>株取引の基礎を解説するページ</span>
-             </a>
+              </div>
+           
 
             </div>
         </section>
@@ -157,9 +162,8 @@
       </main>
     </div>
 
-        <footer>
-            &copy; 2025 簡潔な紹介サイト All Rights Reserved.
-          </footer>
+       <div id="footer"></div>
+  <script src="/js/include.js"></script>
         
            <script>
         document.addEventListener("DOMContentLoaded", function() {

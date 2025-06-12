@@ -159,17 +159,20 @@
   <div id="footer"></div>
 
   <!-- ✅ 共通読み込み用JS -->
-  <script src="js/include.js"></script>
+  <script src="include.js"></script>
 
-  <!-- ✅ sidebar読み込み専用JS（1回だけでOK） -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch('sidebar.html')
-        .then(response => response.text())
-        .then(data => {
+  
+           <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         fetch('sidebar.html')
+         .then(response => response.text())
+          .then(data => {
           document.getElementById('sidebar').innerHTML = data;
-        });
-    });
-  </script>
+            });
+          });
+         </script>
+
+          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
+        <script src="sidebar.js"></script>
 </body>
 </html>

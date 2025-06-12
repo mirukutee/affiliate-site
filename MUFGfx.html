@@ -56,10 +56,7 @@
 
  <body>
     <!-- ヘッダーの内容 -->
-    <header>
-    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-    <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
-    </header>
+   <div id="header"></div>
  
 
   <!-- サイドバー呼び出し -->
@@ -154,25 +151,22 @@ FX口座の開設はオンラインで完結可能。スマホアプリでのデ
  </main>
     </div>
 
-        <footer>
-            &copy; 2025 簡潔な紹介サイト All Rights Reserved.
-          </footer>
+ <div id="footer"></div>
+
+  <!-- ✅ 共通読み込み用JS -->
+  <script src="include.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  });
+</script>
+
+<script src="sidebar.js"></script>
+
 </body>
-
-<!-- サイドバーのスクリプト -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-         fetch('sidebar.html')
-         .then(response => response.text())
-          .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-            });
-          });
-         </script>
-
-          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
-        <script src="sidebar.js"></script>
-        
-        </body>
-
-        </html>
+</html>

@@ -22,9 +22,8 @@
   <link rel="amphtml" href="AMP.html">
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-  </header>
+ <div id="header"></div>
+
 
   <div class="container">
     <aside id="sidebar"></aside>
@@ -230,10 +229,12 @@
 
     </main>
   </div>
+  
+  <!-- ✅ フッター -->
+ <div id="footer"></div>
 
-  <footer>
-    &copy; 2025 サイト名 All Rights Reserved.
-  </footer>
+  <!-- ✅ 共通読み込み用JS -->
+  <script src="include.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {

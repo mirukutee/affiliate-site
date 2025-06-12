@@ -1,13 +1,16 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const loadHTML = (selector, url) => {
-    fetch(url)
-      .then(res => res.text())
-      .then(data => {
-        document.querySelector(selector).innerHTML = data;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inject = (id, path) => {
+    fetch(path)
+      .then((res) => res.text())
+      .then((data) => {
+        const target = document.getElementById(id);
+        if (target) target.innerHTML = data;
       })
-      .catch(err => console.error(`Error loading ${url}:`, err));
+      .catch((err) => console.error(`Error loading ${path}:`, err));
   };
 
-  loadHTML('#header', '/partials/header.html');
-  loadHTML('#footer', '/partials/footer.html');
+  inject("header", "header.html");
+  inject("footer", "footer.html");
 });

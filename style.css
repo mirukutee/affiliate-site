@@ -261,7 +261,7 @@ footer {
   overflow-y: auto; /*はみ出したときの対策*/
   position: fixed; /*場所の固定*/
   left: 0; /*左からの位置（距離）*/
-  top: 0; /*垂直の位置*/
+  top: 230; /*垂直の位置*/
   z-index: 10; /*重なりの対策*/
    color: #5e5a5a;
     display: block;

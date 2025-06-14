@@ -110,7 +110,7 @@ html, body {
   color: #333;
   line-height: 1.6;
 
-   background-image: linear-gradient(90deg, rgba(52, 59, 202, 1) 18%, rgba(54, 181, 202, 1) 59%, rgba(82, 11, 255, 1) 81%, rgba(194, 119, 76, 1) 94%);
+    background-image: linear-gradient(90deg, rgba(40, 0, 255, 1), rgba(71, 243, 255, 1));
 
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;

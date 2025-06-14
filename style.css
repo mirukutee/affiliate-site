@@ -259,7 +259,7 @@ footer {
   border-right: 10px solid #009dff; /*右横の余白の色*/
   height: 100vh; /*ページ全体に広げる*/
   overflow-y: auto; /*はみ出したときの対策*/
-  position: fixed; /*場所の固定*/
+  height: auto; /* 高さは内容に合わせて自動調整 */
   left: 0; /*左からの位置（距離）*/
   top: 230; /*垂直の位置*/
   z-index: 10; /*重なりの対策*/

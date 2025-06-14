@@ -257,7 +257,7 @@ footer {
   width: 240px; /*全体の横幅*/
   background-color: #959595; /*背景全体の色*/
   border-right: 10px solid #009dff; /*右横の余白の色*/
-  height: 100vh; /*ページ全体に広げる*/
+  height: auto; /*ページ全体に広げる*/
   overflow-y: auto; /*はみ出したときの対策*/
   position:static; /*場所の固定*/
   left: 0; /*左からの位置（距離）*/
@@ -333,7 +333,7 @@ footer {
 
 .dropdown-content a {
   display: block;
-  background-color: #f5f5f5; /* 薄グレー背景 */
+  background-color: #b9babe; /* 薄グレー背景 */
   margin: 8px 10px;          /* リンク間の余白 */
   padding: 14px 16px;        /* 十分な高さ */
   border-radius: 6px;        /* 丸みで柔らかさ */

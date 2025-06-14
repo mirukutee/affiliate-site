@@ -254,8 +254,8 @@ footer {
 /* サイドバー */
 .sidebar {
   position: fixed;
-  top: 60px; /* ← ヘッダーの高さ */
-  height: calc(100vh - 60px); /* ← ヘッダーの分だけ引く */
+  top: 60px; /* ヘッダーの高さ */
+  height: calc(100vh - 60px - 50px); /* 画面高さからヘッダーとフッターの高さを引いた高さ */
   width: 240px;
   background-color: #959595;
   border-right: 10px solid #009dff;
@@ -263,7 +263,6 @@ footer {
   padding: 10px;
   z-index: 10;
 }
-
 /* ドロップダウンリスト全帯*/
 .dropdown {
   margin-bottom: 15px;

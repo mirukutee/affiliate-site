@@ -263,7 +263,11 @@ footer {
   left: 0; /*左からの位置（距離）*/
   top: 0; /*垂直の位置*/
   z-index: 10; /*重なりの対策*/
+   color: #5e5a5a;
+    display: block;
 }
+
+
 
 
 /* ドロップダウンリスト全帯*/
@@ -299,8 +303,9 @@ footer {
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+   transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.4s ease;
   background-color: #fafafa;
+
 }
 
 .dropdown-content.open {

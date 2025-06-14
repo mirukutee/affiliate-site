@@ -10,7 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
           const content = this.nextElementSibling;
 
-          // すべて閉じる（自分以外）
+          // スクロールして中央に表示
+          button.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+
+          // 他を閉じる
           document.querySelectorAll(".dropdown-content.open").forEach(c => {
             if (c !== content) {
               c.classList.remove("open");
@@ -20,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
 
-          // トグル開閉
+          // 自分をトグル開閉
           if (content.classList.contains("open")) {
             content.classList.remove("open");
             content.style.maxHeight = null;
@@ -28,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
             content.style.opacity = "0";
           } else {
             content.style.display = "block";
-            // 一旦高さ確定のため遅延させる（ココ重要）
             requestAnimationFrame(() => {
               content.classList.add("open");
               content.style.maxHeight = content.scrollHeight + "px";

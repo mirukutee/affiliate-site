@@ -83,7 +83,7 @@
 .breadcrumb-item + .breadcrumb-item::before {
   content: "›"; /* → or / でもOK */
   margin: 0 8px;
-  color: #999;
+  color: #bdbaba;
 }
 
 /* リンク */
@@ -109,12 +109,10 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-   background: linear-gradient(135deg,
-    #0d47a1, /* 深紺 */
-    #42a5f5, /* 明るめブルー */
-    #e1f5fe  /* 淡空色 */
-  );
-  background-size: 600% 600%;
+
+   background-image: linear-gradient(90deg, rgba(52, 59, 202, 1) 18%, rgba(54, 181, 202, 1) 59%, rgba(82, 11, 255, 1) 81%, rgba(194, 119, 76, 1) 94%);
+
+  background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   background-attachment: fixed;
   position: relative;
@@ -375,20 +373,13 @@ main {
   border-radius: 10px;
   background-color: #ffffff;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(2, 7, 103, 0.3);
   transition: all 0.3s ease;
-     box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8), 5px 5px 15px 7px rgba(0, 213, 83, 0.8);
-}
-.element {
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8), 5px 5px 15px 7px rgba(0, 213, 83, 0.8);
 }
 
-.element:hover {
-  box-shadow: -5px -5px 20px 5px rgba(255, 255, 0, 0.8), 5px 5px 20px 7px rgba(255, 165, 0, 0.8);
-}
 .anime-item:hover {
-  box-shadow: 0 6px 18px rgba(173, 216, 230, 0.4);
-  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px 7px rgba(226, 94, 243, 0.8);
+  transform: translateY(-10px);
 }
 
 .anime-title {

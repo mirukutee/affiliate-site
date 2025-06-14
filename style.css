@@ -253,15 +253,16 @@ footer {
 
 /* サイドバー */
 .sidebar {
-  position: fixed;
-  top: 60px; /* ヘッダーの高さ */
-  height: calc(100vh - 60px - 50px); /* 画面高さからヘッダーとフッターの高さを引いた高さ */
-  width: 240px;
-  background-color: #959595;
-  border-right: 10px solid #009dff;
-  overflow-y: auto;
-  padding: 10px;
-  z-index: 10;
+  padding: 10px; /*内側の余白*/
+  width: 240px; /*全体の横幅*/
+  background-color: #959595; /*背景全体の色*/
+  border-right: 10px solid #009dff; /*右横の余白の色*/
+  height: 100vh; /*ページ全体に広げる*/
+  overflow-y: auto; /*はみ出したときの対策*/
+  position:static; /*場所の固定*/
+  left: 0; /*左からの位置（距離）*/
+  top: 0; /*垂直の位置*/
+  z-index: 10; /*重なりの対策*/
 }
 /* ドロップダウンリスト全帯*/
 .dropdown {
@@ -369,7 +370,7 @@ main {
   border: 1px solid #ddd;
   box-shadow: 0 4px 12px rgba(2, 7, 103, 0.3);
   transition: all 0.3s ease;
-   box-shadow: 0px 0px 10px aqua;
+   box-shadow: 0px 0px 25px aqua;
 }
 
 .anime-item:hover {

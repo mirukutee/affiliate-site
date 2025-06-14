@@ -257,14 +257,16 @@ footer {
   width: 240px; /*全体の横幅*/
   background-color: #959595; /*背景全体の色*/
   border-right: 10px solid #009dff; /*右横の余白の色*/
-  height: 100vh; /*ページ全体に広げる*/
+ top: 60px; /* ← ヘッダーの高さ */
+  height: calc(100vh - 60px); /* ← ヘッダーの分だけ引く */
   overflow-y: auto; /*はみ出したときの対策*/
+  position: fixed; /*場所の固定*/
   left: 0; /*左からの位置（距離）*/
-  top: 230; /*垂直の位置*/
   z-index: 10; /*重なりの対策*/
    color: #5e5a5a;
-    display: block;
+  display: block;
 }
+
 
 
 

@@ -249,22 +249,24 @@ footer {
   padding: 20px;
 }
 
+
+
 /* サイドバー */
 .sidebar {
-  width: 240px;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-right: 1px solid #ccc;
-  height: 100vh;
-  overflow-y: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10;
+  padding: 10px; /*内側の余白*/
+  width: 240px; /*全体の横幅*/
+  background-color: #959595; /*背景全体の色*/
+  border-right: 10px solid #009dff; /*右横の余白の色*/
+  height: 100vh; /*ページ全体に広げる*/
+  overflow-y: auto; /*はみ出したときの対策*/
+  position: fixed; /*場所の固定*/
+  left: 0; /*左からの位置（距離）*/
+  top: 0; /*垂直の位置*/
+  z-index: 10; /*重なりの対策*/
 }
 
 aside {
-  background: #506171;
+  background: #f00f0f;
   padding: 1em;
   color: #5e5a5a;
   width: 250px;
@@ -286,21 +288,23 @@ aside a:hover {
   color: #fff;
 }
 
-/* ドロップダウンリスト */
+/* ドロップダウンリスト全帯*/
 .dropdown {
   margin-bottom: 15px;
   border-radius: 8px;
   overflow: hidden;
   background-color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ box-shadow: 0px 0px 10px aqua;
 }
 
+
+/*親ボタン*/
 .dropdown-button {
-  background: linear-gradient(145deg, #3a84f1, #ffffff);
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(145deg, #3a84f1, #ffffff); /*ボタンの色（背景）*/
+  border-radius: 6px; /*丸みをつける*/
+  border: 1px solid #10e642; /*枠線*/
+  box-shadow: 0px 0px 5px aqua; /*背景の影*/
   font-size: 16px;
   color: #333;
   padding: 10px 15px;
@@ -309,6 +313,7 @@ aside a:hover {
   cursor: pointer;
 }
 
+/*カーソルを合わせたときの動き*/
 .dropdown-button:hover {
   background-color: #e0e0e0;
 }
@@ -318,8 +323,6 @@ aside a:hover {
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
   background-color: #fafafa;
-  padding: 0 16px;
-  opacity: 0;
 }
 
 .dropdown-content.open {
@@ -355,7 +358,7 @@ aside a:hover {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
   display: block;
-  color: #333;
+  color: #ee7c02;
   transition: background 0.2s;
 }
 

@@ -345,6 +345,7 @@ footer {
   transition: background 0.2s;
 }
 
+/*カーソルをあはせたときの処理*/
 .dropdown-content a:hover {
   background: #1abc9c;
 }

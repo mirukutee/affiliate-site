@@ -109,8 +109,12 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(135deg, #f5fafd, #80e4f1, #0e2349);
-  background-size: 400% 400%;
+   background: linear-gradient(135deg,
+    #0d47a1, /* 深紺 */
+    #42a5f5, /* 明るめブルー */
+    #e1f5fe  /* 淡空色 */
+  );
+  background-size: 600% 600%;
   animation: gradientShift 20s ease infinite;
   background-attachment: fixed;
   position: relative;

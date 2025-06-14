@@ -290,7 +290,7 @@ footer {
   width: 100%;
   text-align: left;
   cursor: pointer;
-}
+} 
 
 /*カーソルを合わせたときの動き*/
 .dropdown-button:hover {

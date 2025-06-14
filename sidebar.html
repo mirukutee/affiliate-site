@@ -114,3 +114,15 @@
   </div>
 </div>
 </div>
+
+ <script>
+    document.querySelectorAll('.dropdown-button').forEach(button => {
+      button.addEventListener('click', () => {
+        // ボタンの位置にスムーズスクロール
+        button.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      });
+    });
+  </script>

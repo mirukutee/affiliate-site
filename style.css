@@ -253,18 +253,15 @@ footer {
 
 /* サイドバー */
 .sidebar {
-  padding: 10px; /*内側の余白*/
-  width: 240px; /*全体の横幅*/
-  background-color: #959595; /*背景全体の色*/
-  border-right: 10px solid #009dff; /*右横の余白の色*/
- top: 60px; /* ← ヘッダーの高さ */
+  position: fixed;
+  top: 60px; /* ← ヘッダーの高さ */
   height: calc(100vh - 60px); /* ← ヘッダーの分だけ引く */
-  overflow-y: auto; /*はみ出したときの対策*/
-  position: fixed; /*場所の固定*/
-  left: 0; /*左からの位置（距離）*/
-  z-index: 10; /*重なりの対策*/
-   color: #5e5a5a;
-  display: block;
+  width: 240px;
+  background-color: #959595;
+  border-right: 10px solid #009dff;
+  overflow-y: auto;
+  padding: 10px;
+  z-index: 10;
 }
 
 /* ドロップダウンリスト全帯*/

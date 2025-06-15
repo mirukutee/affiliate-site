@@ -11,54 +11,93 @@
   margin-bottom: 1px;
 }
 
-/* ===== 発光リンクバナー ===== */
-.font_red_r {
-  background-color: #2c2c2c;
-  color: white;
-  padding: 20px;
-  border: 2px solid #00ffff;
-  border-radius: 10px;
+/*遊び*/
+.cta-button-small {
   display: inline-block;
-  text-align: center;
+  padding: 8px 16px;
+  background-color: #2c2c2c;
+  color: #fff;
+  border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+  transition: transform 0.2s ease;
+}
+
+.cta-button-small:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.7);
+}
+.shoryuken {
+  color: #ff5555;
+  font-weight: bold;
+  animation: punch 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes punch {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px) scale(1.1); }
+}
+
+/* ===== 発光リンクバナー ===== */
+/* 共通ボタンスタイル */
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c2c2c;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+  transform: scale(1.03);
+}
+
+/* 画像バナーだけに適用される発光効果 */
+.font_red_r {
+  margin: 20px auto;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
   animation: soft-glow 2s ease-in-out infinite alternate;
   transform: scale(1.05);
-  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
 }
 
+
+
+/* ホバーでさらに目立たせる */
+.font_red_r:hover {
+  box-shadow: 0 0 40px #00ffff, 0 0 80px #00ffff;
+  transform: scale(1.08);
+}
+
+/* 発光アニメーション */
 @keyframes soft-glow {
   from { box-shadow: 0 0 0px #00ffff; }
-  to { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
+  to   { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
 }
 
-@keyframes subtle-bg {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+/* 画像をリキッド対応にする */
+.font_red_r img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
-.glow-text {
-  background: linear-gradient(to right, #00ffff, #ffffff, #00ffff);
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s linear infinite;
-}
-@keyframes shine {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
 
 /* パンくずリスト全体 */
 .breadcrumb {
@@ -374,11 +413,12 @@ main {
   background-color: #ffffff;
   border: 1px solid #ddd;
   transition: all 0.3s ease;
-  box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8), 5px 5px 15px 7px rgba(0, 213, 83, 0.8);
+  
+ box-shadow: 5px 5px 15px 5px rgba(50, 150, 100, 0.8);
 }
 
 .anime-item:hover {
-  box-shadow: 5px 5px 15px 7px rgba(226, 94, 243, 0.8);
+  box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8);
   transform: translateY(-10px);
 }
 

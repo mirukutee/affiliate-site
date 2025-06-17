@@ -2,6 +2,12 @@
 
 <div class="sidebar">
 
+<!-- 検索ボックス -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="サイト内検索...">
+</div>
+
+<!-- サイトトップ -->
 <div class="dropdown">
   <button class="dropdown-button">サイトトップページ</button>
   <div class="dropdown-content" id="top">
@@ -9,111 +15,191 @@
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>証券</button>
-  <div class="dropdown-content" id="securities">
-    <a href="kabukaisetu.html">株取引の基礎を解説</a>
-    <a href="moomoosyouken.html">moomoo証券ご紹介</a>
-    
-    
-    <a href="saxo.html">米国株特化のサクソバンク証券</a>
-    <a href="DMMkabu.html">DMM株ご紹介</a>
-    <a href="Webull.html">FWebull証券ご紹介</a>
-    <a href="MUFGesmart.html">三菱UFJ eスマート証券ご紹介</a>
-    <a href="matuikabu.html">松井証券ご紹介</a>
-    <a href="matui.html">松井証券のiDeCoご紹介</a>
+<!-- 証券関連 -->
+<div class="sidfont">
+  <p>・証券関連ページ</p>
+
+  <span class="sidfonta">初心者におすすめの証券</span>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>初心者向け証券一覧</button>
+    <div class="dropdown-content" id="beginner-securities">
+      <a href="kabukaisetu.html">株取引の基礎を解説</a>
+      <a href="DMMkabu.html">DMM株ご紹介</a>
+      <a href="matuikabu.html">松井証券ご紹介</a>
+      <a href="matui.html">松井証券のiDeCoご紹介</a>
+    </div>
+  </div>
+
+  <span class="sidfonta">中級者向け証券</span>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>中級者向け証券一覧</button>
+    <div class="dropdown-content" id="intermediate-securities">
+      <a href="moomoosyouken.html">moomoo証券ご紹介</a>
+      <a href="saxo.html">米国株特化のサクソバンク証券</a>
+      <a href="MUFGesmart.html">三菱UFJ eスマート証券ご紹介</a>
+    </div>
+  </div>
+
+  <span class="sidfonta">海外株に強い証券（上級者向け）</span>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>グローバル投資家向け証券</button>
+    <div class="dropdown-content" id="advanced-securities">
+      <a href="saxo.html">saxo証券ご紹介</a>
+      <a href="Webull.html">Webull証券ご紹介</a>
+    </div>
+  </div>
+
+  <span class="sidfonta">iDeCo関連</span>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>iDeCo証券一覧</button>
+    <div class="dropdown-content" id="ideco">
+      <a href="matui.html">松井証券のiDeCoご紹介</a>
+    </div>
+  </div>
+
+  <span class="sidfonta">証券一覧まとめ</span>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>証券関連ページ</button>
+    <div class="dropdown-content" id="summary">
+      <a href="syoukensyoukai.html">一覧まとめページ</a>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-coins"></i>仮想通貨</button>
-  <div class="dropdown-content" id="Bitcoin">
-    <a href="PBRLending.html">PBRレンディングご紹介</a>
-    <a href="gmocoin.html">GMOコインご紹介</a>
-    <a href="OKJ.html">OKJご紹介</a>
+<!-- 仮想通貨 -->
+<div class="sidfontb">
+  <p>仮想通貨の売買・管理に役立つサービスをご紹介しています</p>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-coins"></i>仮想通貨ページ</button>
+    <div class="dropdown-content" id="crypto">
+      <a href="PBRLending.html">PBRレンディングご紹介</a>
+      <a href="gmocoin.html">GMOコインご紹介</a>
+      <a href="OKJ.html">OKJご紹介</a>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-chart-line"></i>FX</button>
-  <div class="dropdown-content" id="FX">
-    <a href="hitrosekabu.html">LION FXご紹介</a>
-    <a href="minnafx.html">みんなのFXご紹介</a>
-     <a href="fx-plus-2.html">FX PLUSご紹介</a>
-     <a href="MUFGfx.html">三菱UFJ eスマート証券FX（旧：auカブコムFX）ご紹介</a>
+<!-- FX -->
+<div class="sidfontb">
+  <p>FX（外国為替取引）に関するサービスを幅広く掲載しています。</p>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-chart-line"></i>FXページ</button>
+    <div class="dropdown-content" id="fx">
+      <a href="hitrosekabu.html">LION FXご紹介</a>
+      <a href="minnafx.html">みんなのFXご紹介</a>
+      <a href="fx-plus-2.html">FX PLUSご紹介</a>
+      <a href="MUFGfx.html">三菱UFJ eスマート証券FXご紹介</a>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-heart"></i>女性美容</button>
-  <div class="dropdown-content" id="beauty">
-    <a href="syairuEXO.html">エクソソーム シャイルEXO解説</a>
-    <a href="eminoboute.html">エミノボーテ解説</a>
-    <a href="longrushrich.html">まつ毛美容液で目元ケア｜ロングラッシュリッチ</a>
-    <a href="toriitomennto.html">おすすめのトリートメント製品まとめ</a>
+<!-- 資産運用・FP -->
+<div class="sidfontc">
+  <p>資産運用に役立つセミナーやサービスをご紹介しています。</p>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-book"></i>資産運用ページ</button>
+    <div class="dropdown-content" id="investment">
+      <a href="propertyagent.html">不動産投資セミナー</a>
+      <a href="ABCash.html">ABCashのNISA講座</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-regular fa-handshake"></i>ファイナンシャル・プランナー</button>
+    <div class="dropdown-content" id="planner">
+      <a href="garden.html">保険や家計の無料相談</a>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-bottle-droplet"></i>男性美容</button>
-  <div class="dropdown-content" id="mens">
-    <a href="menzu.html">メンズ美容製品まとめ</a>
-    <a href="ZIGEN.html">ZIGENでメンズ美容</a>
+<!-- その他 -->
+<div class="sidfont">
+  <p>その他コンテンツ</p>
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-plane"></i>旅行</button>
+    <div class="dropdown-content" id="travel">
+      <a href="ryokou.html">おすすめ旅行サイト一覧</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-book"></i>勉強</button>
+    <div class="dropdown-content" id="study">
+      <a href="neitebukyannpu.html">ネイティブキャンプ紹介</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-plane"></i>就活・転職</button>
+    <div class="dropdown-content" id="career">
+      <a href="careerpark.html">キャリアパークで無料相談</a>
+      <a href="tennsyoku.html">転職サービスまとめ</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-square-caret-right"></i>サブスク配信</button>
+    <div class="dropdown-content" id="vod">
+      <a href="wowow.html">wowowオンデマンド</a>
+      <a href="Hulu.html">Hulu</a>
+      <a href="DAZN.html">DAZN</a>
+      <a href="DAZNforBUSINESS.html">DAZN for BUSINESS</a>
+      <a href="turiVOD.html">釣りビジョンVOD</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-heart"></i>女性美容</button>
+    <div class="dropdown-content" id="beauty">
+      <a href="syairuEXO.html">シャイルEXO解説</a>
+      <a href="eminoboute.html">エミノボーテ解説</a>
+      <a href="longrushrich.html">ロングラッシュリッチ</a>
+      <a href="toriitomennto.html">トリートメント製品</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-bottle-droplet"></i>男性美容</button>
+    <div class="dropdown-content" id="mens">
+      <a href="menzu.html">メンズ美容製品</a>
+      <a href="ZIGEN.html">ZIGEN</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-button"><i class="fa-solid fa-photo-film"></i>アニメ</button>
+    <div class="dropdown-content" id="anime">
+      <a href="anime2025.html">2025年春アニメ新作</a>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-book"></i>セミナー 相談 資格 勉強</button>
-  <div class="dropdown-content" id="seminar">
-    <a href="neitebukyannpu.html">ネイティブキャンプ紹介</a>
-    <a href="propertyagent.html">プロパティエージェントの不動産投資セミナー</a>
-    <a href="ABCash.html">ABCashのNISA講座で資産形成を学ぶ</a>
-  </div>
+<!-- 一覧に戻るボタン -->
+<div style="margin-top: 20px; text-align: center;">
+  <a href="#top" class="back-to-top">↑ 一覧に戻る</a>
 </div>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-regular fa-handshake"></i>ファイナンシャル・プランナー
-</button>
-  <div class="dropdown-content" id="planner">
-    <a href="garden.html">保険や家計の無料相談、ガーデン</a>
- 
-  </div>
-</div>
+<!-- 検索用スクリプト（任意で機能追加可能） -->
+<script>
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+      link.style.display = link.textContent.toLowerCase().includes(query) ? '' : 'none';
+    });
+  });
+</script>
 
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-plane"></i>旅行</button>
-  <div class="dropdown-content" id="travel">
-    <a href="ryokou.html">おすすめ旅行サイト一覧</a>
-  </div>
-</div>
-
-
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-plane"></i>就活|転職</button>
-  <div class="dropdown-content" id="career">
-    <a href="careerpark.html">新卒で不安を感じたら｜キャリアパークで無料相談</a>
-    <a href="tennsyoku.html">転職サイト|転職サービス|紹介|一覧比較</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-square-caret-right"></i>サブスク配信サービス</button>
-  <div class="dropdown-content" id="moviel">
-    <a href="wowow.html">wowowオンデマンドについて解説</a>
-    <a href="Hulu.html">Huluについて解説</a>
-    <a href="DAZN.html">スポーツ観るならDAZN！</a>
-    <a href="DAZNforBUSINESS.html">DAZNの飲食店向けサービス</a>
-    <a href="turiVOD.html">釣りビジョンVODを解説</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <button class="dropdown-button"><i class="fa-solid fa-photo-film"></i>アニメ</button>
-  <div class="dropdown-content" id="anime">
-    <a href="anime2025.html">2025年春アニメ新作紹介</a>
-  </div>
-</div>
-</div>
+ <script>
+    document.querySelectorAll('.dropdown-button').forEach(button => {
+      button.addEventListener('click', () => {
+        // ボタンの位置にスムーズスクロール
+        button.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      });
+    });
+  </script>
 
  <script>
     document.querySelectorAll('.dropdown-button').forEach(button => {

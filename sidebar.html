@@ -2,11 +2,6 @@
 
 <div class="sidebar">
 
-<!--検索ボックス -->
-<div class="search-box" style="margin: 20px 0;">
-  <input type="text" id="searchInput" placeholder="サイト内検索...">
-  <button id="searchButton">検索</button>
-</div>
 
 <!-- サイトトップ -->
 <div class="dropdown">
@@ -180,34 +175,6 @@
   <a href="#top" class="back-to-top">↑ 一覧に戻る</a>
 </div>
 
-<!-- 検索用スクリプト（任意で機能追加可能） -->
-<script>
-  function performSearch() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
-      const content = dropdown.querySelector('.dropdown-content');
-      const links = content.querySelectorAll('a');
-      let matchFound = false;
-
-      links.forEach(link => {
-        const text = link.textContent.toLowerCase();
-        if (text.includes(query)) {
-          link.style.display = '';
-          matchFound = true;
-        } else {
-          link.style.display = 'none';
-        }
-      });
-
-      // ドロップダウン全体の表示切り替え
-      content.style.display = matchFound ? 'block' : 'none';
-    });
-  }
-
-  document.getElementById('searchInput').addEventListener('input', performSearch);
-</script>
 
 
 

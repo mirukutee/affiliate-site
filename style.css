@@ -268,6 +268,7 @@ footer {
 
 /* サイドバー */
 .sidebar {
+  height: 100%;
   margin: 0;
   box-sizing: border-box;
   padding: 10px; /*内側の余白*/

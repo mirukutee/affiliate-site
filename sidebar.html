@@ -181,13 +181,24 @@
 
 <!-- 検索用スクリプト（任意で機能追加可能） -->
 <script>
-  document.getElementById('searchInput').addEventListener('input', function() {
+  document.getElementById('searchInput').addEventListener('input', function () {
     const query = this.value.toLowerCase();
-    document.querySelectorAll('.dropdown-content a').forEach(link => {
-      link.style.display = link.textContent.toLowerCase().includes(query) ? '' : 'none';
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      const dropdownText = dropdown.textContent.toLowerCase();
+
+      // 該当文字が含まれていれば表示
+      if (dropdownText.includes(query)) {
+        dropdown.style.display = 'block';
+        dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        dropdown.style.display = 'none';
+      }
     });
   });
 </script>
+
 
  <script>
     document.querySelectorAll('.dropdown-button').forEach(button => {

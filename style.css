@@ -12,6 +12,18 @@
 }
 
 
+/* ===== idジャンプボタンのクラス要素 ===== */
+a.idjanp {
+  color: #0077cc;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a.idjanp:hover {
+  color: #005fa3;
+  text-decoration: none;
+}
+
 
 /* ===== 発光リンクバナー ===== */
 /* 共通ボタンスタイル */

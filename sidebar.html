@@ -187,26 +187,28 @@
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
-      const text = dropdown.textContent.toLowerCase();
-      if (text.includes(query)) {
-        dropdown.style.display = 'block';
-        dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        dropdown.style.display = 'none';
-      }
+      const content = dropdown.querySelector('.dropdown-content');
+      const links = content.querySelectorAll('a');
+      let matchFound = false;
+
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(query)) {
+          link.style.display = '';
+          matchFound = true;
+        } else {
+          link.style.display = 'none';
+        }
+      });
+
+      // ドロップダウン全体の表示切り替え
+      content.style.display = matchFound ? 'block' : 'none';
     });
   }
 
-  // ボタンを押したときに検索
-  document.getElementById('searchButton').addEventListener('click', performSearch);
-
-  // Enterキーでも検索を実行
-  document.getElementById('searchInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  });
+  document.getElementById('searchInput').addEventListener('input', performSearch);
 </script>
+
 
 
  <script>

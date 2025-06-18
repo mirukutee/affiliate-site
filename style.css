@@ -525,6 +525,44 @@ a:hover {
   color: #f39c12;
 }
 
+/* 横並びdiv */
+.field{
+  display: flex;
+ 
+}
+
+.field-card {
+  font-size: small;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 1px;
+ /* 上側に20px間隔をあける */
+  margin-right: 5px;
+ /* 右側に20px間隔をあける */
+  margin-bottom: 1px;
+ /* 下側に20px間隔をあける */
+  margin-left: 5px;
+ /* 左側に20px間隔をあける */
+
+}
+
+.field-card h4 {
+  margin: 0 0 0.5em;
+  font-size: 1.1em;
+  border-left: 4px solid #4A90E2;
+  padding-left: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .field{
+   overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+}
+}
+
 /* 表 */
 table {
   border-collapse: collapse;
@@ -599,6 +637,11 @@ tbody > tr:nth-of-type(even) {
   font-size: 1.1em;
   border-left: 4px solid #4A90E2;
   padding-left: 0.5em;
+}
+
+/*大型のテーブルをスクロールさせたいとき*/
+.large-table-scroll{
+
 }
 
 /*ページに案内リンク*/

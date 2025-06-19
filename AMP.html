@@ -1,16 +1,11 @@
 <!doctype html>
-<html ⚡>
+<html amp>
   <head>
     <meta charset="utf-8" />
-    <title>要点だけを、サッと理解｜簡潔な紹介サイト</title>
-
     <!-- AMP 必須スクリプト -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-
-    <!-- 表示スケーリング -->
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-
-    <!-- AMP boilerplate -->
+  <meta name="viewport" content="width=device-width,minimum-scale=1" />
+  <!-- AMP boilerplate -->
    <style amp-boilerplate>
   body {
     -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
@@ -86,9 +81,8 @@
 
     <!-- ファビコンやCSSは必要に応じて追記 -->
     <link rel="icon" href="/favicon.ico" />
- 
 
-    <style amp-custom>
+ <style amp-custom>
  /* ===== 共通リセット ===== */
 * {
   margin: 0;
@@ -723,29 +717,52 @@ li {
    </style>
 
   </head>
+   </style>
 
+  </head>
 
-  <body>
-    <!-- ヘッダーの内容 -->
-    <header>
-    <h1><a href="index.html">簡潔な紹介サイト</a></h1>
-    <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
-    </header>
- 
+<body>
+  <div id="header"></div>
 
-    <!-- トップページ案内 -->
-<nav class="breadcrumb">
-  <a href="index.html">ホーム</a> &gt;
-  <span>トップページ</span>
-</nav>
-
-  <!-- サイドバー呼び出し -->
-   <div class="container">
+  <div class="container">
     <aside id="sidebar"></aside>
 
 
    <!-- メインの内容 -->
     <main>
+       
+             <!-- ヘッダー -->
+ <header class="site-header">
+  <h1><a href="index.html">簡潔な紹介サイト</a></h1>
+  <p class="sub-copy">短時間で理解できる、要点だけの情報提供サイト</p>
+
+  <nav class="main-nav">
+
+    <ul class="nav-menu">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="syoukensyoukai.html">証券口座｜一覧 まとめ</a></li><li>
+
+      <li class="nav-dropdown">
+        <a href="#" class="dropbtn">株取引の基礎を解説</a>
+        <ul class="dropdown-list">
+          <li><a href="kabukaisetu.html">株を始める初心者の方へ<br>基礎を解説</a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+             <!-- パンくず -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+    <li class="breadcrumb-item"><a href="kabukaisetu.html">株を始める初心者の方へ基礎を解説</a></li>
+     <li class="breadcrumb-item active" aria-current="page">株を始める初心者の方へ基礎を解説します。</li>
+  </ol>
+</nav>
+
+
 
            <!-- 見出し -->
          <h2 class="title">>AMP用の文字</h2>
@@ -760,15 +777,21 @@ li {
         </p>
         </div>
      
+  <!-- メインのコンテンツ2 -->
+      <section class="anime-item">
+          <h3 class="anime-title">SAXO証券|上級者におすすめ</h3>
+        <p>SAXO証券は、5,800以上の米国株銘柄を取り扱い、テクニカル指向の中・上級者に最適な証券口座です。</p>
+      </section>
+
         <!-- 段落とアイコン（外部CSSのHTML内の文章 -->
   <ul>
-    <li> 仮の項目A</li>
+    <li><i class="fa-solid fa-pen"></i> 仮の項目A</li>
 
      <li><strong>AMP用の文字:</strong><br> AMP用の文字</li>
   </ul>
 
 
-     <!-- ▼ FAQ構成の雛形-->
+ <!-- ▼ FAQ構成の雛形-->
 	  <dl>
  	   <dt>Q.〇〇は無料ですか？</dt>
  	 </dl>
@@ -778,11 +801,9 @@ li {
    	 <p>「担当者がとても丁寧で安心して相談できました！」</p>
    	 <cite>— 30代・女性</cite>
   	</blockquote>
-     
-     
+   
 
-
-  <!-- 小規模のテーブル -->
+<!-- 小規模のテーブル -->
   <table>
     <caption>仮の基本情報</caption>
     <thead>
@@ -792,67 +813,175 @@ li {
       </tr>
     </thead>
     <tbody>
-
       <tr>
         <th scope="row">なんか</th>
         <td>あれ</td>
       </tr>
-
       <tr>
         <th scope="row">なにか</th>
         <td>それ</td>
       </tr>
-
     </tbody>
   </table>
 
 
-  <!-- 大型のテーブルのクラス指定の時 -->
-  <div class="large-table-container">
-    <table>
+<!-- PC/タブレット向けテーブル -->
+<div class="large-table-container only-pc">
+  <table>
       <thead>
         <tr>
-          <th>AMP用の文字</th>
-          <th>AMP用の文字</th>
+          <th>取扱市場</th>
+          <th>主な取扱商品</th>
+          <th>取引時間</th>
+          <th>手数料体系</th>
+          <th>特徴・備考</th>
         </tr>
       </thead>
-
       <tbody>
-
         <tr>
-          <td><strong>AMP用の文字</strong></td>
+          <td><strong>国内株式</strong></td>
           <td>
-           AMP用の文字
+            ・東証（プライム/スタンダード/グロース）<br>
+            ・ETF、REIT、IPOなど
           </td>
-
-          <tr>
-          <td>AMP用の文字<br><small>※AMP用の文字</small></td>
+          <td>8:00〜15:00<br><small>※注文は24時間受付</small></td>
           <td>
-            AMP用の文字
-            <strong>AMP用の文字</strong>
+            一日定額制<br>
+            <strong>0円〜上限1,100円（税込）</strong>
           </td>
-          
-
+          <td>
+            ・25歳以下は手数料無料<br>
+            ・制度信用取引も対象
+          </td>
+        </tr>
+        <tr>
+          <td><strong>米国株式</strong></td>
+          <td>
+            ・NYSE/NASDAQ 上場株式<br>
+            ・ETF（VOO, SPY等）
+          </td>
+          <td>23:00〜翌6:00（夏時間は22:30〜）</td>
+          <td>
+            約定代金の<strong>0.495%</strong><br>
+            <small>※最低手数料 0ドル</small>
+          </td>
+          <td>
+            ・日本円で直接注文OK<br>
+            ・為替手数料は<strong>1ドル＝25銭</strong>
+          </td>
+        </tr>
       </tbody>
     </table>
+</div>
+
+         <section class="anime-item">
+          <h3 class="anime-title">主要サービスの米国株・ETFの取扱手数料</h3>
+       <div class="large-table-container only-pc">
+  <table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>ブルーモ</th>
+      <th>ロボアド</th>
+      <th>ネット証券</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>残高手数料</strong></td>
+      <td>年率0.55%</td>
+      <td>年率1.1%</td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>取引手数料</strong></td>
+      <td>なし</td>
+      <td>なし</td>
+      <td>0.5%~0.7%</td>
+    </tr>
+    <tr>
+      <td><strong>為替手数料</strong></td>
+      <td>0.25%</td>
+      <td>なし</td>
+      <td>0.2~0.3%</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+      </section>
+
+<!-- スマホ専用カード型表示 -->
+<div class="mobile-card-view only-sp">
+
+  <div class="item-card">
+    <h4>国内株式</h4>
+    <p><strong>主な取扱商品:</strong><br>東証（プライム/スタンダード/グロース）、ETF、REIT、IPOなど</p>
+    <p><strong>取引時間:</strong><br>8:00〜15:00（注文は24時間受付）</p>
+    <p><strong>手数料:</strong><br>一日定額制 0円〜上限1,100円（税込）</p>
+    <p><strong>備考:</strong><br>25歳以下は無料、制度信用取引も対象</p>
   </div>
 
+  <div class="item-card">
+    <h4>米国株式</h4>
+    <p><strong>主な取扱商品:</strong><br>NYSE/NASDAQ 上場株式、ETF（VOO, SPY等）</p>
+    <p><strong>取引時間:</strong><br>23:00〜翌6:00（夏時間は22:30〜）</p>
+    <p><strong>手数料:</strong><br>約定代金の0.495%（最低手数料 0ドル）</p>
+    <p><strong>備考:</strong><br>日本円で直接注文OK、為替手数料は1ドル＝25銭</p>
+  </div>
+
+</div>
+
+  <!-- 横並びdiv -->
+<div class="field">
+  <div class="field-card">
+    <h4>【ブルーモ】</h4>
+          <ul>
+     <li>✅簡単に理想のポートフォリオで長期投資</li>
+     <li>✅目標ポートフォリオを作って売買計算・実行は自動化</li>
+     <li>✅0.0001株単位で売買できる</li>
+     <li>✅米国株・ETFに絞ってシンプルに選べる</li>
+  </ul>
+  </div>
+
+  <div class="field-card">
+    <h4>【ロボアド】</h4>
+          <ul>
+     <li>⚠️簡単だが、投資商品を選べない</li>
+     <li>✅運用は完全おまかせ・自動化</li>
+     <li>❌自分で銘柄を選んで投資できない</li>
+     <li>⚠️代表的なETFのみの取り扱い</li>
+  </ul>
+  </div>
+
+  <div class="field-card">
+    <h4>【ネット証券】</h4>
+          <ul>
+     <li>⚠️色々選べるが、操作が複雑で不便</li>
+     <li>⚠️個別取引はユーザーが手動で執行</li>
+     <li>⚠️取引は1株単位(一部では1株未満単位も可能)</li>
+     <li>⚠️株式だけでなくFX・デリバティブ等多岐にわたって取り扱うが、商品選択画面は複雑</li>
+  </ul>
+  </div>
+
+  </div>
 
     <!-- CTAボタン：クリックしやすく目立たせる -->
-    <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button font_red" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
+    <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button font_red" rel="nofollow" >
     サンプルボタン
     </a>
    <!-- CTA画像バナー：視覚重視の導線 -->
         <br />
-       <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">
-          <img src="https://mirukutee.github.io/affiliate-site/sonota/top.webp" alt="AMP用の文字" border="0" />
+       <a href="https://mirukutee.github.io/affiliate-site/" class="cta-button" rel="nofollow">
+          <amp-img src="https://mirukutee.github.io/affiliate-site/sonota/top.webp" alt="AMP用の文字" border="0" />
         </a>
 
-<!-- サイドバーの記述 -->
+      
+  
+<!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+ </main>
+   
 
-<div class="container">
-    <aside id="sidebar"></aside>
-</div>
 
 <div class="dropdown">
   <button class="dropdown-button">AMP用の文字</button>
@@ -861,9 +990,7 @@ li {
   </div>
 </div>
 
-<!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
- </main>
-    </div>
+
 
         <footer>
             &copy; 2025 簡潔な紹介サイト All Rights Reserved.

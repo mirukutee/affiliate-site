@@ -525,6 +525,23 @@ a:hover {
   color: #f39c12;
 }
 
+/* 段落内に段落 */
+.session-card{
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 1px;
+ /* 上側に20px間隔をあける */
+  margin-right: 1px;
+ /* 右側に20px間隔をあける */
+  margin-bottom: 10px;
+ /* 下側に20px間隔をあける */
+  margin-left: 1px;
+ /* 左側に20px間隔をあける */
+}
+
 /* 横並びdiv */
 .field{
   display: flex;
@@ -640,9 +657,17 @@ tbody > tr:nth-of-type(even) {
 }
 
 /*大型のテーブルをスクロールさせたいとき*/
-.large-table-scroll{
-
+@media (max-width: 768px) {
+.large-table-scroll
+  .only-sp {
+    display: block;
+  }
+  .only-pc {
+    display: none;
+  }
 }
+
+
 
 /*ページに案内リンク*/
 .card-section {

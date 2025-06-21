@@ -218,6 +218,8 @@ body::before {
   display: block;
 }
 
+
+
 /* ドロップダウン（名前を完全に分ける） */
 .nav-dropdown {
   position: relative;
@@ -252,6 +254,30 @@ body::before {
   background-color: #1abc9c;
 }
 
+.nav-button{
+   border-radius: 6px; /*丸みをつける*/
+  border: 1px solid #10e642; /*枠線*/
+}
+
+.nav-button.line-break {
+  display: block;
+  width: 150px;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu {
+    overflow-x: auto;       /* 横スクロールを許可 */
+    flex-wrap: nowrap;      /* 折り返さない */
+  }
+
+  .nav-menu a {
+    font-size: 10px;        /* 文字を小さくして収める */
+    padding: 8px 10px;
+    white-space: nowrap;    /* 1項目の中でも折り返さない */
+  }
+}
 
 
 /* ========== ▼ フッター（統一） ========== */

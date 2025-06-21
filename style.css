@@ -174,12 +174,13 @@ body::before {
 
 /* ========== ▼ ヘッダー（統一） ========== */
 /* ヘッダー全体 */
+/* ヘッダー全体 */
 .site-header {
   background-color: #2c3e50;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ロゴと見出し */
@@ -218,9 +219,7 @@ body::before {
   display: block;
 }
 
-
-
-/* ドロップダウン（名前を完全に分ける） */
+/* ドロップダウン */
 .nav-dropdown {
   position: relative;
 }
@@ -236,7 +235,8 @@ body::before {
   margin: 0;
   min-width: 150px;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .nav-dropdown:hover .dropdown-list {
@@ -254,31 +254,39 @@ body::before {
   background-color: #1abc9c;
 }
 
-.nav-button{
-   border-radius: 6px; /*丸みをつける*/
-  border: 1px solid #10e642; /*枠線*/
+.nav-button {
+  border-radius: 6px; /* 丸みをつける */
+  border: 1px solid #10e642; /* 枠線 */
 }
 
-.nav-button.line-break {
-  display: block;
-  width: 150px;
-  line-height: 1.4;
-  white-space: normal;
-}
-
+/* メニューが縦並びになる時のスタイル */
 @media screen and (max-width: 600px) {
   .nav-menu {
-    overflow-x: auto;       /* 横スクロールを許可 */
-    flex-wrap: nowrap;      /* 折り返さない */
+    display: block;
+    text-align: center; /* アイテムが縦並びになるように */
   }
 
   .nav-menu a {
-    font-size: 10px;        /* 文字を小さくして収める */
-    padding: 8px 10px;
-    white-space: nowrap;    /* 1項目の中でも折り返さない */
+    display: block;
+    padding: 8px 10px; /* 各メニューアイテム間にスペースを入れる */
+    font-size: 14px; /* 文字サイズ調整 */
+    white-space: nowrap; /* 1項目の中でも折り返さない */
+  }
+
+  .nav-dropdown {
+    display: block; /* モバイルでもドロップダウンを表示 */
+  }
+
+  .dropdown-list {
+    width: 100%; /* ドロップダウンのリスト幅を100%に */
+    position: static; /* 絶対位置を解除して、縦並びに */
+    box-shadow: none; /* メニューを目立たせない */
+  }
+
+  .dropdown-list li a {
+    padding: 10px; /* リストアイテムに余白を加える */
   }
 }
-
 
 /* ========== ▼ フッター（統一） ========== */
 

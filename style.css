@@ -692,13 +692,10 @@ tbody > tr:nth-of-type(even) {
 
 /*大型のテーブルをスクロールさせたいとき*/
 @media (max-width: 768px) {
-.large-table-scroll
-  .only-sp {
-    display: block;
-  }
-  .only-pc {
-    display: none;
-  }
+    .large-table-scroll{
+   overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+}
 }
 
 

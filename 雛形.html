@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="canonical" href="https://mirukutee.github.io/affiliate-site/">
+
+  <title>タイトル</title>
+
+  <meta property="og:title" content="タイトルと同じ" />
+  <meta property="og:description" content="説明文" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/" />
+  <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
+  <meta property="og:site_name" content="簡潔な紹介サイト" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="タイトルと同じ" />
+  <meta name="twitter:description" content="タイトルと同じ" />
+  <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.webp" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="amphtml" href="AMP.html">
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+
+   <!-- メインの内容 -->
+    <main>
+       
+             <!-- パンくず -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+    <li class="breadcrumb-item"><a href="kabukaisetu.html">ここにページの名前</a></li>
+     <li class="breadcrumb-item active" aria-current="page">タイトルと同じ</li>
+  </ol>
+</nav>
+
+           <!-- 見出し -->
+         <h2 class="title">見出しのタイトル</h2>
+
+
+          <!-- メインのコンテンツ基本的にこの形ですべての段落を作る -->
+      <section class="anime-item">
+          <h3 class="anime-title">この段落の見出し</h3>
+        <!-- ここに内容 -->
+      </section>
+
+
+     <!-- ulのを使うときの形 -->
+         <ul>
+            <li><strong></strong><br></li>
+            <li><strong></strong><br></li>
+
+          </ul>
+
+ <!-- ▼ FAQ構成の雛形-->
+          	<ul>
+      <li><strong>Q. 相談は本当に無料ですか？</strong><br>
+       A. はい、何度でも無料でご相談いただけます。</li>
+
+      <li><strong>Q. どのような相談ができますか？</strong><br>
+     A. 保険の見直し、家計の見直し、資産運用、住宅ローン、相続など、幅広い相談が可能です。</li>
+          </ul>
+
+           <!-- 小規模のテーブルを使うときのひな形 -->
+  <table>
+    <caption>仮の基本情報</caption>
+    <thead>
+      <tr>
+        <th scope="col">特徴</th>
+        <th scope="col">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">なんか</th>
+        <td>あれ</td>
+      </tr>
+      <tr>
+        <th scope="row">なにか</th>
+        <td>それ</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!--スマホ版スクロールテーブルの参考、表が大きいときはこれ -->
+          <section class="anime-item">
+          <h3 class="anime-title">主要サービスの米国株・ETFの取扱手数料</h3>
+       <div class="large-table-scroll">
+  <table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>ブルーモ</th>
+      <th>ロボアド</th>
+      <th>ネット証券</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>残高手数料</strong></td>
+      <td>年率0.55%</td>
+      <td>年率1.1%</td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>取引手数料</strong></td>
+      <td>なし</td>
+      <td>なし</td>
+      <td>0.5%~0.7%</td>
+    </tr>
+    <tr>
+      <td><strong>為替手数料</strong></td>
+      <td>0.25%</td>
+      <td>なし</td>
+      <td>0.2~0.3%</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 横並びdiv divを横にら並べたいときはこのクラス要素 -->
+<div class="field">
+  <div class="field-card">
+    <h4 class="anime-title"></h4>
+  </div>
+
+   <div class="field-card">
+    <h4 class="anime-title"></h4>
+  </div>
+
+  </div>
+
+
+  <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+ </main>
+    </div>
+
+    <!--フッターの呼び出し -->
+ <div id="footer"></div>
+
+  <!-- ✅ 共通読み込み用JS -->
+  <script src="include.js"></script>
+
+<!-- サイドバーのスクリプト -->
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         fetch('sidebar.html')
+         .then(response => response.text())
+          .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+            });
+          });
+         </script>
+
+          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
+        <script src="sidebar.js"></script>
+
+</body>
+</html>

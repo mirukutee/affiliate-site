@@ -762,6 +762,20 @@ li {
   color: #1da1f2;
 }
 
+/* 箇条書きを横に並べる */
+.order-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.order-list ul {
+  flex: 1;
+  min-width: 200px;
+  list-style: none;
+  padding-left: 0;
+}
+
 @media screen and (max-width: 768px) {
   /* サイドバー */
   .sidebar {

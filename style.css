@@ -529,8 +529,9 @@ main {
 }
 
 .anime-item li {
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   line-height: 1.5;
+  
 }
 
 .font_red {
@@ -579,7 +580,7 @@ a:hover {
 /* 横並びdiv */
 .field{
   display: flex;
- 
+  margin:  0 auto;            /* 中央寄せ */
 }
 
 .field-card {
@@ -748,10 +749,12 @@ tbody > tr:nth-of-type(even) {
 /* リストのスタイル */
 ul {
   padding-left: 0;
+  
 }
 
 li {
   list-style: none;
+  
 }
 /* アイコン */
 .sns-icons a {

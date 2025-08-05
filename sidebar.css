@@ -1,0 +1,163 @@
+/* サイドバー */
+.search-box {
+  margin: 10px 0; /* 上下に10pxのスペース */
+}
+
+.sidfont {
+  font-size: small;
+  font-weight: bold;
+  padding: 4px 0;
+  display: block;
+ border-top: 5px solid #f3b305;
+border-bottom: 5px solid #f3b305;
+border-left: none;
+border-right: none;
+  margin: 8px 0 4px;
+}
+
+.sidfonta {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #555;
+  padding: 2px 0;
+  display: block;
+  border-top: 3px dashed#f3b305;
+  margin: 4px 0;
+}
+
+.sidfontb{
+   font-size: small;
+  font-weight: bold;
+  padding: 4px 0;
+  display: block;
+border-bottom: 5px solid #f3b305;
+  margin: 8px 0 4px;
+}
+
+.sidfontc{
+   font-size: small;
+  font-weight: bold;
+  padding: 4px 0;
+  display: block;
+  margin: 8px 0 4px;
+}
+
+
+.sidebar {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px; /*内側の余白*/
+  width: 240px; /*全体の横幅*/
+  background-color: #ffffff; /*背景全体の色*/
+  border-right: 10px solid #009dff; /*右横の余白の色*/
+  height: auto; /*ページ全体に広げる*/
+  overflow-y: auto; /*はみ出したときの対策*/
+  position:static; /*場所の固定*/
+  left: 0; /*左からの位置（距離）*/
+  top: 0; /*垂直の位置*/
+  z-index: 10; /*重なりの対策*/
+   box-shadow: 0px 0px 25px aqua;
+}
+
+
+.sidebar {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px; /*内側の余白*/
+  width: 240px; /*全体の横幅*/
+  background-color: #959595; /*背景全体の色*/
+  border-right: 10px solid #009dff; /*右横の余白の色*/
+  height: auto; /*ページ全体に広げる*/
+  overflow-y: auto; /*はみ出したときの対策*/
+  position:static; /*場所の固定*/
+  left: 0; /*左からの位置（距離）*/
+  top: 0; /*垂直の位置*/
+  z-index: 10; /*重なりの対策*/
+   box-shadow: 0px 0px 25px aqua;
+}
+/* ドロップダウンリスト全帯*/
+.dropdown {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+ box-shadow: 0px 0px 10px aqua;
+}
+
+
+/*親ボタン*/
+.dropdown-button {
+  background: linear-gradient(145deg, #3a84f1, #ffffff); /*ボタンの色（背景）*/
+  border-radius: 6px; /*丸みをつける*/
+  border: 1px solid #10e642; /*枠線*/
+  box-shadow: 0px 0px 5px aqua; /*背景の影*/
+  font-size: 16px;
+  color: #333;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+} 
+
+/*カーソルを合わせたときの動き*/
+.dropdown-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+   transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.4s ease;
+  background-color: #fafafa;
+
+}
+
+.dropdown-content.open {
+  opacity: 1;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  /* PC用：スクロール対応 */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+
+  /* スクロールバー見やすく */
+  scrollbar-width: thin;
+  scrollbar-color: #3a84f1, #ffffff;
+}
+
+.dropdown-content.open::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown-content.open::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.dropdown-content.open::-webkit-scrollbar-thumb {
+  background-color: #3a84f1;
+  border-radius: 4px;
+}
+.dropdown-content.open::-webkit-scrollbar-thumb:hover {
+  background-color: #3a84f1;
+}
+
+.dropdown-content a {
+  display: block;
+  background-color: #b9babe; /* 薄グレー背景 */
+  margin: 8px 10px;          /* リンク間の余白 */
+  padding: 14px 16px;        /* 十分な高さ */
+  border-radius: 6px;        /* 丸みで柔らかさ */
+  color: #333;               /* 読みやすい文字色 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 軽い影で立体感 */
+}
+
+/*カーソルをあはせたときの処理*/
+.dropdown-content a:hover {
+  background: #1abc9c;
+}

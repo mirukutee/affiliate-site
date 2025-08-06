@@ -34,7 +34,7 @@
   box-sizing: border-box;
   transition: box-shadow 0.2s;
   overflow: hidden;
-  max-width: 120px;
+  max-width: 125px;
 
 }
 
@@ -62,7 +62,7 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* PC */
+  grid-template-columns: repeat(5, 1fr); /*  PC */
   gap: 16px;
 }
 

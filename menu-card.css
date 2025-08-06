@@ -24,17 +24,18 @@
 
 .card {
   display: flex;
-  flex-direction: column;   /* 縦型カード */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   background: #fff;
   border: 1px solid #067aff;
   border-radius: 10px;
- padding: 4px 6px 8px;
+  padding: 4px 6px 8px;
   box-sizing: border-box;
   transition: box-shadow 0.2s;
-  overflow: hidden;
-
+  /* ↓ 削除または無効化する */
+  width: 100%;          /* ← 追加 */
+  max-width: none;      /* ← 念のため解除 */
 }
 
 .card img {
@@ -73,15 +74,18 @@
 
 @media screen and (max-width: 600px) {
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
-  .card span { 
-    font-size: 0.85rem; 
+
+  .card span {
+    font-size: 0.85rem;
   }
-  .card span small { 
-    font-size: 0.7rem; 
+
+  .card span small {
+    font-size: 0.7rem;
   }
 }
+
 
 
 

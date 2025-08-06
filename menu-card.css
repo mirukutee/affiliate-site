@@ -23,19 +23,18 @@
 
 
 .card {
-  flex: 0 0 auto;
-  width: 120px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   /* 縦型カード */
   align-items: center;
   text-align: center;
   background: #fff;
   border: 1px solid #067aff;
   border-radius: 10px;
-  padding: 4px 6px 8px;
+ padding: 4px 6px 8px;
   box-sizing: border-box;
   transition: box-shadow 0.2s;
-  scroll-snap-align: center; /* ←おしゃれにしたければ追加 */
+  overflow: hidden;
+
 }
 
 .card img {
@@ -61,11 +60,9 @@
 
 
 .card-grid {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory; /* ←おしゃれにしたければ追加 */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /*  PC */
+  gap: 16px;
 }
 
 @media screen and (max-width: 900px) {

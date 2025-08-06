@@ -75,13 +75,11 @@
   .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-
-  .card span {
-    font-size: 0.85rem;
+  .card span { 
+    font-size: 0.85rem; 
   }
-
-  .card span small {
-    font-size: 0.7rem;
+  .card span small { 
+    font-size: 0.7rem; 
   }
 }
 

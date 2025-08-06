@@ -72,10 +72,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  
-
-   .card-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 
   .card span {
@@ -85,7 +83,8 @@
   .card span small {
     font-size: 0.7rem;
   }
-  }
+}
+
 
 
 

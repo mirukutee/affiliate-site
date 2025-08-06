@@ -22,6 +22,26 @@
 
 
 
+/* 新しいカードグリッド */
+.my-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* デスクトップでは5列 */
+  gap: 16px; /* カードの間隔 */
+}
+
+@media screen and (max-width: 900px) {
+  .my-card-grid {
+    grid-template-columns: repeat(4, 1fr); /* 900px以下は4列 */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .my-card-grid {
+    grid-template-columns: repeat(3, 1fr); /* 600px以下は3列 */
+  }
+}
+
+/* カードのスタイル */
 .card {
   display: flex;
   flex-direction: column;
@@ -33,9 +53,7 @@
   padding: 4px 6px 8px;
   box-sizing: border-box;
   transition: box-shadow 0.2s;
-  /* ↓ 削除または無効化する */
-  width: 100%;          /* ← 追加 */
-  max-width: none;      /* ← 念のため解除 */
+  /* widthはgrid側で調整するので指定しなくてOK */
 }
 
 .card img {
@@ -59,32 +77,28 @@
   margin-top: 4px;
 }
 
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /*  PC */
-  gap: 16px;
+/* トップに戻るリンク */
+.top-card {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 0.6em 1.2em;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #067aff;
+  background-color: #f0f8ff;
+  border: 1px solid #067aff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-@media screen and (max-width: 900px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.top-card:hover {
+  background-color: #067aff;
+  color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .card span {
-    font-size: 0.85rem;
-  }
-
-  .card span small {
-    font-size: 0.7rem;
-  }
-}
 
 
 

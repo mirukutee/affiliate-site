@@ -30,10 +30,12 @@
   background: #fff;
   border: 1px solid #067aff;
   border-radius: 10px;
-  padding: 0px 10px 10px;  /* ←上だけ 2px に詰めた！ */
+ padding: 4px 6px 8px;
   box-sizing: border-box;
   transition: box-shadow 0.2s;
   overflow: hidden;
+  max-width: 120px;
+
 }
 
 .card img {
@@ -71,7 +73,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .card-grid {
+ .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 
@@ -82,7 +84,8 @@
   .card span small {
     font-size: 0.7rem;
   }
-}
+  }
+
 
 
 

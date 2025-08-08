@@ -8,39 +8,41 @@
   font-weight: bold;
   padding: 4px 0;
   display: block;
- border-top: 5px solid #f3b305;
-border-bottom: 5px solid #f3b305;
-border-left: none;
-border-right: none;
+  border-top: 5px solid #90b4d4;
+  border-bottom: 5px solid #90b4d4;
   margin: 8px 0 4px;
+  color: #2c3e50;
 }
 
 .sidfonta {
   font-size: 0.85em;
   font-weight: 600;
-  color: #555;
-  padding: 2px 0;
+  color: #4d5e6b;
+  padding: 4px 0px;
   display: block;
-  border-top: 3px dashed#f3b305;
-  margin: 4px 0;
+  border-top: 2px dashed #a0d2e8; /* ← ← ← ← ← ← ← 修正済み */
+  margin:  4px 0 8px;
 }
 
-.sidfontb{
-   font-size: small;
+.sidfontb {
+  font-size: small;
   font-weight: bold;
   padding: 4px 0;
   display: block;
-border-bottom: 5px solid #f3b305;
+  border-bottom: 5px solid #90b4d4;
   margin: 8px 0 4px;
+  color: #2c3e50;
 }
 
-.sidfontc{
-   font-size: small;
+.sidfontc {
+  font-size: small;
   font-weight: bold;
   padding: 4px 0;
   display: block;
   margin: 8px 0 4px;
+  color: #2c3e50;
 }
+
 
 
 .sidebar {
@@ -49,7 +51,10 @@ border-bottom: 5px solid #f3b305;
   box-sizing: border-box;
   padding: 10px; /*内側の余白*/
   width: 240px; /*全体の横幅*/
-  background-color: #ffffff; /*背景全体の色*/
+  background: linear-gradient(180deg, #f5f9fb, #dde6ea 60%, #c3edf0);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-right: 10px solid #009dff; /*右横の余白の色*/
   height: auto; /*ページ全体に広げる*/
   overflow-y: auto; /*はみ出したときの対策*/
@@ -61,22 +66,7 @@ border-bottom: 5px solid #f3b305;
 }
 
 
-.sidebar {
-  height: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 10px; /*内側の余白*/
-  width: 240px; /*全体の横幅*/
-  background-color: #959595; /*背景全体の色*/
-  border-right: 10px solid #009dff; /*右横の余白の色*/
-  height: auto; /*ページ全体に広げる*/
-  overflow-y: auto; /*はみ出したときの対策*/
-  position:static; /*場所の固定*/
-  left: 0; /*左からの位置（距離）*/
-  top: 0; /*垂直の位置*/
-  z-index: 10; /*重なりの対策*/
-   box-shadow: 0px 0px 25px aqua;
-}
+
 /* ドロップダウンリスト全帯*/
 .dropdown {
   margin-bottom: 15px;
@@ -88,24 +78,25 @@ border-bottom: 5px solid #f3b305;
 }
 
 
-/*親ボタン*/
 .dropdown-button {
-  background: linear-gradient(145deg, #3a84f1, #ffffff); /*ボタンの色（背景）*/
-  border-radius: 6px; /*丸みをつける*/
-  border: 1px solid #10e642; /*枠線*/
-  box-shadow: 0px 0px 5px aqua; /*背景の影*/
+  background: linear-gradient(145deg, #eaf3fa, #ffffff); /* 淡い青 × 白 */
+  background-image: linear-gradient(90deg, #ffffff, #bccbd1 50%, #b3feff);
+  border-radius: 8px;
+  border: 1px solid #c3dbe8; /* 淡グレー系の落ち着いた枠線 */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08); /* ソフトな影 */
   font-size: 16px;
   color: #333;
   padding: 10px 15px;
   width: 100%;
   text-align: left;
   cursor: pointer;
-} 
-
-/*カーソルを合わせたときの動き*/
-.dropdown-button:hover {
-  background-color: #e0e0e0;
+  transition: all 0.2s ease;
 }
+.dropdown-button:hover {
+  background: linear-gradient(145deg, #d7eaf8, #fdfdfd);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 
 .dropdown-content {
   max-height: 0;

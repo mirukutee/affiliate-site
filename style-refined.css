@@ -1,0 +1,78 @@
+
+/* === 全体背景とフォント === */
+body {
+  font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+  background: linear-gradient(to bottom, #f4f7f9, #e8ecf1);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === メインコンテンツ強調 === */
+main, .section {
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #ffffffcc;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* === ヘッダー・フッター調整 === */
+header, footer {
+  text-align: center;
+  padding: 1.5em 0;
+  background: #f0f2f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* === タイトルや見出し === */
+h1, h2, h3 {
+  font-weight: 600;
+  margin: 1.2em 0 0.5em;
+  color: #1a1a1a;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+  border-left: 4px solid #3498db;
+  padding-left: 0.5em;
+}
+
+/* === カードデザイン === */
+.menu-card, .card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 1.5em;
+  margin-bottom: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-card:hover, .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* === リンク・ボタン === */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #2c80b4;
+}
+
+/* === スマホでは背景控えめ === */
+@media (max-width: 767px) {
+  body {
+    background: #f9fafc;
+  }
+  main, .section {
+    margin: 1em;
+    padding: 1em;
+  }
+}

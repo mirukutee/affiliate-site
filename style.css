@@ -200,7 +200,7 @@ body::before {
 /* ========== ▼ ヘッダー（統一） ========== */
 /* ヘッダー全体 */
 .header-li{
-  margin: 4px 0 4px;
+  margin: 2px 0 2px 0;
 }
 /* ヘッダー全体 */
 .site-header {

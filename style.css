@@ -413,6 +413,10 @@ main {
   color: #f32121;
 }
 
+.font_blue {
+  color: #0672ff;
+}
+
 p {
   margin-bottom: 1.5em;
 }

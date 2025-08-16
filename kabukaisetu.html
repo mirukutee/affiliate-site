@@ -31,6 +31,29 @@
 
 <title>要点だけを、サッと理解｜簡潔な紹介サイト</title>
 
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/affiliate-site/index.html"},
+      {"@type":"ListItem","position":2,"name":"株を始める初心者の方へ基礎を解説します。","item":"https://mirukutee.github.io/affiliate-site/kabukaisetu.html"}
+    ]
+  }
+  </script>
+
+  <!-- FAQ structured data (picked key questions as Q&A) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"指値注文と成行注文の違いは？","acceptedAnswer":{"@type":"Answer","text":"指値は価格を指定して注文。指定価格に届かなければ約定しません。成行は価格指定をせず、その時点の市場価格で即時約定します。"}},
+      {"@type":"Question","name":"PER・PBRとは？","acceptedAnswer":{"@type":"Answer","text":"PERは株価収益率、PBRは株価純資産倍率で、企業の割安・割高を判断するための基本指標です。"}},
+      {"@type":"Question","name":"移動平均線（MA）の使い方は？","acceptedAnswer":{"@type":"Answer","text":"株価が移動平均線より上なら上昇基調、下なら弱含みと判断するのが一般的です。複数線の交差はトレンド転換の手掛かりになります。"}}
+    ]
+  }
+  </script>
 </head>
  
  <body>
@@ -400,7 +423,19 @@
   </table>
         </div>
 
-
+    <!-- FAQ（表示用UI） -->
+    <section class="anime-item">
+      <h2 class="anime-title">よくある質問</h2>
+      <amp-accordion disable-session-states>
+        <section>
+          <h3>指値と成行の使い分けは？</h3>
+          <div>思わぬ価格の約定を避けたいなら指値、すぐに買いたい・売りたいなら成行が便利です。</div>
+        </section>
+        <section>
+          <h3>移動平均線は何日線を見ればいい？</h3>
+          <div>短期は5日・25日、長期は75日・200日など、目的によって使い分けます。</div>
+        </section>
+      </amp-accordion>
    <!-- 段落-->
          <div class="anime-item">
   <h2 class="anime-title">📌 チャートの基礎を学んだら、次は実践！</h2>
@@ -425,6 +460,8 @@
   </p>
 </div>
 
+
+  
 
 
            </div>

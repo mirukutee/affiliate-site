@@ -23,7 +23,31 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="amphtml" href="AMP.html">
+  <link rel="amphtml" href="AMP/zeikinn.html">
+   <!-- Breadcrumb structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/affiliate-site/index.html"},
+      {"@type":"ListItem","position":2,"name":"税金の解説","item":"https://mirukutee.github.io/affiliate-site/zeikinn.html"}
+    ]
+  }
+  </script>
+
+  <!-- FAQ structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"株・FX・仮想通貨の税率の違いは？","acceptedAnswer":{"@type":"Answer","text":"株とFXは原則20.315%の申告分離課税、仮想通貨は総合課税（累進税率）です。"}},
+      {"@type":"Question","name":"確定申告が必要となる目安は？","acceptedAnswer":{"@type":"Answer","text":"給与所得者は給与以外の所得が年間20万円を超えると申告が必要になるのが一般的です。"}},
+      {"@type":"Question","name":"損失は繰り越せますか？","acceptedAnswer":{"@type":"Answer","text":"株とFXは最長3年の損失繰越控除が可能ですが、仮想通貨は原則不可です。"}}
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -216,7 +240,14 @@
     もし不安な場合は、税務署や税理士への相談も検討してみましょう。
   </p>
 </section>
-
+ <!-- FAQ UI -->
+    <section class="anime-item">
+      <h2 class="anime-title">よくある質問</h2>
+      <amp-accordion disable-session-states>
+        <section><h3>株とFXの損益通算はできますか？</h3><div>同じ区分内でのみ可能です。株とFXは別扱いです。</div></section>
+        <section><h3>仮想通貨の損失は繰越できますか？</h3><div>原則できません。</div></section>
+      </amp-accordion>
+    </section>
 
      <section class="anime-item">
           <h3 class="anime-title">おすすめ記事</h3>

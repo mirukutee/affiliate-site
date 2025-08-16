@@ -1,224 +1,162 @@
+
   <link rel="amphtml" href="AMP/sidebar.html">
 
   <link rel="stylesheet" href="sidebar.css" />
   <link rel="stylesheet" href="style.css" />
 
 
-<!--サイドバー全体のクラス要素（位置高さ-->
+<!-- サイドバー先頭アンカー -->
+<div id="sidebar-top"></div>
+
+<!-- サイドバー本体 -->
 <div class="sidebar">
 
-<!-- サイトトップ -->
-<div class="dropdown">
-  <button class="dropdown-button">サイトトップページ</button>
-
-
-  <div class="dropdown-content" id="top">
-    <a href="index.html">トップページ</a>
-</div>
-  </div>
-<!-- 証券関連 -->
-<div class="sidfont">
-
-  <p>・証券関連ページ一覧</p>
-
-
+  <!-- サイトトップ -->
   <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>証券一覧</button>
-   
-
-    <div class="dropdown-content" id="beginner-securities">
-    
-      <a href="DMM-kabu.html">DMM株ご紹介</a>
-      <a href="matsui-kabu.html">松井証券ご紹介</a>
-      <a href="Monex.html">マネックス証券ご紹介</a>
-      
-       <a href="tryauto.html">トライオートCFDご紹介</a>
-
-       <a href="bloomo.html">Bloomo証券ご紹介</a>
-   
- 
-      <a href="moomoo-kabu.html">moomoo証券ご紹介</a>
-      <a href="MUFGesmart.html">三菱UFJ eスマート証券ご紹介</a>
-
-      <a href="saxo.html">saxo証券ご紹介</a>
-      <a href="Webull.html">Webull証券ご紹介</a>
-    </div>
- </div>
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>iDeCo</button>
-
-
-    <div class="dropdown-content" id="ideco">
-      <a href="matui.html">松井証券のiDeCoご紹介</a>
+    <button class="dropdown-button" type="button">サイトトップページ</button>
+    <div class="dropdown-content">
+      <a href="index.html">トップページ</a>
     </div>
   </div>
 
+  <!-- 証券関連 -->
+  <div class="sidfont">
+    <p>・証券関連ページ一覧</p>
 
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>証券一覧比較ページ</button>
-
-
-    <div class="dropdown-content" id="summary">
-         <a href="syoukensyoukai.html">証券一覧まとめ</a>
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-money-bill" aria-hidden="true"></i>証券一覧</button>
+      <div class="dropdown-content" id="beginner-securities">
+        <a href="DMM-kabu.html">DMM株ご紹介</a>
+        <a href="matsui-kabu.html">松井証券ご紹介</a>
+        <a href="Monex.html">マネックス証券ご紹介</a>
+        <a href="tryauto.html">トライオートCFDご紹介</a>
+        <a href="bloomo.html">Bloomo証券ご紹介</a>
+        <a href="moomoo-kabu.html">moomoo証券ご紹介</a>
+        <a href="MUFGesmart.html">三菱UFJ eスマート証券ご紹介</a>
+        <a href="saxo.html">saxo証券ご紹介</a>
+        <a href="Webull.html">Webull証券ご紹介</a>
+      </div>
     </div>
-</div>
 
-<!-- 解説系ページ -->
-<div class="sidfonta">
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>基礎|解説ページ</button>
-
-
-    <div class="dropdown-content" id="summary">
-   
-       <a href="kabukaisetu.html">株取引の基礎を解説</a>
-         <a href="syouken-hikakukaisetu.html">国内株と海外株の違い</a>
-      
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-money-bill" aria-hidden="true"></i>iDeCo</button>
+      <div class="dropdown-content" id="ideco">
+        <a href="matui.html">松井証券のiDeCoご紹介</a>
+      </div>
     </div>
-</div>
 
-      <!--sidfontの終了タグ-->
-</div>
-
-
-
-<!-- 仮想通貨 -->
-<div class="sidfont">
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-coins"></i>仮想通貨ページ</button>
-
-    <div class="dropdown-content" id="crypto">
-      <a href="PBRLending.html">PBRレンディングご紹介</a>
-      <a href="gmocoin.html">GMOコインご紹介</a>
-      <a href="coincheck.html">コインチェックご紹介</a>
-      <a href="Monex-coin.html">マネックス証券ご紹介</a>
-      <a href="BTCBOX.html">BTCBOXご紹介</a>
-         <a href="BITPOINT.html">BITPOINTご紹介</a>
-          <a href="OKJ.html">OKJご紹介</a>
-
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-money-bill" aria-hidden="true"></i>証券一覧比較ページ</button>
+      <div class="dropdown-content" id="summary-securities">
+        <a href="syoukensyoukai.html">証券一覧まとめ</a>
+      </div>
     </div>
   </div>
 
+  <!-- 解説系ページ -->
+  <div class="sidfonta">
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-money-bill" aria-hidden="true"></i>基礎|解説ページ</button>
+      <div class="dropdown-content" id="summary-guides">
+        <a href="kabukaisetu.html">株取引の基礎を解説</a>
+        <a href="syouken-hikakukaisetu.html">国内株と海外株の違い</a>
+      </div>
+    </div>
+  </div>
 
-<!-- 仮想通貨 解説-->
-<div class="sidfonta">
+  <!-- 仮想通貨 -->
+  <div class="sidfont">
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-coins" aria-hidden="true"></i>仮想通貨ページ</button>
+      <div class="dropdown-content" id="crypto-list">
+        <a href="PBRLending.html">PBRレンディングご紹介</a>
+        <a href="gmocoin.html">GMOコインご紹介</a>
+        <a href="coincheck.html">コインチェックご紹介</a>
+        <a href="Monex-coin.html">マネックス証券ご紹介</a>
+        <a href="BTCBOX.html">BTCBOXご紹介</a>
+        <a href="BITPOINT.html">BITPOINTご紹介</a>
+        <a href="OKJ.html">OKJご紹介</a>
+      </div>
+    </div>
 
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-coins"></i>仮想通貨の基礎解説ページ</button>
-
-    <div class="dropdown-content" id="crypto">
-      <a href="kasoutuukakaisetu.html">仮想通貨とは？</a>
-      <a href="kasoutuukakaikata.html">取引所の選び方から購入方法</a>
-      <a href="kasoutuuka-hikaku.html">国内と海外の仮想通貨取引所の違い</a>
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-coins" aria-hidden="true"></i>仮想通貨の基礎解説ページ</button>
+      <div class="dropdown-content" id="crypto-guides">
+        <a href="kasoutuukakaisetu.html">仮想通貨とは？</a>
+        <a href="kasoutuukakaikata.html">取引所の選び方から購入方法</a>
+        <a href="kasoutuuka-hikaku.html">国内と海外の仮想通貨取引所の違い</a>
         <a href="kasoutuukaworetto.html">仮想通貨ウォレットとは？</a>
         <a href="suteiking-reding.html">仮想通貨ステーキングとは？</a>
-  </div>
-  </div>
-    <!--sidfontbの終了タグ-->
-</div>
-    <!--sidfontbの終了タグ-->
-</div>
-
-<!-- FX -->
-<div class="sidfontb">
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-chart-line"></i>FXページ</button>
-  
-
-    <div class="dropdown-content" id="fx">
-      <a href="LION-FX.html">LION FXご紹介</a>
-      <a href="MUFGfx.html">三菱UFJ eスマート証券FXご紹介</a>
-      <a href="fujimi-fx.html">シストレセレクト365ご紹介</a>
-      <a href="himawari-fx-.html">ループ・イフダンご紹介</a>
-       <a href="matsui-FX.html">松井証券FXご紹介</a>
-       <a href="FINEST-FX.html">外為ファイネストご紹介</a>
-      <a href="Monex-FX.html">マネックス証券ご紹介</a>
-      <a href="saxo-fx.html">サクソバンク証券FXご紹介</a>
-
-
-      <a href="minna-fx.html">みんなのFXご紹介</a>  
-  </div>
-</div>
-
-<div class="sidfonta">
-
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-chart-line"></i>FXの基礎解説＆一覧比較ページ</button>
-
-    <div class="dropdown-content" id="fx">
-  <a href="FX-kaisetu.html">FX初心者向け用語解説ページ</a>
-  <a href="FX-syoukai.html">FXを一覧比較｜自動売買系FXも紹介</a>
+      </div>
+    </div>
   </div>
 
- </div>
-</div>
-<!--sidfontbの終了タグ-->
-</div>
+  <!-- FX -->
+  <div class="sidfontb">
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>FXページ</button>
+      <div class="dropdown-content" id="fx-list">
+        <a href="LION-FX.html">LION FXご紹介</a>
+        <a href="MUFGfx.html">三菱UFJ eスマート証券FXご紹介</a>
+        <a href="fujimi-fx.html">シストレセレクト365ご紹介</a>
+        <a href="himawari-fx-.html">ループ・イフダンご紹介</a>
+        <a href="matsui-FX.html">松井証券FXご紹介</a>
+        <a href="FINEST-FX.html">外為ファイネストご紹介</a>
+        <a href="Monex-FX.html">マネックス証券ご紹介</a>
+        <a href="saxo-fx.html">サクソバンク証券FXご紹介</a>
+        <a href="minna-fx.html">みんなのFXご紹介</a>
+      </div>
+    </div>
 
-<!-- 解説系ページ -->
-<div class="sidfontb">
-   
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-money-bill"></i>税金解説ページ</button>
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>FXの基礎解説＆一覧比較ページ</button>
+      <div class="dropdown-content" id="fx-guides">
+        <a href="FX-kaisetu.html">FX初心者向け用語解説ページ</a>
+        <a href="FX-syoukai.html">FXを一覧比較｜自動売買系FXも紹介</a>
+      </div>
+    </div>
+  </div>
 
-
-    <div class="dropdown-content" id="zeikin">
+  <!-- 税金解説 -->
+  <div class="sidfontb">
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-solid fa-money-bill" aria-hidden="true"></i>税金解説ページ</button>
+      <div class="dropdown-content" id="zeikin">
         <a href="zeikinn.html">株・FX・仮想通貨の税金の違いと確定申告の対処法</a>
-    </div>
-</div>
-    <!--sidfontの終了タグ-->
-</div>
-
-<!-- 資産運用・FP -->
-<div class="sidfontc">
-
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-solid fa-book"></i>その他資産運用系サービス紹介</button>
- 
-
-    <div class="dropdown-content" id="investment">
-      <a href="propertyagent.html">プロパティエージェントご紹介</a>
-      <a href="Funds.html">Funds（ファンズ）ご紹介</a>
-      
-      <a href="ABCash.html">ABCashのNISA講座</a>
-
-      <a href="FUNDINNO.html">FUNDINNOご紹介</a>
-  </div>
- </div>
-  <div class="dropdown">
-    <button class="dropdown-button"><i class="fa-regular fa-handshake"></i>ファイナンシャル・プランナー</button>
-    <div class="dropdown-content" id="planner">
-      <a href="garden.html">保険や家計の無料相談</a>
+      </div>
     </div>
   </div>
-<!--sidfontの終了タグ-->
+
+  <!-- 資産運用・FP -->
+  <div class="sidfontc">
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-regular fa-book" aria-hidden="true"></i>その他資産運用系サービス紹介</button>
+      <div class="dropdown-content" id="investment">
+        <a href="propertyagent.html">プロパティエージェントご紹介</a>
+        <a href="Funds.html">Funds（ファンズ）ご紹介</a>
+        <a href="ABCash.html">ABCashのNISA講座</a>
+        <a href="FUNDINNO.html">FUNDINNOご紹介</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-button" type="button"><i class="fa-regular fa-handshake" aria-hidden="true"></i>ファイナンシャル・プランナー</button>
+      <div class="dropdown-content" id="planner">
+        <a href="garden.html">保険や家計の無料相談</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 一覧に戻る -->
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="#sidebar-top" class="back-to-top" aria-label="サイドバーの先頭に戻る">↑ 一覧に戻る</a>
+  </div>
 </div>
 
-
-<!-- 一覧に戻るボタン -->
-<div style="margin-top: 20px; text-align: center;">
-  <a href="#top" class="back-to-top">↑ 一覧に戻る</a>
-</div>
-
-<!--class=sidebarの終了タグ-->
-</div>
-
-
-
- <script>
-    document.querySelectorAll('.dropdown-button').forEach(button => {
-      button.addEventListener('click', () => {
-        // ボタンの位置にスムーズスクロール
-        button.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        });
-      });
+<script>
+  document.querySelectorAll('.dropdown-button').forEach(button => {
+    button.addEventListener('click', () => {
+      button.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
-  </script>
+  });
+</script>

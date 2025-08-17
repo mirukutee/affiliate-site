@@ -1,0 +1,157 @@
+/* ========== ▼ ヘッダー（統一） ========== */
+/* ヘッダー全体 */
+.header-li{
+  margin: 2px 0 2px 0;
+}
+/* ヘッダー全体 */
+.site-header {
+  background: linear-gradient(to right, #eaf3fa, #d6e3ec);
+  color: #2c3e50;
+  text-align: center;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #ccdce5;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.site-header h1 a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ナビゲーション */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #2c3e50;
+  background-color: #f2f7fa;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  background-color: #d4e7f2;
+  color: #1f4e79;
+}
+
+
+.nav-menu li {
+  position: relative;
+}
+
+
+/* ドロップダウン */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f4f8fb;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.nav-dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list li a {
+  display: block;
+  padding: 10px 16px;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-list li a:hover {
+  background-color: #e1eff8;
+}
+
+.nav-button {
+  border-radius: 6px; /* 丸みをつける */
+  border: 1px solid #10e642; /* 枠線 */
+}
+
+/* ========== モバイル～小画面向けコンパクトヘッダー ========== */
+@media screen and (max-width: 600px) {
+  /* ヘッダー全体をさらに圧縮 */
+  .site-header {
+    padding: 0.4rem 0.8rem;            /* 0.6 → 0.4に圧縮 */
+  }
+
+  /* タイトルとサブコピーを可変縮小 */
+  .site-header h1 {
+    margin: 0;
+    /* 1.4rem固定より可変の方が収まりが良い */
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    line-height: 1.2;
+  }
+   .sub-copy {
+    font-size: 0.65rem;     /* 小さめ */
+    white-space: nowrap;    /* 強制的に1行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 万一はみ出しても…で処理 */
+    margin-top: 0.2rem;     /* ヘッダーとの隙間も小さく */
+  }
+
+  /* もっと詰めたいときは下を有効化
+  .sub-copy { display:none; }
+  */
+
+  /* ナビ：横並びのままコンパクト化 */
+  .nav-menu {
+    display: flex;
+    flex-direction: row;     /* 横並び */
+    flex-wrap: wrap;         /* はみ出すときは折り返し */
+    justify-content: center;
+    gap: 6px;                /* 8px → 6px に微縮 */
+    padding: 0;
+    margin: 0.5rem 0 0;      /* 上の余白も控えめに */
+  }
+
+  .nav-menu a {
+    padding: 6px 6px;        /* 6px 3px だとタップが辛い → 6px 6px */
+    font-size: 12px;
+    line-height: 1;          /* 高さを抑える */
+    border-radius: 6px;
+  }
+
+  /* ドロップダウン：タップ操作にも反応するように */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 120px;
+    z-index: 1000;
+  }
+  .nav-dropdown:hover .dropdown-list,
+  .nav-dropdown:focus-within .dropdown-list {
+    display: block;          /* :focus-within 追加でタップ対応 */
+  }
+}

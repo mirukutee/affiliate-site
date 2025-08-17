@@ -1,5 +1,7 @@
 /* ========== ヘッダー（専用スコープ） ========== */
 
+
+
 /* 全体 */
 .site-header {
   background: linear-gradient(to right, #eaf3fa, #d6e3ec);
@@ -8,6 +10,9 @@
   padding: 0.6rem 1rem; /* 必要に応じて 0.4rem まで圧縮可 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid #ccdce5;
+  background-position: 50% 50% !important; /* 中央に固定（小数％を丸める） */
+  background-position-x: 50% !important;
+  background-attachment: scroll !important; /* parallax等の固定を抑止 */
 }
 
 .site-header h1 {
@@ -52,6 +57,8 @@
 
 .site-header .header-nav-item {
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;     /* または contain; 必要に応じて */
 }
 
 .site-header .header-nav-button {
@@ -62,7 +69,10 @@
   border-radius: 8px;
   border: 1px solid #10e642; /* 既存デザイン踏襲 */
   transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  background-repeat: no-repeat;
+  background-size: cover;     /* または contain; 必要に応じて */
 }
+
 .site-header .header-nav-button:hover {
   background-color: #d4e7f2;
   color: #1f4e79;
@@ -105,74 +115,134 @@
   display: block;
 }
 
+/* 例）犯人が .header-logo だった場合 */
+.site-header .header-logo {
+  background-position: center center !important;
+  background-position-x: 50% !important;
+}
+
+
 /* ===== レスポンシブ（小画面） ===== */
 @media screen and (max-width: 600px) {
-  /* 既存: そのまま */
   .site-header {
     padding: 0.45rem 0.8rem;
+    margin: 0;
+    overflow-x: clip; /* ← ヘッダーだけ横スク抑制 */
+    overflow-clip-margin: 0;
   }
 
   /* h1 は控えめ・必ず1行、ellipsisは出さない */
   .site-header h1 {
     font-size: 0.9rem;  /* 約14px、強調しない */
     white-space: nowrap;
-    overflow: hidden;    /* 改行せず収める */
-    text-overflow: clip; /* ← 省略記号「…」は出さない */
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   /* ▼ 等幅で“必ず1列”に収めるためのポイント */
-  .site-header .header-main-nav,
-  .site-header .header-nav-menu {
-    min-width: 0; /* 幅計算の詰まり防止 */
-  }
-
+  .site-header .header-main-nav { padding: 0 6px; }
   .site-header .header-nav-menu {
     display: flex;
-    flex-direction: row;  /* 横並び */
-    flex-wrap: nowrap;    /* 折り返さない（=1列） */
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: stretch;
     gap: 6px;
-    margin-top: 0.4rem;
-    padding: 0 8px;       /* 端の見切れ防止のため少し内側に */
     list-style: none;
-    /* white-space: nowrap; ← 不要だが残っていても害はない */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    min-width: 0; /* 幅計算の詰まり防止 */
   }
 
   /* ▼ 各項目を均等幅にする */
   .site-header .header-nav-item {
-    flex: 1 1 0;  /* 均等幅 */
-    min-width: 0; /* テキスト長でのはみ出し抑制 */
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   /* ▼ ボタンは1行固定・ellipsisなし（clip）で幅内に収める */
   .site-header .header-nav-button {
     display: block;
     width: 100%;
-    white-space: nowrap;  /* 改行させない */
-    overflow: hidden;     /* 幅をはみ出す部分はカット */
-    text-overflow: clip;  /* ← 省略記号「…」は出さない */
+    box-sizing: border-box; /* border/padding を含めて幅計算 */
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 
     padding: 6px 8px;
-    font-size: 11px;      /* 小さめに調整して1行に収める */
+    font-size: 11px;
     line-height: 1.2;
     border-radius: 6px;
     text-align: center;
   }
 
-  /* ドロップダウンは既存のまま（重なり防止で少し下へ） */
   .site-header .header-dropdown-list {
     top: calc(100% + 2px);
     min-width: 120px;
   }
 }
 
-/* さらに極小端末での微調整（必要なら少し絞る） */
+/* さらに極小端末での微調整 */
 @media screen and (max-width: 360px) {
   .site-header .header-nav-button {
     padding: 6px 6px;
-    font-size: 11.5px; /* ※端末や文言によって 10.5〜11.5px で調整可 */
+    font-size: 11.5px;
   }
   .site-header .header-nav-menu {
     gap: 4px;
   }
+}
+
+/* ==== ヘッダー限定の横スク潰し（style.cssの影響を相殺） ==== */
+
+/* 1) レイアウトはみ出しの物理カット（ヘッダー限定） */
+.site-header {
+  overflow-x: clip;
+  overflow-clip-margin: 0;
+}
+
+/* 2) ボーダー・パディングも含めて幅100%で収まるように */
+.site-header *, 
+.site-header *::before, 
+.site-header *::after {
+  box-sizing: border-box;
+}
+
+/* 3) ヘッダー内の “100vw系” を無力化（幅は必ず親の内側に） */
+.site-header,
+.site-header * {
+  max-width: 100% !important;  /* 100vw や min-width の暴走を抑える */
+}
+
+/* 4) 画像/アイコン/iframe等はヘッダー内でハミ出さない */
+.site-header img,
+.site-header svg,
+.site-header video,
+.site-header canvas,
+.site-header iframe {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* 5) 背景位置の小数％を丸める（background-position-x 対策） */
+.site-header, .site-header * {
+  background-position-x: 50% !important;
+}
+
+/* 6) フレックスの縮み拒否バグ対策 */
+.site-header .header-nav-menu,
+.site-header .header-nav-item,
+.site-header .header-nav-item > * {
+  min-width: 0;
+}
+
+/* 7) ナビボタンが幅オーバーしないよう最終保険 */
+.site-header .header-nav-button {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }

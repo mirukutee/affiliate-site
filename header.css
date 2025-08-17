@@ -104,73 +104,36 @@
   .site-header { padding: 0.45rem 0.8rem; }
 
   .site-header h1 {
-    font-size: clamp(1.05rem, 4.5vw, 1.25rem);
+    font-size: 18px;
     line-height: 1.2;
   }
 
   .site-header .header-nav-menu {
-    flex-direction: row;     /* 横並び */
-    flex-wrap: wrap;         /* 折り返し */
-    justify-content: center;
-    gap: 6px;                /* 少し詰める */
+    display: flex;
+    flex-wrap: nowrap;        /* 折り返さない */
+    justify-content: space-around; /* 均等配置 */
     margin-top: 0.4rem;
+    gap: 6px;
+  }
+
+  .site-header .header-nav-item {
+    flex: 1;                  /* 幅を均等に分配（←ここ重要） */
+    text-align: center;
   }
 
   .site-header .header-nav-button {
-    padding: 6px 8px;        /* タップ最小推奨をギリ保つ */
     font-size: 12px;
-    line-height: 1;
+    padding: 6px 8px;
+    line-height: 1.2;
     border-radius: 6px;
-  }
-
-  /* ドロップダウンの表示位置は据え置き（被り防止） */
-  .site-header .header-dropdown-list {
-    top: calc(100% + 2px);
-    min-width: 120px;
+    white-space: nowrap;       /* 改行させない */
+    display: block;
+    width: 100%;               /* 均等幅で広がる */
   }
 }
 
-/* さらに極小端末で圧縮したい場合（任意） */
-@media screen and (max-width: 360px) {
-  .site-header .header-nav-button {
-    padding: 6px 6px;
-    font-size: 11.5px;
-  }
-  .site-header .header-nav-menu { gap: 4px; }
-}
-
-/* iOSの自動文字拡大を抑制（実機での想定外な肥大化を防ぐ） */
+/* iOSの文字拡大防止 */
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-}
-
-/* 小画面のナビ: wrap時の重なり防止をさらに強化 */
-@media screen and (max-width: 600px) {
-  .site-header .header-nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    /* gapが効かない端末でも安全に並ぶようフォールバックも入れる */
-  }
-  .site-header .header-nav-item {
-    flex: 0 1 auto;         /* 折り返しやすくする（最小限の幅） */
-    /* gap非対応端末向け: 個別の余白を確保して重なりを防止 */
-    margin: 3px;
-  }
-  .site-header .header-nav-button {
-    display: inline-flex;   /* 高さの計算を安定化 */
-    align-items: center;
-    padding: 6px 8px;
-    font-size: 12px;
-    line-height: 1.2;       /* 行高を確保して文字が重ならないように */
-    white-space: nowrap;    /* ボタン内の改行を防ぐ（長文リンク名は短縮を推奨） */
-  }
-}
-
-/* flex-gap非対応ブラウザ向けフォールバック（iOS古め対応） */
-@supports not (gap: 1px) {
-  .site-header .header-nav-menu {
-    /* gap が無い場合は項目自身の margin で間隔を作る */
-  }
-  .site-header .header-nav-item { margin: 3px; }
 }

@@ -614,23 +614,3 @@ font-size: 11.5px;
 }
 
 
-/* ① 背景のfixedはモバイルで無効化（揺れ止め） */
-@media (max-width: 768px) {
-  html, body { background-attachment: scroll; }
-}
-
-/* ② 背景レイヤのはみ出し抑制（サブピクセル対策） */
-body::before {
-  will-change: transform;     /* 合成レイヤ化で再レイアウト抑制 */
-  inset: 0;                   /* すでに指定済みだが明示 */
-  overflow: clip;             /* 念のため */
-}
-
-/* ③ 横スクの制御は "headerだけ" に委ねる → 全体指定は消す/弱める */
-html, body {
-  /* overflow-x: hidden; ← これを削除 or コメントアウト */
-}
-
-/* ④ テーブルなど横長コンテンツのスクロールは、ラッパーで許可 */
-.table-wrapper { overflow-x: auto; }
-.table-wrapper > table { min-width: 600px; }

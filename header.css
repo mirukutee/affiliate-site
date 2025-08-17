@@ -138,3 +138,39 @@
   }
   .site-header .header-nav-menu { gap: 4px; }
 }
+
+/* iOSの自動文字拡大を抑制（実機での想定外な肥大化を防ぐ） */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 小画面のナビ: wrap時の重なり防止をさらに強化 */
+@media screen and (max-width: 600px) {
+  .site-header .header-nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gapが効かない端末でも安全に並ぶようフォールバックも入れる */
+  }
+  .site-header .header-nav-item {
+    flex: 0 1 auto;         /* 折り返しやすくする（最小限の幅） */
+    /* gap非対応端末向け: 個別の余白を確保して重なりを防止 */
+    margin: 3px;
+  }
+  .site-header .header-nav-button {
+    display: inline-flex;   /* 高さの計算を安定化 */
+    align-items: center;
+    padding: 6px 8px;
+    font-size: 12px;
+    line-height: 1.2;       /* 行高を確保して文字が重ならないように */
+    white-space: nowrap;    /* ボタン内の改行を防ぐ（長文リンク名は短縮を推奨） */
+  }
+}
+
+/* flex-gap非対応ブラウザ向けフォールバック（iOS古め対応） */
+@supports not (gap: 1px) {
+  .site-header .header-nav-menu {
+    /* gap が無い場合は項目自身の margin で間隔を作る */
+  }
+  .site-header .header-nav-item { margin: 3px; }
+}

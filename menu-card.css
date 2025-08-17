@@ -46,12 +46,12 @@
 @media (max-width: 600px) {
   .category-menu-table .cat-title { font-size: 1rem; }
   .category-menu-table td { padding: 0.5em 0.2em; }
-  .category-menu-table a { font-size: 0.88rem; padding: 0.2em 0.15em; }
+  .category-menu-table a { font-size: 0.74rem; padding: 0.2em 0.15em; }
 }
 
 /* さらに狭い端末での調整 */
 @media (max-width: 360px) {
-  .category-menu-table a { font-size: 0.84rem; }
+  .category-menu-table a { font-size: 0.72rem; }
 }
 
 

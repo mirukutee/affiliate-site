@@ -12,7 +12,7 @@
 
 .site-header h1 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .site-header h1 a {
@@ -54,7 +54,7 @@
   text-decoration: none;
   color: #2c3e50;
   background-color: #f2f7fa;
-  padding: 10px 16px;
+  padding: 10px 16px; /* default */
   border-radius: 8px;
   border: 1px solid #10e642; /* 既存デザイン踏襲 */
   transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
@@ -99,41 +99,64 @@
   display: block;
 }
 
-/* ===== レスポンシブ（小画面で“横並び×小さく”） ===== */
 @media screen and (max-width: 600px) {
+  /* 既存: そのまま */
   .site-header { padding: 0.45rem 0.8rem; }
 
-  .site-header h1 {
-    font-size: 18px;
-    line-height: 1.2;
-  }
+.site-header h1 {
+  font-size: clamp(0.8rem, 3.2vw, 1.2rem);
+  line-height: 1.25;
+}
+
+  /* ▼ 等幅で“必ず1列”に収めるためのポイント */
+  .site-header .header-main-nav,
+  .site-header .header-nav-menu { min-width: 0; }  /* 幅計算の詰まり防止 */
 
   .site-header .header-nav-menu {
     display: flex;
-    flex-wrap: nowrap;        /* 折り返さない */
-    justify-content: space-around; /* 均等配置 */
-    margin-top: 0.4rem;
+    flex-direction: row;      /* 横並び */
+    flex-wrap: nowrap;        /* 折り返さない（=1列） */
+    justify-content: stretch; /* 幅を均等に配分 */
+    align-items: stretch;
     gap: 6px;
+    margin-top: 0.4rem;
+    padding: 0 8px;           /* 端の見切れ防止のため少し内側に */
+    list-style: none;
+    /* white-space: nowrap; ← ここは不要なので外してOK（残っていても害はない） */
   }
 
+  /* ▼ 各項目を均等幅にする */
   .site-header .header-nav-item {
-    flex: 1;                  /* 幅を均等に分配（←ここ重要） */
-    text-align: center;
+    flex: 1 1 0;    /* 均等幅 */
+    min-width: 0;   /* テキスト長でのはみ出し抑制 */
   }
 
+  /* ▼ ボタンは幅100%、1行・はみ出しは省略記号 */
   .site-header .header-nav-button {
-    font-size: 12px;
-    padding: 6px 8px;
-    line-height: 1.2;
-    border-radius: 6px;
-    white-space: nowrap;       /* 改行させない */
     display: block;
-    width: 100%;               /* 均等幅で広がる */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 5.8px 7.6px;   /* 既存より少しだけ小さめ */
+    font-size: 12px;
+    line-height: 1.1;
+    border-radius: 6px;
+  }
+
+  /* ドロップダウンは既存のまま */
+  .site-header .header-dropdown-list {
+    top: calc(100% + 2px);
+    min-width: 120px;
   }
 }
 
-/* iOSの文字拡大防止 */
-html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+/* さらに極小端末での微調整（既存のままでOK。必要なら少し絞る） */
+@media screen and (max-width: 360px) {
+  .site-header .header-nav-button {
+    padding: 6px 6px;
+    font-size: 11.5px;
+  }
+  .site-header .header-nav-menu { gap: 4px; }
 }

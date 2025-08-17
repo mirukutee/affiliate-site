@@ -54,7 +54,7 @@
   text-decoration: none;
   color: #2c3e50;
   background-color: #f2f7fa;
-  padding: 10px 16px; /* default */
+  padding: 10px 16px;
   border-radius: 8px;
   border: 1px solid #10e642; /* 既存デザイン踏襲 */
   transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
@@ -117,7 +117,7 @@
   }
 
   .site-header .header-nav-button {
-    padding: 8px 10px;        /* タップ最小推奨をギリ保つ */
+    padding: 6px 8px;        /* タップ最小推奨をギリ保つ */
     font-size: 12px;
     line-height: 1;
     border-radius: 6px;

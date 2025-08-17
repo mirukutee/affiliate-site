@@ -327,14 +327,14 @@ body::before {
 /* ========== ▼ フッター（統一） ========== */
 
 footer {
-  height: auto;
+  height: 50px;
   background: linear-gradient(to right, #eaf3fa, #d6e3ec);
   color: #2c3e50;
   text-align: center;
   
   border-top: 1px solid #ccdce5;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-   padding: 0.8rem 1rem; 
+   padding: .75rem .9rem; 
    font-size: .9rem;
     line-height: 1.4; 
 }
@@ -373,7 +373,7 @@ main {
   background-color: #ffffff;
   border: 1px solid #ddd;
   transition: all 0.3s ease;
-  margin: 1rem 0;
+  margin: 0.6rem 0 0.5rem;
  box-shadow: 5px 5px 15px 5px rgba(50, 150, 100, 0.8);
 }
 
@@ -710,7 +710,7 @@ li {
 
   /* 文字サイズと可読性 */
   body {
-    font-size: 90%;
+    font-size: 85%;
     line-height: 1.5;
     letter-spacing: 0.03em;
     padding: 0.1em;

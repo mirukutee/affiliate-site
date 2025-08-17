@@ -95,7 +95,9 @@
   <link rel="stylesheet" href="style.css" />
 
   <link rel="stylesheet" href="menu-card.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+ <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="amphtml" href="AMP/index.html">
 </head>
 
@@ -108,28 +110,39 @@
     <main>
      <h1 class="title" id="top">証券・FX・仮想通貨の比較・まとめ一覧</h1>
 
-      <div class="anime-item">
-        <img src="sonota/top.png" width="1200" height="628" alt="投資・資産運用のイメージ画像" loading="eager">
-        <h2 class="anime-title">このサイトについて</h2>
-        <p>
-          当サイトは、<strong>株式投資・FX・仮想通貨</strong>など、資産運用に関するサービスを分かりやすくまとめた情報サイトです。<br>
-          初心者から中級者まで、<strong>最適なサービスを見つけやすく</strong>することを目的としています。
-        </p>
-        <p>
-  株・FX・仮想通貨など、どれを選べばいいのか分からない…という方へ。<strong>初心者〜中級者の方が最適な資産運用サービスを選べるよう、</strong>このページでは主要な証券会社や取引所、特徴別の比較情報を整理しています。
-</p>
+    <!-- ▼ ここから置き換え -->
+<div class="hero-compact anime-item">
+  <!-- 1) カテゴリメニュー（スマホでは最上段） -->
+  <div class="hero-compact__menu">
+    <h2 class="anime-title hero-compact__title">カテゴリーから探す</h2>
+    <div class="category-menu-table">
+      <table>
+        <tr>
+          <td class="category-color"><a href="#sec-securities">証券（株式取引）</a></td>
+          <td class="category-color"><a href="#sec-fx">FX</a></td>
+          <td class="category-color"><a href="#sec-crypto">仮想通貨</a></td>
+        </tr>
+        <tr>
+          <td class="category-color"><a href="#sec-service">資産運用サービス</a></td>
+          <td class="category-color"><a href="#sec-kiso">基礎用語の解説</a></td>
+          <td class="tb-blank"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-        <div class="session-card">
-          <h3 class="anime-title">カテゴリーから探す</h3>
-          <ul class="menu-nav">
-            <li><a href="#sec-securities">証券（株式取引）</a></li>
-            <li><a href="#sec-fx">FX</a></li>
-            <li><a href="#sec-crypto">仮想通貨</a></li>
-            <li><a href="#sec-service">資産運用サービス</a></li>
-            <li><a href="#sec-kiso">基礎用語の解説</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- 2) 導入テキスト（文章は最小限で残す） -->
+  <div class="hero-compact__intro">
+    <h2 class="anime-title">このサイトについて</h2>
+    <p>株式投資・FX・仮想通貨の主要サービスを、<strong>初心者〜中級者向け</strong>に分かりやすく整理しています。</p>
+    <p class="only-desktop">比較・基礎知識は、上の<strong>カテゴリメニュー</strong>からすぐに移動できます。</p>
+  </div>
+</div>
+<!-- ▲ 置き換えここまで -->
+
+
+
+
 
 
 <!--実装前実験エリア-->
@@ -293,59 +306,60 @@
         すべて５分で読める内容なので時間もかかりません。</p>
      
 
-  <section class="card-section">
-    <div class="card-grid">
+  <section class="recommendation-section">
+    <div class="recommendation-grid">
 
-      <a href="kabukaisetu.html" class="card-link">
+      <a href="kabukaisetu.html" class="recommendation-link">
         <i class="fa-solid fa-note-sticky"></i>
         <span>株取引の基礎知識</span>
       </a>
 
-      <a href="syouken-hikakukaisetu.html" class="card-link">
+      <a href="syouken-hikakukaisetu.html" class="recommendation-link">
         <i class="fa-solid fa-magnifying-glass"></i> <!-- fa-exchange-alt でもOK -->
         <span>国内株と海外株の違い</span>
       </a>
 
-      <a href="FX-kaisetu.html" class="card-link">
+      <a href="FX-kaisetu.html" class="recommendation-link">
         <i class="fa-solid fa-note-sticky"></i> <!-- fa-exchange-alt でもOK -->
         <span>FX初心者向け用語解説</span>
       </a>
 
-      <a href="kasoutuukakaisetu.html" class="card-link">
+      <a href="kasoutuukakaisetu.html" class="recommendation-link">
         <i class="fa-solid fa-magnifying-glass"></i> <!-- fa-exchange-alt でもOK -->
         <span>仮想通貨の基礎知識</span>
       </a>
 
-      <a href="zeikinn.html" class="card-link">
+      <a href="zeikinn.html" class="recommendation-link">
         <i class="fa-solid fa-book"></i>
         <span>株・FX・仮想通貨の税金の違いと確定申告の対処法</span>
       </a>
 
-   <a href="#top" class="idjanp top-card" >▲ページ上部へ戻る</a>  
+   <a href="#top" class="recommendation-top-link reco-end" >▲ページ上部へ戻る</a>  
 
     </div>
+
   </section>
  </section>
 
  <section class="anime-item">
   <h2 class="anime-title">関連記事・おすすめページ</h2>
 
-  <section class="card-section">
-    <div class="card-grid">
+  <section class="recommendation-section">
+    <div class="recommendation-grid">
 
-      <a href="syoukensyoukai.html" class="card-link">
+      <a href="syoukensyoukai.html" class="recommendation-link">
         <i class="fa-solid fa-chart-line"></i>
         <span>証券口座一覧紹介ページ</span>
       </a>
 
-      <a href="FX-syoukai.html" class="card-link">
+      <a href="FX-syoukai.html" class="recommendation-link">
         <i class="fa-solid fa-right-left"></i> <!-- fa-exchange-alt でもOK -->
         <span>FX一覧紹介ページ</span>
       </a>
+   
+    <a href="#top" class="recommendation-top-link reco-end" >▲ページ上部へ戻る</a>  
 
-    </div>
-    <a href="#top" class="idjanp top-card" >▲ページ上部へ戻る</a>  
-
+ </div>
   </section>
 </section>
 
@@ -359,22 +373,78 @@
   <h2 class="anime-title">よくある質問（FAQ）</h2>
 
     <!-- ▼ FAQ構成の雛形-->
-	<ul>
-      <li><strong><i class="fa-solid fa-user"></i>Q. 株とFX、どちらが初心者におすすめ？</strong><br>
-       <i class="fa-solid fa-comment"></i>初心者には、リスクが比較的低く情報が多い「株式投資」から始めるのがおすすめです。</li>
+<ul class="faq-list">
+  <li>
+      <details class="faq-item">
+      <summary>
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        <span>Q. 株とFX、どちらが初心者におすすめ？</span>
+        <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+      </summary>
+      <div class="faq-answer">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+        初心者には、リスクが比較的低く情報が多い「株式投資」から始めるのがおすすめです。
+      </div>
+    </details>
+  </li>
 
-      <li><strong><i class="fa-solid fa-user"></i>Q. 仮想通貨は少額からでも始められますか？</strong><br>
-    <i class="fa-solid fa-comment"></i>はい、100円から取引可能な取引所もあり、初期コストが低いのが魅力です。</li>
+<li>
+  <details class="faq-item">
+      <summary>
+      <i class="fa-solid fa-user" aria-hidden="true"></i>
+          <span>Q. 仮想通貨は少額からでも始められますか？</span>
+       <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+      </summary>
+      <div class="faq-answer">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+    はい、100円から取引可能な取引所もあり、初期コストが低いのが魅力です。
+   </div>
+    </details>
+  </li>
 
-      <li><strong><i class="fa-solid fa-user"></i>Q. 自動売買は初心者でも使えますか？</strong><br>
-     <i class="fa-solid fa-comment"></i>使いやすく設計された自動売買サービスもありますが、仕組みを理解してからの利用を推奨します。</li>
+ 
+  <li>
+  <details class="faq-item">
+      <summary>
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+       <span>Q. 自動売買は初心者でも使えますか？</span> 
+        <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+      </summary>
+      <div class="faq-answer">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+     使いやすく設計された自動売買サービスもありますが、仕組みを理解してからの利用を推奨します。
+       </div>
+    </details>
+  </li>
 
-        <li><strong><i class="fa-solid fa-user"></i>Q. 無理な勧誘はありますか？</strong><br>
-      <i class="fa-solid fa-comment"></i>A. いいえ、一切ありません。</li>
+<li>
+  <details class="faq-item">
+      <summary>
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+         <span>Q. 無理な勧誘はありますか？</span> 
+         <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+      </summary>
+      <div class="faq-answer">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+      A. いいえ、一切ありません。
+   </div>
+    </details>
+  </li>
 
-       <li><strong><i class="fa-solid fa-user"></i>Q. 口座開設にかかる時間はどれくらい？</strong><br>
-    <i class="fa-solid fa-comment"></i>証券会社によって異なりますが、最短で即日〜3営業日程度が一般的です。</li>
-
+  
+<li>
+  <details class="faq-item">
+      <summary>
+           <i class="fa-solid fa-user" aria-hidden="true"></i>
+       <span>Q. 口座開設にかかる時間はどれくらい？</span> 
+        <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+      </summary>
+      <div class="faq-answer">
+        <i class="fa-solid fa-comment" aria-hidden="true"></i>
+    証券会社によって異なりますが、最短で即日〜3営業日程度が一般的です。
+   </div>
+    </details>
+  </li>
 
     </ul>
 </section>
@@ -417,6 +487,8 @@
   </p>
 </div>
 
+<a href="#top" class="recommendation-top-link back-to-top" aria-label="ページ上部へ戻る" title="ページ上部へ戻る">▲</a>
+
         </main>
   </div>
 
@@ -437,5 +509,29 @@
 
           <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
         <script src="sidebar.js"></script>
+
+
+        <!--常駐ボタン-->
+        <script>
+  // スクロール量が一定を超えたら表示、上では隠す
+  (function () {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    const SHOW_AT = 320; // px
+
+    const onScroll = () => {
+      if (window.scrollY > SHOW_AT) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    };
+
+    // 初期 & スクロール時
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
 </body>
 </html>

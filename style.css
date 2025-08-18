@@ -156,6 +156,13 @@ a.idjanp:hover {
   pointer-events: none;
 }
 
+nav[aria-label="breadcrumb"] .breadcrumb {
+  display:flex; gap:.5rem; list-style:none; padding:0; margin:.2rem 0 1rem;
+  font-size:.92rem;
+}
+.breadcrumb li+li::before { content:"›"; opacity:.6; margin:0 .25rem; }
+.breadcrumb a { text-decoration:none; }
+
 /* ===== 背景アニメーション・装飾 ===== */
 html, body {
   height: 100%;

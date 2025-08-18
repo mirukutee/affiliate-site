@@ -6,24 +6,26 @@
  <meta name="google-site-verification" content="kSItGv3NbGMQA4ijCMg1PVjhxRwC8YO0wrdaeFdr84U" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "ホーム",
-        "item": "https://mirukutee.github.io/affiliate-site/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "トップページ"
-      }
-    ]
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://mirukutee.github.io/affiliate-site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "トップページ",
+      "item": "https://mirukutee.github.io/affiliate-site/"
+    }
+  ]
+}
+</script>
+
 
 <script type="application/ld+json">
 {
@@ -113,8 +115,6 @@
 <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.png">
 <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="preload" as="image"
       href="https://mirukutee.github.io/affiliate-site/sonota/top.png"
       fetchpriority="high">
@@ -194,7 +194,7 @@
   <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar" defer></aside>
+    <aside id="sidebar"></aside>
 
     <main>
     <!-- パンくず -->
@@ -216,9 +216,9 @@
     <div class="category-menu-table">
       <table>
         <tr>
-          <td class="category-color"><a href="#sec-securities">証券（株式取引）<br><small>比較・おすすめ</small></a></td>
+          <td class="category-color"><a href="#sec-securities">証券(株式取引)<br><small>比較・おすすめ</small></a></td>
           <td class="category-color"><a href="#sec-fx">FX比較<br><small>おすすめ</small></a></td>
-          <td class="category-color"><a href="#sec-crypto">仮想通貨比較<br><small>おすすめ</small></a></td>
+          <td class="category-color"><a href="#sec-crypto">仮想通貨<br><small>比較・おすすめ</small></a></td>
         </tr>
         <tr>
           <td class="category-color"><a href="#sec-service">資産運用サービス<br><small>比較</small></a></td>
@@ -675,20 +675,20 @@
   <div id="footer"></div>
 
   <!-- ✅ 共通読み込み用JS -->
- <script>
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('sidebar.html')
-    .then(r => r.text())
-    .then(html => {
-      const box = document.getElementById('sidebar');
-      if (box) box.innerHTML = html;
-      // ← サイドバー挿入が終わってから初期化
-      const s = document.createElement('script');
-      s.src = 'sidebar.js';
-      document.body.appendChild(s);
+  <script src="include.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
     });
-});
-</script>
+  </script>
+
+  <script src="sidebar.js"></script>
+
 
 
 
@@ -714,6 +714,7 @@ document.addEventListener("DOMContentLoaded", function() {
   })();
 </script>
 
+
 <script>
 (() => {
   const p = new URLSearchParams(location.search);
@@ -723,10 +724,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const main = document.querySelector("main");
   if (!main) return;
 
-  // 簡易ヒューリスティック：ページ内リンク候補
   const links = Array.from(document.querySelectorAll('a[href]'))
-    .filter(a => a.href && !a.href.startsWith('#'))
-    .filter(a => (a.textContent||"").toLowerCase().includes(q.toLowerCase()) || a.href.toLowerCase().includes(q.toLowerCase()))
+    .filter(a => {
+      const href = a.getAttribute('href') || '';
+      return href && !href.startsWith('#');
+    })
+    .filter(a => {
+      const text = (a.textContent || '').toLowerCase();
+      const href = (a.getAttribute('href') || '').toLowerCase();
+      return text.includes(q.toLowerCase()) || href.includes(q.toLowerCase());
+    })
     .slice(0, 10);
 
   const box = document.createElement("section");
@@ -750,6 +757,7 @@ document.addEventListener("DOMContentLoaded", function() {
   main.prepend(box);
 })();
 </script>
+
 
 
 </body>

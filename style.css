@@ -620,4 +620,82 @@ font-size: 11.5px;
 
 }
 
+/* --- セッションカードのコンパクト版 --- */
+.session-card--compact{
+  padding: .6rem .8rem;
+  margin: .6rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* 見出しも小さめに */
+.anime-title--mini{
+  font-size: 1rem;        /* 既定より小さく */
+  margin: 0 0 .4rem;
+}
+
+/* スマホ最適のミニUL */
+.mini-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .25rem;            /* 行間を詰める */
+}
+.mini-list li{
+  font-size: .9rem;
+  line-height: 1.35;
+  padding: .25rem .4rem;
+  border: 1px solid #eef2f7;
+  border-radius: 6px;
+  background: #fafcff;
+}
+
+/* アイコン風の先頭装飾（必要なら） */
+.mini-list li::before{
+  content: "•";
+  color: #067aff;
+  font-weight: 700;
+  margin-right: .4em;
+}
+
+/* スマホはさらに詰める */
+@media (max-width: 600px){
+  .session-card--compact{ padding: .5rem .6rem; }
+  .anime-title--mini{ font-size: .95rem; margin-bottom: .3rem; }
+  .mini-list{ gap: .2rem; }
+  .mini-list li{ font-size: .86rem; padding: .22rem .36rem; }
+}
+
+
+
+/* === アフィリエイト画像CTA（比較ページ用・超軽量） === */
+/* ===== 画像CTAボタン（共通classを活用） ===== */
+.cta-button-hikaku {
+  display:block;
+  max-width: 320px;      /* スマホでちょうど良い幅。バナー比率で可変 */
+  margin:.5rem ;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+  transition:transform .1s ease, box-shadow .1s ease;
+}
+.cta-button-hikaku img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+.cta-button-hikaku:hover {
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(0,0,0,.16);
+}
+
+
+/* モバイル（小画面）は横幅100%にして無駄な余白カット */
+@media (max-width:600px){
+  .cta-button-hikaku { max-width:100%; border-radius:6px; }
+}
+
+
 

@@ -1,0 +1,72 @@
+/* 全体を極限までコンパクトに */
+.table-card {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;   /* 全体小さめ */
+  table-layout: fixed;  /* 列幅を均等化して崩れ防止 */
+}
+
+.table-card th,
+.table-card td {
+  border: 1px solid #ccc;
+  padding: 3px 4px;     /* ギリギリの余白 */
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word; /* 折り返して収める */
+}
+
+.table-card th {
+  background: #f0f8ff;
+  font-weight: 600;
+  color: #0653a6;
+}
+
+/* サービス欄の縦レイアウト（画像→文字） */
+.cell-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.cell-flex img {
+  width: 45px;   /* 超小さく */
+  height: auto;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
+.cell-flex .info span {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+.cell-flex .info small {
+  font-size: 0.65rem;
+  color: #666;
+  line-height: 1.1;
+}
+
+/* リンク */
+.table-card td a {
+  color: #067aff;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.table-card td a:hover {
+  text-decoration: underline;
+}
+
+/* スマホでも「横表」のまま維持する */
+@media (max-width: 640px) {
+  .table-card {
+    font-size: 0.7rem;
+  }
+  .table-card th, .table-card td {
+    padding: 2px 3px; /* さらに狭め */
+  }
+  .cell-flex img {
+    width: 40px;
+  }
+}

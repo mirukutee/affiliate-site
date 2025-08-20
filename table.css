@@ -80,6 +80,7 @@
 @media (max-width: 640px) {
   .table-card {
     font-size: 0.7rem;
+    
   }
   .table-card th, .table-card td {
     padding: 2px 3px; /* さらに狭め */
@@ -107,6 +108,18 @@
 
 /* PCフィット：デスクトップだけ縮小。vwに応じて自動で少しだけ縮む */
 @media (min-width: 1024px) {
+
+  .table-card {
+    max-width: 800px; /* ← お好みで 860〜980px くらいで目視調整 */
+    margin: 0 auto;   /* 中央寄せ */
+  }
+  /* 列幅の固定（必要ならそのまま維持） */
+.table-card.pc-fit colgroup col:nth-child(1) { width: 20%; } /* サービス */
+.table-card.pc-fit colgroup col:nth-child(2) { width: 20%; } /* 通貨ペア数 */
+.table-card.pc-fit colgroup col:nth-child(3) { width: 30%; } /* 注文/自動化 */
+.table-card.pc-fit colgroup col:nth-child(4) { width: 30%; } /* 取引ツール */
+
+
   .table-card.pc-fit {
     /* 0.70rem〜0.80remの範囲で自動調整（画面が狭いほど小さく） */
     font-size: clamp(0.70rem, 0.75vw, 0.80rem);
@@ -133,11 +146,7 @@
     font-weight: 600;
   }
 
-  /* 列幅の固定（必要ならそのまま維持） */
-  .table-card.pc-fit colgroup col:nth-child(1) { width: 42%; }
-  .table-card.pc-fit colgroup col:nth-child(2) { width: 14%; }
-  .table-card.pc-fit colgroup col:nth-child(3) { width: 22%; }
-  .table-card.pc-fit colgroup col:nth-child(4) { width: 22%; }
+  
 }
 
 /* さらに詰めたい“XSモード”（任意） */
@@ -158,8 +167,20 @@
     padding-left: 0.45em;
     padding-right: 0.45em;
 }
+  .table-card colgroup col:nth-child(1) { width: 36%; } /* サービス */
+  .table-card colgroup col:nth-child(2) { width: 14%; } /* 通貨ペア数 */
+  .table-card colgroup col:nth-child(3) { width: 25%; } /* 注文/自動化 */
+  .table-card colgroup col:nth-child(4) { width: 25%; } /* 取引ツール */
 }
 
+/* 最後の列 左寄せを無効化 */
+.table-card td:last-of-type { text-align: center !important; }
+
+/* ストライプ無効化 */
+.table-card tbody > tr:nth-of-type(even) { background: transparent !important; }
+
+/* 余計な外枠を削除 */
+.table-card { border:0 !important; }
 
 
 /* レスポンシブ表*/
@@ -181,6 +202,7 @@
 .table-responsive th {
   background: #f8f8f8;
 }
+ .detail-note { display: none; }  /* PCは非表示 */
 
 @media (max-width: 600px) {
   .table-responsive {

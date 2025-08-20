@@ -424,6 +424,23 @@ tbody > tr:nth-of-type(even) {
     display: none;
   }
 }
+/* 1) テーブル外枠の二重線/太線を防ぐ（style.cssの table{border:2px}対策） */
+.table-card { border: 0; }
+
+/* 2) 最後の列だけ左寄せにされるのを無効化 */
+.table-card td:last-of-type { text-align: center; }
+
+/* 3) 偶数行のストライプを無効化（必要なら） */
+.table-card tbody > tr:nth-of-type(even) { background: transparent; }
+
+/* 4) リンクのホバー色を固定（オレンジ化回避） */
+.table-card td a:hover {
+  color: #067aff;           /* 通常と同色で維持 */
+  text-decoration: underline;
+}
+
+/* 5) セクション内グローバルimgの幅100%指定よりも強く固定 */
+.table-card .cell-flex > img { max-width: none; } /* 既に入れているが念のため */
 
 /* カードスタイル */
 .mobile-card-view {

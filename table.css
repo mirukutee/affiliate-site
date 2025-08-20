@@ -2,14 +2,14 @@
 .table-card {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.75rem;   /* 全体小さめ */
-  table-layout: fixed;  /* 列幅を均等化して崩れ防止 */
+  font-size: 0.85rem;   /* ← ここで全体縮小 */
+  table-layout: fixed;
 }
 
 .table-card th,
 .table-card td {
   border: 1px solid #ccc;
-  padding: 3px 4px;     /* ギリギリの余白 */
+   padding: 0 2px;   /* 上下0, 左右2 */
   text-align: center;
   vertical-align: middle;
   word-break: break-word; /* 折り返して収める */
@@ -30,12 +30,30 @@
   gap: 2px;
 }
 
-.cell-flex img {
-  width: 45px;   /* 超小さく */
-  height: auto;
-  border-radius: 3px;
+/* 他CSSの img {max-width:100%} などを無効化してサイズを“絶対化” */
+.table-card .cell-flex > img {
+  max-width: none;
+  width: 45px;        /* PC 絶対 */
+  height: 45px;       /* 縦も固定で比率崩れ/CLS防止 */
   object-fit: contain;
+  border-radius: 3px;
 }
+
+/* 画像列のパディングだけ最適化（他列はそのまま） */
+.table-card th:first-child,
+.table-card td:first-child {
+  padding-top: 2px;   /* 画像の高さがあるので上は詰める */
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* 他列（2列目以降）は少し余白を残して読みやすく */
+.table-card th:not(:first-child),
+.table-card td:not(:first-child) {
+  padding: 4px 6px;
+}
+
 
 .cell-flex .info span {
   font-weight: 600;
@@ -71,6 +89,79 @@
   }
 }
 
+@media (max-width: 640px) {
+  .table-card .cell-flex > img {
+    width: 40px;      /* スマホ 絶対 */
+    height: 40px;
+  }
+  .table-card th:first-child,
+  .table-card td:first-child {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  .table-card th:not(:first-child),
+  .table-card td:not(:first-child) {
+    padding: 3px 4px;
+  }
+}
+
+/* PCフィット：デスクトップだけ縮小。vwに応じて自動で少しだけ縮む */
+@media (min-width: 1024px) {
+  .table-card.pc-fit {
+    /* 0.70rem〜0.80remの範囲で自動調整（画面が狭いほど小さく） */
+    font-size: clamp(0.70rem, 0.75vw, 0.80rem);
+  }
+  .table-card.pc-fit th,
+  .table-card.pc-fit td {
+    /* 余白はemで指定＝フォント縮小に連動してさらに詰まる */
+    padding: 0.28em 0.45em;
+    line-height: 1.15;
+  }
+
+  /* 画像は“絶対”サイズ維持（PC=45px） */
+  .table-card.pc-fit .cell-flex > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* テキストも少し小さめに寄せる */
+  .table-card.pc-fit .info span { font-size: 0.72rem; }
+  .table-card.pc-fit .info small { font-size: 0.60rem; }
+
+  /* 見出しセルも気持ち小さくして高さを抑える */
+  .table-card.pc-fit th {
+    font-weight: 600;
+  }
+
+  /* 列幅の固定（必要ならそのまま維持） */
+  .table-card.pc-fit colgroup col:nth-child(1) { width: 42%; }
+  .table-card.pc-fit colgroup col:nth-child(2) { width: 14%; }
+  .table-card.pc-fit colgroup col:nth-child(3) { width: 22%; }
+  .table-card.pc-fit colgroup col:nth-child(4) { width: 22%; }
+}
+
+/* さらに詰めたい“XSモード”（任意） */
+@media (min-width: 1024px) {
+  .table-card.pc-fit.xs {
+    font-size: clamp(0.64rem, 0.6vw, 0.72rem);
+  }
+  .table-card.pc-fit.xs th,
+  .table-card.pc-fit.xs td {
+    padding: 0.22em 0.4em;
+    line-height: 1.1;
+  }
+
+  .table-card.pc-fit th:first-child,
+  .table-card.pc-fit td:first-child {
+    padding-top: 0.15em;  /* ← 上下は詰めすぎない */
+    padding-bottom: 0.15em;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
+}
+}
+
+
+
 /* レスポンシブ表*/
 
 .table-responsive {
@@ -103,3 +194,5 @@
     display: none; /* モバイルでは改行を消して省スペースに */
   }
 }
+
+

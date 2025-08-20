@@ -70,3 +70,36 @@
     width: 40px;
   }
 }
+
+/* レスポンシブ表*/
+
+.table-responsive {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em; /* 全体を少し小さめに */
+}
+
+.table-responsive th,
+.table-responsive td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  word-break: break-word; /* 長文を折り返す */
+}
+
+.table-responsive th {
+  background: #f8f8f8;
+}
+
+@media (max-width: 600px) {
+  .table-responsive {
+    font-size: 0.85em; /* モバイルはさらに小さく */
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 4px;
+  }
+  .table-responsive td br {
+    display: none; /* モバイルでは改行を消して省スペースに */
+  }
+}

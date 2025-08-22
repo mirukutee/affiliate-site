@@ -163,6 +163,19 @@ nav[aria-label="breadcrumb"] .breadcrumb {
 .breadcrumb li+li::before { content:"›"; opacity:.6; margin:0 .25rem; }
 .breadcrumb a { text-decoration:none; }
 
+/* ===== スキップリンクでフォーカス移動 ===== */
+/* style.css に追記（目立たないリング） */
+#main:focus { outline: none; } /* 通常フォーカスは非表示 */
+#main:focus-visible {
+  outline: 2px solid rgba(125, 183, 255, 0.45);
+  outline-offset: 4px;
+}
+/* マウス主体の環境ではさらに控えめ（任意） */
+@media (pointer: fine) and (hover: hover) {
+  #main:focus-visible { outline-color: rgba(125, 183, 255, 0.3); }
+}
+
+
 /* ===== 背景アニメーション・装飾 ===== */
 html, body {
   height: 100%;

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- ====== 文字コード & ビューポート ====== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ====== 基本SEO ====== -->
+  <link rel="canonical" href="https://mirukutee.github.io/affiliate-site/" />
+  <title>タイトル｜サイト名</title>
+  <meta name="description" content="ページの要約（120字前後）をここに。検索結果で魅力的に見せる。">
+
+  <!-- ====== OGP / Twitter ====== -->
+  <meta property="og:title" content="株・FX・仮想通貨の比較と基礎知識｜初心者向け資産運用まとめポータル" />
+  <meta property="og:description" content="初心者〜中級者向けに証券・FX・仮想通貨などの情報をわかりやすく解説！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mirukutee.github.io/affiliate-site/" />
+  <meta property="og:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.png" />
+  <meta property="og:site_name" content="株・FX・仮想通貨の比較と基礎知識｜初心者向け資産運用まとめポータル" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="株・FX・仮想通貨の比較と基礎知識｜初心者向け資産運用まとめポータル" />
+  <meta name="twitter:description" content="初心者〜中級者向けに証券・FX・仮想通貨などの情報をわかりやすく解説！" />
+  <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.png" />
+
+  <!-- AMP 版があるなら -->
+  <link rel="amphtml" href="AMP.html" />
+
+  <!-- ====== CSS（読み込み順に意味あり：ベース → コンポーネント） ====== -->
+  <!-- 重要CSSは通常link。必要に応じてpreload+media切替も検討 -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="table.css" />
+
+  <!-- アイコン等（遅延OKならdeferも可だがlinkはそのまま） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ====== 構造化データ（BreadcrumbList の例） ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/affiliate-site/index.html"},
+      {"@type":"ListItem","position":2,"name":"ここにページの名前","item":"https://mirukutee.github.io/affiliate-site/kabukaisetu.html"},
+      {"@type":"ListItem","position":3,"name":"タイトルと同じ","item":"https://mirukutee.github.io/affiliate-site/this-page.html"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ====== スキップリンク（キーボード操作に優しい） ====== -->
+  <a class="visually-hidden-focusable" href="#main">本文へスキップ</a>
+
+  <!-- ====== ヘッダー（外部読込） ====== -->
+  <div id="header" role="banner"></div>
+
+  <!-- ====== レイアウトコンテナ ====== -->
+  <div class="container">
+    <!-- ====== サイドバー：HTMLをフェッチして挿入 ====== -->
+    <aside id="sidebar" class="sidebar" aria-label="サイドバー"></aside>
+
+    <!-- ====== メイン ====== -->
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title">
+      <!-- ====== パンくず ====== -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="kabukaisetu.html">ここにページの名前</a></li>
+          <li class="breadcrumb-item active" aria-current="page">タイトルと同じ</li>
+        </ol>
+      </nav>
+
+      <!-- ====== H1（ページ固有の主題） ====== -->
+      <h1 class="title" id="page-title">見出しのタイトル</h1>
+
+      <!-- ====== Hero / 導入（画像はCLS防止のためwidth/height属性を必ずセット） ====== -->
+      <section class="anime-item" aria-labelledby="intro-title">
+        <img src="Xcard/top-hero.jpg" alt="公式のイメージ"　width="1200" height="600" loading="lazy" fetchpriority="low">
+        <h2 class="anime-title" id="intro-title">この段落の見出し</h2>
+        <p>ここに導入文。誰に何がわかる記事なのかを明確に。</p>
+      </section>
+
+      <!-- ====== 結論（先出しで満足度UP） ====== -->
+      <section class="anime-item" aria-labelledby="conclusion-title">
+        <h2 class="anime-title" id="conclusion-title">この段落の見出し</h2>
+        <p>最初に結論/要点。要点→根拠→手順の順で展開。</p>
+      </section>
+
+      <!-- ====== 理由＋証拠 ====== -->
+      <section class="anime-item" aria-labelledby="reason-title">
+        <h2 class="anime-title" id="reason-title">この段落の見出し</h2>
+        <ul>
+          <li><strong>理由A：</strong>短く。</li>
+          <li><strong>証拠A：</strong>一次情報/公式ページ/数値（出典明記）。</li>
+        </ul>
+      </section>
+
+      <!-- ====== 手段（やり方） ====== -->
+      <section class="anime-item" aria-labelledby="method-title">
+        <h2 class="anime-title" id="method-title">この段落の見出し</h2>
+        <ol class="order-list">
+          <li>手順1</li>
+          <li>手順2</li>
+          <li>手順3</li>
+        </ol>
+      </section>
+
+      <!-- ====== 行動喚起（CTA手前の説得要素も可） ====== -->
+      <section class="anime-item" aria-labelledby="action-title">
+        <h2 class="anime-title" id="action-title">この段落の見出し</h2>
+        <p>ユーザーに取ってほしい具体的アクションを明示。</p>
+      </section>
+
+      <!-- ====== 参考/比較テーブル：大きい表は .large-table-scroll で横スクロール ====== -->
+      <section class="anime-item" aria-labelledby="table-title">
+        <h3 class="anime-title" id="table-title">主要サービスの米国株・ETFの取扱手数料</h3>
+        <div class="large-table-scroll">
+          <table class="table-responsive" aria-describedby="table-title">
+            <caption>仮の基本情報（必要なら注釈をここに）</caption>
+            <thead>
+              <tr>
+                <th scope="col">項目</th>
+                <th scope="col">ブルーモ</th>
+                <th scope="col">ロボアド</th>
+                <th scope="col">ネット証券</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">残高手数料</th>
+                <td>年率0.55%</td>
+                <td>年率1.1%</td>
+                <td>なし</td>
+              </tr>
+              <tr>
+                <th scope="row">取引手数料</th>
+                <td>なし</td>
+                <td>なし</td>
+                <td>0.5%~0.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">為替手数料</th>
+                <td>0.25%</td>
+                <td>なし</td>
+                <td>0.2~0.3%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====== 横並びの補足カード（小要素を整理） ====== -->
+      <div class="field" aria-label="補足情報">
+        <div class="field-card">
+          <h4 class="anime-title">補足A</h4>
+          <p>補足本文。</p>
+        </div>
+        <div class="field-card">
+          <h4 class="anime-title">補足B</h4>
+          <p>補足本文。</p>
+        </div>
+      </div>
+
+
+
+      
+  <!-- ====== 一覧カード（外部JSで差し込み） ====== -->
+  <!-- 証券 -->
+<div id="securities-list"></div>
+<script src="cards-syouken.js"></script>
+
+  <!-- FX -->
+<div id="fx-list"></div>
+<script src="cards-FX.js"></script>
+
+
+      <!-- ====== FAQ（details/summary + .faq-list/.faq-item） ====== -->
+      <section class="anime-item" aria-labelledby="faq-title">
+        <h2 class="anime-title" id="faq-title">よくある質問</h2>
+        <ul class="faq-list">
+          <li class="faq-item">
+            <summary><span>相談は本当に無料ですか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+            <div class="faq-answer">はい、何度でも無料でご相談いただけます。</div>
+          </li>
+          <li class="faq-item">
+            <summary><span>どのような相談ができますか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+            <div class="faq-answer">保険の見直し、家計の見直し、資産運用、住宅ローン、相続など、幅広く対応しています。</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ====== リスク注意書き（法令/審査向け） ====== -->
+      <section class="anime-item" aria-labelledby="caution-title">
+        <h3 class="anime-title" id="caution-title">ご利用にあたっての注意事項</h3>
+        <p>
+          本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。FX（外国為替証拠金取引）は、元本保証のないリスクの高い金融商品です。相場変動等により損失が生じる場合があり、預け入れた証拠金を上回る損失が発生する可能性もあります。<br>
+          取引を開始する際は、契約締結前交付書面や商品説明書を十分にご確認の上、ご自身の判断と責任においてお取引ください。
+        </p>
+      </section>
+
+      <!-- ====== CTA（画像バナー／タップ領域確保済） ====== -->
+      <p class="cta-button font_red_r">▼こちらから公式サイトへ▼</p>
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204" class="cta-button-hikaku" aria-label="ブルーモ証券 公式へ">
+        <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=BLMO1&isq=204&psq=0" alt="ブルーモ証券 公式バナー" width="600" height="315" loading="lazy">
+      </a>
+
+      <!-- ====== ページ上部へ（スマホ固定ボタンCSSあり） ====== -->
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ"><i class="fa-solid fa-arrow-up"></i></a>
+    </main>
+  </div>
+
+  <!-- ====== フッター（外部読込） ====== -->
+  <div id="footer" role="contentinfo"></div>
+
+  <!-- ====== 共通JS（ヘッダー/フッター挿入など） ====== -->
+  <script src="include.js" defer></script>
+
+  <!-- ====== サイドバー埋め込み → 読み込み後の制御JS ====== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("sidebar.html")
+        .then(r => r.text())
+        .then(html => { document.getElementById("sidebar").innerHTML = html; })
+        .catch(()=>{ /* 失敗時は静かに無視 or ログ */ });
+    });
+  </script>
+  <script src="sidebar.js" defer></script>
+
+  <!-- ====== ページ固有の軽量JS（Back-to-Topの出し入れ等） ====== -->
+  <script>
+    document.addEventListener("scroll", () => {
+      const btn = document.querySelector(".back-to-top");
+      if (!btn) return;
+      const show = window.scrollY > 400;
+      btn.classList.toggle("is-visible", show);
+    });
+  </script>
+</body>
+</html>

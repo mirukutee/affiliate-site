@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
           const content = this.nextElementSibling;
 
-          // スクロールして中央に表示
-          button.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
+          // スクロールして上部に表示
+        button.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+        });
 
           // 他を閉じる
           document.querySelectorAll(".dropdown-content.open").forEach(c => {

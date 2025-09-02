@@ -16,11 +16,6 @@
 
         const willOpen = !content.classList.contains("open");
 
-        // 1つだけ開く挙動にしたい場合は下2行のコメントアウトを外す
-        // document.querySelectorAll(".dropdown-content.open").forEach((el) => {
-        //   if (el !== content) el.classList.remove("open");
-        // });
-
         content.classList.toggle("open", willOpen);
         btn.setAttribute("aria-expanded", String(willOpen));
         content.setAttribute("aria-hidden", String(!willOpen));

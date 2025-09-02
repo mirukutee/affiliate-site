@@ -1,27 +1,58 @@
-// クリック処理（抜粋：スクロール行為は一切しない）
-root.addEventListener('click', (e) => {
-  const btn = e.target.closest('.dropdown-button');
-  if (!btn || !root.contains(btn)) return;
+// シンプル開閉（スクロールしない）版
+(() => {
+  // サイドバー内の .dropdown-button に開閉イベントを付与
+  const initSidebar = (root) => {
+    const container = root || document;
+    const buttons = container.querySelectorAll(".dropdown-button");
+    if (!buttons.length) return;
 
-  const panel = btn.nextElementSibling;
-  if (!panel || !panel.classList.contains('dropdown-content')) return;
+    buttons.forEach((btn) => {
+      // 既存のスクロール系リスナーがあっても、我々は開閉のみを行う
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
 
-  // 他パネルを閉じる
-  root.querySelectorAll('.dropdown-content.open').forEach((el) => {
-    if (el !== panel) {
-      el.classList.remove('open');
-      el.previousElementSibling?.setAttribute('aria-expanded', 'false');
-      el.setAttribute('aria-hidden', 'true');
-    }
+        const content = btn.nextElementSibling;
+        if (!content || !content.classList) return;
+
+        const willOpen = !content.classList.contains("open");
+
+        // 「一度に複数開いてOK」→このままでOK
+        // 「常にひとつだけ開く」にしたいなら以下2行のコメントアウトを外す
+        // document.querySelectorAll(".dropdown-content.open").forEach((el) => {
+        //   if (el !== content) el.classList.remove("open");
+        // });
+
+        content.classList.toggle("open", willOpen);
+
+        // アクセシビリティ属性を同期
+        btn.setAttribute("aria-expanded", String(willOpen));
+        content.setAttribute("aria-hidden", String(!willOpen));
+      }, { passive: false });
+    });
+  };
+
+  // ① すでにサイドバーDOMがある場合（index直表示 or sidebar単体）
+  document.addEventListener("DOMContentLoaded", () => {
+    // index.html では #sidebar の中身が後から差し込まれるので、まずは現状に対して実行
+    initSidebar(document);
+
+    // ② 後から #sidebar に読み込まれる場合（fetchでの差し込みにも対応）
+    const mount = document.querySelector("#sidebar");
+    if (!mount) return;
+
+    const mo = new MutationObserver((muts) => {
+      for (const m of muts) {
+        m.addedNodes.forEach((node) => {
+          if (node.nodeType === 1) {
+            // 追加された要素配下に .dropdown-button があれば初期化
+            if (node.querySelector && node.querySelector(".dropdown-button")) {
+              initSidebar(node);
+            }
+          }
+        });
+      }
+    });
+    mo.observe(mount, { childList: true, subtree: true });
   });
-
-  const wasOpen = panel.classList.contains('open');
-  panel.classList.toggle('open', !wasOpen);
-  btn.setAttribute('aria-expanded', String(!wasOpen));
-  panel.setAttribute('aria-hidden', String(wasOpen));
-
-  // フォーカスによる自動スクロールも抑止
-  if (typeof btn.focus === 'function') {
-    try { btn.focus({ preventScroll: true }); } catch {}
-  }
-});
+})();

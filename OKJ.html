@@ -74,7 +74,7 @@
 
   <!-- ====== レイアウト ====== -->
   <div class="container">
-    <aside id="sidebar" class="sidebar" aria-label="サイドバー"></aside>
+   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
     <!-- ====== メイン ====== -->
     <main id="main" role="main" tabindex="-1" aria-labelledby="page-title">
@@ -205,23 +205,6 @@
   <script src="include.js" defer></script>
 
   <!-- サイドバー埋め込み -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("sidebar.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("sidebar").innerHTML = html; })
-        .catch(()=>{ /* 失敗時は静かに無視 */ });
-    });
-  </script>
-
-  <!-- Back-to-Topの出し入れなど、軽量JS（必要なら） -->
-  <script>
-    document.addEventListener("scroll", () => {
-      const btn = document.querySelector(".back-to-top");
-      if (!btn) return;
-      const show = window.scrollY > 400;
-      btn.classList.toggle("is-visible", show);
-    });
-  </script>
+<script src="/affiliate-site/sidebar.js" defer></script>
 </body>
 </html>

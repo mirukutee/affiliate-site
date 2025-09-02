@@ -71,7 +71,7 @@
 
   <!-- サイドバー呼び出し -->
    <div class="container">
-    <aside id="sidebar"></aside>
+<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
 
    <!-- メインの内容 -->
@@ -213,18 +213,7 @@ FX口座の開設はオンラインで完結可能。スマホアプリでのデ
 
   <!-- ✅ 共通読み込み用JS -->
   <script src="include.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-  });
-</script>
-
-<script src="sidebar.js"></script>
+<script src="/affiliate-site/sidebar.js" defer></script>
 
 </body>
 </html>

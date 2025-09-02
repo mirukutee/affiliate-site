@@ -76,7 +76,7 @@
   <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar"></aside>
+   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
     <main>
       <!-- パンくず -->
@@ -226,18 +226,7 @@
 
   <!-- 共通読み込み用JS（defer & フォールバック） -->
   <script src="include.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", async () => {
-      try {
-        const res = await fetch('sidebar.html', { cache: 'no-store' });
-        if (!res.ok) throw new Error(res.status);
-        document.getElementById('sidebar').innerHTML = await res.text();
-      } catch (e) {
-        document.getElementById('sidebar').innerHTML = '<!-- sidebar load failed -->';
-      }
-    });
-  </script>
-  <script src="sidebar.js" defer></script>
+<script src="/affiliate-site/sidebar.js" defer></script>
 
 </body>
 </html>

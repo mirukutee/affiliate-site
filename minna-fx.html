@@ -66,7 +66,7 @@
   <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar"></aside>
+<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
     <main>
 
@@ -253,18 +253,6 @@
 
   <!-- 共通読み込みJS -->
   <script src="include.js" defer></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('sidebar.html')
-        .then(response => response.text())
-        .then(data => {
-          const el = document.getElementById('sidebar');
-          if (el) el.innerHTML = data;
-        });
-    });
-  </script>
-  <script src="sidebar.js" defer></script>
-
+<script src="/affiliate-site/sidebar.js" defer></script>
 </body>
 </html>

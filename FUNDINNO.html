@@ -30,7 +30,7 @@
   <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar"></aside>
+   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
 
    <!-- メインの内容 -->
@@ -173,18 +173,8 @@
   <script src="include.js"></script>
 
 <!-- サイドバーのスクリプト -->
-  <script>
-        document.addEventListener("DOMContentLoaded", function() {
-         fetch('sidebar.html')
-         .then(response => response.text())
-          .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-            });
-          });
-         </script>
-
-          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
-        <script src="sidebar.js"></script>
+<!-- ✅ サイドバーを読み込んで初期化 -->
+<script src="/affiliate-site/sidebar.js" defer></script>
 
 </body>
 </html>

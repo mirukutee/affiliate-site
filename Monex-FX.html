@@ -66,7 +66,7 @@
 <body>
 <div id="header"></div>
 <div class="container">
-<aside id="sidebar"></aside>
+<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
 <main>
 <nav aria-label="breadcrumb">
@@ -86,7 +86,7 @@
    target="_blank"
    rel="nofollow sponsored noopener">
   <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC6&isq=208&psq=0"
-       border="0" alt="FXPLUS" loading="lazy">
+      alt="FXPLUS" loading="lazy">
 </a>
 
   <p>マネックス証券が提供する「FX PLUS」は、1000通貨からのミニ取引に対応した店頭FXサービスです。取引手数料は0円、米ドル/円スプレッドは0.2〜0.9銭（※最新情報は
@@ -150,7 +150,7 @@
    class="cta-button font_red_r"
    rel="nofollow sponsored noopener">
   <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC6&isq=207&psq=0"
-       alt="マネックス証券 FX PLUS公式ページ" border="0" loading="lazy" />
+       alt="マネックス証券 FX PLUS公式ページ"　loading="lazy" />
 </a>
 
 </section>
@@ -185,15 +185,6 @@
 
 <div id="footer"></div>
 <script src="include.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
-    });
-});
-</script>
-<script src="sidebar.js"></script>
+<script src="/affiliate-site/sidebar.js" defer></script>
 </body>
 </html>

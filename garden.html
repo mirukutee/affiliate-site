@@ -46,8 +46,7 @@
    <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar"></aside>
-
+   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 <main>
 
        <!-- パンくず -->
@@ -202,16 +201,7 @@ A. 公式ページから時間を指定し予約ができます。（平日・�
   <script src="include.js"></script>
 
         
-          <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              fetch('sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                  document.getElementById('sidebar').innerHTML = data;
-                });
-            });
-          </script>
-          <script src="sidebar.js"></script>
+   <script src="/affiliate-site/sidebar.js" defer></script>
           
         </body>
         </html>

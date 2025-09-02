@@ -68,7 +68,7 @@
 
   <div class="container">
     <!-- サイドバー（外部読込） -->
-    <aside id="sidebar" class="sidebar" aria-label="サイドバー"></aside>
+   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
     <main id="main" aria-labelledby="page-title">
       <!-- パンくず -->
@@ -264,25 +264,7 @@
   <!-- 共通JS（ヘッダー/フッター挿入など） -->
   <script src="include.js" defer></script>
 
-  <!-- サイドバー埋め込み → 読み込み後の制御JS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("sidebar.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("sidebar").innerHTML = html; })
-        .catch(()=>{ /* 読み込み失敗時は無視 */ });
-    });
-  </script>
-  <script src="sidebar.js" defer></script>
-
-  <!-- Back-to-Top の出し入れ -->
-  <script>
-    document.addEventListener("scroll", () => {
-      const btn = document.querySelector(".back-to-top");
-      if (!btn) return;
-      const show = window.scrollY > 400;
-      btn.classList.toggle("is-visible", show);
-    });
-  </script>
+ <!-- ✅ サイドバーを読み込んで初期化 -->
+<script src="/affiliate-site/sidebar.js" defer></script>
 </body>
 </html>

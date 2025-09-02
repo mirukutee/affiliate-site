@@ -60,12 +60,29 @@
     ]
   }
   </script>
+
+   <!-- FAQ 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"初心者でも使いやすいですか？",
+       "acceptedAnswer":{"@type":"Answer","text":"直感的なUIと通知・学習コンテンツで扱いやすい設計です。まずは少額から慣れるのがおすすめです。"}},
+      {"@type":"Question","name":"米国株と日本株はどちらも取引できますか？",
+       "acceptedAnswer":{"@type":"Answer","text":"はい、対応しています。手数料や為替関連の細目は最新の公式情報をご確認ください。"}},
+      {"@type":"Question","name":"口座開設はスマホで完結しますか？",
+       "acceptedAnswer":{"@type":"Answer","text":"本人確認まで基本的にスマホで完了します（必要書類や審査時間は状況により変わります）。"}}
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <div id="header"></div>
 
   <div class="container">
-    <aside id="sidebar"></aside>
+<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
 
     <main>
       <nav aria-label="breadcrumb">
@@ -180,34 +197,9 @@
 
   <!-- 共通読み込み用JS（defer & フォールバック） -->
   <script src="include.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", async () => {
-      try {
-        const res = await fetch('sidebar.html', { cache: 'no-store' });
-        if (!res.ok) throw new Error(res.status);
-        document.getElementById('sidebar').innerHTML = await res.text();
-      } catch (e) {
-        document.getElementById('sidebar').innerHTML = '<!-- sidebar load failed -->';
-      }
-    });
-  </script>
-  <script src="sidebar.js" defer></script>
 
-  <!-- FAQ 構造化データ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"初心者でも使いやすいですか？",
-       "acceptedAnswer":{"@type":"Answer","text":"直感的なUIと通知・学習コンテンツで扱いやすい設計です。まずは少額から慣れるのがおすすめです。"}},
-      {"@type":"Question","name":"米国株と日本株はどちらも取引できますか？",
-       "acceptedAnswer":{"@type":"Answer","text":"はい、対応しています。手数料や為替関連の細目は最新の公式情報をご確認ください。"}},
-      {"@type":"Question","name":"口座開設はスマホで完結しますか？",
-       "acceptedAnswer":{"@type":"Answer","text":"本人確認まで基本的にスマホで完了します（必要書類や審査時間は状況により変わります）。"}}
-    ]
-  }
-  </script>
+<script src="/affiliate-site/sidebar.js" defer></script>
 
+ 
 </body>
 </html>

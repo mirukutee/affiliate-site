@@ -1,70 +1,83 @@
-// /affiliate-site/sidebar.js
+// /affiliate-site/sidebar.js でも相対でもOK。indexと同じ階層なら相対参照でOK。
 (() => {
-  // ドロップダウン開閉の初期化
-  const initSidebar = (root) => {
-    const container = root || document;
-    const buttons = container.querySelectorAll(".dropdown-button");
-    if (!buttons.length) return;
+  // ▼ 汎用：開閉処理（アニメ安定化：max-height を実高さで制御）
+  const toggleDropdown = (btn) => {
+    const content = btn && btn.nextElementSibling;
+    if (!content || !content.classList) return;
 
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", (ev) => {
-        ev.preventDefault();
-        ev.stopPropagation();
+    const willOpen = !content.classList.contains("open");
 
-        const content = btn.nextElementSibling;
-        if (!content || !content.classList) return;
+    // アニメ用に都度scrollHeightを参照してmax-heightを調整
+    if (willOpen) {
+      content.classList.add("open");
+      content.setAttribute("aria-hidden", "false");
+      btn.setAttribute("aria-expanded", "true");
 
-        const willOpen = !content.classList.contains("open");
-
-        content.classList.toggle("open", willOpen);
-        btn.setAttribute("aria-expanded", String(willOpen));
-        content.setAttribute("aria-hidden", String(!willOpen));
-      }, { passive: false });
-    });
+      // 直後に実高さを入れる（transitionさせる）
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      // 閉じる時は現在値→0へ
+      content.style.maxHeight = content.scrollHeight + "px";
+      // 次フレームで0へ（スムーズに閉じる）
+      requestAnimationFrame(() => {
+        content.style.maxHeight = "0px";
+        content.classList.remove("open");
+        content.setAttribute("aria-hidden", "true");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    }
   };
 
-  // #sidebar に sidebar.html を読み込んでマウント
-  const mountAndLoad = async () => {
+  // ▼ イベント委任（後から差し込まれた要素にも効く）
+  const setupDelegation = (root) => {
+    const mount = root || document;
+    mount.addEventListener("click", (ev) => {
+      const target = ev.target.closest(".dropdown-button");
+      if (!target) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      toggleDropdown(target);
+    }, { passive: false });
+  };
+
+  // ▼ sidebar.html を #sidebar に流し込み
+  const loadSidebar = async () => {
     const mount = document.querySelector("#sidebar");
     if (!mount) return;
 
-    // 直貼り対応（既に子要素があればそのまま初期化）
-    if (mount.children.length > 0) {
-      initSidebar(mount);
-      return;
-    }
+    // 直貼り/既に中身がある場合はそのまま委任のみ
+    if (mount.children.length > 0) return;
 
     try {
+      // index.html と同階層にsidebar.htmlがある前提
       const res = await fetch("sidebar.html", { credentials: "same-origin" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      mount.innerHTML = await res.text();
+      const html = await res.text();
+      mount.innerHTML = html;
 
-      // 読み込み後に初期化
-      initSidebar(mount);
+      // アクセシビリティ初期値
+      mount.querySelectorAll(".dropdown-button").forEach((btn) => {
+        btn.setAttribute("aria-expanded", "false");
+        const content = btn.nextElementSibling;
+        if (content) content.setAttribute("aria-hidden", "true");
+      });
 
-      // ※ sidebar.html 内 <script> を動かしたいならここで再挿入処理を書く
-      // 今回は不要（スクロールしない方針）
     } catch (e) {
-      console.error("Sidebar load error:", e);
+      console.error("[Sidebar] load error:", e);
+      // デバッグヒント（画面にも表示）
+      const pre = document.createElement("pre");
+      pre.textContent = "Sidebar load error: " + e.message + "\n" +
+        "→ fetchパスを確認してください（例: 'sidebar.html' or '/affiliate-site/sidebar.html'）。";
+      pre.style.color = "crimson";
+      pre.style.padding = "8px";
+      pre.style.background = "#fff3f3";
+      pre.style.border = "1px solid #f5c2c2";
+      document.body.prepend(pre);
     }
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    initSidebar(document); // 直貼り対応
-    mountAndLoad();        // 外部HTMLの読み込み
-
-    // 将来の差し込みにも対応
-    const mount = document.querySelector("#sidebar");
-    if (!mount) return;
-    const mo = new MutationObserver((muts) => {
-      for (const m of muts) {
-        m.addedNodes.forEach((node) => {
-          if (node.nodeType === 1 && node.querySelector && node.querySelector(".dropdown-button")) {
-            initSidebar(node);
-          }
-        });
-      }
-    });
-    mo.observe(mount, { childList: true, subtree: true });
+    setupDelegation(document); // まず委任
+    loadSidebar();             // 次に読み込み
   });
 })();

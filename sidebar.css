@@ -152,3 +152,21 @@
 .dropdown-content a:hover {
   background: #1abc9c;
 }
+
+/* ▼ 安定化用の初期値（JSが上書きするので !important は不要） */
+.dropdown-content {
+  max-height: 0;              /* 初期は閉じる */
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* .open は見た目の状態フラグ（max-height はJSで実サイズを入れる） */
+.dropdown-content.open {
+  /* ここでは max-height 指定しない（JSが scrollHeight を入れる） */
+  overflow-y: auto;
+}
+
+/* 念のための可視化補強（別のスタイルに負けないように） */
+.dropdown-content[aria-hidden="true"] { pointer-events: none; }
+.dropdown-content[aria-hidden="false"] { pointer-events: auto; }
+

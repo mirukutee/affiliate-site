@@ -729,3 +729,23 @@ font-size: 11.5px;
 
 
 
+/* --- サイドバー上のオーバーレイ無効化・前面化（強制） --- */
+#sidebar, #sidebar .sidebar {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+#sidebar * {
+  pointer-events: auto !important;
+}
+
+/* サイドバーのドロップダウンが開く時のアニメを邪魔しないよう最小限 */
+#sidebar .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+#sidebar .dropdown-content.open {
+  /* 高さはJSで入れる。ここでは指定しない */
+  overflow-y: auto;
+}

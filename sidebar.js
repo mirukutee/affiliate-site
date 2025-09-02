@@ -1,129 +1,86 @@
-// ===== sidebar.js（最終版） =====
+// /affiliate-site/sidebar.js
+(() => {
+  // ドロップダウン開閉の初期化
+  const initSidebar = (root) => {
+    const container = root || document;
+    const buttons = container.querySelectorAll(".dropdown-button");
+    if (!buttons.length) return;
 
-// 読み込み先（ルート相対で固定）
-const SIDEBAR_URL = '/affiliate-site/sidebar.html';
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
 
-// 調整パラメータ
-const SCROLL_TOP_INSET_PC = 72;   // 固定ヘッダー/上部余白ぶん
-const SCROLL_TOP_INSET_SP = 84;   // モバイルは少し多め
-const SCROLL_BOTTOM_INSET = 24;
-const HYSTERESIS = 12;            // 行き過ぎ防止のゆとり
-const TRANSITION_TIMEOUT = 450;   // CSSの .35s より少し長めの保険
+        const content = btn.nextElementSibling;
+        if (!content || !content.classList) return;
 
-// ユーザーの設定に応じてアニメ抑制
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const scrollBehavior = prefersReduced ? 'auto' : 'smooth';
+        const willOpen = !content.classList.contains("open");
 
-// 起動（初回＆bfcache復帰の両方に対応）
-document.addEventListener('DOMContentLoaded', hydrate);
-window.addEventListener('pageshow', hydrate);
+        // ※同時に1つだけ開きたい場合は以下の2行のコメントアウトを外す
+        // document.querySelectorAll(".dropdown-content.open").forEach((el) => {
+        //   if (el !== content) el.classList.remove("open");
+        // });
 
-async function hydrate() {
-  const mount = document.getElementById('sidebar');
-  if (!mount || mount.dataset.hydrated) return;
+        content.classList.toggle("open", willOpen);
+        btn.setAttribute("aria-expanded", String(willOpen));
+        content.setAttribute("aria-hidden", String(!willOpen));
+      }, { passive: false });
+    });
+  };
 
-  // sidebar.html を読み込んで挿入
-  const html = await fetch(SIDEBAR_URL).then(r => r.text());
-  mount.innerHTML = html;
+  // #sidebar に sidebar.html を読み込んでマウント
+  const mountAndLoad = async () => {
+    const mount = document.querySelector("#sidebar");
+    if (!mount) return;
 
-  // 初期化（A11y付与・イベント配線）
-  initSidebar(mount);
+    // 直貼り（すでに子要素あり）の場合はそのまま初期化
+    if (mount.children.length > 0) {
+      initSidebar(mount);
+      return;
+    }
 
-  // 表示切替（FOUC対策用クラスを外す）
-  mount.dataset.hydrated = '1';
-  mount.classList?.remove('is-hydrating');
-  mount.removeAttribute?.('aria-busy');
-}
+    try {
+      // index.html と同階層に sidebar.html がある前提
+      const res = await fetch("sidebar.html", { credentials: "same-origin" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      mount.innerHTML = html;
 
-function initSidebar(root) {
-  // A11y初期属性
-  root.querySelectorAll('.dropdown-button').forEach((btn) => {
-    const panel = btn?.nextElementSibling;
-    if (!panel || !panel.classList.contains('dropdown-content')) return;
-    const id = panel.id || `sidebar-panel-${Math.random().toString(36).slice(2, 8)}`;
-    panel.id = id;
-    btn.setAttribute('aria-controls', id);
-    btn.setAttribute('aria-expanded', 'false');
-    panel.setAttribute('role', 'region');
-    panel.setAttribute('aria-hidden', 'true');
-  });
+      // 取り込んだ要素に対して初期化
+      initSidebar(mount);
 
-  // クリックはルート委譲（差し替えや遅延にも強い）
-  root.addEventListener('click', (e) => {
-    const btn = e.target.closest('.dropdown-button');
-    if (!btn || !root.contains(btn)) return;
+      // （任意）sidebar.html 内の <script> を実行したい場合だけ実装
+      // 今回は「スクロールしない方針」なので実行しないままでOK
+      // mount.querySelectorAll("script").forEach((old) => {
+      //   const s = document.createElement("script");
+      //   if (old.src) s.src = old.src; else s.textContent = old.textContent;
+      //   document.head.appendChild(s);
+      //   old.remove();
+      // });
+    } catch (e) {
+      console.error("Sidebar load error:", e);
+    }
+  };
 
-    const panel = btn.nextElementSibling;
-    if (!panel || !panel.classList.contains('dropdown-content')) return;
+  document.addEventListener("DOMContentLoaded", () => {
+    // 既存DOMに対して一度初期化（直貼り対応）
+    initSidebar(document);
 
-    // 他パネルを閉じる
-    root.querySelectorAll('.dropdown-content.open').forEach((el) => {
-      if (el !== panel) {
-        el.classList.remove('open');
-        el.previousElementSibling?.setAttribute('aria-expanded', 'false');
-        el.setAttribute('aria-hidden', 'true');
+    // その後、外部HTMLを読み込み
+    mountAndLoad();
+
+    // 将来 #sidebar にノードが追加されても自動初期化
+    const mount = document.querySelector("#sidebar");
+    if (!mount) return;
+    const mo = new MutationObserver((muts) => {
+      for (const m of muts) {
+        m.addedNodes.forEach((node) => {
+          if (node.nodeType === 1 && node.querySelector && node.querySelector(".dropdown-button")) {
+            initSidebar(node);
+          }
+        });
       }
     });
-
-    const wasOpen = panel.classList.contains('open');
-
-    if (wasOpen) {
-      // 閉じる
-      panel.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      panel.setAttribute('aria-hidden', 'true');
-      smartAdjustScroll(btn); // 省略可
-      return;
-    }
-
-    // 開く（高さが確定してから位置調整）
-    panel.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-    panel.setAttribute('aria-hidden', 'false');
-
-    if (prefersReduced) {
-      smartAdjustScroll(btn);
-      return;
-    }
-
-    const onEnd = (ev) => {
-      if (ev.target !== panel) return;
-      panel.removeEventListener('transitionend', onEnd);
-      smartAdjustScroll(btn);
-    };
-    panel.addEventListener('transitionend', onEnd);
-    // 取りこぼし保険
-    setTimeout(() => {
-      panel.removeEventListener('transitionend', onEnd);
-      smartAdjustScroll(btn);
-    }, TRANSITION_TIMEOUT);
+    mo.observe(mount, { childList: true, subtree: true });
   });
-
-  // キーボード操作（Enter/Spaceで開閉）
-  root.addEventListener('keydown', (e) => {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.dropdown-button')) {
-      e.preventDefault();
-      e.target.click();
-    }
-  });
-}
-
-// 必要なときだけ最小限スクロール（“上に行き過ぎ”防止）
-function smartAdjustScroll(el, extraTop = 0) {
-  const isMobile = window.innerWidth <= 768;
-  const topInset = (isMobile ? SCROLL_TOP_INSET_SP : SCROLL_TOP_INSET_PC) + extraTop + HYSTERESIS;
-  const bottomInset = SCROLL_BOTTOM_INSET + HYSTERESIS;
-
-  const rect = el.getBoundingClientRect();
-  const vTop = topInset;
-  const vBottom = window.innerHeight - bottomInset;
-
-  // 既に十分見えているなら動かない
-  if (rect.top >= vTop && rect.bottom <= vBottom) return;
-
-  const top = (rect.top < vTop)
-    ? window.scrollY + rect.top - vTop
-    : window.scrollY + (rect.bottom - vBottom);
-
-  window.scrollTo({ top, behavior: scrollBehavior });
-}
+})();

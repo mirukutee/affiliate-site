@@ -84,3 +84,38 @@
     mo.observe(mount, { childList: true, subtree: true });
   });
 })();
+
+// ▼ これを sidebar.js の IIFE 内に追加
+const mountAndLoad = async () => {
+  const mount = document.querySelector("#sidebar");
+  if (!mount) return;
+
+  // 直貼りで中身が既にある場合
+  if (mount.children.length > 0) return;
+
+  try {
+    // index.html と同じ階層に sidebar.html がある前提
+    const res = await fetch("sidebar.html", { credentials: "same-origin" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const html = await res.text();
+    mount.innerHTML = html;
+
+    // 取り込んだ要素に対して初期化（既存の initSidebar を再利用）
+    const container = mount;
+    const buttons = container.querySelectorAll(".dropdown-button");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        const content = btn.nextElementSibling;
+        if (!content || !content.classList) return;
+        const willOpen = !content.classList.contains("open");
+        content.classList.toggle("open", willOpen);
+        btn.setAttribute("aria-expanded", String(willOpen));
+        content.setAttribute("aria-hidden", String(!willOpen));
+      }, { passive: false });
+    });
+  } catch (e) {
+    console.error("Sidebar load error:", e);
+  }
+};

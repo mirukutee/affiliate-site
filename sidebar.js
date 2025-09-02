@@ -2,31 +2,30 @@
 (() => {
   // ▼ 汎用：開閉処理（アニメ安定化：max-height を実高さで制御）
   const toggleDropdown = (btn) => {
-    const content = btn && btn.nextElementSibling;
-    if (!content || !content.classList) return;
+  const content = btn && btn.nextElementSibling;
+  if (!content || !content.classList) return;
 
-    const willOpen = !content.classList.contains("open");
+  const willOpen = !content.classList.contains("open");
 
-    // アニメ用に都度scrollHeightを参照してmax-heightを調整
-    if (willOpen) {
-      content.classList.add("open");
-      content.setAttribute("aria-hidden", "false");
-      btn.setAttribute("aria-expanded", "true");
+  if (willOpen) {
+    // ▼ 開く処理
+    content.classList.add("open");
+    content.setAttribute("aria-hidden", "false");
+    btn.setAttribute("aria-expanded", "true");
 
-      // 直後に実高さを入れる（transitionさせる）
-      content.style.maxHeight = content.scrollHeight + "px";
-    } else {
-      // 閉じる時は現在値→0へ
-      content.style.maxHeight = content.scrollHeight + "px";
-      // 次フレームで0へ（スムーズに閉じる）
-      requestAnimationFrame(() => {
-        content.style.maxHeight = "0px";
-        content.classList.remove("open");
-        content.setAttribute("aria-hidden", "true");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    }
-  };
+    content.style.setProperty("max-height", content.scrollHeight + "px", "important");
+  } else {
+    // ▼ 閉じる処理
+    content.style.setProperty("max-height", content.scrollHeight + "px", "important");
+    requestAnimationFrame(() => {
+      content.style.setProperty("max-height", "0px", "important");
+      content.classList.remove("open");
+      content.setAttribute("aria-hidden", "true");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  }
+};
+
 
   // ▼ イベント委任（後から差し込まれた要素にも効く）
   const setupDelegation = (root) => {

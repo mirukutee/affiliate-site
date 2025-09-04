@@ -221,14 +221,18 @@ body::before {
 
 
 /* ========== ▼ フッター（統一） ========== */
-
 footer {
-  position: relative;
-  z-index: 10000;
   background: linear-gradient(to right, #eaf3fa, #d6e3ec);
-  padding: 1rem .9rem;
   border-top: 1px solid #ccdce5;
   text-align: center;
+  padding: 1rem .9rem;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+/* 共通段落 */
+.footer-row {
+  margin: .4rem 0;
 }
 
 /* ボタン横並び */
@@ -236,10 +240,10 @@ footer {
   display: flex;
   justify-content: center;
   gap: .8rem;
-  flex-wrap: wrap;  /* スマホで折り返し可能に */
+  flex-wrap: wrap; /* 狭い画面では折り返す */
 }
 
-footer .cta-button {
+.footer-btn {
   padding: .5rem 1rem;
   font-size: .9rem;
   background-color: #0077cc;
@@ -248,18 +252,42 @@ footer .cta-button {
   text-decoration: none;
   transition: background-color .2s ease;
 }
-
-footer .cta-button:hover {
+.footer-btn:hover {
   background-color: #005fa3;
 }
 
-/* スマホ用：縦積みに戻す（任意） */
+/* リンク横並び */
+.footer-links {
+  font-size: .8rem;
+  color: #555;
+}
+.footer-links a {
+  margin: 0 .4rem;
+  color: #555;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* SNSアイコン */
+.footer-sns a {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0 .5rem;
+}
+.footer-sns a:hover {
+  color: #1da1f2;
+}
+
+/* スマホ：ボタンを縦積みに */
 @media (max-width:600px) {
   .footer-buttons {
     flex-direction: column;
     align-items: center;
   }
 }
+
 
 
 

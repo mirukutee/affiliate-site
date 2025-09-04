@@ -234,7 +234,7 @@ footer {
   margin: .4rem 0;
 }
 
-/* リンク群 横並び */
+/* リンク群 */
 .footer-links {
   font-size: .85rem;
   color: #555;
@@ -258,7 +258,13 @@ footer {
   color: #1da1f2;
 }
 
-
+/* スマホ調整 */
+@media (max-width: 768px) {
+  footer {
+    font-size: .7rem;
+    padding: .6rem;
+  }
+}
 
 
 

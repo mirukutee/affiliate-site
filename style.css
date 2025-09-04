@@ -230,35 +230,13 @@ footer {
   line-height: 1.5;
 }
 
-/* 共通段落 */
 .footer-row {
   margin: .4rem 0;
 }
 
-/* ボタン横並び */
-.footer-buttons {
-  display: flex;
-  justify-content: center;
-  gap: .8rem;
-  flex-wrap: wrap; /* 狭い画面では折り返す */
-}
-
-.footer-btn {
-  padding: .5rem 1rem;
-  font-size: .9rem;
-  background-color: #0077cc;
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color .2s ease;
-}
-.footer-btn:hover {
-  background-color: #005fa3;
-}
-
-/* リンク横並び */
+/* リンク群 横並び */
 .footer-links {
-  font-size: .8rem;
+  font-size: .85rem;
   color: #555;
 }
 .footer-links a {
@@ -280,13 +258,6 @@ footer {
   color: #1da1f2;
 }
 
-/* スマホ：ボタンを縦積みに */
-@media (max-width:600px) {
-  .footer-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 
 

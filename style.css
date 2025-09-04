@@ -222,30 +222,30 @@ body::before {
 
 /* ========== ▼ フッター（統一） ========== */
 
+/* ▼ フッター共通デザイン */
 footer {
- position: relative;
+  position: relative;
   z-index: 10000;
   background: linear-gradient(to right, #eaf3fa, #d6e3ec);
   color: #2c3e50;
   text-align: center;
   border-top: 1px solid #ccdce5;
-  padding: 1.2rem .9rem;
+  padding: 1rem .9rem; /* PC用の基本余白 */
+  font-size: .9rem;
+  line-height: 1.5;
 }
-@media (max-width:600px){ footer, #footer { padding: .6rem .75rem; } }
 
-/* フッターを最前面にしてクリックを確実に通す */
-footer { position: relative; z-index: 10000; }
-
-/* フッター内の並びを整える（任意） */
 .footer-inner {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: .6rem; /* 少しタイトめに */
   align-items: center;
   justify-content: center;
 }
+
+/* ボタン調整 */
 footer .cta-button {
-  padding: .6rem 1.2rem;
+  padding: .5rem 1rem;
   font-size: .9rem;
   background-color: #0077cc;
   border-radius: 6px;
@@ -254,8 +254,10 @@ footer .cta-button {
 footer .cta-button:hover {
   background-color: #005fa3;
 }
+
+/* ナビリンク */
 .footer-links {
-  font-size: .85rem;
+  font-size: .8rem;
   color: #555;
 }
 .footer-links a {
@@ -263,7 +265,17 @@ footer .cta-button:hover {
   color: #555;
   text-decoration: none;
 }
-.footer-links a:hover { text-decoration: underline; }
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* モバイル最適化 */
+@media (max-width:600px) {
+  footer { padding: .6rem .75rem; }
+  .footer-inner { gap: .4rem; }
+  footer .cta-button { font-size: .85rem; padding: .45rem .9rem; }
+}
+
 
 
 

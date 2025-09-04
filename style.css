@@ -246,17 +246,26 @@ footer {
 
 
 /* ボタン調整 */
+.footer-buttons {
+  display: flex;       /* ボタンを横並びに */
+  gap: .8rem;          /* ボタン間の余白 */
+  justify-content: center;
+  flex-wrap: wrap;     /* スマホで折り返し可 */
+}
+
+/* ボタン調整 */
 footer .cta-button {
   padding: .5rem 1rem;
   font-size: .9rem;
   background-color: #0077cc;
   border-radius: 6px;
-  display: flex;
+  text-align: center;
 }
 
 footer .cta-button:hover {
   background-color: #005fa3;
 }
+
 
 /* ナビリンク */
 .footer-links {

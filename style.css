@@ -261,7 +261,7 @@ footer {
 /* スマホ調整 */
 @media (max-width: 768px) {
   footer {
-    font-size: .7rem;
+    font-size: .5rem;
     padding: .6rem;
   }
 }

@@ -198,6 +198,11 @@
   border: 0; /* ← style.css の table{border:2px...}対策:contentReference[oaicite:1]{index=1}*/
 }
 
+.table-responsive col.col-cat    { width: 16%; } /* カテゴリ：短文 */
+.table-responsive col.col-reco   { width: 26%; } /* おすすめ：リンク2行想定 */
+.table-responsive col.col-reason { width: 33%; } /* 理由：最も文章が長い */
+.table-responsive col.col-target { width: 25%; } /* 向いてる人：中程度 */
+
 /* セル共通 */
 .table-responsive th,
 .table-responsive td {
@@ -234,6 +239,7 @@
     /* 個別 font-size を指定しない：親の font-size に追従して視認性を維持 */
   }
   .table-responsive td br { display: inline; } /* 省スペース */
+  
 }
 
 /* ====== さらに狭い端末（任意） ====== */

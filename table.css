@@ -208,10 +208,10 @@
 .table-responsive thead th{ color:#fff; white-space:normal; }
 
 /* 列配分（合計100%） */
-.table-responsive col.col-cat    { width:16%; }
+.table-responsive col.col-cat    { width:18%; }
 .table-responsive col.col-reco   { width:29%; }
 .table-responsive col.col-reason { width:33%; }
-.table-responsive col.col-target { width:22%; }
+.table-responsive col.col-target { width:20%; }
 
 /* ===== スマホ：0.6rem 固定 ===== */
 @media (max-width:600px){

@@ -285,6 +285,10 @@ footer {
 
 
 /* メインコンテンツ */
+.title{
+  font-size: 1.4rem;
+}
+
 main {
   flex: 1;
     background-color: #ffffffcc;
@@ -667,6 +671,10 @@ li {
   .anime-item h6 {
     font-size: 1em;
   }
+  
+  .title {
+    font-size: 1.1em;
+  }
 
   /* アニメアイテム領域調整 */
   .anime-item {
@@ -679,9 +687,11 @@ li {
     box-sizing: border-box;
   }
 
-  table{
+  .table{
 font-size: 11.5px;
   }
+
+ 
 
 }
 

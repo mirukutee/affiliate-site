@@ -4,6 +4,7 @@
   border-collapse: collapse;
   font-size: 0.85rem;   /* ← ここで全体縮小 */
   table-layout: fixed;
+  
 }
 
 .table-card th,
@@ -79,7 +80,7 @@
 /* スマホでも「横表」のまま維持する */
 @media (max-width: 640px) {
   .table-card {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     
   }
   .table-card th, .table-card td {
@@ -183,38 +184,65 @@
 .table-card { border:0 !important; }
 
 
-/* レスポンシブ表*/
+/* ===== レスポンシブ表（改訂版） ===== */
 
+/* まずは表の見た目を安定化 */
 .table-responsive {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95em; /* 全体を少し小さめに */
+  table-layout: fixed;               /* 列の折返し/幅計算を安定 */
+  font-family: sans-serif;
+  font-size: clamp(0.78rem, 0.72rem + 0.2vw, 0.95rem); /* 画面幅で緩やかに可変 */
+  letter-spacing: 0.02em;
+  /* グローバル table の太枠が強すぎるので外枠は無しにする */
+  border: 0; /* ← style.css の table{border:2px...}対策:contentReference[oaicite:1]{index=1}*/
 }
 
+/* セル共通 */
 .table-responsive th,
 .table-responsive td {
   border: 1px solid #ccc;
-  padding: 6px;
+  padding: 8px 10px;
   text-align: center;
-  word-break: break-word; /* 長文を折り返す */
+  word-break: break-word;            /* 長文のはみ出し対策 */
 }
 
-.table-responsive th {
-  background: #f8f8f8;
+/* ヘッダー */
+.table-responsive thead {
+  background: #005BAC;               /* グローバル thead の色被りを明示上書き:contentReference[oaicite:2]{index=2}*/
 }
- .detail-note { display: none; }  /* PCは非表示 */
+.table-responsive thead th {
+  color: #fff;
+}
 
+/* 偶数行ストライプ（全体CSSのストライプ無効化） */
+.table-responsive tbody > tr:nth-of-type(even) {
+  background: #f7f9fc;
+}
+
+/* 余白メモなど小注釈 */
+.detail-note { display: none; }      /* PCは非表示のまま */
+
+/* ====== スマホ ====== */
 @media (max-width: 600px) {
   .table-responsive {
-    font-size: 0.85em; /* モバイルはさらに小さく */
+    font-size: 0.65rem;              /* 0.6em だと小さすぎることが多いので微増 */
   }
   .table-responsive th,
   .table-responsive td {
-    padding: 4px;
+    padding: 6px 8px;                /* セル余白を少し詰める */
+    /* 個別 font-size を指定しない：親の font-size に追従して視認性を維持 */
   }
-  .table-responsive td br {
-    display: none; /* モバイルでは改行を消して省スペースに */
-  }
+  .table-responsive td br { display: inline; } /* 省スペース */
 }
 
-
+/* ====== さらに狭い端末（任意） ====== */
+@media (max-width: 380px) {
+  .table-responsive {
+    font-size: 0.6rem;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 5px 6px;
+  }
+}

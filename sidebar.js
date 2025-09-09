@@ -1,71 +1,37 @@
-// sidebar.js (全置き換え用)
 document.addEventListener("DOMContentLoaded", async () => {
   const mount = document.getElementById("sidebar");
   if (!mount) return;
 
-  // ---- 1) サイドバーHTMLを注入 -----------------------------------------
-  // 302/キャッシュ残りで崩れや「勝手に開く」誤判定を避けるため no-cache
+  // 1) サイドバーHTMLを注入
   const res = await fetch("sidebar.html", { cache: "no-cache" });
-  if (!res.ok) {
-    console.error("Failed to load sidebar.html:", res.status, res.statusText);
-    return;
-  }
-  const html = await res.text();
-  mount.innerHTML = html;
+  if (!res.ok) { console.error("sidebar.html load failed"); return; }
+  mount.innerHTML = await res.text();
 
-  // ---- 2) 初期化：全パネルを閉じる ---------------------------------------
+  // 2) 初期化（全閉じ）
   const panels = mount.querySelectorAll(".dropdown-content");
   panels.forEach(p => {
     p.classList.remove("open");
-    p.setAttribute("aria-hidden", "true");
+    p.setAttribute("aria-hidden","true");
     p.style.maxHeight = "0px";
   });
 
-  // ---- 3) クリック委譲：.dropdown-button → 直後の .dropdown-content ----
+  // 3) 委譲クリック
   mount.addEventListener("click", (e) => {
     const btn = e.target.closest(".dropdown-button");
     if (!btn) return;
-
     const panel = btn.nextElementSibling;
     if (!panel || !panel.classList.contains("dropdown-content")) return;
 
     const willOpen = !panel.classList.contains("open");
-
-    // アコーディオン（同時に1つだけ開く）にしたい場合はここで全閉じ
-    // panels.forEach(p => {
-    //   if (p !== panel) {
-    //     p.classList.remove("open");
-    //     p.setAttribute("aria-hidden", "true");
-    //     p.style.maxHeight = "0px";
-    //   }
-    // });
-
-    if (willOpen) {
-      panel.classList.add("open");
-      panel.setAttribute("aria-hidden", "false");
-      // scrollHeight を使ってスムーズに展開
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } else {
-      panel.classList.remove("open");
-      panel.setAttribute("aria-hidden", "true");
-      panel.style.maxHeight = "0px";
-    }
+    panel.classList.toggle("open", willOpen);
+    panel.setAttribute("aria-hidden", willOpen ? "false" : "true");
+    panel.style.maxHeight = willOpen ? panel.scrollHeight + "px" : "0px";
+    btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
   });
 
-  // ---- 4) リサイズ時：開いてるパネルの max-height を再計算 -------------
+  // 4) リサイズ時にmax-height再計算
   window.addEventListener("resize", () => {
-    const opened = mount.querySelectorAll(".dropdown-content.open");
-    opened.forEach(p => {
-      p.style.maxHeight = p.scrollHeight + "px";
-    });
+    mount.querySelectorAll(".dropdown-content.open")
+      .forEach(p => p.style.maxHeight = p.scrollHeight + "px");
   }, { passive: true });
-
-  // ---- 5) キーボード対応（Enter/Spaceで開閉） --------------------------
-  mount.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const btn = e.target.closest(".dropdown-button");
-    if (!btn) return;
-    e.preventDefault();
-    btn.click();
-  });
 });

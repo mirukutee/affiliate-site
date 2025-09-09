@@ -111,3 +111,24 @@
 
 /* （任意）ボタンの状態反映 */
 .dropdown-button[aria-expanded="true"] { outline: 2px solid #76b6ff; }
+
+
+/* スマホ：縦積み＆サイドバーを本文の下へ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;  /* 縦積み */
+  }
+  main {
+    order: 1;                /* 本文を先 */
+  }
+  #sidebar,
+  .sidebar {
+    order: 2;                /* サイドバーを後（=フッターの手前） */
+    width: 100%;
+    max-width: 100%;
+    position: static;        /* stickyを無効化（下配置での予期せぬ固定を防ぐ） */
+    border-right: none;      /* 右ラインは消す */
+    border-bottom: 4px solid #009dff; /* 見出しラインを下へ */
+    margin-top: 1rem;
+  }
+}

@@ -47,10 +47,7 @@
   <!-- AMP -->
   <link rel="amphtml" href="AMP/index.html" />
 
-  <!-- Prefetch HTML includes (描画前に先取り) -->
-  <link rel="prefetch" href="header.html">
-  <link rel="prefetch" href="footer.html">
-  <link rel="prefetch" href="sidebar.html">
+
 
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
@@ -158,20 +155,16 @@
     ]
   }
   </script>
-
-  <!-- JS（defer）: パース完了後ただちに起動 -->
-  <script src="include.js" defer></script>
  
 </head>
 
 <body>
 
 <!-- ヘッダー（注入完了まで非表示：FOUC防止） -->
-<div id="header" hidden aria-busy="true"></div>
+  <div id="header"></div>
 
-<div class="container">
-  <div class="layout">
-    <aside id="sidebar" class="sidebar" hidden aria-busy="true"></aside>
+  <div class="container">
+    <aside id="sidebar"></aside>
 
     <main>
       <!-- パンくず -->
@@ -638,9 +631,10 @@
   </div>
 </div>
 
-<!-- フッター（注入完了まで非表示：FOUC防止） -->
-  <script src="sidebar.js" defer></script>
-<div id="footer" hidden aria-busy="true"></div>
+  <div id="footer"></div>
+  <script src="include.js" defer></script>
+
+
 
 <!-- 常駐ボタン -->
 <script>

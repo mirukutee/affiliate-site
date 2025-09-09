@@ -815,3 +815,5 @@ font-size: 11.5px;
 
 /* FOUC抑制用。最小の高さだけ確保しておくとレイアウトが揺れにくい */
 #header[aria-busy="true"] { visibility: hidden; min-height: 56px; }
+
+#footer[aria-busy="true"] { visibility: hidden; min-height: 48px; }

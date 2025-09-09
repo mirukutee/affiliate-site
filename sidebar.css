@@ -113,36 +113,34 @@
 .dropdown-button[aria-expanded="true"] { outline: 2px solid #76b6ff; }
 
 
-/* スマホ：縦積み＆サイドバーを本文の下へ */
+/* PC: 横並びを固定 */
+@media (min-width: 769px) {
+  .container { display: flex; align-items: flex-start; gap: 24px; }
+}
+
+/* モバイル: 縦積み（本文→サイドバー） */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;  /* 縦積み */
-  }
-  main {
-    order: 1;                /* 本文を先 */
-  }
-  #sidebar,
-  .sidebar {
-    order: 2;                /* サイドバーを後（=フッターの手前） */
+  .container { display: flex; flex-direction: column; }
+  main { order: 1; }
+  #sidebar, .sidebar {
+    order: 2;
     width: 100%;
     max-width: 100%;
-    position: static;        /* stickyを無効化（下配置での予期せぬ固定を防ぐ） */
-    border-right: none;      /* 右ラインは消す */
-    border-bottom: 4px solid #009dff; /* 見出しラインを下へ */
+    position: static;       /* sticky解除 */
+    border-right: none;
+    border-bottom: 4px solid #009dff;
     margin-top: 1rem;
   }
 }
-/* デスクトップで横並びを確実に */
-@media (min-width: 769px) {
-  .container {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;         /* 好みで余白 */
-  }
-  /* #sidebar（外枠）は幅固定せず中身 .sidebar に任せる */
-  #sidebar { flex: 0 0 auto; }  /* 潰れ防止だけ明示 */
+
+/* サイドバーの前面化は控えめに（他UIを邪魔しない） */
+#sidebar, #sidebar .sidebar {
+  position: relative;
+  z-index: 150;             /* 9999から下げる */
 }
-@media (max-width: 768px) {
-  .container { display: block; }  /* 念のため縦積みを固定 */
-  /* 既存の main/order と .sidebar のブロックはそのままでOK */
-}
+/* クリック死守（!importantは外す） */
+#sidebar * { pointer-events: auto; }
+
+/* 本文はページ全体でスクロール（独立スクロールを防ぐ） */
+main { overflow-y: visible; }
+

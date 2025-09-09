@@ -1,14 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const reveal = (el) => {
+    if (!el) return;
+    el.removeAttribute("hidden");
+    el.removeAttribute("aria-busy");
+  };
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const inject = (id, path) => {
-    fetch(path)
-      .then((res) => res.text())
-      .then((data) => {
-        const target = document.getElementById(id);
-        if (target) target.innerHTML = data;
+  const inject = (id, url) => {
+    const mount = document.getElementById(id);
+    if (!mount) return;
+    fetch(url, { cache: "no-cache" })
+      .then(res => res.text())
+      .then(html => {
+        mount.innerHTML = html;
+        reveal(mount);
       })
-      .catch((err) => console.error(`Error loading ${path}:`, err));
+      .catch(err => console.error(`[include] ${url} load error:`, err));
   };
 
   inject("header", "header.html");

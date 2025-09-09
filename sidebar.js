@@ -54,7 +54,14 @@
       const html = await res.text();
       mount.innerHTML = html;
 
-      // アクセシビリティ初期値
+      
+// >>> Added by patch: ensure sidebar becomes visible after load
+try{
+  mount.removeAttribute("hidden");
+  mount.removeAttribute("aria-busy");
+} catch(e){ /* noop */ }
+// <<< Added by patch
+// アクセシビリティ初期値
       mount.querySelectorAll(".dropdown-button").forEach((btn) => {
         btn.setAttribute("aria-expanded", "false");
         const content = btn.nextElementSibling;

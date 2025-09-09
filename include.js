@@ -1,16 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const reveal = (el) => { el?.removeAttribute("hidden"); el?.removeAttribute("aria-busy"); };
+// include.js
+document.addEventListener("DOMContentLoaded", () => {
+  const reveal = (el) => {
+    if (!el) return;
+    el.removeAttribute("hidden");
+    el.removeAttribute("aria-busy");
+  };
 
-  const inject = (id, path) => {
-    const target = document.getElementById(id);
-    if (!target) return;
-    fetch(path)
-      .then(res => res.text())
-      .then(html => {
-        target.innerHTML = html;
-        reveal(target); // ← 読み込み完了後に表示
+  const inject = (id, url) => {
+    const mount = document.getElementById(id);
+    if (!mount) return;
+    fetch(url, { cache: "no-cache" })
+      .then((res) => res.text())
+      .then((html) => {
+        mount.innerHTML = html;
+        // 挿入後に表示（FOUC防止）
+        reveal(mount);
       })
-      .catch(err => console.error(`Error loading ${path}:`, err));
+      .catch((err) => console.error(`[include] ${url} load error:`, err));
   };
 
   inject("header", "header.html");

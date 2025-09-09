@@ -170,3 +170,31 @@
 .dropdown-content[aria-hidden="true"] { pointer-events: none; }
 .dropdown-content[aria-hidden="false"] { pointer-events: auto; }
 
+
+
+
+/* ===== Patch overrides: unify dropdown-content behavior ===== */
+#sidebar .dropdown-content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.4s ease;
+  background: #fafafa;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#sidebar .dropdown-content.open{
+  overflow-y: auto;
+  opacity: 1;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /* max-height is controlled by JS (scrollHeight) */
+}
+#sidebar .dropdown-content.open::-webkit-scrollbar{ width:8px; }
+#sidebar .dropdown-content.open::-webkit-scrollbar-track{ background:#f0f0f0; border-radius:4px; }
+#sidebar .dropdown-content.open::-webkit-scrollbar-thumb{ background-color:#3a84f1; border-radius:4px; }
+
+@media (prefers-reduced-motion: reduce){
+  #sidebar .dropdown-content{ transition: none; }
+}
+/* ===== End patch overrides ===== */

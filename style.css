@@ -801,19 +801,7 @@ font-size: 11.5px;
 }
 
 
-/* ベース2カラム */
-.layout { display: grid; grid-template-columns: 260px 1fr; gap: 16px; align-items: start; }
-
-/* スマホは1カラム（順序固定：sidebar → main） */
-@media (max-width: 1024px) {
-  .layout { grid-template-columns: 1fr; }
-  #sidebar { order: 1; }
-  main      { order: 2; }
-}
 
 
 
-/* FOUC抑制用。最小の高さだけ確保しておくとレイアウトが揺れにくい */
-#header[aria-busy="true"] { visibility: hidden; min-height: 56px; }
 
-#footer[aria-busy="true"] { visibility: hidden; min-height: 48px; }

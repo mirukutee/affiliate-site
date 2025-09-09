@@ -62,25 +62,26 @@
 }
 .dropdown-button:hover { background: linear-gradient(145deg,#d7eaf8,#fdfdfd); box-shadow:0 4px 12px rgba(0,0,0,.12); }
 
-/* ▼ 初期は閉じる（1セットのみ残す） */
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .35s ease;
-  opacity: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  pointer-events: none;
+/* 初期は閉じる */
+.dropdown-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+  opacity:0;
+  padding-top:0;
+  padding-bottom:0;
+  pointer-events:none;
+}
+/* 開いたとき（max-heightはJSがscrollHeightを代入） */
+.dropdown-content.open{
+  opacity:1;
+  padding-top:8px;
+  padding-bottom:8px;
+  pointer-events:auto;
+  overflow-y:auto; /* 中身が長いときだけ、この中でスクロール */
 }
 
-/* ▼ 開いたとき（max-heightはJSがscrollHeightを代入） */
-.dropdown-content.open {
-  opacity: 1;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  pointer-events: auto;
-  overflow-y: auto;
-}
+
 
 /* aria同期（保険） */
 .dropdown-content[aria-hidden="true"]  { pointer-events: none; }

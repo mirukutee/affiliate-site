@@ -161,7 +161,7 @@
 
   <!-- JS（defer）: パース完了後ただちに起動 -->
   <script src="include.js" defer></script>
-  <script src="sidebar.js" defer></script>
+ 
 </head>
 
 <body>
@@ -639,6 +639,7 @@
 </div>
 
 <!-- フッター（注入完了まで非表示：FOUC防止） -->
+  <script src="sidebar.js" defer></script>
 <div id="footer" hidden aria-busy="true"></div>
 
 <!-- 常駐ボタン -->

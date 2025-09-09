@@ -20,6 +20,7 @@
 
 /* サイドバー本体（重複削除＋sticky化） */
 .sidebar {
+    overflow: visible; 
   box-sizing: border-box;
   width: 240px;
   padding: 1.5em;
@@ -28,11 +29,11 @@
   border-radius: 12px;
   border-right: 10px solid #009dff;
   box-shadow: 0 4px 12px rgba(0,0,0,.05); /* ← 1つに統一 */
-  overflow-y: auto;
+
 
   position: sticky;  /* ← 追従 */
   top: 0;
-  max-height: 100vh; /* ← 画面内に収める */
+
   z-index: 10;
 }
 

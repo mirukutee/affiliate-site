@@ -132,3 +132,17 @@
     margin-top: 1rem;
   }
 }
+/* デスクトップで横並びを確実に */
+@media (min-width: 769px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;         /* 好みで余白 */
+  }
+  /* #sidebar（外枠）は幅固定せず中身 .sidebar に任せる */
+  #sidebar { flex: 0 0 auto; }  /* 潰れ防止だけ明示 */
+}
+@media (max-width: 768px) {
+  .container { display: block; }  /* 念のため縦積みを固定 */
+  /* 既存の main/order と .sidebar のブロックはそのままでOK */
+}

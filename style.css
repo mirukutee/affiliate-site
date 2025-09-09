@@ -800,6 +800,17 @@ font-size: 11.5px;
   }
 }
 
+/* PC: 横並び */
+@media (min-width: 769px) {
+  .container { display: flex; align-items: flex-start; gap: 24px; }
+}
+
+/* モバイル: 縦積み & 順序を メイン→サイドバー に */
+@media (max-width: 768px) {
+  .container { display: flex; flex-direction: column; }
+  main { order: 1; }
+  #sidebar, .sidebar { order: 2; width: 100%; max-width: 100%; position: static; }
+}
 
 
 

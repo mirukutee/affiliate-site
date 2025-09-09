@@ -800,26 +800,8 @@ font-size: 11.5px;
   }
 }
 
-/* === fix: container直下の.layoutを2カラムに === */
-.container > .layout {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 16px;
-  align-items: start;
-  width: 100%;
-}
 
-/* サイドバーの基本（幅はsidebar.cssと揃える） */
-.container > .layout > .sidebar { width: 240px; }
 
-/* メインは余計な外側余白を持たせない */
-.container > .layout > main { margin: 0; }
-
-/* スマホは1カラムで縦積み */
-@media (max-width: 1024px) {
-  .container > .layout { grid-template-columns: 1fr; }
-  .container > .layout > .sidebar { width: auto; }
-}
 
 
 

@@ -1,89 +1,138 @@
-// /affiliate-site/sidebar.js でも相対でもOK。indexと同じ階層なら相対参照でOK。
-(() => {
-  // ▼ 汎用：開閉処理（アニメ安定化：max-height を実高さで制御）
-  const toggleDropdown = (btn) => {
-  const content = btn && btn.nextElementSibling;
-  if (!content || !content.classList) return;
+// sidebar.js
+document.addEventListener("DOMContentLoaded", () => {
+  const SIDEBAR_ID = "sidebar";
+  const URL = "sidebar.html";
 
-  const willOpen = !content.classList.contains("open");
+  const mount = document.getElementById(SIDEBAR_ID);
+  if (!mount) return;
 
-  if (willOpen) {
-    // ▼ 開く処理
-    content.classList.add("open");
-    content.setAttribute("aria-hidden", "false");
-    btn.setAttribute("aria-expanded", "true");
+  // サイドバー読込
+  fetch(URL, { cache: "no-cache" })
+    .then((res) => res.text())
+    .then((html) => {
+      mount.innerHTML = html;
 
-    content.style.setProperty("max-height", content.scrollHeight + "px", "important");
-  } else {
-    // ▼ 閉じる処理
-    content.style.setProperty("max-height", content.scrollHeight + "px", "important");
-    requestAnimationFrame(() => {
-      content.style.setProperty("max-height", "0px", "important");
-      content.classList.remove("open");
-      content.setAttribute("aria-hidden", "true");
+      // 挿入後に表示（FOUC防止 & クリック復帰）
+      mount.removeAttribute("hidden");
+      mount.removeAttribute("aria-busy");
+
+      // 初期化
+      initDropdowns(mount);
+      markActiveByLocation(mount);
+      guardOutsideScrollOnOpen(mount);
+    })
+    .catch((err) => console.error(`[sidebar] ${URL} load error:`, err));
+
+  /**
+   * ドロップダウン（アコーディオン）初期化
+   * - .dropdown-toggle をクリックで .dropdown-content を開閉
+   * - 開くときは max-height に scrollHeight をセット（CSSトランジション有効化）
+   */
+  function initDropdowns(root) {
+    const toggles = root.querySelectorAll(".dropdown-toggle");
+    toggles.forEach((btn) => {
+      const content = btn.nextElementSibling;
+      if (!content || !content.classList.contains("dropdown-content")) return;
+
+      // 初期状態
+      content.style.maxHeight = "0";
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = content.classList.contains("open");
+
+        // いったん全部閉じたい場合は以下を解除（アコーディオン1つだけ開閉）
+        // closeAll(root);
+
+        if (isOpen) {
+          // 閉じる
+          content.classList.remove("open");
+          content.style.maxHeight = "0";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          // 開く
+          content.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      }, { passive: true });
+    });
+
+    // ウィンドウリサイズ時に開いている項目の max-height を再計算
+    window.addEventListener("resize", () => {
+      root.querySelectorAll(".dropdown-content.open").forEach((el) => {
+        el.style.maxHeight = el.scrollHeight + "px";
+      });
+    }, { passive: true });
+  }
+
+  function closeAll(root) {
+    root.querySelectorAll(".dropdown-content.open").forEach((el) => {
+      el.classList.remove("open");
+      el.style.maxHeight = "0";
+    });
+    root.querySelectorAll(".dropdown-toggle[aria-expanded='true']").forEach((btn) => {
       btn.setAttribute("aria-expanded", "false");
     });
   }
-};
 
+  /**
+   * 現在URL/ハッシュに応じてメニューを強調
+   * - a[href] が location に合致したら .is-active を付与
+   * - 階層下なら親のドロップダウンも展開
+   */
+  function markActiveByLocation(root) {
+    const here = location.pathname.replace(/\/+$/, "");
+    const hash = location.hash || "";
 
-  // ▼ イベント委任（後から差し込まれた要素にも効く）
-  const setupDelegation = (root) => {
-    const mount = root || document;
-    mount.addEventListener("click", (ev) => {
-      const target = ev.target.closest(".dropdown-button");
-      if (!target) return;
-      ev.preventDefault();
-      ev.stopPropagation();
-      toggleDropdown(target);
-    }, { passive: false });
-  };
+    const links = root.querySelectorAll("a[href]");
+    let activated = false;
 
-  // ▼ sidebar.html を #sidebar に流し込み
-  const loadSidebar = async () => {
-    const mount = document.querySelector("#sidebar");
-    if (!mount) return;
+    links.forEach((a) => {
+      const href = a.getAttribute("href") || "";
+      if (!href || href.startsWith("javascript:")) return;
 
-    // 直貼り/既に中身がある場合はそのまま委任のみ
-    if (mount.children.length > 0) return;
+      // 相対リンクを雑に比較（href の末尾スラッシュ除去）
+      const norm = href.replace(/\/+$/, "");
+      const isSamePage = norm && here.endsWith(norm);
+      const isHashHit = hash && norm === hash;
 
-    try {
-      // index.html と同階層にsidebar.htmlがある前提
-      const res = await fetch("sidebar.html", { credentials: "same-origin" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const html = await res.text();
-      mount.innerHTML = html;
+      if (isSamePage || isHashHit) {
+        a.classList.add("is-active");
+        // 親のドロップダウンを展開
+        const content = a.closest(".dropdown-content");
+        if (content && !content.classList.contains("open")) {
+          content.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+          const toggle = content.previousElementSibling;
+          if (toggle && toggle.classList.contains("dropdown-toggle")) {
+            toggle.setAttribute("aria-expanded", "true");
+          }
+        }
+        activated = true;
+      }
+    });
 
-      
-// >>> Added by patch: ensure sidebar becomes visible after load
-try{
-  mount.removeAttribute("hidden");
-  mount.removeAttribute("aria-busy");
-} catch(e){ /* noop */ }
-// <<< Added by patch
-// アクセシビリティ初期値
-      mount.querySelectorAll(".dropdown-button").forEach((btn) => {
-        btn.setAttribute("aria-expanded", "false");
-        const content = btn.nextElementSibling;
-        if (content) content.setAttribute("aria-hidden", "true");
-      });
-
-    } catch (e) {
-      console.error("[Sidebar] load error:", e);
-      // デバッグヒント（画面にも表示）
-      const pre = document.createElement("pre");
-      pre.textContent = "Sidebar load error: " + e.message + "\n" +
-        "→ fetchパスを確認してください（例: 'sidebar.html' or '/affiliate-site/sidebar.html'）。";
-      pre.style.color = "crimson";
-      pre.style.padding = "8px";
-      pre.style.background = "#fff3f3";
-      pre.style.border = "1px solid #f5c2c2";
-      document.body.prepend(pre);
+    // 何もヒットしない場合、トップ相当をハイライト（任意）
+    if (!activated) {
+      const topLink = root.querySelector('a[href="index.html"], a[href="/"], a[href="./"]');
+      topLink?.classList.add("is-active");
     }
-  };
+  }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    setupDelegation(document); // まず委任
-    loadSidebar();             // 次に読み込み
-  });
-})();
+  /**
+   * スマホ時、開いているドロップダウンの中だけスクロール可能にして
+   * 背景の誤スクロールを軽減（必要に応じて有効化）
+   */
+  function guardOutsideScrollOnOpen(root) {
+    root.addEventListener("wheel", (e) => {
+      const open = root.querySelector(".dropdown-content.open");
+      if (!open) return;
+      // open内のスクロールは許可、外は軽く抑制（強制はしない）
+      if (!open.contains(e.target)) {
+        // コメントアウトしたい場合はここを無効化
+        // e.preventDefault();
+      }
+    }, { passive: false });
+  }
+});

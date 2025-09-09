@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(res => res.text())
       .then(html => {
         target.innerHTML = html;
-        reveal(target);               // ← 注入後に表示
+        reveal(target); // ← 読み込み完了後に表示
       })
       .catch(err => console.error(`Error loading ${path}:`, err));
   };

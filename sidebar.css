@@ -1,40 +1,8 @@
 /* サイドバー */
-.search-box {
-  margin: 10px 0; /* 上下に10pxのスペース */
-}
+.search-box { margin: 10px 0; }
 
-.sidfont {
-  font-size: small;
-  font-weight: bold;
-  padding: 4px 0;
-  display: block;
-  border-top: 5px solid #90b4d4;
-  border-bottom: 5px solid #90b4d4;
-  margin: 8px 0 4px;
-  color: #2c3e50;
-}
-
-.sidfonta {
-  font-size: 0.85em;
-  font-weight: 600;
-  color: #4d5e6b;
-  padding: 4px 0px;
-  display: block;
-  border-top: 2px dashed #a0d2e8; /* ← ← ← ← ← ← ← 修正済み */
-  margin:  4px 0 8px;
-}
-
-.sidfontb {
-  font-size: small;
-  font-weight: bold;
-  padding: 4px 0;
-  display: block;
-  border-bottom: 5px solid #90b4d4;
-  margin: 8px 0 4px;
-  color: #2c3e50;
-}
-
-.sidfontc {
+/* 見出し帯 */
+.sidfont, .sidfontb, .sidfontc {
   font-size: small;
   font-weight: bold;
   padding: 4px 0;
@@ -42,132 +10,102 @@
   margin: 8px 0 4px;
   color: #2c3e50;
 }
+.sidfont   { border-top: 5px solid #90b4d4; border-bottom: 5px solid #90b4d4; }
+.sidfontb  { border-bottom: 5px solid #90b4d4; }
+.sidfonta  {
+  font-size: .85em; font-weight: 600; color:#4d5e6b;
+  padding: 4px 0; display:block; margin:4px 0 8px;
+  border-top: 2px dashed #a0d2e8;
+}
 
-
-
+/* サイドバー本体（重複削除＋sticky化） */
 .sidebar {
-  height: 100%;
-  margin: 0;
   box-sizing: border-box;
-  padding: 10px; /*内側の余白*/
-  width: 240px; /*全体の横幅*/
+  width: 240px;
+  padding: 1.5em;
+  margin: 0;
   background: linear-gradient(180deg, #f5f9fb, #dde6ea 60%, #c3edf0);
   border-radius: 12px;
-  padding: 1.5em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-right: 10px solid #009dff; /*右横の余白の色*/
-  height: auto; /*ページ全体に広げる*/
-  overflow-y: auto; /*はみ出したときの対策*/
-  position:static; /*場所の固定*/
-  left: 0; /*左からの位置（距離）*/
-  top: 0; /*垂直の位置*/
-  z-index: 10; /*重なりの対策*/
-   box-shadow: 0px 0px 25px aqua;
+  border-right: 10px solid #009dff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05); /* ← 1つに統一 */
+  overflow-y: auto;
+
+  position: sticky;  /* ← 追従 */
+  top: 0;
+  max-height: 100vh; /* ← 画面内に収める */
+  z-index: 10;
 }
 
-
-
-/* ドロップダウンリスト全帯*/
+/* ドロップダウン全体 */
 .dropdown {
   margin-bottom: 15px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #ffffff;
+  background: #fff;
   font-family: 'Segoe UI', sans-serif;
- box-shadow: 0px 0px 10px aqua;
+  box-shadow: 0 0 10px rgba(0,255,255,.35); /* aquaを少しソフトに */
 }
 
-
+/* ボタン */
 .dropdown-button {
-  background: linear-gradient(145deg, #eaf3fa, #ffffff); /* 淡い青 × 白 */
   background-image: linear-gradient(90deg, #ffffff, #bccbd1 50%, #b3feff);
   border-radius: 8px;
-  border: 1px solid #c3dbe8; /* 淡グレー系の落ち着いた枠線 */
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08); /* ソフトな影 */
+  border: 1px solid #c3dbe8;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
   font-size: 16px;
   color: #333;
   padding: 10px 15px;
   width: 100%;
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
-.dropdown-button:hover {
-  background: linear-gradient(145deg, #d7eaf8, #fdfdfd);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
-}
+.dropdown-button:hover { background: linear-gradient(145deg,#d7eaf8,#fdfdfd); box-shadow:0 4px 12px rgba(0,0,0,.12); }
 
-/* ▼ 初期は閉じる（高さ0 & クリック不可） */
+/* ▼ 初期は閉じる（1セットのみ残す） */
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
+  transition: max-height .35s ease;
   opacity: 0;
   padding-top: 0;
   padding-bottom: 0;
-  pointer-events: none;            /* ← ここを明示 */
+  pointer-events: none;
 }
 
-/* ▼ 開いたとき（JSが max-height を実サイズに設定） */
+/* ▼ 開いたとき（max-heightはJSがscrollHeightを代入） */
 .dropdown-content.open {
   opacity: 1;
   padding-top: 8px;
   padding-bottom: 8px;
-  pointer-events: auto;            /* ← クリック可能に */
-  overflow-y: auto;                /* PCで中身が長いとき */
-}
-
-/* aria-hidden も保険でサポート */
-.dropdown-content[aria-hidden="true"]  { pointer-events: none; }
-.dropdown-content[aria-hidden="false"] { pointer-events: auto; }
-
-.dropdown-content.open::-webkit-scrollbar {
-  width: 8px;
-}
-.dropdown-content.open::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 4px;
-}
-.dropdown-content.open::-webkit-scrollbar-thumb {
-  background-color: #3a84f1;
-  border-radius: 4px;
-}
-.dropdown-content.open::-webkit-scrollbar-thumb:hover {
-  background-color: #3a84f1;
-}
-
-.dropdown-content a {
-  display: block;
-  background-color: #b9babe; /* 薄グレー背景 */
-  margin: 8px 10px;          /* リンク間の余白 */
-  padding: 14px 16px;        /* 十分な高さ */
-  border-radius: 6px;        /* 丸みで柔らかさ */
-  color: #333;               /* 読みやすい文字色 */
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 軽い影で立体感 */
-}
-
-/*カーソルをあはせたときの処理*/
-.dropdown-content a:hover {
-  background: #1abc9c;
-}
-
-/* ▼ 安定化用の初期値（JSが上書きするので !important は不要） */
-.dropdown-content {
-  max-height: 0;              /* 初期は閉じる */
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-
-/* .open は見た目の状態フラグ（max-height はJSで実サイズを入れる） */
-.dropdown-content.open {
-  /* ここでは max-height 指定しない（JSが scrollHeight を入れる） */
+  pointer-events: auto;
   overflow-y: auto;
 }
 
-/* 念のための可視化補強（別のスタイルに負けないように） */
-.dropdown-content[aria-hidden="true"] { pointer-events: none; }
+/* aria同期（保険） */
+.dropdown-content[aria-hidden="true"]  { pointer-events: none; }
 .dropdown-content[aria-hidden="false"] { pointer-events: auto; }
 
+/* スクロールバー装飾（webkit系のみ） */
+.dropdown-content.open::-webkit-scrollbar { width: 8px; }
+.dropdown-content.open::-webkit-scrollbar-track { background:#f0f0f0; border-radius:4px; }
+.dropdown-content.open::-webkit-scrollbar-thumb { background:#3a84f1; border-radius:4px; }
+.dropdown-content.open::-webkit-scrollbar-thumb:hover { background:#3a84f1; }
+
+/* リンク */
+.dropdown-content a {
+  display: block;
+  background: #b9babe;
+  margin: 8px 10px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color .3s, color .3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+.dropdown-content a:hover { background:#1abc9c; }
+
+/* （任意）ボタンの状態反映 */
+.dropdown-button[aria-expanded="true"] { outline: 2px solid #76b6ff; }

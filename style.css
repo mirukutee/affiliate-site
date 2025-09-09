@@ -800,17 +800,40 @@ font-size: 11.5px;
   }
 }
 
-/* PC: 横並び */
+
+
+
+
+/* PC: 横並びを固定 */
 @media (min-width: 769px) {
   .container { display: flex; align-items: flex-start; gap: 24px; }
 }
 
-/* モバイル: 縦積み & 順序を メイン→サイドバー に */
+/* モバイル: 縦積み（本文→サイドバー） */
 @media (max-width: 768px) {
   .container { display: flex; flex-direction: column; }
   main { order: 1; }
-  #sidebar, .sidebar { order: 2; width: 100%; max-width: 100%; position: static; }
+  #sidebar, .sidebar {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    position: static;       /* sticky解除 */
+    border-right: none;
+    border-bottom: 4px solid #009dff;
+    margin-top: 1rem;
+  }
 }
+
+/* サイドバーの前面化は控えめに（他UIを邪魔しない） */
+#sidebar, #sidebar .sidebar {
+  position: relative;
+  z-index: 150;             /* 9999から下げる */
+}
+/* クリック死守（!importantは外す） */
+#sidebar * { pointer-events: auto; }
+
+/* 本文はページ全体でスクロール（独立スクロールを防ぐ） */
+main { overflow-y: visible; }
 
 
 

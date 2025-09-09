@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
   <link rel="stylesheet" href="table.css" />
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- AMP -->
@@ -47,10 +51,11 @@
   <!-- スキップリンク（テンプレ準拠） -->
   <a class="visually-hidden-focusable" href="#main">本文へスキップ</a>
 
-  <div id="header" role="banner"></div>
+ <div id="header"></div>
 
-  <div class="container">
-    <aside id="sidebar" class="sidebar" aria-label="サイドバー"></aside>
+ <div class="container">
+    <aside id="sidebar"></aside>
+
 
     <!-- メイン -->
     <main id="main" role="main" tabindex="-1" aria-labelledby="page-title">
@@ -181,25 +186,11 @@
  </main>
     </div>
 
-    <!--フッターの呼び出し -->
  <div id="footer"></div>
 
-  <!-- ✅ 共通読み込み用JS -->
-  <script src="include.js"></script>
-
-<!-- サイドバーのスクリプト -->
-  <script>
-        document.addEventListener("DOMContentLoaded", function() {
-         fetch('sidebar.html')
-         .then(response => response.text())
-          .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-            });
-          });
-         </script>
-
-          <!-- ✅ sidebar.html読み込みが終わってから、JS読み込み -->
-        <script src="sidebar.js"></script>
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 
 </body>
 </html>

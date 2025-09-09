@@ -15,8 +15,13 @@
 <meta content="GMOコインとは？特徴・取引方法・口座開設手順をサクッと解説" name="twitter:title"/>
 <meta content="GMOコインの魅力を初心者にもわかりやすく超簡単にご紹介します。" name="twitter:description"/>
 <meta content="https://mirukutee.github.io/affiliate-site/sonota/top.png" name="twitter:image"/>
+
 <link href="style.css" rel="stylesheet"/>
 <link href="menu-card.css" rel="stylesheet"/>
+
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="AMP/gmocoin.html" rel="amphtml"/>
 <meta content="GMOコインの特徴や手数料、取引ツール、口座開設の手順を初心者向けに整理。100円から始められる積立や豊富な銘柄にも対応。" name="description"/>
@@ -28,9 +33,10 @@
 
 <body>
 
-<div id="header"></div>
-<div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div id="header"></div>
+
+ <div class="container">
+    <aside id="sidebar"></aside>
 
 <main>
 <!-- パンくず -->
@@ -179,10 +185,10 @@
 </div>
 </main></div>
 
- <script src="include.js" defer></script>
+ <div id="footer"></div>
 
-<div id="footer"></div>
-<!-- ✅ 共通読み込み用JS -->
-<script src="/affiliate-site/sidebar.js" defer></script>
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 </body>
 </html>

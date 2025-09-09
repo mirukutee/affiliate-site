@@ -25,6 +25,9 @@
 <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.png" />
 
   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="amphtml" href="AMP.html">
 
@@ -58,14 +61,10 @@
  
  <body>
   
-   <!-- ヘッダーの内容 -->
-   <div id="header"></div>
+ <div id="header"></div>
 
-
-  <!-- サイドバー呼び出し -->
-   <div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
-
+ <div class="container">
+    <aside id="sidebar"></aside>
 
    <!-- メインの内容 -->
     <main>
@@ -436,6 +435,7 @@
           <div>短期は5日・25日、長期は75日・200日など、目的によって使い分けます。</div>
         </section>
       </amp-accordion>
+    </section>
    <!-- 段落-->
          <div class="anime-item">
   <h2 class="anime-title">📌 チャートの基礎を学んだら、次は実践！</h2>
@@ -455,28 +455,20 @@
     </a>
   </div>
 
-  <p style="margin-top: 1em;">
-    無料ではじめられるので、まずは気軽にチェックしてみてくださいね。
-  </p>
+
 </div>
 
 
-  
 
-
-           </div>
  <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
  </main>
     </div>
-  <!-- ✅ フッター -->
  <div id="footer"></div>
 
-  <!-- ✅ 共通読み込み用JS -->
-  <script src="include.js"></script>
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 
-<!-- サイドバーのスクリプト -->
-<script src="/affiliate-site/sidebar.js" defer></script>
-        
         </body>
 
         </html>

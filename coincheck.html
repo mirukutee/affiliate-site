@@ -18,6 +18,9 @@
 <meta content="https://mirukutee.github.io/affiliate-site/sonota/top.png" name="twitter:image"/>
 <link href="style.css" rel="stylesheet"/>
 <link href="menu-card.css" rel="stylesheet">
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="AMP/coincheck.html" rel="amphtml"/>
 </link>
@@ -27,9 +30,11 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "販売所と取引所の違いは？", "acceptedAnswer": {"@type": "Answer", "text": "販売所はコインチェックが提示した価格で売買する方式で、操作が簡単。取引所はユーザー同士で売買する場所です。指値注文と成行は公式サイトを参照してください。"}}, {"@type": "Question", "name": "注文は訂正できますか？", "acceptedAnswer": {"@type": "Answer", "text": "注文の訂正はできません。"}}, {"@type": "Question", "name": "注文のキャンセルはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "可能です。取引所・販売所の注文画面からキャンセルできます（詳細は公式サポートを参照）。"}}, {"@type": "Question", "name": "スマホだけで取引できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。公式アプリで口座開設から入金・売買まで全て完結します。"}}]}</script>
 </head>
 <body>
-<div id="header"></div>
-<div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div id="header"></div>
+
+ <div class="container">
+    <aside id="sidebar"></aside>
+
 <main>
 <!-- パンくず -->
 <nav aria-label="breadcrumb">
@@ -158,9 +163,10 @@
 </main>
 </div>
 
-<div id="footer"></div>
-<script src="include.js"></script>
-<!-- ✅ サイドバーを読み込んで初期化 -->
-<script src="/affiliate-site/sidebar.js" defer></script>
+ <div id="footer"></div>
+
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 </body>
 </html>

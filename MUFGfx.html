@@ -25,6 +25,11 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
+
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- 構造化データ：Breadcrumb（3階層目にURLを追加） -->
@@ -64,14 +69,12 @@
  
 
 
- <body>
-    <!-- ヘッダーの内容 -->
-   <div id="header"></div>
- 
+<body>
+ <div id="header"></div>
 
-  <!-- サイドバー呼び出し -->
-   <div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div class="container">
+    <aside id="sidebar"></aside>
+
 
 
    <!-- メインの内容 -->
@@ -211,9 +214,10 @@ FX口座の開設はオンラインで完結可能。スマホアプリでのデ
 
  <div id="footer"></div>
 
-  <!-- ✅ 共通読み込み用JS -->
-  <script src="include.js"></script>
-<script src="/affiliate-site/sidebar.js" defer></script>
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
 
 </body>
 </html>

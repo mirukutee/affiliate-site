@@ -29,6 +29,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
+
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- HowTo 構造化データ -->
@@ -75,9 +79,9 @@
 </head>
 
 <body>
-  <div id="header"></div>
+ <div id="header"></div>
 
-  <div class="container">
+ <div class="container">
     <aside id="sidebar"></aside>
 
     <main>
@@ -213,23 +217,13 @@
 
     </main>
   </div>
+  
+ <div id="footer"></div>
 
-  <div id="footer"></div>
-
-  <!-- 共通読み込み用JS（defer & フォールバック） -->
+  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", async () => {
-      try {
-        const res = await fetch('sidebar.html', { cache: 'no-store' });
-        if (!res.ok) throw new Error(res.status);
-        document.getElementById('sidebar').innerHTML = await res.text();
-      } catch (e) {
-        document.getElementById('sidebar').innerHTML = '<!-- sidebar load failed -->';
-      }
-    });
-  </script>
   <script src="sidebar.js" defer></script>
+
 
 </body>
 </html>

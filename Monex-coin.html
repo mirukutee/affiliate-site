@@ -18,6 +18,10 @@
 <meta content="https://mirukutee.github.io/affiliate-site/sonota/top.png" name="twitter:image"/>
 <link href="style.css" rel="stylesheet">
 <link href="menu-card.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="AMP/Monex-coin.html" rel="amphtml"/>
 
@@ -29,10 +33,10 @@
 
 <body>
 
-<div id="header"></div>
-<div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div id="header"></div>
 
+ <div class="container">
+    <aside id="sidebar"></aside>
 
 <!-- メインの内容 -->
 <main>
@@ -163,12 +167,11 @@
 <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
 </main>
 </div>
-<!--フッターの呼び出し -->
-<div id="footer"></div>
-<!-- ✅ 共通読み込み用JS -->
-<script src="include.js"></script>
-<!-- サイドバーのスクリプト -->
-<script src="/affiliate-site/sidebar.js" defer></script>
+ <div id="footer"></div>
+
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 
 </body>
 </html>

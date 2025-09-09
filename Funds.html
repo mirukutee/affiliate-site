@@ -22,6 +22,10 @@
   <meta name="twitter:image" content="https://mirukutee.github.io/affiliate-site/sonota/top.png" />
 
   <link rel="stylesheet" href="style.css" />
+
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="amphtml" href="AMP/Funds.html">
 
@@ -39,10 +43,10 @@
 </head>
 
 <body>
-  <div id="header"></div>
+ <div id="header"></div>
 
-  <div class="container">
- <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div class="container">
+    <aside id="sidebar"></aside>
 
 
    <!-- メインの内容 -->
@@ -137,11 +141,10 @@
     <!--フッターの呼び出し -->
  <div id="footer"></div>
 
-  <!-- ✅ 共通読み込み用JS -->
-  <script src="include.js"></script>
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 
-<!-- サイドバーのスクリプト -->
-<script src="/affiliate-site/sidebar.js" defer></script>
 
 </body>
 </html>

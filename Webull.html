@@ -21,6 +21,10 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
+
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="amphtml" href="AMP/Webull.html">
 <!-- 構造化データ -->
@@ -51,12 +55,12 @@
   }
   </script>
 </head>
-<body>
+
  
-<div id="header"></div>
+<body>
+ <div id="header"></div>
 
-
-  <div class="container">
+ <div class="container">
     <aside id="sidebar"></aside>
 
     <main>
@@ -162,24 +166,19 @@
           <li><strong>情報の正確性</strong>：本ページは一般的な情報提供であり、特定銘柄の推奨ではありません。最終判断はご自身でお願いします。</li>
         </ul>
       </section>
+
+      
     </main>
   </div>
 
   <!--実装前実験エリア-->
 
 
-  <div id="footer"></div>
+ <div id="footer"></div>
 
-  <!-- 共通JS（非AMP） -->
+  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('sidebar.html').then(r => r.text()).then(html => {
-        const el = document.getElementById('sidebar');
-        if (el) el.innerHTML = html;
-      });
-    });
-  </script>
+  <script src="sidebar.js" defer></script>
 
   
 </body>

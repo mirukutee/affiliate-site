@@ -16,8 +16,12 @@
 <meta content="BTCBOX紹介｜はじめてでも使いやすい暗号資産取引所" name="twitter:title"/>
 <meta content="BTCBOXはシンプルな操作で暗号資産の売買ができる初心者向けの取引所です。ビットコインやイーサリアムをはじめ、主要な通貨を安心して取引可能。" name="twitter:description"/>
 <meta content="https://mirukutee.github.io/affiliate-site/sonota/top.png" name="twitter:image"/>
+
 <link href="style.css" rel="stylesheet">
 <link href="menu-card.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="AMP/BTCBOX.html" rel="amphtml"/>
 
@@ -29,9 +33,10 @@
 
 <body>
 
-<div id="header"></div>
-<div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div id="header"></div>
+
+ <div class="container">
+    <aside id="sidebar"></aside>
 
 <main>
 
@@ -203,8 +208,12 @@
 </section>
 </main>
 </div>
-<div id="footer"></div>
-<script src="include.js"></script>
-<script src="/affiliate-site/sidebar.js" defer></script>
+
+ <div id="footer"></div>
+
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+  
 </body>
 </html>

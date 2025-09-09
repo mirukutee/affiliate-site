@@ -795,7 +795,6 @@ font-size: 11.5px;
 /* --- スマホ（!important 使わない）--- */
 @media (max-width: 768px) {
   #sidebar .dropdown-content.open {
-    /* ここでも max-height は書かない */
     overflow-y: auto;
   }
 }

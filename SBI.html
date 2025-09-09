@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
   <link rel="stylesheet" href="table.css" />
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- ====== 構造化データ（パンくず） ====== -->
@@ -63,12 +65,11 @@
    
 </head>
 <body id="top">
-  <!-- 共通ヘッダー（外部読込） -->
-  <div id="header" role="banner"></div>
 
-  <div class="container">
-    <!-- サイドバー（外部読込） -->
-   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div id="header"></div>
+
+ <div class="container">
+    <aside id="sidebar"></aside>
 
     <main id="main" aria-labelledby="page-title">
       <!-- パンくず -->
@@ -258,13 +259,10 @@
     </main>
   </div>
 
-  <!-- 共通フッター（外部読込） -->
-  <div id="footer" role="contentinfo"></div>
 
-  <!-- 共通JS（ヘッダー/フッター挿入など） -->
+ <div id="footer"></div>
+
+  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
-
- <!-- ✅ サイドバーを読み込んで初期化 -->
-<script src="/affiliate-site/sidebar.js" defer></script>
-</body>
+  <script src="sidebar.js" defer></script>
 </html>

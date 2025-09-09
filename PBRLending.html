@@ -17,6 +17,10 @@
 <meta content="https://mirukutee.github.io/affiliate-site/sonota/top.png" name="twitter:image"/>
 <link href="style.css" rel="stylesheet"/>
 <link href="menu-card.css" rel="stylesheet"/>
+
+ <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="AMP/PBRLending.html" rel="amphtml"/>
 
@@ -27,11 +31,14 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "最低いくらから始められますか？", "acceptedAnswer": {"@type": "Answer", "text": "目安として約5万円相当から利用可能です（時点の換算額）。最新の条件は公式でご確認ください。"}}, {"@type": "Question", "name": "途中解約はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "通常レンディングは1ヶ月後から返還可能、プレミアムは原則固定期間終了後です。"}}, {"@type": "Question", "name": "利息はいつ反映されますか？", "acceptedAnswer": {"@type": "Answer", "text": "受取予定利息が日次で反映されます。実際の受取条件は最新の案内をご確認ください。"}}]}</script>
 </head>
 
-<body>
 
-<div id="header"></div>
-<div class="container">
-<aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+
+<body>
+ <div id="header"></div>
+
+ <div class="container">
+    <aside id="sidebar"></aside>
+
 <main>
 
 <!-- パンくず -->
@@ -156,13 +163,14 @@
 </div>
 </section>
 </div>
-</main>
-</div>
 
- <script src="include.js" defer></script>
-<!-- ✅ フッター -->
-<div id="footer"></div>
-<!-- ✅ 共通読み込み用JS -->
-<script src="/affiliate-site/sidebar.js" defer></script>
+    </main>
+  </div>
+
+ <div id="footer"></div>
+
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 </body>
 </html>

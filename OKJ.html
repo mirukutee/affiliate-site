@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
   <link rel="stylesheet" href="table.css" />
+   <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="sidebar.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- ====== 構造化データ：Breadcrumb ====== -->
@@ -67,14 +70,10 @@
 
 <body>
   <!-- ====== スキップリンク ====== -->
- 
+ <div id="header"></div>
 
-  <!-- ヘッダー（共通） -->
-  <div id="header" role="banner"></div>
-
-  <!-- ====== レイアウト ====== -->
-  <div class="container">
-   <aside id="sidebar" class="sidebar-mount is-hydrating" aria-busy="true"></aside>
+ <div class="container">
+    <aside id="sidebar"></aside>
 
     <!-- ====== メイン ====== -->
     <main id="main" role="main" tabindex="-1" aria-labelledby="page-title">
@@ -198,13 +197,10 @@
     </main>
   </div>
 
-  <!-- ====== フッター（共通） ====== -->
-  <div id="footer" role="contentinfo"></div>
+ <div id="footer"></div>
 
-  <!-- ====== 共通JS ====== -->
+  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
-
-  <!-- サイドバー埋め込み -->
-<script src="/affiliate-site/sidebar.js" defer></script>
+  <script src="sidebar.js" defer></script>
 </body>
 </html>

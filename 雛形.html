@@ -22,6 +22,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="header.css">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="amphtml" href="AMP.html" />
@@ -31,6 +34,7 @@
 
   <div class="container">
     <aside id="sidebar"></aside>
+
 
     <main id="main">
       <!-- パンくず -->
@@ -84,7 +88,7 @@
       <section class="anime-item">
         <h2 class="anime-title">公式サイトへ</h2>
         <p class="cta-button font_red_r">▼こちらから公式サイトへ▼</p>
-        <a href="https://www.tcs-asp.net/alink?AC=...（実URL）" class="cta-button font_red_r" rel="sponsored noopener" target="_blank">
+        <a href="https://www.tcs-asp.net/alink?AC=...（実URL）"class="cta-button font_red_r" rel="nofollow sponsored noopener" target="_blank">
           <img src="https://img.tcs-asp.net/imagesender?ac=...（実URL）" alt="ブルーモ証券" loading="lazy" />
         </a>
       </section>
@@ -170,8 +174,9 @@
   <!-- フッター（include.jsで共通読込） -->
   <div id="footer"></div>
 
-  <!-- Scripts -->
+  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
+  
 </body>
 </html>

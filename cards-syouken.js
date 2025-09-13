@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>SAXO証券<small>米国株多め</small></span>
         </a>
 
+        <a href="https://mirukutee.github.io/affiliate-site/saxo.html" class="card">
+          <img src="Xcard/imagesender (3)" alt="Webull証券のバナー" loading="lazy" width="300" height="250">
+          <span>Webull証券<small>米国株デビュー</small></span>
+        </a>
+
           <a href="https://mirukutee.github.io/affiliate-site/SBI.html" class="card">
         <img src="sonota/top.png" alt="noバナー"  loading="lazy" width="300" height="250">
         <span>SBI証券<small>ポイントサービス等</small></span>

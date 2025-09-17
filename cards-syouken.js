@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
           <a href="https://mirukutee.github.io/affiliate-site/SBI.html" class="card">
-        <img src="sonota/top.png" alt="noバナー"  loading="lazy" width="300" height="250">
+        <img src="Xcard/imagesender (4).jfif" alt="noバナー"  loading="lazy" width="300" height="250">
         <span>SBI証券<small>ポイントサービス等</small></span>
       </a>
 

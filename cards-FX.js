@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>みんなのFX<small>取引ツールが良質</small></span>
         </a>
 
+         <a href="https://mirukutee.github.io/affiliate-site/iNET.html" class="card">
+          <img src="Xcard/imagesender (5).jfif" alt="みんなのFXのバナー" loading="lazy" width="300" height="250">
+          <span>アイネット証券<small>自動系ツール</small></span>
+        </a>
+
       </div>
     </section>
   </div>

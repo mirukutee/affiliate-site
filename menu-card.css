@@ -457,10 +457,3 @@ html{ scroll-behavior: smooth; }
   .back-to-top{ transition: none; }
 }
 
-/* 5) 極狭幅の端末（~360px）は “3列→2列” にして視認性と安定を優先 */
-@media (max-width: 360px){
-  .my-card-grid{ grid-template-columns: repeat(2, 1fr); }
-  .my-card-grid .card{ padding: 5px; }      /* 少しタイトに */
-  .my-card-grid .card span{ font-size: .68rem; }
-  .my-card-grid .card span small{ font-size: .66rem; }
-}

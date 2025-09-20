@@ -95,8 +95,8 @@
 /* === 清書：グリッド密度 & カード最小化（機能優先） === */
 .my-card-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 160→140で余裕作成 */
+  gap: 6px; /* 8→6: 狭幅での横スク減 */
 }
 
 /* 横展開で縦スクロール削減：幅が狭くても列数を維持 */
@@ -114,6 +114,8 @@
   padding: 6px;
   box-shadow: none;
   transition: transform .15s ease, box-shadow .15s ease;
+  min-width: 0;            /* ← デフォはautoで縮まず、はみ出しの元凶 */
+  overflow: hidden;         /* 安全網（影響なし） */
 }
 .my-card-grid .card:hover{
   transform: translateY(-1px);
@@ -122,6 +124,7 @@
 
 /* 画像：横幅固定で安定させる */
 .my-card-grid .card img{
+  display: block;     
   width: 100%;
   max-height: 80px;
   margin-bottom: 4px;
@@ -138,6 +141,8 @@
   overflow: visible;
   text-overflow: unset;
   white-space: normal;    /* ← 折り返し許可 */
+    word-break: break-word;
+  overflow-wrap: anywhere;  /* 長い英数でも列内に収める */
 }
 .my-card-grid .card span small{
   display: block;
@@ -450,4 +455,12 @@ html{ scroll-behavior: smooth; }
 /* 低モーション配慮 */
 @media (prefers-reduced-motion: reduce){
   .back-to-top{ transition: none; }
+}
+
+/* 5) 極狭幅の端末（~360px）は “3列→2列” にして視認性と安定を優先 */
+@media (max-width: 360px){
+  .my-card-grid{ grid-template-columns: repeat(2, 1fr); }
+  .my-card-grid .card{ padding: 5px; }      /* 少しタイトに */
+  .my-card-grid .card span{ font-size: .68rem; }
+  .my-card-grid .card span small{ font-size: .66rem; }
 }

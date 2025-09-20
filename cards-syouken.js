@@ -7,60 +7,58 @@ document.addEventListener("DOMContentLoaded", function () {
       <h2 class="linecenter">証券会社一覧(株式取引)</h2>
       <div class="my-card-grid">
 
-        <a href="https://mirukutee.github.io/affiliate-site/matsui-kabu.html" class="card">
-          <img src="Xcard/320-250-20000.jpg" alt="松井証券のバナー" loading="lazy" width="300" height="250">
-          <span>松井証券<br><small>初心者おすすめ</small></span>
-        </a>
+               <a href="https://mirukutee.github.io/affiliate-site/matsui-kabu.html" class="card">
+              <img src="Xcard/320-250-20000.jpg" alt="松井証券のバナー"  loading="lazy" width="300" height="250">
+              <span>松井証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
 
-        <a href="https://mirukutee.github.io/affiliate-site/DMM-kabu.html" class="card">
-          <img src="Xcard/300_250.png" alt="DMM株のバナー" loading="lazy" width="300" height="250">
-          <span>DMM株<small>初心者おすすめ</small></span>
-        </a>
+            <a href="https://mirukutee.github.io/affiliate-site/DMM-kabu.html" class="card" >
+              <img src="Xcard/300_250.png" alt="DMM株のバナー"  loading="lazy" width="300" height="250">
+             <span>DMM株<br><small class="fee-rating" data-stars="3">手数料</small></span>
+            </a>
 
-        <a href="https://mirukutee.github.io/affiliate-site/Monex.html" class="card">
-          <img src="Xcard/imagesender (1).jfif" alt="マネックス証券のバナー" loading="lazy" width="300" height="250">
-          <span>マネックス証券<small>総合的サービス</small></span>
-        </a>
+            <a href="https://mirukutee.github.io/affiliate-site/Monex.html" class="card">
+              <img src="Xcard/imagesender (1).jfif" alt="マネックス証券のバナー"  loading="lazy" width="300" height="250">
+             <span>マネックス証券<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
+            </a>
 
-        <a href="https://mirukutee.github.io/affiliate-site/tryauto.html" class="card">
-          <img src="Xcard/imagesender.png" alt="トライオートCFDのバナー" loading="lazy" width="300" height="250">
-          <span>トライオートCFD<small>自動売買</small></span>
-        </a>
+            <a href="https://mirukutee.github.io/affiliate-site/bloomo.html" class="card">
+              <img src="Xcard/imagesender (2).png" alt="Bloomo証券のバナー"  loading="lazy" width="300" height="250">
+             <span>Bloomo証券<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
+            </a>
 
-        <a href="https://mirukutee.github.io/affiliate-site/bloomo.html" class="card">
-          <img src="Xcard/imagesender (2).png" alt="Bloomo証券のバナー" loading="lazy" width="300" height="250">
-          <span>Bloomo証券<small>米国株やETF</small></span>
-        </a>
+            <a href="https://mirukutee.github.io/affiliate-site/moomoo-kabu.html" class="card">
+              <img src="Xcard/moomooookuchi1200675.png" alt="moomoo証券のバナー"  loading="lazy" width="300" height="250">
+              <span>moomoo証券<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
+            </a>
 
-        <a href="https://mirukutee.github.io/affiliate-site/moomoo-kabu.html" class="card">
-          <img src="Xcard/moomooookuchi1200675.png" alt="moomoo証券のバナー" loading="lazy" width="300" height="250">
-          <span>moomoo証券<small>海外株多め</small></span>
-        </a>
-
-        <a href="https://mirukutee.github.io/affiliate-site/MUFGesmart.html" class="card">
-          <img src="Xcard/34-200x200.jpg" alt="三菱UFJ eスマート証券のバナー" loading="lazy" width="300" height="250">
-          <span>三菱UFJ eスマート証券<small>auユーザーおすすめ</small></span>
-        </a>
-
-        <a href="https://mirukutee.github.io/affiliate-site/saxo.html" class="card">
-          <img src="Xcard/300x250_Banner_Affiliate_AT_Stocks.png" alt="SAXO証券のバナー" loading="lazy" width="300" height="250">
-          <span>SAXO証券<small>米国株多め</small></span>
-        </a>
-
+            <a href="https://mirukutee.github.io/affiliate-site/MUFGesmart.html" class="card">
+              <img src="Xcard/34-200x200.jpg" alt="三菱UFJ eスマート証券のバナー"  loading="lazy" width="300" height="250">
+              <span>三菱UFJ eスマート<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
+            </a>
+            
         <a href="https://mirukutee.github.io/affiliate-site/Webull.html" class="card">
           <img src="Xcard/imagesender (3).png" alt="Webull証券のバナー" loading="lazy" width="300" height="250">
-          <span>Webull証券<small>米国株デビュー</small></span>
+          <span>Webull証券<br><small class="fee-rating" data-stars="1" data-draft="true">手数料</small></span>
         </a>
 
-          <a href="https://mirukutee.github.io/affiliate-site/SBI.html" class="card">
-        <img src="Xcard/imagesender (4).jfif" alt="noバナー"  loading="lazy" width="300" height="250">
-        <span>SBI証券<small>ポイントサービス等</small></span>
-      </a>
+            <a href="https://mirukutee.github.io/affiliate-site/saxo.html" class="card">
+              <img src="Xcard/300x250_Banner_Affiliate_AT_Stocks.png" alt="SAXO証券のバナー"  loading="lazy" width="300" height="250">
+              <span>SAXO証券<br><small class="fee-rating" data-stars="1" data-draft="true">手数料</small></span>
+            </a>
 
-         <a href="https://mirukutee.github.io/affiliate-site/GMO-syouken.html" class="card">
-        <img src="sonota/top.png" alt="noバナー"  loading="lazy" width="300" height="250">
-        <span>GMOクリック証券<small>手数料が安い</small></span>
-      </a>
+            <a href="https://mirukutee.github.io/affiliate-site/SBI.html" class="card">
+              <img src="Xcard/imagesender (4).jfif" alt="noバナー"  loading="lazy" width="300" height="250">
+              <span>SBI証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
+            </a>
+            <a href="https://mirukutee.github.io/affiliate-site/GMO-syouken.html" class="card">
+              <img src="sonota/top.png" alt="noバナー"  loading="lazy" width="300" height="250">
+              <span>GMOクリック証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
+            </a>
+
+              <a href="https://mirukutee.github.io/affiliate-site/tryauto.html" class="card">
+              <img src="Xcard/imagesender.png" alt="トライオートCFDのバナー"  loading="lazy" width="300" height="250">
+             <span>トライオートCFD<br><small class="fee-rating fee-na">手数料</small></span>
+            </a>
 
       </div>
        <a href="#top" class="idjanp top-card">▲ページ上部へ戻る</a>

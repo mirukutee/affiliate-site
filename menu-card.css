@@ -128,16 +128,16 @@
   object-fit: contain;
 }
 
-/* テキストは1行省略で詰める */
+
 .my-card-grid .card span{
-  font-size: .88rem;
+  font-size: .85rem;
   font-weight: 600;
   line-height: 1.2;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;         /* ← flexbox制御をやめて普通のblock要素に */
+  -webkit-line-clamp: unset; 
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;    /* ← 折り返し許可 */
 }
 .my-card-grid .card span small{
   display: block;
@@ -146,6 +146,56 @@
   margin-top: 2px;
   line-height: 1.2;
 }
+
+@media (max-width: 600px) {
+  .my-card-grid .card span {
+    font-size: .75rem;  /* 読みやすさ優先で少し大きめに固定 */
+  }
+  .my-card-grid .card span small {
+    font-size: .70rem;
+  }
+}
+
+/* --- 手数料評価（★1〜3） --- */
+.fee-rating{
+  display:inline-flex;
+  align-items:center;
+  gap:.35em;
+  font-size:.75rem;           /* <small>相当 */
+  line-height:1.1;
+  white-space:nowrap;
+  color:#333;                 /* 「手数料」テキストの色 */
+}
+
+/* 星は擬似要素で注入（画像なし） */
+.fee-rating::after{
+  content:"";
+  font-weight:700;
+  letter-spacing:.05em;
+  color:#f4b400;              /* 星の色 */
+}
+
+/* 段階ごとの中身 */
+.fee-rating[data-stars="1"]::after{ content:"★☆☆"; }
+.fee-rating[data-stars="2"]::after{ content:"★★☆"; }
+.fee-rating[data-stars="3"]::after{ content:"★★★"; }
+
+/* （仮）バッジ */
+.fee-rating[data-draft="true"]::before{
+  content:"（仮）";
+  font-size:.68em;
+  color:#666;
+  transform: translateY(-.05em);
+}
+
+/* 評価対象外（CFDなど） */
+.fee-rating.fee-na::after{
+  content:"—";               /* ダッシュ */
+  color:#999;
+}
+
+
+
 
 /* トップに戻るリンク（重複を1つに統合） */
 .top-card{
@@ -246,7 +296,7 @@
 /* スマホ：スクロール減らすため2列→超狭幅は1列 */
 @media (max-width: 600px){
   .recommendation-grid{ grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .recommendation-link{ font-size: .85rem; padding: .5em .6em; }
+  .recommendation-link{ font-size: .70rem; padding: .5em .6em; }
   .recommendation-link i{ font-size: .9rem; }
 }
 @media (max-width: 360px){

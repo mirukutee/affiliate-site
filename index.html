@@ -663,7 +663,7 @@
       <a href="#top" class="recommendation-top-link back-to-top" aria-label="ページ上部へ戻る" title="ページ上部へ戻る">▲</a>
     </main>
   </div>
-</div>
+
 
   <div id="footer"></div>
 
@@ -737,6 +737,65 @@
     main.prepend(box);
   })();
 </script>
+
+<!-- 手数料評価 -->
+<script>
+(() => {
+  const cards = document.querySelectorAll('.my-card-grid .card');
+  const graph = [];
+
+  cards.forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    const nameSpan = a.querySelector('span');
+    const rawName  = nameSpan ? nameSpan.childNodes[0].textContent.trim() : '';
+    if (!rawName) return;
+
+    const small = a.querySelector('.fee-rating');
+    if (!small) return;
+
+    // 除外条件（ドラフト・手数料NA）
+    const isDraft = small.hasAttribute('data-draft');
+    const isNA    = small.classList.contains('fee-na');
+    if (isDraft || isNA) return;
+
+    const stars = Number(small.getAttribute('data-stars') || '0');
+    if (!stars || Number.isNaN(stars)) return;
+
+    graph.push({
+      "@type": "Product",
+      "@id": href + "#fee-rating",
+      "name": `${rawName}の手数料（当サイト評価）`,
+      "url": href,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": stars,
+        "bestRating": "5",
+        "worstRating": "1",
+       "ratingCount": 1
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": rawName
+      }
+    });
+  });
+
+  if (graph.length === 0) return;
+
+  const ld = {
+    "@context": "https://schema.org/",
+    "@graph": graph
+  };
+
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(ld);
+  document.head.appendChild(s); // ② head に差し込む
+})();
+</script>
+
 
 </body>
 </html>

@@ -149,10 +149,10 @@
 
 @media (max-width: 600px) {
   .my-card-grid .card span {
-    font-size: .75rem;  /* 読みやすさ優先で少し大きめに固定 */
+    font-size: .70rem;  /* 読みやすさ優先で少し大きめに固定 */
   }
   .my-card-grid .card span small {
-    font-size: .70rem;
+    font-size: .68rem;
   }
 }
 

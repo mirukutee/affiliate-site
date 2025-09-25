@@ -1,459 +1,432 @@
-.category-section { margin-top: 0.6rem; }
+.category-section { margin-top: 0.6rem; } /* セクション上の余白を少しだけ確保 */
+
 /* タイトル行 */
 .category-menu-table .cat-title {
-  font-weight: 700;
-  background: #f0f8ff;  /* 薄い水色 */
-  font-size: 1.05rem;
-  color: #0653a6;
-  text-align: center;
- padding: 0.5em;
+  font-weight: 700;          /* 太字 */
+  background: #f0f8ff;       /* 薄い水色の背景 */
+  font-size: 1.05rem;        /* 文字サイズやや大きめ */
+  color: #0653a6;            /* 文字色：濃い青 */
+  text-align: center;        /* 中央揃え */
+  padding: 0.5em;            /* 内側余白を付けて読みやすく */
 }
 
 /* リンクありのセル（白） */
 .category-menu-table .category-color {
-  background: #fff;
-  text-align: center;
-  border: 1px solid #d0d7de;
-  padding: 0.5em;
-  margin: 0; 
+  background: #fff;              /* 背景：白 */
+  text-align: center;            /* 中央揃え */
+  border: 1px solid #d0d7de;     /* 薄いグレーの枠線 */
+  padding: 0.5em;                /* 内側余白 */
+  margin: 0;                     /* 外側余白なし（tableセルをフラットに） */
 }
 
 /* 空白セル（灰色） */
 .category-menu-table .tb-blank {
-  background: #f5f5f5;
-  border: none;     /* 枠線を消して自然に */
+  background: #f5f5f5;   /* 背景：薄いグレー（空きを示す） */
+  border: none;          /* 枠線なしで自然な空白に見せる */
 }
 
 /* リンクスタイル */
 .category-menu-table a {
-  display: block;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #0653a6;
-  padding: 0.25em 0.2em;
-  border-radius: 6px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  display: block;                                  /* クリック領域をセルいっぱいに */
+  text-decoration: none;                           /* 下線なし */
+  font-size: 0.95rem;                              /* 少し小さめの文字 */
+  font-weight: 600;                                /* 中太 */
+  color: #0653a6;                                  /* 濃い青の文字色 */
+  padding: 0.25em 0.2em;                           /* クリックしやすい最小限の余白 */
+  border-radius: 6px;                              /* 角丸でボタン風に */
+  transition: background-color 0.15s ease, color 0.15s ease; /* ホバー時の変化を滑らかに */
 }
 
 .category-menu-table a:hover {
-  background: #e7f2ff;
-  color: #033b78;
+  background: #e7f2ff;  /* ホバー：淡い水色の背景でハイライト */
+  color: #033b78;       /* 文字を少し濃く */
 }
-
 
 /* ▼ スマホでも3列キープ。横スクロールは無し。文字と余白を微縮 */
 @media (max-width: 600px) {
-  .category-menu-table .cat-title { font-size: 1rem; }
-  .category-menu-table td { padding: 0.5em 0.2em; }
-  .category-menu-table a { font-size: 0.65rem; padding: 0.2em 0.15em; }
+  .category-menu-table .cat-title { font-size: 1rem; }            /* タイトルの文字を少し縮小 */
+  .category-menu-table td { padding: 0.5em 0.2em; }               /* セルの横余白を圧縮 */
+  .category-menu-table a { font-size: 0.65rem; padding: 0.2em 0.15em; } /* リンクの文字・余白を縮小 */
   .category-color {
-    margin: 0;
-    padding: 0;
+    margin: 0;    /* 余白をリセット（はみ出し防止） */
+    padding: 0;   /* パディングを詰めて密度UP */
   }
 }
 
 /* さらに狭い端末での調整 */
 @media (max-width: 360px) {
-  .category-menu-table a { font-size: 0.65rem; }
+  .category-menu-table a { font-size: 0.65rem; }  /* かなり狭い画面では文字を固定して崩れ防止 */
 }
-
-
-
-
 
 /* === STEP: セクション見出し(linecenter)の省スペース化 === */
 .linecenter{
-  font-size: 1.2rem;          /* 1.6rem → 少し小さく */
-  margin: 0.9rem 0;           /* 2rem → 圧縮 */
-  gap: 0.6em;                /* テキスト左右の余白を微縮 */
+  font-size: 1.2rem;    /* 見出し文字を少し小さく */
+  margin: 0.9rem 0;     /* 上下余白を圧縮して縦スク削減 */
+  gap: 0.6em;           /* 疑似要素（左右ライン）との間隔を少し詰める */
 }
 
 .linecenter::before,
 .linecenter::after{
-  height: 2px;                /* 5px → 細めに */
-  background-color: #02ccff;  /* 既存色は維持 */
+  height: 2px;                /* ラインの太さを細めに */
+  background-color: #02ccff;  /* ライン色（既存のアクセントカラー） */
 }
 
 /* モバイルでさらに圧縮 */
 @media (max-width: 600px){
   .linecenter{
-    font-size: 1.1rem;
-    margin: 0.8rem 0;         /* 上下の余白を短く */
-    gap: 0.5em;
+    font-size: 1.1rem;  /* 文字さらに小さく */
+    margin: 0.8rem 0;   /* 余白をさらに短く */
+    gap: 0.5em;         /* 間隔も微調整 */
   }
   .linecenter::before,
   .linecenter::after{
-    height: 2px;
+    height: 2px;        /* 太さは維持（視認性確保） */
   }
 }
 
-
-
-
-
 /* === 清書：グリッド密度 & カード最小化（機能優先） === */
 .my-card-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 160→140で余裕作成 */
-  gap: 6px; /* 8→6: 狭幅での横スク減 */
+  display: grid;                                              /* CSS Gridでカードを整列 */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));/* 140px以上で自動段組（可変列） */
+  gap: 6px;                                                   /* カード間の間隔を詰める */
 }
 
 /* 横展開で縦スクロール削減：幅が狭くても列数を維持 */
 @media screen and (max-width: 900px) {
-  .my-card-grid { grid-template-columns: repeat(4, 1fr); }
+  .my-card-grid { grid-template-columns: repeat(4, 1fr); } /* 900px以下は4列固定 */
 }
 @media screen and (max-width: 600px) {
-  .my-card-grid { grid-template-columns: repeat(3, 1fr); }
+  .my-card-grid { grid-template-columns: repeat(3, 1fr); } /* 600px以下は3列固定 */
 }
 
 /* カード */
 .my-card-grid .card{
-  border: 1px solid #d0d7de;
-  border-radius: 8px;
-  padding: 6px;
-  box-shadow: none;
-  transition: transform .15s ease, box-shadow .15s ease;
-  min-width: 0;            /* ← デフォはautoで縮まず、はみ出しの元凶 */
-  overflow: hidden;         /* 安全網（影響なし） */
+  border: 1px solid #d0d7de;                     /* 薄グレーの枠線 */
+  border-radius: 8px;                             /* 角丸 */
+  padding: 6px;                                   /* 内側余白を最小限に */
+  box-shadow: none;                               /* 影なし（密度優先） */
+  transition: transform .15s ease, box-shadow .15s ease; /* ホバーのアニメ */
+  min-width: 0;                                   /* Grid内でのはみ出し防止（縮小可） */
+  overflow: hidden;                               /* 中身のはみ出しを隠す（保険） */
 }
 .my-card-grid .card:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  transform: translateY(-1px);                    /* ほんの少し持ち上げる */
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);          /* うっすら影 */
 }
 
 /* 画像：横幅固定で安定させる */
 .my-card-grid .card img{
-  display: block;     
-  width: 100%;
-  max-height: 80px;
-  margin-bottom: 4px;
-  object-fit: contain;
+  display: block;             /* 画像下の隙間（行間）を消す */
+  width: 100%;                /* カード幅にフィット */
+  max-height: 80px;           /* 縦方向の最大値を制限（段ズレ防止） */
+  margin-bottom: 4px;         /* 画像とテキストの間隔 */
+  object-fit: contain;        /* 画像の比率を保ったまま収める */
 }
-
 
 .my-card-grid .card span{
-  font-size: .85rem;
-  font-weight: 600;
-  line-height: 1.2;
-  display: block;         /* ← flexbox制御をやめて普通のblock要素に */
-  -webkit-line-clamp: unset; 
-  overflow: visible;
-  text-overflow: unset;
-  white-space: normal;    /* ← 折り返し許可 */
-    word-break: break-word;
-  overflow-wrap: anywhere;  /* 長い英数でも列内に収める */
+  font-size: .85rem;          /* テキストサイズ */
+  font-weight: 600;           /* 中太で見出しっぽく */
+  line-height: 1.2;           /* 行高を詰めて密度UP */
+  display: block;             /* ブロック化（伸縮安定） */
+  -webkit-line-clamp: unset;  /* 以前の行数制限を解除 */
+  overflow: visible;          /* 溢れたテキストも表示 */
+  text-overflow: unset;       /* 省略記号を解除 */
+  white-space: normal;        /* 折り返し許可 */
+  word-break: break-word;     /* 長い単語で改行OK（和文も安全） */
+  overflow-wrap: anywhere;    /* どこでも改行して列内に収める */
 }
 .my-card-grid .card span small{
-  display: block;
-  font-size: .72rem;
-  color: #666;
-  margin-top: 2px;
-  line-height: 1.2;
+  display: block;     /* 下段に回す */
+  font-size: .72rem;  /* 小さめ */
+  color: #666;        /* 薄めの文字色 */
+  margin-top: 2px;    /* 見出しとの間隔 */
+  line-height: 1.2;   /* 行送りを詰める */
 }
 
 @media (max-width: 600px) {
   .my-card-grid .card span {
-    font-size: .70rem;  /* 読みやすさ優先で少し大きめに固定 */
+    font-size: .70rem;   /* 狭幅での視認性バランス調整 */
   }
   .my-card-grid .card span small {
-    font-size: .68rem;
+    font-size: .68rem;   /* 補足テキストも微調整 */
   }
 }
 
 /* --- 手数料評価（★1〜3） --- */
 .fee-rating{
-  display:inline-flex;
-  align-items:center;
-  gap:.35em;
-  font-size:.75rem;           /* <small>相当 */
-  line-height:1.1;
-  white-space:nowrap;
-  color:#333;                 /* 「手数料」テキストの色 */
+  display:inline-flex;      /* インライン要素として横並び・中央揃え */
+  align-items:center;       /* 縦方向中央寄せ */
+  gap:.35em;                /* ラベルと星の間隔 */
+  font-size:.75rem;         /* 小さめ（<small>相当） */
+  line-height:1.1;          /* 行高を詰める */
+  white-space:nowrap;       /* 折り返さない（1行で表示） */
+  color:#333;               /* 「手数料」ラベルの色 */
 }
 
 /* 星は擬似要素で注入（画像なし） */
 .fee-rating::after{
-  content:"";
-  font-weight:700;
-  letter-spacing:.05em;
-  color:#f4b400;              /* 星の色 */
+  content:"";               /* 後ろに星を出す占位（中身は下で切替） */
+  font-weight:700;          /* 星の太さ */
+  letter-spacing:.05em;     /* 星間を少し空けて読みやすく */
+  color:#f4b400;            /* 星の色（ゴールド系） */
 }
 
 /* 段階ごとの中身 */
-.fee-rating[data-stars="1"]::after{ content:"★☆☆"; }
-.fee-rating[data-stars="2"]::after{ content:"★★☆"; }
-.fee-rating[data-stars="3"]::after{ content:"★★★"; }
+.fee-rating[data-stars="1"]::after{ content:"★☆☆"; } /* 星1 */
+.fee-rating[data-stars="2"]::after{ content:"★★☆"; } /* 星2 */
+.fee-rating[data-stars="3"]::after{ content:"★★★"; } /* 星3 */
 
 /* （仮）バッジ */
 .fee-rating[data-draft="true"]::before{
-  content:"（仮）";
-  font-size:.68em;
-  color:#666;
-  transform: translateY(-.05em);
+  content:"（仮）";         /* 下書き表示用バッジ */
+  font-size:.68em;          /* 小さめ */
+  color:#666;               /* 目立ちすぎない色 */
+  transform: translateY(-.05em); /* 僅かに上げて字面調整 */
 }
 
 /* 評価対象外（CFDなど） */
 .fee-rating.fee-na::after{
-  content:"—";               /* ダッシュ */
-  color:#999;
+  content:"—";              /* ダッシュで非対象を表示 */
+  color:#999;               /* 目立たない色に */
 }
-
-
-
 
 /* トップに戻るリンク（重複を1つに統合） */
 .top-card{
-  display: block;
-  width: fit-content;
-  margin: 2rem auto;
-  padding: 0.6em 1.2em;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #067aff;
-  background-color: #f0f8ff;
-  border: 1px solid #067aff;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color .2s, color .2s;
+  display: block;                          /* ブロック化（中央寄せ容易） */
+  width: fit-content;                      /* 中身に合わせた幅 */
+  margin: 2rem auto;                       /* 上下余白＋中央寄せ */
+  padding: 0.6em 1.2em;                    /* クリックしやすい余白 */
+  text-align: center;                      /* 文字中央揃え */
+  font-size: 1rem;                         /* 標準サイズ */
+  font-weight: 600;                        /* 中太 */
+  color: #067aff;                          /* ボタン文字色（青） */
+  background-color: #f0f8ff;               /* 淡い水色背景 */
+  border: 1px solid #067aff;               /* 青の境界線 */
+  border-radius: 8px;                      /* 角丸 */
+  text-decoration: none;                   /* 下線なし */
+  transition: background-color .2s, color .2s; /* ホバーの色変化 */
 }
-.top-card:hover{ background-color: #067aff; color: #fff; }
+.top-card:hover{ background-color: #067aff; color: #fff; } /* 反転して強調 */
 
 /* キーボード操作でも見えるフォーカス */
 .my-card-grid .card:focus-visible,
 .top-card:focus-visible{
-  outline: 2px solid #7db7ff;
-  outline-offset: 2px;
+  outline: 2px solid #7db7ff; /* アクセシビリティ：フォーカスリング */
+  outline-offset: 2px;        /* ボーダーから少し離して視認性UP */
 }
 
-
-
 /* === Recommendation: 画像なし・高密度リンク === */
-.recommendation-section { margin: 1.2rem 0; }
+.recommendation-section { margin: 1.2rem 0; } /* セクション間の余白 */
 
 .recommendation-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
+  display: grid;                                        /* リンクのタイル配置 */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 180px以上で自動段組 */
+  gap: 10px;                                            /* カード間隔 */
 }
 
 .recommendation-link{
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.6em 0.8em;
-  background: #fff;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  font-size: .9rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #0653a6;
-  line-height: 1.3;
-  min-height: 44px;              /* タップ領域確保 */
-  transition: background-color .2s ease, box-shadow .2s ease;
+  display: flex;                                        /* アイコンと文字を横並び */
+  align-items: center;                                  /* 縦中央揃え */
+  gap: 6px;                                             /* アイコンと文字の間隔 */
+  padding: 0.6em 0.8em;                                 /* クリック余白確保 */
+  background: #fff;                                     /* 背景：白 */
+  border: 1px solid #d0d7de;                            /* 枠線 */
+  border-radius: 6px;                                   /* 角丸 */
+  font-size: .9rem;                                     /* 文字サイズ */
+  font-weight: 500;                                     /* 中太 */
+  text-decoration: none;                                /* 下線なし */
+  color: #0653a6;                                       /* 文字色：青系 */
+  line-height: 1.3;                                     /* 行高 */
+  min-height: 44px;                                     /* タップ領域の最低値 */
+  transition: background-color .2s ease, box-shadow .2s ease; /* ホバー演出 */
 }
 
 .recommendation-top-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.6em 0.8em;
-  background: #f7f7f7;       /* 明るいグレー */
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  font-size: .9rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #333;
-  line-height: 1.3;
-  min-height: 44px;
-  transition: background-color .2s ease, box-shadow .2s ease;
+  display: flex; align-items: center; gap: 6px;         /* 上と同様の横並び */
+  padding: 0.6em 0.8em;                                 /* 余白 */
+  background: #f7f7f7;                                  /* 少し暗いグレー背景で差別化 */
+  border: 1px solid #d0d7de;                            /* 枠線 */
+  border-radius: 6px;                                   /* 角丸 */
+  font-size: .9rem; font-weight: 500;                   /* テキスト設定 */
+  text-decoration: none; color: #333;                   /* 文字色は中間グレー */
+  line-height: 1.3;                                     /* 行高 */
+  min-height: 44px;                                     /* タップ領域 */
+  transition: background-color .2s ease, box-shadow .2s ease; /* ホバー演出 */
 }
 .recommendation-top-link:hover {
-  background: #e0e0e0;
+  background: #e0e0e0;                                 /* ホバーで少し濃いグレーに */
 }
 
 /* グリッド末尾にフッター的に配置（全列スパン＋右寄せ） */
 .recommendation-grid .reco-end{
-  grid-column: 1 / -1;
-  justify-self: end;
-  margin-top: 4px;
+  grid-column: 1 / -1;   /* すべての列をまたぐ（フッター扱い） */
+  justify-self: end;     /* グリッド内で右寄せ */
+  margin-top: 4px;       /* 直前要素との間隔 */
 }
 
 /* アイコンと文字の行高を整えて高さブレを防止（見た目の密度UP） */
-.recommendation-link i{ line-height: 1; }
+.recommendation-link i{ line-height: 1; } /* アイコンの上下余白を詰める */
 
 /* 見出しとグリッドの間を少し詰める（スマホの縦スクロール減） */
 .anime-item > .recommendation-section{ margin-top: .5rem; }
 
-
-
 .recommendation-link i{
-  font-size: 1rem;
-  color: #067aff;
-  flex-shrink: 0;
+  font-size: 1rem;      /* アイコンサイズ */
+  color: #067aff;       /* アクセントカラー */
+  flex-shrink: 0;       /* 狭くなってもアイコンを潰さない */
 }
-.recommendation-link:hover{ background: #f0f8ff; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
-.recommendation-link:focus-visible{ outline: 2px solid #7db7ff; outline-offset: 2px; }
+.recommendation-link:hover{ background: #f0f8ff; box-shadow: 0 2px 6px rgba(0,0,0,.06); } /* ホバー強調 */
+.recommendation-link:focus-visible{ outline: 2px solid #7db7ff; outline-offset: 2px; }     /* キーボード操作対応 */
 
 /* スマホ：スクロール減らすため2列→超狭幅は1列 */
 @media (max-width: 600px){
-  .recommendation-grid{ grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .recommendation-link{ font-size: .70rem; padding: .5em .6em; }
-  .recommendation-link i{ font-size: .9rem; }
+  .recommendation-grid{ grid-template-columns: repeat(2, 1fr); gap: 8px; } /* 2列に固定 */
+  .recommendation-link{ font-size: .70rem; padding: .5em .6em; }           /* テキストと余白を縮小 */
+  .recommendation-link i{ font-size: .9rem; }                               /* アイコン微調整 */
 }
 @media (max-width: 360px){
-  .recommendation-grid{ grid-template-columns: 1fr; }
+  .recommendation-grid{ grid-template-columns: 1fr; } /* さらに狭い端末では1列 */
 }
-
-  
-
 
 /* === Hero-Compact: 画像なしの導入＋メニュー統合 === */
 .hero-compact{
-  display: grid;
-  grid-template-columns: 1.2fr 1fr; /* 左: メニュー / 右: 導入文（PC） */
-  gap: 16px;
-  align-items: start;
+  display: grid;                         /* 2カラムのレイアウト */
+  grid-template-columns: 1.2fr 1fr;      /* 左（メニュー）をやや広く */
+  gap: 16px;                              /* カラム間の間隔 */
+  align-items: start;                     /* 各カラムの上端を揃える */
 }
 
 .hero-compact__title{
-  font-size: 1.1rem;
-  margin: 0 0 .5rem;
-  border-left: 3px solid #3498db;
-  padding-left: .5rem;
+  font-size: 1.1rem;               /* タイトルの文字サイズ */
+  margin: 0 0 .5rem;               /* 下に余白 */
+  border-left: 3px solid #3498db;  /* 左側にアクセントライン */
+  padding-left: .5rem;             /* ラインから文字を離す */
 }
 
 /* テーブル内をややコンパクトに */
-.hero-compact .category-menu-table table{ margin: 0; }
-.hero-compact .category-menu-table td{ padding: .5em; }
+.hero-compact .category-menu-table table{ margin: 0; } /* テーブル上下の余白を除去 */
+.hero-compact .category-menu-table td{ padding: .5em; }/* セルの余白を控えめに */
 
 /* 導入文の余白を控えめに */
-.hero-compact__intro h2{ margin: .25rem 0 .5rem; }
-.hero-compact__intro p{ margin: .35rem 0; }
+.hero-compact__intro h2{ margin: .25rem 0 .5rem; } /* 見出しの上下余白を詰める */
+.hero-compact__intro p{ margin: .35rem 0; }        /* 段落の余白も詰める */
 
 /* スマホ：メニュー→導入の順に。縦スクロールを最小化 */
 @media (max-width: 600px){
   .hero-compact{
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;  /* 1カラムに切替 */
+    gap: 10px;                   /* 間隔を少し詰める */
   }
-  .hero-compact__menu { order: 1; }
-  .hero-compact__intro{ order: 2; }
-  .hero-compact__intro .only-desktop{ display: none; }
+  .hero-compact__menu { order: 1; }                 /* メニューを先に表示 */
+  .hero-compact__intro{ order: 2; }                 /* 導入文を後に */
+  .hero-compact__intro .only-desktop{ display: none; } /* PC専用要素は非表示 */
 }
 
 /* アンカー到達の見やすさ（#sec-... に飛んだとき） */
-.category-section{ scroll-margin-top: 72px; }
-html{ scroll-behavior: smooth; }
-
+.category-section{ scroll-margin-top: 72px; } /* 固定ヘッダー分だけ上に余白を確保 */
+html{ scroll-behavior: smooth; }               /* スムーズスクロール */
 
 /* === FAQ: CSSだけのアコーディオン === */
-.faq-list { margin: 0; padding: 0; list-style: none; }
+.faq-list { margin: 0; padding: 0; list-style: none; } /* リストの初期化 */
 
 .faq-item{
-  border: 1px solid #d0d7de;
-  border-radius: 8px;
-  background: #fff;
-  margin: 8px 0;
-  overflow: hidden; /* 角丸内におさめる */
+  border: 1px solid #d0d7de;  /* 外枠 */
+  border-radius: 8px;          /* 角丸 */
+  background: #fff;            /* 背景：白 */
+  margin: 8px 0;               /* アイテム間の余白 */
+  overflow: hidden;            /* 角丸からはみ出さない */
 }
 
 .faq-item > summary{
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: .7em .9em;
-  cursor: pointer;
-  list-style: none;           /* Safari 対策 */
-  font-weight: 600;
-  color: #102a43;
-  position: relative;
+  display: flex;               /* アイコン等を横並び */
+  align-items: center;         /* 縦中央揃え */
+  gap: 8px;                    /* タイトルとアイコンの間隔 */
+  padding: .7em .9em;          /* クリックしやすい余白 */
+  cursor: pointer;             /* ポインタ表示 */
+  list-style: none;            /* Safariでのデフォルト三角を消す準備 */
+  font-weight: 600;            /* タイトルを中太に */
+  color: #102a43;              /* 文字色：濃い青みがかったグレー */
+  position: relative;          /* 必要に応じて擬似要素配置用 */
 }
 
-.faq-item > summary::-webkit-details-marker { display: none; } /* 既定の三角を消す */
+.faq-item > summary::-webkit-details-marker { display: none; } /* 既定の三角を完全に消す */
 
 .faq-item .faq-caret{
-  margin-left: auto;
-  transition: transform .2s ease;
+  margin-left: auto;           /* 右端に寄せる */
+  transition: transform .2s ease; /* 回転アニメを滑らかに */
 }
 
 /* 展開時の矢印回転 */
-.faq-item[open] .faq-caret{ transform: rotate(180deg); }
+.faq-item[open] .faq-caret{ transform: rotate(180deg); } /* 開いたら上下反転 */
 
-/* 回答部 */
+ /* 回答部 */
 .faq-answer{
-  padding: .8em .9em .9em;
-  color: #334e68;
-  line-height: 1.6;
-  border-top: 1px solid #eef2f6;
+  padding: .8em .9em .9em;    /* 内側余白（上左右下） */
+  color: #334e68;              /* 本文色 */
+  line-height: 1.6;            /* 読みやすい行高 */
+  border-top: 1px solid #eef2f6; /* 質問と回答の区切り線 */
 }
 
 /* ホバー/フォーカス等の操作性 */
-.faq-item > summary:hover{ background: #f7fbff; }
+.faq-item > summary:hover{ background: #f7fbff; } /* ホバーで淡い青背景 */
 .faq-item > summary:focus-visible{
-  outline: 2px solid #7db7ff;
+  outline: 2px solid #7db7ff;  /* キーボードフォーカスリング */
   outline-offset: 2px;
 }
 
 /* モバイルでの密度アップ */
 @media (max-width: 600px){
-  .faq-item { margin: 6px 0; }
-  .faq-item > summary{ padding: .6em .75em; }
-  .faq-answer{ padding: .7em .75em .8em; }
+  .faq-item { margin: 6px 0; }              /* アイテム間隔を詰める */
+  .faq-item > summary{ padding: .6em .75em; } /* タイトルの余白を縮小 */
+  .faq-answer{ padding: .7em .75em .8em; }    /* 回答部の余白も調整 */
 }
 
 /* 低モーション指向 */
 @media (prefers-reduced-motion: reduce){
-  .faq-item .faq-caret{ transition: none; }
+  .faq-item .faq-caret{ transition: none; } /* アニメを無効化 */
 }
-
 
 /* === Back-to-Top（モバイル固定／非侵襲） === */
 .back-to-top{
-  position: fixed;
-  right: 12px;
-  bottom: calc(12px + env(safe-area-inset-bottom)); /* iOSセーフエリア考慮 */
-  z-index: 999;
-  /* 既存の recommendation-top-link の外観（グレー基調）を踏襲 */
-  background: #f7f7f7;
-  border: 1px solid #d0d7de;
-  color: #333;
-  border-radius: 999px;
-  min-width: 44px; min-height: 44px; /* タップ領域 */
-  padding: 0 .6em;
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  transition: opacity .2s ease, box-shadow .2s ease, transform .2s ease;
-  opacity: 0;             /* 初期は非表示（JSで表示制御） */
-  pointer-events: none;    /* 非表示時はクリック不可 */
+  position: fixed;                                   /* 画面に固定 */
+  right: 12px;                                       /* 右下に配置 */
+  bottom: calc(12px + env(safe-area-inset-bottom));  /* iOSのセーフエリア考慮 */
+  z-index: 999;                                      /* 最前面付近に */
+  background: #f7f7f7;                               /* グレー基調（サイトと調和） */
+  border: 1px solid #d0d7de;                         /* 枠線 */
+  color: #333;                                       /* 文字色 */
+  border-radius: 999px;                              /* 楕円形ボタン */
+  min-width: 44px; min-height: 44px;                 /* タップ領域を確保 */
+  padding: 0 .6em;                                   /* 横方向の余白 */
+  display: flex; align-items: center; justify-content: center; /* アイコン中央配置 */
+  text-decoration: none;                             /* 下線なし */
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);             /* うっすら影で浮かせる */
+  transition: opacity .2s ease, box-shadow .2s ease, transform .2s ease; /* 表示・影・移動アニメ */
+  opacity: 0;                                        /* 初期は非表示（JSで制御） */
+  pointer-events: none;                               /* 非表示時はクリック不可 */
 }
 
 /* 表示状態（JSで .is-visible を付与） */
 .back-to-top.is-visible{
-  opacity: .5;
-  pointer-events: auto;
+  opacity: .5;                 /* 半透明で控えめ表示 */
+  pointer-events: auto;        /* クリック可能に */
 }
 .back-to-top:hover,
 .back-to-top:focus-visible{
-  opacity: 1;
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  opacity: 1;                  /* ホバー/フォーカスで完全表示 */
+  box-shadow: 0 4px 12px rgba(0,0,0,.12); /* 影を強める */
 }
 .back-to-top:focus-visible{
-  outline: 2px solid #7db7ff;
+  outline: 2px solid #7db7ff;  /* フォーカスリング */
   outline-offset: 2px;
 }
 
 /* モバイル優先：PCでは出さない */
 @media (min-width: 601px){
-  .back-to-top{ display: none; }
+  .back-to-top{ display: none; } /* PCでは非表示（常時見える必要性低） */
 }
 
 /* 低モーション配慮 */
 @media (prefers-reduced-motion: reduce){
-  .back-to-top{ transition: none; }
+  .back-to-top{ transition: none; } /* アニメ無効化で負荷軽減 */
 }
-

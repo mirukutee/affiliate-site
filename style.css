@@ -306,12 +306,12 @@ main {
   border: 1px solid #ddd;
   transition: all 0.3s ease;
   margin: 0.6rem 0 0.5rem;
- box-shadow: 5px 5px 15px 5px rgba(50, 150, 100, 0.8);
+   box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* 標準的な薄い影 */
 }
 
 .anime-item:hover {
-  box-shadow: -5px -5px 15px 5px rgba(0, 90, 255, 0.8);
-  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18); /* 少し強調するだけ */
+  transform: translateY(-4px);             /* 上昇幅も小さめに */
 }
 
 .anime-title {

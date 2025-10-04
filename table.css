@@ -231,3 +231,5 @@
   .table-responsive th,
   .table-responsive td{ padding:3px 5px; }
 }
+
+.table-card.xs th, .table-card.xs td { padding: .4em .6em; }

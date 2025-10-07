@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       </div>
-       <a href="#top" class="idjanp top-card">▲ページ上部へ戻る</a>
+    
     </section>
   </div>
   `;

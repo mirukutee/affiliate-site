@@ -13,7 +13,7 @@
    padding: 0 2px;   /* 上下0, 左右2 */
   text-align: center;
   vertical-align: middle;
-  word-break: break-word; /* 折り返して収める */
+  word-break: break-word; /*  折り返して収める */
 }
 
 .table-card th {
@@ -168,10 +168,11 @@
     padding-left: 0.45em;
     padding-right: 0.45em;
 }
-  .table-card colgroup col:nth-child(1) { width: 36%; } /* サービス */
-  .table-card colgroup col:nth-child(2) { width: 14%; } /* 通貨ペア数 */
-  .table-card colgroup col:nth-child(3) { width: 25%; } /* 注文/自動化 */
-  .table-card colgroup col:nth-child(4) { width: 25%; } /* 取引ツール */
+  .table-card colgroup col:nth-child(1) { width: 31%; } /* サービス */
+  .table-card colgroup col:nth-child(2) { width: 23%; } /* 通貨ペア数 */
+  .table-card colgroup col:nth-child(3) { width: 23%; } /* 注文/自動化 */
+  .table-card colgroup col:nth-child(4) { width: 23%; } /* 取引ツール */
+
 }
 
 /* 最後の列 左寄せを無効化 */
@@ -213,6 +214,9 @@
 .table-responsive col.col-reason { width:31%; }
 .table-responsive col.col-target { width:18%; }
 
+/* === 早見表：総合列ハイライト === */
+.table-card .highlight{ background:#fff6e6; font-weight:700; }
+
 /* ===== スマホ：0.6rem 固定 ===== */
 @media (max-width:600px){
   .table-responsive{
@@ -233,3 +237,105 @@
 }
 
 .table-card.xs th, .table-card.xs td { padding: .4em .6em; }
+
+/* 早見表専用クラス */
+
+/* ===== 早見表（4カラム）専用 ===== */
+
+.table-hayami{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.85rem;          /* 全体を少し圧縮 */
+  table-layout:fixed;        /* 列幅を安定 */
+}
+.table-hayami th,
+.table-hayami td{
+  border:1px solid #ccc;
+  padding:0 2px;             /* 上下0 / 左右2 */
+  text-align:center;
+  vertical-align:middle;
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+.table-hayami th{
+  background:#f0f8ff;
+  font-weight:600;
+  color:#0653a6;
+}
+
+/* サービスセルの中身を横並びに */
+.table-hayami .cell-flex{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.table-hayami .cell-flex > img{
+  max-width:none;            /* 他のimgルールを無効化 */
+  width:45px; height:45px;   /* CLS防止 */
+  object-fit:contain;
+  border-radius:3px;
+}
+/* 1列目だけ余白を少し広めに */
+.table-hayami th:first-child,
+.table-hayami td:first-child{
+  padding:2px 6px;
+}
+/* 2列目以降は標準余白 */
+.table-hayami th:not(:first-child),
+.table-hayami td:not(:first-child){
+  padding:4px 6px;
+}
+
+/* サービス名の折返し最適化 */
+.table-hayami .cell-flex .info span{
+  font-weight:600;
+  font-size:.75rem;
+  line-height:1.2;
+}
+.table-hayami .cell-flex .info small{
+  font-size:.65rem;
+  color:#666;
+  line-height:1.1;
+}
+
+/* テーブル内リンクの見た目 */
+.table-hayami td a{
+  color:#067aff;
+  font-weight:600;
+  font-size:.7rem;
+}
+.table-hayami td a:hover{ text-decoration:underline; }
+
+/* PC時の4カラム幅＆揃え（1列目は左寄せ） */
+@media (min-width:1024px){
+  .table-hayami colgroup col:nth-child(1){ width:36%; } /* サービス */
+  .table-hayami colgroup col:nth-child(2){ width:25%; } /* 手数料 */
+  .table-hayami colgroup col:nth-child(3){ width:15%; } /* 銘柄数 */
+  .table-hayami colgroup col:nth-child(4){ width:24%; } /* スマホアプリ */
+
+  .table-hayami th:nth-child(1),
+  .table-hayami td:nth-child(1){ text-align:left; }
+  .table-hayami th:nth-child(2),
+  .table-hayami td:nth-child(2),
+  .table-hayami th:nth-child(3),
+  .table-hayami td:nth-child(3),
+  .table-hayami th:nth-child(4),
+  .table-hayami td:nth-child(4){ text-align:center; }
+}
+
+/* スマホ微調整：文字＆ロゴを少し縮小 */
+@media (max-width:420px){
+  .table-hayami{ font-size:.8rem; }
+  .table-hayami .cell-flex > img{ width:40px; height:40px; }
+}
+
+/* スマホアプリ用バッジ */
+.app-badge{
+  display:inline-block;
+  padding:.2em .6em;
+  border-radius:999px;
+  font-size:.9em;
+  border:1px solid #d0d7de;
+}
+.app-badge.ok{ background:#eef6ff; border-color:#9ec5fe; }
+.app-badge.na{ background:#f6f8fa; }

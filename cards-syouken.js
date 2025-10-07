@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>
 
       <a href="https://mirukutee.github.io/affiliate-site/GMO-syouken.html" class="card">
-        <img src="sonota/top.png" alt="GMOクリック証券のバナー" loading="lazy" width="300" height="250">
+        <img src="Xcard/imagesender.gif" alt="GMOクリック証券のバナー" loading="lazy" width="300" height="250">
         <span>GMOクリック証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
       </a>
 
@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="Xcard/imagesender.png" alt="トライオートCFDのバナー" loading="lazy" width="300" height="250">
         <span>トライオートCFD<br><small class="fee-rating fee-na">手数料</small></span>
       </a>
+
 
       </div>
        <a href="#top" class="idjanp top-card">▲ページ上部へ戻る</a>

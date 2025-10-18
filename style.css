@@ -891,8 +891,13 @@ font-size: 11.5px;
 
 
 
-
-
+/* === レビューのアイコン === */
+.pros-list li > span[aria-hidden="true"],
+.cons-list li > span[aria-hidden="true"] { 
+  display:inline-block; width:1.2em; text-align:center; 
+}
+.pros-list li > span[aria-hidden="true"] { color:#1e7a1e; font-weight:700; }
+.cons-list li > span[aria-hidden="true"] { color:#b00020; font-weight:700; }
 
 
 

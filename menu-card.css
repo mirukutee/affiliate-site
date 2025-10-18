@@ -430,3 +430,45 @@ html{ scroll-behavior: smooth; }               /* スムーズスクロール */
 @media (prefers-reduced-motion: reduce){
   .back-to-top{ transition: none; } /* アニメ無効化で負荷軽減 */
 }
+
+
+.review {
+  display: flex;                 /* 中の要素を横並び */
+  justify-content: flex-start;   /* 左寄せ */
+  align-items: center;           /* 縦位置を中央に */
+  border: 1px solid #d0d7de;     /* 枠線 */
+  border-radius: 6px;            /* 角丸 */
+  padding: 6px 10px;             /* 内側の余白 */
+  background: #fff;              /* 背景（カード風） */
+  flex-wrap: wrap;
+  margin: 0 auto;                /* 中央寄せ */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.review:hover {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;                      /* 画像とテキストの間隔 */
+  text-decoration: none;
+  color: #333;
+}
+
+.review-card img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 3px;
+  flex-shrink: 0;                /* 画像が潰れないように */
+}
+
+.review-card span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}

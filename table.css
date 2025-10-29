@@ -405,7 +405,7 @@
   box-shadow:none;
 }
 
-/* ベース（共通） */
+/* 画像（共通） */
 .table-ranking .ranking-flex img{
   display:block;
   max-width:none;          /* 既存の max-width:100% を無効化 */

@@ -339,3 +339,180 @@
 }
 .app-badge.ok{ background:#eef6ff; border-color:#9ec5fe; }
 .app-badge.na{ background:#f6f8fa; }
+
+
+/* ランキングコンテンツ */
+/* ========== ランキング：共通ベース ========== */
+.table-ranking{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+  font-size:.85rem;
+  line-height:1.25;
+}
+.table-ranking th,
+.table-ranking td{
+  border:1px solid #ccc;
+  padding: 0.5px 1px; 
+  text-align:center;
+  vertical-align:middle;
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+
+.table-ranking thead th{
+  background:#f0f8ff;
+  font-weight:700;
+  color:#0653a6;
+}
+.table-ranking th[scope="row"]{
+  font-weight:700;
+  color:#333;
+}
+
+/* リンク＆中身（ロゴ→名称） */
+.ranking-jump {
+  display:block;
+  text-decoration:none;
+  color:inherit;               /* 全体の文字色は親から継承 */
+  transition: all .2s ease;    /* ホバーアニメ */
+}
+
+.ranking-flex {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  padding:4px 0;
+  color:#0653a6;               /* テキスト色（青みの信頼色） */
+  text-decoration:none;
+  border-radius:6px;
+  background:transparent;      /* 通常は透明 */
+  transition: background .2s, transform .2s;
+}
+
+/* --- ホバーでふわっと浮かせる --- */
+.ranking-jump:hover .ranking-flex {
+  background:#f0f8ff;          /* 淡い水色の反応 */
+  transform:translateY(-1px);
+  box-shadow:0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* --- クリック時（押下時） --- */
+.ranking-jump:active .ranking-flex {
+  transform:translateY(0);
+  box-shadow:none;
+}
+
+/* ベース（共通） */
+.table-ranking .ranking-flex img{
+  display:block;
+  max-width:none;          /* 既存の max-width:100% を無効化 */
+  object-fit:contain;
+  border-radius:3px;
+}
+
+/* 超小型：is-ultra 用の確定サイズ（上書きはこれだけに統一） */
+.table-ranking.is-ultra .ranking-flex img{
+  width:60px !important;   /* テーマ側の width:100% を確実に潰す */
+  height:60px !important;
+}
+
+/* 360px以下の最終微調整（任意） */
+@media (max-width:360px){
+  .table-ranking.is-ultra .ranking-flex img{
+    width:40px !important;
+    height:40px !important;
+  }
+}
+
+.table-ranking.is-ultra .ranking-info span {
+  display: block;
+  font-size: .7rem;         /* ← .76 → .7 に圧縮 */
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0;        /* 詰めると省スペース */
+  line-height: 1.05;        /* 文字高さを詰める */
+  margin-top: 0;            /* 余白を完全カット */
+}
+
+
+
+/* 備考の最小スタイル（任意） */
+.note.small{ font-size:.8rem; color:#555; margin:.5em 0 0; }
+
+/* ========== 極小レイアウト（スマホ一瞥用） ========== */
+.table-ranking.is-ultra{
+  font-size:.72rem;       /* さらに圧縮 */
+  line-height:1.12;
+}
+.table-ranking.is-ultra th,
+.table-ranking.is-ultra td{
+  padding:2px 2px;        /* 余白を極小に */
+}
+
+/* 列幅：合計100%（順/会社/料金/使やすさ/特徴） */
+.table-ranking.is-ultra col:nth-child(1){ width:10%; }  /* 順 */
+.table-ranking.is-ultra col:nth-child(2){ width:36%; }  /* 会社（ロゴ+名） */
+.table-ranking.is-ultra col:nth-child(3){ width:18%; }  /* 料金 */
+.table-ranking.is-ultra col:nth-child(4){ width:18%; }  /* 使やすさ */
+.table-ranking.is-ultra col:nth-child(5){ width:18%; }  /* 特徴 */
+
+/* ロゴも極小化 */
+.table-ranking.is-ultra .ranking-jump > img{
+  width:28px; height:28px;
+  border-radius:3px;
+}
+
+/* 1位をほんのり強調（好みで） */
+.table-ranking.is-ultra tbody tr:first-child{ background:#fffdf2; }
+
+/* 360px以下の端末での最終微調整 */
+@media (max-width:360px){
+  .table-ranking.is-ultra{ font-size:.7rem; }
+  .table-ranking.is-ultra .ranking-jump > img{
+    width:26px; height:26px;
+  }
+}
+
+
+/* PCのみで中央寄せ＋高さ調整 */
+@media (min-width:768px){
+  .table-ranking {
+    max-width:700px;          /* テーブル幅の上限 */
+    margin: 1.2em auto;       /* 上下余白を少し広めに */
+  }
+  .table-ranking.is-ultra th,
+  .table-ranking.is-ultra td {
+    padding:4px 6px;          /* PCでは少しゆとりを戻す */
+  }
+
+}
+
+/* テーブル内ロゴの強制ミニサイズ（はみ出し防止） */
+.table-ranking .ranking-flex img{
+  display:block;
+  max-width:none !important;
+  width:26px !important;
+  height:26px !important;
+  object-fit:contain;
+  border-radius:3px;
+}
+@media (max-width:360px){
+  .table-ranking .ranking-flex img{ width:24px !important; height:24px !important; }
+}
+
+.ranking-jump{ display:block; color:inherit; text-decoration:none; }
+.ranking-flex{
+  transition: background .2s, transform .2s, box-shadow .2s;
+  border-radius:6px;
+}
+.ranking-jump:hover .ranking-flex{
+  background:#f0f8ff;
+  transform:translateY(-1px);
+  box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+.ranking-jump:active .ranking-flex{
+  transform:translateY(0); box-shadow:none;
+}

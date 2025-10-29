@@ -405,10 +405,13 @@
   box-shadow:none;
 }
 
+
+
+
 /* 画像（共通） */
 .table-ranking .ranking-flex img{
   display:block;
-  max-width:none;          /* 既存の max-width:100% を無効化 */
+  max-width:none !important;          /* 既存の max-width:100% を無効化 */
   object-fit:contain;
   border-radius:3px;
 }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="canonical" href="https://tousiportal.jp/kasoutuuka-zukan.html" />
+
+  <title>仮想通貨図鑑（スマホ速読版）｜主要コインの特徴を一行で</title>
+  <meta name="description" content="スマホでサクッと確認できる仮想通貨図鑑。BTC/ETH/XRP…主要コインの特徴を一行で速読。初心者〜中級者向けの要点メモ。">
+
+  <!-- OGP / Twitter -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="仮想通貨図鑑（スマホ速読版）" />
+  <meta property="og:description" content="主要コインの特徴を一行要約でチェック。ブクマしていつでも参照。" />
+  <meta property="og:url" content="https://tousiportal.jp/kasoutuuka-zukan.html" />
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/coin-zukan.png" />
+  <meta property="og:site_name" content="投資ポータル" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Styles: 既存CSSにフル準拠 -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="amphtml" href="AMP.html" />
+
+  <style>
+    /* 速読向けの最小追加（既存デザインに沿う） */
+    .zukan-search {
+      position: sticky; top: 0; z-index: 5;
+      background: #ffffffee; backdrop-filter: blur(3px);
+      border: 1px solid #d0d7de; border-radius: 8px;
+      padding: .55rem .7rem; margin: .4rem 0 .6rem;
+      display: flex; gap: .5rem; align-items: center;
+    }
+    .zukan-search input {
+      width: 100%; border: 1px solid #d0d7de; border-radius: 8px;
+      padding: .55rem .7rem; font-size: .95rem;
+    }
+    .coin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 8px;
+    }
+    .coin-chip {
+      display: flex; flex-direction: column; gap: 2px;
+      padding: .6rem .7rem; border: 1px solid #d0d7de; border-radius: 10px;
+      background: #fff; text-decoration: none; color: #0653a6;
+      transition: background .15s ease, box-shadow .15s ease, transform .1s ease;
+      min-height: 56px;
+    }
+    .coin-chip:hover { background: #f0f8ff; box-shadow: 0 2px 6px rgba(0,0,0,.06); transform: translateY(-1px); }
+    .coin-chip b { font-size: .95rem; }
+    .coin-chip small { font-size: .72rem; color: #555; line-height: 1.25; }
+    .coin-section h3 { margin: .25rem 0 .4rem; font-size: 1.05rem; }
+    @media (max-width: 600px){
+      .coin-grid{ grid-template-columns: repeat(2, 1fr); gap: 6px; }
+      .coin-chip{ padding: .5rem .6rem; }
+      .coin-chip b{ font-size: .9rem; }
+      .coin-chip small{ font-size: .68rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main">
+      <!-- パンくず -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item active" aria-current="page">仮想通貨図鑑（スマホ速読版）</li>
+        </ol>
+      </nav>
+
+      <h1 class="title">仮想通貨図鑑（スマホ速読版）</h1>
+      <p class="session-card--compact">
+        ブクマ推奨📌 主要コインの<strong>特徴を一行</strong>で速読。検索BOXで絞り込み。個別ページは順次拡充予定。
+      </p>
+
+      <!-- 検索 -->
+      <div class="zukan-search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23C15.99 6.01 13.98 4 11.49 4S7 6.01 7 9s2.01 5 4.49 5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l4.25 4.25c.41.41 0 1.06-.53 1.06H20a.75.75 0 0 1-.53-.22L15.5 14Zm-4.01 0C9.01 14 7 11.99 7 9s2.01-5 4.49-5S16 6.01 16 9s-2.01 5-4.51 5Z"/></svg>
+        <input id="filter" type="search" placeholder="例）BTC, イーサ, 送金, スマコン, ステーブル…" aria-label="コイン名・特徴で絞り込み">
+      </div>
+
+      <!-- 主要コイン -->
+      <section class="anime-item coin-section" id="major">
+        <h2 class="anime-title">主要コイン</h2>
+        <div class="coin-grid" id="grid-major">
+          <a class="coin-chip" href="#btc" data-tags="btc ビットコイン pow デジタルゴールド 価値保存">
+            <b>BTC｜ビットコイン</b>
+            <small>初の仮想通貨。発行上限ありの価値保存性（PoW）</small>
+          </a>
+          <a class="coin-chip" href="#eth" data-tags="eth イーサリアム スマートコントラクト defi nft pos l2">
+            <b>ETH｜イーサリアム</b>
+            <small>スマートコントラクト基盤。DeFi/NFTの中心（PoS）</small>
+          </a>
+          <a class="coin-chip" href="#xrp" data-tags="xrp リップル 送金 ブリッジ 決済 高速 低コスト">
+            <b>XRP｜リップル</b>
+            <small>高速・低コスト送金に強み。ブリッジ資産の文脈で活用</small>
+          </a>
+          <a class="coin-chip" href="#bnb" data-tags="bnb バイナンス スマートチェーン defi 手数料">
+            <b>BNB｜バイナンスコイン</b>
+            <small>BSC系エコシステム。手数料優遇などユースケースあり</small>
+          </a>
+          <a class="coin-chip" href="#ada" data-tags="ada カルダノ pos 研究志向 スマートコントラクト">
+            <b>ADA｜カルダノ</b>
+            <small>研究志向の開発体制。PoSチェーンでスマコン対応</small>
+          </a>
+          <a class="coin-chip" href="#sol" data-tags="sol ソラナ 高速 低手数料 dapps defi nft">
+            <b>SOL｜ソラナ</b>
+            <small>高速処理と低手数料でDAppsが活発</small>
+          </a>
+          <a class="coin-chip" href="#doge" data-tags="doge ドージ ライト memecoin コミュニティ">
+            <b>DOGE｜ドージコイン</b>
+            <small>コミュニティ色の強いメメ系。ライトコイン系譜</small>
+          </a>
+          <a class="coin-chip" href="#dot" data-tags="dot ポルカドット 相互運用 パラチェーン">
+            <b>DOT｜ポルカドット</b>
+            <small>異なるチェーンの相互運用を志向（パラチェーン）</small>
+          </a>
+          <a class="coin-chip" href="#avax" data-tags="avax アバランチ 高速 サブネット pos">
+            <b>AVAX｜アバランチ</b>
+            <small>独自コンセンサスとサブネットで拡張性を追求</small>
+          </a>
+          <a class="coin-chip" href="#trx" data-tags="trx トロン 送金 手数料安 ステーブル決済">
+            <b>TRX｜トロン</b>
+            <small>送金・決済に用いられる場面が多いチェーン</small>
+          </a>
+          <a class="coin-chip" href="#matic" data-tags="matic polygon ポリゴン l2 スケーリング">
+            <b>MATIC｜Polygon</b>
+            <small>スケーリング/L2系のエコシステムを展開</small>
+          </a>
+          <a class="coin-chip" href="#link" data-tags="link チェーンリンク オラクル データ 連携">
+            <b>LINK｜チェーンリンク</b>
+            <small>オンチェーンに外部データを供給するオラクル</small>
+          </a>
+          <a class="coin-chip" href="#ltc" data-tags="ltc ライトコイン 送金 速い 手数料安">
+            <b>LTC｜ライトコイン</b>
+            <small>決済寄りの軽量設計。送金での利用歴が長い</small>
+          </a>
+          <a class="coin-chip" href="#bch" data-tags="bch ビットコインキャッシュ 決済 ブロック拡張">
+            <b>BCH｜ビットコインキャッシュ</b>
+            <small>決済志向でブロック拡張を重視</small>
+          </a>
+          <a class="coin-chip" href="#xlm" data-tags="xlm ステラ 送金 リテール 国際送金">
+            <b>XLM｜ステラ</b>
+            <small>個人間送金や国際送金の文脈で採用</small>
+          </a>
+          <a class="coin-chip" href="#atom" data-tags="atom cosmos 相互運用 ibc ハブ">
+            <b>ATOM｜Cosmos</b>
+            <small>IBCでチェーン間連携。ハブ的な役割</small>
+          </a>
+          <a class="coin-chip" href="#algo" data-tags="algo アルゴランド 最終性 速い 学術">
+            <b>ALGO｜アルゴランド</b>
+            <small>高速最終性と学術系アプローチ</small>
+          </a>
+          <a class="coin-chip" href="#apt" data-tags="apt aptos move 言語 高性能">
+            <b>APT｜Aptos</b>
+            <small>Move言語を採用した高性能チェーン</small>
+          </a>
+          <a class="coin-chip" href="#sui" data-tags="sui sui move オブジェクト指向 高速">
+            <b>SUI｜Sui</b>
+            <small>オブジェクト指向の設計で並列実行に強み</small>
+          </a>
+          <a class="coin-chip" href="#op" data-tags="op optimism l2 ロールアップ ethereum">
+            <b>OP｜Optimism</b>
+            <small>EthereumのL2ロールアップ系トークン</small>
+          </a>
+          <a class="coin-chip" href="#arb" data-tags="arb arbitrum l2 ロールアップ ethereum">
+            <b>ARB｜Arbitrum</b>
+            <small>L2ロールアップの大手エコシステム</small>
+          </a>
+        </div>
+      </section>
+
+      <!-- ステーブルコイン -->
+      <section class="anime-item coin-section" id="stable">
+        <h2 class="anime-title">ステーブルコイン</h2>
+        <div class="coin-grid" id="grid-stable">
+          <a class="coin-chip" href="#usdt" data-tags="usdt テザー ドル連動 ステーブル 決済">
+            <b>USDT｜テザー</b>
+            <small>米ドル連動の代表格。決済・換算の基軸に使われる</small>
+          </a>
+          <a class="coin-chip" href="#usdc" data-tags="usdc サークル ドル連動 ステーブル">
+            <b>USDC｜USDコイン</b>
+            <small>米ドル連動。透明性を意識した運用で普及</small>
+          </a>
+          <a class="coin-chip" href="#dai" data-tags="dai メイカー dao 担保型 ステーブル defi">
+            <b>DAI｜メイカー</b>
+            <small>担保型の分散型ステーブル。DeFiで広く利用</small>
+          </a>
+        </div>
+      </section>
+
+      <!-- 関連リンク -->
+      <section class="anime-item">
+        <h2 class="anime-title">関連リンク</h2>
+        <div class="recommendation-grid">
+          <a class="recommendation-link" href="kasoutuuka-itiran.html"><i class="fa-regular fa-square-caret-right"></i>仮想通貨取引所を比較 </a>
+          <a class="recommendation-link" href="kasoutuukakaikata.html"><i class="fa-regular fa-handshake"></i>仮想通貨の買い方・始め方</a>
+          <a class="recommendation-link" href="zeikinn.html"><i class="fa-regular fa-file-lines"></i>仮想通貨の税金・確定申告</a>
+        </div>
+      </section>
+
+      <a href="#main" class="back-to-top" id="backToTop" aria-label="ページの先頭へ">▲</a>
+      <p class="update-badge"><span>最終更新</span>：<time datetime="2025-11-13">2025-11-13</time></p>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <!-- 共通JS -->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
+  <!-- 絞り込み＆Back-to-Top -->
+  <script>
+    (function(){
+      const input = document.getElementById('filter');
+      const chips = Array.from(document.querySelectorAll('.coin-chip'));
+      input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        chips.forEach(el => {
+          const text = (el.textContent || '').toLowerCase();
+          const tags = (el.getAttribute('data-tags') || '').toLowerCase();
+          const hit = !q || text.includes(q) || tags.includes(q);
+          el.style.display = hit ? '' : 'none';
+        });
+      });
+
+      // Back to top visibility
+      const btt = document.getElementById('backToTop');
+      const onScroll = () => {
+        if (window.scrollY > 280) {
+          btt.classList.add('is-visible');
+        } else {
+          btt.classList.remove('is-visible');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

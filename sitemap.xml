@@ -51,4 +51,31 @@
   <url><loc>https://tousiportal.jp/ad-disclosure.html</loc><lastmod>2025-10-17</lastmod></url>
    <url><loc>https://tousiportal.jp/userreview.html</loc><lastmod>2025-10-18</lastmod></url>
    <url><loc>https://tousiportal.jp/ranking.html</loc><lastmod>2025-10-29</lastmod></url>
+   <url><loc>https://tousiportal.jp/fx-tsuukapair-zukan.html</loc><lastmod>2025-11-13</lastmod></url>
+   <url><loc>https://tousiportal.jp/kasoutuuka-zukan.html</loc><lastmod>2025-11-13</lastmod></url>
+<url>
+  <loc>https://tousiportal.jp/fx/usd-jpy.html</loc>
+  <lastmod>2025-11-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://tousiportal.jp/fx/eur-usd.html</loc>
+  <lastmod>2025-11-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://tousiportal.jp/fx/gbp-jpy.html</loc>
+  <lastmod>2025-11-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://tousiportal.jp/fx/aud-jpy.html</loc>
+  <lastmod>2025-11-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
 </urlset>

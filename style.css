@@ -176,48 +176,23 @@ nav[aria-label="breadcrumb"] .breadcrumb {
 }
 
 
-/* ===== 背景アニメーション・装飾 ===== */
+
+/* ===== 背景を静止グラデーションに変更 ===== */
 html, body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(90deg, #fff, #bccbd1 40%, #b3feff);
-  background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite;
-  background-attachment: fixed;
+  background: linear-gradient(90deg, #c2cfda, #a1e0f0 60%, #64c5cf);
+  background-attachment: scroll;   /* fixed → scroll */
+  background-size: cover;
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   padding-bottom: 0;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-    radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px, 20px 20px;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
-  animation: noiseMove 60s linear infinite;
-}
-
-@keyframes noiseMove {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
+/* body::before 削除 or 静的パターンにする */
 
 
 /* ========== ▼ フッター（統一） ========== */

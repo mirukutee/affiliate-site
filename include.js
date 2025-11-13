@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error(`[include] ${url} load error:`, err));
   };
 
-  inject("header", "header.html");
-  inject("footer", "footer.html");
+  inject("header", "/header.html");
+  inject("footer", "/footer.html");
 });

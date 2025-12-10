@@ -1,132 +1,252 @@
-
-<!-- File: AMP/FX-syoukai.html -->
 <!doctype html>
 <html amp lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>FX会社を比較【2025年】初心者〜中級者向け一覧｜通貨ペア・スプレッド・ツールで選ぶ（AMP）</title>
+  <title>★ここにタイトル</title>
+
+  <link rel="canonical" href="★ここにcanonical URL">
+  <meta name="description" content="★ここにdescription">
+
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="description" content="主要FX会社を比較。通貨ペア数／スプレッド／注文・自動化／取引ツールを表でサクッと確認。各社のメリットも1分で把握。FAQ4つ付き。">
-  <link rel="canonical" href="../FX-syoukai.html">
+
+  <!-- AMP本体 -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-  <!-- structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/affiliate-site/index.html"},
-      {"@type":"ListItem","position":2,"name":"FX会社一覧比較","item":"https://mirukutee.github.io/affiliate-site/FX-syoukai.html"}
-    ]
-  }
-  </script>
+  <!-- 必要ならコンポーネント（例：accordion） -->
+  <!--
+  <script async custom-element="amp-accordion"
+          src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  -->
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"FX会社一覧（取引性能重視）",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"LION FX","url":"https://mirukutee.github.io/affiliate-site/LION-FX.html"},
-      {"@type":"ListItem","position":2,"name":"三菱UFJ eスマート証券FX","url":"https://mirukutee.github.io/affiliate-site/MUFGfx.html"},
-      {"@type":"ListItem","position":3,"name":"マネックス証券 FX PLUS","url":"https://mirukutee.github.io/affiliate-site/Monex-FX.html"},
-      {"@type":"ListItem","position":4,"name":"サクソバンク証券 FX","url":"https://mirukutee.github.io/affiliate-site/saxo-fx.html"},
-      {"@type":"ListItem","position":5,"name":"フジトミ証券 シストレセレクト365","url":"https://mirukutee.github.io/affiliate-site/fujimi-fx.html"},
-      {"@type":"ListItem","position":6,"name":"ひまわり証券 ループイフダン等","url":"https://mirukutee.github.io/affiliate-site/himawari-fx-.html"},
-      {"@type":"ListItem","position":7,"name":"松井証券FX","url":"https://mirukutee.github.io/affiliate-site/matsui-FX.html"},
-      {"@type":"ListItem","position":8,"name":"外為ファイネスト","url":"https://mirukutee.github.io/affiliate-site/gaifine-fx.html"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"口座開設はどのくらいで完了しますか？","acceptedAnswer":{"@type":"Answer","text":"最短即日〜3営業日ほどです。本人確認方法により異なります。"}},
-      {"@type":"Question","name":"スプレッドはいつでも同じですか？","acceptedAnswer":{"@type":"Answer","text":"原則固定でも相場急変時は拡大することがあります。最新状況は各社公式でご確認ください。"}},
-      {"@type":"Question","name":"自動売買（シストレ）は使えますか？","acceptedAnswer":{"@type":"Answer","text":"対応の有無は会社により異なります。裁量取引専用の口座もあります。"}},
-      {"@type":"Question","name":"初心者はどの基準で選ぶべき？","acceptedAnswer":{"@type":"Answer","text":"通貨ペア数・スプレッド・約定力・ツールの使いやすさ・学習サポートを重視しましょう。"}}
-    ]
-  }
-  </script>
-
+  <!-- AMP必須ボイラープレート -->
   <style amp-boilerplate>
-    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         animation:-amp-start 8s steps(1,end) 0s 1 normal both}
     @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
   </style>
-  <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
 
+  <!-- この中に必要なぶんだけCSS（75KB以内） -->
   <style amp-custom>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;line-height:1.7;color:#222;background:#fff;margin:0}
-    header,main,footer{max-width:960px;margin:0 auto;padding:16px}
-    .breadcrumb{font-size:.9rem;color:#666;margin:8px 0}
-    .title{font-size:1.6rem;margin:8px 0 16px}
-    .anime-title{font-size:1.25rem;margin:24px 0 8px}
-    .session-card{border:1px solid #eee;border-radius:12px;padding:12px;margin:8px 0;background:#fafafa}
-    .mini-list{padding-left:20px;margin:8px 0}
-    .table-card{width:100%;border-collapse:collapse;font-size:.95rem}
-    .table-card th,.table-card td{border:1px solid #e5e7eb;padding:10px;vertical-align:top}
-    .cell-flex{display:flex;gap:10px;align-items:center}
-    .info span{font-weight:600}
-    .cta-button-hikaku{display:inline-block;border-radius:10px;overflow:hidden}
-    .recommendation-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .recommendation-link{display:inline-block;text-decoration:none;border:1px solid #e5e7eb;border-radius:10px;padding:8px 12px}
-    .top-link{display:inline-block;margin-top:8px}
-    .faq{margin:12px 0}
-    .muted{color:#666;font-size:.9rem}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0 8px 24px;
+    }
+    header.site-header {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px 4px 8px;
+      text-align: center;
+    }
+    header.site-header h1 {
+      font-size: 1.2rem;
+      margin: 0 0 4px;
+    }
+    header.site-header p.lead {
+      margin: 0;
+      font-size: .9rem;
+      color: #555;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .section-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 12px 10px;
+      margin-top: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    }
+    .section-card h2 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      padding-left: 8px;
+      border-left: 4px solid #0366d6;
+    }
+    .note {
+      font-size: .8rem;
+      color: #666;
+    }
+    footer.site-footer {
+      max-width: 980px;
+      margin: 16px auto 0;
+      padding: 12px 4px;
+      font-size: .75rem;
+      text-align: center;
+      color: #777;
+    }
   </style>
 </head>
-<body>
-<header>
-  <nav class="breadcrumb"><a href="../index.html">ホーム</a> › FX会社一覧比較</nav>
-  <h1 id="top" class="title">FX会社一覧比較</h1>
-</header>
 
-<main>
+<body>
+  <header class="site-header">
+    <h1>★ここにH1（見出し）</h1>
+    <p class="lead">★ここに一文リード（任意）</p>
+  </header>
+
+ <main>
+  <!-- パンくず（style.cssのbreadcrumbを使用） -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+      <li class="breadcrumb-item active" aria-current="page">FX口座一覧比較</li>
+    </ol>
+  </nav>
+
+  <!-- H1 -->
+  <header class="anime-item" id="hero">
+    <h1 class="title">主要FX口座を一覧比較 — 初心者〜中級者向け</h1>
+    <p class="lead">
+      スプレッド・自動売買・ツールの使いやすさを基準に、主要FX口座を一目で比較できます。迷ったら<strong>「編集部おすすめ」</strong>からどうぞ。
+    </p>
+
+    <nav class="purpose-nav" aria-label="目的別ジャンプ">
+      <a href="#minna-fx">初心者向け</a>
+      <a href="#minna-fx">スプレッド重視</a>
+      <a href="#iNET">自動売買</a>
+      <a href="#FINEST-FX">高機能ツール</a>
+    </nav>
+
+    <p class="update-badge">
+      <span>最終更新</span>
+      <time datetime="2025-10-04">2025年10月4日</time>
+    </p>
+  </header>
+
+  <section class="anime-item" aria-labelledby="quick-compare-title">
+    <h2 class="anime-title" id="quick-compare-title">早見表（要点比較）</h2>
+    <table class="table-card pc-fit xs">
+      <colgroup>
+        <col><col><col><col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>スプレッド</th>
+          <th>自動売買</th>
+          <th>ツール</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a class="idjanp" href="#minna-fx">みんなのFX</a></td>
+          <td>狭い水準</td>
+          <td>×</td>
+          <td>直感UI</td>
+        </tr>
+        <tr>
+          <td><a class="idjanp" href="#iNET">アイネットFX</a></td>
+          <td>標準</td>
+          <td>ループイフダン◎</td>
+          <td>稼働管理が簡単</td>
+        </tr>
+        <tr>
+          <td><a class="idjanp" href="#FINEST-FX">外為ファイネスト</a></td>
+          <td>安定</td>
+          <td>×</td>
+          <td>分析充実</td>
+        </tr>
+        <tr>
+          <td><a class="idjanp" href="#fujimi-fx">フジトミ証券（シストレ365）</a></td>
+          <td>標準</td>
+          <td>シストレ◯</td>
+          <td>選べる戦略</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="anime-item" aria-labelledby="editors-pick-title">
+    <h2 class="anime-title" id="editors-pick-title">当サイトおすすめ</h2>
+    <div class="recommend-cards">
+      <article class="recommend-card" id="for-beginner">
+        <h3>初心者◎</h3>
+        <p>まずはUIが分かりやすい口座から。</p>
+        <a class="btn" href="#minna-fx">みんなのFXを見る</a>
+      </article>
+      <article class="recommend-card" id="for-spread">
+        <h3>スプレッド重視◎</h3>
+        <p>約定コストを抑えたい人向け。</p>
+        <a class="btn" href="#minna-fx">みんなのFXを見る</a>
+      </article>
+      <article class="recommend-card" id="for-auto">
+        <h3>自動売買◎</h3>
+        <p>システム稼働を手軽に始めたい。</p>
+        <a class="btn" href="#iNET">アイネットFXを見る</a>
+      </article>
+    </div>
+  </section>
+
   <section class="anime-item">
-    <h2 class="anime-title">FX会社を選ぶ方に向け、通貨ペア・スプレッド・ツールを中心に比較しました。</h2>
-    <div class="session-card">
-      <strong>このページの使い方</strong>
+    <h2 class="anime-title">FX口座を選ぶ方へ</h2>
+    <div class="session-card session-card--compact">
+      <h3 class="anime-title anime-title--mini">このページの使い方</h3>
       <ul class="mini-list">
-        <li>① 性能比較表で全体像</li>
-        <li>② 気になる口座は「詳細」へ</li>
-        <li>③ 目的別リンクで横断チェック</li>
+        <li>① 早見表で「通貨ペア・スプレッド・注文・ツール」を横断比較</li>
+        <li>② 気になるFX口座を「詳細」で確認</li>
+        <li>③ 目的別リンクで最短ルート選定</li>
       </ul>
     </div>
-    <div class="session-card">
-      <strong>選び方の要点</strong>
+  </section>
+
+  <!-- 導入UL（syoukensyoukai.htmlの書式を踏襲） -->
+  <section class="anime-item">
+    <h2 class="anime-title">FX口座の選び方｜比較で見るべき4つの基準</h2>
+    <div class="session-card session-card--compact">
+      <h3 class="anime-title anime-title--mini">選び方の要点</h3>
       <ul class="mini-list">
-        <li>通貨ペア数とマイナー通貨の有無</li>
-        <li>スプレッドの安定性と原則固定の範囲</li>
-        <li>自動売買や細かな注文の対応</li>
+        <li>通貨ペア数とマイナー通貨の対応有無</li>
+        <li>スプレッドの安定性と「原則固定」の範囲</li>
+        <li>自動売買や多彩な注文方式への対応</li>
         <li>アプリ／PCツールの使いやすさ</li>
       </ul>
     </div>
   </section>
 
+  <!-- 比較表（table.cssの.table-cardを使用） -->
   <section class="anime-item">
-    <h2 class="anime-title">FXの表比較</h2>
+    <h2 class="anime-title" id="top">FXの表比較</h2>
     <table class="table-card">
-      <caption class="muted">当サイト管理人が調べた情報です。取引前に各社公式の最新情報をご確認ください。</caption>
+      <caption>当サイト管理人が調べた情報です。取引前に各社公式の最新情報をご確認ください。</caption>
+      <colgroup>
+        <col><!-- サービス -->
+        <col><!-- 通貨ペア数 -->
+        <col><!-- 注文/自動化 -->
+        <col><!-- 取引ツール -->
+      </colgroup>
       <thead>
         <tr>
-          <th>サービス</th><th>通貨ペア数</th><th>注文/自動化</th><th>取引ツール</th>
+          <th>サービス</th>
+          <th>通貨ペア数</th>
+          <th>注文/自動化</th>
+          <th>取引ツール</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <a href="#LION-FX" title="LION FXの詳細へ">
+            <a href="#LION-FX" class="idjanp" title="LION FXの詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/240_240.gif" width="60" height="60" alt="LION FX バナー"></amp-img>
-                <div class="info"><span>LION FX</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/240_240.gif" alt="LION FX バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>LION FX</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -134,12 +254,16 @@
           <td>27種の注文<br>自動売買×</td>
           <td>スマホ<br>PC</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#MUFGfx" title="三菱UFJ eスマート証券FXの詳細へ">
+            <a href="#MUFGfx" class="idjanp" title="三菱UFJ eスマート証券FXの詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/300x250.jpg" width="60" height="60" alt="三菱UFJ eスマート証券FX バナー"></amp-img>
-                <div class="info"><span>三菱UFJ eスマート証券FX</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/300x250.jpg" alt="三菱UFJ eスマート証券FX バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>三菱UFJ eスマート証券FX</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -147,12 +271,16 @@
           <td>IFD/OCO 等<br>自動売買×</td>
           <td>スマホ<br>PC</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#Monex" title="マネックス証券 FX PLUSの詳細へ">
+            <a href="#Monex" class="idjanp" title="マネックス証券 FX PLUSの詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/imagesender (2).jfif" width="60" height="60" alt="マネックス証券 FX PLUS バナー"></amp-img>
-                <div class="info"><span>マネックス証券 FX PLUS</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/imagesender (2).jfif" alt="マネックス証券 FX PLUS バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>マネックス証券 FX PLUS</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -160,12 +288,16 @@
           <td>多彩な注文<br>自動売買×</td>
           <td>スマホ<br>PC（29指標）</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#saxo" title="サクソバンク証券の詳細へ">
+            <a href="#saxo" class="idjanp" title="サクソバンク証券の詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/300x250_Affi-AT_FX-q3-swapv2_R.jpg" width="60" height="60" alt="サクソバンク証券 FX バナー"></amp-img>
-                <div class="info"><span>サクソバンク証券</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/300x250_Affi-AT_FX-q3-swapv2_R.jpg" alt="サクソバンク証券 FX バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>サクソバンク証券</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -173,12 +305,16 @@
           <td>多彩な注文<br>自動売買×</td>
           <td>スマホ<br>PC（高機能）</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#fujimi-fx" title="フジトミ シストレセレクト365の詳細へ">
+            <a href="#fujimi-fx" class="idjanp" title="フジトミ シストレセレクト365の詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/fujitomi_system_trade_300x250.png" width="60" height="60" alt="フジトミ シストレセレクト365 バナー"></amp-img>
-                <div class="info"><span>シストレセレクト365</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/fujitomi_system_trade_300x250.png" alt="フジトミ シストレセレクト365 バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>シストレセレクト365</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -186,12 +322,16 @@
           <td>自動売買○</td>
           <td>スマホ対応</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#himawari-fx" title="ひまわり証券の詳細へ">
+            <a href="#himawari-fx" class="idjanp" title="ひまわり証券の詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/imagesender.jfif" width="60" height="60" alt="ひまわり証券 自動売買 バナー"></amp-img>
-                <div class="info"><span>ひまわり証券</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/imagesender.jfif" alt="ひまわり証券 自動売買 バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>ひまわり証券</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -199,12 +339,16 @@
           <td>自動売買○</td>
           <td>スマホ対応</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#matsui-FX" title="松井証券FXの詳細へ">
+            <a href="#matsui-FX" class="idjanp" title="松井証券FXの詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/matsui-FX.png" width="60" height="60" alt="松井証券FX バナー"></amp-img>
-                <div class="info"><span>松井証券FX</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/matsui-FX.png" alt="松井証券FX バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>松井証券FX</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
@@ -212,209 +356,496 @@
           <td>自動売買○</td>
           <td>スマホ対応</td>
         </tr>
+
         <tr>
           <td>
-            <a href="#FINEST-FX" title="外為ファイネストの詳細へ">
+            <a href="#FINEST-FX" class="idjanp" title="外為ファイネストの詳細へ">
               <div class="cell-flex">
-                <amp-img src="../Xcard/300x250 (1).jpg" width="60" height="60" alt="外為ファイネスト バナー"></amp-img>
-                <div class="info"><span>外為ファイネスト</span><br><small>↑ 詳細</small></div>
+                <amp-img src="Xcard/300x250 (1).jpg" alt="外為ファイネスト バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>外為ファイネスト</span><br><small class="detail-note">↑　詳細</small>
+                </div>
               </div>
             </a>
           </td>
           <td>—</td>
-          <td>裁量／自動</td>
-          <td>MT4／MT5</td>
+          <td>裁量<br>自動</td>
+          <td>MT4<br>MT5</td>
         </tr>
+
+        <tr>
+          <td>
+            <a href="#iNET" class="idjanp" title="アイネット証券の詳細へ">
+              <div class="cell-flex">
+                <amp-img src="Xcard/imagesender (5).jfif" alt="アイネット証券 バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>アイネット証券</span><br><small class="detail-note">↑　詳細</small>
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>主要ペア中心</td>
+          <td>多彩な注文<br>自動売買◯（ループイフダン）</td>
+          <td>スマホ<br>PC</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="#minna-fx" class="idjanp" title="みんなのFXの詳細へ">
+              <div class="cell-flex">
+                <amp-img src="Xcard/imagesender (3).jfif" alt="みんなのFX バナー"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="info">
+                  <span>みんなのFX</span><br><small class="detail-note">↑　詳細</small>
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>主要＋高金利通貨</td>
+          <td>IFD/OCO 等<br>自動売買×</td>
+          <td>スマホ<br>PC</td>
+        </tr>
+
       </tbody>
     </table>
   </section>
 
-  <!-- company sections -->
+  <!-- ▼ 各社セクション（元ページの文面・導線を活かして再構成） -->
+
   <section class="anime-item" id="LION-FX">
     <h2 class="anime-title">LION FX</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=01002xqy00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=01002xqy00od67" width="300" height="250" alt="ヒロセ通商 LION FX"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=01002xqy00od67"
+               alt="ヒロセ通商 LION FX"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>LION FXは東証スタンダード上場のヒロセ通商が運営。<strong>業界最狭水準のスプレッド</strong>と高い約定力が特長。スキャルピング対応の使いやすさも評価されています。</p>
+    <p>
+      LION FXは東証スタンダード上場のヒロセ通商が運営するFXサービスです。
+      <strong>業界最狭水準のスプレッド</strong>と高い約定力が特長。
+      スキャルピング対応の使いやすさも評価されています。
+    </p>
+
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>人気セミナーを無料開催</li>
-      <li>用途別に選べる取引システム</li>
-      <li>高機能チャートで分析もスムーズ</li>
-      <li>取引・入出金・ロスカット手数料が無料</li>
-      <li>約定スピードは最速0.001秒</li>
+      <li>✔️人気セミナーを無料開催</li>
+      <li>✔️用途別に選べる取引システム</li>
+      <li>✔️高機能チャートで分析もスムーズ</li>
+      <li>✔️取引・入出金・ロスカット手数料がすべて無料</li>
+      <li>✔️約定スピードは最速0.001秒（驚異的な速さ）</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../LION-FX.html">LION FXの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="LION-FX.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>LION FXの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="MUFGfx">
     <h2 class="anime-title">三菱UFJ eスマート証券FX（旧：auカブコムFX）</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=0100pm4100od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pm4100od67" width="300" height="250" alt="auカブコム証券のFX口座開設プロモーション"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pm4100od67"
+               alt="auカブコム証券のFX口座開設プロモーション"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>三菱UFJグループの信頼感。1,000通貨から始めやすく、扱いやすいアプリが特長です。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      三菱UFJグループの信頼感。1,000通貨から始めやすく、扱いやすいアプリが特長です。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>主要ネット証券で最高水準の信用格付（※）</li>
-      <li>ミニ取引で少額スタート</li>
-      <li>アプリ視認性◎／デモ取引あり</li>
-      <li>IFD/OCOなど多様な注文</li>
-      <li>1,000通貨〜で初心者も始めやすい</li>
+      <li>✔️主要ネット証券で最高水準の信用格付（※）</li>
+      <li>✔️ミニ取引で少額スタート</li>
+      <li>✔️アプリ視認性◎／デモ取引あり</li>
+      <li>✔️IFD/OCOなど多様な注文</li>
+      <li>✔️1,000通貨〜で初心者も始めやすい</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../MUFGfx.html">三菱UFJ eスマート証券FXの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="MUFGfx.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>三菱UFJ eスマート証券FXの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="Monex">
     <h2 class="anime-title">マネックス証券 FX PLUS</h2>
     <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC6&SQ=0&isq=207" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC6&isq=207&psq=0" width="300" height="250" alt="FXPLUS"></amp-img>
+      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC6&isq=207&psq=0"
+               alt="FXPLUS"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>NTTドコモグループ。29種のテクニカルなど情報・ツール面が充実。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      NTTドコモグループ。29種のテクニカルなど情報・ツール面が充実しています。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>（土日除く）24時間取引／手数料0円</li>
-      <li>PC版はプロ仕様指標、スマホは直感UI</li>
-      <li>学習コンテンツや情報配信が豊富</li>
-      <li>取引コストも抑制（詳細は公式）</li>
-      <li>大手グループの安心感</li>
+      <li>✔️（土日除く）24時間取引／手数料0円</li>
+      <li>✔️PC版はプロ仕様指標、スマホは直感UI</li>
+      <li>✔️学習コンテンツや情報配信が豊富</li>
+      <li>✔️取引コストも抑制（詳細は公式）</li>
+      <li>✔️大手グループの安心感</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../Monex-FX.html">マネックス証券 FX PLUSの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="Monex-FX.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>マネックス証券 FX PLUSの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="saxo">
     <h2 class="anime-title">サクソバンク証券のFX</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=0100pwo100od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pwo100od67" width="300" height="250" alt="FXのサクソバンク証券 口座開設"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pwo100od67"
+               alt="FXのサクソバンク証券　口座開設"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>150通貨ペア以上に対応し、高機能ツールとスピード注文が魅力。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      150通貨ペア以上に対応し、高機能ツールとスピード注文が魅力です。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>最大2.5億通貨のスピード注文</li>
-      <li>取引上限なし（1日）</li>
-      <li>1,000通貨〜／テクニカル指標も豊富</li>
-      <li>プロ仕様のPC/スマホツール</li>
-      <li>通貨ペア150以上</li>
+      <li>✔️最大2.5億通貨のスピード注文</li>
+      <li>✔️取引上限なし（1日）</li>
+      <li>✔️1,000通貨〜／テクニカル指標も豊富</li>
+      <li>✔️プロ仕様のPC/スマホツール</li>
+      <li>✔️通貨ペア150以上の圧倒的な品揃え</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../saxo-fx.html">サクソバンク証券のFXの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="saxo-fx.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>サクソバンク証券のFXの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="fujimi-fx">
     <h2 class="anime-title">フジトミ証券のFX自動売買「シストレセレクト365」</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=0100mt4u00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100mt4u00od67" width="300" height="250" alt="フジトミ証券 シストレセレクト365"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100mt4u00od67"
+               alt="フジトミ証券　シストレセレクト365"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>キャラクター（ストラテジー）を選ぶだけで自動売買。4通貨×100戦略。取引所FX（くりっく365）。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      キャラクター（ストラテジー）を選ぶだけで自動売買。4通貨×100戦略。取引所FX（くりっく365）。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>ストラテジーを選ぶだけの簡単運用</li>
-      <li>ランキングで成績比較が可能</li>
-      <li>取引所FX（くりっく365）で透明性</li>
-      <li>スマホ対応で操作が簡単</li>
-      <li>100戦略から好みを選べる</li>
+      <li>✔️ストラテジーを選ぶだけの簡単運用</li>
+      <li>✔️ランキングで成績比較が可能</li>
+      <li>✔️取引所FX（くりっく365）で透明性</li>
+      <li>✔️スマホ対応で操作が簡単</li>
+      <li>✔️100戦略から好みを選べる</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../fujimi-fx.html">シストレセレクト365の詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="fujimi-fx.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>シストレセレクト365の詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="himawari-fx">
     <h2 class="anime-title">ひまわり証券（自動売買）</h2>
     <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=HIM99&SQ=0&isq=60" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=HIM99&isq=60&psq=0" width="300" height="250" alt="ひまわり証券"></amp-img>
+      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=HIM99&isq=60&psq=0"
+               alt="ひまわり証券"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>自動売買対応、通貨ペアは24。スマホアプリ完備。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      自動売買対応、通貨ペアは24。スマホアプリ完備。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>自動売買対応で放置運用も可能</li>
-      <li>24通貨ペアに対応</li>
-      <li>スマホアプリで手軽に操作</li>
-      <li>サポート情報が充実</li>
-      <li>裁量と自動を併用可能</li>
+      <li>✔️自動売買対応で放置運用も可能</li>
+      <li>✔️24通貨ペアに対応</li>
+      <li>✔️スマホアプリで手軽に操作</li>
+      <li>✔️サポート情報が充実</li>
+      <li>✔️裁量と自動を併用可能</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../himawari-fx-.html">ひまわり証券の詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="himawari-fx-.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>ひまわり証券の詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="matsui-FX">
     <h2 class="anime-title">松井証券FX（自動ツール）</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=0100p6px00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100p6px00od67" width="300" height="250" alt="松井証券FX"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100p6px00od67"
+               alt="松井証券FX"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>対応通貨は17。自動売買とスマホアプリに対応したバランス型。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      対応通貨は17。自動売買とスマホアプリに対応したバランス型。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>自動売買機能に対応</li>
-      <li>17通貨ペアに対応</li>
-      <li>スマホアプリで完結</li>
-      <li>学習コンテンツあり</li>
-      <li>初心者にも扱いやすい</li>
+      <li>✔️自動売買機能に対応</li>
+      <li>✔️17通貨ペアに対応</li>
+      <li>✔️スマホアプリで完結</li>
+      <li>✔️学習コンテンツあり</li>
+      <li>✔️初心者にも扱いやすい</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../matsui-FX.html">松井証券FXの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="matsui-FX.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>松井証券FXの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item" id="FINEST-FX">
     <h2 class="anime-title">外為ファイネスト（MT4/MT5）</h2>
     <a href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100ptzk00od67" width="300" height="250" alt="メタトレーダーは【ファイネストFX】"></amp-img>
+      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100ptzk00od67"
+               alt="メタトレーダーは【ファイネストFX】"
+               width="300" height="250" layout="responsive"></amp-img>
     </a>
-    <p>MT4/MT5に両対応。EAの利用制限なし、指値制限なし、スキャルピングOKなど自由度の高い取引環境が魅力。</p>
+    <p class="margin_min"><small>↑公式サイト</small></p>
+    <p>
+      外為ファイネストは、MT4/MT5の両方に対応。EAの利用制限なし、指値制限なし、スキャルピングOKなど自由度の高い取引環境が魅力です。
+    </p>
+    <h3 class="anime-title">メリット</h3>
     <ul>
-      <li>MT4/MT5に両対応</li>
-      <li>EA利用制限なし（自作・市販OK）</li>
-      <li>指値制限なし・スキャルピングOK</li>
-      <li>NDD方式で透明性の高い価格形成</li>
-      <li>1,000通貨から取引可能</li>
+      <li>✔️MT4/MT5に両対応</li>
+      <li>✔️EA利用制限なし（自作・市販OK）</li>
+      <li>✔️指値制限なし・スキャルピングOK</li>
+      <li>✔️NDD方式で透明性の高い価格形成</li>
+      <li>✔️1,000通貨から取引可能</li>
     </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../gaifine-fx.html">外為ファイネストの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="gaifine-fx.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>外為ファイネストの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
+  <!-- ======================= -->
+  <!-- アイネット証券 セクション -->
+  <!-- ======================= -->
+  <section class="anime-item" id="iNET">
+    <h2 class="anime-title">アイネット証券｜自動売買「ループイフダン」でコツコツ運用</h2>
+
+    <!-- 公式バナー（TCS）※必要に応じて AC/LC 差し替え -->
+    <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INET1&SQ=0&isq=200" class="cta-button-hikaku" rel="nofollow sponsored noopener" aria-label="アイネット証券 公式サイトへ（アフィリエイト）">
+      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=INET1&isq=200&psq=0"
+               alt="アイネット証券 公式サイトへ"
+               width="300" height="250" layout="responsive"></amp-img>
+    </a>
+
+    <p class="margin_min"><small>↑公式サイト</small></p>
+
+    <p>忙しくても自動で淡々とトレードできる「ループイフダン」が特長。裁量＋自動の併用にも相性良し。</p>
+    <ul>
+      <li>✔️ 自動売買◯（ループイフダン）</li>
+      <li>✔️ 取引/口座/維持/入出金手数料などは0円（最新は公式で要確認）</li>
+      <li>✔️ スマホ/PC両対応</li>
+    </ul>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="iNET.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>アイネット証券の詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- みんなのFX セクション -->
+  <!-- ======================= -->
+  <section class="anime-item" id="minna-fx">
+    <h2 class="anime-title">みんなのFX｜業界最狭水準スプレッド＆少額1,000通貨〜</h2>
+
+    <!-- 公式バナー（TCS）※必要に応じて AC/LC 差し替え -->
+    <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=PAN1&SQ=0&isq=4" class="cta-button-hikaku">
+      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=PAN1&isq=4&psq=0"
+               alt="トレイダーズ証券[みんなのFX]のバナー"
+               width="300" height="250" layout="responsive"></amp-img>
+    </a>
+
+    <p class="margin_min"><small>↑公式サイト</small></p>
+
+    <p>スプレッド原則固定（例外あり）で取引コストが抑えやすい。高金利通貨やスワップ狙いの運用にも◎。</p>
+    <ul>
+      <li>✔️ 1,000通貨からの少額スタートに対応</li>
+      <li>✔️ 高水準スワップ（銘柄により）</li>
+      <li>✔️ スマホ/PCの使いやすいツール</li>
+    </ul>
+
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="minna-fx.html" class="recommendation-link">
+          <i class="fa-solid fa-note-sticky"></i><span>みんなのFXの詳しい解説</span>
+        </a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="anime-item" aria-labelledby="fx-ranking-title" id="sec-fx">
+    <h2 class="anime-title" id="fx-ranking-title">管理人おすすめFXランキングTOP3</h2>
+
+    <table class="table-ranking is-ultra" role="table">
+      <colgroup><col><col><col><col><col></colgroup>
+      <thead>
+        <tr>
+          <th scope="col">順</th>
+          <th scope="col">会社</th>
+          <th scope="col">スプレッド</th>
+          <th scope="col">いいやすさ</th>
+          <th scope="col">自動売買</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1位</th>
+          <td>
+            <a class="ranking-jump" href="himawari-fx.html">
+              <div class="ranking-flex">
+                <amp-img src="Xcard/imagesender.jfif" alt="ひまわり証券"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="ranking-info"><span>ひまわり</span></div>
+              </div>
+            </a>
+          </td>
+          <td>〇</td><td>◎</td><td>◎<br>（ループイフダン）</td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td>
+            <a class="ranking-jump" href="MUFGfx.html">
+              <div class="ranking-flex">
+                <amp-img src="Xcard/300x250.jpg" alt="MUFG FX"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="ranking-info"><span>MUFG</span></div>
+              </div>
+            </a>
+          </td>
+          <td>〇</td><td>◎</td><td>△<br>（裁量）</td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td>
+            <a class="ranking-jump" href="LION-FX.html">
+              <div class="ranking-flex">
+                <amp-img src="Xcard/240_240.gif" alt="LION FX"
+                         width="60" height="60" layout="responsive"></amp-img>
+                <div class="ranking-info"><span>LION FX</span></div>
+              </div>
+            </a>
+          </td>
+          <td>◎</td><td>〇</td><td>△<br>（裁量向き）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note small">
+      ※ 外貨ペアやプロツール重視なら <a href="saxo-fx.html">サクソバンク証券FX</a> も検討候補です。
+    </p>
+  </section>
+
+  <!-- おすすめ記事（FX基礎） -->
   <section class="anime-item">
     <h2 class="anime-title">おすすめ記事｜FXの基礎知識</h2>
     <p>スプレッド・スワップ・レバレッジなど、最初に知っておくと迷いにくいポイントを解説します。</p>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../fx-beginner.html">はじめてのFX：用語と仕組み</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
+    <div class="recommendation-section">
+      <div class="recommendation-grid">
+        <a href="fx-beginner.html" class="recommendation-link"><i class="fa-solid fa-book-open"></i><span>はじめてのFX：用語と仕組み</span></a>
+        <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+      </div>
     </div>
   </section>
 
   <section class="anime-item">
-    <amp-img src="../sonota/Q&A.jpg" width="1200" height="600" layout="responsive" alt="よくある質問のイメージ"></amp-img>
+    <amp-img src="sonota/Q&A.jpg" alt="よくある質問のイメージ"
+             width="1200" height="600" layout="responsive"></amp-img>
     <h2 class="anime-title">よくある質問（FAQ）</h2>
-    <amp-accordion class="faq">
-      <section>
-        <h4>口座開設はどのくらいで完了しますか？</h4>
-        <p>最短即日〜3営業日ほどで開設できます。本人確認の方法によって差があります。</p>
-      </section>
-      <section>
-        <h4>スプレッドはいつでも同じですか？</h4>
-        <p>原則固定でも相場急変時は拡大することがあります。最新状況は各社公式でご確認ください。</p>
-      </section>
-      <section>
-        <h4>自動売買（シストレ）は使えますか？</h4>
-        <p>対応の有無は会社により異なります。裁量専用口座の場合もあります。</p>
-      </section>
-      <section>
-        <h4>初心者はどの基準で選ぶべき？</h4>
-        <p>通貨ペア数・スプレッド・約定力・ツール・サポート体制を重視しましょう。</p>
-      </section>
-    </amp-accordion>
+    <ul class="faq-list">
+      <li>
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-user" aria-hidden="true"></i><span>Q. 口座開設はどのくらいで完了しますか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+          <div class="faq-answer"><i class="fa-solid fa-comment" aria-hidden="true"></i>最短即日〜3営業日ほどで開設できます。本人確認の方法によって差があります。</div>
+        </details>
+      </li>
+      <li>
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-user" aria-hidden="true"></i><span>Q. スプレッドはいつでも同じですか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+          <div class="faq-answer"><i class="fa-solid fa-comment" aria-hidden="true"></i>原則固定でも相場急変時は拡大することがあります。最新状況は各社公式でご確認ください。</div>
+        </details>
+      </li>
+      <li>
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-user" aria-hidden="true"></i><span>Q. 自動売買（シストレ）は使えますか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+          <div class="faq-answer"><i class="fa-solid fa-comment" aria-hidden="true"></i>対応の有無は会社により異なります。裁量専用口座の場合もあります。</div>
+        </details>
+      </li>
+      <li>
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-user" aria-hidden="true"></i><span>Q. 初心者はどの基準で選べばいいですか？</span><i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i></summary>
+          <div class="faq-answer"><i class="fa-solid fa-comment" aria-hidden="true"></i>通貨ペア数・スプレッド・約定力・ツール・サポート体制を重視しましょう。</div>
+        </details>
+      </li>
+    </ul>
+    <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
   </section>
+
+  <section class="anime-item" aria-labelledby="review-entry-title">
+    <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+
+    <div class="review">
+      <a href="userreview.html" class="review-card">
+        <amp-img src="Xcard/review_300x250.jpg"
+                 alt="個人レビュー（証券／FX／仮想通貨）"
+                 width="300" height="250" layout="responsive"></amp-img>
+        <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
 </main>
 
-<footer></footer>
+
+  <footer class="site-footer">
+    &copy; 2025 tousiportal.jp
+  </footer>
 </body>
 </html>

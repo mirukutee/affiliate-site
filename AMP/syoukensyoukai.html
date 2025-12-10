@@ -1,423 +1,971 @@
-<!-- File: AMP/syoukensyoukai.html -->
 <!doctype html>
 <html amp lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>証券口座を比較【2025年】初心者〜中級者向け8社一覧｜取扱市場・注文・ツールで選ぶ（AMP）</title>
+  <title>★ここにタイトル</title>
+
+  <link rel="canonical" href="★ここにcanonical URL">
+  <meta name="description" content="★ここにdescription">
+
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="description" content="証券口座を8社比較。取扱市場／注文・自動化／分析ツールを表でサクッと確認。「詳細」から各社のメリットも1分で把握。FAQ4つ付き。">
-  <link rel="canonical" href="../syoukensyoukai.html">
+
+  <!-- AMP本体 -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-  <!-- structured data (AMP allows application/ld+json) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/affiliate-site/index.html"},
-      {"@type":"ListItem","position":2,"name":"証券口座紹介","item":"https://mirukutee.github.io/affiliate-site/syoukensyoukai.html"},
-      {"@type":"ListItem","position":3,"name":"証券口座一覧比較","item":"https://mirukutee.github.io/affiliate-site/syoukensyoukai.html"}
-    ]
-  }
-  </script>
+  <!-- 必要ならコンポーネント（例：accordion） -->
+  <!--
+  <script async custom-element="amp-accordion"
+          src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  -->
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"証券口座一覧（取引性能重視）",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"松井証券","url":"https://mirukutee.github.io/affiliate-site/matsui-kabu.html"},
-      {"@type":"ListItem","position":2,"name":"DMM株","url":"https://mirukutee.github.io/affiliate-site/DMM-kabu.html"},
-      {"@type":"ListItem","position":3,"name":"マネックス証券","url":"https://mirukutee.github.io/affiliate-site/Monex.html"},
-      {"@type":"ListItem","position":4,"name":"Bloomo証券","url":"https://mirukutee.github.io/affiliate-site/bloomo.html"},
-      {"@type":"ListItem","position":5,"name":"moomoo証券","url":"https://mirukutee.github.io/affiliate-site/moomoo-kabu.html"},
-      {"@type":"ListItem","position":6,"name":"三菱UFJ eスマート証券","url":"https://mirukutee.github.io/affiliate-site/MUFGesmart.html"},
-      {"@type":"ListItem","position":7,"name":"SAXO証券","url":"https://mirukutee.github.io/affiliate-site/saxo.html"},
-      {"@type":"ListItem","position":8,"name":"トライオートCFD","url":"https://mirukutee.github.io/affiliate-site/tryauto.html"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"口座開設はどのくらいで完了しますか？","acceptedAnswer":{"@type":"Answer","text":"最短即日〜3営業日ほどで開設できます。本人確認の方法によって差があります。"}},
-      {"@type":"Question","name":"新NISAに対応していますか？","acceptedAnswer":{"@type":"Answer","text":"対応状況は各社公式サイトや当サイト比較表で確認できます。制度改定があるため最新情報のチェックをおすすめします。"}},
-      {"@type":"Question","name":"米国株と中国株の両方を取引できますか？","acceptedAnswer":{"@type":"Answer","text":"対応口座を選べば可能です。市場の種類や為替手数料も合わせて比較しましょう。"}},
-      {"@type":"Question","name":"初心者は何を基準に選べばいいですか？","acceptedAnswer":{"@type":"Answer","text":"手数料だけでなく、アプリの使いやすさやサポート体制を重視すると安心です。"}}
-    ]
-  }
-  </script>
-
+  <!-- AMP必須ボイラープレート -->
   <style amp-boilerplate>
-    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         animation:-amp-start 8s steps(1,end) 0s 1 normal both}
     @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
   </style>
-  <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
 
+  <!-- この中に必要なぶんだけCSS（75KB以内） -->
   <style amp-custom>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;line-height:1.7;color:#222;background:#fff;margin:0}
-    header,main,footer{max-width:960px;margin:0 auto;padding:16px}
-    .breadcrumb{font-size:.9rem;color:#666;margin:8px 0}
-    .title{font-size:1.6rem;margin:8px 0 16px}
-    .anime-title{font-size:1.25rem;margin:24px 0 8px}
-    .session-card{border:1px solid #eee;border-radius:12px;padding:12px;margin:8px 0;background:#fafafa}
-    .mini-list{padding-left:20px;margin:8px 0}
-    .table-card{width:100%;border-collapse:collapse;font-size:.95rem}
-    .table-card th,.table-card td{border:1px solid #e5e7eb;padding:10px;vertical-align:top}
-    .cell-flex{display:flex;gap:10px;align-items:center}
-    .info span{font-weight:600}
-    .cta-button-hikaku{display:inline-block;border-radius:10px;overflow:hidden}
-    .recommendation-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .recommendation-link{display:inline-block;text-decoration:none;border:1px solid #e5e7eb;border-radius:10px;padding:8px 12px}
-    .top-link{display:inline-block;margin-top:8px}
-    .faq{margin:12px 0}
-    .muted{color:#666;font-size:.9rem}
-    .hero-img{max-width:100%}
-    a{text-decoration:none;color:#0b66d6}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0 8px 24px;
+    }
+    header.site-header {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px 4px 8px;
+      text-align: center;
+    }
+    header.site-header h1 {
+      font-size: 1.2rem;
+      margin: 0 0 4px;
+    }
+    header.site-header p.lead {
+      margin: 0;
+      font-size: .9rem;
+      color: #555;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .section-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 12px 10px;
+      margin-top: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    }
+    .section-card h2 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      padding-left: 8px;
+      border-left: 4px solid #0366d6;
+    }
+    .note {
+      font-size: .8rem;
+      color: #666;
+    }
+    footer.site-footer {
+      max-width: 980px;
+      margin: 16px auto 0;
+      padding: 12px 4px;
+      font-size: .75rem;
+      text-align: center;
+      color: #777;
+    }
   </style>
 </head>
+
 <body>
-<header>
-  <nav class="breadcrumb"><a href="../index.html">ホーム</a> › 証券口座紹介 › 証券口座一覧比較</nav>
-  <h1 id="top" class="title">証券口座一覧比較</h1>
-</header>
+  <header class="site-header">
+    <h1>★ここにH1（見出し）</h1>
+    <p class="lead">★ここに一文リード（任意）</p>
+  </header>
 
-<main>
-  <section class="anime-item">
-    <h2 class="anime-title">証券口座を選ぶ方に向け様々な種類の証券口座をまとめました。</h2>
-    <div class="session-card">
-      <strong>このページの使い方</strong>
-      <ul class="mini-list">
-        <li>① 性能比較表で全体像</li>
-        <li>② 気になる口座は「詳細」へ</li>
-        <li>③ 目的別リンクで横断チェック</li>
+    <!-- メインの内容 -->
+  <main>
+       
+    <!-- パンくず -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+        <li class="breadcrumb-item active" aria-current="page">証券口座一覧比較</li>
+      </ol>
+    </nav>
+
+    <!-- ===== Hero（H1／説明／目的別ジャンプ） ===== -->
+    <header class="anime-item" id="hero">
+      <h1 class="title">様々な証券口座を一覧比較 — 初心者〜中級者向け</h1>
+      <p class="lead">
+        手数料・取扱市場・ツールの使いやすさを基準に、主要ネット証券を一目で比較できます。迷ったら<strong>「編集部おすすめ」</strong>からどうぞ。
+      </p>
+
+      <!-- 目的別ジャンプ -->
+      <nav class="purpose-nav" aria-label="目的別ジャンプ">
+        <a href="#matsui">初心者向け</a>
+        <a href="#saxo">海外株に強い</a>
+        <a href="#GMO">手数料重視</a>
+        <span class="purpose-nav-multi">
+          <a href="#SBI">ツール重視（国内中心）</a>
+          <a href="#saxo">ツール重視（海外/多市場）</a>
+        </span>
+      </nav>
+
+      <!-- 更新バッジ -->
+      <p class="update-badge">
+        <span>最終更新</span>
+        <time datetime="2025-10-04">2025年10月4日</time>
+      </p>
+    </header>
+
+    <!-- ===== 早見表（要点比較：コンパクト） ===== -->
+
+    <section class="anime-item" aria-labelledby="quick-compare-title">
+      <h2 class="anime-title" id="quick-compare-title">早見表（要点比較）</h2>
+      <table class="table-card pc-fit xs">
+        <colgroup>
+          <col><!-- サービス -->
+          <col><!-- 手数料 -->
+          <col><!-- 取扱 -->
+          <col><!-- ツール -->
+        </colgroup>
+        <thead>
+          <tr>
+            <th>サービス</th>
+            <th>手数料</th>
+            <th>取扱（国内/米国/他）</th>
+            <th>ツール</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="idjanp" href="#SBI">SBI証券</a></td>
+            <td>低水準</td>
+            <td>◯ / ◯ / △</td>
+            <td>HYPER SBI 等</td>
+          </tr>
+          <tr>
+            <td><a class="idjanp" href="#matsui">松井証券</a></td>
+            <td>少額0円枠</td>
+            <td>◯ / ◯ / ー</td>
+            <td>使いやすい</td>
+          </tr>
+          <tr>
+            <td><a class="idjanp" href="#GMO">GMOクリック</a></td>
+            <td>最安級</td>
+            <td>◯ / ◯ / ー</td>
+            <td>高機能</td>
+          </tr>
+          <tr>
+            <td><a class="idjanp" href="#saxo">サクソ</a></td>
+            <td>海外株系</td>
+            <td>△ / ◎ / 多</td>
+            <td>情報充実</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== 編集部おすすめ（用途別3枠） ===== -->
+    <section class="anime-item" aria-labelledby="editors-pick-title">
+      <h2 class="anime-title" id="editors-pick-title">当サイトおすすめ</h2>
+      <div class="recommend-cards">
+        <article class="recommend-card" id="for-beginner">
+          <h3>初心者◎</h3>
+          <p>迷ったらここ。アプリの使いやすさとサポートで安心。</p>
+          <a class="btn" href="#matsui">詳細を見る</a>
+        </article>
+        <article class="recommend-card" id="for-overseas">
+          <h3>海外株◎</h3>
+          <p>米国株・海外市場の選択肢が豊富。外国株に強い。</p>
+          <a class="btn" href="#saxo">詳細を見る</a>
+        </article>
+        <article class="recommend-card" id="for-fee">
+          <h3>手数料重視◎</h3>
+          <p>約定コストを抑えたい人向け。コスパ重視の選択。</p>
+          <a class="btn" href="#GMO">詳細を見る</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 導入段落 -->
+    <section class="anime-item">
+      <h2 class="anime-title">証券口座の選び方｜比較で見る4つの基準</h2>
+
+      <div class="session-card session-card--compact">
+        <h3 class="anime-title anime-title--mini">このページの使い方</h3>
+        <ul class="mini-list">
+          <li>① 比較表で主要8社の特徴を一括チェック</li>
+          <li>② 気になる証券口座は「詳細」で確認</li>
+          <li>③ 目的別リンクで最適な1社を探す</li>
+        </ul>
+      </div>
+
+      <div class="session-card session-card--compact">
+        <h3 class="anime-title anime-title--mini">選び方の要点</h3>
+        <ul class="mini-list">
+          <li>手数料の安さだけでなく「取引性能」を確認</li>
+          <li>注文の種類や自動売買対応の有無</li>
+          <li>分析ツール（指標・スクリーナー）の充実度</li>
+          <li>アプリの使いやすさや直感的なUI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="anime-item">
+      <h2 class="anime-title" id="top">証券の表比較</h2>
+      <!-- PC/タブレット向けテーブル -->
+      <table class="table-card">
+        <caption>当サイト管理人が調べた情報です。必ずご自身で取引前に最新情報の確認願います</caption>
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>サービス</th>
+            <th>取扱市場</th>
+            <th>注文/自動化</th>
+            <th>分析・ツール</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#matsui" class="idjanp" title="松井証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/320-250-20000.jpg" alt="松井証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>松井証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>基本注文<br>自動売買×</td>
+            <td>スマホ<br>PC対応</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#DMM" class="idjanp" title="DMM株の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/300_250.png" alt="DMM株のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>DMM株</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>逆指値等<br>自動売買×</td>
+            <td>直感UIアプリ</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#Monex" class="idjanp" title="マネックス証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender (1).jfif" alt="マネックス証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>マネックス証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>注文多彩<br>自動売買×</td>
+            <td>スクリーニング<br>分析ツール</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#Bloomo" class="idjanp" title="Bloomo証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender (2).png" alt="Bloomo証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>Bloomo証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>米国株・ETF</td>
+            <td>コピー運用<br>（自動調整系）</td>
+            <td>ポートフォリオ自動最適化</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#moomoo" class="idjanp" title="moomoo証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/moomooookuchi1200675.png" alt="moomoo証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>moomoo証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>米国株<br>中国株</td>
+            <td>注文多彩<br>自動売買×</td>
+            <td>デイトレ向け高機能</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#UFJe" class="idjanp" title="三菱UFJ eスマート証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/34-200x200.jpg" alt="三菱UFJ eスマート証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>三菱UFJ eスマート証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>基本注文<br>自動売買×</td>
+            <td>kabuステーション対応</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#saxo" class="idjanp" title="SAXO証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/300x250_Banner_Affiliate_AT_Stocks.png" alt="SAXO証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>SAXO証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>注文多彩<br>自動売買×</td>
+            <td>50+テクニカル指標</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#tryauto" class="idjanp" title="トライオートCFDの詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender.png" alt="トライオートCFDのバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>トライオートCFD</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>株価指数（CFD）</td>
+            <td>自動売買○</td>
+            <td>スマホアプリあり</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#SBI" class="idjanp" title="SBI証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender (4).jfif" alt="SBI証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>SBI証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>注文多彩<br>自動売買×</td>
+            <td>HYPER系ツール<br>アプリ◎</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#Webull" class="idjanp" title="Webull証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender (3).png" alt="Webull証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>Webull証券</span><br><small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>逆指値等<br>自動売買×</td>
+            <td>板/足/指標が豊富</td>
+          </tr>
+
+          <!-- 置換：GMO行（大テーブル）はこれでOK） -->
+          <tr>
+            <td>
+              <a href="#GMO" class="idjanp" title="GMOクリック証券の詳細へ">
+                <div class="cell-flex">
+                  <amp-img height="60" width="60" loading="lazy" src="Xcard/imagesender.gif" alt="GMOクリック証券のバナー" layout="responsive"></amp-img>
+                  <div class="info">
+                    <span>GMOクリック証券</span><br>
+                    <small class="detail-note">↑　詳細</small>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>国内株<br>米国株</td>
+            <td>注文多彩<br>自動売買×</td>
+            <td>スーパーはっちゅう君／スマホアプリ</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+
+    <!-- 松井証券のコンテンツ -->
+    <section class="anime-item" id="matsui">
+      <h2 class="anime-title">松井証券｜初心者におすすめ</h2>
+
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100p6px00od67"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100p6px00od67"
+                 alt="松井証券 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+
+      <p>創業100年以上の信頼。初心者でも迷わないアプリとサポートが強み。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 直感操作アプリ</li>
+        <li>✔️ 1日50万円まで手数料無料</li>
+        <li>✔️ 初心者向け学習コンテンツ</li>
+        <li>✔️ チャット・電話・LINE対応</li>
       </ul>
-    </div>
-    <div class="session-card">
-      <strong>選び方の要点</strong>
-      <ul class="mini-list">
-        <li>手数料より「取引性能」を重視</li>
-        <li>注文の種類・自動売買の有無</li>
-        <li>分析ツール（指標/スクリーナー）</li>
-        <li>アプリの使いやすさ</li>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="matsui-kabu.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>松井証券の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DMM株のコンテンツ -->
+    <section class="anime-item" id="DMM">
+      <h2 class="anime-title">DMM株｜直感UIで手軽に取引</h2>
+
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100mkjo00od67"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100mkjo00od67"
+                 alt="DMM株 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>手数料安・使いやすいUI。国内/米国株に対応。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 口座開設かんたん</li>
+        <li>✔️ 国内株・米国株対応</li>
+        <li>✔️ 逆指値など多彩な注文</li>
+        <li>✔️ スマホアプリが軽快</li>
       </ul>
-    </div>
-  </section>
 
-  <section class="anime-item">
-    <h2 class="anime-title">証券の表比較</h2>
-    <table class="table-card">
-      <caption class="muted">当サイト管理人が調べた情報です。必ずご自身で取引前に最新情報の確認願います</caption>
-      <thead>
-        <tr>
-          <th>サービス</th><th>取扱市場</th><th>注文/自動化</th><th>分析・ツール</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <a href="#matui" title="松井証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/320-250-20000.jpg" width="60" height="60" alt="松井証券のバナー"></amp-img>
-                <div class="info"><span>松井証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>国内株<br>米国株</td>
-          <td>基本注文<br>自動売買×</td>
-          <td>スマホ<br>PC対応</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#DMM" title="DMM株の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/300_250.png" width="60" height="60" alt="DMM株のバナー"></amp-img>
-                <div class="info"><span>DMM株</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>国内株<br>米国株</td>
-          <td>逆指値等<br>自動売買×</td>
-          <td>直感UIアプリ</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#Monex" title="マネックス証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/imagesender (1).jfif" width="60" height="60" alt="マネックス証券のバナー"></amp-img>
-                <div class="info"><span>マネックス証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>国内株<br>米国株</td>
-          <td>注文多彩<br>自動売買×</td>
-          <td>スクリーニング<br>分析ツール</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#Bloomo" title="Bloomo証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/imagesender (2).png" width="60" height="60" alt="Bloomo証券のバナー"></amp-img>
-                <div class="info"><span>Bloomo証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>米国株・ETF</td>
-          <td>コピー運用（自動調整系）</td>
-          <td>ポートフォリオ自動最適化</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#moomoo" title="moomoo証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/moomooookuchi1200675.png" width="60" height="60" alt="moomoo証券のバナー"></amp-img>
-                <div class="info"><span>moomoo証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>米国株<br>中国株</td>
-          <td>注文多彩<br>自動売買×</td>
-          <td>デイトレ向け高機能</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#UFJe" title="三菱UFJ eスマート証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/34-200x200.jpg" width="60" height="60" alt="三菱UFJ eスマート証券のバナー"></amp-img>
-                <div class="info"><span>三菱UFJ eスマート証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>国内株<br>米国株</td>
-          <td>基本注文<br>自動売買×</td>
-          <td>kabuステーション対応</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#saxo" title="SAXO証券の詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/300x250_Banner_Affiliate_AT_Stocks.png" width="60" height="60" alt="SAXO証券のバナー"></amp-img>
-                <div class="info"><span>SAXO証券</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>国内株<br>米国株</td>
-          <td>注文多彩<br>自動売買×</td>
-          <td>50+テクニカル指標</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#tryauto" title="トライオートCFDの詳細へ">
-              <div class="cell-flex">
-                <amp-img src="../Xcard/imagesender.png" width="60" height="60" alt="トライオートCFDのバナー"></amp-img>
-                <div class="info"><span>トライオートCFD</span><br><small>↑ 詳細</small></div>
-              </div>
-            </a>
-          </td>
-          <td>株価指数（CFD）</td>
-          <td>自動売買○</td>
-          <td>スマホアプリあり</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="DMM-kabu.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>DMM株の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- sections -->
-  <section class="anime-item" id="matui">
-    <h2 class="anime-title">松井証券｜初心者におすすめ</h2>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100p6px00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100p6px00od67" width="300" height="250" alt="松井証券 公式バナー"></amp-img>
-    </a>
-    <p>創業100年以上の信頼。初心者でも迷わないアプリとサポートが強み。</p>
-    <ul>
-      <li>直感操作アプリ</li>
-      <li>1日50万円まで手数料無料</li>
-      <li>初心者向け学習コンテンツ</li>
-      <li>チャット・電話・LINE対応</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../matsui-kabu.html">松井証券の詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+    <!-- 三菱UFJ eスマート証券のコンテンツ -->
+    <section class="anime-item" id="UFJe">
+      <h2 class="anime-title">三菱UFJ eスマート証券｜連携とツールが強い</h2>
 
-  <section class="anime-item" id="DMM">
-    <h2 class="anime-title">DMM株｜直感UIで手軽に取引</h2>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100mkjo00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100mkjo00od67" width="300" height="250" alt="DMM株 公式バナー"></amp-img>
-    </a>
-    <p>手数料安・使いやすいUI。国内/米国株に対応。</p>
-    <ul>
-      <li>口座開設かんたん</li>
-      <li>国内株・米国株対応</li>
-      <li>逆指値など多彩な注文</li>
-      <li>スマホアプリが軽快</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../DMM-kabu.html">DMM株の詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100pilm00od67"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pilm00od67"
+                 alt="三菱UFJ eスマート証券 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>MUFG連携や高機能ツールが魅力。幅広い商品に対応。</p>
 
-  <section class="anime-item" id="UFJe">
-    <h2 class="anime-title">三菱UFJ eスマート証券｜連携とツールが強い</h2>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100pilm00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pilm00od67" width="300" height="250" alt="三菱UFJ eスマート証券 公式バナー"></amp-img>
-    </a>
-    <p>MUFG連携や高機能ツールが魅力。幅広い商品に対応。</p>
-    <ul>
-      <li>株・投信・米国株のコストに強み</li>
-      <li>「kabuステーション」対応</li>
-      <li>連携サービスが便利</li>
-      <li>ポイント投資対応</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../MUFGesmart.html">eスマート証券の詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 株・投信・米国株のコストに強み</li>
+        <li>✔️ 「kabuステーション」対応</li>
+        <li>✔️ じぶん銀行など連携が便利</li>
+        <li>✔️ ポイント投資対応</li>
+      </ul>
 
-  <section class="anime-item" id="moomoo">
-    <h2 class="anime-title">moomoo証券｜米中対応＋高機能ツール</h2>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl000od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pnl000od67" width="300" height="250" alt="moomoo証券 公式バナー"></amp-img>
-    </a>
-    <p>板/足/指標が充実。デイトレ〜情報収集まで1アプリ完結。</p>
-    <ul>
-      <li>米国株に強い</li>
-      <li>多彩な注文方式</li>
-      <li>豊富な指標・スクリーナー</li>
-      <li>少額から取引可</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../moomoo-kabu.html">moomooの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="MUFGesmart.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>eスマート証券の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
 
-  <section class="anime-item" id="saxo">
-    <h2 class="anime-title">SAXO証券｜テクニカル・注文が強い</h2>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pwnt00od67" width="300" height="250" alt="SAXO証券 公式バナー"></amp-img>
-    </a>
-    <p>米国株5,800銘柄以上。上級者向けの機能と注文方式。</p>
-    <ul>
-      <li>50以上のテクニカル指標</li>
-      <li>7種類の注文方式</li>
-      <li>低水準の取引コスト</li>
-      <li>米ドル決済の特定口座</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../saxo.html">SAXOの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+    <!-- moomoo証券のコンテンツ -->
+    <section class="anime-item" id="moomoo">
+      <h2 class="anime-title">moomoo証券｜米中対応＋高機能ツール</h2>
 
-  <section class="anime-item" id="Monex">
-    <h2 class="anime-title">マネックス証券｜総合力と情報が充実</h2>
-    <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC1&SQ=0&isq=74" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC1&isq=74&psq=0" width="300" height="250" alt="マネックス証券 公式バナー"></amp-img>
-    </a>
-    <p>情報量と機能がバランス良く、初心者〜経験者まで使いやすい。</p>
-    <ul>
-      <li>取引スタイル別の手数料体系</li>
-      <li>1株（ワン株）対応・買付手数料0円</li>
-      <li>業績・指標をグラフで比較</li>
-      <li>IPO抽選が公平</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../Monex.html">マネックスの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100pnl000od67"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pnl000od67"
+                 alt="moomoo証券 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>板/足/指標が充実。デイトレ〜情報収集まで1アプリ完結。</p>
 
-  <section class="anime-item" id="Bloomo">
-    <h2 class="anime-title">Bloomo証券｜PFコピーで手軽に米国投資</h2>
-    <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=BLMO1&isq=204&psq=0" width="300" height="250" alt="Bloomo 公式バナー"></amp-img>
-    </a>
-    <p>理想のポートフォリオをコピー＆自動調整。米国株・ETFに集中。</p>
-    <ul>
-      <li>目標PFの自動リバランス</li>
-      <li>0.0001株から売買可</li>
-      <li>米国株/ETFに絞れて迷わない</li>
-      <li>計算・実行を自動化</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../bloomo.html">Bloomoの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 米国株に強い</li>
+        <li>✔️ 多彩な注文方式</li>
+        <li>✔️ 豊富な指標・スクリーナー</li>
+        <li>✔️ 少額から取引可</li>
+      </ul>
 
-  <section class="anime-item" id="tryauto">
-    <h2 class="anime-title">トライオートCFD｜CFD自動売買</h2>
-    <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=208" class="cta-button-hikaku" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">
-      <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=INV16&isq=208&psq=0" width="300" height="250" alt="トライオートCFD 公式バナー"></amp-img>
-    </a>
-    <p>プリセット選択で簡単稼働。調整や停止もアプリで完結。</p>
-    <ul>
-      <li>自動売買ロジックを選ぶだけで稼働</li>
-      <li>稼働/停止・数量調整・パラメータ変更が自由</li>
-      <li>アプリで履歴や稼働状況を確認</li>
-    </ul>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../tryauto.html">トライオートCFDの詳しい解説</a>
-      <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-    </div>
-  </section>
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="moomoo-kabu.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>moomooの詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
 
-  <section class="anime-item">
-    <h2 class="anime-title">おすすめ記事｜株の基礎知識</h2>
-    <p>株の基礎とチャートの見方をまとめた解説ページです。</p>
-    <div class="recommendation-grid">
-      <a class="recommendation-link" href="../kabukaisetu.html">株取引の基礎を解説</a>
-    </div>
-    <a class="top-link" href="#top">▲ページ上部へ戻る</a>
-  </section>
+    <!-- SAXO証券のコンテンツ -->
+    <section class="anime-item" id="saxo">
+      <h2 class="anime-title">SAXO証券｜テクニカル・注文が強い</h2>
 
-  <section class="anime-item">
-    <amp-img class="hero-img" src="../sonota/Q&A.jpg" width="1200" height="600" layout="responsive" alt="よくある質問のイメージ"></amp-img>
-    <h2 class="anime-title">よくある質問（FAQ）</h2>
-    <amp-accordion class="faq">
-      <section>
-        <h4>口座開設はどのくらいで完了しますか？</h4>
-        <p>最短即日〜3営業日ほどで開設できます。本人確認の方法によって差があります。</p>
-      </section>
-      <section>
-        <h4>新NISAに対応していますか？</h4>
-        <p>対応状況は各社公式サイトや当サイト比較表で確認できます。制度改定があるため最新情報のチェックをおすすめします。</p>
-      </section>
-      <section>
-        <h4>米国株と中国株の両方を取引できますか？</h4>
-        <p>対応口座を選べば可能です。市場の種類や為替手数料も合わせて比較しましょう。</p>
-      </section>
-      <section>
-        <h4>初心者は何を基準に選べばいいですか？</h4>
-        <p>手数料だけでなく、アプリの使いやすさやサポート体制を重視すると安心です。</p>
-      </section>
-    </amp-accordion>
-  </section>
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://h.accesstrade.net/sp/rr?rk=0100pwnt00od67"
+                 alt="SAXO証券 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>米国株5,800銘柄以上。上級者向けの機能と注文方式。</p>
 
-  <section class="anime-item">
-    <h2 class="anime-title">このページについて</h2>
-    <p><strong>最終更新日：</strong>2025-08-19</p>
-    <p class="muted">当サイトは証券会社公式サイトの公開情報をもとに、取扱市場・注文方式・分析ツールを基準に比較しています。リンクは一部アフィリエイトを含みます。情報は参考のため、必ず公式の情報をご確認ください。</p>
-  </section>
-</main>
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 50以上のテクニカル指標</li>
+        <li>✔️ 7種類の注文方式</li>
+        <li>✔️ 低水準の取引コスト</li>
+        <li>✔️ 米ドル決済の特定口座</li>
+      </ul>
 
-<footer></footer>
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="saxo.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>SAXOの詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- マネックス証券のコンテンツ -->
+    <section class="anime-item" id="Monex">
+      <h2 class="anime-title">マネックス証券｜総合力と情報が充実</h2>
+
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC1&SQ=0&isq=74"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC1&isq=74&psq=0"
+                 alt="マネックス証券 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>情報量と機能がバランス良く、初心者〜経験者まで使いやすい。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 取引スタイル別の手数料体系</li>
+        <li>✔️ 1株（ワン株）対応・買付手数料0円</li>
+        <li>✔️ 業績・指標をグラフで比較</li>
+        <li>✔️ IPO抽選が公平</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="Monex.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>マネックスの詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloomo証券のコンテンツ -->
+    <section class="anime-item" id="Bloomo">
+      <h2 class="anime-title">Bloomo証券｜PFコピーで手軽に米国投資</h2>
+
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=BLMO1&isq=204&psq=0"
+                 alt="Bloomo 公式バナー" width="300" height="250" loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>理想のポートフォリオをコピー＆自動調整。米国株・ETFに集中。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 目標PFの自動リバランス</li>
+        <li>✔️ 0.0001株から売買可</li>
+        <li>✔️ 米国株/ETFに絞れて迷わない</li>
+        <li>✔️ 計算・実行を自動化</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="bloomo.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>Bloomoの詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-item" id="tryauto">
+      <h2 class="anime-title">トライオートCFD｜CFD自動売買</h2>
+
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=208"
+         class="cta-button-hikaku"
+         rel="sponsored nofollow noopener"
+         referrerpolicy="no-referrer-when-downgrade">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=INV16&isq=208&psq=0"
+                 alt="トライオートCFD 公式バナー"
+                 width="300" height="250"
+                 loading="lazy" layout="responsive"></amp-img>
+      </a>
+      <p class="margin_min"><small>↑公式サイト</small></p>
+      <p>プリセット選択で簡単稼働。調整や停止もアプリで完結。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 自動売買ロジックを選ぶだけで稼働</li>
+        <li>✔️ 稼働/停止・数量調整・パラメータ変更が自由</li>
+        <li>✔️ アプリで履歴や稼働状況を確認</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="tryauto.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>トライオートCFDの詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- SBI証券 セクション     -->
+    <!-- ======================= -->
+    <section class="anime-item" id="SBI">
+      <h2 class="anime-title">SBI証券｜国内最大級の総合力</h2>
+
+      <!-- TODO: 提携リンクに差し替え（TCSの正式AC/LC） -->
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=SBI99&SQ=0&isq=83" class="cta-button-hikaku"
+         rel="sponsored nofollow noopener">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=SBI99&isq=83&psq=0"
+                 loading="lazy" alt="SBI証券" width="300" height="250" layout="responsive"></amp-img>
+      </a>
+
+      <p class="margin_min"><small>↑公式サイト</small></p>
+
+      <p>商品ラインナップ・手数料・ツールの総合力。初心者〜中級者の第一候補。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 国内株・米国株ともに充実</li>
+        <li>✔️ HYPER SBIなど分析ツールが強い</li>
+        <li>✔️ NISA/積立の選択肢が幅広い</li>
+        <li>✔️ 1株投資・ポイント連携に対応</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="SBI.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>SBI証券の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- Webull証券 セクション   -->
+    <!-- ======================= -->
+    <section class="anime-item" id="Webull">
+      <h2 class="anime-title">Webull（ウィブル）証券｜軽快アプリ＆情報表示が強い</h2>
+
+      <!-- TODO: 提携リンクに差し替え（TCSの正式AC/LC） -->
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=WBLL1&SQ=0&isq=203" class="cta-button-hikaku"
+         rel="sponsored nofollow noopener">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=WBLL1&isq=203&psq=0"
+                 alt="ウィブル証券" width="300" height="250" layout="responsive"></amp-img>
+      </a>
+
+      <p class="margin_min"><small>↑公式サイト</small></p>
+
+      <p>直感的な板・チャート・ニュースの表示。スマホ完結でサクサク。</p>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ アプリUIが軽快で見やすい</li>
+        <li>✔️ 国内株・米国株に対応</li>
+        <li>✔️ 足/指標/スクリーナーが充実</li>
+        <li>✔️ 1株など少額からもOK</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="Webull.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>Webull証券の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- GMOクリック証券 セクション -->
+    <!-- ======================= -->
+    <section class="anime-item" id="GMO">
+      <h2 class="anime-title">GMOクリック証券｜手数料◎＆無料取引ツール</h2>
+
+      <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=CLICK1&SQ=0&isq=112" class="cta-button-hikaku"
+         rel="sponsored nofollow noopener">
+        <amp-img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=CLICK1&isq=112&psq=0"
+                 border="0" alt="GMOクリック証券" width="300" height="250" layout="responsive"></amp-img>
+      </a>
+
+      <h3 class="anime-title">メリット</h3>
+      <ul>
+        <li>✔️ 業界最安値水準の取引コスト</li>
+        <li>✔️ 約定代金にかかわらず0円！</li>
+        <li>✔️ 高機能で使いやすい取引ツールがすべて無料</li>
+        <li>✔️ NISA取引も手数料0円</li>
+      </ul>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="GMO-syouken.html" class="recommendation-link">
+            <i class="fa-solid fa-note-sticky"></i><span>GMOクリック証券の詳しい解説</span>
+          </a>
+          <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-item" aria-labelledby="ranking-title" id="sec-securities">
+      <h2 class="anime-title" id="ranking-title">管理人おすすめ証券ランキングTOP3</h2>
+
+      <table class="table-ranking is-ultra" role="table">
+        <colgroup><col><col><col><col><col></colgroup>
+        <thead>
+          <tr>
+            <th scope="col">順</th>
+            <th scope="col">会社</th>
+            <th scope="col">料金</th>
+            <th scope="col">使いやすさ</th>
+            <th scope="col">特徴</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <th scope="row">1位</th>
+            <td>
+              <a class="ranking-jump" href="matsui-kabu.html">
+                <div class="ranking-flex">
+                  <amp-img src="Xcard/ideco02-_300-250.jpg" alt="松井証券" loading="lazy" width="28" height="28" layout="responsive"></amp-img>
+                  <div class="ranking-info"><span>松井</span></div>
+                </div>
+              </a>
+            </td>
+            <td>◎<br>50万円以下無料</td>
+            <td>〇<br>シンプル操作</td>
+            <td>初心者向け</td>
+          </tr>
+
+          <tr>
+            <th scope="row">2位</th>
+            <td>
+              <a class="ranking-jump" href="DMM-kabu.html">
+                <div class="ranking-flex">
+                  <amp-img src="Xcard/300_250.png" alt="DMM株" loading="lazy" width="28" height="28" layout="responsive"></amp-img>
+                  <div class="ranking-info"><span>DMM</span></div>
+                </div>
+              </a>
+            </td>
+            <td>◎<br>業界最安水準</td>
+            <td>◎<br>アプリ使いやすい</td>
+            <td>総合バランス良</td>
+          </tr>
+
+          <tr>
+            <th scope="row">3位</th>
+            <td>
+              <a class="ranking-jump" href="GMO-syouken.html">
+                <div class="ranking-flex">
+                  <amp-img src="Xcard/imagesender.gif" alt="GMOクリック証券" loading="lazy" width="28" height="28" layout="responsive"></amp-img>
+                  <div class="ranking-info"><span>GMO</span></div>
+                </div>
+              </a>
+            </td>
+            <td>〇<br>標準</td>
+            <td>◎<br>UI軽快</td>
+            <td>取引ツールが直感的</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <p class="note small">
+        ※ 海外株やIPOを重視する場合は <a href="SBI.html">SBI証券</a> もおすすめです。
+      </p>
+    </section>
+
+    <section class="anime-item">
+      <h2 class="anime-title">おすすめ記事｜株の基礎知識</h2>
+      <p>株の基礎とチャートの見方をまとめた解説ページです。</p>
+
+      <div class="recommendation-section">
+        <div class="recommendation-grid">
+          <a href="kabukaisetu.html" class="recommendation-link">
+            <i class="fa-regular fa-handshake"></i>
+            <span>株取引の基礎を解説</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+    </section>
+
+    <section class="anime-item">
+      <amp-img src="sonota/Q&A.jpg" alt="よくある質問のイメージ" width="1200" height="600" loading="lazy" layout="responsive"></amp-img>
+      <h2 class="anime-title">よくある質問（FAQ）</h2>
+
+      <ul class="faq-list">
+
+        <li>
+          <details class="faq-item">
+            <summary>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Q. 口座開設はどのくらいで完了しますか？</span> 
+              <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <i class="fa-solid fa-comment" aria-hidden="true"></i>
+              最短即日〜3営業日ほどで開設できます。本人確認の方法によって差があります。
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <details class="faq-item">
+            <summary>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Q. 新NISAに対応していますか？</span> 
+              <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <i class="fa-solid fa-comment" aria-hidden="true"></i>
+              対応状況は各社公式サイトや当サイト比較表で確認できます。制度改定があるため最新情報のチェックをおすすめします。
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <details class="faq-item">
+            <summary>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Q. 米国株と中国株の両方を取引できますか？</span> 
+              <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <i class="fa-solid fa-comment" aria-hidden="true"></i>
+              対応口座を選べば可能です。市場の種類や為替手数料も合わせて比較しましょう。
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <details class="faq-item">
+            <summary>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Q. 初心者は何を基準に選べばいいですか？</span> 
+              <i class="fa-solid fa-chevron-down faq-caret" aria-hidden="true"></i>
+            </summary>
+            <div class="faq-answer">
+              <i class="fa-solid fa-comment" aria-hidden="true"></i>
+              手数料だけでなく、アプリの使いやすさやサポート体制を重視すると安心です。
+            </div>
+          </details>
+        </li>
+
+      </ul>
+
+      <a href="#top" class="recommendation-top-link" aria-label="ページ上部へ戻る">▲ページ上部へ戻る</a>
+    </section>
+
+    <section class="anime-item" aria-labelledby="review-entry-title">
+      <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+
+      <div class="review">
+        <a href="userreview.html" class="review-card">
+          <amp-img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async" width="300" height="250" layout="responsive"></amp-img>
+          <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
+        </a>
+      </div>
+
+    </section>
+
+    <section class="anime-item">
+      <h2 class="anime-title">このページについて</h2>
+      <p><strong>最終更新日：</strong>2025-10-04</p>
+      <p>当サイトは証券会社公式サイトの公開情報をもとに、取扱市場・注文方式・分析ツールを基準に比較しています。リンクは一部アフィリエイトを含みます。</p>
+      <small>情報はあくまで参考とし、必ず公式の情報を確認してください。</small>
+    </section>
+
+    <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+  </main>
+
+
+  <footer class="site-footer">
+    &copy; 2025 tousiportal.jp
+  </footer>
 </body>
 </html>
-
-
-<!-- ===================================================== -->
-

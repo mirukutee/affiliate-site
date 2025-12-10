@@ -1,0 +1,125 @@
+<!doctype html>
+<html amp lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>★ここにタイトル</title>
+
+  <link rel="canonical" href="★ここにcanonical URL">
+  <meta name="description" content="★ここにdescription">
+
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <!-- AMP本体 -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <!-- 必要ならコンポーネント（例：accordion） -->
+  <!--
+  <script async custom-element="amp-accordion"
+          src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  -->
+
+  <!-- AMP必須ボイラープレート -->
+  <style amp-boilerplate>
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+    @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
+
+  <!-- この中に必要なぶんだけCSS（75KB以内） -->
+  <style amp-custom>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0 8px 24px;
+    }
+    header.site-header {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px 4px 8px;
+      text-align: center;
+    }
+    header.site-header h1 {
+      font-size: 1.2rem;
+      margin: 0 0 4px;
+    }
+    header.site-header p.lead {
+      margin: 0;
+      font-size: .9rem;
+      color: #555;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .section-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 12px 10px;
+      margin-top: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    }
+    .section-card h2 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      padding-left: 8px;
+      border-left: 4px solid #0366d6;
+    }
+    .note {
+      font-size: .8rem;
+      color: #666;
+    }
+    footer.site-footer {
+      max-width: 980px;
+      margin: 16px auto 0;
+      padding: 12px 4px;
+      font-size: .75rem;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>★ここにH1（見出し）</h1>
+    <p class="lead">★ここに一文リード（任意）</p>
+  </header>
+
+  <main>
+    <!-- ここに各ページごとの中身を入れる -->
+    <section class="section-card">
+      <h2>このAMP版ページについて</h2>
+      <p class="note">
+        本ページは「★元ページURL★」のAMP版です。表や図鑑などの要点をスマホ向けに簡略表示しています。
+      </p>
+    </section>
+
+    <!-- ★ここから先は、元HTMLの <main> の中身を必要なぶんだけ移植 -->
+    <!--
+      注意:
+      - <img> はすべて <amp-img> に変更（width / height / layout="responsive" つける）
+      - <script> はAMPランタイムと構造化データ（type="application/ld+json"）以外NG
+      - 外部CSSの <link rel="stylesheet"> は使えない → 必要な分だけ amp-custom に寄せる
+      - include.js / sidebar.js 系の読み込みは削除（AMPでは使えない）
+    -->
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025 tousiportal.jp
+  </footer>
+</body>
+</html>

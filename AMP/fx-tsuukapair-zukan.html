@@ -1,0 +1,179 @@
+<!doctype html>
+<html amp lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>FX通貨ペア図鑑（AMP版）｜主要ペアの特徴を一行で速読</title>
+
+  <link rel="canonical" href="https://tousiportal.jp/fx-tsuukapair-zukan.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <!-- AMP ランタイム -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <!-- 追加コンポーネント（必要に応じて増やす） -->
+  <script async custom-element="amp-accordion"
+          src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+  <!-- OGP（必要なら最小限でOK） -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="FX通貨ペア図鑑（スマホ速読＋タップ展開）">
+  <meta property="og:description" content="主要FX通貨ペアを一行要約＋タップで簡易解説カード。ドル円・ユーロドルなどの特徴、取引時間や相性まで速読で把握。">
+  <meta property="og:url" content="https://tousiportal.jp/fx-tsuukapair-zukan.html">
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/FX-zukan.png">
+
+  <style amp-boilerplate>
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+    @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
+
+  <!-- 最小限のレイアウト用CSS（通常版のクラス名に寄せてある） -->
+  <style amp-custom>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f7fb;
+      padding: 0 8px 24px;
+    }
+    header.site-header {
+      padding: 12px 0;
+      text-align: center;
+    }
+    .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    .lead {
+      font-size: .9rem;
+      margin: 0;
+    }
+    .update-badge {
+      margin-top: 6px;
+      font-size: .75rem;
+      color: #666;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .anime-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 12px 10px;
+      margin-top: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    }
+    .anime-title {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      border-left: 4px solid #0366d6;
+      padding-left: 8px;
+    }
+    .pair-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
+    .pair-chip {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid #e0e4f0;
+      background: #fdfefe;
+      font-size: .8rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .pair-chip b {
+      display: block;
+      font-size: .85rem;
+      margin-bottom: 2px;
+    }
+    .pair-chip small {
+      display: block;
+      font-size: .75rem;
+      color: #555;
+    }
+    .back-to-top {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      text-align: center;
+      line-height: 36px;
+      font-size: .85rem;
+      background: #0366d6;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1 class="title">FX通貨ペア図鑑（AMP版）</h1>
+    <p class="lead">スマホ速読向けに、主要通貨ペアの特徴を一行＋タップ展開で整理しました。</p>
+    <p class="update-badge"><span>最終更新</span>：<time datetime="2025-11-20">2025年11月20日</time></p>
+  </header>
+
+  <main>
+    <!-- 目的別ナビ（必要なら） -->
+    <section class="anime-item">
+      <h2 class="anime-title">このページの使い方</h2>
+      <p>上部のチップ一覧から気になる通貨ペアをタップすると、下部の解説カードにジャンプします。</p>
+    </section>
+
+    <!-- チップ一覧：通常版の「chip一覧」をそのままコピペでOK -->
+    <section class="anime-item">
+      <h2 class="anime-title">主要通貨ペア（速読チップ）</h2>
+      <div class="pair-grid">
+        <!-- 例：通常版の a 要素をそのまま貼る -->
+        <!--
+        <a class="pair-chip" href="#usdjpy">
+          <b>USD/JPY｜ドル円</b>
+          <small>日本人に最もなじみがある基軸ペア</small>
+        </a>
+        -->
+        <!-- ★ここに fx-tsuukapair-zukan.html の .pair-chip 一覧をコピペ -->
+      </div>
+    </section>
+
+    <!-- 解説カード：amp-accordion を使うパターン -->
+    <section class="anime-item">
+      <h2 class="anime-title">通貨ペアごとの解説</h2>
+
+      <amp-accordion>
+        <!-- 例：ドル円 -->
+        <section id="usdjpy">
+          <h3>USD/JPY｜ドル円</h3>
+          <p>通常版の「ドル円」解説テキストをここにコピペ。</p>
+          <ul>
+            <li>主な特徴：〇〇</li>
+            <li>ボラティリティ：〇〇</li>
+            <li>こんな人に向いている：〇〇</li>
+          </ul>
+        </section>
+
+        <!-- ★ここに他の通貨ペアの section を通常版から順にコピペ -->
+      </amp-accordion>
+    </section>
+  </main>
+
+  <a href="#top" class="back-to-top" aria-label="ページトップへ">▲</a>
+</body>
+</html>

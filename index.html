@@ -50,7 +50,7 @@
 
   <!-- Assets -->
   <link rel="icon" href="sonota/favicon.ico" type="image/x-icon" />
-  <link rel="preload" as="image" href="https://tousiportal.jp/sonota/top.png" fetchpriority="high" />
+ 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -65,37 +65,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- AMP -->
-<link rel="canonical" href="https://tousiportal.jp/">
+
 <link rel="amphtml" href="AMP/index.html">
 
 
 
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"ミルクティー情報発信",
-    "url":"https://tousiportal.jp/",
-    "logo":"https://tousiportal.jp/sonota/top.png",
-    "sameAs":["https://x.com/QwZd0ksG2138610"]
-  }
-  </script>
-
-  <!-- Structured Data: Website -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://tousiportal.jp/",
-    "name":"証券・FX・仮想通貨の比較まとめ",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://tousiportal.jp/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script>
 
 <!-- Structured Data: Breadcrumb -->
 <script type="application/ld+json">
@@ -179,6 +153,31 @@
     {"@type":"Question","name":"無理な勧誘はありますか？",
      "acceptedAnswer":{"@type":"Answer","text":"いいえ、一切ありません。"}}
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "投資ポータル.jp",
+  "url": "https://tousiportal.jp/",
+  "logo": "https://tousiportal.jp/favicon-512.png",
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "投資・証券・仮想通貨ガイド",
+  "url": "https://tousiportal.jp/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://tousiportal.jp/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 

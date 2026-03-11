@@ -3,7 +3,7 @@
 
 <url>
 <loc>https://tousiportal.jp/</loc>
-<lastmod>2026-03-05</lastmod>
+<lastmod>2026-03-11</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
@@ -33,7 +33,7 @@
 </url>
 <url>
 <loc>https://tousiportal.jp/column.html</loc>
-<lastmod>2026-03-10</lastmod>
+<lastmod>2026-03-11</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -373,4 +373,12 @@
 <changefreq>yearly</changefreq>
 <priority>0.2</priority>
 </url>
+<url>
+<loc>https://tousiportal.jp/memetoken-kaisetu.html</loc>
+<lastmod>2026-03-11</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.2</priority>
+</url>
+
+
 </urlset>

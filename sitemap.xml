@@ -80,6 +80,21 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+
+<url>
+<loc>https://tousiportal.jp/tumitatetousi-kaisetu.html</loc>
+<lastmod>2026-03-13</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://tousiportal.jp/haitoutousi-kaisetu.html</loc>
+<lastmod>2026-03-13</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->
 

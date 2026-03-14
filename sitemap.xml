@@ -95,6 +95,14 @@
 <priority>0.6</priority>
 </url>
 
+<url>
+<loc>https://tousiportal.jp/tyoukitousi-kaisetu.html</loc>
+<lastmod>2026-03-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->
 
@@ -289,31 +297,31 @@
 </url>
 <url>
 <loc>https://tousiportal.jp/OKJ.html</loc>
-<lastmod>2025-10-17</lastmod>
+<lastmod>2026-03-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://tousiportal.jp/PBRLending.html</loc>
-<lastmod>2025-10-17</lastmod>
+<lastmod>2026-03-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://tousiportal.jp/SBI.html</loc>
-<lastmod>2025-10-17</lastmod>
+<lastmod>2026-03-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://tousiportal.jp/Webull.html</loc>
-<lastmod>2025-10-17</lastmod>
+<lastmod>2026-03-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://tousiportal.jp/bloomo.html</loc>
-<lastmod>2025-10-17</lastmod>
+<lastmod>2026-03-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>

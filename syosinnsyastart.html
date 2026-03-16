@@ -53,7 +53,8 @@
   </script>
 </head>
 <body>
-  <div id="header"></div>
+<!-- ヘッダー（注入完了まで非表示：FOUC防止） -->
+   <div id="header"></div>
 
   <div class="container">
     <aside id="sidebar"></aside>
@@ -229,6 +230,9 @@
   <!-- フッター（include.jsで共通読込） -->
   <div id="footer"></div>
 
+  <!--読み込みのスクリプト-->
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 
   
 </body>

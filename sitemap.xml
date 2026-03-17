@@ -104,11 +104,24 @@
 
 <url>
 <loc>https://tousiportal.jp/syosinnsyastart.html</loc>
-<lastmod>2026-03-14</lastmod>
+<lastmod>2026-03-16</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
+<loc>https://tousiportal.jp/tousi-to-gyanburu.html</loc>
+<lastmod>2026-03-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://tousiportal.jp/tousi-ikura-kara.html</loc>
+<lastmod>2026-03-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->

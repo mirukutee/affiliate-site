@@ -3,6 +3,29 @@
    tousiportal.jp トップページ専用
 ========================================= */
 
+/* 上の説明（かなり控えめ） */
+.top-hero__eyebrow--compact {
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+/* メインタイトル（ギリまで小さく） */
+.top-hero__title--compact {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 600px) {
+  .top-hero__title--compact {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+}
+
 .top-page {
   --top-bg: #f7fbff;
   --top-surface: #ffffff;
@@ -32,6 +55,8 @@
   white-space: nowrap;
   clip-path: inset(50%);
 }
+
+
 
 /* 共通 */
 .top-page p,

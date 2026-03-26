@@ -115,77 +115,59 @@
   text-decoration: underline;
 }
 
-.top-hero__lead {
-  margin-top: 14px;
-  max-width: 520px;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #2f3f52;
-  letter-spacing: 0.01em;
-  text-wrap: pretty;
-}
-
-/* =========================
-   Hero タイトル最終完成
-   ========================= */
-
-/* =========================
-   Hero 本体
-   ========================= */
-
+/* Hero */
 .top-hero {
-  padding: 24px 22px;
-  border: 1px solid var(--top-border);
+  padding: 20px;
   border-radius: var(--top-radius-lg);
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-  box-shadow: var(--top-shadow-soft);
+  border: 1px solid var(--top-border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,251,255,0.96));
+  box-shadow: var(--top-shadow);
 }
 
 .top-hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 320px);
   align-items: start;
-}
-
-.top-hero__main {
-  min-width: 0;
+  gap: 18px;
 }
 
 .top-hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
   margin: 0 0 10px;
-  padding: 0.2rem 0.7rem;
-  border: 1px solid #c9d9ea;
-  border-radius: 999px;
-  background: var(--top-primary-soft);
-  color: var(--top-primary);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  line-height: 1;
+  color: var(--top-primary);
+  letter-spacing: 0.02em;
+}
+
+.top-hero__eyebrow--compact {
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  opacity: 0.7;
+  line-height: 1.4;
 }
 
 .top-hero__title {
-  margin: 0;
-  max-width: 520px;
-  font-size: 1.55rem;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.28;
   color: var(--top-text);
-  text-wrap: balance;
+  letter-spacing: 0.01em;
+}
+
+.top-hero__title--compact {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--top-text);
 }
 
 .top-hero__lead {
-  margin-top: 14px;
-  margin-bottom: 0;
-  max-width: 520px;
+  margin: 0;
+  max-width: 60ch;
   font-size: 1rem;
-  line-height: 1.75;
-  color: #2f3f52;
-  letter-spacing: 0.01em;
-  text-wrap: pretty;
+  line-height: 1.85;
+  color: var(--top-muted);
 }
 
 .top-hero__actions {
@@ -195,143 +177,75 @@
   margin-top: 18px;
 }
 
-@media (max-width: 900px) {
-  .top-hero__inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 740px) {
-  .top-hero__title {
-    max-width: 420px;
-    font-size: 1.18rem;
-    line-height: 1.32;
-    letter-spacing: -0.015em;
-  }
-}
-
-@media (max-width: 600px) {
-  .top-hero {
-    padding: 16px;
-  }
-
-  .top-hero__title {
-    max-width: 100%;
-  }
-
-  .top-button {
-    width: 100%;
-  }
-}
-
-/* =========================
-   Hero trust badges
-   ========================= */
-
-.top-hero__trust {
-  margin-top: 18px;
-}
-
-.top-hero__trust-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.top-hero__trust-item {
+.top-hero__links {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 6px;
-  min-height: 88px;
-  padding: 14px 16px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-  border: 1px solid #d7e4f0;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(20, 45, 90, 0.06);
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 16px 0 0;
 }
 
-.top-hero__trust-label {
-  display: inline-flex;
-  align-items: center;
+.top-hero__links a {
+  color: var(--top-primary);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.top-hero__side {
+  align-self: stretch;
+}
+
+.top-grid--metrics.top-grid--metrics-compact {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.top-hero__side .top-card--trust {
+  min-height: auto;
+  padding: 12px 14px;
+  border: 1px solid #d8e3ee;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+  pointer-events: none;
+  transform: none;
+  transition: none;
+}
+
+.top-hero__side .top-card--trust:hover,
+.top-hero__side .top-card--trust:focus-visible {
+  transform: none;
+  box-shadow: none;
+  border-color: #d8e3ee;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.top-hero__side .top-card--trust .top-badge {
   min-height: 24px;
-  padding: 0 10px;
-  border-radius: 999px;
-  background: #eef6ff;
-  color: #0653a6;
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
+  padding: 0.14rem 0.52rem;
+  font-size: 0.74rem;
+  border-color: #d4deea;
+  background: #f3f7fb;
+  color: #5c7187;
 }
 
-.top-hero__trust-text {
-  font-size: 0.88rem;
-  font-weight: 600;
+.top-hero__side .top-card--trust .top-card__title {
+  margin: 7px 0 2px;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #314557;
+}
+
+.top-hero__side .top-card--trust .top-card__text {
+  font-size: 0.84rem;
   line-height: 1.55;
-  color: #2b3e50;
-  white-space: normal;
-  text-wrap: pretty;
+  color: #66798a;
 }
 
-/* trust全体が右カラムで窮屈に見えないように */
-.top-hero__inner {
-  align-items: start;
-}
-
-/* tablet */
-@media (max-width: 960px) {
-  .top-hero__trust {
-    margin-top: 14px;
-  }
-
-  .top-hero__trust-list {
-    gap: 10px;
-  }
-
-  .top-hero__trust-item {
-    min-height: 78px;
-    padding: 12px 14px;
-  }
-
-  .top-hero__trust-text {
-    font-size: 0.82rem;
-    line-height: 1.5;
-  }
-}
-
-/* mobile */
-@media (max-width: 600px) {
-  .top-hero__trust {
-    margin-top: 12px;
-  }
-
-  .top-hero__trust-list {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .top-hero__trust-item {
-    min-height: auto;
-    padding: 12px 13px;
-    border-radius: 12px;
-  }
-
-  .top-hero__trust-label {
-    font-size: 0.68rem;
-    min-height: 22px;
-    padding: 0 9px;
-  }
-
-  .top-hero__trust-text {
-    font-size: 0.8rem;
-    line-height: 1.45;
-  }
+.top-hero__side .top-card--trust::before,
+.top-hero__side .top-card--trust::after {
+  content: none;
 }
 
 /* ボタン */

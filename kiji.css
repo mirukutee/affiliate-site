@@ -1,0 +1,652 @@
+/* =========================================================
+   kiji.css
+   記事ページ専用の底上げCSS
+   既存 style.css / menu-card.css / table.css の上に重ねる
+   ========================================================= */
+
+:root{
+  --kiji-text: #1b2b3a;
+  --kiji-text-soft: #44576a;
+  --kiji-border: #d9e4ee;
+  --kiji-border-strong: #c7d7e6;
+  --kiji-bg: #f7fbff;
+  --kiji-bg-soft: #fbfdff;
+  --kiji-primary: #1f6fb2;
+  --kiji-primary-soft: #edf6ff;
+  --kiji-accent: #0f766e;
+  --kiji-warning: #7a4b17;
+  --kiji-warning-bg: #fff8ef;
+  --kiji-shadow-soft: 0 12px 30px rgba(20, 45, 90, 0.08);
+  --kiji-shadow-mini: 0 8px 20px rgba(20, 45, 90, 0.06);
+  --kiji-radius-lg: 22px;
+  --kiji-radius-md: 16px;
+  --kiji-radius-sm: 12px;
+}
+
+/* ページ全体 */
+.kiji-page .kiji-main{
+  min-width: 0;
+}
+
+.kiji-article{
+  display: grid;
+  gap: 22px;
+}
+
+.kiji-page .title{
+  display: none;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.kiji-hero{
+  padding: 24px 22px;
+  border: 1px solid var(--kiji-border);
+  border-radius: var(--kiji-radius-lg);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: var(--kiji-shadow-soft);
+}
+
+.kiji-hero__inner{
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.kiji-hero__main,
+.kiji-hero__aside{
+  min-width: 0;
+}
+
+.kiji-eyebrow{
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin: 0 0 10px;
+  padding: 0.2rem 0.72rem;
+  border: 1px solid #cfe0ef;
+  border-radius: 999px;
+  background: var(--kiji-primary-soft);
+  color: var(--kiji-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kiji-title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.kiji-lead{
+  margin: 14px 0 0;
+  max-width: 58ch;
+  color: var(--kiji-text-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.kiji-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kiji-tags li{
+  padding: 0.45rem 0.8rem;
+  border: 1px solid #d6e3ef;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  color: #27445f;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.kiji-hero__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.kiji-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.15rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.kiji-btn:hover,
+.kiji-btn:focus-visible{
+  transform: translateY(-1px);
+}
+
+.kiji-btn--primary{
+  background: linear-gradient(180deg, #1f78c1 0%, #1a68a6 100%);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(31, 111, 178, 0.24);
+}
+
+.kiji-btn--primary:hover,
+.kiji-btn--primary:focus-visible{
+  color: #fff;
+  text-decoration: none;
+}
+
+.kiji-btn--ghost{
+  border: 1px solid #cbdcec;
+  background: #fff;
+  color: var(--kiji-primary);
+}
+
+.kiji-btn--ghost:hover,
+.kiji-btn--ghost:focus-visible{
+  text-decoration: none;
+  background: #f6fbff;
+}
+
+.kiji-summary-card{
+  height: 100%;
+  padding: 18px;
+  border: 1px solid var(--kiji-border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+  box-shadow: var(--kiji-shadow-mini);
+}
+
+.kiji-summary-card__label{
+  margin: 0 0 8px;
+  color: var(--kiji-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.kiji-summary-card__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.kiji-check-list{
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kiji-check-list li{
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+.kiji-check-list li + li{
+  margin-top: 9px;
+}
+
+.kiji-check-list li::before{
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--kiji-accent);
+  font-weight: 700;
+}
+
+/* =========================================================
+   Section
+   ========================================================= */
+.kiji-section{
+  padding: 22px 20px;
+  border: 1px solid var(--kiji-border);
+  border-radius: var(--kiji-radius-md);
+  background: rgba(255,255,255,0.92);
+  box-shadow: var(--kiji-shadow-mini);
+}
+
+.kiji-section__head{
+  margin-bottom: 16px;
+}
+
+.kiji-section__eyebrow{
+  margin: 0 0 6px;
+  color: var(--kiji-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.kiji-section__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: clamp(1.12rem, 1.6vw, 1.35rem);
+  line-height: 1.45;
+}
+
+.kiji-section__text{
+  margin: 8px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   Grid / card
+   ========================================================= */
+.kiji-grid{
+  display: grid;
+  gap: 14px;
+}
+
+.kiji-grid--3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kiji-grid--2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.kiji-info-card,
+.kiji-feature-card,
+.kiji-link-card{
+  min-width: 0;
+  border: 1px solid var(--kiji-border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafdff 100%);
+  box-shadow: 0 8px 18px rgba(20, 45, 90, 0.05);
+}
+
+.kiji-info-card{
+  padding: 18px 16px;
+}
+
+.kiji-info-card--soft{
+  background: linear-gradient(180deg, #fffdfa 0%, #fff8ef 100%);
+}
+
+.kiji-info-card__eyebrow{
+  margin: 0 0 8px;
+  color: var(--kiji-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.kiji-info-card__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.kiji-info-card__text{
+  margin: 8px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+.kiji-feature-card{
+  position: relative;
+  padding: 18px 16px 16px;
+}
+
+.kiji-feature-card__num{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 28px;
+  margin-bottom: 10px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  background: #eaf4ff;
+  color: var(--kiji-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.kiji-feature-card__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.kiji-feature-card__text{
+  margin: 8px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+.kiji-link-card{
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.kiji-link-card:hover,
+.kiji-link-card:focus-visible{
+  transform: translateY(-2px);
+  border-color: #bfd5e8;
+  text-decoration: none;
+}
+
+.kiji-link-card__label{
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--kiji-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.kiji-link-card__title{
+  display: block;
+  color: var(--kiji-text);
+  line-height: 1.5;
+}
+
+.kiji-link-card__text{
+  display: block;
+  margin-top: 8px;
+  color: var(--kiji-text-soft);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   Note / bullet / table
+   ========================================================= */
+.kiji-note-box{
+  padding: 16px 16px 14px;
+  border: 1px solid #ecd9bf;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffdfa 0%, #fff8ef 100%);
+}
+
+.kiji-bullet-list{
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--kiji-text-soft);
+}
+
+.kiji-bullet-list li + li{
+  margin-top: 8px;
+}
+
+.kiji-table-wrap{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kiji-table-wrap .table{
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Stack / panel / compare
+   ========================================================= */
+.kiji-stack{
+  display: grid;
+  gap: 14px;
+}
+
+.kiji-panel{
+  padding: 18px 16px;
+  border: 1px solid var(--kiji-border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.kiji-panel__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.kiji-panel p{
+  margin: 8px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.8;
+}
+
+.kiji-compare-box{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.kiji-compare-box__item{
+  padding: 16px;
+  border: 1px solid var(--kiji-border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.kiji-compare-box__item h3{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.kiji-compare-box__item p{
+  margin: 8px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   Step
+   ========================================================= */
+.kiji-step-list{
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: kiji-step;
+}
+
+.kiji-step-list li{
+  position: relative;
+  padding: 16px 16px 16px 58px;
+  border: 1px solid var(--kiji-border);
+  border-radius: 16px;
+  background: #fff;
+  counter-increment: kiji-step;
+}
+
+.kiji-step-list li::before{
+  content: counter(kiji-step);
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #eaf4ff;
+  color: var(--kiji-primary);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.kiji-step-list strong{
+  display: block;
+  color: var(--kiji-text);
+  line-height: 1.5;
+}
+
+.kiji-step-list p{
+  margin: 6px 0 0;
+  color: var(--kiji-text-soft);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CTA / disclaimer
+   ========================================================= */
+.kiji-cta{
+  padding: 22px 20px;
+  border: 1px solid #d7e6f2;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4faff 100%);
+  box-shadow: var(--kiji-shadow-soft);
+}
+
+.kiji-cta__eyebrow{
+  margin: 0 0 8px;
+  color: var(--kiji-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.kiji-cta__title{
+  margin: 0;
+  color: var(--kiji-text);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.kiji-cta__text{
+  margin: 10px 0 18px;
+  color: var(--kiji-text-soft);
+  line-height: 1.8;
+  max-width: 58ch;
+}
+
+.kiji-disclaimer{
+  padding: 18px 18px 16px;
+  border: 1px solid var(--kiji-border);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.92);
+}
+
+.kiji-disclaimer__title{
+  margin: 0 0 10px;
+  color: var(--kiji-text);
+  font-size: 1rem;
+}
+
+/* =========================================================
+   FAQ 微調整
+   menu-card.css のFAQを記事ページ用に上品化
+   ========================================================= */
+.kiji-page .faq-item{
+  border-color: var(--kiji-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(20,45,90,0.04);
+}
+
+.kiji-page .faq-item > summary{
+  padding: 0.9em 1em;
+  color: var(--kiji-text);
+}
+
+.kiji-page .faq-answer{
+  padding: 0 1em 1em;
+  color: var(--kiji-text-soft);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 960px){
+  .kiji-hero__inner{
+    grid-template-columns: 1fr;
+  }
+
+  .kiji-grid--3,
+  .kiji-compare-box{
+    grid-template-columns: 1fr;
+  }
+
+  .kiji-grid--2{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px){
+  .kiji-hero,
+  .kiji-section,
+  .kiji-cta,
+  .kiji-disclaimer{
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .kiji-title{
+    font-size: 1.35rem;
+  }
+
+  .kiji-lead{
+    font-size: 0.96rem;
+  }
+
+  .kiji-btn{
+    width: 100%;
+  }
+
+  .kiji-hero__actions{
+    flex-direction: column;
+  }
+
+  .kiji-tags{
+    gap: 7px;
+  }
+
+  .kiji-tags li{
+    font-size: 0.82rem;
+  }
+
+  .kiji-step-list li{
+    padding-left: 54px;
+  }
+}
+
+.kiji-banner-zone__text {
+  margin: 0 0 14px;
+  line-height: 1.8;
+}
+
+.kiji-banner-zone__wide,
+.kiji-banner-zone__square {
+  display: flex;
+  justify-content: center;
+}
+
+.kiji-banner-zone__wide img,
+.kiji-banner-zone__square img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.kiji-banner-zone__wide a,
+.kiji-banner-zone__square a {
+  display: inline-block;
+}

@@ -650,3 +650,39 @@
 .kiji-banner-zone__square a {
   display: inline-block;
 }
+
+.top-proof{
+  margin: 0 0 22px;
+  padding: 14px 18px;
+  border: 1px solid #d9e6f2;
+  border-left: 4px solid #1f6fb2;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f8fbff 0%, #f2f8ff 100%);
+  box-shadow: 0 8px 18px rgba(20, 45, 90, 0.05);
+}
+
+.top-proof__text{
+  margin: 0;
+  color: #27445f;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.top-proof__text strong{
+  color: #16324a;
+  font-weight: 700;
+}
+
+@media (max-width: 640px){
+  .top-proof{
+    margin-bottom: 18px;
+    padding: 13px 14px;
+    border-radius: 12px;
+  }
+
+  .top-proof__text{
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+}

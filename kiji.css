@@ -211,6 +211,13 @@
   font-weight: 700;
 }
 
+.kiji-hero--single .kiji-hero__inner{
+  grid-template-columns: 1fr;
+}
+
+.kiji-hero--single .kiji-lead{
+  max-width: 64ch;
+}
 /* =========================================================
    Section
    ========================================================= */

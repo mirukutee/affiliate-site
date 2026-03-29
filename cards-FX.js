@@ -51,6 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>アイネット証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
         </a>
 
+         <a href="https://tousiportal.jp/GMO-syouken.html" class="card">
+          <img  src="Xcard/imagesender.gif" alt="GMOクリック証券のバナー" loading="lazy" width="300" height="250">
+          <span>GMOクリック証券<br><small class="fee-rating" data-stars="3">手数料</small></span>
+        </a>
+
       </div>
     </section>
   </div>

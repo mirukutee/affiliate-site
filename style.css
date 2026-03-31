@@ -658,16 +658,11 @@ li {
 
   /* メインコンテナ */
   .container {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 10px;
+max-width: 100%; padding: 0;
   }
 
   main {
-    width: 100%;
-    order: 1;
-    padding: 1em;
-    flex-grow: 1;
+  max-width: 100%; padding: 0;
   }
 
  /* ドロップダウンメニュー（スマホ）— アニメを殺さない版 */

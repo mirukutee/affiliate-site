@@ -790,7 +790,7 @@
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
 
-  <script>
+ <script>
     (function () {
       const btn = document.querySelector('.back-to-top');
       if (!btn) return;
@@ -812,70 +812,79 @@
   <script>
   (() => {
     const HIGHLIGHT_CLASS = 'jump-highlight';
-    const OFFSET = 86;
+    const HIGHLIGHT_MS = 2600;
 
-    function getHashTarget(hash) {
-      if (!hash || hash === '#') return null;
-      const id = decodeURIComponent(hash.slice(1));
-      return document.getElementById(id);
+    let activeTimer = null;
+    let activeTarget = null;
+
+    function clearHighlight() {
+      if (activeTarget) {
+        activeTarget.classList.remove(HIGHLIGHT_CLASS);
+        activeTarget = null;
+      }
+      if (activeTimer) {
+        clearTimeout(activeTimer);
+        activeTimer = null;
+      }
     }
 
-    function clearHighlights() {
-      document.querySelectorAll('.' + HIGHLIGHT_CLASS).forEach(el => {
-        el.classList.remove(HIGHLIGHT_CLASS);
+    function getTargetFromHash(hash) {
+      if (!hash || hash === '#') return null;
+      try {
+        return document.querySelector(decodeURIComponent(hash));
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function highlightTarget(target) {
+      if (!target) return;
+      clearHighlight();
+      activeTarget = target;
+      target.classList.add(HIGHLIGHT_CLASS);
+
+      activeTimer = window.setTimeout(() => {
+        if (activeTarget) {
+          activeTarget.classList.remove(HIGHLIGHT_CLASS);
+          activeTarget = null;
+        }
+        activeTimer = null;
+      }, HIGHLIGHT_MS);
+    }
+
+    function handleHashHighlight(hash) {
+      const target = getTargetFromHash(hash);
+      if (!target) return;
+
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          highlightTarget(target);
+        });
       });
     }
 
-    function focusTarget(target) {
-      if (!target) return;
-      if (!target.hasAttribute('tabindex')) {
-        target.setAttribute('tabindex', '-1');
-      }
-      target.focus({ preventScroll: true });
-    }
-
-    function scrollToTarget(target, pushHash = true) {
-      if (!target) return;
-
-      clearHighlights();
-
-      const top = target.getBoundingClientRect().top + window.pageYOffset - OFFSET;
-      window.scrollTo({ top, behavior: 'smooth' });
-
-      target.classList.add(HIGHLIGHT_CLASS);
-      window.setTimeout(() => {
-        target.classList.remove(HIGHLIGHT_CLASS);
-      }, 2800);
-
-      focusTarget(target);
-
-      if (pushHash) {
-        const newHash = '#' + target.id;
-        if (location.hash !== newHash) {
-          history.pushState(null, '', newHash);
-        }
-      }
-    }
-
-    document.addEventListener('click', (event) => {
-      const link = event.target.closest('a[href^="#"]');
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href^="#"]');
       if (!link) return;
 
       const href = link.getAttribute('href');
-      const target = getHashTarget(href);
+      if (!href || href === '#') return;
+
+      const target = getTargetFromHash(href);
       if (!target) return;
 
-      event.preventDefault();
-      scrollToTarget(target, true);
-    });
-
-    window.addEventListener('load', () => {
-      const target = getHashTarget(location.hash);
-      if (!target) return;
       window.setTimeout(() => {
-        scrollToTarget(target, false);
+        highlightTarget(target);
       }, 120);
     });
+
+    window.addEventListener('hashchange', () => {
+      handleHashHighlight(location.hash);
+    });
+
+    if (location.hash) {
+      handleHashHighlight(location.hash);
+    }
   })();
   </script>
 </body>

@@ -2,299 +2,681 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 基本SEO -->
-  <title>Bloomo証券｜米国株・ETFをポートフォリオをコピーで運用</title>
-    <!-- 更新日必ず変更する -->
-  <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Article",
- "dateModified": "2026-03-14"
-}
-</script>
-  <meta name="description" content="Bloomo証券（ブルーモ）の特徴・コピー投資・手数料・為替・始め方を初心者にもわかりやすく解説。最新条件は公式でご確認ください。" />
+  <title>Bloomo証券｜米国株・ETFを分散投資できるアプリ</title>
+  <meta name="description" content="Bloomo証券（ブルーモ証券）の特徴、ポートフォリオ投資、コピー活用、自動リバランス、配当金再投資、NISA対応、注意点まで初心者向けにわかりやすく整理。米国株・ETFに特化したスマホ専用投資アプリが自分に合うか判断しやすく解説します。" />
   <link rel="canonical" href="https://tousiportal.jp/bloomo.html" />
   <link rel="amphtml" href="AMP/bloomo.html" />
 
-  <!-- OGP / Twitter（統一） -->
-  <meta property="og:title" content="Bloomo証券｜米国株・ETFに特化した投資アプリの特徴・手数料・始め方" />
-  <meta property="og:description" content="コピー投資・少額から・自動リバランス。Bloomo証券の要点を1ページで。" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bloomo証券｜米国株・ETFを分散投資できるアプリ" />
+  <meta property="og:description" content="Bloomo証券が合う人・合わない人を初心者向けに整理。ポートフォリオ投資、コピー活用、自動リバランス、NISA対応、注意点までわかりやすく紹介します。" />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://tousiportal.jp/bloomo.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-  <meta property="og:site_name" content="簡潔な紹介サイト" />
-
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/bloomo.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bloomo証券｜米国株・ETFに特化した投資アプリの特徴・手数料・始め方" />
-  <meta name="twitter:description" content="コピー投資・少額から・自動リバランス。Bloomo証券の要点を1ページで。" />
-  <meta name="twitter:image" content="https://tousiportal.jp/sonota/top.png" />
 
-  <!-- Favicon 基本 -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-<!-- 高解像度（Android / 一部ブラウザ）-->
-<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-
-<!-- iOS ホーム画面用 -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-
-  <!-- パフォーマンス系 -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://www.tcs-asp.net">
-  <link rel="preconnect" href="https://img.tcs-asp.net">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
- <link rel="stylesheet" href="table.css" />
-   <link rel="stylesheet" href="header.css">
- <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="kiji.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- HowTo 構造化データ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"Bloomo証券の始め方",
-    "totalTime":"PT10M",
-    "step":[
-      {"@type":"HowToStep","name":"基本情報の入力","text":"アプリをダウンロードし、氏名・住所などを入力。"},
-      {"@type":"HowToStep","name":"本人確認の提出","text":"本人確認書類をスマホで撮影して提出。"},
-      {"@type":"HowToStep","name":"初期設定","text":"入出金方法や目標ポートフォリオの方針を設定。"},
-      {"@type":"HowToStep","name":"初回の買付","text":"コピー先や自分の銘柄を選び、金額を指定して発注。"}
-    ]
-  }
-  </script>
-
-  <!-- パンくず 構造化データ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/"},
-      {"@type":"ListItem","position":2,"name":"証券一覧","item":"https://tousiportal.jp/syoukensyoukai.html"},
-      {"@type":"ListItem","position":3,"name":"Bloomo証券","item":"https://tousiportal.jp/bloomo.html"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/index.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"証券会社一覧",
+        "item":"https://tousiportal.jp/syoukensyoukai.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"Bloomo証券",
+        "item":"https://tousiportal.jp/bloomo.html"
+      }
     ]
   }
   </script>
 
-  <!-- FAQ 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Bloomo証券｜米国株・ETFを分散投資できるアプリ",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "datePublished":"2026-04-02",
+    "dateModified":"2026-04-02",
+    "inLanguage":"ja",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://tousiportal.jp/bloomo.html"
+    },
+    "image":[
+      "https://tousiportal.jp/Xcard/bloomo.webp"
+    ],
+    "description":"Bloomo証券の特徴、ポートフォリオ投資、コピー活用、自動リバランス、配当金再投資、NISA対応、注意点まで初心者向けに整理した解説記事です。"
+  }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"初心者でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"コピー投資や自動リバランスで、投資経験が浅い方でも始めやすい設計です。最新の提供条件は公式でご確認ください。"}},
-      {"@type":"Question","name":"手数料はどのようにかかりますか？","acceptedAnswer":{"@type":"Answer","text":"残高に対する年率手数料と為替手数料等がかかります。キャンペーン等で変動する場合があるため、最新の手数料表をご確認ください。"}},
-      {"@type":"Question","name":"NISAに対応していますか？","acceptedAnswer":{"@type":"Answer","text":"NISAの利用可否や対象は変更の可能性があるため、必ず最新の公式情報をご確認ください。"}}
+      {
+        "@type":"Question",
+        "name":"Bloomo証券はNISAに対応していますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"対応しています。利用条件や対象範囲が変わる場合もあるため、最新情報は必ず公式サイトでご確認ください。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Bloomo証券では日本株も買えますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"日本株や一般的な投資信託には対応しておらず、米国株と米国ETFを中心に扱うサービスです。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Bloomo証券はPCでも使えますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"スマートフォン専用サービスとして案内されており、PC中心で使いたい人には向きにくいです。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Bloomoコアとは何ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"ETFを中心に構成されたポートフォリオを使って、シンプルに分散投資を進めやすくする機能です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"いくらから始められますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"1銘柄あたり約200円から投資できる一方、初期投資額は約10万円からが目安とされています。最新条件は公式サイトでご確認ください。"
+        }
+      }
     ]
   }
   </script>
 </head>
 
-<body>
- <div id="header"></div>
+<body id="top" class="kiji-page">
 
- <div class="container">
+  <div id="header"></div>
+
+  <div class="container">
     <aside id="sidebar"></aside>
 
-    <!-- メインの内容 -->
-    <main>
-      <!-- パンくず -->
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
+
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券一覧</a></li>
+          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券会社一覧</a></li>
           <li class="breadcrumb-item active" aria-current="page">Bloomo証券</li>
         </ol>
       </nav>
 
-      <!-- 見出し -->
-      <h1 class="title"><span>Bloomo証券を解説</span><small>米国株・ETF特化</small></h1>
-
-      <!-- 導入段落 -->
-
-     
-      <section class="anime-item">
-       
-        <p>Bloomo（ブルーモ）は、ポートフォリオをコピーして、米国株・ETFで資産運用できるアプリです。<br>
-          他の投資家をコピーしつつ、自分の好きな銘柄も加えたポートフォリオを作成してアプリで注文するだけ。<br>
-          銘柄ごとの注文計算や両替・売買などの面倒な手続きも、アプリが自動で実行します。</p>
+      <section class="top-proof" aria-label="サイトの検証方針">
+        <p class="top-proof__text">
+          <strong>100時間以上の検証と、実際に20口座以上を開設して比較した経験をもとに、初心者でも判断しやすく整理しています。</strong>
+        </p>
       </section>
 
- <!-- 結論（Conclusion） -->
-      <section class="anime-item">
-        <h2 class="anime-title">このような方にお勧め</h2>
-        <p>「米国株やETFへの投資を始めたいけど、どうすれば…？」と迷う方にお勧め。スマホで完結できるのが強みです。</p>
-      </section>
+      <article class="kiji-article">
 
-      <!-- 理由（Reason）＋ 証拠（Evidence） -->
-      <section class="anime-item">
-        <img src="syouken/mobilejpg.jpg" alt="スマホで動くBloomoアプリのイメージ" width="1200" height="600" loading="lazy" decoding="async">
-        <h2 class="anime-title">特徴をまとめました</h2>
-        <div class="mobile-card-view only-sp">
-          <div class="item-card">
-            <h3>【特徴】</h3>
-            <p><strong>コピー投資機能:</strong><br>著名な投資家のポートフォリオを参考にしながら、投資を始められます。</p>
-            <p><strong>少額から投資可能:</strong><br>資産運用のハードルが低く、初心者でも取り組みやすい設計。</p>
-            <p><strong>自動でリバランス:</strong><br>買付時に目標ポートフォリオとの差分を自動計算し、自動でリバランス投資を実行。</p>
-            <p><strong>コスト面:</strong><br>手数料は年率0.55%（残高に対して）。<small>※ 料金や条件は変更の可能性があるため、最新の手数料表をご確認ください。</small></p>
+      <header class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Securities Guide</p>
+              <h1 class="kiji-title" id="page-title">Bloomo証券｜米国株・ETFを分散投資できるアプリ</h1>
+
+              <p class="kiji-lead">
+                Bloomo証券は、<strong>米国株や米国ETFで分散投資を始めたい人</strong>や、
+                <strong>銘柄ごとの細かな発注より、ポートフォリオ単位で管理したい人</strong>に向いているスマホ専用サービスです。
+                他の投資家やモデルポートフォリオを参考にしながら、自分なりに調整して運用しやすい一方で、
+                <strong>日本株には対応しておらず、PC中心で使いたい人には向きにくい</strong>面もあります。
+                このページでは、Bloomo証券の立ち位置や強み、注意点を整理しながら、あなたに合うかどうかを判断しやすい形でまとめます。
+              </p>
+
+             <ul class="kiji-tags" aria-label="特徴タグ">
+                <li>米国株・ETF特化</li>
+                <li>ポートフォリオ投資</li>
+                <li>スマホ専用</li>
+                <li>NISA対応</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer">Bloomo証券の公式サイトを見る</a>
+                <a href="syoukensyoukai.html" class="kiji-btn kiji-btn--ghost">証券会社一覧で比較する</a>
+              </div>
+            </div>
           </div>
-          <div class="item-card">
-            <h3>【利用シーン】</h3>
-            <ul>
-              <li>投資経験が浅く、自分でポートフォリオを組むのが不安</li>
-              <li>長期的に米国株へ資産を分散投資したい</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </header>
 
-      <!-- 手段（Method） -->
-     <!-- 手段（Method） -->
-<section class="anime-item">
-  <h2 class="anime-title">手数料</h2>
-  <div>
-    <table class="table-card">
-      <thead>
-        <tr>
-          <th>口座管理手数料</th>
-          <th>取引手数料</th>
-          <th>初回最低投資金額</th>
-          <th>1銘柄あたりの<br>最低取引金額</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="font_red">0円</td>
-          <td>
-            定期買付<br>
-            <small>毎日買付の場合</small><br>
-            1,000円〜
-          </td>
-          <td>NISA口座<br>0円</td>
-          <td>200円〜</td>
-        </tr>
-        <tr>
-          <td>通常口座<br>0.45%</td>
-          <td>
-            1回買付<br>
-            1万円〜
-          </td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p class="small">
-      <small>
-        ※ 手数料は変更されている場合があります。必ずご自身でも最新の
-        <a href="https://bloomo.co.jp/fee-and-comparison/" class="font_blue" target="_blank" rel="noopener">公式情報</a>
-        をご確認ください。
-      </small>
+        <section class="kiji-section" aria-labelledby="spec-detail-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Spec Detail</p>
+    <h2 class="kiji-section__title" id="spec-detail-title">Bloomo証券の機能</h2>
+    <p class="kiji-section__text">
+      Bloomo証券は、一般的な証券口座とは設計が異なるため、機能ベースで整理しておくと理解しやすくなります。
+      ここでは、できること・特徴を事実ベースでまとめます。
     </p>
   </div>
-</section>
 
+  <div class="kiji-grid kiji-grid--2">
 
-      <!-- 利点 -->
-      <section class="anime-item">
-        <img src="sonota/point.jpg" alt="Bloomo・ロボアド・ネット証券の比較ポイント図" width="800" height="500" loading="lazy" decoding="async">
-        <h2 class="anime-title">ブルーモの利点 | 他社との比較</h2>
-        <div class="field">
-          <div class="field-card">
-            <h3>【ブルーモ】</h3>
-            <ul>
-              <li>✅ 簡単に理想のポートフォリオで長期投資</li>
-              <li>✅ 目標ポートフォリオを作って売買計算・実行は自動化</li>
-              <li>✅ 0.0001株単位で売買できる</li>
-              <li>✅ 米国株・ETFに絞ってシンプルに選べる</li>
-            </ul>
-          </div>
-          <div class="field-card">
-            <h3>【ロボアド】</h3>
-            <ul>
-              <li>⚠️ 簡単だが、投資商品を選べない</li>
-              <li>✅ 運用は完全おまかせ・自動化</li>
-              <li>❌ 自分で銘柄を選んで投資できない</li>
-              <li>⚠️ 代表的なETFのみの取り扱い</li>
-            </ul>
-          </div>
-          <div class="field-card">
-            <h3>【ネット証券】</h3>
-            <ul>
-              <li>⚠️ 色々選べるが、操作が複雑で不便</li>
-              <li>⚠️ 個別取引はユーザーが手動で執行</li>
-              <li>⚠️ 取引は1株単位(一部では1株未満単位も可能)</li>
-              <li>⚠️ 株式だけでなくFX・デリバティブ等多岐にわたるため商品選択が複雑</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">基本情報</h3>
+      <ul class="kiji-bullet-list">
+        <li>米国株・米国ETFを中心に取引可能</li>
+        <li>日本株・投資信託などは対象外</li>
+        <li>スマートフォン専用サービス（PC非対応）</li>
+        <li>NISA対応</li>
+      </ul>
+    </section>
 
-      <!-- 行動の促し（Action） -->
-      <section class="anime-item">
-        <h2 class="anime-title">まとめ</h2>
-        <p>ポートフォリオ自動化とシンプルな米株・ETF選定が強み。まずは少額からアプリ操作に慣れつつ、コピー＋自分の銘柄でポートフォリオを作ってみましょう。</p>
-        <h3>NISAもあります！</h3>
-        <p>かんたんNISA等のサービスが用意されている場合があります。<strong>対象や条件は変更の可能性があるため、最新の公式情報をご確認ください。</strong></p>
-        <p class="cta-button font_red_r">▼こちらから公式サイトへ▼</p>
-        <!-- ▼ アフィリエイト（提供バナー）：sponsored を明示 -->
-       <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204"><img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=BLMO1&isq=204&psq=0" border="0" alt="ブルーモ証券"></a>
-      </section>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">投資金額</h3>
+      <ul class="kiji-bullet-list">
+        <li>初期投資額：約10万円〜</li>
+        <li>最小投資単位：約200円〜</li>
+      </ul>
+    </section>
 
-      <!-- 誘導セッション -->
-      <section class="anime-item">
-        <h2 class="anime-title">一覧比較ページ</h2>
-        <p>👉 他の証券会社も比較したい方はこちら</p>
-        <a href="syoukensyoukai.html" class="card-link">
-          <i class="fa-regular fa-handshake"></i>
-          <span>証券口座一覧比較ページリンク</span>
-        </a>
-      </section>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">投資スタイル・仕組み</h3>
+      <ul class="kiji-bullet-list">
+        <li>ポートフォリオ単位で投資が可能</li>
+        <li>複数銘柄をまとめて分散投資できる</li>
+        <li>米国の有名企業（例：Appleなど）にも投資可能</li>
+        <li>高配当企業を含む投資も可能</li>
+      </ul>
+    </section>
 
-<div id="securities-list"></div>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">ポートフォリオ機能</h3>
+      <ul class="kiji-bullet-list">
+        <li>他の投資家やモデルポートフォリオを参考にできる</li>
+        <li>ポートフォリオのコピー・ベース利用が可能</li>
+        <li>コピー後にカスタマイズ可能</li>
+      </ul>
+    </section>
 
-<script src="cards-syouken.js"></script>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">自動化機能</h3>
+      <ul class="kiji-bullet-list">
+        <li>目標ポートフォリオに基づいた売買機能</li>
+        <li>自動リバランス機能</li>
+        <li>積立機能（毎日 / 毎週 / 毎月）</li>
+      </ul>
+    </section>
 
-      <section class="anime-item" aria-labelledby="review-entry-title">
-  <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+    <section class="kiji-panel">
+      <h3 class="kiji-panel__title">Bloomoコア</h3>
+      <ul class="kiji-bullet-list">
+        <li>ETF中心の分散投資サービス</li>
+        <li>あらかじめ構成されたポートフォリオで運用可能</li>
+      </ul>
+    </section>
 
-  <div class="review">
-    <a href="userreview.html" class="review-card">
-      <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-      <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
-    </a>
   </div>
 </section>
 
-      <!-- 注意喚起 -->
-      <section class="anime-item" style="margin-top: 20px;">
-        <h2 class="anime-title">⚠️ 注意点・リスクも把握しよう</h2>
-        <ul>
-          <li><b>相場の変動：</b><br> 株式市場は常に変動しており、利益だけでなく損失のリスクも伴います。</li>
-          <li><b>手数料の確認：</b><br> 取引手数料や為替手数料など、各種手数料を事前に確認しましょう。</li>
-          <li><b>情報の正確性：</b><br> 投資判断は自己責任で行い、十分な情報収集と分析を行うことが重要です。</li>
-        </ul>
-      </section>
+<section class="kiji-section" aria-labelledby="function-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Function</p>
+    <h2 class="kiji-section__title" id="function-title">Bloomo証券の主要機能</h2>
+    <p class="kiji-section__text">
+      Bloomo証券は、ポートフォリオ単位での運用を前提にした機能が揃っています。
+      特に長期投資を続けやすくする仕組みが中心です。
+    </p>
+  </div>
 
+  <div class="kiji-grid kiji-grid--2">
+
+    <section class="kiji-feature-card">
+      <span class="kiji-feature-card__num">01</span>
+      <h3 class="kiji-feature-card__title">ポートフォリオ投資</h3>
+      <p class="kiji-feature-card__text">
+        銘柄と割合を設定すれば、その通りに売買を実行します。
+        <strong>自分だけのファンドを作る感覚で分散投資ができる</strong>のが特徴です。
+      </p>
+    </section>
+
+    <section class="kiji-feature-card">
+      <span class="kiji-feature-card__num">02</span>
+      <h3 class="kiji-feature-card__title">リバランス</h3>
+      <p class="kiji-feature-card__text">
+        ポートフォリオの割合が崩れても、手動で調整する必要はありません。
+        <strong>ワンタップでリバランス取引を実行できる</strong>ため、運用の手間を減らせます。
+      </p>
+    </section>
+
+    <section class="kiji-feature-card">
+      <span class="kiji-feature-card__num">03</span>
+      <h3 class="kiji-feature-card__title">配当金再投資</h3>
+      <p class="kiji-feature-card__text">
+        米国株・ETFから200円以上の配当金・分配金が支払われた場合、
+        <strong>同じ銘柄へ自動で再投資</strong>され、資産を積み上げやすくなります。
+      </p>
+    </section>
+
+    <section class="kiji-feature-card">
+      <span class="kiji-feature-card__num">04</span>
+      <h3 class="kiji-feature-card__title">スマート積立</h3>
+      <p class="kiji-feature-card__text">
+        毎日・毎週・毎月など自動で積立投資が可能です。
+        <strong>価格変動の影響を分散しながら運用を続けやすい</strong>設計になっています。
+      </p>
+    </section>
+
+  </div>
+</section>
+
+<section class="kiji-section" aria-labelledby="quick-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Conclusion</p>
+    <h2 class="kiji-section__title" id="quick-title">
+      Bloomo証券は「米国株・ETFで長期的に分散投資を続けたい人」に向いています
+    </h2>
+    <p class="kiji-section__text">
+      個別銘柄を1つずつ売買するよりも、
+      <strong>ポートフォリオ単位で資産を積み上げていく投資スタイル</strong>に合うサービスです。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--3">
+
+    <section class="kiji-info-card">
+      <p class="kiji-info-card__eyebrow">向いている人</p>
+      <h3 class="kiji-info-card__title">
+        米国株・ETFで長期投資・分散投資をしたい人
+      </h3>
+      <p class="kiji-info-card__text">
+        <strong>配分を決めてコツコツ続けたい人</strong>に向いています。
+        投資判断の負担を減らしながら運用しやすい設計です。
+      </p>
+    </section>
+
+    <section class="kiji-info-card">
+      <p class="kiji-info-card__eyebrow">特徴</p>
+      <h3 class="kiji-info-card__title">
+        ポートフォリオ単位で運用を続けやすい仕組み
+      </h3>
+      <p class="kiji-info-card__text">
+        コピー、リバランス、積立などを組み合わせながら、
+        <strong>長期投資を維持しやすい流れ</strong>が整っています。
+      </p>
+    </section>
+
+    <section class="kiji-info-card kiji-info-card--soft">
+      <p class="kiji-info-card__eyebrow">注意点</p>
+      <h3 class="kiji-info-card__title">
+        総合型証券のような使い方には向いていません
+      </h3>
+      <ul class="kiji-bullet-list">
+        <li>日本株・投資信託は非対応</li>
+        <li>スマホ専用（PC非対応）</li>
+        <li>幅広く使うより用途特化型</li>
+      </ul>
+    </section>
+
+  </div>
+</section>
+
+        <section class="kiji-section" aria-labelledby="merit-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Point</p>
+    <h2 class="kiji-section__title" id="merit-title">Bloomo証券の強みは「続けやすさ」にあります</h2>
+    <p class="kiji-section__text">
+      Bloomo証券は、機能の多さではなく、
+      <strong>長期投資を無理なく続けやすい設計</strong>に特徴があります。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--3">
+
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">判断の負担が少ない</h3>
+      <p class="kiji-info-card__text">
+        銘柄を毎回選ぶ必要がなく、
+        <strong>ポートフォリオをベースに運用できる</strong>ため、
+        投資判断に迷いにくい設計です。
+      </p>
+    </section>
+
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">手間をかけずに維持できる</h3>
+      <p class="kiji-info-card__text">
+        リバランスや積立などの自動化により、
+        <strong>運用を続けるための作業を最小限に抑えられます</strong>。
+      </p>
+    </section>
+
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">感情に左右されにくい</h3>
+      <p class="kiji-info-card__text">
+        売買のタイミングに悩む場面が減るため、
+        <strong>相場の上下に振り回されにくい運用</strong>につながります。
+      </p>
+    </section>
+
+  </div>
+</section>
+
+        <section class="kiji-section" aria-labelledby="spec-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Spec</p>
+            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
+          </div>
+
+          <div class="kiji-table-wrap">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>サービス名</th>
+                  <td>Bloomo証券</td>
+                </tr>
+                <tr>
+                  <th>主な立ち位置</th>
+                  <td>米国株・米国ETFに特化した、ポートフォリオ単位で投資しやすいスマホ専用サービス</td>
+                </tr>
+                <tr>
+                  <th>投資対象</th>
+                  <td>米国株・米国ETF中心</td>
+                </tr>
+                <tr>
+                  <th>日本株</th>
+                  <td>非対応</td>
+                </tr>
+                <tr>
+                  <th>NISA</th>
+                  <td>対応</td>
+                </tr>
+                <tr>
+                  <th>利用端末</th>
+                  <td>スマートフォン専用（PC非対応）</td>
+                </tr>
+                <tr>
+                  <th>初期投資額の目安</th>
+                  <td>約10万円〜</td>
+                </tr>
+                <tr>
+                  <th>最小投資単位の目安</th>
+                  <td>約200円〜</td>
+                </tr>
+                <tr>
+                  <th>主な機能</th>
+                  <td>ポートフォリオ投資 / コピー活用 / 自動リバランス / 配当金再投資 / 毎日・毎週・毎月の積立</td>
+                </tr>
+                <tr>
+                  <th>Bloomoコア</th>
+                  <td>ETF中心の構成済みポートフォリオを活用しやすい分散投資機能</td>
+                </tr>
+                <tr>
+                  <th>注意点</th>
+                  <td>日本株非対応 / スマホ専用 / 総合型証券のような幅広さはない</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="margin_min">
+            <small>※ 投資金額、対応機能、対象商品の詳細は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+          </p>
+        </section>
+
+       
+
+        <section class="kiji-section" aria-labelledby="step-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Step</p>
+            <h2 class="kiji-section__title" id="step-title">始め方の流れ</h2>
+            <p class="kiji-section__text">
+              細かな画面や条件は変わる場合がありますが、Bloomo証券を始める流れは次のように考えるとイメージしやすいです。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>公式サイトから口座開設を申し込む</strong>
+              <p>スマホから申込を進め、基本情報や必要事項を入力します。</p>
+            </li>
+            <li>
+              <strong>本人確認と初期設定を行う</strong>
+              <p>案内に沿って本人確認を進め、NISA利用の有無なども確認します。</p>
+            </li>
+            <li>
+              <strong>参考にしたいポートフォリオを探す</strong>
+              <p>他の投資家やモデルポートフォリオを見ながら、自分に合う土台を探します。</p>
+            </li>
+            <li>
+              <strong>必要なら自分向けにカスタマイズする</strong>
+              <p>銘柄や割合を調整し、自分なりの目標ポートフォリオを作ります。</p>
+            </li>
+            <li>
+              <strong>積立やリバランス設定を使って運用を続ける</strong>
+              <p>毎日・毎週・毎月の積立やリバランス機能を使いながら、長期運用しやすい形に整えます。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section kiji-banner-zone" aria-label="Bloomo証券公式サイト案内">
+          <div class="kiji-note-box">
+            <p class="kiji-banner-zone__text">
+             米国株・ETFをポートフォリオで運用したい人は、公式サイトも確認してみてください。
+            </p>
+            <div class="kiji-banner-zone__square">
+              <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204" rel="nofollow noopener noreferrer">
+                <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=BLMO1&isq=204&psq=0" alt="Bloomo証券" width="300" height="250" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              Bloomo証券は、<strong>米国株・米国ETFに絞って、ポートフォリオ単位で分散投資を進めたい人</strong>に向いているスマホ専用サービスです。
+              コピー活用、自動リバランス、配当金再投資、積立機能など、長期運用を続けやすい機能がまとまっています。
+            </p>
+            <p>
+              一方で、日本株には対応しておらず、PCでも使えないため、
+              <strong>総合型証券のような幅広さを求める人には向きにくい</strong>面があります。
+              「米国資産に特化して、できるだけシンプルに続けたいか」を軸に考えると、Bloomo証券が自分に合うか判断しやすくなります。
+            </p>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                Bloomo証券はNISAに対応していますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  対応しています。利用条件や対象範囲が変わる場合もあるため、最新情報は必ず公式サイトでご確認ください。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Bloomo証券では日本株も買えますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  日本株や一般的な投資信託には対応しておらず、米国株と米国ETFを中心に扱うサービスです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Bloomo証券はPCでも使えますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  スマートフォン専用サービスとして案内されており、PC中心で使いたい人には向きにくいです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Bloomoコアとは何ですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  ETFを中心に構成されたポートフォリオを使って、シンプルに分散投資を進めやすくする機能です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                いくらから始められますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  1銘柄あたり約200円から投資できる一方、初期投資額は約10万円からが目安とされています。最新条件は公式サイトでご確認ください。
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-cta">
+          <div class="kiji-cta__body">
+            <p class="kiji-cta__eyebrow">Official Site</p>
+            <h2 class="kiji-cta__title">Bloomo証券の公式サイトはこちら</h2>
+            <p class="kiji-cta__text">
+              最新の機能、投資条件、NISA対応範囲、対象銘柄の詳細は時期によって変わる場合があります。
+              申し込み前に公式情報もあわせて確認しておくと安心です。
+            </p>
+            <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=BLMO1&SQ=0&isq=204" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer">
+              Bloomo証券の公式サイトを見る
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related</p>
+            <h2 class="kiji-section__title" id="related-title">比較して考えたい人はこちら</h2>
+            <p class="kiji-section__text">
+              Bloomo証券は独自色が強いサービスなので、重視するポイントによっては他社のほうが合うこともあります。比較ページもあわせて見ると判断しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a href="syoukensyoukai.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">一覧比較</span>
+              <strong class="kiji-link-card__title">証券会社一覧ページを見る</strong>
+              <span class="kiji-link-card__text">各社の特徴を横並びで整理したい人向けです。</span>
+            </a>
+
+            <a href="SBI.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合型比較</span>
+              <strong class="kiji-link-card__title">SBI証券との違いを見る</strong>
+              <span class="kiji-link-card__text">幅広い商品を1つの口座で扱いたい人向けの比較先です。</span>
+            </a>
+
+            <a href="DMM-kabu.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">使いやすさ比較</span>
+              <strong class="kiji-link-card__title">DMM株との違いを見る</strong>
+              <span class="kiji-link-card__text">スマホの使いやすさと投資スタイルの違いを比べたい人向けです。</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="securities-list"></div>
+        <script src="cards-syouken.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+          <ul class="kiji-bullet-list">
+            <li>投資金額、手数料、機能、NISA対応範囲、取扱商品は変更される場合があります。</li>
+            <li>最新情報は必ずBloomo証券の公式サイトでご確認ください。</li>
+            <li>本ページはサービス選びの参考情報であり、投資判断そのものを推奨するものではありません。</li>
+            <li>米国株・ETFなどには価格変動リスクや為替リスクがあり、元本割れの可能性があります。</li>
+          </ul>
+        </section>
+
+      </article>
+
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
+      <section class="anime-item" aria-labelledby="review-entry-title">
+        <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+        <div class="review">
+          <a href="userreview.html" class="review-card">
+            <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
+            <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
+          </a>
+        </div>
+      </section>
+</article>
     </main>
   </div>
 
+  <div id="footer"></div>
 
- <div id="footer"></div>
-
-  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
-
 </body>
 </html>

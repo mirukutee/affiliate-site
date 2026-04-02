@@ -86,11 +86,9 @@
 
 .kiji-lead{
   margin: 14px 0 0;
-  max-width: 58ch;
   color: var(--kiji-text-soft);
   font-size: 1rem;
   line-height: 1.8;
-  text-wrap: pretty;
 }
 
 .kiji-tags{
@@ -692,4 +690,37 @@
     font-size: 0.92rem;
     line-height: 1.75;
   }
+}
+
+.kiji-hero{
+  padding: 28px 24px;
+}
+
+.kiji-hero--single .kiji-hero__inner{
+  display: block;
+}
+
+.kiji-hero--single .kiji-hero__main{
+  width: 100%;
+}
+
+.kiji-hero--single .kiji-title{
+  max-width: none;
+}
+
+.kiji-hero--single .kiji-lead{
+  max-width: none;
+}
+
+.kiji-hero--single .kiji-tags{
+  margin-top: 16px;
+}
+
+.kiji-hero--single .kiji-hero__actions{
+  margin-top: 18px;
+}
+
+.kiji-hero__inner{
+  display: block;
+  gap: 0;
 }

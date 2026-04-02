@@ -2,245 +2,711 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 基本SEO -->
- <title>本格米株トレードを求める人へ｜SAXO証券の特徴・手数料・使い方</title>
-  <meta name="description" content="SAXO証券の特徴・米国株中心の取扱銘柄・手数料・注文方式・ツール・口座開設までを簡潔に解説。最新条件は公式でご確認ください。" />
+  <title>サクソバンク証券は海外株を本格的にやりたい人向け？特徴・注意点をわかりやすく解説</title>
+  <meta name="description" content="サクソバンク証券の特徴、外国株の取扱銘柄数、米国株の手数料、時間外取引、米ドル口座、分析機能、注意点まで初心者〜中級者向けにわかりやすく整理。海外株を本格的に見たい人に合うか判断しやすく解説します。" />
   <link rel="canonical" href="https://tousiportal.jp/saxo.html" />
   <link rel="amphtml" href="AMP/saxo.html" />
 
-  <!-- OGP / Twitter（統一） -->
-  <meta property="og:title" content="SAXO証券の特徴・手数料・使い方｜中～上級者向けの高機能口座" />
-  <meta property="og:description" content="SAXO証券の要点を簡潔に。取扱銘柄・手数料・7種の注文方式・分析ツール・始め方まで1ページで。" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="サクソバンク証券は海外株を本格的にやりたい人向け？特徴・注意点をわかりやすく解説" />
+  <meta property="og:description" content="サクソバンク証券が合う人・合わない人を初心者〜中級者向けに整理。外国株の広さ、分析機能、注文方法、米ドル口座、注意点までわかりやすく紹介します。" />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://tousiportal.jp/saxo.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-  <meta property="og:site_name" content="簡潔な紹介サイト" />
-
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/saxo.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SAXO証券の特徴・手数料・使い方｜中～上級者向けの高機能口座" />
-  <meta name="twitter:description" content="SAXO証券の要点を簡潔に。取扱銘柄・手数料・7種の注文方式・分析ツール・始め方まで1ページで。" />
-  <meta name="twitter:image" content="https://tousiportal.jp/sonota/top.png" />
 
-  <!-- Favicon 基本 -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-<!-- 高解像度（Android / 一部ブラウザ）-->
-<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-
-<!-- iOS ホーム画面用 -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-
-  <!-- パフォーマンス系 -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://h.accesstrade.net">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
- <link rel="stylesheet" href="header.css">
- <link rel="stylesheet" href="sidebar.css" />
-
-
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="kiji.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- HowTo（任意） -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"SAXO証券の口座開設手順",
-    "totalTime":"PT10M",
-    "step":[
-      {"@type":"HowToStep","name":"基本情報の入力","text":"フォームに氏名・住所などを入力します。"},
-      {"@type":"HowToStep","name":"本人確認の提出","text":"本人確認書類をスマホで撮影し提出します。"},
-      {"@type":"HowToStep","name":"審査完了・初期設定","text":"審査完了後、ログインや入金方法を設定します。"},
-      {"@type":"HowToStep","name":"初回の注文","text":"ウォッチリストに銘柄を追加し、指値/成行などで発注します。"}
-    ]
-  }
-  </script>
-
-  <!-- パンくず 構造化データ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/"},
-      {"@type":"ListItem","position":2,"name":"証券一覧","item":"https://tousiportal.jp/syoukensyoukai.html"},
-      {"@type":"ListItem","position":3,"name":"SAXO証券","item":"https://tousiportal.jp/saxo.html"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/index.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"証券会社一覧",
+        "item":"https://tousiportal.jp/syoukensyoukai.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"サクソバンク証券",
+        "item":"https://tousiportal.jp/saxo.html"
+      }
     ]
   }
   </script>
-</head>
-<body>
- <div id="header"></div>
 
- <div class="container">
-    <aside id="sidebar"></aside>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"サクソバンク証券は海外株を本格的にやりたい人向け？特徴・注意点をわかりやすく解説",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "datePublished":"2026-04-03",
+    "dateModified":"2026-04-03",
+    "inLanguage":"ja",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://tousiportal.jp/saxo.html"
+    },
+    "image":[
+      "https://tousiportal.jp/Xcard/saxo.webp"
+    ],
+    "description":"サクソバンク証券の特徴、外国株の取扱銘柄数、手数料、米ドル口座、分析機能、注意点まで初心者〜中級者向けに整理した解説記事です。"
+  }
+  </script>
 
-    <main>
-      <!-- パンくず -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券一覧</a></li>
-          <li class="breadcrumb-item active" aria-current="page">SAXO証券</li>
-        </ol>
-      </nav>
-
-      <h1 class="anime-title" id="top">SAXO証券｜経験者が“おっ”と反応する本格米株口座</h1>
-
-      <div class="anime-item">
-      
-        <h2 class="anime-title">SAXO証券とは？</h2>
-        <p>
-          SAXO証券は、米国株を中心に<strong>5,800銘柄超</strong>（調査時点）を取り扱い、テクニカル指向の中・上級者に向いた取引環境を提供する証券口座です。<br>
-          米国株に加えて、欧州株、中国本土、香港株などにも対応しています。<br>
-          「本格的な米株環境が欲しい」と感じたときに候補に上がる1社。<br>
-          経験値を活かすステージに踏み込むなら検討する価値があります。<br>
-
-          <small>※ 取扱銘柄や条件は変更される場合があります。最新の公式情報をご確認ください。</small>
-
-
-        </p>
-      </div>
-
-      <div class="anime-item">
-        <h2 class="anime-title">SAXO証券の強み（要点）</h2>
-        <p>米国株を本格的に取引したい投資家にとって、SAXO証券は以下の点が魅力です。</p>
-        <ul>
-          <li>取引コストはステージにより優遇（最新の公式条件を要確認）</li>
-          <li>50種以上のテクニカル指標を搭載した取引ツール</li>
-          <li>逆指値・OCOなど<strong>7種の注文方式</strong>で柔軟な戦略が可能</li>
-          <li>米ドル決済対応の特定口座（対応範囲は最新条件を要確認）</li>
-        </ul>
-      </div>
-
-      <div class="anime-item">
-        <h2 class="anime-title">手数料体系（アカウントステージ別）</h2>
-        <p>米国株式取引における手数料の概要（調査時点）です。詳細は必ず公式をご確認ください。</p>
-        <table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
-          <thead>
-            <tr>
-              <th>ステージ</th>
-              <th>手数料率</th>
-              <th>最低手数料</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>クラシック</td>
-              <td>0.088%</td>
-              <td>1.10 USD</td>
-            </tr>
-            <tr>
-              <td>プラチナ</td>
-              <td>0.055%</td>
-              <td>1.10 USD</td>
-            </tr>
-            <tr>
-              <td>VIP</td>
-              <td>0.033%</td>
-              <td>1.10 USD</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>例えば4,000ドルの約定での手数料比較例：</p>
-        <img src="SAXO/jp---price-comparison---max.webp" alt="4,000ドル約定時の手数料比較例（SAXO公式資料イメージ）" width="100%" loading="lazy" decoding="async" />
-        <p class="small"><small>※ 本表は2025年5月時点の当サイト調べ。料金や条件は変更の可能性があります。必ず最新の公式情報をご確認ください。</small></p>
-      </div>
-
-      <div class="anime-item">
-        <img src="syouken/torihiki.jpg" alt="取引画面のイメージ（板情報・発注画面など）" width="100%" loading="lazy" decoding="async" />
-        <h2 class="anime-title">5,800超の銘柄ラインナップ × 7種の注文方式</h2>
-        <p>SAXO証券は、国内でも最多水準クラスの米国株銘柄を提供し、逆指値・OCOなど計7種の注文方式に対応。戦略的な発注が可能です。</p>
-      </div>
-
-      <div class="anime-item">
-        <img src="syouken/tyaato.webp" alt="SaxoTraderGOのチャート機能イメージ（テクニカル指標・描画・複合チャート）" width="100%" loading="lazy" decoding="async" />
-        <h2 class="anime-title">プロ向け機能を備えた分析ツール</h2>
-        <p>取引プラットフォーム「SaxoTraderGO」では、50超のテクニカル指標、チャート描画、複合チャート機能（オーバーレイ）を活用可能。最大5銘柄の同時分析に対応します。</p>
-      </div>
-
-      <div class="anime-item">
-        <h2 class="anime-title">まとめ：本格的な米株取引ならSAXO証券</h2>
-        <ul>
-          <li>取扱銘柄数：<strong>5,800超</strong></li>
-          <li>米ドル建て特定口座あり（最新条件を要確認）</li>
-          <li>手数料はステージに応じて優遇</li>
-          <li>プロ仕様の分析ツール「SaxoTraderGO」</li>
-        </ul>
-        <p><b>次のステップを目指す投資家へ：</b>まずは少額から操作に慣れつつ、ウォッチ→分析→発注の流れを体験してみましょう。</p>
-        <p>👇 以下のバナーから公式で最新条件をチェック。</p>
-
-        <!-- ▼ アフィリエイト（提供バナー）：sponsored 明示 -->
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100pwnt00od67" alt="海外株式のサクソバンク証券" border="0" width="300" height="250"></a>
-      </div>
-
-      <!-- 誘導セッション -->
-      <section class="anime-item">
-        <h2 class="anime-title">一覧比較ページ</h2>
-        <p>👉 他の証券会社も比較したい方はこちら</p>
-        <a href="syoukensyoukai.html" class="card-link">
-          <i class="fa-regular fa-handshake"></i>
-          <span>証券口座一覧比較ページリンク</span>
-        </a>
-      </section>
-
-      <!-- カテゴリカード（共通導線） -->
-<div id="securities-list"></div>
-
-<script src="cards-syouken.js"></script>
-
-<section class="anime-item" aria-labelledby="review-entry-title">
-  <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
-
-  <div class="review">
-    <a href="userreview.html" class="review-card">
-      <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-      <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
-    </a>
-  </div>
-</section>
-
-      <div class="anime-item" style="margin-top: 20px;">
-        <h2 class="anime-title">⚠️ 注意点・リスクも把握しよう</h2>
-        <ul>
-          <li><b>相場の変動：</b><br> 株式市場は常に変動しており、利益だけでなく損失のリスクも伴います。</li>
-          <li><b>手数料の確認：</b><br> 取引手数料や為替手数料など、各種手数料を事前に確認しましょう。</li>
-          <li><b>情報の正確性：</b><br> 投資判断は自己責任で行い、十分な情報収集と分析を行うことが重要です。</li>
-        </ul>
-      </div>
-
-    </main>
-  </div>
-
- <div id="footer"></div>
-
-  <!--読み込みのスクリプト-->
-  <script src="include.js" defer></script>
-  <script src="sidebar.js" defer></script>
-
-  <!-- FAQ 構造化データ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"初心者でも使いやすいですか？",
-       "acceptedAnswer":{"@type":"Answer","text":"テクニカルや注文方式が豊富なため、中級者以上に向いていますが、慣れれば初心者でも利用可能です。"}},
-      {"@type":"Question","name":"米国株以外も取引できますか？",
-       "acceptedAnswer":{"@type":"Answer","text":"欧州株、中国本土、香港株などにも対応しています。対象や条件は最新の公式情報をご確認ください。"}},
-      {"@type":"Question","name":"手数料は安いですか？",
-       "acceptedAnswer":{"@type":"Answer","text":"アカウントステージにより優遇があり、取引金額等の条件で変動します。最新の手数料表をご確認ください。"}}
+      {
+        "@type":"Question",
+        "name":"サクソバンク証券はどんな人に向いていますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"米国株だけでなく、中国株や欧州株も含めて海外株を広く見たい人や、チャート・注文方法・分析機能を重視したい人に向いています。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"サクソバンク証券では米国株の時間外取引はできますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"対応しています。プレマーケットとアフターマーケットを含めて、通常取引時間外にも取引チャンスを見やすいのが特徴です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"米ドル口座を使うメリットは何ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"米ドル口座で米国上場株やETFを取引する場合、売買代金と手数料に両替コストがかからない点がメリットです。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"サクソバンク証券は初心者向きですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"使えないわけではありませんが、機能や情報量が多いため、初心者向けのわかりやすさ最優先というよりは、海外株を本格的に見たい人向けの口座です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"サポートは日本語に対応していますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"日本語での問い合わせ窓口は用意されています。ただし、使っていてもう少し日本語サポートが充実してほしいと感じる場面がある人もいます。"
+        }
+      }
     ]
   }
   </script>
+</head>
 
+<body id="top" class="kiji-page">
+
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券会社一覧</a></li>
+          <li class="breadcrumb-item active" aria-current="page">サクソバンク証券</li>
+        </ol>
+      </nav>
+
+      <section class="top-proof" aria-label="サイトの検証方針">
+        <p class="top-proof__text">
+          <strong>100時間以上の検証と、実際に20口座以上を開設して比較した経験をもとに、初心者でも判断しやすく整理しています。</strong>
+        </p>
+      </section>
+
+      <article class="kiji-article">
+
+        <header class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Securities Guide</p>
+              <h1 class="kiji-title" id="page-title">サクソバンク証券は海外株を本格的にやりたい人向け？特徴・注意点をわかりやすく解説</h1>
+
+              <p class="kiji-lead">
+                サクソバンク証券は、<strong>米国株だけでなく、中国株や欧州株まで視野に入れて海外株を広く見たい人</strong>や、
+                <strong>チャート機能・分析機能・注文方法の自由度を重視したい人</strong>に向いている証券口座です。
+                一方で、誰にでもわかりやすい総合口座というよりは、<strong>海外株を本格的に見たい人向けのプロ寄り口座</strong>という印象が強めです。
+                手数料は低水準でも、安さだけで選ぶタイプの口座ではなく、
+                日本語サポートは用意されているものの、使っていて<strong>もう少し充実してほしいと感じるシーンもあります</strong>。
+              </p>
+
+              <ul class="kiji-tags" aria-label="特徴タグ">
+                <li>海外株特化</li>
+                <li>米国株5,800銘柄以上</li>
+                <li>分析機能が充実</li>
+                <li>中上級者向け</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer">サクソバンク証券の公式サイトを見る</a>
+                <a href="syoukensyoukai.html" class="kiji-btn kiji-btn--ghost">証券会社一覧で比較する</a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="kiji-section" aria-labelledby="quick-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Quick View</p>
+            <h2 class="kiji-section__title" id="quick-title">最初に押さえたいポイント</h2>
+            <p class="kiji-section__text">
+              サクソバンク証券は、国内株中心のシンプルな口座とは少し違います。
+              その代わり、海外株の広さ、分析のしやすさ、注文の柔軟さを重視する人にはかなり相性の良い口座です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">向いている人</p>
+              <h3 class="kiji-info-card__title">海外株を広く深く見たい人に向いています</h3>
+              <p class="kiji-info-card__text">
+                米国株だけでなく、中国株や欧州株まで視野に入れながら、
+                <strong>他社では触れにくい海外銘柄まで見たい人</strong>に向いています。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">強み</p>
+              <h3 class="kiji-info-card__title">海外市場の広さと分析・注文機能の強さが魅力です</h3>
+              <p class="kiji-info-card__text">
+                1つの口座で海外市場を広く見やすく、チャートや注文方法の自由度も高めです。
+                <strong>本格的に海外株を扱うための土台</strong>として使いやすい口座です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意点</p>
+              <h3 class="kiji-info-card__title">初心者向けというより、慣れた人ほど使いやすさを感じやすい口座です。</h3>
+              <ul class="kiji-bullet-list">
+                <li>情報量や機能が多い</li>
+                <li>手数料を単純な安さだけで選ぶ口座ではない</li>
+                <li>日本株中心の人にはややオーバースペック</li>
+                <li>日本語サポートに物足りなさを感じる人もいる</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="market-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market</p>
+            <h2 class="kiji-section__title" id="market-title">サクソバンク証券で見やすい海外市場</h2>
+            <p class="kiji-section__text">
+              サクソバンク証券の大きな魅力は、1つの口座で海外市場を幅広く見やすいことです。
+              単に米国株だけではなく、他の地域まで広げたい人にとって候補に入りやすい設計です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">米国株</p>
+              <h3 class="kiji-info-card__title">海外株の中心として見やすい</h3>
+              <p class="kiji-info-card__text">
+                米国株は主力の投資先として見やすく、銘柄数の広さもサクソの強みです。
+                有名企業だけでなく、より広い選択肢から探しやすくなっています。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">中国株</p>
+              <h3 class="kiji-info-card__title">香港・上海・深センまで視野に入れやすい</h3>
+              <p class="kiji-info-card__text">
+                米国株だけではなく、中国関連の市場までまとめて見たい人に向いています。
+                1口座で複数市場を追いやすいのが特徴です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">欧州株</p>
+              <h3 class="kiji-info-card__title">投資先を広げたい人向け</h3>
+              <p class="kiji-info-card__text">
+                欧州株も視野に入れられるため、地域分散を意識したい人にも向いています。
+                国内中心の口座では出しにくい個性です。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="strength-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Strength</p>
+            <h2 class="kiji-section__title" id="strength-title">サクソバンク証券の強み</h2>
+            <p class="kiji-section__text">
+              サクソバンク証券は、総合型のわかりやすさよりも、
+              海外株を本格的に扱うための機能面に強みがあります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">他では見つけにくい海外銘柄まで視野に入れやすい</h3>
+              <p class="kiji-feature-card__text">
+                米国株だけでなく、中国株や欧州株も見やすく、
+                <strong>海外株の選択肢を広げたい人</strong>に向いています。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">1つの口座で世界の市場を追いやすい</h3>
+              <p class="kiji-feature-card__text">
+                市場ごとに分けて考えるよりも、
+                <strong>1口座で横断的に海外株を見たい人</strong>には使いやすい設計です。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">チャート機能や分析面が充実している</h3>
+              <p class="kiji-feature-card__text">
+                スクリーニングや分析機能を活用しながら、
+                <strong>銘柄選びやタイミングを自分で判断したい人</strong>に向いています。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">注文の自由度が高く、戦略的に使いやすい</h3>
+              <p class="kiji-feature-card__text">
+                単純な成行・指値だけでなく、
+                <strong>逆指値やOCOなども使いながら戦略的に発注したい人</strong>と相性が良いです。
+              </p>
+            </section>
+
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="spec-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Spec</p>
+            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
+          </div>
+
+          <div class="kiji-table-wrap">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>サービス名</th>
+                  <td>サクソバンク証券</td>
+                </tr>
+                <tr>
+                  <th>主な立ち位置</th>
+                  <td>海外株を広く・深く扱いたい人向けの海外特化型証券口座</td>
+                </tr>
+                <tr>
+                  <th>外国株式の取扱銘柄</th>
+                  <td>10,000銘柄以上</td>
+                </tr>
+                <tr>
+                  <th>米国株</th>
+                  <td>5,800銘柄以上</td>
+                </tr>
+                <tr>
+                  <th>対応市場の例</th>
+                  <td>米国、中国（香港・上海・深セン）、欧州など</td>
+                </tr>
+                <tr>
+                  <th>米国株時間外取引</th>
+                  <td>対応（プレマーケット・アフターマーケット）</td>
+                </tr>
+                <tr>
+                  <th>米ドル口座</th>
+                  <td>対応。米ドル口座で米国上場株・ETFを取引する場合、売買代金と手数料に両替コストなし</td>
+                </tr>
+                <tr>
+                  <th>米国株手数料</th>
+                  <td>クラシック0.088% / プラチナ0.055% / VIP0.033%（最低1.10USD）</td>
+                </tr>
+                <tr>
+                  <th>主な特徴</th>
+                  <td>分析機能、スクリーニング、注文方法の豊富さ、海外市場の広さ</td>
+                </tr>
+                <tr>
+                  <th>注意点</th>
+                  <td>初心者向けのやさしさ最優先ではない / 手数料の見え方は人によって気になる / 日本語サポートに物足りなさを感じる場面もある</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="margin_min">
+            <small>※ 取扱銘柄、手数料、時間外取引、サポート体制、各種条件は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="detail-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Detail</p>
+            <h2 class="kiji-section__title" id="detail-title">特徴を補足で確認</h2>
+          </div>
+
+          <div class="kiji-stack">
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">海外株をメインでやる人ほど個性が活きやすい口座です</h3>
+              <p>
+                サクソバンク証券は、国内株を少し触るだけの人より、
+                <strong>海外株をしっかり探したい人</strong>ほど魅力を感じやすい口座です。
+                投資対象の広さそのものが強みなので、米国株だけで物足りなくなった人にも候補に入りやすいです。
+              </p>
+            </section>
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">チャートや注文方法まで含めて、自分で考えて使いたい人に向いています</h3>
+              <p>
+                シンプルに買って終わりというより、
+                <strong>チャートを見て判断したり、注文方法を使い分けたりしたい人</strong>に向いています。
+                そのぶん、初心者向けのわかりやすさ最優先というよりは、使いこなすほど良さが出るタイプです。
+              </p>
+            </section>
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">日本語サポートはあるものの、もっと充実してほしいと感じる人もいます</h3>
+              <p>
+                日本語での問い合わせ窓口は用意されていますが、
+                実際に使っていく中では<strong>もう少し日本語サポートが充実してほしい</strong>と感じるシーンもあります。
+                手厚い安心感を最優先する人は、その点も含めて比較しておくと判断しやすいです。
+              </p>
+            </section>
+
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="fee-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Fee</p>
+            <h2 class="kiji-section__title" id="fee-title">米国株の手数料感をどう見るか</h2>
+            <p class="kiji-section__text">
+              サクソバンク証券の米国株手数料はアカウントステージ制です。
+              低水準ではありますが、記事では「安いから一択」と押すより、海外株の広さや機能とのバランスで見るほうが自然です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">クラシック</p>
+              <h3 class="kiji-info-card__title">最初の基準として見やすい水準</h3>
+              <p class="kiji-info-card__text">
+                0.088%・最低1.10USDです。
+                海外株特化口座として見ると、まず基準にしやすい手数料感です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">プラチナ</p>
+              <h3 class="kiji-info-card__title">取引量に応じて優遇される設計</h3>
+              <p class="kiji-info-card__text">
+                0.055%・最低1.10USDです。
+                海外株を継続的に使う人ほど、恩恵を感じやすくなります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">VIP</p>
+              <h3 class="kiji-info-card__title">より本格的な利用者向け</h3>
+              <p class="kiji-info-card__text">
+                0.033%・最低1.10USDです。
+                ただし、手数料だけでなく使い方全体で判断したい口座です。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="step-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Step</p>
+            <h2 class="kiji-section__title" id="step-title">始め方の流れ</h2>
+            <p class="kiji-section__text">
+              細かな画面は変わることがありますが、全体の流れは次のように考えるとイメージしやすいです。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>公式サイトから口座開設を申し込む</strong>
+              <p>まずは公式サイトから申込を始め、基本情報を入力します。</p>
+            </li>
+            <li>
+              <strong>本人確認と初期設定を進める</strong>
+              <p>案内に沿って本人確認や必要事項の設定を進めます。</p>
+            </li>
+            <li>
+              <strong>どの市場を中心に見るか整理する</strong>
+              <p>米国株・中国株・欧州株など、まず自分が見たい市場を絞ると使いやすくなります。</p>
+            </li>
+            <li>
+              <strong>チャートや注文方法を確認する</strong>
+              <p>最初から大きく取引せず、画面の見方や注文方法の流れを少額で確認しておくと安心です。</p>
+            </li>
+            <li>
+              <strong>米ドル口座や時間外取引も必要に応じて使い分ける</strong>
+              <p>慣れてきたら、取引スタイルに応じて米ドル口座や時間外取引も活用しやすくなります。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section kiji-banner-zone" aria-label="サクソバンク証券公式サイト案内">
+          <div class="kiji-note-box">
+            <p class="kiji-banner-zone__text">
+              サクソバンク証券は、海外株の対象市場やツール面まで含めて確認すると、自分に合うか判断しやすい口座です。
+            </p>
+            <div class="kiji-banner-zone__square">
+              <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67" rel="nofollow noopener noreferrer">
+                <img src="https://h.accesstrade.net/sp/rr?rk=0100pwnt00od67" alt="サクソバンク証券" width="300" height="250" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="entry-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Entry</p>
+    <h2 class="kiji-section__title" id="entry-title">まずは米国株から慣れていきたい場合</h2>
+    <p class="kiji-section__text">
+      サクソバンク証券は海外株を本格的に扱う口座ですが、
+      最初からここを使いこなす必要はありません。
+      まずは米国株を中心に慣れていきたい場合は、
+      よりシンプルに使いやすい口座から始める選択肢もあります。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--2">
+    <a href="moomoo-kabu.html" class="kiji-link-card">
+      <span class="kiji-link-card__label">初心者向け</span>
+      <strong class="kiji-link-card__title">moomoo証券を見る</strong>
+      <span class="kiji-link-card__text">
+        米国株から始めて、分析に慣れていきたい人向け
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="kiji-section" aria-labelledby="portfolio-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Portfolio</p>
+    <h2 class="kiji-section__title" id="portfolio-title">売買よりも、分散投資を続けたい人はこちら</h2>
+    <p class="kiji-section__text">
+      サクソバンク証券は海外株を本格的に見たい人向けの口座です。
+      一方で、銘柄を1つずつ選んで売買するよりも、
+      配分を決めて長期的に分散投資を続けたい人には、別のサービスのほうが合うこともあります。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--2">
+    <a href="bloomo.html" class="kiji-link-card">
+      <span class="kiji-link-card__label">長期分散</span>
+      <strong class="kiji-link-card__title">Bloomo証券を見る</strong>
+      <span class="kiji-link-card__text">
+        米国株・ETFをポートフォリオ単位で管理しながら、分散投資を続けたい人向け
+      </span>
+    </a>
+  </div>
+</section>
+
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                サクソバンク証券はどんな人に向いていますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  米国株だけでなく、中国株や欧州株も含めて海外株を広く見たい人や、チャート・注文方法・分析機能を重視したい人に向いています。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                サクソバンク証券では米国株の時間外取引はできますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  対応しています。プレマーケットとアフターマーケットを含めて、通常取引時間外にも取引チャンスを見やすいのが特徴です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                米ドル口座を使うメリットは何ですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  米ドル口座で米国上場株やETFを取引する場合、売買代金と手数料に両替コストがかからない点がメリットです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                サクソバンク証券は初心者向きですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  使えないわけではありませんが、機能や情報量が多いため、初心者向けのわかりやすさ最優先というよりは、海外株を本格的に見たい人向けの口座です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                サポートは日本語に対応していますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  日本語での問い合わせ窓口は用意されています。ただし、使っていてもう少し日本語サポートが充実してほしいと感じる場面がある人もいます。
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              サクソバンク証券は、<strong>海外株を広く・深く見たい人向けのプロ寄り口座</strong>です。
+              他社では触れにくい海外銘柄まで視野に入れやすく、チャート・分析・注文方法まで含めてしっかり考えながら使いたい人に向いています。
+            </p>
+            <p>
+              一方で、<strong>初心者向けのわかりやすさや、国内株中心のシンプルさを最優先したい人</strong>には少し重く感じることもあります。
+              「海外株を本格的に見たいか」を軸に考えると、自分に合うか判断しやすい口座です。
+            </p>
+          </div>
+        </section>
+
+        <section class="kiji-cta">
+          <div class="kiji-cta__body">
+            <p class="kiji-cta__eyebrow">Official Site</p>
+            <h2 class="kiji-cta__title">口座開設前に、まずは公式サイトで確認してみる</h2>
+            <p class="kiji-cta__text">
+              取扱市場、銘柄数、時間外取引、米ドル口座、手数料、サポート体制などは時期によって変わることがあります。
+              申し込み前に公式情報もあわせて確認しておくと安心です。
+            </p>
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100pwnt00od67"
+               class="kiji-btn kiji-btn--primary"
+               rel="nofollow noopener noreferrer">
+              サクソバンク証券の公式サイトを見る
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related</p>
+            <h2 class="kiji-section__title" id="related-title">比較して考えたい人はこちら</h2>
+            <p class="kiji-section__text">
+              サクソバンク証券は個性が強い口座なので、重視するポイントによっては他社のほうが合うこともあります。比較ページもあわせて見ると判断しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a href="syoukensyoukai.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">一覧比較</span>
+              <strong class="kiji-link-card__title">証券会社一覧ページを見る</strong>
+              <span class="kiji-link-card__text">各社の特徴を横並びで整理したい人向けです。</span>
+            </a>
+
+            <a href="Monex.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合型比較</span>
+              <strong class="kiji-link-card__title">マネックス証券との違いを見る</strong>
+              <span class="kiji-link-card__text">海外株も見つつ、総合型の使い勝手も比較したい人向けです。</span>
+            </a>
+
+            <a href="moomoo.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">米国株比較</span>
+              <strong class="kiji-link-card__title">moomoo証券との違いを見る</strong>
+              <span class="kiji-link-card__text">米国株中心で情報収集や使いやすさを比較したい人向けです。</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="securities-list"></div>
+        <script src="cards-syouken.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+          <ul class="kiji-bullet-list">
+            <li>手数料・取扱銘柄・時間外取引・各種条件・サポート体制は変更される場合があります。</li>
+            <li>最新情報は必ずサクソバンク証券の公式サイトでご確認ください。</li>
+            <li>本ページはサービス選びの参考情報であり、投資判断そのものを推奨するものではありません。</li>
+            <li>外国株式には価格変動リスク、為替リスクなどがあり、元本割れの可能性があります。</li>
+          </ul>
+        </section>
+
+      </article>
+
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
 </body>
 </html>

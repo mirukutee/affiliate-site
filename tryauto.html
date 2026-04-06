@@ -2,252 +2,872 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 基本SEO -->
-  <title>トライオートCFDを解説｜CFDを自動取引</title>
-  <meta name="description" content="トライオートCFDの特徴（自動売買ロジック・稼働/停止・カスタマイズ）、コストの考え方、始め方を初心者にもわかりやすく整理。最新条件は公式でご確認ください。" />
+  <title>トライオートCFDは世界株価指数を自動取引できるサービス 特徴解説</title>
+  <meta name="description" content="トライオートCFDの特徴、株価指数CFDの考え方、自動売買の仕組み、シミュレーションやバランスメーターの見方、手数料、注意点まで初心者〜中級者向けにわかりやすく整理。完全放置ではなく、仕組みを理解して使うべきサービスかを解説します。" />
   <link rel="canonical" href="https://tousiportal.jp/tryauto.html" />
   <link rel="amphtml" href="AMP/tryauto.html" />
 
-  <!-- OGP / Twitter（統一） -->
-  <meta property="og:title" content="トライオートCFDを解説｜自動売買の仕組み・コスト・始め方" />
-  <meta property="og:description" content="自動売買を活用したシンプル運用。特徴・コスト・始め方を1ページで。" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="トライオートCFDは世界株価指数を自動取引できるサービス 特徴解説" />
+  <meta property="og:description" content="トライオートCFDが合う人・合わない人を初心者〜中級者向けに整理。株価指数、CFD、自動売買の仕組み、注意点までわかりやすく紹介します。" />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://tousiportal.jp/tryauto.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-  <meta property="og:site_name" content="簡潔な紹介サイト" />
-
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/tryauto.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="トライオートCFDを解説｜自動売買の仕組み・コスト・始め方" />
-  <meta name="twitter:description" content="自動売買を活用したシンプル運用。特徴・コスト・始め方を1ページで。" />
-  <meta name="twitter:image" content="https://tousiportal.jp/sonota/top.png" />
 
-<!-- Favicon 基本 -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-<!-- 高解像度（Android / 一部ブラウザ）-->
-<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-
-<!-- iOS ホーム画面用 -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-
-  <!-- パフォーマンス系（任意のASPに置換可） -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
-
-   <link rel="stylesheet" href="header.css">
- <link rel="stylesheet" href="sidebar.css" />
-
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="kiji.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- HowTo 構造化データ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"トライオートCFDの始め方",
-    "totalTime":"PT10M",
-    "step":[
-      {"@type":"HowToStep","name":"基本情報の入力","text":"フォームに氏名・住所などを入力。"},
-      {"@type":"HowToStep","name":"本人確認の提出","text":"本人確認書類をスマホで撮影し提出。"},
-      {"@type":"HowToStep","name":"初期設定","text":"入出金方法や自動売買ロジックを選択。稼働/停止の管理方法も確認。"},
-      {"@type":"HowToStep","name":"初回稼働","text":"対象銘柄・金額を決めて稼働開始。必要に応じて停止/変更。"}
-    ]
-  }
-  </script>
-
-  <!-- パンくず 構造化データ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://mirukutee.github.io/"},
-      {"@type":"ListItem","position":2,"name":"証券一覧","item":"https://tousiportal.jp/syoukensyoukai.html"},
-      {"@type":"ListItem","position":3,"name":"トライオートCFD","item":"https://tousiportal.jp/tryauto.html"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/index.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"証券会社一覧",
+        "item":"https://tousiportal.jp/syoukensyoukai.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"トライオートCFD",
+        "item":"https://tousiportal.jp/tryauto.html"
+      }
     ]
   }
   </script>
 
-  <!-- FAQ 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"トライオートCFDは世界株価指数を自動取引できるサービス 特徴解説",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "datePublished":"2026-04-07",
+    "dateModified":"2026-04-07",
+    "inLanguage":"ja",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://tousiportal.jp/tryauto.html"
+    },
+    "image":[
+      "https://tousiportal.jp/Xcard/tryauto.webp"
+    ],
+    "description":"トライオートCFDの特徴、株価指数CFDの考え方、自動売買の仕組み、注意点まで初心者〜中級者向けに整理した解説記事です。"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"トライオートCFDの始め方",
+    "step":[
+      {
+        "@type":"HowToStep",
+        "name":"公式サイトから口座開設を申し込む",
+        "text":"公式サイトから申込を始め、氏名や住所などの基本情報を入力します。"
+      },
+      {
+        "@type":"HowToStep",
+        "name":"本人確認と初期設定を進める",
+        "text":"本人確認書類の提出や必要事項の設定を行い、取引準備を整えます。"
+      },
+      {
+        "@type":"HowToStep",
+        "name":"自動売買ルールや銘柄を確認する",
+        "text":"株価指数CFDの値動きやルールを確認し、使う自動売買の考え方を整理します。"
+      },
+      {
+        "@type":"HowToStep",
+        "name":"少額から稼働し定期的に見直す",
+        "text":"最初は小さめに始め、完全放置にせず定期的に状況を確認しながら調整します。"
+      }
+    ]
+  }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"初心者でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"自動売買は便利ですが、仕組みとリスクの理解が前提です。小額から稼働し、必ず最新の公式ガイドを確認してください。"}},
-      {"@type":"Question","name":"どんなコストがかかりますか？","acceptedAnswer":{"@type":"Answer","text":"取引手数料、スプレッド、建玉保有に伴う費用（相当額）などが想定されます。具体の料率や条件は必ず最新の手数料表をご確認ください。"}},
-      {"@type":"Question","name":"CFDのリスクは？","acceptedAnswer":{"@type":"Answer","text":"価格変動、レバレッジ、金利・調整相当額などの影響を受けます。相場急変時は損失が拡大するリスクがあるため、資金とロット管理が重要です。"}}
+      {
+        "@type":"Question",
+        "name":"トライオートCFDは完全放置できますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"放置しやすい仕組みはありますが、完全放置向けとは言いにくいです。相場急変や含み損の拡大、証拠金余力の低下が起こることもあるため、定期的な確認が前提です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"トライオートCFDは初心者でも使えますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"使えますが、株価指数・CFD・レバレッジ・自動売買の基本を理解してから使うほうが安心です。簡単そうに見えても、自動売買だから安全というわけではありません。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"手数料は本当に0円ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"取引手数料自体は0円と案内されています。ただし、スプレッドや建玉保有に伴う金利・配当相当額などのコスト要素があり、相場状況によって負担感は変わります。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"トライオートCFDでは何に投資しますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"主に株価指数CFDを使って運用します。個別株ではなく、複数企業の動きをまとめた指数の値動きを対象に売買するのが特徴です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"どんな人に向いていますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"裁量だけで売買するのが苦手な人、ルールベースで長めに考えられる人、完全放置ではなく定期確認が必要だと理解できる人に向いています。"
+        }
+      }
     ]
   }
   </script>
 </head>
 
-<body>
- <div id="header"></div>
+<body id="top" class="kiji-page">
 
- <div class="container">
+  <div id="header"></div>
+
+  <div class="container">
     <aside id="sidebar"></aside>
 
-    <main>
-      <!-- パンくず -->
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
+
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券一覧</a></li>
+          <li class="breadcrumb-item"><a href="syoukensyoukai.html">証券会社一覧</a></li>
           <li class="breadcrumb-item active" aria-current="page">トライオートCFD</li>
         </ol>
       </nav>
 
-      <h1 class="title">トライオートCFDの特徴・コスト・始め方（自動売買の基本）</h1>
-
-      <section class="anime-item">
-     
-         <h2 class="anime-title">概要</h2>
-        <p>
-          トライオートCFDは、あらかじめ定義した条件で売買を自動実行できるサービスです。<br><strong>稼働/停止の切り替え、カスタマイズ、複数ロジックの併用</strong>で、手間を抑えつつ運用の型を作れます。
-          <br><small>※ 取扱・条件は変更される可能性があります。最新の公式情報をご確認ください。</small>
+      <section class="top-proof" aria-label="サイトの検証方針">
+        <p class="top-proof__text">
+          <strong>100時間以上の検証と、実際に20口座以上を開設して比較した経験をもとに、初心者でも判断しやすく整理しています。</strong>
         </p>
       </section>
 
-      <section class="anime-item">
-        <h2 class="anime-title">主な特徴</h2>
-        <ul>
-          <li>・プリセットの自動売買ロジックを選ぶだけで稼働</li>
-          <li>・稼働/停止・数量調整・パラメータ変更が可能</li>
-          <li>・自動売買の履歴/稼働状況をアプリで確認</li>
-        </ul>
-      </section>
+      <article class="kiji-article">
 
-      <section class="anime-item">
-        <h2 class="anime-title">コストの考え方</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>区分</th><th>概要</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>取引手数料</td><td>銘柄・条件で異なる場合</td></tr>
-            <tr><td>スプレッド</td><td>売買価格差。相場状況で変動</td></tr>
-            <tr><td>建玉関連費用</td><td>保有中に発生する費用（相当額）。最新の条件確認を</td></tr>
-          </tbody>
-        </table>
-        <p class="small"><small>※ 実際の料率・閾値は変更の可能性があります。必ず最新の手数料表をご確認ください。</small></p>
-      </section>
+        <header class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Auto Trading Guide</p>
+              <h1 class="kiji-title" id="page-title">トライオートCFDは世界株価指数を自動取引できるサービス 特徴解説</h1>
 
-      <section class="anime-item">
-        <h2 class="anime-title">はじめ方（最短ステップ）</h2>
-        <ol>
-          <li>口座申込（基本情報の入力）</li>
-          <li>本人確認（スマホ撮影→提出）</li>
-          <li>入金・初期設定（ロジック選択・数量設定）</li>
-          <li>稼働開始／必要に応じて停止・調整</li>
-        </ol>
-      </section>
+              <p class="kiji-lead">
+                 株価指数CFDを対象に、あらかじめ設定されたルールで自動売買が可能。
+  ナスダックや日経平均など、世界の指数に分散しながら運用できます。
+              </p>
 
-      <section class="anime-item">
-        <h2 class="anime-title">よくある質問</h2>
-        <ul>
-          <li><b>Q. 完全放置できますか？</b><br>相場状況により想定外の挙動や損失が発生することがあります。定期的な確認が推奨です。</li>
-          <li><b>Q. どのロジックが良い？</b><br>相性は資金/リスク許容度で変わります。小額でテスト→拡張が無難です。</li>
-        </ul>
-      </section>
+              <ul class="kiji-tags" aria-label="特徴タグ">
+                <li>株価指数CFD</li>
+                <li>自動売買</li>
+                <li>半自動運用</li>
+                <li>放置しすぎ注意</li>
+              </ul>
 
-      <section class="anime-item">
-        <h2 class="anime-title">まとめ</h2>
-        <p>自動売買は<strong>仕組みの理解＋ルールの継続</strong>が鍵。まずは小さく稼働して、運用の癖を把握しながらスケールしましょう。</p>
-        <p class="cta-button font_red_r">▼ 公式サイトで最新条件をチェック ▼</p>
-        <!-- ▼ アフィリエイト（提供バナー）：sponsored を明示／リンク差し替え -->
+              <div class="kiji-hero__actions">
+                <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=209" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer">トライオートCFDの公式サイトを見る</a>
+                <a href="syoukensyoukai.html" class="kiji-btn kiji-btn--ghost">証券会社一覧で比較する</a>
+              </div>
+            </div>
+          </div>
+        </header>
 
-  <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=209"><img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=INV16&isq=209&psq=0" border="0" alt="トライオートCFD"></a>
-      </section>
+        <section class="kiji-section" aria-labelledby="quick-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Quick View</p>
+            <h2 class="kiji-section__title" id="quick-title">最初に押さえたいポイント</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは、単なる「便利な自動売買アプリ」ではありません。
+              株価指数とCFDの仕組みを土台にしたうえで、売買ルールを半自動で回していくサービスだと理解するとズレにくくなります。
+            </p>
+          </div>
 
-      <!-- 誘導セッション -->
-      <section class="anime-item">
-        <h2 class="anime-title">一覧比較ページ</h2>
-        <p>👉 他の証券会社も比較したい方はこちら</p>
-        <a href="syoukensyoukai.html" class="card-link"><i class="fa-regular fa-handshake"></i><span>証券口座一覧比較ページリンク</span></a>
-      </section>
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">向いている人</p>
+              <h3 class="kiji-info-card__title">ルールベースで長めに考えられる人に向いています</h3>
+              <p class="kiji-info-card__text">
+                毎回の裁量判断に疲れやすい人や、
+                <strong>短期の勝ち負けだけでなく、ルールを守りながら運用したい人</strong>に向いています。
+              </p>
+            </section>
 
-      <div class="anime-item">
-        <section class="category-section" id="sec-securities">
-          <h2 class="linecenter">証券会社一覧(株式取引)</h2>
-          <div class="my-card-grid">
-            <a href="https://tousiportal.jp/matsui-kabu.html" class="card">
-              <img src="Xcard/320-250-20000.jpg" alt="松井証券のバナー" loading="lazy">
-              <span>松井証券<br><small>初心者おすすめ</small></span>
-            </a>
-            <a href="https://tousiportal.jp/DMM-kabu.html" class="card">
-              <img src="Xcard/300_250.png" alt="DMM株のバナー" loading="lazy">
-              <span>DMM株<small>初心者おすすめ</small></span>
-            </a>
-            <a href="https://tousiportal.jp/Monex.html" class="card">
-              <img src="Xcard/imagesender (1).jfif" alt="マネックス証券のバナー" loading="lazy">
-              <span>マネックス証券<small>総合的サービス</small></span>
-            </a>
-            <a href="https://tousiportal.jp/tryauto.html" class="card">
-              <img src="Xcard/imagesender.png" alt="トライオートCFDのバナー" loading="lazy">
-              <span>トライオートCFD<small>自動売買</small></span>
-            </a>
-            <a href="https://tousiportal.jp/bloomo.html" class="card">
-              <img src="Xcard/imagesender (2).png" alt="Bloomo証券のバナー" loading="lazy">
-              <span>Bloomo証券<small>米国株やETF</small></span>
-            </a>
-            <a href="https://tousiportal.jp/moomoo-kabu.html" class="card">
-              <img src="Xcard/moomooookuchi1200675.png" alt="moomoo証券のバナー" loading="lazy">
-              <span>moomoo証券<small>海外株多め</small></span>
-            </a>
-            <a href="https://tousiportal.jp/MUFGesmart.html" class="card">
-              <img src="Xcard/34-200x200.jpg" alt="三菱UFJ eスマート証券のバナー" loading="lazy">
-              <span>三菱UFJ eスマート証券<small>auユーザーおすすめ</small></span>
-            </a>
-            <a href="https://tousiportal.jp/saxo.html" class="card">
-              <img src="Xcard/300x250_Banner_Affiliate_AT_Stocks.png" alt="SAXO証券のバナー" loading="lazy">
-              <span>SAXO証券<small>米国株多め</small></span>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">強み</p>
+              <h3 class="kiji-info-card__title">自動売買の土台と判断補助機能が揃っています</h3>
+              <p class="kiji-info-card__text">
+                自動売買のルールを選びやすく、シミュレーションやバランスメーターなど
+                <strong>「判断を補助するための機能」</strong>があるのが特徴です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意点</p>
+              <h3 class="kiji-info-card__title">完全放置で使う前提のサービスではありません</h3>
+              <ul class="kiji-bullet-list">
+                <li>自動売買でも相場次第で崩れる</li>
+                <li>レバレッジ商品なので損失拡大リスクがある</li>
+                <li>含み損や余力管理が必要になる</li>
+                <li>自動＝安全ではない</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="index-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Index</p>
+            <h2 class="kiji-section__title" id="index-title">まず「株価指数」とは何かを押さえる</h2>
+            <p class="kiji-section__text">
+              トライオートCFDを理解するうえで、最初に大事なのは株価指数の考え方です。
+              ここが曖昧だと、自動売買だけ見て判断を誤りやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">基本</p>
+              <h3 class="kiji-info-card__title">株価指数は複数企業の動きをまとめた指標です</h3>
+              <p class="kiji-info-card__text">
+                個別株のように1社へ投資するのではなく、
+                <strong>複数企業の集合体の動き</strong>を見るのが株価指数の基本です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">長期目線</p>
+              <h3 class="kiji-info-card__title">経済成長とともに上がりやすい面はあります</h3>
+              <p class="kiji-info-card__text">
+                企業全体の成長を反映しやすいため、長期では右肩上がりを期待しやすい場面があります。
+                ただし、それは<strong>短期の安定を意味するわけではありません</strong>。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">誤解しやすい点</p>
+              <h3 class="kiji-info-card__title">指数＝安全ではなく、分散されているだけです</h3>
+              <p class="kiji-info-card__text">
+                複数企業に分かれているぶん個別株より極端な値動きを避けやすい面はありますが、
+                <strong>暴落しないわけでも、必ず勝ちやすいわけでもありません</strong>。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="cfd-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">CFD</p>
+            <h2 class="kiji-section__title" id="cfd-title">CFDは「値動き」を取引する仕組みです</h2>
+            <p class="kiji-section__text">
+              CFDは現物そのものを保有するのではなく、価格差をやり取りする取引です。
+              トライオートCFDでは、この仕組みを使って株価指数の上げ下げを狙っていきます。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">現物を持たずに価格差を取引します</h3>
+              <p class="kiji-feature-card__text">
+                CFDは、現物株を保有するのではなく、
+                <strong>価格がどれだけ動いたか</strong>に着目して損益が決まる仕組みです。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">上昇だけでなく下落局面も狙えます</h3>
+              <p class="kiji-feature-card__text">
+                買いだけでなく売りから入れるため、
+                <strong>相場の上下どちらにも対応しやすい</strong>のが特徴です。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">少ない資金で大きめの取引ができます</h3>
+              <p class="kiji-feature-card__text">
+                レバレッジが使えるため効率よく見える反面、
+                <strong>便利さはそのままリスクにもつながる</strong>点は忘れないほうが安心です。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">相場急変時は損失も大きくなり得ます</h3>
+              <p class="kiji-feature-card__text">
+                急な変動では証拠金余力が悪化しやすく、
+                ロスカットや想定以上の損失につながる可能性もあります。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="system-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">System</p>
+            <h2 class="kiji-section__title" id="system-title">トライオートCFDの仕組みは「半自動」と考えるとわかりやすいです</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは、設定したルールをもとに売買を繰り返してくれる点が魅力です。
+              ただし、勝手に何でも最適化してくれるわけではなく、設定そのものが戦略になります。
+            </p>
+          </div>
+
+          <div class="kiji-stack">
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">ルールを選ぶと、その方針に沿って売買が進みます</h3>
+              <p>
+                口座開設後は、アプリ上で自動売買ルールを選び、稼働させる流れが基本です。
+                ルールベースで動くため、<strong>感情だけで売買しにくい</strong>のは強みです。
+              </p>
+            </section>
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">放置しやすいが、放置してよいとは限りません</h3>
+              <p>
+                毎回エントリーを判断しなくてよいぶん手間は減りますが、
+                <strong>証拠金余力・相場環境・含み損の状態までは自分で確認する必要があります</strong>。
+                ここを勘違いすると、自動売買の良さより危うさが先に出やすくなります。
+              </p>
+            </section>
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">設定は便利機能ではなく、戦略そのものです</h3>
+              <p>
+                どのルールを選ぶか、どの指数を使うか、どの資金量で回すかによって結果はかなり変わります。
+                つまり、<strong>設定ミスはそのまま運用ミスにつながる</strong>と考えたほうが自然です。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="function-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Function</p>
+            <h2 class="kiji-section__title" id="function-title">シミュレーションとバランスメーターは「判断補助」として見るのがコツです</h2>
+            <p class="kiji-section__text">
+              トライオートCFDには、ルール選びを補助する機能があります。
+              ただし、数字が見えるから安心というより、リスクを見落とさないために使う意識のほうが大切です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">シミュレーションは「利益予想」より「リスク確認」に使いたい機能です</h3>
+              <p class="kiji-feature-card__text">
+                収益イメージを見る助けにはなりますが、
+                未来を保証するものではありません。
+                <strong>どの程度の値動きや資金負担を想定するか</strong>を見るための材料と考えるほうが安全です。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">バランスメーターは「安全宣言」ではなく余力の見える化です</h3>
+              <p class="kiji-feature-card__text">
+                今の設定が資金に対して重すぎないかを確認しやすくなります。
+                ただし、相場急変まで完全に防げるわけではないため、
+                <strong>破綻を避けるための目安</strong>として使うのが自然です。
+              </p>
+            </section>
+
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="market-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market</p>
+            <h2 class="kiji-section__title" id="market-title">世界の株価指数に触れやすいのはトライオートCFDの魅力です</h2>
+            <p class="kiji-section__text">
+              株価指数CFDを使うことで、日本だけでなく海外の指数も視野に入れやすくなります。
+              ただし、指数ごとに値動きの癖やボラティリティは違うため、同じ感覚で並べて考えないほうが安心です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">日本系指数</p>
+              <h3 class="kiji-info-card__title">身近でイメージしやすい</h3>
+              <p class="kiji-info-card__text">
+                日本のニュースや景気感と結びつけて見やすいため、
+                最初に理解しやすい指数群です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">米国系指数</p>
+              <h3 class="kiji-info-card__title">成長期待が強い一方で値動きも軽くありません</h3>
+              <p class="kiji-info-card__text">
+                長期で見れば強さを感じやすい場面がある一方、
+                短期では大きく崩れることもあります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">欧州系指数</p>
+              <h3 class="kiji-info-card__title">地域分散の視点では面白いが癖もあります</h3>
+              <p class="kiji-info-card__text">
+                景気や政策の影響を受けやすく、
+                指数ごとの性格の違いを意識して選ぶほうが自然です。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="fee-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Fee</p>
+            <h2 class="kiji-section__title" id="fee-title">手数料0円でも「完全無料」とは考えないほうが安全です</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは取引手数料0円と案内されていますが、
+              実際にはスプレッドや建玉保有に伴う費用、条件によっては大口マークアップなど、
+              見えにくいコスト要素もあります。
+            </p>
+          </div>
+
+          <div class="kiji-table-wrap">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>取引手数料</th>
+                  <td>0円</td>
+                </tr>
+                <tr>
+                  <th>口座開設・管理費</th>
+                  <td>0円</td>
+                </tr>
+                <tr>
+                  <th>スプレッド</th>
+                  <td>売値と買値の差として実質コストになる</td>
+                </tr>
+                <tr>
+                  <th>建玉関連費用</th>
+                  <td>保有中に金利・配当相当額が発生する場合あり</td>
+                </tr>
+                <tr>
+                  <th>大口取引時の注意</th>
+                  <td>一定以上の数量では大口マークアップが加算される場合あり</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="margin_min">
+            <small>※ 手数料・スプレッド・各種費用・取扱条件は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="support-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Support</p>
+            <h2 class="kiji-section__title" id="support-title">サポート環境は用意されています</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは、取引方法や操作面のサポートが用意されているのも特徴です。
+              ただし、サポートがあることと、結果が出ることは別で考えたほうが冷静です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">電話サポート</p>
+              <h3 class="kiji-info-card__title">疑問を相談しやすい</h3>
+              <p class="kiji-info-card__text">
+                取引方法や考え方について、専門スタッフへ相談しやすい環境があります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">リモートサポート</p>
+              <h3 class="kiji-info-card__title">画面を見ながら確認しやすい</h3>
+              <p class="kiji-info-card__text">
+                ツール操作がわかりにくい人でも、
+                一緒に画面を見ながら確認しやすいのは安心材料です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">学習環境</p>
+              <h3 class="kiji-info-card__title">学べる環境はあるが、過信は禁物です</h3>
+              <p class="kiji-info-card__text">
+                セミナーや学習機会があるのは強みですが、
+                <strong>学べることと勝てることは同義ではありません</strong>。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="fit-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Fit</p>
+            <h2 class="kiji-section__title" id="fit-title">向いている人・向いていない人</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは、誰にでも同じように合うサービスではありません。
+              ここを先に整理しておくと、口座開設後のミスマッチを減らしやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">向いている人</h3>
+              <ul class="kiji-bullet-list">
+                <li>裁量トレードだけで売買するのが苦手な人</li>
+                <li>完全放置ではなく、定期確認が必要だと理解できる人</li>
+                <li>短期の結果だけでなく、長めに考えられる人</li>
+                <li>ルールを守って運用できる人</li>
+                <li>感情で売買しにくい仕組みを求める人</li>
+              </ul>
+            </section>
+
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">向いていない人</h3>
+              <ul class="kiji-bullet-list">
+                <li>すぐに結果が欲しい人</li>
+                <li>自動売買＝何もしなくていいと思っている人</li>
+                <li>含み損を見るのがかなり苦手な人</li>
+                <li>資金管理や余力管理をしたくない人</li>
+                <li>レバレッジ商品のリスクを避けたい人</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="caution-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Caution</p>
+            <h2 class="kiji-section__title" id="caution-title">注意点は先に理解しておいたほうが安心です</h2>
+            <p class="kiji-section__text">
+              自動売買は便利ですが、便利だからこそ見落としやすい点もあります。
+              相場が荒れたときに慌てないためにも、注意点は最初に見ておく価値があります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <h3 class="kiji-info-card__title">自動＝安全ではありません</h3>
+              <p class="kiji-info-card__text">
+                売買を自動化できても、
+                相場そのもののリスクは消えません。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <h3 class="kiji-info-card__title">レバレッジで利益も損失も動きやすくなります</h3>
+              <p class="kiji-info-card__text">
+                少ない資金で動かせる反面、
+                想定外の変動では負担も大きくなります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <h3 class="kiji-info-card__title">想定外は普通に起こります</h3>
+              <p class="kiji-info-card__text">
+                ルール通りに回していても、
+                相場環境が変われば結果は崩れることがあります。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="step-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Step</p>
+            <h2 class="kiji-section__title" id="step-title">始め方の流れ</h2>
+            <p class="kiji-section__text">
+              細かな画面や条件は変わる場合がありますが、全体の流れは次のように考えるとイメージしやすいです。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>公式サイトから口座開設を申し込む</strong>
+              <p>まずは公式サイトから申込を始め、氏名や住所などの基本情報を入力します。</p>
+            </li>
+            <li>
+              <strong>本人確認と初期設定を進める</strong>
+              <p>案内に沿って本人確認書類の提出や必要事項の設定を行います。</p>
+            </li>
+            <li>
+              <strong>株価指数CFDと自動売買ルールを確認する</strong>
+              <p>何を対象に、どういう考え方で回すのかを整理してから始めるとズレにくくなります。</p>
+            </li>
+            <li>
+              <strong>最初は小さめの資金で稼働する</strong>
+              <p>いきなり大きく動かさず、値動きや余力管理の感覚を確かめながら進めるほうが安心です。</p>
+            </li>
+            <li>
+              <strong>定期的に確認し、必要なら見直す</strong>
+              <p>自動売買でも相場環境は変わるため、稼働後の確認と調整が大切です。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section kiji-banner-zone" aria-label="トライオートCFD公式サイト案内">
+          <div class="kiji-note-box">
+            <p class="kiji-banner-zone__text">
+              トライオートCFDは、便利そうに見えるかだけでなく、
+              株価指数CFDと自動売買の仕組みが自分に合うかで判断するのが大切です。
+            </p>
+            <div class="kiji-banner-zone__square">
+              <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=209" rel="nofollow noopener noreferrer">
+                <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=INV16&isq=209&psq=0" alt="トライオートCFD" width="300" height="250" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-manual-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related</p>
+            <h2 class="kiji-section__title" id="related-manual-title">自動売買より、自分で幅広く投資したい人はこちら</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは自動売買が中心ですが、NISA・投資信託・国内株・海外株まで含めて
+              総合的に使いたい人は、別の証券口座のほうが合うこともあります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a href="Monex.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合型</span>
+              <strong class="kiji-link-card__title">マネックス証券を見る</strong>
+              <span class="kiji-link-card__text">
+                NISA・投資信託・海外株まで視野に入れながら使いたい人向け
+              </span>
             </a>
           </div>
         </section>
-      </div>
 
-<section class="anime-item" aria-labelledby="review-entry-title">
-  <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+        <section class="kiji-section" aria-labelledby="related-portfolio-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Portfolio</p>
+            <h2 class="kiji-section__title" id="related-portfolio-title">売買タイミングより、分散投資を続けたい人はこちら</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは指数の値動きを取りにいく性格がありますが、
+              ポートフォリオ単位で長期の分散投資を続けたい人には別のサービスのほうが合うこともあります。
+            </p>
+          </div>
 
-  <div class="review">
-    <a href="userreview.html" class="review-card">
-      <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-      <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
-    </a>
-  </div>
+          <div class="kiji-grid kiji-grid--2">
+            <a href="bloomo.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">長期分散</span>
+              <strong class="kiji-link-card__title">Bloomo証券を見る</strong>
+              <span class="kiji-link-card__text">
+                米国株・ETFをポートフォリオ単位で運用しながら分散投資を続けたい人向け
+              </span>
+            </a>
+          </div>
+        </section>
 
-</section>
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
 
-      <!-- 注意喚起 -->
-      <section class="anime-item" style="margin-top: 20px;">
-        <h2 class="anime-title">⚠️ 注意点・リスクも把握しよう</h2>
-        <ul>
-          <li><b>相場の変動：</b> 利益だけでなく損失のリスクも伴います。</li>
-          <li><b>コストの確認：</b> 取引手数料やスプレッド、建玉関連費用などを事前に確認しましょう。</li>
-          <li><b>情報の正確性：</b> 投資判断は自己責任。最新の公式情報と約款をご確認ください。</li>
-        </ul>
-      </section>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                トライオートCFDは完全放置できますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  放置しやすい仕組みはありますが、完全放置向けとは言いにくいです。
+                  相場急変や含み損の拡大、証拠金余力の低下が起こることもあるため、定期的な確認が前提です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                トライオートCFDは初心者でも使えますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  使えますが、株価指数・CFD・レバレッジ・自動売買の基本を理解してから使うほうが安心です。
+                  簡単そうに見えても、自動売買だから安全というわけではありません。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                手数料は本当に0円ですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  取引手数料自体は0円と案内されています。
+                  ただし、スプレッドや建玉保有に伴う費用などのコスト要素があるため、完全無料とは考えないほうが自然です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                トライオートCFDでは何に投資しますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  主に株価指数CFDを使って運用します。
+                  個別株ではなく、複数企業の動きをまとめた指数の値動きを対象に売買するのが特徴です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                どんな人に向いていますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  裁量だけで売買するのが苦手な人、ルールベースで長めに考えられる人、
+                  完全放置ではなく定期確認が必要だと理解できる人に向いています。
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              トライオートCFDは、<strong>株価指数CFDを自動売買ルールで運用しやすくしたサービス</strong>です。
+              裁量だけに頼らず、ルールベースで運用したい人にとっては候補に入れやすい一方で、
+              自動売買だから安全という商品ではありません。
+            </p>
+            <p>
+              大事なのは、株価指数・CFD・レバレッジ・余力管理を理解したうえで使うことです。
+              <strong>過信せずに使うなら十分検討価値はありますが、最終判断は自分で行う前提</strong>で考えるとズレにくいサービスです。
+            </p>
+          </div>
+        </section>
+
+        <section class="kiji-cta">
+          <div class="kiji-cta__body">
+            <p class="kiji-cta__eyebrow">Official Site</p>
+            <h2 class="kiji-cta__title">口座開設前に、まずは公式サイトで確認してみる</h2>
+            <p class="kiji-cta__text">
+              取扱銘柄、手数料、スプレッド、必要証拠金、各種サポート、取引ルールなどは変更される場合があります。
+              申し込み前に公式情報もあわせて確認しておくと安心です。
+            </p>
+            <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=INV16&SQ=0&isq=209"
+               class="kiji-btn kiji-btn--primary"
+               rel="nofollow noopener noreferrer">
+              トライオートCFDの公式サイトを見る
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related</p>
+            <h2 class="kiji-section__title" id="related-title">比較して考えたい人はこちら</h2>
+            <p class="kiji-section__text">
+              トライオートCFDは自動売買色が強いサービスなので、重視するポイントによっては他社のほうが合うこともあります。
+              比較ページもあわせて見ると判断しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a href="syoukensyoukai.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">一覧比較</span>
+              <strong class="kiji-link-card__title">証券会社一覧ページを見る</strong>
+              <span class="kiji-link-card__text">各社の特徴を横並びで整理したい人向けです。</span>
+            </a>
+
+            <a href="Monex.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合型比較</span>
+              <strong class="kiji-link-card__title">マネックス証券を見る</strong>
+              <span class="kiji-link-card__text">自動売買だけでなく、NISAや投資信託も含めて考えたい人向けです。</span>
+            </a>
+
+            <a href="bloomo.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">長期分散</span>
+              <strong class="kiji-link-card__title">Bloomo証券を見る</strong>
+              <span class="kiji-link-card__text">売買タイミングより、長期の分散投資を重視したい人向けです。</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="securities-list"></div>
+        <script src="cards-syouken.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+          <ul class="kiji-bullet-list">
+            <li>手数料・スプレッド・取扱銘柄・必要証拠金・各種条件・サポート体制は変更される場合があります。</li>
+            <li>最新情報は必ずトライオートCFDの公式サイトでご確認ください。</li>
+            <li>本ページはサービス選びの参考情報であり、投資判断そのものを推奨するものではありません。</li>
+            <li>CFDには価格変動リスク、レバレッジリスクがあり、相場急変時には元本を上回る損失が発生する可能性があります。</li>
+          </ul>
+        </section>
+
+      </article>
+
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
 
     </main>
   </div>
-  
- <div id="footer"></div>
 
-  <!--読み込みのスクリプト-->
+  <div id="footer"></div>
+
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
-
-
 </body>
 </html>

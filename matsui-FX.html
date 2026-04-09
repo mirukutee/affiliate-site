@@ -2,370 +2,744 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>松井証券 FX | 100円から自動売買【初心者向け】</title>
-  <meta name="description" content="松井証券FXは1通貨＝約100円から自動売買に対応。リピート系の仕組み、手数料、向いている投資スタイルをわかりやすく解説します。">
-  <link rel="canonical" href="https://tousiportal.jp/matsui-FX.html">
-  <link rel="amphtml" href="AMP/matsui-FX.html">
+  <title>松井証券FXは初心者向け？1通貨・自動売買・使いやすさの特徴と注意点を解説</title>
+  <meta name="description" content="松井証券FXの特徴やメリット・注意点を初心者向けに整理。1通貨から始められる少額取引、100円から使える自動売買、シンプルな操作性、向いている人・向いていない人までわかりやすく解説します。">
+  <link rel="canonical" href="https://tousiportal.jp/matsui-FX.html" />
+  <link rel="amphtml" href="AMP/matsui-FX.html" />
 
-  <!-- OGP -->
+  <meta property="og:title" content="松井証券FXは初心者向け？1通貨・自動売買・使いやすさの特徴と注意点を解説" />
+  <meta property="og:description" content="松井証券FXの特徴やメリット・注意点を初心者向けに整理。少額で始めやすい点や自動売買対応の特徴をわかりやすくまとめています。" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="松井証券 FX | 100円から自動売買【初心者向け】" />
-  <meta property="og:description" content="松井証券FXは1通貨＝約100円から自動売買に対応。リピート系の仕組み、手数料、向いている投資スタイルをわかりやすく解説します。" />
   <meta property="og:url" content="https://tousiportal.jp/matsui-FX.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-  <!-- Twitter -->
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/matsui-fx.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="松井証券 FX | 100円から自動売買【初心者向け】" />
-  <meta name="twitter:description" content="松井証券FXは1通貨＝約100円から自動売買に対応。リピート系の仕組み、手数料、向いている投資スタイルをわかりやすく解説します。" />
-  <meta name="twitter:image" content="https://tousiportal.jp/sonota/top.png" />
 
-  <!-- Favicon 基本 -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-<!-- 高解像度（Android / 一部ブラウザ）-->
-<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-
-<!-- iOS ホーム画面用 -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
-   <link rel="stylesheet" href="header.css">
- <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="kiji.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- 構造化データ：Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://tousiportal.jp/"},
-      {"@type":"ListItem","position":2,"name":"FX一覧","item":"https://tousiportal.jp/FX-syoukai.html"},
-      {"@type":"ListItem","position":3,"name":"松井証券FX","item":"https://tousiportal.jp/matsui-FX.html"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/index.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"FX一覧",
+        "item":"https://tousiportal.jp/FX-syoukai.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"松井証券FX",
+        "item":"https://tousiportal.jp/matsui-FX.html"
+      }
     ]
   }
   </script>
 
-  <!-- 構造化データ：Article（公開・更新日は実値に） -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"松井証券 FX | 100円から自動売買【初心者向け】",
-    "description":"松井証券FXは1通貨＝約100円から自動売買に対応。リピート系の仕組み、手数料、向いている投資スタイルをわかりやすく解説します。",
-    "image":["https://tousiportal.jp/sonota/top.png"],
-    "datePublished":"2025-04-21",
-    "dateModified":"2025-08-12",
-    "author":{"@type":"Organization","name":"mirukutee"},
+    "headline":"松井証券FXは初心者向け？1通貨・自動売買・使いやすさの特徴と注意点を解説",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
     "publisher":{
       "@type":"Organization",
-      "name":"mirukutee",
-      "logo":{"@type":"ImageObject","url":"https://tousiportal.jp/sonota/logo_600x60.png"}
+      "name":"投資ポータル"
     },
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://tousiportal.jp/matsui-FX.html"}
+    "datePublished":"2026-04-09",
+    "dateModified":"2026-04-09",
+    "inLanguage":"ja",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://tousiportal.jp/matsui-FX.html"
+    },
+    "image":[
+      "https://tousiportal.jp/Xcard/matsui-fx.webp"
+    ],
+    "description":"松井証券FXの特徴やメリット・注意点を初心者向けに整理した解説記事です。"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"松井証券FXは初心者に向いていますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"向いています。特に、最初は少額でFXの流れを理解したい人や、シンプルな画面で基本を覚えたい人には候補にしやすい口座です。一方で、短期売買特化や分析機能の多さを最優先する人は他社比較も大切です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"1通貨から取引できると何が良いのですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"必要資金をかなり抑えて始めやすい点が大きなメリットです。最初から大きなお金を入れずに、FXの仕組みや値動きに慣れていきたい人に向いています。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"松井証券FXの自動売買はどんな仕組みですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"あらかじめ注文する値幅やレンジを設定し、ルール通りの注文を繰り返すリピート系の自動売買です。忙しい人でも使いやすい一方で、相場状況に応じた資金管理は必要です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"松井証券FXはどんな人に向いていませんか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"スキャルピングなどの短期売買を強く重視する人や、分析ツールの多機能さを最優先したい人には、他社の方が合う場合があります。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"松井証券FXは自動売買だけの口座ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"自動売買だけではありません。裁量取引にも対応していますが、この口座のわかりやすい特徴としては、少額で始めやすい点とリピート系自動売買に対応している点が挙げられます。"
+        }
+      }
+    ]
   }
   </script>
 </head>
 
-<body>
- <div id="header"></div>
+<body id="top" class="kiji-page">
 
- <div class="container">
+  <div id="header"></div>
+
+  <div class="container">
     <aside id="sidebar"></aside>
 
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
 
-   <!-- メインの内容 -->
-    <main>
-       
-             <!-- パンくず -->
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-   <li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
-     <li class="breadcrumb-item active" aria-current="page">松井証券FX</li>
-  </ol>
-</nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
+          <li class="breadcrumb-item active" aria-current="page">松井証券FX</li>
+        </ol>
+      </nav>
 
-           <!-- 見出し -->
-<h1 class="title">松井証券FX｜100円から始める“リピート系”自動売買（初心者向け）</h1>
-
-
-          <!-- メインのコンテンツ基本的にこの形ですべての段落を作る -->
-        <!-- 導入段落 -->
-               <section class="anime-item">
-                
-          <h2 class="anime-title">まず初めに松井証券とは？</h2>
-            <p>松井証券は、1918年創業の老舗証券会社であり、長年にわたり投資家に支持されてきた信頼のある企業です。<br>
-2020年よりFXサービスを開始し、<strong>1通貨（約100円）から始められる手軽さ</strong>と、<strong>自動売買の利便性</strong>で注目を集めています。</p>
-<p>また、<strong>サポート体制も充実</strong>しており、平日の日中にはオペレーターと直接電話・チャットで相談することが可能です。</p>
-
-             </section>
-
-             <section class="anime-item">
-  <h2 class="anime-title">松井証券FXが向いている人・向かない人</h2>
-  <div class="session-card">
-    <h3>向いている人</h3>
-    <ul>
-      <li>小額で検証・練習しながら慣れたい</li>
-      <li>コツコツ型の自動売買を積み上げたい</li>
-      <li>スマホ中心で簡単に設定したい</li>
-    </ul>
-  </div>
-  <div class="session-card">
-    <h3>向かない人</h3>
-    <ul>
-      <li>成行スキャル中心で超短期に特化したい</li>
-      <li>裁量で多彩な注文ロジックを使い分けたい</li>
-    </ul>
-  </div>
-</section>
-
-<section class="anime-item">
-  <h2 class="anime-title">レンジ設計の実務ポイント（リピート系）</h2>
-  <ul>
-    <li>レンジ幅は過去チャートの安値～高値を基準にゆとりを持って設定</li>
-    <li>数量は資金の2～3割を初期配分にして段階的に増やす</li>
-    <li>含み損前提で耐える設計に。最大ドローダウンを想定し資金管理</li>
-  </ul>
-</section>
-
-
-              <!-- 結論（Conclusion） -->
-             <section class="anime-item">
-                 <img src="sonota/Q&A.jpg" alt="Q&Aのイメージ" width="1200" height="600">
-          <h2 class="anime-title">そもそも、自動売買とは？</h2>
-         <p>自動売買とは、その名の通り、自動で売買が行われる取引手法になります。<br>
-            「あらかじめ決めた取引ルール」に従って、24時間が自動で売買をしてくれるため、<br>
-            FXがはじめての方や、投資初心者の方、毎日忙しくてトレードする時間がない方でも、<br>
-            手軽に始められる資産運用の一つです。</p>
-             <div class="session-card">
-          <h3 class="anime-title">松井証券の自動売買は「リピート注文」</h3>
-          <p>松井証券の自動売買は、「注文する値幅」や「注文を仕掛ける範囲(レンジ)」を設定し設定したルール通りの注文を繰り返す【リピート系の自動売買】です。</p>
-          <p>指定したレンジの中で、新規注文と決済注文(利益確定)を繰り返すため取引の期間が長くなるほど、<br>
-            <strong>コツコツ利益が積み上がり、より大きな利益が期待できます。</strong></p>
-        </div>
-            </section>
-
-
-        <!-- 結論（Conclusion） -->
-             <section class="anime-item">
-                 <img src="sonota/point.jpg" alt="メリットのイメージ" width="1200" height="600">
-          <h2 class="anime-title">自動売買のメリット！</h2>
-         <ul>
-            <li><strong>時間チャンスを逃さない</strong><br>忙しいあなたの代わりに、仕事中も、遊んでいる時も、寝ている時も、松井証券FXの自動売買が投資機会を逃しません。</li>
-            <li><strong>感情に左右されない</strong><br>自動売買は一定のルールに従って機械的に取引するので、注文を出す際に感情に左右されることはありません。</li>
-            <li><strong>難しい知識は不要</strong><br>決まったルールで売買を行うため、取引に関する難しい知識はなくても取引が可能です。</li>
-
-          </ul>
-
-            </section>
-
-       <!-- 理由（Reason）＋ 証拠（Evidence） -->
-              <section class="anime-item">
-                <a href="https://h.accesstrade.net/sp/cc?rk=0100ohhn00od67" rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100ohhn00od67" alt="松井証券FX　新規口座開設獲得プロモーション" border="0" /></a>
-          <h2 class="anime-title">松井証券は業界で唯一100円から自動売買|取引手数料など、各種手数料0円！</h2>
-      <ul>
-            <li><strong>100円から自動売買</strong><br>1通貨から取引できるので100円から始められる。</li>
-            <li><strong>各種手数料0円</strong><br>各種手数料0円！コストを抑えた取引が可能</li>
-            <li><strong>スマホでカンタン設定</strong><br>取引スキル・専門知識不要スマホでカンタンに自動売買！</li>
-
-          </ul>
-             </section>
-
-       <section class="anime-item">
-       
-  <h2 class="anime-title">自動売買業者スペック比較</h2>
-  <p>以下は、2025年4月21日時点の情報に基づく、自動売買を取り扱う主要業者のスペック比較です。松井証券は、少額から始められ、柔軟な設定が可能である点が大きな特徴です。</p>
- <div class="large-table-scroll">
-  <table>
-  <thead>
-        <tr>
-          <th>サービス</th>
-          <th>取引単位</th>
-          <th>必要資金（目安）</th>
-          <th>手数料</th>
-          <th>設定の自由度</th>
-          <th>注文幅の変更</th>
-          <th>取引の再開</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>松井証券</strong></td>
-          <td>1通貨～</td>
-          <td>100円～</td>
-          <td>無料</td>
-          <td>〇</td>
-          <td>〇</td>
-          <td>〇</td>
-        </tr>
-        <tr>
-          <td>ひまわり証券</td>
-          <td>1,000通貨～</td>
-          <td>100,000円～</td>
-          <td>無料</td>
-          <td>×</td>
-          <td>×</td>
-          <td>×</td>
-        </tr>
-        <tr>
-          <td>アイネット証券</td>
-          <td>1,000通貨～</td>
-          <td>100,000円～</td>
-          <td>無料</td>
-          <td>×</td>
-          <td>×</td>
-          <td>×</td>
-        </tr>
-        <tr>
-          <td>外為オンライン</td>
-          <td>1,000通貨～</td>
-          <td>100,000円～</td>
-          <td>片道200円（10,000通貨あたり）</td>
-          <td>×</td>
-          <td>×</td>
-          <td>×</td>
-        </tr>
-        <tr>
-          <td>FXブロードネット</td>
-          <td>1,000通貨～</td>
-          <td>100,000円～</td>
-          <td>片道200円（10,000通貨あたり）</td>
-          <td>×</td>
-          <td>×</td>
-          <td>×</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-             <section class="anime-item">
-                 <img src="syouken/mobilejpg.jpg" alt="人気通貨ペアのイメージ" width="1200" height="600">
-  <h2 class="anime-title">松井証券は、自動売買の“人気通貨ペア”にも対応</h2>
-  <p>リピート系自動売買は<strong>「レンジ相場」に強い</strong>といわれています。<br>
-    レンジ相場とは、為替レートが一定の値幅で上下を繰り返す状態のことで、<strong>FX相場の約7割がこのレンジ相場</strong>とも言われています。</p>
-
-  <p>こうした相場では、小さな値動きを活用してコツコツ利益を積み重ねるリピート系自動売買が本領を発揮します。</p>
-
- <div class="session-card">
-    <h3 class="anime-title">レンジ相場になりやすい代表通貨ペア「豪ドル/NZドル」</h3>
-    <p>松井証券FXで取り扱っている通貨ペアの中でも、<strong>「豪ドル/NZドル」</strong>はレンジ相場になりやすいことで知られています。</p>
-    <p>この通貨ペアは、経済圏が似ており一方向への大きなトレンドが出にくいため、<br>
-      長期間にわたって一定の値幅内での上下動が続く傾向があります。</p>
-    <p><strong>リピート注文との相性が抜群</strong>で、初心者でも比較的わかりやすく運用しやすいペアです。</p>
-  </div>
-
-  <p>もちろん、松井証券FXではその他にも米ドル/円（USD/JPY）やユーロ/米ドル（EUR/USD）などの人気通貨ペアも多数対応しています。</p>
-</section>
-
-
-    <section class="anime-item" aria-labelledby="rvw-matsuifx">
-  <h2 class="anime-title" id="rvw-matsuifx">レビュー｜まとめ</h2>
-  <p>公開情報や使いやすさを整理し、筆者の個人視点でまとめました。</p>
-
-  <h3 class="anime-title anime-title--mini">良かった点</h3>
-  <ul class="pros-list" role="list">
-    <li><span aria-hidden="true">✔</span><span>手数料無料で、初心者でもコストを気にせず取引を始められる。</span></li>
-    <li><span aria-hidden="true">✔</span><span>スプレッドが狭く、短期トレードとの相性が良い。</span></li>
-    <li><span aria-hidden="true">✔</span><span>スマホアプリが見やすく、初心者にもわかりやすいUI設計。</span></li>
-    <li><span aria-hidden="true">✔</span><span>松井証券らしい堅実な運営体制で、安心感がある。</span></li>
-  </ul>
-
-  <h3 class="anime-title anime-title--mini">気になった点</h3>
-  <ul class="cons-list" role="list">
-    <li><span aria-hidden="true">✖</span><span>松井証券の総合口座から<strong>FX口座へ資金を移す手間</strong>があり、直接入金できない点がやや不便。</span></li>
-  </ul>
-
-  <h3 class="anime-title anime-title--mini">総評</h3>
-  <p>
-    松井証券FXは、<strong>「初心者が安心して始められるFX口座」</strong>という印象です。  
-    スプレッドの狭さやアプリの操作性が魅力で、初めてFXを学びながら取引したい人に最適。  
-    口座間の資金移動に手間があるのは気になるものの、システム全体の安定性とサポート体制の信頼感はさすが。  
-    総じて<strong>低コスト・シンプル・安心</strong>の3点を重視する人におすすめできるサービスです。
-  </p>
-
-  <a href="https://h.accesstrade.net/sp/cc?rk=0100matsuifx00od67"
-     class="cta-button font_red_r"
-     rel="sponsored nofollow noopener"
-     target="_blank"
-     aria-label="松井証券FXの口座開設（外部サイト）"
-     referrerpolicy="no-referrer-when-downgrade">
-     <img src="https://h.accesstrade.net/sp/rr?rk=0100matsuifx00od67"
-          alt="松井証券FX 口座開設バナー"
-          loading="lazy" decoding="async" width="300" height="250">
-  </a>
-</section>
-
-
-              <!-- 行動の促し（Action） -->
-      <section class="anime-item">
-  <h2 class="anime-title">まとめ</h2>
-  <p>松井証券のFXでは、シンプルな自動売買設計で初心者でも簡単に取引できることが、お分かり頂けたと思います。<br>
-    特に自動で売買を繰り返す、“リピート系自動売買”が個人投資家にとって魅力的です。</p>
-
-  <p><strong>まずは100円から、自動売買を体験してみませんか？</strong></p>
-
-   
-   <a href="https://h.accesstrade.net/sp/cc?rk=0100ohhq00od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100ohhq00od67" alt="松井証券FX　新規口座開設獲得プロモーション" border="0" width="300" height="250"></a>
+      <section class="top-proof" aria-label="サイトの検証方針">
+        <p class="top-proof__text">
+          <strong>公開情報や使いやすさ、他社との違いも踏まえながら、初心者でも判断しやすいように整理しています。</strong>
+        </p>
       </section>
 
- <!--誘導セッション-->
-           <section class="anime-item">
-          <h2 class="anime-title">FX一覧比較ページ</h2>
-       <p>👉 他のFXも比較したい方はこちら</p>
+      <article class="kiji-article">
 
-     <a href="FX-syoukai.html" class="card-link">
-             <i class="fa-regular fa-handshake"></i>
-             <span>FX一覧比較ページリンク</span>
-             </a>
+        <header class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">FX Guide</p>
+              <h1 class="kiji-title" id="page-title">松井証券FXは初心者向け？1通貨・自動売買・使いやすさの特徴と注意点を解説</h1>
+
+              <p class="kiji-lead">
+                松井証券FXは、
+                <strong>1通貨から始められる少額取引</strong>と
+                <strong>100円から使える自動売買</strong>が大きな特徴で、
+                <strong>「まずは小さくFXを理解したい人」</strong>に向いている口座です。
+                短期売買特化の攻めるタイプではありませんが、
+                <strong>少額・わかりやすさ・始めやすさ</strong>を重視する人には候補にしやすいです。
+              </p>
+
+              <ul class="kiji-tags" aria-label="特徴タグ">
+                <li>1通貨から取引可能</li>
+                <li>100円から自動売買</li>
+                <li>初心者向け</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a href="https://h.accesstrade.net/sp/cc?rk=0100ohhq00od67" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer-when-downgrade">松井証券FXの公式サイトを見る</a>
+                <a href="FX-syoukai.html" class="kiji-btn kiji-btn--ghost">FX一覧で比較する</a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="kiji-section" aria-labelledby="quick-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Quick View</p>
+            <h2 class="kiji-section__title" id="quick-title">最初に結論だけ知りたい人向けの要点</h2>
+            <p class="kiji-section__text">
+              この口座は、派手なトレード性能よりも
+              <strong>少額で始めやすいこと・仕組みを学びやすいこと・自動売買にも触れやすいこと</strong>
+              を重視する人向けです。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">向いている人</p>
+              <h3 class="kiji-info-card__title">まずは小さくFXに慣れたい人向け</h3>
+              <ul class="kiji-bullet-list">
+                <li>いきなり大きな資金を入れたくない</li>
+                <li>少額でFXの流れを覚えたい</li>
+                <li>自動売買も含めて試したい</li>
+              </ul>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">強み</p>
+              <h3 class="kiji-info-card__title">少額スタートと自動売買対応が魅力</h3>
+              <ul class="kiji-bullet-list">
+                <li>1通貨から始められる</li>
+                <li>100円から自動売買に対応</li>
+                <li>シンプルで迷いにくい</li>
+              </ul>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意点</p>
+              <h3 class="kiji-info-card__title">プロ向け本格派の攻める口座ではありません</h3>
+              <ul class="kiji-bullet-list">
+                <li>短期売買特化ではない</li>
+                <li>分析機能最優先の人には弱い</li>
+                <li>慣れたら他社比較も必要</li>
+              </ul>
+            </section>
+          </div>
         </section>
 
-         <!--一覧card　FX-->
-<div id="fx-list"></div>
-
-<script src="cards-FX.js"></script>
-
-<section class="anime-item" aria-labelledby="review-entry-title">
-  <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
-
-  <div class="review">
-    <a href="userreview.html" class="review-card">
-      <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-      <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
-    </a>
+        <section class="kiji-section">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Ease of Use</p>
+    <h2 class="kiji-section__title">まずは「使いやすい・安い・少額OK」と覚えればOK</h2>
+    <p class="kiji-section__text">
+      松井証券FXは、
+      <strong>1通貨から取引できるため、100円程度から始められる</strong>のが特徴です。
+    </p>
   </div>
 
+  <div class="kiji-grid kiji-grid--2">
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">初心者でも触りやすい設計</h3>
+      <ul class="kiji-bullet-list">
+        <li>1通貨から取引できる（少額スタートOK）</li>
+        <li>シンプルな取引ツールで迷いにくい</li>
+        <li>各種手数料が無料でコストを抑えやすい</li>
+      </ul>
+    </section>
+
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">大手ならではの安心感</h3>
+      <ul class="kiji-bullet-list">
+        <li>老舗証券会社のサービス</li>
+        <li>初心者でも使いやすい設計</li>
+        <li>変に尖っていない安定した口座</li>
+      </ul>
+    </section>
+  </div>
 </section>
-   
-              <!-- リスク注意書き -->
-<div class="anime-item" style="margin-top: 20px;">
-  <h2 class="anime-title">ご利用にあたっての注意事項</h2>
-  <p>
-    本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。FX（外国為替証拠金取引）は、元本保証のないリスクの高い金融商品です。相場変動等により損失が生じる場合があり、預け入れた証拠金を上回る損失が発生する可能性もあります。<br>
-    取引を開始する際は、契約締結前交付書面や商品説明書を十分にご確認の上、ご自身の判断と責任においてお取引ください。
+
+
+<section class="kiji-section">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Auto Trade</p>
+    <h2 class="kiji-section__title">レンジ相場に強い「リピート系の自動売買」</h2>
+    <p class="kiji-section__text">
+      松井証券FXの自動売買は、
+      <strong>一定の範囲で売買を繰り返す「リピート系」</strong>です。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--2">
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">レンジ相場と相性がいい</h3>
+      <ul class="kiji-bullet-list">
+        <li>価格が上下に動く相場で利益を積み重ねやすい</li>
+        <li>豪ドル / NZドルなどはレンジになりやすい</li>
+        <li>ユーロ / ポンドなども候補になりやすい</li>
+      </ul>
+    </section>
+
+    <section class="kiji-info-card">
+      <h3 class="kiji-info-card__title">通貨ペアも十分そろっている</h3>
+      <ul class="kiji-bullet-list">
+        <li>全22種類の通貨ペアに対応</li>
+        <li>複数のレンジ戦略を組みやすい</li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="kiji-section__text margin_min">
+    <small>
+      ※レンジ相場とは、価格が一定の範囲で上下を繰り返す状態のことです。
+    </small>
   </p>
-</div>
+</section>
 
+        <section class="kiji-section" aria-labelledby="merit-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Merit</p>
+            <h2 class="kiji-section__title" id="merit-title">松井証券FXの主な強み</h2>
+            <p class="kiji-section__text">
+              この口座の魅力は、
+              <strong>少額・わかりやすさ・始めやすさのバランスが良いこと</strong>です。
+            </p>
+          </div>
 
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">1通貨から取引できる</h3>
+              <ul class="kiji-bullet-list">
+                <li>必要資金を抑えやすい</li>
+                <li>初心者の最初の一歩に合いやすい</li>
+                <li>無理のないスタートを切りやすい</li>
+              </ul>
+            </section>
 
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">少額でFXの流れを学びやすい</h3>
+              <ul class="kiji-bullet-list">
+                <li>注文の感覚をつかみやすい</li>
+                <li>値動きの見方を覚えやすい</li>
+                <li>いきなり大きな失敗をしにくい</li>
+              </ul>
+            </section>
 
-  <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">リピート系の自動売買に対応している</h3>
+              <ul class="kiji-bullet-list">
+                <li>一定ルールで売買を進めやすい</li>
+                <li>忙しい人でも取り組みやすい</li>
+                <li>感情で触りすぎる失敗を減らしやすい</li>
+              </ul>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">画面がシンプルで迷いにくい</h3>
+              <ul class="kiji-bullet-list">
+                <li>高機能すぎて混乱しにくい</li>
+                <li>基本操作を覚えやすい</li>
+                <li>最初のFX口座として候補にしやすい</li>
+              </ul>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">05</span>
+              <h3 class="kiji-feature-card__title">松井証券ブランドの安心感がある</h3>
+              <ul class="kiji-bullet-list">
+                <li>老舗証券会社としての信頼感がある</li>
+                <li>初心者でも候補にしやすい</li>
+                <li>怪しい印象を持ちにくい</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="auto-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Auto Trade</p>
+            <h2 class="kiji-section__title" id="auto-title">自動売買対応はどういう強みなのか</h2>
+            <p class="kiji-section__text">
+              松井証券FXでは、
+              <strong>注文する値幅やレンジを設定し、ルール通りの注文を繰り返すリピート系の自動売買</strong>
+              に対応しています。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">メリット</p>
+              <h3 class="kiji-info-card__title">裁量だけでなく自動売買にも触れやすいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>仕事中も相場を見続けなくてよい</li>
+                <li>一定ルールで機械的に売買しやすい</li>
+                <li>感情的な判断を減らしやすい</li>
+              </ul>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意</p>
+              <h3 class="kiji-info-card__title">自動でも放置で安全とは限りません</h3>
+              <ul class="kiji-bullet-list">
+                <li>相場状況によって含み損は出ます</li>
+                <li>レンジ外の動きには注意が必要です</li>
+                <li>最初は少額で仕組みをつかむ方が安全です</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="caution-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Caution</p>
+            <h2 class="kiji-section__title" id="caution-title">始めやすさは強いですが、攻める口座ではありません</h2>
+            <p class="kiji-section__text">
+              この口座は
+              <strong>「まず小さく始めるための口座」</strong>としてはかなり整理しやすいです。
+              ただし、トレード性能を最優先する人には向きません。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">向いている人</p>
+              <h3 class="kiji-info-card__title">こういう人には候補にしやすいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>少額でFXの基本を学びたい人</li>
+                <li>いきなり大きな資金を入れたくない人</li>
+                <li>自動売買も入口として触ってみたい人</li>
+              </ul>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">向いていない人</p>
+              <h3 class="kiji-info-card__title">こういう人は他社比較をした方がいいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>スキャルピングを重視する人</li>
+                <li>分析ツールの多機能さを重視する人</li>
+                <li>短期売買で攻めたい人</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+       
+
+        <section class="kiji-section" aria-labelledby="spec-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Spec</p>
+            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
+          </div>
+
+          <div class="kiji-table-wrap">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>サービス名</th>
+                  <td>松井証券FX</td>
+                </tr>
+                <tr>
+                  <th>主な立ち位置</th>
+                  <td>少額で始めやすく、初心者が最初の一歩を踏み出しやすいFX口座</td>
+                </tr>
+                <tr>
+                  <th>向いている人</th>
+                  <td>初心者 / 少額で始めたい人 / シンプルな画面を重視したい人 / 自動売買にも興味がある人</td>
+                </tr>
+                <tr>
+                  <th>向いていない人</th>
+                  <td>スキャルピング寄りの人 / 高機能ツールを重視する人 / 短期売買で攻めたい人</td>
+                </tr>
+                <tr>
+                  <th>取引単位</th>
+                  <td>1通貨から</td>
+                </tr>
+                <tr>
+                  <th>特徴</th>
+                  <td>少額取引に対応 / リピート系自動売買に対応 / シンプルで始めやすい</td>
+                </tr>
+                <tr>
+                  <th>ツール</th>
+                  <td>FX専用アプリ・PC用ツールに対応</td>
+                </tr>
+                <tr>
+                  <th>注意点</th>
+                  <td>短期売買特化ではなく、分析重視や攻める運用なら他社比較も必要</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="margin_min">
+            <small>※ スプレッド・スワップ・取扱通貨ペア・機能・各種条件は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+          </p>
+        </section>
+
+        
+
+        <section class="kiji-section" aria-labelledby="flow-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Flow</p>
+            <h2 class="kiji-section__title" id="flow-title">松井証券FXの使い方｜裁量取引＋リピート系自動売買でチャンスを拾う</h2>
+           <ol class="kiji-step-list">
+  <li>
+    <strong>まずは1通貨で裁量取引の感覚をつかむ</strong>
+    <p>
+      松井証券FXは1通貨から取引できるため、
+      少額で実際の値動きや注文の流れを確認しやすいです。
+      スプレッド面でもコストを抑えながら、基本の取引感覚を身につけていきます。
+    </p>
+  </li>
+
+  <li>
+    <strong>レンジ相場ではリピート系の自動売買を活用する</strong>
+    <p>
+      価格が一定の範囲で動くレンジ相場では、
+      リピート系の自動売買を使うことで細かい値幅を取りやすくなります。
+      豪ドル/NZドルやユーロ/ポンドなど、レンジになりやすい通貨ペアで活用しやすいです。
+    </p>
+  </li>
+
+  <li>
+    <strong>裁量と自動売買を使い分ける</strong>
+    <p>
+      トレンドが出ている場面では裁量取引、
+      レンジ相場では自動売買といったように、
+      相場状況に応じて使い分けることでチャンスを逃しにくくなります。
+    </p>
+  </li>
+</ol>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="step-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Step</p>
+            <h2 class="kiji-section__title" id="step-title">口座開設の流れ</h2>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>公式サイトから申し込む</strong>
+              <p>申込ページから必要事項を入力します。</p>
+            </li>
+            <li>
+              <strong>本人確認を行う</strong>
+              <p>案内に沿って本人確認書類などを提出します。</p>
+            </li>
+            <li>
+              <strong>ログイン準備と初期設定を進める</strong>
+              <p>審査後に届く案内を確認し、取引準備を整えます。</p>
+            </li>
+            <li>
+              <strong>少額で基本操作を確認する</strong>
+              <p>最初から大きく動かさず、自分に合うか確認しながら進める方が安心です。</p>
+            </li>
+            <li>
+              <strong>必要に応じて自動売買も試す</strong>
+              <p>仕組みを理解したうえで取り入れると判断しやすくなります。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section kiji-banner-zone" aria-label="松井証券FX公式サイト案内">
+          <div class="kiji-note-box">
+            <p class="kiji-banner-zone__text">
+              松井証券FXは、
+              <strong>少額で始めやすく、初心者がFXの基本を理解する入口として使いやすい口座</strong>です。
+              まずは公式サイトで、取引条件や自動売買の仕組みを確認してみてください。
+            </p>
+            <div class="kiji-banner-zone__square">
+              <a href="https://h.accesstrade.net/sp/cc?rk=0100ohhq00od67" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer-when-downgrade">
+                <img src="https://h.accesstrade.net/sp/rr?rk=0100ohhq00od67" alt="松井証券FX　新規口座開設獲得プロモーション" border="0" width="300" height="250" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="compare-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Compare</p>
+            <h2 class="kiji-section__title" id="compare-title">重視ポイント別の比較先</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a href="MUFGfx.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">安心感重視</span>
+              <strong class="kiji-link-card__title">三菱UFJ eスマート証券 FXを見る</strong>
+              <span class="kiji-link-card__text">大手グループの信頼感をより重視したい人向け</span>
+            </a>
+
+            <a href="GMO-syouken.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合力重視</span>
+              <strong class="kiji-link-card__title">GMOクリック証券 FXを見る</strong>
+              <span class="kiji-link-card__text">操作性や総合的な使いやすさを比較したい人向け</span>
+            </a>
+
+            <a href="iNET.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">自動売買比較</span>
+              <strong class="kiji-link-card__title">アイネット証券を見る</strong>
+              <span class="kiji-link-card__text">より自動売買寄りの選択肢も見たい人向け</span>
+            </a>
+
+            <a href="FX-syoukai.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">一覧比較</span>
+              <strong class="kiji-link-card__title">FX一覧ページを見る</strong>
+              <span class="kiji-link-card__text">各FX口座をまとめて比較したい人向け</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                松井証券FXは初心者に向いていますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  向いています。特に、少額でFXを始めたい人や、シンプルな画面で基本を覚えたい人には候補にしやすいです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                1通貨から取引できると何が良いのですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  必要資金を抑えやすく、最初から大きなお金を入れずにFXの流れを体験しやすい点がメリットです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                松井証券FXの自動売買はどんな仕組みですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  あらかじめ注文する値幅やレンジを設定し、ルールに沿って売買を繰り返すリピート系の自動売買です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                どんな人には向いていませんか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  スキャルピング重視の人や、高機能ツールを使い込みたい人、短期売買で攻めたい人には他社比較が必要です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                松井証券FXは自動売買だけの口座ですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  自動売買だけではありません。裁量取引にも対応していますが、少額で始めやすい点と自動売買対応がわかりやすい特徴です。
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              松井証券FXは、
+              <strong>少額で始めやすく、初心者がFXの基本を理解する入口として使いやすい口座</strong>です。
+            </p>
+            <ul class="kiji-bullet-list">
+              <li>1通貨から始めやすい</li>
+              <li>少額で学びやすい</li>
+              <li>自動売買にも対応している</li>
+              <li>短期売買重視なら他社比較も必要</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="kiji-cta">
+          <div class="kiji-cta__body">
+            <p class="kiji-cta__eyebrow">Official Site</p>
+            <h2 class="kiji-cta__title">少額で始めたいなら、まずは公式サイトで条件を確認</h2>
+            <p class="kiji-cta__text">
+              取引単位や自動売買の仕組み、取扱通貨ペア、各種条件などは、
+              事前に公式サイトで確認しておくと判断しやすくなります。
+            </p>
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100ohhq00od67"
+               class="kiji-btn kiji-btn--primary"
+               rel="nofollow noopener noreferrer"
+               referrerpolicy="no-referrer-when-downgrade">
+              松井証券FXの公式サイトを見る
+            </a>
+          </div>
+        </section>
+
+        <section class="anime-item" aria-labelledby="review-entry-title">
+          <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+          <div class="review">
+            <a href="userreview.html" class="review-card">
+              <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
+              <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="fx-list"></div>
+        <script src="cards-FX.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+          <ul class="kiji-bullet-list">
+            <li>スプレッド・スワップ・取扱通貨ペア・機能・キャンペーン・各種条件は変更される場合があります。</li>
+            <li>最新情報は必ず松井証券FXの公式サイトでご確認ください。</li>
+            <li>本ページはサービス選びの参考情報であり、投資判断そのものを推奨するものではありません。</li>
+            <li>FX（外国為替証拠金取引）は元本保証のない金融商品であり、相場変動等により損失が生じる場合があります。</li>
+            <li>自動売買であっても損失を避けられるわけではありません。取引前に契約締結前交付書面や商品説明を十分ご確認ください。</li>
+          </ul>
+        </section>
+
+      </article>
+
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
     </main>
   </div>
 
- <div id="footer"></div>
+  <div id="footer"></div>
 
-  <!--読み込みのスクリプト-->
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
-
 </body>
 </html>

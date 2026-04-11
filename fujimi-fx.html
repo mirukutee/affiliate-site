@@ -1,234 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>フジトミ証券 シストレセレクト365 | くりっく365×自動売買</title>
-  <meta name="description" content="フジトミ証券の自動売買『シストレセレクト365』を紹介。キャラクター選択で簡単運用、取引所FX（くりっく365）の透明性や税制のメリットも解説。">
-  <link rel="canonical" href="https://tousiportal.jp/fujimi-fx.html">
-  <link rel="amphtml" href="AMP/fujimi-fx.html">
+  <title>100通りの戦略から選べるシストレセレクト365｜取引所FXの自動売買の特徴と注意点</title>
+  <meta name="description" content="シストレセレクト365の特徴や向いている人・向いていない人、取引所FXならではの透明性、推奨証拠金の考え方、注意点を初心者〜中級者向けにわかりやすく整理。放置ではなく、資金管理と見直しを前提に使いたい人向けの自動売買サービスです。">
+  <link rel="canonical" href="https://tousiportal.jp/fujimi-fx.html" />
+  <link rel="amphtml" href="AMP/fujimi-fx.html" />
 
-  <!-- OGP -->
+  <meta property="og:title" content="100通りの戦略から選べるシストレセレクト365｜取引所FXの自動売買の特徴と注意点" />
+  <meta property="og:description" content="シストレセレクト365の特徴や向いている人・向いていない人、取引所FXの透明性、推奨証拠金の考え方を初心者向けに整理。簡単に始めやすい一方で、放置ではなく資金管理が前提のサービスです。" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="フジトミ証券 シストレセレクト365 | くりっく365×自動売買" />
-  <meta property="og:description" content="フジトミ証券の自動売買『シストレセレクト365』を紹介。キャラクター選択で簡単運用、取引所FX（くりっく365）の透明性や税制のメリットも解説。" />
   <meta property="og:url" content="https://tousiportal.jp/fujimi-fx.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-
-  <!-- Twitter -->
+  <meta property="og:image" content="https://tousiportal.jp/Xcard/fujitomi-fx.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="フジトミ証券 シストレセレクト365 | くりっく365×自動売買" />
-  <meta name="twitter:description" content="フジトミ証券の自動売買『シストレセレクト365』を紹介。キャラクター選択で簡単運用、取引所FX（くりっく365）の透明性や税制のメリットも解説。" />
-  <meta name="twitter:image" content="https://tousiportal.jp/sonota/top.png" />
 
-  <!-- Favicon 基本 -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-<!-- 高解像度（Android / 一部ブラウザ）-->
-<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-
-<!-- iOS ホーム画面用 -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu-card.css" />
-   <link rel="stylesheet" href="header.css">
- <link rel="stylesheet" href="sidebar.css" />
-
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="kiji.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- 構造化データ：Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://tousiportal.jp/"},
-      {"@type":"ListItem","position":2,"name":"FX一覧","item":"https://tousiportal.jp/FX-syoukai.html"},
-      {"@type":"ListItem","position":3,"name":"フジトミ証券 シストレセレクト365","item":"https://tousiportal.jp/fujimi-fx.html"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/index.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"FX一覧",
+        "item":"https://tousiportal.jp/FX-syoukai.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"シストレセレクト365",
+        "item":"https://tousiportal.jp/fujimi-fx.html"
+      }
     ]
   }
   </script>
 
-  <!-- 構造化データ：Article（公開・更新日は実値に） -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "フジトミ証券 シストレセレクト365 | くりっく365×自動売買",
-    "description": "フジトミ証券の自動売買『シストレセレクト365』を紹介。キャラクター選択で簡単運用、取引所FX（くりっく365）の透明性や税制のメリットも解説。",
-    "image": ["https://tousiportal.jp/sonota/top.png"],
-    "datePublished": "2025-04-21",
-    "dateModified": "2025-08-12",
-    "author": { "@type": "Organization", "name": "mirukutee" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "mirukutee",
-      "logo": { "@type": "ImageObject", "url": "https://tousiportal.jp/sonota/logo_600x60.png" }
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"100通りの戦略から選べるシストレセレクト365｜取引所FXの自動売買の特徴と注意点",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tousiportal.jp/fujimi-fx.html" }
+    "publisher":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "datePublished":"2026-04-11",
+    "dateModified":"2026-04-11",
+    "inLanguage":"ja",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://tousiportal.jp/fujimi-fx.html"
+    },
+    "image":[
+      "https://tousiportal.jp/Xcard/fujitomi-fx.webp"
+    ],
+    "description":"シストレセレクト365の特徴や向いている人・向いていない人、取引所FXの透明性、推奨証拠金の考え方を初心者〜中級者向けに整理した解説記事です。"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"シストレセレクト365は初心者でも使えますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"使いやすいです。キャラクター（ストラテジー）を選んで始められるため、複雑な設定は不要です。ただし、完全放置で増えるものではなく、資金管理と定期的な見直しは必要です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"シストレセレクト365はいくらくらい必要ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"必要資金は選ぶ戦略や相場状況によって変わります。目安としては15万円前後の資金を見ておくと始めやすいですが、取引前には必ず最新の推奨証拠金を確認することが大切です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"ランキング上位のキャラクターを選べば安心ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"過去成績は参考になりますが、将来の利益を保証するものではありません。ランキングだけでなく、最大ドローダウンや通貨ペアの特性も確認した方が判断しやすいです。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"シストレセレクト365は放置で大丈夫ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"放置前提ではありません。自動で売買は進みますが、相場状況や運用成績を確認し、必要に応じて停止や入れ替えを行う前提で使う方が安全です。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"シストレセレクト365はどんな人に向いていませんか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"少額で軽く試したい人、運用状況をほとんど見ない人、細かくロジックを作り込みたい人、多くの通貨ペアで自由に組みたい人には向きにくいです。"
+        }
+      }
+    ]
   }
   </script>
 </head>
 
-<body>
- <div id="header"></div>
+<body id="top" class="kiji-page">
 
- <div class="container">
+  <div id="header"></div>
+
+  <div class="container">
     <aside id="sidebar"></aside>
 
-<!-- メインの内容 -->
-<main>
+    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
 
-  <!-- パンくず -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-     <li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
-      <li class="breadcrumb-item active" aria-current="page">フジトミ証券のFX自動売買「シストレセレクト365」</li>
-    </ol>
-  </nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
+          <li class="breadcrumb-item active" aria-current="page">シストレセレクト365</li>
+        </ol>
+      </nav>
 
-  <!-- 見出し -->
- <h1 class="title">フジトミ証券の自動売買「シストレセレクト365」とは？くりっく365の魅力</h1>
+      <section class="top-proof" aria-label="サイトの検証方針">
+        <p class="top-proof__text">
+          <strong>公開情報やサービスの仕組み、使いやすさ、注意点を踏まえながら、初心者でも判断しやすいように整理しています。</strong>
+        </p>
+      </section>
 
-  <section class="anime-item">
+      <article class="kiji-article">
 
-    <h2 class="anime-title">「シストレセレクト365」とは</h2>
-    <p>フジトミ証券が提供する「シストレセレクト365」は、あらかじめ用意されたキャラクター（ストラテジー）を選ぶことで、FXの自動売買が行えるサービスです。</p>
+        <header class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">FX Guide</p>
+              <h1 class="kiji-title" id="page-title">100通りの戦略から選べるシストレセレクト365｜取引所FXの自動売買の特徴と注意点</h1>
 
- <div class="session-card">
-  
-     <h4 class="anime-title">初心者でも使いやすい仕組み</h4>
-    <p>複雑な設定や相場の知識がなくても始められる点が特長です。キャラクターを選ぶだけで自動売買がスタートするため、FXの経験が浅い方にも向いています。</p>
-        </div>
+              <p class="kiji-lead">
+                シストレセレクト365は、
+                <strong>取引所FX（くりっく365）を使った選択型の自動売買サービス</strong>です。
+                キャラクター（ストラテジー）を選ぶだけで始めやすい一方で、
+                <strong>完全放置で増えるものではなく、資金管理と定期的な見直しを前提に使うタイプ</strong>です。
+                そのため、
+                <strong>裁量トレードの負担を減らしながら、ルール運用でコツコツ回したい人</strong>に向いています。
+              </p>
 
-<div class="session-card">
-<h4 class="anime-title">多彩な選択肢と戦略</h4>
-    <p>25種類のキャラクターと、4つの通貨ペア（米ドル円・ユーロ円・ポンド円・豪ドル円）の組み合わせで、100通りの戦略を選ぶことができます。</p>
-    <p>キャラクターは「トレンドフォロー型」「カウンタートレード型」に分かれており、MACDやストキャスティクスなどのテクニカル指標を活用しています。</p>
- </div>
+              <ul class="kiji-tags" aria-label="特徴タグ">
+                <li>取引所FXの自動売買</li>
+                <li>キャラ選択で始めやすい</li>
+                <li>資金管理が前提</li>
+              </ul>
 
-    <div class="session-card">
-<h4 class="anime-title">ランキング形式で成績が分かりやすい</h4>
-    <p>キャラクターの過去成績はランキング表示されており、どれが好調か一目で分かります。選ぶ際の参考にできます。</p>
-    </div>
+              <div class="kiji-hero__actions">
+                <a href="https://h.accesstrade.net/sp/cc?rk=0100mt4u00od67" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer-when-downgrade">シストレセレクト365の公式サイトを見る</a>
+                <a href="FX-syoukai.html" class="kiji-btn kiji-btn--ghost">FX一覧で比較する</a>
+              </div>
+            </div>
+          </div>
+        </header>
 
-  </section>
+        <section class="kiji-section" aria-labelledby="quick-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Quick View</p>
+            <h2 class="kiji-section__title" id="quick-title">最初に結論だけ知りたい人向けの要点</h2>
+           <p class="kiji-section__text">
+  シストレセレクト365では、キャラクターごとに用意された売買戦略から選んで稼働できます。
+  <strong>25種類のキャラクターと4通貨ペアを組み合わせて、多くの戦略パターンから選べる</strong>ため、
+  1つの型に固定されず、自分に合う運用方針を探しやすいのが特徴です。
+</p>
+          </div>
 
-  <section class="anime-item">
-    <h2 class="anime-title">東京金融取引所「くりっく365」を利用</h2>
-    <p>取引所FX形式を採用しており、透明性の高い価格とスワップポイントが魅力です。店頭FXとは異なる仕組みで、信頼性を重視したい方にも向いています。</p>
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">向いている人</p>
+              <h3 class="kiji-info-card__title">こういう人には候補にしやすいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>目安として15万円前後の資金を用意できる人</li>
+                <li>コツコツ運用し、状況をマメに確認できる人</li>
+                <li>裁量トレードを減らしてルール運用したい人</li>
+                <li>難しい設定なしで自動売買を始めたい人</li>
+              </ul>
+            </section>
 
- <h4 class="anime-title">「くりっく365」とは？</h4>
-  <p>「くりっく365」は、東京金融取引所が提供する取引所FX（外国為替証拠金取引）です。証券会社などを通じて取引されますが、価格はすべて取引所で一元的に決定されます。</p>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">強み</p>
+              <h3 class="kiji-info-card__title">始めやすさと比較のしやすさが魅力です</h3>
+              <ul class="kiji-bullet-list">
+                <li>キャラクターを選ぶだけで始めやすい</li>
+                <li>ランキングや詳細画面で比較しやすい</li>
+                <li>複数戦略を組み合わせて運用できる</li>
+                <li>取引所FXベースで透明性を意識しやすい</li>
+              </ul>
+            </section>
 
-  <ul>
-    <li><strong>価格の透明性が高い</strong><br>
-      価格は東京金融取引所で統一されており、どの証券会社を通じても同じ価格で取引が行われます。</li>
-
-    <li><strong>信頼性のあるスワップポイント</strong><br>
-      スワップポイントも取引所が提示するため、急に変動するような心配が少なく、安定性があります。</li>
-
-    <li><strong>税制面でもメリットあり</strong><br>
-      くりっく365で得た利益は、申告分離課税（20.315%）が適用され、他の店頭FXと同様の税制優遇を受けられます。</li>
-  </ul>
-
-  <p>店頭FXと違い、価格やスワップポイントが明確で「公正な取引」を重視したい方に適した制度設計です。</p>
-</section>
-
-<section class="anime-item">
-  <h2 class="anime-title">戦略（キャラクター）を選ぶ際の参考ポイント</h2>
-  <ul>
-    <li>直近順位だけでなく「最大ドローダウン」や「勝率/損益比」などもチェックすると判断材料が増えます</li>
-    <li>通貨ペアは自分が取引を見られる時間帯やボラティリティに合うものを検討</li>
-    <li>同系統ばかりにならないよう、トレンド型とカウンター型を組み合わせる方法もあります</li>
-  </ul>
-  <p class="font_small">※上記は一般的な考え方の一例であり、特定の戦略を推奨するものではありません。</p>
-</section>
-
-
-<section class="anime-item" aria-labelledby="rvw-fujitomi">
-  <h2 class="anime-title" id="rvw-fujitomi">フジトミ証券（シストレセレクト365）</h2>
-
-  <h3 class="anime-title anime-title--mini">良かった点</h3>
-  <ul class="pros-list" role="list">
-    <li><span aria-hidden="true">✔</span><span>キャラクターを選ぶだけで自動売買が始められるため、<strong>FXの知識がなくても気軽にスタート</strong>できる。</span></li>
-    <li><span aria-hidden="true">✔</span><span>取引が自動で行われるため、<strong>寝ている間でもチャンスを逃しにくい</strong>。</span></li>
-    <li><span aria-hidden="true">✔</span><span><strong>くりっく365採用</strong>により、信頼性と透明性の高い取引環境で運用できる。</span></li>
-  </ul>
-
-  <h3 class="anime-title anime-title--mini">気になった点</h3>
-  <ul class="cons-list" role="list">
-    <li><span aria-hidden="true">✖</span><span>設定の自由度が低く、<strong>細かくカスタマイズしたい上級者には不向き</strong>。</span></li>
-  </ul>
-
-  <h3 class="anime-title anime-title--mini">レビュー｜まとめ</h3>
-  <p>
-    公開情報や使いやすさを整理し、筆者の個人視点でまとめました。  
-    フジトミ証券の「シストレセレクト365」は、<strong>キャラクターを選ぶだけで自動売買を始められる簡便さ</strong>が魅力です。  
-    くりっく365を採用しており、透明性のある公的取引制度のもとで安心して運用できます。  
-    一方で、細かい戦略設定や裁量トレードを行いたい人には自由度が物足りない面もありますが、  
-    総じて<strong>「手軽に自動売買を体験したい初心者〜ライト層」</strong>にぴったりのサービスだと感じました。
-  </p>
-
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100mt4u00od67" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100mt4u00od67" alt="フジトミ証券　シストレセレクト365" border="0" width="300" height="250"></a>
-
-  
-
-
- <!--誘導セッション-->
-           <section class="anime-item">
-          <h2 class="anime-title">FX一覧比較ページ</h2>
-       <p>👉 他のFXも比較したい方はこちら</p>
-
-     <a href="FX-syoukai.html" class="card-link">
-             <i class="fa-regular fa-handshake"></i>
-             <span>FX一覧比較ページリンク</span>
-             </a>
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意点</p>
+              <h3 class="kiji-info-card__title">軽い気持ちで始めるとズレやすいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>完全放置で利益が出るものではありません</li>
+                <li>ランキング上位でも将来の利益は保証されません</li>
+                <li>推奨証拠金を下回る運用はリスクが高くなります</li>
+                <li>通貨ペアは4種類で多くありません</li>
+              </ul>
+            </section>
+          </div>
         </section>
 
+        <section class="kiji-section" aria-labelledby="system-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">System</p>
+            <h2 class="kiji-section__title" id="system-title">シストレセレクト365の仕組み</h2>
+            <p class="kiji-section__text">
+              シストレセレクト365は、
+              <strong>キャラクターごとに用意された売買戦略から選んで稼働させるタイプ</strong>の自動売買です。
+              一からロジックを組む必要はなく、候補の中から比較して選べるのが分かりやすいところです。
+            </p>
+          </div>
 
-           <!--一覧card　FX-->
-<div id="fx-list"></div>
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">キャラクターを選んで始める</h3>
+              <ul class="kiji-bullet-list">
+                <li>複雑な設定をしなくてもスタートしやすい</li>
+                <li>戦略ごとの特徴を見ながら選べる</li>
+                <li>自動売買の入口としては分かりやすいです</li>
+              </ul>
+            </section>
 
-<script src="cards-FX.js"></script>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">ランキングで比較しやすい</h3>
+              <ul class="kiji-bullet-list">
+                <li>過去成績を一覧で見やすいです</li>
+                <li>どの戦略が動いているか把握しやすいです</li>
+                <li>候補を絞るときの入口として便利です</li>
+              </ul>
+            </section>
 
-      <section class="anime-item" aria-labelledby="review-entry-title">
-  <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">複数戦略の組み合わせもできる</h3>
+              <ul class="kiji-bullet-list">
+                <li>1つだけでなく分散して運用しやすいです</li>
+                <li>相場に合わせて入れ替えも考えやすいです</li>
+                <li>ただし管理の手間は増えます</li>
+              </ul>
+            </section>
 
-  <div class="review">
-    <a href="userreview.html" class="review-card">
-      <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-      <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
-    </a>
+            <section class="kiji-feature-card">
+  <span class="kiji-feature-card__num">04</span>
+  <h3 class="kiji-feature-card__title">戦略の選択肢が多く、組み合わせも考えやすい</h3>
+  <ul class="kiji-bullet-list">
+    <li>複数のキャラクターから選べます</li>
+    <li>4通貨ペアと組み合わせて比較できます</li>
+    <li>自分に合う型を探しやすいです</li>
+  </ul>
+</section>
+
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="click365-title">
+  <div class="kiji-section__head">
+    <p class="kiji-section__eyebrow">Click 365</p>
+    <h2 class="kiji-section__title" id="click365-title">くりっく365ベースの自動売買という点は安心材料になります</h2>
+    <p class="kiji-section__text">
+      シストレセレクト365は、キャラクターを選んで運用する分かりやすい仕組みですが、
+      <strong>ベースは東京金融取引所の「くりっく365」を利用した取引所FX</strong>です。
+      見た目はゲームのように選ぶだけに見えますが、
+      <strong>中身は透明性や公平性を重視した制度の上で動いている</strong>のが特徴です。
+    </p>
+  </div>
+
+  <div class="kiji-grid kiji-grid--2">
+
+    <section class="kiji-info-card">
+      <p class="kiji-info-card__eyebrow">くりっく365とは</p>
+      <h3 class="kiji-info-card__title">東京金融取引所が提供する取引所FXです</h3>
+      <p class="kiji-info-card__text">
+        「くりっく365」は、東京金融取引所が提供する取引所FX（外国為替証拠金取引）です。
+        証券会社などを通じて取引されますが、
+        <strong>価格はすべて取引所で一元的に決定される仕組み</strong>になっています。
+      </p>
+
+      <ul class="kiji-bullet-list">
+        <li><strong>価格の透明性が高い</strong><br>
+          価格は取引所で統一されており、どの証券会社を通じても同じ価格で取引されます。</li>
+
+        <li><strong>スワップポイントの信頼性</strong><br>
+          スワップも取引所が提示するため、急激な変動が起きにくく安定性があります。</li>
+
+        <li><strong>税制面のメリット</strong><br>
+          利益は申告分離課税（20.315%）の対象となり、他のFXと同様の税制で扱われます。</li>
+      </ul>
+    </section>
+
+    <section class="kiji-info-card kiji-info-card--soft">
+      <p class="kiji-info-card__eyebrow">このサービスの見方</p>
+      <h3 class="kiji-info-card__title">見た目よりも中身はしっかりしています</h3>
+
+      <ul class="kiji-bullet-list">
+        <li>キャラクターを選ぶだけなのでゲームのように見えます</li>
+        <li>しかし実際は取引所FXベースの仕組みで動いています</li>
+        <li>透明性や公平性を重視した環境で運用できます</li>
+        <li>ただし自動売買でもリスクはあり、資金管理は必要です</li>
+      </ul>
+
+      <p class="kiji-info-card__text">
+        「簡単そうだから」という理由だけで見るのではなく、
+        <strong>しっかりした制度の上で動く自動売買</strong>として理解しておくと、
+        他のFXサービスとの違いも整理しやすくなります。
+      </p>
+    </section>
+
   </div>
 </section>
 
-<!-- リスク注意書き -->
-<div class="anime-item" style="margin-top: 20px;">
-  <h2 class="anime-title">ご利用にあたっての注意事項</h2>
-  <p>
-    本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。FX（外国為替証拠金取引）は、元本保証のないリスクの高い金融商品です。相場変動等により損失が生じる場合があり、預け入れた証拠金を上回る損失が発生する可能性もあります。<br>
-    取引を開始する際は、契約締結前交付書面や商品説明書を十分にご確認の上、ご自身の判断と責任においてお取引ください。
-  </p>
 
 
-</div>
+        <section class="kiji-section" aria-labelledby="money-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Money & Risk</p>
+            <h2 class="kiji-section__title" id="money-title">資金の目安と推奨証拠金の考え方</h2>
+            <p class="kiji-section__text">
+              このサービスを軽く見すぎないために、
+              <strong>「いくら必要か」を最初に意識しておくことはかなり重要</strong>です。
+            </p>
+          </div>
 
-     <!-- メイン終了とサイドバー呼び出しのdivとフッター要素 -->
- </main>
-    </div>
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">目安</p>
+              <h3 class="kiji-info-card__title">15万円前後をひとつの目安に見ておきたいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>少額お試し感覚より、運用前提で見る方が自然です</li>
+                <li>推奨証拠金を用意できる人の方が無理が出にくいです</li>
+                <li>資金に余裕があるほど判断もしやすくなります</li>
+              </ul>
+            </section>
 
-    <!--フッターの呼び出し -->
- <div id="footer"></div>
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">注意</p>
+              <h3 class="kiji-info-card__title">推奨額を下回るとリスクは上がります</h3>
+              <ul class="kiji-bullet-list">
+                <li>必要証拠金だけで始めると余裕が薄くなります</li>
+                <li>含み損やドローダウンに耐えにくくなります</li>
+                <li>無理な運用はロスカットにつながりやすいです</li>
+              </ul>
+            </section>
+          </div>
 
-  <!--読み込みのスクリプト-->
+          <p class="kiji-section__text">
+            シストレセレクト365では、ストラテジーごとに推奨証拠金が表示されます。
+            取引前にはこの数字を確認し、
+            <strong>「始められるか」ではなく「余裕を持って続けられるか」</strong>で判断した方が安全です。
+          </p>
+
+          <p class="margin_min">
+            <small>
+              ※推奨証拠金はあくまで目安です。<br>
+              例として、ポンド/円で132,140円、ユーロ/円で121,540円と確認できるます。<br>
+              ただし、相場状況や選ぶ戦略によって変動するため、取引前には必ず最新の表示をご確認ください。
+            </small>
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="caution-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Caution</p>
+            <h2 class="kiji-section__title" id="caution-title">始めやすいですが、こういう点には注意が必要です</h2>
+            <p class="kiji-section__text">
+              シストレセレクト365は分かりやすく始めやすい一方で、
+              <strong>「選ぶだけだから安心」とは言えない部分</strong>もあります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">注意点</p>
+              <h3 class="kiji-info-card__title">過去成績だけで判断しない方がいいです</h3>
+              <ul class="kiji-bullet-list">
+                <li>ランキングは過去の結果にすぎません</li>
+                <li>その時の相場に合っていただけの可能性もあります</li>
+                <li>将来も同じように動く保証はありません</li>
+              </ul>
+            </section>
+
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">理解しておきたい点</p>
+              <h3 class="kiji-info-card__title">自分で見るべきポイントは残ります</h3>
+              <ul class="kiji-bullet-list">
+                <li>運用状況の確認は必要です</li>
+                <li>必要なら停止や入れ替えも考えます</li>
+                <li>完全放置前提で使うとズレやすいです</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              また、通貨ペアは多くなく、自由に細かく戦略を組みたい人には物足りない面があります。
+              ロジックを自分で深く作り込みたい人よりも、
+              <strong>「ある程度用意された戦略の中から選んで管理したい人」</strong>
+              に向いています。
+            </p>
+          </div>
+        </section>
+
+      
+
+        <section class="kiji-section" aria-labelledby="spec-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Spec</p>
+            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
+          </div>
+
+          <div class="kiji-table-wrap">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>サービス名</th>
+                  <td>シストレセレクト365</td>
+                </tr>
+                <tr>
+                  <th>主な立ち位置</th>
+                  <td>取引所FXベースで、選択型の自動売買を使いたい人向けのサービス</td>
+                </tr>
+                <tr>
+                  <th>向いている人</th>
+                  <td>資金管理を意識できる人 / 裁量の負担を減らしたい人 / 定期的に運用状況を確認できる人</td>
+                </tr>
+                <tr>
+                  <th>向いていない人</th>
+                  <td>少額お試し感覚の人 / 完全放置を想定している人 / 細かいロジックを作り込みたい人</td>
+                </tr>
+                <tr>
+                  <th>取扱通貨ペア</th>
+                  <td>米ドル/円・ユーロ/円・ポンド/円・豪ドル/円</td>
+                </tr>
+                <tr>
+                  <th>特徴</th>
+                  <td>キャラクター選択型 / ランキング比較 / 複数戦略運用 / 取引所FXベース</td>
+                </tr>
+                <tr>
+                  <th>利用料</th>
+                  <td>システム利用料 年間990円</td>
+                </tr>
+                <tr>
+                  <th>注意点</th>
+                  <td>過去成績は将来保証ではない / 推奨証拠金の確認が必要 / 完全放置向きではない</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="margin_min">
+            <small>※通貨ペア・利用条件・各種費用・サービス内容は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="step-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Step</p>
+            <h2 class="kiji-section__title" id="step-title">口座開設から利用開始までの流れ</h2>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>公式サイトから申し込む</strong>
+              <p>契約締結前交付書面などを確認し、申込フォームから必要事項を入力します。</p>
+            </li>
+            <li>
+              <strong>システム利用料の決済登録を行う</strong>
+              <p>シストレセレクト365の利用には、システム利用料の決済登録が必要です。</p>
+            </li>
+            <li>
+              <strong>ログイン後に入金する</strong>
+              <p>口座開設後はログインし、取引口座へ入金して準備を進めます。</p>
+            </li>
+            <li>
+              <strong>キャラクターを選んで取引を始める</strong>
+              <p>候補の戦略や推奨証拠金を確認し、自分の資金に合うものから始める方が無理が出にくいです。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section kiji-banner-zone" aria-label="シストレセレクト365公式サイト案内">
+          <div class="kiji-note-box">
+            <p class="kiji-banner-zone__text">
+              シストレセレクト365は、
+              <strong>取引所FXベースで自動売買を始めたい人向け</strong>のサービスです。
+              まずは公式サイトで、最新の推奨証拠金や利用条件、取引ルールを確認してみてください。
+            </p>
+            <div class="kiji-banner-zone__square">
+              <a href="https://h.accesstrade.net/sp/cc?rk=0100mt4u00od67" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer-when-downgrade">
+                <img src="https://h.accesstrade.net/sp/rr?rk=0100mt4u00od67" alt="フジトミ証券 シストレセレクト365" border="0" width="300" height="250" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="compare-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Compare</p>
+            <h2 class="kiji-section__title" id="compare-title">重視ポイント別の比較先</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a href="iNET.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">自動売買比較</span>
+              <strong class="kiji-link-card__title">アイネット証券を見る</strong>
+              <span class="kiji-link-card__text">より自動売買寄りの選択肢も見たい人向け</span>
+            </a>
+
+            <a href="matsui-FX.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">少額スタート重視</span>
+              <strong class="kiji-link-card__title">松井証券FXを見る</strong>
+              <span class="kiji-link-card__text">より小さい単位からFXを始めたい人向け</span>
+            </a>
+
+            <a href="Monex-FX.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">総合証券FX</span>
+              <strong class="kiji-link-card__title">マネックス証券 FX PLUSを見る</strong>
+              <span class="kiji-link-card__text">総合証券口座とまとめてFXを管理したい人向け</span>
+            </a>
+
+            <a href="FX-syoukai.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">一覧比較</span>
+              <strong class="kiji-link-card__title">FX一覧ページを見る</strong>
+              <span class="kiji-link-card__text">各FX口座をまとめて比較したい人向け</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                シストレセレクト365は初心者でも使えますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  使いやすいです。キャラクターを選ぶだけで始めやすい一方で、完全放置ではなく、資金管理と見直しは必要です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                どれくらいの資金を見ておけばいいですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  選ぶ戦略や相場状況によって変わりますが、目安としては15万円前後を見ておくと整理しやすいです。実際の取引前には必ず最新の推奨証拠金をご確認ください。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ランキング上位のキャラクターを選べば大丈夫ですか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  過去成績としては参考になりますが、将来の利益を保証するものではありません。最大ドローダウンや通貨ペアも見た方が判断しやすいです。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                放置前提でも使えますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  放置前提ではおすすめしにくいです。自動で売買は進みますが、相場や運用状況を確認し、必要なら停止や切り替えを考える前提で使う方が安全です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                どんな人には向いていませんか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  少額で軽く試したい人、運用状況をほとんど見ない人、細かい戦略を作り込みたい人には向きにくいです。
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              シストレセレクト365は、
+              <strong>取引所FXベースで始めやすい自動売買</strong>ですが、
+              実際には<strong>資金管理と定期的な見直しを前提に使うサービス</strong>です。
+            </p>
+            <ul class="kiji-bullet-list">
+              <li>キャラ選択で始めやすい</li>
+              <li>ランキングで比較しやすい</li>
+              <li>取引所FXベースで透明性を意識しやすい</li>
+              <li>目安として15万円前後の資金感を見ておきたい</li>
+              <li>完全放置を想定する人には向きにくい</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="kiji-cta">
+          <div class="kiji-cta__body">
+            <p class="kiji-cta__eyebrow">Official Site</p>
+            <h2 class="kiji-cta__title">始める前に、推奨証拠金や最新条件を公式で確認</h2>
+            <p class="kiji-cta__text">
+              推奨証拠金、利用料、取扱通貨ペア、取引ルールなどは変更される場合があります。
+              取引前に公式サイトで最新の条件を確認しておくと判断しやすいです。
+            </p>
+            <a href="https://h.accesstrade.net/sp/cc?rk=0100mt4u00od67"
+               class="kiji-btn kiji-btn--primary"
+               rel="nofollow noopener noreferrer"
+               referrerpolicy="no-referrer-when-downgrade">
+              シストレセレクト365の公式サイトを見る
+            </a>
+          </div>
+        </section>
+
+        <section class="anime-item" aria-labelledby="review-entry-title">
+          <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+          <div class="review">
+            <a href="userreview.html" class="review-card">
+              <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
+              <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="fx-list"></div>
+        <script src="cards-FX.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+          <ul class="kiji-bullet-list">
+            <li>本ページは情報提供を目的としており、特定の金融商品の勧誘を目的としたものではありません。</li>
+            <li>取扱通貨ペア・利用条件・各種費用・機能・キャンペーン内容は変更される場合があります。</li>
+            <li>最新情報は必ずシストレセレクト365の公式サイトでご確認ください。</li>
+            <li>FX（外国為替証拠金取引）は元本保証のない金融商品であり、相場変動等により損失が生じる場合があります。</li>
+            <li>預け入れた証拠金を上回る損失が生じる可能性があります。取引前に契約締結前交付書面や商品説明を十分ご確認ください。</li>
+            <li>自動売買であっても利益が保証されるわけではありません。運用状況の確認と資金管理が必要です。</li>
+          </ul>
+        </section>
+
+      </article>
+
+      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
-
 </body>
 </html>

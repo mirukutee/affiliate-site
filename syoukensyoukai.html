@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -720,59 +721,76 @@
 <script>
 (() => {
   const floatingNav = document.querySelector('.floating-page-nav');
-  const triggerSection = document.querySelector('.list-category-entry');
-
+  const stickyAnchor = document.querySelector('.list-sticky-anchor');
   const categoryDrawer = document.getElementById('category-drawer');
   const categoryOpenButton = document.querySelector('.floating-page-nav__button');
   const categoryCloseButton = document.querySelector('.category-drawer__close');
+  const pageHeader = document.getElementById('header');
 
   const HIGHLIGHT_CLASS = 'jump-highlight';
+  const BODY_LOCK_CLASS = 'category-drawer-open';
   let activeHighlightTarget = null;
   let activeHighlightTimer = null;
 
-  if (!floatingNav) return;
+  if (!floatingNav || !stickyAnchor) return;
 
-  const updateFloatingNav = () => {
-    if (!triggerSection) return;
-
-    const rect = triggerSection.getBoundingClientRect();
-
-    if (rect.bottom < 0) {
-      floatingNav.classList.add('is-visible');
-    } else {
-      floatingNav.classList.remove('is-visible');
-    }
+  const getHeaderOffset = () => {
+    const headerHeight = pageHeader ? pageHeader.getBoundingClientRect().height : 0;
+    const navHeight = floatingNav.getBoundingClientRect().height || 0;
+    return Math.max(88, Math.ceil(headerHeight + navHeight + 20));
   };
 
-  window.addEventListener('scroll', updateFloatingNav, { passive: true });
-  window.addEventListener('resize', updateFloatingNav);
-  updateFloatingNav();
+  const setNavVisible = (visible) => {
+    floatingNav.classList.toggle('is-visible', visible);
+  };
+
+  const updateFloatingNavFallback = () => {
+    const anchorTop = stickyAnchor.getBoundingClientRect().top;
+    setNavVisible(anchorTop <= getHeaderOffset());
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setNavVisible(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${getHeaderOffset()}px 0px 0px 0px`
+      }
+    );
+
+    observer.observe(stickyAnchor);
+    window.addEventListener('resize', () => {
+      observer.disconnect();
+      observer.observe(stickyAnchor);
+      updateFloatingNavFallback();
+    });
+  } else {
+    window.addEventListener('scroll', updateFloatingNavFallback, { passive: true });
+    window.addEventListener('resize', updateFloatingNavFallback);
+    updateFloatingNavFallback();
+  }
 
   const openDrawer = () => {
     if (!categoryDrawer || !categoryOpenButton) return;
-
     categoryDrawer.hidden = false;
     categoryOpenButton.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add(BODY_LOCK_CLASS);
   };
 
   const closeDrawer = () => {
     if (!categoryDrawer || !categoryOpenButton) return;
-
     categoryDrawer.hidden = true;
     categoryOpenButton.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    document.body.classList.remove(BODY_LOCK_CLASS);
   };
 
   if (categoryOpenButton) {
     categoryOpenButton.addEventListener('click', () => {
       const expanded = categoryOpenButton.getAttribute('aria-expanded') === 'true';
-
-      if (expanded) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
+      expanded ? closeDrawer() : openDrawer();
     });
   }
 
@@ -782,9 +800,7 @@
 
   if (categoryDrawer) {
     categoryDrawer.addEventListener('click', (e) => {
-      if (e.target === categoryDrawer) {
-        closeDrawer();
-      }
+      if (e.target === categoryDrawer) closeDrawer();
     });
   }
 
@@ -799,7 +815,6 @@
       activeHighlightTarget.classList.remove(HIGHLIGHT_CLASS);
       activeHighlightTarget = null;
     }
-
     if (activeHighlightTimer) {
       clearTimeout(activeHighlightTimer);
       activeHighlightTimer = null;
@@ -810,7 +825,6 @@
     if (!target) return;
 
     clearHighlight();
-
     activeHighlightTarget = target;
     target.classList.add(HIGHLIGHT_CLASS);
 
@@ -825,11 +839,29 @@
 
   const getTargetFromHash = (hash) => {
     if (!hash || hash === '#') return null;
-
     try {
       return document.querySelector(decodeURIComponent(hash));
     } catch (_) {
       return null;
+    }
+  };
+
+  const smoothJumpTo = (target, hash, shouldCloseDrawer = false) => {
+    if (!target) return;
+
+    const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+    window.scrollTo({ top, behavior: 'smooth' });
+
+    if (hash && location.hash !== hash) {
+      history.pushState(null, '', hash);
+    }
+
+    window.setTimeout(() => {
+      highlightTarget(target);
+    }, 220);
+
+    if (shouldCloseDrawer) {
+      closeDrawer();
     }
   };
 
@@ -843,33 +875,21 @@
     const target = getTargetFromHash(href);
     if (!target) return;
 
-    if (categoryDrawer && categoryDrawer.contains(link)) {
-      closeDrawer();
-    }
-
-    window.setTimeout(() => {
-      highlightTarget(target);
-    }, 140);
+    e.preventDefault();
+    smoothJumpTo(target, href, !!(categoryDrawer && categoryDrawer.contains(link)));
   });
 
   window.addEventListener('hashchange', () => {
     const target = getTargetFromHash(location.hash);
     if (!target) return;
-
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        highlightTarget(target);
-      });
-    });
+    smoothJumpTo(target, location.hash, false);
   });
 
   if (location.hash) {
     const initialTarget = getTargetFromHash(location.hash);
     if (initialTarget) {
       window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          highlightTarget(initialTarget);
-        });
+        smoothJumpTo(initialTarget, location.hash, false);
       });
     }
   }

@@ -457,114 +457,90 @@
 /* =========================
    floating page nav
 ========================= */
+.floating-page-nav[hidden] {
+  display: none !important;
+}
 
 .floating-page-nav {
   position: fixed;
   left: 50%;
-  top: calc(12px + env(safe-area-inset-top));
-  bottom: auto;
-  transform: translateX(-50%) translateY(-18px) scale(.98);
-  z-index: 9999;
+  top: calc(14px + env(safe-area-inset-top));
+  transform: translateX(-50%);
+  z-index: 10010;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px;
-  width: max-content;
+  width: auto;
   max-width: calc(100% - 24px);
-  border: 1px solid rgba(210, 220, 231, 0.96);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(214, 226, 238, 0.92);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(247,251,255,0.90) 100%);
   box-shadow:
-    0 10px 26px rgba(15, 35, 70, 0.14),
-    0 3px 10px rgba(15, 35, 70, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition:
-    transform .28s cubic-bezier(.22, .61, .36, 1),
-    opacity .22s ease,
-    box-shadow .22s ease;
-  opacity: 0;
-  pointer-events: none;
-  will-change: transform, opacity;
+    0 10px 30px rgba(20, 45, 90, 0.10),
+    0 2px 10px rgba(20, 45, 90, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .floating-page-nav.is-visible {
-  transform: translateX(-50%) translateY(0) scale(1);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.floating-page-nav:hover {
-  box-shadow:
-    0 14px 34px rgba(15, 35, 70, 0.16),
-    0 4px 14px rgba(15, 35, 70, 0.09);
+  display: flex;
 }
 
 .floating-page-nav__link,
 .floating-page-nav__button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 42px;
   padding: 0 1rem;
-  border: 1px solid #d5dfeb;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
-  color: #23415f;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset;
-  transition:
-    transform .16s ease,
-    background-color .16s ease,
-    border-color .16s ease,
-    box-shadow .16s ease,
-    color .16s ease;
-}
-
-.floating-page-nav__button {
-  cursor: pointer;
+  border: 1px solid #d5e1ec;
+  border-radius: 13px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  color: var(--list-primary);
   font: inherit;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 2px 8px rgba(20, 45, 90, 0.05);
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background-color .18s ease,
+    color .18s ease;
 }
 
 .floating-page-nav__link:hover,
 .floating-page-nav__button:hover,
 .floating-page-nav__link:focus-visible,
 .floating-page-nav__button:focus-visible {
-  background: linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
-  border-color: #b8cee3;
-  color: #153a63;
-  box-shadow:
-    0 0 0 3px rgba(6, 83, 166, 0.08),
-    0 4px 12px rgba(20, 45, 90, 0.08);
   transform: translateY(-1px);
+  border-color: #bdd2e7;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 8px 18px rgba(20, 45, 90, 0.10);
 }
 
 .floating-page-nav__link:active,
 .floating-page-nav__button:active {
-  transform: translateY(0) scale(.98);
-  background: linear-gradient(180deg, #eef5fd 0%, #f8fbff 100%);
-  box-shadow: inset 0 2px 4px rgba(20, 45, 90, 0.08);
-}
-
-.floating-page-nav__button[aria-expanded="true"] {
-  border-color: #a9c6e3;
-  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 100%);
-  color: #0f4f93;
+  transform: translateY(0);
   box-shadow:
-    0 0 0 3px rgba(6, 83, 166, 0.08),
-    0 4px 12px rgba(20, 45, 90, 0.08);
+    inset 0 2px 4px rgba(20, 45, 90, 0.08),
+    0 1px 4px rgba(20, 45, 90, 0.05);
 }
 
-/* 上に固定されるので小さい擬似影 */
-.floating-page-nav::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+.floating-page-nav__button--top {
+  min-width: auto;
 }
 
 @media (max-width: 640px) {
@@ -574,16 +550,80 @@
     top: calc(10px + env(safe-area-inset-top));
     width: calc(100% - 20px);
     max-width: 420px;
-    border-radius: 18px;
+    border-radius: 16px;
+    box-shadow:
+      0 8px 24px rgba(20, 45, 90, 0.11),
+      0 2px 8px rgba(20, 45, 90, 0.05);
   }
 
   .floating-page-nav__link,
   .floating-page-nav__button {
     flex: 1;
     min-height: 40px;
-    padding: 0 .55rem;
-    font-size: .86rem;
+    padding: 0 .75rem;
+    font-size: .88rem;
+    border-radius: 12px;
   }
+}
+
+/* =========================
+   minimal floating page nav
+========================= */
+
+.floating-page-nav[hidden] {
+  display: none !important;
+}
+
+.floating-page-nav {
+  position: fixed;
+  left: 50%;
+  top: calc(14px + env(safe-area-inset-top));
+  transform: translateX(-50%);
+  z-index: 10010;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: auto;
+  max-width: calc(100% - 24px);
+  border: 1px solid rgba(210, 223, 236, 0.96);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 28px rgba(20, 45, 90, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.floating-page-nav.is-visible {
+  display: flex;
+}
+
+.floating-page-nav__link,
+.floating-page-nav__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 .95rem;
+  border: 1px solid #d1ddeb;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--list-primary);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.floating-page-nav__link:hover,
+.floating-page-nav__button:hover,
+.floating-page-nav__link:focus-visible,
+.floating-page-nav__button:focus-visible {
+  transform: translateY(-1px);
+  background: #f7fbff;
+  border-color: #b9cde2;
+  box-shadow: var(--list-shadow-soft);
 }
 
 /* =========================
@@ -975,3 +1015,4 @@ body.category-drawer-open {
 
 #floating-nav-trigger{scroll-margin-top:0;}
 .floating-page-nav__button--top{min-width:auto;}
+

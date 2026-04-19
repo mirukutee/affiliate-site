@@ -681,23 +681,31 @@
         </p>
       </section>
     </main>
-  </div>
 
-  <!-- スクロール後に出す固定バー -->
-  <nav class="floating-page-nav" aria-label="ページ操作メニュー">
-    <a href="index.html" class="floating-page-nav__link">サイトホーム</a>
-    <button type="button" class="floating-page-nav__button floating-page-nav__button--top" data-scroll-top>当ページトップ</button>
-    <button type="button" class="floating-page-nav__button" aria-expanded="false" aria-controls="category-drawer">
+      <!-- 一定スクロール後に出る固定ボタン -->
+  <div class="floating-page-nav" id="floating-page-nav" hidden aria-label="ページ補助ナビ">
+    <button
+      type="button"
+      class="floating-page-nav__button"
+      id="open-category-drawer"
+      aria-haspopup="dialog"
+      aria-controls="category-drawer"
+      aria-expanded="false"
+    >
       カテゴリ
     </button>
-  </nav>
+
+    <a href="#top" class="floating-page-nav__link floating-page-nav__button--top">
+      トップ
+    </a>
+  </div>
 
   <!-- カテゴリドロワー -->
   <div class="category-drawer" id="category-drawer" hidden>
-    <div class="category-drawer__inner">
+    <div class="category-drawer__inner" role="dialog" aria-modal="true" aria-labelledby="category-drawer-title">
       <div class="category-drawer__head">
-        <p class="category-drawer__title">カテゴリ</p>
-        <button type="button" class="category-drawer__close" aria-label="カテゴリを閉じる">×</button>
+        <p class="category-drawer__title" id="category-drawer-title">カテゴリから移動</p>
+        <button type="button" class="category-drawer__close" id="close-category-drawer" aria-label="閉じる">×</button>
       </div>
 
       <div class="category-drawer__grid">
@@ -712,215 +720,115 @@
       </div>
     </div>
   </div>
+  </div>
+
+
+
 
   <div id="footer"></div>
 
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
 
-<script>
-(() => {
-  const floatingNav = document.querySelector('.floating-page-nav');
-  const trigger = document.getElementById('floating-nav-trigger') || document.querySelector('.list-sticky-anchor');
-  const categoryDrawer = document.getElementById('category-drawer');
-  const categoryOpenButton = document.querySelector('.floating-page-nav__button[aria-controls="category-drawer"]');
-  const categoryCloseButton = document.querySelector('.category-drawer__close');
-  const topButton = document.querySelector('[data-scroll-top]');
-  const pageHeader = document.getElementById('header');
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const floatingNav = document.getElementById("floating-page-nav");
+      const trigger = document.getElementById("floating-nav-trigger");
 
-  const HIGHLIGHT_CLASS = 'jump-highlight';
-  const BODY_LOCK_CLASS = 'category-drawer-open';
+      const drawer = document.getElementById("category-drawer");
+      const openBtn = document.getElementById("open-category-drawer");
+      const closeBtn = document.getElementById("close-category-drawer");
+      const drawerLinks = drawer ? drawer.querySelectorAll('a[href^="#"]') : [];
 
-  let activeHighlightTarget = null;
-  let activeHighlightTimer = null;
-  let ticking = false;
+      if (!floatingNav || !trigger) return;
 
-  if (!floatingNav) return;
+      const showNav = () => {
+        floatingNav.hidden = false;
+        floatingNav.classList.add("is-visible");
+      };
 
-  const getHeaderHeight = () => Math.ceil(pageHeader?.getBoundingClientRect().height || 0);
-  const getNavHeight = () => Math.ceil(floatingNav.getBoundingClientRect().height || 0);
+      const hideNav = () => {
+        floatingNav.hidden = true;
+        floatingNav.classList.remove("is-visible");
+      };
 
-  const getHeaderOffset = () => {
-    const extra = window.innerWidth <= 640 ? 14 : 20;
-    return Math.max(88, getHeaderHeight() + getNavHeight() + extra);
-  };
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            hideNav();
+          } else {
+            showNav();
+          }
+        },
+        {
+          root: null,
+          threshold: 0
+        }
+      );
 
-  const getFloatingThreshold = () => {
-    if (window.innerWidth >= 1024) return 140;
-    if (window.innerWidth >= 641) return 80;
-    return 24;
-  };
+      observer.observe(trigger);
 
-  const clampTop = (value) => Math.max(0, Math.round(value));
+      function openDrawer() {
+        if (!drawer) return;
+        drawer.hidden = false;
+        document.body.classList.add("category-drawer-open");
+        openBtn.setAttribute("aria-expanded", "true");
+      }
 
-  const setNavVisible = (visible) => {
-    floatingNav.classList.toggle('is-visible', visible);
-  };
+      function closeDrawer() {
+        if (!drawer) return;
+        drawer.hidden = true;
+        document.body.classList.remove("category-drawer-open");
+        openBtn.setAttribute("aria-expanded", "false");
+      }
 
-  const updateFloatingNav = () => {
-    ticking = false;
-    if (!trigger) {
-      setNavVisible(window.scrollY > 180);
-      return;
-    }
+      if (openBtn) {
+        openBtn.addEventListener("click", openDrawer);
+      }
 
-    const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
-    const visible = window.scrollY + getHeaderHeight() + getFloatingThreshold() >= triggerTop;
-    setNavVisible(visible);
-  };
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeDrawer);
+      }
 
-  const requestFloatingNavUpdate = () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(updateFloatingNav);
-  };
+      if (drawer) {
+        drawer.addEventListener("click", function (e) {
+          if (e.target === drawer) {
+            closeDrawer();
+          }
+        });
+      }
 
-  const openDrawer = () => {
-    if (!categoryDrawer || !categoryOpenButton) return;
-    categoryDrawer.hidden = false;
-    categoryOpenButton.setAttribute('aria-expanded', 'true');
-    document.body.classList.add(BODY_LOCK_CLASS);
-  };
-
-  const closeDrawer = () => {
-    if (!categoryDrawer || !categoryOpenButton) return;
-    categoryDrawer.hidden = true;
-    categoryOpenButton.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove(BODY_LOCK_CLASS);
-  };
-
-  const clearHighlight = () => {
-    if (activeHighlightTarget) {
-      activeHighlightTarget.classList.remove(HIGHLIGHT_CLASS);
-      activeHighlightTarget = null;
-    }
-
-    if (activeHighlightTimer) {
-      window.clearTimeout(activeHighlightTimer);
-      activeHighlightTimer = null;
-    }
-  };
-
-  const highlightTarget = (target) => {
-    if (!target) return;
-
-    clearHighlight();
-    activeHighlightTarget = target;
-    target.classList.add(HIGHLIGHT_CLASS);
-
-    activeHighlightTimer = window.setTimeout(() => {
-      activeHighlightTarget?.classList.remove(HIGHLIGHT_CLASS);
-      activeHighlightTarget = null;
-      activeHighlightTimer = null;
-    }, 2600);
-  };
-
-  const getTargetFromHash = (hash) => {
-    if (!hash || hash === '#') return null;
-
-    try {
-      return document.querySelector(decodeURIComponent(hash));
-    } catch (_) {
-      return null;
-    }
-  };
-
-  const scrollToTarget = (target) => {
-    if (!target) return;
-    const absoluteTop = target.getBoundingClientRect().top + window.scrollY;
-    const adjustedTop = clampTop(absoluteTop - getHeaderOffset());
-    window.scrollTo({ top: adjustedTop, behavior: 'smooth' });
-  };
-
-  const smoothJumpTo = (target, hash, shouldCloseDrawer = false) => {
-    if (!target) return;
-
-    scrollToTarget(target);
-
-    if (hash && window.location.hash !== hash) {
-      history.pushState(null, '', hash);
-    }
-
-    window.setTimeout(() => highlightTarget(target), 220);
-
-    if (shouldCloseDrawer) {
-      closeDrawer();
-    }
-  };
-
-  if (categoryOpenButton) {
-    categoryOpenButton.addEventListener('click', () => {
-      const expanded = categoryOpenButton.getAttribute('aria-expanded') === 'true';
-      expanded ? closeDrawer() : openDrawer();
-    });
-  }
-
-  categoryCloseButton?.addEventListener('click', closeDrawer);
-
-  categoryDrawer?.addEventListener('click', (e) => {
-    if (e.target === categoryDrawer) closeDrawer();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && categoryDrawer && !categoryDrawer.hidden) {
-      closeDrawer();
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href^="#"]');
-    if (!link) return;
-
-    const href = link.getAttribute('href');
-    if (!href || href === '#') return;
-
-    const target = getTargetFromHash(href);
-    if (!target) return;
-
-    e.preventDefault();
-    smoothJumpTo(target, href, !!(categoryDrawer && categoryDrawer.contains(link)));
-  });
-
-  topButton?.addEventListener('click', () => {
-    closeDrawer();
-    const topTarget = document.getElementById('top') || document.getElementById('main');
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    history.replaceState(null, '', '#top');
-
-    window.setTimeout(() => {
-      if (topTarget) highlightTarget(topTarget);
-    }, 220);
-  });
-
-  window.addEventListener('hashchange', () => {
-    const target = getTargetFromHash(window.location.hash);
-    if (!target) return;
-
-    scrollToTarget(target);
-    window.setTimeout(() => highlightTarget(target), 220);
-  });
-
-  window.addEventListener('scroll', requestFloatingNavUpdate, { passive: true });
-  window.addEventListener('resize', requestFloatingNavUpdate);
-  window.addEventListener('load', requestFloatingNavUpdate);
-
-  window.setTimeout(requestFloatingNavUpdate, 80);
-  window.setTimeout(requestFloatingNavUpdate, 300);
-  window.setTimeout(requestFloatingNavUpdate, 800);
-
-  if (window.location.hash) {
-    const initialTarget = getTargetFromHash(window.location.hash);
-    if (initialTarget) {
-      window.requestAnimationFrame(() => {
-        scrollToTarget(initialTarget);
-        window.setTimeout(() => highlightTarget(initialTarget), 220);
+      drawerLinks.forEach(link => {
+        link.addEventListener("click", function () {
+          closeDrawer();
+        });
       });
-    }
-  }
 
-  requestFloatingNavUpdate();
-})();
-</script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && drawer && !drawer.hidden) {
+          closeDrawer();
+        }
+      });
+
+      // ページ内リンクの軽いハイライト
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function () {
+          const href = this.getAttribute("href");
+          if (!href || href === "#") return;
+
+          const target = document.querySelector(href);
+          if (!target) return;
+
+          setTimeout(() => {
+            target.classList.add("jump-highlight");
+            setTimeout(() => {
+              target.classList.remove("jump-highlight");
+            }, 2800);
+          }, 250);
+        });
+      });
+    });
+  </script>
+  
 </body>
 </html>

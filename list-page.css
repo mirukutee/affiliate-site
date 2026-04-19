@@ -587,6 +587,103 @@
 }
 
 /* =========================
+   category drawer
+========================= */
+
+.category-drawer[hidden] {
+  display: none !important;
+}
+
+.category-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  background: rgba(15, 27, 43, 0.34);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.category-drawer__inner {
+  position: fixed;
+  left: 50%;
+  top: calc(76px + env(safe-area-inset-top));
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 24px));
+  padding: 18px 18px calc(18px + env(safe-area-inset-bottom));
+  border: 1px solid rgba(214, 225, 237, 0.98);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 22px 54px rgba(15, 35, 70, 0.18);
+}
+
+.category-drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.category-drawer__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1f3550;
+}
+
+.category-drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d5dfeb;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  color: #23415f;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.category-drawer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.category-drawer__grid a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: .85rem .75rem;
+  border: 1px solid #cfddeb;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--list-primary);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.35;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.category-drawer__grid a:hover,
+.category-drawer__grid a:focus-visible,
+.category-drawer__close:hover,
+.category-drawer__close:focus-visible {
+  transform: translateY(-1px);
+  background: #f7fbff;
+  border-color: #b9cde2;
+  box-shadow: var(--list-shadow-soft);
+}
+
+body.category-drawer-open {
+  overflow: hidden;
+}
+
+/* =========================
    FAQ
 ========================= */
 

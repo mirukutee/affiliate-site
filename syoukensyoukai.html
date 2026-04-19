@@ -721,8 +721,7 @@
 <script>
 (() => {
   const floatingNav = document.querySelector('.floating-page-nav');
-  const stickyAnchor = document.getElementById('floating-nav-trigger') || document.querySelector('.list-sticky-anchor');
-  const categoryEntry = document.querySelector('.list-category-entry');
+  const trigger = document.getElementById('floating-nav-trigger') || document.querySelector('.list-sticky-anchor');
   const categoryDrawer = document.getElementById('category-drawer');
   const categoryOpenButton = document.querySelector('.floating-page-nav__button[aria-controls="category-drawer"]');
   const categoryCloseButton = document.querySelector('.category-drawer__close');
@@ -734,20 +733,16 @@
 
   let activeHighlightTarget = null;
   let activeHighlightTimer = null;
-  let observer = null;
+  let ticking = false;
 
-  if (!floatingNav || (!stickyAnchor && !categoryEntry)) return;
+  if (!floatingNav) return;
 
-  const getHeaderHeight = () => {
-    return pageHeader ? Math.ceil(pageHeader.getBoundingClientRect().height) : 0;
-  };
-
-  const getNavHeight = () => {
-    return Math.ceil(floatingNav.getBoundingClientRect().height || 0);
-  };
+  const getHeaderHeight = () => Math.ceil(pageHeader?.getBoundingClientRect().height || 0);
+  const getNavHeight = () => Math.ceil(floatingNav.getBoundingClientRect().height || 0);
 
   const getHeaderOffset = () => {
-    return Math.max(88, getHeaderHeight() + getNavHeight() + 20);
+    const extra = window.innerWidth <= 640 ? 14 : 20;
+    return Math.max(88, getHeaderHeight() + getNavHeight() + extra);
   };
 
   const getFloatingThreshold = () => {
@@ -762,45 +757,23 @@
     floatingNav.classList.toggle('is-visible', visible);
   };
 
-  const getTriggerTarget = () => {
-    return stickyAnchor || categoryEntry;
+  const updateFloatingNav = () => {
+    ticking = false;
+    if (!trigger) {
+      setNavVisible(window.scrollY > 180);
+      return;
+    }
+
+    const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
+    const visible = window.scrollY + getHeaderHeight() + getFloatingThreshold() >= triggerTop;
+    setNavVisible(visible);
   };
 
-  const setupObserver = () => {
-    const target = getTriggerTarget();
-    if (!target) return;
-
-    if (observer) observer.disconnect();
-
-    const rootMarginTop = -(getHeaderHeight() + getFloatingThreshold());
-
-    observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (!entry) return;
-
-        // 起点が画面上部の判定ラインを超えたら表示
-        setNavVisible(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: `${rootMarginTop}px 0px 0px 0px`
-      }
-    );
-
-    observer.observe(target);
+  const requestFloatingNavUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateFloatingNav);
   };
-
-  window.addEventListener('load', setupObserver);
-  window.addEventListener('resize', setupObserver);
-
-  // ローカル確認や include.js 遅延挿入対策
-  window.setTimeout(setupObserver, 100);
-  window.setTimeout(setupObserver, 400);
-  window.setTimeout(setupObserver, 900);
-
-  setupObserver();
 
   const openDrawer = () => {
     if (!categoryDrawer || !categoryOpenButton) return;
@@ -816,29 +789,6 @@
     document.body.classList.remove(BODY_LOCK_CLASS);
   };
 
-  if (categoryOpenButton) {
-    categoryOpenButton.addEventListener('click', () => {
-      const expanded = categoryOpenButton.getAttribute('aria-expanded') === 'true';
-      expanded ? closeDrawer() : openDrawer();
-    });
-  }
-
-  if (categoryCloseButton) {
-    categoryCloseButton.addEventListener('click', closeDrawer);
-  }
-
-  if (categoryDrawer) {
-    categoryDrawer.addEventListener('click', (e) => {
-      if (e.target === categoryDrawer) closeDrawer();
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && categoryDrawer && !categoryDrawer.hidden) {
-      closeDrawer();
-    }
-  });
-
   const clearHighlight = () => {
     if (activeHighlightTarget) {
       activeHighlightTarget.classList.remove(HIGHLIGHT_CLASS);
@@ -846,7 +796,7 @@
     }
 
     if (activeHighlightTimer) {
-      clearTimeout(activeHighlightTimer);
+      window.clearTimeout(activeHighlightTimer);
       activeHighlightTimer = null;
     }
   };
@@ -859,10 +809,8 @@
     target.classList.add(HIGHLIGHT_CLASS);
 
     activeHighlightTimer = window.setTimeout(() => {
-      if (activeHighlightTarget) {
-        activeHighlightTarget.classList.remove(HIGHLIGHT_CLASS);
-        activeHighlightTarget = null;
-      }
+      activeHighlightTarget?.classList.remove(HIGHLIGHT_CLASS);
+      activeHighlightTarget = null;
       activeHighlightTimer = null;
     }, 2600);
   };
@@ -878,6 +826,7 @@
   };
 
   const scrollToTarget = (target) => {
+    if (!target) return;
     const absoluteTop = target.getBoundingClientRect().top + window.scrollY;
     const adjustedTop = clampTop(absoluteTop - getHeaderOffset());
     window.scrollTo({ top: adjustedTop, behavior: 'smooth' });
@@ -888,7 +837,7 @@
 
     scrollToTarget(target);
 
-    if (hash && location.hash !== hash) {
+    if (hash && window.location.hash !== hash) {
       history.pushState(null, '', hash);
     }
 
@@ -898,6 +847,25 @@
       closeDrawer();
     }
   };
+
+  if (categoryOpenButton) {
+    categoryOpenButton.addEventListener('click', () => {
+      const expanded = categoryOpenButton.getAttribute('aria-expanded') === 'true';
+      expanded ? closeDrawer() : openDrawer();
+    });
+  }
+
+  categoryCloseButton?.addEventListener('click', closeDrawer);
+
+  categoryDrawer?.addEventListener('click', (e) => {
+    if (e.target === categoryDrawer) closeDrawer();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && categoryDrawer && !categoryDrawer.hidden) {
+      closeDrawer();
+    }
+  });
 
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href^="#"]');
@@ -913,31 +881,36 @@
     smoothJumpTo(target, href, !!(categoryDrawer && categoryDrawer.contains(link)));
   });
 
-  if (topButton) {
-    topButton.addEventListener('click', () => {
-      closeDrawer();
-      const target = document.getElementById('top') || document.getElementById('main') || document.body;
+  topButton?.addEventListener('click', () => {
+    closeDrawer();
+    const topTarget = document.getElementById('top') || document.getElementById('main');
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      history.replaceState(null, '', '#top');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    history.replaceState(null, '', '#top');
 
-      window.setTimeout(() => {
-        if (target) highlightTarget(target);
-      }, 220);
-    });
-  }
+    window.setTimeout(() => {
+      if (topTarget) highlightTarget(topTarget);
+    }, 220);
+  });
 
   window.addEventListener('hashchange', () => {
-    const target = getTargetFromHash(location.hash);
+    const target = getTargetFromHash(window.location.hash);
     if (!target) return;
 
     scrollToTarget(target);
     window.setTimeout(() => highlightTarget(target), 220);
   });
 
-  if (location.hash) {
-    const initialTarget = getTargetFromHash(location.hash);
+  window.addEventListener('scroll', requestFloatingNavUpdate, { passive: true });
+  window.addEventListener('resize', requestFloatingNavUpdate);
+  window.addEventListener('load', requestFloatingNavUpdate);
 
+  window.setTimeout(requestFloatingNavUpdate, 80);
+  window.setTimeout(requestFloatingNavUpdate, 300);
+  window.setTimeout(requestFloatingNavUpdate, 800);
+
+  if (window.location.hash) {
+    const initialTarget = getTargetFromHash(window.location.hash);
     if (initialTarget) {
       window.requestAnimationFrame(() => {
         scrollToTarget(initialTarget);
@@ -945,6 +918,8 @@
       });
     }
   }
+
+  requestFloatingNavUpdate();
 })();
 </script>
 </body>

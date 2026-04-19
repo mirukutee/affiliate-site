@@ -734,7 +734,7 @@
 
   let activeHighlightTarget = null;
   let activeHighlightTimer = null;
-  let ticking = false;
+  let observer = null;
 
   if (!floatingNav || (!stickyAnchor && !categoryEntry)) return;
 
@@ -751,9 +751,9 @@
   };
 
   const getFloatingThreshold = () => {
-    if (window.innerWidth >= 1024) return 140; // PC
-    if (window.innerWidth >= 641) return 80;   // tablet
-    return 24;                                 // mobile
+    if (window.innerWidth >= 1024) return 140;
+    if (window.innerWidth >= 641) return 80;
+    return 24;
   };
 
   const clampTop = (value) => Math.max(0, Math.round(value));
@@ -762,36 +762,45 @@
     floatingNav.classList.toggle('is-visible', visible);
   };
 
-  const updateFloatingNav = () => {
-    const triggerBase = stickyAnchor || categoryEntry;
-
-    if (!triggerBase) {
-      ticking = false;
-      return;
-    }
-
-    const triggerTop = triggerBase.getBoundingClientRect().top;
-    const showPoint = getHeaderHeight() + getFloatingThreshold();
-
-    setNavVisible(triggerTop <= showPoint);
-    ticking = false;
+  const getTriggerTarget = () => {
+    return stickyAnchor || categoryEntry;
   };
 
-  const requestFloatingNavUpdate = () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(updateFloatingNav);
+  const setupObserver = () => {
+    const target = getTriggerTarget();
+    if (!target) return;
+
+    if (observer) observer.disconnect();
+
+    const rootMarginTop = -(getHeaderHeight() + getFloatingThreshold());
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (!entry) return;
+
+        // 起点が画面上部の判定ラインを超えたら表示
+        setNavVisible(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: `${rootMarginTop}px 0px 0px 0px`
+      }
+    );
+
+    observer.observe(target);
   };
 
-  window.addEventListener('scroll', requestFloatingNavUpdate, { passive: true });
-  window.addEventListener('resize', requestFloatingNavUpdate);
-  window.addEventListener('load', requestFloatingNavUpdate);
+  window.addEventListener('load', setupObserver);
+  window.addEventListener('resize', setupObserver);
 
-  // include.jsでheaderが後から入る場合の保険
-  window.setTimeout(requestFloatingNavUpdate, 150);
-  window.setTimeout(requestFloatingNavUpdate, 500);
+  // ローカル確認や include.js 遅延挿入対策
+  window.setTimeout(setupObserver, 100);
+  window.setTimeout(setupObserver, 400);
+  window.setTimeout(setupObserver, 900);
 
-  requestFloatingNavUpdate();
+  setupObserver();
 
   const openDrawer = () => {
     if (!categoryDrawer || !categoryOpenButton) return;

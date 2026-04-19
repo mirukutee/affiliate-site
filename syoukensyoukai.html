@@ -720,7 +720,7 @@
 <script>
 (() => {
   const floatingNav = document.querySelector('.floating-page-nav');
-  const stickyAnchor = document.querySelector('.list-sticky-anchor');
+  const triggerSection = document.querySelector('.list-category-entry');
 
   const categoryDrawer = document.getElementById('category-drawer');
   const categoryOpenButton = document.querySelector('.floating-page-nav__button');
@@ -732,19 +732,12 @@
 
   if (!floatingNav) return;
 
-  const MOBILE_WIDTH = 640;
-
   const updateFloatingNav = () => {
-    if (window.innerWidth <= MOBILE_WIDTH) {
-      floatingNav.classList.add('is-visible');
-      return;
-    }
+    if (!triggerSection) return;
 
-    if (!stickyAnchor) return;
+    const rect = triggerSection.getBoundingClientRect();
 
-    const anchorTop = stickyAnchor.getBoundingClientRect().top;
-
-    if (anchorTop < 0) {
+    if (rect.bottom < 0) {
       floatingNav.classList.add('is-visible');
     } else {
       floatingNav.classList.remove('is-visible');

@@ -1583,3 +1583,38 @@ body.category-drawer-open {
     font-size: 0.72rem;
   }
 }
+
+
+
+
+.tier-reason-box {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid #d7e3ef;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.tier-reason-box__title {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: #223548;
+}
+
+.tier-reason-box__list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.tier-reason-box__list li {
+  margin-bottom: 8px;
+  line-height: 1.75;
+  color: #4a5b6a;
+}
+
+.list-service-card__reason {
+  margin: 0;
+  line-height: 1.8;
+  color: #526272;
+}

@@ -1,0 +1,384 @@
+/* =========================================
+   remaketop-pro.css
+   投資顧問サイト風の上品な配色・カード強化
+   既存CSSを壊さず .remaketop-sp 配下だけ調整
+   ========================================= */
+
+.remaketop-sp {
+  --remaketop-pro-bg: #f4f7fb;
+  --remaketop-pro-surface: #ffffff;
+  --remaketop-pro-surface-soft: #f8fbff;
+  --remaketop-pro-border: #d7e1eb;
+  --remaketop-pro-border-strong: #bccbda;
+
+  --remaketop-pro-text: #1f2f41;
+  --remaketop-pro-text-soft: #526274;
+  --remaketop-pro-text-faint: #6f7f90;
+
+  --remaketop-pro-navy: #163a63;
+  --remaketop-pro-blue: #1f5d99;
+  --remaketop-pro-blue-soft: #edf5fd;
+  --remaketop-pro-gold: #b08a3c;
+  --remaketop-pro-gold-soft: #fbf6ea;
+
+  --remaketop-pro-shadow-sm: 0 4px 12px rgba(17, 39, 68, 0.06);
+  --remaketop-pro-shadow-md: 0 10px 24px rgba(17, 39, 68, 0.08);
+  --remaketop-pro-shadow-lg: 0 16px 34px rgba(17, 39, 68, 0.11);
+
+  --remaketop-pro-radius-sm: 12px;
+  --remaketop-pro-radius-md: 16px;
+  --remaketop-pro-radius-lg: 20px;
+}
+
+/* =========================
+   全体の空気感
+   ========================= */
+.remaketop-sp {
+  color: var(--remaketop-pro-text);
+}
+
+.remaketop-sp .anime-item,
+.remaketop-sp .top-card,
+.remaketop-sp .top-nav-card,
+.remaketop-sp .top-pick__box,
+.remaketop-sp .faq-item,
+.remaketop-sp .card,
+.remaketop-sp .top-proof,
+.remaketop-sp .top-cta-band {
+  background: var(--remaketop-pro-surface);
+  border-color: var(--remaketop-pro-border);
+  box-shadow: var(--remaketop-pro-shadow-sm);
+}
+
+.remaketop-sp .top-section__title,
+.remaketop-sp .anime-title,
+.remaketop-sp .top-nav-title,
+.remaketop-sp .top-sub-title,
+.remaketop-sp .top-pick-group__title,
+.remaketop-sp .top-card__title,
+.remaketop-sp .top-cta-band__title {
+  color: var(--remaketop-pro-text);
+}
+
+/* =========================
+   Hero
+   ========================= */
+.remaketop-sp.remaketop-pro-theme .top-hero,
+.remaketop-sp .remaketop-pro-hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d8e2ec;
+  border-radius: var(--remaketop-pro-radius-lg);
+  background:
+    linear-gradient(135deg, rgba(22,58,99,0.05) 0%, rgba(31,93,153,0.02) 35%, rgba(255,255,255,1) 100%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: var(--remaketop-pro-shadow-md);
+}
+
+.remaketop-sp.remaketop-pro-theme .top-hero::before,
+.remaketop-sp .remaketop-pro-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--remaketop-pro-navy), var(--remaketop-pro-blue), var(--remaketop-pro-gold));
+  opacity: 0.95;
+}
+
+.remaketop-sp .top-hero__eyebrow {
+  border: 1px solid #c7d7e8;
+  background: linear-gradient(180deg, #f5faff 0%, #edf5fd 100%);
+  color: var(--remaketop-pro-blue);
+  font-weight: 800;
+}
+
+.remaketop-sp .top-hero__title {
+  color: var(--remaketop-pro-text);
+  font-weight: 800;
+}
+
+.remaketop-sp .top-hero__lead {
+  color: #32465a;
+}
+
+.remaketop-sp .top-hero__actions .top-button--primary {
+  background: linear-gradient(180deg, var(--remaketop-pro-blue) 0%, var(--remaketop-pro-navy) 100%);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(22,58,99,0.18);
+}
+
+.remaketop-sp .top-hero__actions .top-button--primary:hover,
+.remaketop-sp .top-hero__actions .top-button--primary:focus-visible {
+  background: linear-gradient(180deg, #1a548a 0%, #122f50 100%);
+}
+
+.remaketop-sp .top-hero__actions .top-button--secondary {
+  background: #fff;
+  border: 1px solid #cad8e7;
+  color: var(--remaketop-pro-navy);
+}
+
+/* =========================
+   Trust cards
+   ========================= */
+.remaketop-sp .top-hero__trust-item {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+  border: 1px solid #d8e3ee;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(17,39,68,0.05);
+}
+
+.remaketop-sp .top-hero__trust-label {
+  background: var(--remaketop-pro-blue-soft);
+  color: var(--remaketop-pro-blue);
+  border: 1px solid #cfe0f1;
+  font-weight: 800;
+}
+
+.remaketop-sp .top-hero__trust-text {
+  color: #32465a;
+}
+
+/* =========================
+   proof
+   ========================= */
+.remaketop-sp .top-proof {
+  border: 1px solid #d7e2ee;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: var(--remaketop-pro-shadow-sm);
+}
+
+.remaketop-sp .top-proof__text {
+  color: var(--remaketop-pro-text);
+}
+
+.remaketop-sp .top-proof__text strong {
+  color: var(--remaketop-pro-navy);
+}
+
+/* =========================
+   nav cards
+   ========================= */
+.remaketop-sp .top-nav-card {
+  border: 1px solid #d8e1ea;
+  border-radius: var(--remaketop-pro-radius-sm);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  box-shadow: 0 4px 14px rgba(17,39,68,0.04);
+}
+
+.remaketop-sp .top-nav-card strong {
+  color: var(--remaketop-pro-text);
+  font-weight: 800;
+}
+
+.remaketop-sp .top-nav-card span {
+  color: var(--remaketop-pro-text-faint);
+}
+
+.remaketop-sp .top-nav-card:hover,
+.remaketop-sp .top-nav-card:focus-visible {
+  border-color: #b9cde0;
+  box-shadow: 0 10px 22px rgba(17,39,68,0.09);
+  transform: translateY(-2px);
+}
+
+/* ジャンル別ニュアンス色 */
+.remaketop-sp .top-nav-card[href*="sec-securities"] {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+}
+
+.remaketop-sp .top-nav-card[href*="sec-fx"] {
+  background: linear-gradient(180deg, #ffffff 0%, #f3fbf7 100%);
+}
+
+.remaketop-sp .top-nav-card[href*="sec-crypto"] {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f4ff 100%);
+}
+
+.remaketop-sp .top-nav-card[href*="ryoukinn"] {
+  background: linear-gradient(180deg, #ffffff 0%, #fbf8ef 100%);
+}
+
+/* =========================
+   比較方針・説明カード
+   ========================= */
+.remaketop-sp .top-site-brief,
+.remaketop-sp .top-editorial-policy,
+.remaketop-sp .top-diagnosis-section {
+  border-radius: var(--remaketop-pro-radius-md);
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+}
+
+.remaketop-sp .top-site-brief__lead,
+.remaketop-sp .top-editorial-policy__lead,
+.remaketop-sp .top-diagnosis-lead,
+.remaketop-sp .top-category-intro,
+.remaketop-sp .top-shortcuts-lead,
+.remaketop-sp .top-pick-group__lead {
+  color: var(--remaketop-pro-text-soft);
+}
+
+.remaketop-sp .top-card.top-card--panel {
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid #dbe4ee;
+  box-shadow: 0 5px 16px rgba(17,39,68,0.05);
+}
+
+.remaketop-sp .top-badge {
+  border: 1px solid #d6e3ef;
+  background: #f1f7fd;
+  color: var(--remaketop-pro-blue);
+  font-weight: 800;
+}
+
+/* =========================
+   おすすめグループ
+   ========================= */
+.remaketop-sp .top-pick-group {
+  border: 1px solid #dce5ef;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+  box-shadow: var(--remaketop-pro-shadow-sm);
+}
+
+.remaketop-sp .top-pick__box {
+  border-radius: 14px;
+  border: 1px solid #d8e2ec;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  box-shadow: 0 5px 16px rgba(17,39,68,0.05);
+}
+
+.remaketop-sp .top-pick__box:hover,
+.remaketop-sp .top-pick__box:focus-visible {
+  border-color: #b9cbdd;
+  box-shadow: 0 12px 24px rgba(17,39,68,0.1);
+}
+
+.remaketop-sp .top-pick__title {
+  color: var(--remaketop-pro-text);
+  font-weight: 800;
+}
+
+.remaketop-sp .top-pick__tag {
+  border: 1px solid #d5e2ee;
+  background: #f3f8fd;
+  color: var(--remaketop-pro-blue);
+}
+
+.remaketop-sp .top-pick__points li {
+  color: var(--remaketop-pro-text-soft);
+}
+
+/* 総合 */
+.remaketop-sp .top-pick__box--total {
+  border-color: #e3d3a6;
+  background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
+  box-shadow: 0 8px 20px rgba(176,138,60,0.08);
+}
+
+.remaketop-sp .top-pick__rank--total {
+  color: var(--remaketop-pro-gold);
+}
+
+/* 初心者向け */
+.remaketop-sp .top-pick__box--beginner {
+  border-color: #bdd6ea;
+  background: linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+  box-shadow: 0 8px 18px rgba(31,93,153,0.08);
+}
+
+.remaketop-sp .top-pick__rank--beginner {
+  color: var(--remaketop-pro-blue);
+}
+
+/* =========================
+   一覧カード
+   ========================= */
+.remaketop-sp .card,
+.remaketop-sp .remaketop-pro-company-card {
+  border-radius: 12px;
+  border: 1px solid #d8e2ec;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  box-shadow: 0 4px 14px rgba(17,39,68,0.05);
+}
+
+.remaketop-sp .card span {
+  color: var(--remaketop-pro-text);
+  font-weight: 700;
+}
+
+.remaketop-sp .card small,
+.remaketop-sp .card .card-label {
+  border: 1px solid transparent;
+  font-weight: 800;
+}
+
+/* 証券 */
+.remaketop-sp #sec-securities .card small,
+.remaketop-sp #sec-securities .card .card-label {
+  background: #eff6ff;
+  color: #1f5d99;
+  border-color: #d7e6f7;
+}
+
+/* FX */
+.remaketop-sp #sec-fx .card small,
+.remaketop-sp #sec-fx .card .card-label {
+  background: #eef9f4;
+  color: #247055;
+  border-color: #d6ecdf;
+}
+
+/* 仮想通貨 */
+.remaketop-sp #sec-crypto .card small,
+.remaketop-sp #sec-crypto .card .card-label {
+  background: #f4f0ff;
+  color: #7044ab;
+  border-color: #e2d8f8;
+}
+
+/* =========================
+   FAQ
+   ========================= */
+.remaketop-sp .faq-item {
+  border: 1px solid #d8e2ec;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  box-shadow: 0 4px 14px rgba(17,39,68,0.04);
+}
+
+.remaketop-sp .faq-item summary {
+  background: transparent;
+}
+
+.remaketop-sp .faq-item summary span {
+  color: var(--remaketop-pro-text);
+  font-weight: 700;
+}
+
+.remaketop-sp .faq-answer {
+  color: var(--remaketop-pro-text-soft);
+}
+
+/* =========================
+   最下部CTA
+   ========================= */
+.remaketop-sp .top-cta-band {
+  border-radius: var(--remaketop-pro-radius-md);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid #d8e2ec;
+  box-shadow: var(--remaketop-pro-shadow-sm);
+}
+
+/* =========================
+   focus
+   ========================= */
+.remaketop-sp a:focus-visible,
+.remaketop-sp button:focus-visible,
+.remaketop-sp details:focus-visible,
+.remaketop-sp summary:focus-visible {
+  outline: 2px solid rgba(31,93,153,0.34);
+  outline-offset: 3px;
+}

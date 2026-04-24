@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="top-index.css" />
   <link rel="stylesheet" href="remaketop-sp.css">
  <link rel="stylesheet" href="remaketop-pro.css">
+ <link rel="stylesheet" href="remaketop-menu.css">
 
 
 
@@ -420,9 +421,9 @@
 
    
 
-<section class="top-section anime-item remaketop-picks" id="top-shortcuts" aria-labelledby="top-shortcuts-title">
+<section class="top-section anime-item remaketop-picks" id="top-picks" aria-labelledby="top-picks-title">
   <div class="top-section__head">
-    <h2 class="top-section__title" id="top-shortcuts-title">管理人が選んだジャンル別おすすめ</h2>
+<h2 class="top-section__title" id="top-picks-title">管理人が選んだジャンル別おすすめ</h2>
   </div>
 
   <p class="top-shortcuts-lead">
@@ -885,6 +886,47 @@
       </div>
     </section>
   </main>
+  <!-- remaketop floating menu -->
+<button class="remaketop-menu-button" type="button" aria-label="メニューを開く" aria-controls="remaketop-menu-panel" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="remaketop-menu-overlay" hidden></div>
+
+<nav class="remaketop-menu-panel" id="remaketop-menu-panel" aria-label="サイト内メニュー" hidden>
+  <div class="remaketop-menu-panel__head">
+    <p class="remaketop-menu-panel__title">メニュー</p>
+    <button class="remaketop-menu-close" type="button" aria-label="メニューを閉じる">×</button>
+  </div>
+
+  <div class="remaketop-menu-section">
+    <p class="remaketop-menu-section__title">このページ内で比較</p>
+    <a href="#top-categories" class="remaketop-menu-link">カテゴリから探す</a>
+    <a href="#sec-securities" class="remaketop-menu-link">証券会社一覧</a>
+    <a href="#sec-fx" class="remaketop-menu-link">FX一覧</a>
+    <a href="#sec-crypto" class="remaketop-menu-link">仮想通貨一覧</a>
+  </div>
+
+  <div class="remaketop-menu-section">
+    <p class="remaketop-menu-section__title">一覧ページ・比較表</p>
+    <a href="/syoukensyoukai.html#tier-table-section" class="remaketop-menu-link">証券ティア表</a>
+    <a href="/FX-syoukai.html#tier-table-section" class="remaketop-menu-link">FXティア表</a>
+    <a href="/service-ryoukinn-hikaku.html" class="remaketop-menu-link remaketop-menu-link--accent">料金で比較する</a>
+  </div>
+
+  <div class="remaketop-menu-section">
+    <p class="remaketop-menu-section__title">学ぶ・確認する</p>
+    <a href="/column.html" class="remaketop-menu-link">初心者向けコラム</a>
+    <a href="/userreview.html" class="remaketop-menu-link">体験レビュー</a>
+    <a href="/profile.html" class="remaketop-menu-link">運営者プロフィール</a>
+  </div>
+
+  <div class="remaketop-menu-section remaketop-menu-section--small">
+    <a href="#top" class="remaketop-menu-link remaketop-menu-link--top">ページ上部へ戻る</a>
+  </div>
+</nav>
 </div>
 
 <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">▲</a>
@@ -1165,6 +1207,58 @@
     current = 0;
     answers.length = 0;
     renderQuestion();
+  });
+})();
+</script>
+
+<script>
+(() => {
+  const button = document.querySelector('.remaketop-menu-button');
+  const panel = document.querySelector('.remaketop-menu-panel');
+  const overlay = document.querySelector('.remaketop-menu-overlay');
+  const closeButton = document.querySelector('.remaketop-menu-close');
+
+  if (!button || !panel || !overlay || !closeButton) return;
+
+  function openMenu() {
+    panel.hidden = false;
+    overlay.hidden = false;
+
+    requestAnimationFrame(() => {
+      panel.classList.add('is-open');
+      button.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('remaketop-menu-is-open');
+      closeButton.focus();
+    });
+  }
+
+  function closeMenu() {
+    panel.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('remaketop-menu-is-open');
+
+    window.setTimeout(() => {
+      panel.hidden = true;
+      overlay.hidden = true;
+    }, 220);
+
+    button.focus();
+  }
+
+  button.addEventListener('click', openMenu);
+  closeButton.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  panel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) {
+      closeMenu();
+    }
   });
 })();
 </script>

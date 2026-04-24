@@ -1,0 +1,196 @@
+/* =========================================
+   remaketop-menu.css
+   常時表示ハンバーガーメニュー
+   ========================================= */
+
+.remaketop-menu-button {
+  position: fixed;
+  top: 86px;
+  right: 16px;
+  z-index: 10020;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(190, 205, 220, 0.95);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 24px rgba(17, 39, 68, 0.14);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.remaketop-menu-button span {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: #163a63;
+  display: block;
+}
+
+.remaketop-menu-button:hover,
+.remaketop-menu-button:focus-visible {
+  background: #f8fbff;
+  outline: 2px solid rgba(31, 93, 153, 0.3);
+  outline-offset: 3px;
+}
+
+.remaketop-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  background: rgba(15, 31, 48, 0.28);
+  backdrop-filter: blur(2px);
+}
+
+.remaketop-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10030;
+  width: min(86vw, 340px);
+  height: 100vh;
+  padding: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border-left: 1px solid #d7e1eb;
+  box-shadow: -18px 0 38px rgba(17, 39, 68, 0.18);
+  overflow-y: auto;
+  transform: translateX(105%);
+  transition: transform 0.22s ease;
+}
+
+.remaketop-menu-panel.is-open {
+  transform: translateX(0);
+}
+
+.remaketop-menu-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #dce5ef;
+}
+
+.remaketop-menu-panel__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1f2f41;
+}
+
+.remaketop-menu-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d7e1eb;
+  border-radius: 12px;
+  background: #fff;
+  color: #1f2f41;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.remaketop-menu-section {
+  margin: 0 0 14px;
+  padding: 12px;
+  border: 1px solid #dce5ef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(17, 39, 68, 0.05);
+}
+
+.remaketop-menu-section--small {
+  padding: 10px;
+}
+
+.remaketop-menu-section__title {
+  margin: 0 0 8px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #526274;
+  letter-spacing: 0.04em;
+}
+
+.remaketop-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  color: #1f2f41;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.remaketop-menu-link::after {
+  content: "›";
+  color: #1f5d99;
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.remaketop-menu-link:hover,
+.remaketop-menu-link:focus-visible {
+  background: #edf5fd;
+  color: #163a63;
+  outline: none;
+}
+
+.remaketop-menu-link--accent {
+  background: #fbf6ea;
+  color: #8a6720;
+}
+
+.remaketop-menu-link--accent::after {
+  color: #b08a3c;
+}
+
+.remaketop-menu-link--top {
+  background: #f4f7fb;
+}
+
+body.remaketop-menu-is-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .remaketop-menu-button {
+    top: 74px;
+    right: 12px;
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+  }
+
+  .remaketop-menu-panel {
+    width: min(88vw, 330px);
+    padding: 14px;
+  }
+
+  .remaketop-menu-link {
+    min-height: 40px;
+    font-size: 0.84rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .remaketop-menu-button {
+    top: 92px;
+    right: 24px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remaketop-menu-panel {
+    transition: none;
+  }
+}

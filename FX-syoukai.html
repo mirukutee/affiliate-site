@@ -979,7 +979,8 @@
       </section>
     </main>
 
-   <div class="floating-page-nav" id="floating-page-nav" hidden aria-label="ページ補助ナビ">
+   <!-- 一定スクロール後に出る固定ボタン -->
+<div class="floating-page-nav" id="floating-page-nav" hidden aria-label="ページ補助ナビ">
   <button
     type="button"
     class="floating-page-nav__button floating-page-nav__menu"
@@ -993,37 +994,28 @@
     <span></span>
     <span></span>
   </button>
-
-  <a href="#top" class="floating-page-nav__link floating-page-nav__button--top">
-    トップ
-  </a>
 </div>
 
-      <a href="#top" class="floating-page-nav__link floating-page-nav__button--top">
-        トップ
-      </a>
+<!-- カテゴリドロワー ※floating-page-navの外に出す -->
+<div class="category-drawer" id="category-drawer" hidden>
+  <div class="category-drawer__inner" role="dialog" aria-modal="true" aria-labelledby="category-drawer-title">
+    <div class="category-drawer__head">
+      <p class="category-drawer__title" id="category-drawer-title">カテゴリから移動</p>
+      <button type="button" class="category-drawer__close" id="close-category-drawer" aria-label="閉じる">×</button>
     </div>
 
-    <div class="category-drawer" id="category-drawer" hidden>
-      <div class="category-drawer__inner" role="dialog" aria-modal="true" aria-labelledby="category-drawer-title">
-        <div class="category-drawer__head">
-          <p class="category-drawer__title" id="category-drawer-title">カテゴリから移動</p>
-          <button type="button" class="category-drawer__close" id="close-category-drawer" aria-label="閉じる">×</button>
-        </div>
-
-        <div class="category-drawer__grid">
-          <a href="#category-beginner">初心者向け</a>
-          <a href="#category-spread">スプレッド重視</a>
-          <a href="#category-auto">自動売買</a>
-          <a href="#category-scalp">スキャル向け</a>
-          <a href="#category-small">少額取引</a>
-          <a href="#category-tool">高機能ツール</a>
-          <a href="#category-mt">MT4 / MT5</a>
-          <a href="#category-swap">スワップ重視</a>
-        </div>
-      </div>
+    <div class="category-drawer__grid">
+      <a href="#category-beginner">初心者向け</a>
+      <a href="#category-spread">スプレッド重視</a>
+      <a href="#category-auto">自動売買</a>
+      <a href="#category-scalp">スキャル向け</a>
+      <a href="#category-small">少額取引</a>
+      <a href="#category-tool">高機能ツール</a>
+      <a href="#category-mt">MT4 / MT5</a>
+      <a href="#category-swap">スワップ重視</a>
     </div>
   </div>
+</div>
 
   <div id="footer"></div>
 

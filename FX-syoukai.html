@@ -979,17 +979,25 @@
       </section>
     </main>
 
-    <div class="floating-page-nav" id="floating-page-nav" hidden aria-label="ページ補助ナビ">
-      <button
-        type="button"
-        class="floating-page-nav__button"
-        id="open-category-drawer"
-        aria-haspopup="dialog"
-        aria-controls="category-drawer"
-        aria-expanded="false"
-      >
-        カテゴリ
-      </button>
+   <div class="floating-page-nav" id="floating-page-nav" hidden aria-label="ページ補助ナビ">
+  <button
+    type="button"
+    class="floating-page-nav__button floating-page-nav__menu"
+    id="open-category-drawer"
+    aria-label="メニューを開く"
+    aria-haspopup="dialog"
+    aria-controls="category-drawer"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <a href="#top" class="floating-page-nav__link floating-page-nav__button--top">
+    トップ
+  </a>
+</div>
 
       <a href="#top" class="floating-page-nav__link floating-page-nav__button--top">
         トップ
@@ -1022,103 +1030,111 @@
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const floatingNav = document.getElementById("floating-page-nav");
-      const trigger = document.getElementById("floating-nav-trigger");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const floatingNav = document.getElementById("floating-page-nav");
+    const trigger = document.getElementById("floating-nav-trigger");
 
-      const drawer = document.getElementById("category-drawer");
-      const openBtn = document.getElementById("open-category-drawer");
-      const closeBtn = document.getElementById("close-category-drawer");
-      const drawerLinks = drawer ? drawer.querySelectorAll('a[href^="#"]') : [];
+    const drawer = document.getElementById("category-drawer");
+    const openBtn = document.getElementById("open-category-drawer");
+    const closeBtn = document.getElementById("close-category-drawer");
+    const drawerLinks = drawer ? drawer.querySelectorAll('a[href^="#"]') : [];
 
-      if (!floatingNav || !trigger) return;
+    if (!floatingNav || !trigger) return;
 
-      const showNav = () => {
-        floatingNav.hidden = false;
-        floatingNav.classList.add("is-visible");
-      };
+    const showNav = () => {
+      floatingNav.hidden = false;
+      floatingNav.classList.add("is-visible");
+    };
 
-      const hideNav = () => {
-        floatingNav.hidden = true;
-        floatingNav.classList.remove("is-visible");
-      };
+    const hideNav = () => {
+      floatingNav.hidden = true;
+      floatingNav.classList.remove("is-visible");
+    };
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            hideNav();
-          } else {
-            showNav();
-          }
-        },
-        {
-          root: null,
-          threshold: 0
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          hideNav();
+        } else {
+          showNav();
         }
-      );
-
-      observer.observe(trigger);
-
-      function openDrawer() {
-        if (!drawer) return;
-        drawer.hidden = false;
-        document.body.classList.add("category-drawer-open");
-        openBtn.setAttribute("aria-expanded", "true");
+      },
+      {
+        root: null,
+        threshold: 0
       }
+    );
 
-      function closeDrawer() {
-        if (!drawer) return;
-        drawer.hidden = true;
-        document.body.classList.remove("category-drawer-open");
-        openBtn.setAttribute("aria-expanded", "false");
-      }
+    observer.observe(trigger);
 
-      if (openBtn) {
-        openBtn.addEventListener("click", openDrawer);
-      }
+    function openDrawer() {
+      if (!drawer || !openBtn) return;
+      drawer.hidden = false;
+      document.body.classList.add("category-drawer-open");
+      openBtn.setAttribute("aria-expanded", "true");
+      openBtn.setAttribute("aria-label", "メニューを閉じる");
+      openBtn.classList.add("is-open");
+    }
 
-      if (closeBtn) {
-        closeBtn.addEventListener("click", closeDrawer);
-      }
+    function closeDrawer() {
+      if (!drawer || !openBtn) return;
+      drawer.hidden = true;
+      document.body.classList.remove("category-drawer-open");
+      openBtn.setAttribute("aria-expanded", "false");
+      openBtn.setAttribute("aria-label", "メニューを開く");
+      openBtn.classList.remove("is-open");
+    }
 
-      if (drawer) {
-        drawer.addEventListener("click", function (e) {
-          if (e.target === drawer) {
-            closeDrawer();
-          }
-        });
-      }
-
-      drawerLinks.forEach(link => {
-        link.addEventListener("click", function () {
+    if (openBtn) {
+      openBtn.addEventListener("click", function () {
+        if (drawer && !drawer.hidden) {
           closeDrawer();
-        });
+        } else {
+          openDrawer();
+        }
       });
+    }
 
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && drawer && !drawer.hidden) {
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeDrawer);
+    }
+
+    if (drawer) {
+      drawer.addEventListener("click", function (e) {
+        if (e.target === drawer) {
           closeDrawer();
         }
       });
+    }
 
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener("click", function () {
-          const href = this.getAttribute("href");
-          if (!href || href === "#") return;
+    drawerLinks.forEach(link => {
+      link.addEventListener("click", closeDrawer);
+    });
 
-          const target = document.querySelector(href);
-          if (!target) return;
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drawer && !drawer.hidden) {
+        closeDrawer();
+      }
+    });
 
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", function () {
+        const href = this.getAttribute("href");
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        setTimeout(() => {
+          target.classList.add("jump-highlight");
           setTimeout(() => {
-            target.classList.add("jump-highlight");
-            setTimeout(() => {
-              target.classList.remove("jump-highlight");
-            }, 2800);
-          }, 250);
-        });
+            target.classList.remove("jump-highlight");
+          }, 2800);
+        }, 250);
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>

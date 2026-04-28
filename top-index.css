@@ -1216,3 +1216,19 @@
     gap:10px;
   }
 }
+
+/* おすすめカードの謎の縦線消し */
+.top-pick-grid,
+.top-pick-grid > div,
+.top-pick-grid .top-pick,
+.top-pick-grid .top-pick__box{
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* PC時の中央線も完全防止 */
+.top-pick-grid > *::before,
+.top-pick-grid > *::after{
+  display:none !important;
+  content:none !important;
+}

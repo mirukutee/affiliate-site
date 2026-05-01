@@ -1064,6 +1064,7 @@ body.category-drawer-open {
     top: calc(84px + env(safe-area-inset-top));
   }
 
+
   .floating-page-nav__menu,
   .floating-page-nav__button.floating-page-nav__menu {
     width: 56px;
@@ -1270,7 +1271,7 @@ body.category-drawer-open {
 
   .floating-page-nav {
     right: 12px;
-    top: calc(64px + env(safe-area-inset-top));
+    top: calc(84px + env(safe-area-inset-top));
     width: auto;
     max-width: none;
     padding: 5px;

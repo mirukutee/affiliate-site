@@ -5,7 +5,7 @@
 
 .remaketop-menu-button {
   position: fixed;
-  top: 86px;
+  top: 26px;
   right: 16px;
   z-index: 10020;
   width: 48px;
@@ -162,7 +162,7 @@ body.remaketop-menu-is-open {
 
 @media (max-width: 768px) {
   .remaketop-menu-button {
-    top: 74px;
+    top: 26px;
     right: 12px;
     width: 46px;
     height: 46px;
@@ -182,7 +182,7 @@ body.remaketop-menu-is-open {
 
 @media (min-width: 1024px) {
   .remaketop-menu-button {
-    top: 92px;
+    top: 26px;
     right: 24px;
     width: 46px;
     height: 46px;

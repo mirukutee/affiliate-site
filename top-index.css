@@ -1233,6 +1233,3 @@
   content:none !important;
 }
 
-.remaketop-menu-button {
-  top: calc(26px + env(safe-area-inset-top));
-}

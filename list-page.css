@@ -1304,7 +1304,7 @@ body.category-drawer-open {
   }
 
   .category-drawer__inner {
-    top: calc(62px + env(safe-area-inset-top));
+    top: calc(84px  + env(safe-area-inset-top));
     width: calc(100% - 20px);
     padding: 16px 14px calc(16px + env(safe-area-inset-bottom));
     border-radius: 20px;

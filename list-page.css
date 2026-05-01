@@ -726,7 +726,7 @@
 .floating-page-nav {
   position: fixed;
   right: 18px;
-  top: calc(76px + env(safe-area-inset-top));
+  top: calc(96px + env(safe-area-inset-top));
   left: auto;
   transform: none;
   z-index: 10010;
@@ -1061,7 +1061,7 @@ body.category-drawer-open {
 @media (min-width: 1024px) {
   .floating-page-nav {
     right: 22px;
-    top: calc(84px + env(safe-area-inset-top));
+    top: calc(96px + env(safe-area-inset-top));
   }
 
 
@@ -1271,7 +1271,7 @@ body.category-drawer-open {
 
   .floating-page-nav {
     right: 12px;
-    top: calc(84px + env(safe-area-inset-top));
+    top: calc(96px + env(safe-area-inset-top));
     width: auto;
     max-width: none;
     padding: 5px;

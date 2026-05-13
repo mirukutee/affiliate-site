@@ -21,7 +21,7 @@
     "@type": "CollectionPage",
     "name": "投資コラム・解説記事一覧",
     "url": "https://tousiportal.jp/column.html",
-    "dateModified": "2026-03-26"
+    "dateModified": "2026-05-12"
   }
   </script>
 
@@ -56,6 +56,7 @@
   <link rel="stylesheet" href="table.css" />
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="diagnosis.css" />
+  <link rel="stylesheet" href="column-remake.css" />
 
   <!-- Column dedicated CSS -->
   <link rel="stylesheet" href="column-page.css" />
@@ -81,33 +82,35 @@
         </ol>
       </nav>
 
-      <section class="clm-hero">
-        <div class="clm-hero__inner">
-          <p class="clm-hero__eyebrow">Investment Columns</p>
-          <h1 class="clm-hero__title">投資コラム・解説記事一覧</h1>
-          <p class="clm-hero__lead">
-            投資初心者〜中級者向けに、当サイトのコラムや解説記事をカテゴリ別に整理しています。
-            入口記事から基礎、投資手法、商品、比較記事まで、目的に合わせて読みやすく探せる構成です。
-          </p>
+     <section class="columnremake-hero" id="top">
+  <div class="columnremake-hero-inner">
+    <p class="columnremake-eyebrow">Investment Learning Hub</p>
 
-          <div class="clm-hero__note">
-            <strong>最初に読む順番：</strong>
-            初心者の入口 → 投資の基礎 → 投資手法 → 投資商品 → 比較・選び方
-          </div>
-          <br>
-    <h3 class="anime-title anime-title--mini">カテゴリ</h3>
-          <nav class="clm-jump" aria-label="カテゴリジャンプ">
-            <a href="#sec-start">初心者の入口</a>
-            <a href="#sec-basic">投資の基礎</a>
-            <a href="#sec-method">投資手法</a>
-            <a href="#sec-product">投資商品</a>
-            <a href="#sec-compare">比較・選び方</a>
-            <a href="#sec-FX">FXの基礎</a>
-            <a href="#sec-review">体験レビュー</a>
-            <a href="#sec-kiso">基礎知識</a>
-          </nav>
-        </div>
-      </section>
+    <h1 class="columnremake-hero-title">投資コラム・解説記事一覧</h1>
+
+    <p class="columnremake-hero-lead">
+      株・FX・仮想通貨・税金・用語解説まで、初心者〜中級者が必要な記事を探しやすいように整理した金融学習ハブです。
+    </p>
+
+    <div class="columnremake-reading-order" aria-label="最初に読むおすすめ順">
+      <span class="columnremake-reading-order__label">最初に読む順番</span>
+      <p class="columnremake-reading-order__text">
+        初心者の入口 → 投資の基礎 → 投資手法 → 投資商品 → 比較・選び方 → 用語・基礎知識
+      </p>
+    </div>
+
+    <nav class="columnremake-hero-menu" aria-label="カテゴリジャンプ">
+      <a class="columnremake-hero-menu-link" href="#sec-start"><span>初心者の入口</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-basic"><span>投資の基礎</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-method"><span>投資手法</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-product"><span>投資商品</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-compare"><span>比較・選び方</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-FX"><span>FXの基礎</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-review"><span>体験レビュー</span></a>
+      <a class="columnremake-hero-menu-link" href="#sec-kiso"><span>用語・基礎知識</span></a>
+    </nav>
+  </div>
+</section>
 
       <section class="clm-featured" aria-labelledby="clm-featured-title">
         <div class="clm-section-head">
@@ -724,39 +727,97 @@
 
       <section class="clm-kiso" id="sec-kiso" aria-labelledby="sec-kiso-title">
         <div class="clm-section-head">
-          <p class="clm-section-head__eyebrow">Knowledge</p>
-          <h2 class="clm-section-head__title" id="sec-kiso-title">初心者向けの基礎知識解説ページ一覧</h2>
+          <p class="clm-section-head__eyebrow">Knowledge Dictionary</p>
+          <h2 class="clm-section-head__title" id="sec-kiso-title">株・FX・仮想通貨の用語・基礎知識辞典</h2>
           <p class="clm-section-head__text">
-            取引で見かける用語や基本知識を短時間で確認できるページです。
-            必要なときにすぐ見返しやすいように、軽量なリンク一覧として整理しています。
+            記事を読んでいて分からない言葉や、取引前に確認したい基本知識をジャンル別に整理しています。
+            株・FX・仮想通貨・税金の知識を、必要なときにすぐ見返せる辞典ページとして使えます。
           </p>
         </div>
 
-        <div class="clm-kiso__grid">
-          <a href="kabukaisetu.html" class="clm-kiso__link">
-            <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
-            <span>株取引の基礎知識</span>
-          </a>
+        <div class="clm-kiso-groups" aria-label="ジャンル別の基礎知識リンク">
+          <section class="clm-kiso-group" aria-labelledby="clm-kiso-stock-title">
+            <div class="clm-kiso-group__head">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              <div>
+                <h3 class="clm-kiso-group__title" id="clm-kiso-stock-title">株・証券の基礎知識</h3>
+                <p class="clm-kiso-group__text">株式投資でよく出る用語や、国内株・海外株の違いを確認できます。</p>
+              </div>
+            </div>
 
-          <a href="syouken-hikakukaisetu.html" class="clm-kiso__link">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <span>国内株と海外株の違い</span>
-          </a>
+            <div class="clm-kiso__grid">
+              <a href="kabukaisetu.html" class="clm-kiso__link">
+                <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
+                <span>株取引の基礎知識・用語一覧</span>
+              </a>
 
-          <a href="FX-kaisetu.html" class="clm-kiso__link">
-            <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
-            <span>FX初心者向け用語解説</span>
-          </a>
+              <a href="kabu-chart-mikata.html" class="clm-kiso__link">
+                <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                <span>株のチャートの見方を初心者向けに解説</span>
+              </a>
 
-          <a href="kasoutuukakaisetu.html" class="clm-kiso__link">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <span>仮想通貨の基礎知識</span>
-          </a>
+               <a href="syouken-hikakukaisetu.html" class="clm-kiso__link">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <span>国内株と海外株の違い</span>
+              </a>
+            </div>
+          </section>
 
-          <a href="zeikinn.html" class="clm-kiso__link">
-            <i class="fa-solid fa-book" aria-hidden="true"></i>
-            <span>株・FX・仮想通貨の税金の違いと確定申告</span>
-          </a>
+          <section class="clm-kiso-group" aria-labelledby="clm-kiso-fx-title">
+            <div class="clm-kiso-group__head">
+              <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+              <div>
+                <h3 class="clm-kiso-group__title" id="clm-kiso-fx-title">FXの基礎知識</h3>
+                <p class="clm-kiso-group__text">pips・スプレッド・ロットなど、FX記事を読む前に押さえたい用語を整理しています。</p>
+              </div>
+            </div>
+
+            <div class="clm-kiso__grid">
+              <a href="FX-kaisetu.html" class="clm-kiso__link">
+                <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
+                <span>FX初心者向け用語解説</span>
+              </a>
+
+              <a href="fx-yougo.html" class="clm-kiso__link">
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                <span>FX用語を初心者向けに解説</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="clm-kiso-group" aria-labelledby="clm-kiso-crypto-title">
+            <div class="clm-kiso-group__head">
+              <i class="fa-solid fa-coins" aria-hidden="true"></i>
+              <div>
+                <h3 class="clm-kiso-group__title" id="clm-kiso-crypto-title">仮想通貨の基礎知識</h3>
+                <p class="clm-kiso-group__text">取引所・ウォレット・税金など、暗号資産を調べる前に知っておきたい基礎をまとめています。</p>
+              </div>
+            </div>
+
+            <div class="clm-kiso__grid">
+              <a href="kasoutuukakaisetu.html" class="clm-kiso__link">
+                <i class="fa-solid fa-bitcoin-sign" aria-hidden="true"></i>
+                <span>仮想通貨の基礎知識</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="clm-kiso-group" aria-labelledby="clm-kiso-tax-title">
+            <div class="clm-kiso-group__head">
+              <i class="fa-solid fa-file-invoice-yen" aria-hidden="true"></i>
+              <div>
+                <h3 class="clm-kiso-group__title" id="clm-kiso-tax-title">税金・確定申告の基礎知識</h3>
+                <p class="clm-kiso-group__text">株・FX・仮想通貨で利益が出たときに確認したい税金の違いを整理しています。</p>
+              </div>
+            </div>
+
+            <div class="clm-kiso__grid">
+              <a href="zeikinn.html" class="clm-kiso__link">
+                <i class="fa-solid fa-book" aria-hidden="true"></i>
+                <span>株・FX・仮想通貨の税金の違いと確定申告</span>
+              </a>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -775,5 +836,61 @@
 
   <script src="include.js" defer></script>
   <script src="sidebar.js" defer></script>
+
+  <button
+  class="columnremake-menu-button"
+  type="button"
+  aria-label="コラムメニューを開く"
+  aria-controls="columnremake-menu-panel"
+  aria-expanded="false">
+  <span class="columnremake-menu-button__line" aria-hidden="true"></span>
+  <span class="columnremake-menu-button__line" aria-hidden="true"></span>
+  <span class="columnremake-menu-button__line" aria-hidden="true"></span>
+</button>
+
+<div class="columnremake-menu-overlay" data-columnremake-menu-overlay hidden></div>
+
+<aside
+  class="columnremake-menu-panel"
+  id="columnremake-menu-panel"
+  aria-label="コラムナビゲーション"
+  hidden>
+  <div class="columnremake-menu-panel__head">
+    <p class="columnremake-menu-panel__title">コラムメニュー</p>
+    <button class="columnremake-menu-close" type="button" aria-label="メニューを閉じる">×</button>
+  </div>
+
+  <nav class="columnremake-menu-panel__body" aria-label="コラム内メニュー">
+    <section class="columnremake-menu-section">
+      <h2 class="columnremake-menu-section__title">コラム内で探す</h2>
+      <a class="columnremake-menu-link" href="#clm-featured-title">まず読むおすすめ</a>
+      <a class="columnremake-menu-link" href="#sec-start">初心者の入口</a>
+      <a class="columnremake-menu-link" href="#sec-basic">投資の基礎</a>
+      <a class="columnremake-menu-link" href="#sec-method">投資手法</a>
+      <a class="columnremake-menu-link" href="#sec-product">投資商品</a>
+      <a class="columnremake-menu-link" href="#sec-compare">比較・選び方</a>
+      <a class="columnremake-menu-link" href="#sec-FX">FXの基礎</a>
+      <a class="columnremake-menu-link" href="#sec-review">体験レビュー</a>
+      <a class="columnremake-menu-link" href="#sec-kiso">用語・基礎知識</a>
+    </section>
+
+    <section class="columnremake-menu-section">
+      <h2 class="columnremake-menu-section__title">比較ページへ</h2>
+      <a class="columnremake-menu-link" href="/syoukensyoukai.html">証券口座一覧</a>
+      <a class="columnremake-menu-link" href="/FX-syoukai.html">FX口座一覧</a>
+      <a class="columnremake-menu-link" href="/kasoutuuka-itiran.html">仮想通貨一覧</a>
+    </section>
+
+    <section class="columnremake-menu-section">
+      <h2 class="columnremake-menu-section__title">その他</h2>
+      <a class="columnremake-menu-link" href="/userreview.html">体験レビュー</a>
+      <a class="columnremake-menu-link" href="/profile.html">運営者情報</a>
+      <a class="columnremake-menu-link" href="#top">ページ上部へ戻る</a>
+    </section>
+  </nav>
+</aside>
+
+<script src="column-remake.js" defer></script>
+
 </body>
 </html>

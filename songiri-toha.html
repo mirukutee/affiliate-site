@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="canonical" href="https://tousiportal.jp/songiri-toha.html" />
+
+  <title>損切りとは？初心者向けに考え方・判断材料・リスク管理を解説</title>
+  <meta name="description" content="損切りとは、損失が大きくなりすぎる前に売却して損失を確定する考え方です。初心者向けに、損切りが必要と言われる理由、感情で判断する危険性、チャート・資金管理・ルールで考える判断材料をやさしく解説します。" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="損切りとは？初心者向けに考え方・判断材料・リスク管理を解説" />
+  <meta property="og:description" content="損切りを感情ではなく、ルールと資金管理で考えるための初心者向け解説。戻るかもしれない・ナンピンしたい場面で確認したい判断材料を整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/songiri-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/songiri-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="損切りとは？初心者向けに考え方を解説" />
+  <meta name="twitter:description" content="損切りを感情ではなく、ルール・判断材料・資金管理で考えるための初心者向け解説です。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/songiri-toha.webp" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="amphtml" href="amp.html" />
+
+
+
+  <style>
+    /* スマホ表示の横崩れ防止：記事ページ専用の安全補正 */
+    .kiji-page,
+    .kiji-page *{
+      box-sizing: border-box;
+    }
+
+    .kiji-page .container,
+    .kiji-page #main,
+    .kiji-page .kiji-main,
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer{
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page .kiji-article img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+    }
+
+    .kiji-page .kiji-table-wrap{
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .kiji-page .kiji-table-wrap table{
+      min-width: 680px;
+    }
+
+    .kiji-page .breadcrumb{
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .kiji-page .kiji-title,
+    .kiji-page .kiji-section__title,
+    .kiji-page .kiji-info-card__title,
+    .kiji-page .kiji-feature-card__title,
+    .kiji-page .kiji-link-card__title,
+    .kiji-page p,
+    .kiji-page li,
+    .kiji-page td,
+    .kiji-page th{
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .kiji-page .review-card{
+      max-width: 100%;
+    }
+
+    @media (max-width: 640px){
+      .kiji-page .container{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .kiji-page #main,
+      .kiji-page .kiji-main{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .kiji-page .kiji-article{
+        gap: 16px;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer{
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .kiji-page .kiji-tags li{
+        max-width: 100%;
+      }
+
+      .kiji-page .kiji-step-list li{
+        padding: 14px 14px 14px 52px;
+      }
+
+      .kiji-page .kiji-grid,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-compare-box{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"ホーム",
+        "item":"https://tousiportal.jp/"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"記事",
+        "item":"https://tousiportal.jp/column.html"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "name":"損切りとは？初心者向けに考え方・判断材料・リスク管理を解説",
+        "item":"https://tousiportal.jp/songiri-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"損切りとは？初心者向けに考え方・判断材料・リスク管理を解説",
+    "description":"損切りとは、損失が大きくなりすぎる前に売却して損失を確定する考え方です。初心者向けに、損切りが必要と言われる理由、感情で判断する危険性、チャート・資金管理・ルールで考える判断材料をやさしく解説します。",
+    "mainEntityOfPage":"https://tousiportal.jp/songiri-toha.html",
+    "author":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"投資ポータル"
+    },
+    "datePublished":"2026-05-27",
+    "dateModified":"2026-05-27"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"損切りとは何ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"損切りとは、損失が出ている投資を売却して損失を確定することです。大きな損失を避け、資金を守るためのリスク管理として使われます。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"損切りは必ずした方がよいですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"損切りが必ず正解とは限りません。長期投資、短期売買、投資目的、資金管理によって考え方は変わります。大切なのは、感情ではなく事前に決めたルールで判断することです。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"初心者が損切りできない理由は何ですか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"戻るかもしれない、損を確定したくない、平均単価を下げたいという心理が原因になることがあります。特に投資額やロットが大きすぎると、冷静な判断が難しくなります。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"損切りの判断材料には何がありますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"最初に決めた損失ライン、サポートラインや直近安値の割り込み、移動平均線やトレンドの変化、業績悪化、資金管理ルールなどが判断材料になります。"
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"ナンピンと損切りはどう違いますか？",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"ナンピンは、価格が下がったときに追加購入して平均取得単価を下げる方法です。計画的に行う場合もありますが、感情的に繰り返すと損失が大きくなる可能性があります。損切りは損失拡大を防ぐために決済する考え方です。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item" aria-current="page">損切りとは？初心者向けに考え方を解説</li>
+        </ul>
+      </nav>
+
+      <!-- H1は記事ヒーロー内に集約 -->
+      <article class="kiji-article">
+        <section class="kiji-hero kiji-hero--single">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Risk Management</p>
+              <h1 class="kiji-title">損切りとは？初心者向けに考え方・判断材料・リスク管理を解説</h1>
+              <p class="kiji-lead">
+                損切りは、単に「負けを認めること」ではありません。<br>
+                投資を続けるために、損失が大きくなりすぎる前に資金を守る考え方です。
+                この記事では、損切りを感情論ではなく、ルール・判断材料・資金管理の視点から初心者向けに整理します。
+              </p>
+              <ul class="kiji-tags">
+                <li>初心者向け</li>
+                <li>リスク管理</li>
+                <li>損切り</li>
+                <li>資金管理</li>
+                <li>感情ではなくルール</li>
+              </ul>
+              <div class="kiji-hero__actions">
+                <a href="#rule" class="kiji-btn kiji-btn--primary">判断材料を見る</a>
+                <a href="#faq-title" class="kiji-btn kiji-btn--ghost">FAQを見る</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Overview</p>
+            <h2 class="kiji-section__title">損切りとは？損失を小さいうちに確定する考え方</h2>
+          </div>
+
+          <img src="sonota/songiri-toha.webp" alt="損切りとは何かを初心者向けに整理した教材画像" width="1200" height="600" loading="lazy" decoding="async">
+
+          <p class="kiji-section__text">
+            損切りとは、損失が出ている投資を売却して、損失を確定させることです。<br>
+            たとえば、買った株や通貨が下がったときに、「これ以上損失が広がる前に一度売る」という判断が損切りにあたります。
+          </p>
+
+          <p class="kiji-section__text">
+            初心者にとって、損失を確定するのは心理的にかなり難しいものです。<br>
+            「もう少し待てば戻るかもしれない」「ここで売ると負けが決まってしまう」と考えやすいからです。
+          </p>
+
+          <div class="kiji-note-box">
+            <p>
+              ただし、損切りは感情で急いで売ることではありません。<br>
+              本来は、<strong>大きな損失を避けるために、あらかじめ決めたルールに沿って判断するリスク管理</strong>です。
+            </p>
+          </div>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Emotion</p>
+            <h2 class="kiji-section__title">初心者が損切りできなくなりやすい理由</h2>
+            <p class="kiji-section__text">
+              損切りが難しい理由の多くは、知識不足だけではなく、感情の影響にもあります。
+              特に初心者は、損失が出たときに次のような考え方になりやすいです。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">心理 1</p>
+              <h3 class="kiji-info-card__title">戻るかもしれない</h3>
+              <p class="kiji-info-card__text">
+                含み損が出ると、「いつか元の価格に戻るはず」と考えたくなります。
+                しかし、戻る根拠がないまま持ち続けると、損失がさらに広がる場合があります。
+              </p>
+            </div>
+
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">心理 2</p>
+              <h3 class="kiji-info-card__title">損を確定したくない</h3>
+              <p class="kiji-info-card__text">
+                含み損の状態では、まだ損失が確定していないように感じます。
+                そのため、売却することに強い抵抗を感じることがあります。
+              </p>
+            </div>
+
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">心理 3</p>
+              <h3 class="kiji-info-card__title">平均単価を下げたくなる</h3>
+              <p class="kiji-info-card__text">
+                下がったところで追加購入するナンピンは、平均取得単価を下げる方法です。
+                ただし、計画がないまま繰り返すと、損失額や保有量が大きくなりやすい点に注意が必要です。
+              </p>
+            </div>
+
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">心理 4</p>
+              <h3 class="kiji-info-card__title">耐えられない金額で取引している</h3>
+              <p class="kiji-info-card__text">
+                値動きが気になって冷静でいられない場合、投資額やロットが大きすぎる可能性があります。
+                初心者ほど、まずは小さく始めることが大切です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Purpose</p>
+            <h2 class="kiji-section__title">損切りを考える主な目的</h2>
+          </div>
+
+          <ul class="kiji-step-list">
+            <li>
+              <strong>大きな損失を避けるため</strong>
+              <p>
+                小さな損失で済むうちに判断することで、資金全体へのダメージを抑えやすくなります。
+                投資では、すべての判断を当てることよりも、大きく負けすぎないことが大切です。
+              </p>
+            </li>
+            <li>
+              <strong>次の投資機会を残すため</strong>
+              <p>
+                含み損を抱えたまま資金が動かせない状態になると、別の投資機会を逃すことがあります。
+                損切りは、資金を次に回すための判断でもあります。
+              </p>
+            </li>
+            <li>
+              <strong>感情的なナンピンを防ぐため</strong>
+              <p>
+                「下がったから買い増す」を繰り返すと、気づかないうちに一つの銘柄や通貨に資金が偏る場合があります。
+                事前にルールを決めることで、感情的な追加投資を避けやすくなります。
+              </p>
+            </li>
+            <li>
+              <strong>レバレッジ取引のリスクを抑えるため</strong>
+              <p>
+                FXや信用取引のようにレバレッジを使う取引では、値動きに対する損益が大きくなります。
+                強制ロスカットを避けるためにも、早めの資金管理が重要になります。
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="kiji-section" id="rule">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Rule</p>
+            <h2 class="kiji-section__title">損切りを考えるときの判断材料</h2>
+            <p class="kiji-section__text">
+              損切りは、その場の気分で決めるものではありません。初心者は、次のような判断材料を使って整理すると考えやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <div class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">最初に決めたラインを割った</h3>
+              <p class="kiji-feature-card__text">
+                サポートライン、直近安値、移動平均線など、事前に見ていた目安を大きく割った場合は、買ったときの前提が崩れていないか確認します。
+                ラインは絶対ではありませんが、判断を整理する材料になります。
+              </p>
+            </div>
+
+            <div class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">買った理由が崩れた</h3>
+              <p class="kiji-feature-card__text">
+                決算悪化、業績予想の下方修正、トレンド変化、想定していた材料の消滅などがある場合、保有を続ける理由を見直す必要があります。
+              </p>
+            </div>
+
+            <div class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">資金管理ルールを超えた</h3>
+              <p class="kiji-feature-card__text">
+                たとえば「1回の取引で資金の一部までしか損しない」と決めている場合、そのラインを超える前に判断します。
+                取引ごとの損失額を小さくすることで、投資を続けやすくなります。
+              </p>
+            </div>
+
+            <div class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">不安で冷静に見られなくなった</h3>
+              <p class="kiji-feature-card__text">
+                値動きが気になって生活に影響するほど不安な場合、投資額やレバレッジが大きすぎる可能性があります。
+                損切りだけでなく、次回以降の取引サイズも見直すポイントです。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Chart</p>
+            <h2 class="kiji-section__title">チャートで見る損切りの目安</h2>
+          </div>
+
+          <img src="sonota/songiri-chart-rule.webp" alt="チャート上で損切りラインを考えるイメージ" width="1200" height="600" loading="lazy" decoding="async">
+
+          <p class="kiji-section__text">
+            チャートを使って損切りを考える場合は、「どこを割ったら想定が崩れたと見るか」を事前に決めておくことが大切です。<br>
+            たとえば、過去に何度も反発している価格帯を下回った場合、サポートラインを割ったと見る人もいます。
+          </p>
+
+          <div class="kiji-table-wrap">
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                  <th>判断材料</th>
+                  <th>見るポイント</th>
+                  <th>初心者向けの考え方</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">サポートライン</th>
+                  <td>過去に下げ止まりやすかった価格帯</td>
+                  <td>ここを大きく割ると、流れが変わった可能性を考える</td>
+                </tr>
+                <tr>
+                  <th scope="row">直近安値</th>
+                  <td>最近の値動きで安くなった水準</td>
+                  <td>安値を更新すると、弱い流れが続いている可能性を考える</td>
+                </tr>
+                <tr>
+                  <th scope="row">移動平均線</th>
+                  <td>価格の大きな流れを見る線</td>
+                  <td>線の下で推移し続ける場合、流れの変化を確認する</td>
+                </tr>
+                <tr>
+                  <th scope="row">トレンド</th>
+                  <td>高値と安値の切り上げ・切り下げ</td>
+                  <td>買ったときの上昇シナリオが崩れていないかを見る</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="kiji-section__text">
+            ただし、チャートの形だけで機械的に判断するのは注意が必要です。<br>
+            株なら企業の業績や決算、FXなら経済指標や金利、相場全体の流れもあわせて確認しましょう。
+          </p>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Position Size</p>
+            <h2 class="kiji-section__title">「耐えられない」時点で、投資額が大きすぎる場合もある</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            損切りを考える前に見直したいのが、投資額やロットの大きさです。<br>
+            少し下がっただけで強い不安を感じる場合、その取引は自分の資金量やリスク許容度に対して大きすぎる可能性があります。
+          </p>
+
+          <div class="kiji-compare-box">
+            <div class="kiji-compare-box__item">
+              <h3>余剰資金で行う</h3>
+              <p>
+                生活費や近いうちに使うお金で投資をすると、少しの値下がりでも冷静に判断しにくくなります。
+              </p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>ロットを小さくする</h3>
+              <p>
+                FXや信用取引では、取引数量を大きくしすぎると損益の振れ幅も大きくなります。
+              </p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>レバレッジを抑える</h3>
+              <p>
+                レバレッジは利益だけでなく損失も大きくします。初心者は特に控えめに考えることが大切です。
+              </p>
+            </div>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              損切りが苦しいと感じる原因は、売る判断そのものではなく、<strong>最初から大きく張りすぎていること</strong>にある場合もあります。
+              まずは小さく始め、損失が出ても冷静に見直せる範囲に抑えることが大切です。
+            </p>
+          </div>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Important</p>
+            <h2 class="kiji-section__title">損切りが必ず正解とは限らない</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            損切りは大切なリスク管理の考え方ですが、いつでも必ず正解というわけではありません。<br>
+            一時的に下がったあと、再び上昇することもあります。長期投資では、短期的な値動きを重視しすぎない考え方もあります。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">短期売買</p>
+              <h3 class="kiji-info-card__title">ルールを決めておく重要性が高い</h3>
+              <p class="kiji-info-card__text">
+                短期売買では、値動きの判断回数が多くなります。
+                そのため、損失ラインや利確ラインを事前に決めておかないと、感情に振り回されやすくなります。
+              </p>
+            </div>
+
+            <div class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">長期投資</p>
+              <h3 class="kiji-info-card__title">買った理由が残っているかを見る</h3>
+              <p class="kiji-info-card__text">
+                長期投資では、一時的な値下がりだけで判断しないこともあります。
+                ただし、企業の成長性や投資方針そのものが崩れた場合は、見直しが必要です。
+              </p>
+            </div>
+          </div>
+
+          <p class="kiji-section__text">
+            大切なのは、「下がったら必ず売る」「絶対に売らない」のどちらかに決めつけないことです。<br>
+            自分の投資目的、期間、資金量、リスク許容度に合わせて、事前に判断基準を持っておくことが重要です。
+          </p>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Beginner Point</p>
+            <h2 class="kiji-section__title">初心者がまず意識したい損切りの考え方</h2>
+          </div>
+
+          <ul class="kiji-check-list">
+            <li>買う前に「どこまで下がったら見直すか」を決める</li>
+            <li>損失額が生活に影響しない範囲で始める</li>
+            <li>ナンピンする場合も、回数や金額を事前に決める</li>
+            <li>レバレッジを使う場合は、損失の大きさを先に確認する</li>
+            <li>「戻ってほしい」ではなく「買った理由が残っているか」で考える</li>
+            <li>1回の失敗で資金全体を大きく減らさない</li>
+          </ul>
+
+          <p class="kiji-section__text">
+            初心者の段階では、完璧な売買タイミングを目指すよりも、まずは大きく負けすぎないことを意識しましょう。<br>
+            損切りは、投資をやめるためのものではなく、投資を続けるために資金を守る考え方です。
+          </p>
+        </section>
+
+        <section class="kiji-section">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related</p>
+            <h2 class="kiji-section__title">損切りとあわせて読みたい関連記事</h2>
+            <p class="kiji-section__text">
+              損切りを理解するには、チャートの見方、レバレッジ、リスク管理、長期投資の考え方もあわせて確認しておくと整理しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a href="kabu-chart-mikata.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">チャート</span>
+              <strong class="kiji-link-card__title">株のチャートの見方</strong>
+              <span class="kiji-link-card__text">ローソク足・移動平均線・出来高・サポートラインなど、株価チャートの基本を確認できます。</span>
+            </a>
+
+            <a href="rosokuashi-mikata.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">ローソク足</span>
+              <strong class="kiji-link-card__title">ローソク足の見方</strong>
+              <span class="kiji-link-card__text">陽線・陰線・ヒゲなど、値動きの形を読むための基本を整理しています。</span>
+            </a>
+
+            <a href="chart-sign-mikata.htm" class="kiji-link-card">
+              <span class="kiji-link-card__label">サイン</span>
+              <strong class="kiji-link-card__title">チャートのサイン解説</strong>
+              <span class="kiji-link-card__text">サポートライン、レジスタンスライン、ゴールデンクロスなどの見方を確認できます。</span>
+            </a>
+
+            <a href="rebarejji-buki-ka.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">リスク管理</span>
+              <strong class="kiji-link-card__title">レバレッジは武器かリスクか</strong>
+              <span class="kiji-link-card__text">少ない資金で大きく取引できる仕組みと、損失が大きくなる注意点を整理します。</span>
+            </a>
+
+            <a href="tyoukitousi-kaisetu.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">投資手法</span>
+              <strong class="kiji-link-card__title">長期投資とは？</strong>
+              <span class="kiji-link-card__text">短期の値動きに振り回されにくい投資の考え方を初心者向けに解説します。</span>
+            </a>
+
+            <a href="tumitatetousi-kaisetu.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">積立</span>
+              <strong class="kiji-link-card__title">積立投資とは？</strong>
+              <span class="kiji-link-card__text">毎月一定額をコツコツ投資する考え方と、長期資産形成の基本を確認できます。</span>
+            </a>
+
+            <a href="bunsantousi-kaisetu.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">分散</span>
+              <strong class="kiji-link-card__title">分散投資とは？</strong>
+              <span class="kiji-link-card__text">一つの投資先に偏りすぎないための基本的なリスク管理を整理します。</span>
+            </a>
+
+            <a href="tousi-yougo.html" class="kiji-link-card">
+              <span class="kiji-link-card__label">用語</span>
+              <strong class="kiji-link-card__title">投資用語辞典</strong>
+              <span class="kiji-link-card__text">損切り、含み損、ナンピン、ロスカットなどの用語を一言で確認できます。</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-cta" aria-labelledby="cta-start-title">
+          <p class="kiji-cta__eyebrow">Next Step</p>
+          <h2 class="kiji-cta__title" id="cta-start-title">証券口座やFX口座の比較を見ておきたい方へ</h2>
+          <p class="kiji-cta__text">
+            損切りや資金管理を考えるときは、取引画面の使いやすさ、注文方法、取扱商品、手数料なども重要です。
+            これから口座を選ぶ方は、比較ページもあわせて確認してみてください。
+          </p>
+          <div class="kiji-hero__actions">
+            <a href="syoukensyoukai.html" class="kiji-btn kiji-btn--primary">証券口座一覧を見る</a>
+            <a href="FX-syoukai.html" class="kiji-btn kiji-btn--ghost">FX口座一覧を見る</a>
+          </div>
+        </section>
+
+        <section class="anime-item" aria-labelledby="review-entry-title">
+          <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+          <div class="review">
+            <a href="userreview.html" class="review-card">
+              <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
+              <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る　（忖度なし）</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="securities-list"></div>
+        <script src="cards-syouken.js"></script>
+
+        <section class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <details class="faq-item">
+            <summary>損切りとは何ですか？</summary>
+            <div class="faq-answer">
+              <p>
+                損切りとは、損失が出ている投資を売却して損失を確定することです。
+                大きな損失を避け、資金を守るためのリスク管理として使われます。
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>損切りは必ずした方がよいですか？</summary>
+            <div class="faq-answer">
+              <p>
+                必ず損切りすればよい、というわけではありません。
+                長期投資、短期売買、投資目的、資金量によって考え方は変わります。
+                大切なのは、感情ではなく事前に決めたルールで判断することです。
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>損切りできない原因は何ですか？</summary>
+            <div class="faq-answer">
+              <p>
+                「戻るかもしれない」「損を確定したくない」「平均単価を下げたい」といった心理が原因になることがあります。
+                また、最初から投資額やロットが大きすぎる場合も、冷静な判断が難しくなります。
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>ナンピンは悪い方法ですか？</summary>
+            <div class="faq-answer">
+              <p>
+                ナンピン自体が必ず悪いわけではありません。
+                ただし、計画がないまま「下がったから買い増す」を繰り返すと、損失や保有量が大きくなりやすいです。
+                回数、金額、撤退ラインを決めておくことが大切です。
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>初心者はどのくらいの損失で損切りすればよいですか？</summary>
+            <div class="faq-answer">
+              <p>
+                一律の正解はありません。
+                投資額、保有期間、商品、リスク許容度によって変わります。
+                まずは「この金額までなら冷静に見直せる」という範囲を決め、取引前にルール化しておくと判断しやすくなります。
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。株式・投資信託・外国証券・FX・暗号資産等の取引は元本保証がなく、相場変動等により損失が生じる場合があります。取引開始前に、契約締結前交付書面や商品説明書、目論見書等を必ずご確認のうえ、<strong>ご自身の判断と責任</strong>でお取引ください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</body>
+</html>

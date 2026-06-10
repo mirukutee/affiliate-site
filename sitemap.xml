@@ -381,7 +381,21 @@
 
 <url>
 <loc>https://tousiportal.jp/kachi-hajimeta-kiken.html</loc>
-<lastmod>2026-06-09</lastmod>
+<lastmod>2026-06-10</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://tousiportal.jp/tousi-rule.html</loc>
+<lastmod>2026-06-10</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://tousiportal.jp/sonshou-ridai-toha.html</loc>
+<lastmod>2026-06-10</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>

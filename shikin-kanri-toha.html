@@ -93,6 +93,89 @@
     ]
   }
   </script>
+
+  <style>
+    /* このページ単体の横はみ出し防止 */
+    .kiji-page,
+    .kiji-page body,
+    .kiji-page .container,
+    .kiji-page .kiji-main,
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-section,
+    .kiji-page .anime-item,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-compare-box,
+    .kiji-page .kiji-summary-card,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-link-card,
+    .kiji-page .kiji-disclaimer {
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .kiji-page .kiji-hero__inner,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-compare-box {
+      min-width: 0;
+    }
+
+    .kiji-page .kiji-hero__main,
+    .kiji-page .kiji-hero__aside {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page .kiji-section img,
+    .kiji-page .anime-item img,
+    .kiji-page .review-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-page .kiji-section__text,
+    .kiji-page .kiji-info-card__text,
+    .kiji-page .kiji-feature-card__text,
+    .kiji-page .kiji-panel p,
+    .kiji-page .faq-answer,
+    .kiji-page .kiji-lead {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .kiji-page .faq-item > summary {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .kiji-page .review-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-compare-box {
+        grid-template-columns: 1fr !important;
+      }
+
+      .kiji-page .kiji-hero__actions {
+        width: 100%;
+      }
+
+      .kiji-page .kiji-btn {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+      }
+    }
+  </style>
+
 </head>
 <body class="kiji-page">
 <!-- ヘッダー（注入完了まで非表示：FOUC防止） -->
@@ -157,7 +240,7 @@
             <p class="kiji-section__eyebrow">Introduction</p>
             <h2 class="kiji-section__title" id="intro-title">資金管理はリスク管理の基本</h2>
           </div>
-          <img src="sonota/shikin-kanri-toha.webp" alt="資金管理の基本を初心者向けに整理した教材画像" loading="lazy" decoding="async">
+          <img src="sonota/shikin-kanri-toha.webp" alt="資金管理の基本を初心者向けに整理した教材画像" loading="lazy" decoding="async" width="1200" height="630">
           <p class="kiji-section__text">
             投資では、正しい銘柄を選んだつもりでも、相場の変動によって損失が出ることがあります。そこで大切になるのが、資金を一度に使い切らず、損失が出た場合でも次の判断ができる状態を残しておくことです。
           </p>

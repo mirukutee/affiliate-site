@@ -31,6 +31,69 @@
   <link rel="stylesheet" href="kiji.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <style>
+    /* double-top-bottom.html 個別補正：横はみ出し防止 */
+    .kiji-page .container,
+    .kiji-page #main,
+    .kiji-page .kiji-main,
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .anime-item,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-panel,
+    .kiji-page .faq-item {
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .kiji-page .kiji-title,
+    .kiji-page .kiji-lead,
+    .kiji-page .kiji-section__title,
+    .kiji-page .kiji-section__text,
+    .kiji-page .kiji-info-card__title,
+    .kiji-page .kiji-info-card__text,
+    .kiji-page .kiji-feature-card__title,
+    .kiji-page .kiji-feature-card__text,
+    .kiji-page .faq-item summary span {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .kiji-page .table-responsive {
+      max-width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .kiji-page .table-scroll {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .kiji-page .table-modern {
+      margin: 0;
+    }
+
+    .kiji-page .table-box__hint {
+      display: none;
+      margin: 0 0 8px;
+      color: #64748b;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page .table-box__hint {
+        display: block;
+      }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -235,39 +298,42 @@
             </p>
           </div>
 
-          <div class="kiji-table-wrap">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>項目</th>
-                  <th>ダブルトップ</th>
-                  <th>ダブルボトム</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>出現しやすい場所</th>
-                  <td>上昇後の高値圏</td>
-                  <td>下落後の安値圏</td>
-                </tr>
-                <tr>
-                  <th>チャートの見え方</th>
-                  <td>山が2つ並ぶ形</td>
-                  <td>谷が2つ並ぶ形</td>
-                </tr>
-                <tr>
-                  <th>投資家心理</th>
-                  <td>高値を超えられず、利益確定や売りが意識されやすい</td>
-                  <td>安値を割り込まず、買い支えや買い戻しが意識されやすい</td>
-                </tr>
-                <tr>
-                  <th>初心者が意識したいポイント</th>
-                  <td>形だけで空売りや売却を決めない</td>
-                  <td>反発期待だけで飛び乗らない</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <div class="table-responsive">
+  <p class="table-box__hint">※表は横にスクロールできます。</p>
+  <div class="table-scroll" role="region" aria-label="ダブルトップとダブルボトムの比較表" tabindex="0">
+    <table class="table-modern">
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>ダブルトップ</th>
+          <th>ダブルボトム</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>出現しやすい場所</th>
+          <td>上昇後の高値圏</td>
+          <td>下落後の安値圏</td>
+        </tr>
+        <tr>
+          <th>チャートの見え方</th>
+          <td>山が2つ並ぶ形</td>
+          <td>谷が2つ並ぶ形</td>
+        </tr>
+        <tr>
+          <th>投資家心理</th>
+          <td>高値を超えられず、利益確定や売りが意識されやすい</td>
+          <td>安値を割り込まず、買い支えや買い戻しが意識されやすい</td>
+        </tr>
+        <tr>
+          <th>初心者が意識したいポイント</th>
+          <td>形だけで空売りや売却を決めない</td>
+          <td>反発期待だけで飛び乗らない</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
           <p class="kiji-section__text">
             相場全体が上昇基調なのか、横ばいなのかでも見方は変わります。あわせて<a href="kabu-chart-mikata.html">トレンド相場とレンジ相場の違いとは？</a>も確認しておくと、パターンの位置づけを理解しやすくなります。

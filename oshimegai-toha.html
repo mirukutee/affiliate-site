@@ -34,6 +34,72 @@
   <link rel="stylesheet" href="table.css">
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="kiji.css">
+
+  <style>
+    /* このページ専用：スマホ横はみ出し対策 */
+    .kiji-page .container,
+    .kiji-page .kiji-main,
+    .kiji-page .kiji-article,
+    .kiji-page .anime-item,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card,
+    .kiji-page .kiji-compare-box,
+    .kiji-page .kiji-compare-box__item,
+    .kiji-page .kiji-panel,
+    .kiji-page .faq-item,
+    .kiji-page .faq-item summary{
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-page .kiji-section__text,
+    .kiji-page .kiji-info-card__text,
+    .kiji-page .kiji-feature-card__text,
+    .kiji-page .kiji-panel p,
+    .kiji-page .faq-answer,
+    .kiji-page .faq-item summary span{
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .kiji-page .kiji-hero__actions{
+      min-width: 0;
+    }
+
+    .kiji-page .kiji-btn{
+      max-width: 100%;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .kiji-page .table-box__hint{
+      display: block;
+      font-size: 0.78rem;
+      color: #6b7c8f;
+      margin: 0 0 8px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px){
+      .kiji-page .table-responsive{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .kiji-page .table-scroll{
+        max-width: 100%;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="amphtml" href="AMP/oshimegai-toha.html" />
 
@@ -186,38 +252,41 @@
             <p class="kiji-section__eyebrow">Compare</p>
             <h2 class="kiji-section__title">押し目買いと高値掴みの違い</h2>
           </div>
-          <div class="kiji-table-wrap">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>項目</th>
-                  <th>焦って飛び乗るケース</th>
-                  <th>計画的に待つケース</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>買う理由</th>
-                  <td>上がっているから置いていかれたくない</td>
-                  <td>事前に考えた価格帯まで待つ</td>
-                </tr>
-                <tr>
-                  <th>心理状態</th>
-                  <td>焦り・期待・不安が強い</td>
-                  <td>条件を確認してから判断する</td>
-                </tr>
-                <tr>
-                  <th>リスク管理</th>
-                  <td>損切り位置が曖昧になりやすい</td>
-                  <td>損切りラインを先に決めやすい</td>
-                </tr>
-                <tr>
-                  <th>注意点</th>
-                  <td>高値掴みになりやすい</td>
-                  <td>待ちすぎて機会を逃すこともある</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="table-responsive">
+            <p class="table-box__hint">※ スマホでは表を横にスクロールできます。</p>
+            <div class="table-scroll" role="region" aria-label="押し目買いと高値掴みの違いの比較表" tabindex="0">
+              <table class="table-modern">
+                <thead>
+                  <tr>
+                    <th>項目</th>
+                    <th>焦って飛び乗るケース</th>
+                    <th>計画的に待つケース</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">買う理由</th>
+                    <td>上がっているから置いていかれたくない</td>
+                    <td>事前に考えた価格帯まで待つ</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">心理状態</th>
+                    <td>焦り・期待・不安が強い</td>
+                    <td>条件を確認してから判断する</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">リスク管理</th>
+                    <td>損切り位置が曖昧になりやすい</td>
+                    <td>損切りラインを先に決めやすい</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">注意点</th>
+                    <td>高値掴みになりやすい</td>
+                    <td>待ちすぎて機会を逃すこともある</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="kiji-compare-box" style="margin-top:16px;">

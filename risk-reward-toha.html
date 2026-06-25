@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+
+  <link rel="canonical" href="https://tousiportal.jp/risk-reward-toha.html" />
+
+  <title>リスクリワードとは？初心者向けに勝率との関係と損小利大の考え方を解説</title>
+  <meta name="description" content="リスクリワードとは、1回の利益と1回の損失のバランスを考える指標です。投資初心者向けに、勝率との関係、損切り、利益確定、資金管理とのつながりを中立的に解説します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="リスクリワードとは？初心者向けに勝率との関係を解説" />
+  <meta property="og:description" content="勝率だけでは投資成績は決まりません。1回の利益と損失のバランスであるリスクリワードを、初心者向けにやさしく整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/risk-reward-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/risk-reward-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="リスクリワードとは？初心者向けに解説" />
+  <meta name="twitter:description" content="投資で大切なリスクリワードの考え方を、勝率・損切り・利益確定・資金管理とあわせて整理します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/risk-reward-toha.webp" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="amphtml" href="risk-reward-toha-amp.html" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * { box-sizing: border-box; }
+    .kiji-page { overflow-x: hidden; }
+    .kiji-page .container {
+      width: 100%; max-width: 100%; min-width: 0;
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .kiji-page #main.kiji-main { width: 100%; max-width: 1120px; min-width: 0; overflow: visible; }
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card { min-width: 0; max-width: 100%; }
+    .kiji-page img, .kiji-page iframe, .kiji-page video { max-width: 100%; height: auto; }
+    .kiji-page .kiji-hero-image {
+      display: block; width: 100%; max-width: 100%; margin: 16px 0 0;
+      border-radius: 18px; box-shadow: var(--kiji-shadow-mini);
+    }
+    .kiji-page .purpose-nav { width: 100%; min-width: 0; }
+    .kiji-page .purpose-nav a { min-width: 0; white-space: normal; text-align: center; line-height: 1.35; }
+    .kiji-page .table-responsive { width: 100%; max-width: 100%; min-width: 0; overflow: hidden; }
+    .kiji-page .table-scroll { width: 100%; max-width: 100%; min-width: 0; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+    .kiji-page .table-modern { width: max-content; min-width: 720px; max-width: none; }
+    .risk-formula {
+      display: inline-flex; flex-wrap: wrap; gap: .45rem; align-items: center;
+      padding: .75rem .9rem; border: 1px solid #d7e6f2; border-radius: 14px;
+      background: #f7fbff; color: #173a55; font-weight: 700; line-height: 1.5;
+    }
+    @media (max-width: 960px) {
+      .kiji-page .container { flex-direction: column; gap: 0; padding: 0; }
+      .kiji-page aside, .kiji-page #sidebar { width: 100%; max-width: 100%; }
+      .kiji-page #main.kiji-main { width: 100%; max-width: 100%; border-radius: 0; }
+      .kiji-page .kiji-hero__inner { grid-template-columns: 1fr; }
+      .kiji-page .kiji-grid--3, .kiji-page .kiji-grid--2, .kiji-page .kiji-compare-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main { padding: 0.75rem; }
+      .kiji-page .breadcrumb { padding: 0.65rem 0.75rem; margin: 0.2rem 0 0.75rem; }
+      .kiji-page .kiji-article { gap: 16px; }
+      .kiji-page .kiji-hero, .kiji-page .kiji-section, .kiji-page .kiji-cta, .kiji-page .kiji-disclaimer { padding: 16px 14px; border-radius: 16px; }
+      .kiji-page .kiji-title { font-size: clamp(1.28rem, 6vw, 1.58rem); line-height: 1.42; }
+      .kiji-page .kiji-lead, .kiji-page .kiji-section__text, .kiji-page .kiji-info-card__text, .kiji-page .kiji-feature-card__text, .kiji-page .kiji-panel p { font-size: 0.94rem; line-height: 1.75; }
+      .kiji-page .purpose-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .kiji-page .purpose-nav a { width: 100%; min-height: 42px; padding: 0.55em 0.5em; font-size: 0.86rem; }
+      .kiji-page .table-modern { min-width: 640px; font-size: 0.82rem; }
+      .kiji-page .table-modern th, .kiji-page .table-modern td { padding: 9px 10px; }
+    }
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main { padding: 0.55rem; }
+      .kiji-page .purpose-nav { grid-template-columns: 1fr; }
+      .kiji-page .kiji-hero, .kiji-page .kiji-section, .kiji-page .kiji-cta, .kiji-page .kiji-disclaimer { padding: 14px 12px; }
+      .kiji-page .table-modern { min-width: 580px; font-size: 0.78rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://tousiportal.jp/index.html"},
+      {"@type":"ListItem","position":2,"name":"記事","item":"https://tousiportal.jp/column.html"},
+      {"@type":"ListItem","position":3,"name":"リスクリワードとは？","item":"https://tousiportal.jp/risk-reward-toha.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "リスクリワードとは？初心者向けに勝率との関係と損小利大の考え方を解説",
+    "description": "リスクリワードとは、1回の利益と1回の損失のバランスを考える指標です。投資初心者向けに、勝率との関係、損切り、利益確定、資金管理とのつながりを中立的に解説します。",
+    "datePublished": "2026-06-25",
+    "dateModified": "2026-06-25",
+    "mainEntityOfPage": "https://tousiportal.jp/risk-reward-toha.html",
+    "inLanguage": "ja",
+    "author": {"@type":"Organization","name":"投資ポータル"},
+    "publisher": {"@type":"Organization","name":"投資ポータル"},
+    "image": "https://tousiportal.jp/sonota/risk-reward-toha.webp"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"リスクリワードとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"リスクリワードとは、1回の取引で想定する利益と損失のバランスを考える指標です。たとえば、損失を1万円までに抑え、利益を2万円狙う場合は、リスク1に対してリワード2という見方ができます。"}},
+      {"@type":"Question","name":"勝率が高ければ利益は出ますか？","acceptedAnswer":{"@type":"Answer","text":"勝率が高くても、1回の損失が大きく、1回の利益が小さい場合は利益が残らないことがあります。投資成績は勝率だけでなく、利益と損失の大きさにも影響されます。"}},
+      {"@type":"Question","name":"リスクリワードは初心者にも必要ですか？","acceptedAnswer":{"@type":"Answer","text":"初心者にも必要な考え方です。難しい数式よりも、取引前にどこで損切りし、どこで利益確定を考えるかを整理するために役立ちます。"}},
+      {"@type":"Question","name":"リスクリワードだけで投資判断できますか？","acceptedAnswer":{"@type":"Answer","text":"リスクリワードだけで投資判断するのは不十分です。勝率、資金管理、相場環境、投資期間、銘柄や商品のリスクもあわせて考えることが大切です。"}}
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">リスクリワードとは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Investment Method</p>
+              <h1 class="kiji-title">リスクリワードとは？</h1>
+              <p class="kiji-lead">
+                投資では「何回勝つか」だけでなく、「1回の利益と1回の損失の大きさ」も重要です。勝率が高くても、負けたときの損失が大きければ利益が残らないことがあります。そのバランスを考えるための基本が、リスクリワードです。
+              </p>
+              <ul class="kiji-tags" aria-label="この記事でわかること">
+                <li>リスクリワードの意味</li>
+                <li>勝率との関係</li>
+                <li>損切りと利益確定</li>
+                <li>資金管理とのつながり</li>
+              </ul>
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#relation">勝率との関係を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#mistake">失敗例を確認する</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">勝率だけでなく、利益と損失の幅をセットで考える</h2>
+                <ul class="kiji-check-list">
+                  <li>リスクリワードは利益と損失の比率を見る考え方</li>
+                  <li>勝率が高くても損大利小なら成績は悪化しやすい</li>
+                  <li>損切り・利益確定・出口戦略と一緒に考える</li>
+                  <li>資金管理と組み合わせることでルール化しやすい</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <img class="kiji-hero-image" src="sonota/risk-reward-toha.webp" alt="リスクリワードを初心者向けに整理した教材画像" width="1200" height="630" loading="lazy" decoding="async">
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#meaning">意味</a>
+          <a href="#important">重要性</a>
+          <a href="#relation">勝率との関係</a>
+          <a href="#merit">メリット</a>
+          <a href="#mistake">失敗例</a>
+          <a href="#point">意識したいこと</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="kiji-section" aria-labelledby="intro-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Introduction</p>
+            <h2 class="kiji-section__title" id="intro-title">勝率だけで投資成績は決まらない</h2>
+            <p class="kiji-section__text">
+              投資初心者は「何％勝てるか」に注目しがちです。しかし実際には、1回勝ったときにどれだけ利益が出るのか、1回負けたときにどれだけ損失が出るのかによって、長期的な結果は大きく変わります。
+            </p>
+          </div>
+          <div class="kiji-note-box">
+            <ul class="kiji-bullet-list">
+              <li>勝率が高くても、損失が大きいと資産は増えにくい場合があります。</li>
+              <li>勝率が低くても、利益が損失より大きければ成績が残る場合があります。</li>
+              <li>この「利益と損失のバランス」を考える入口がリスクリワードです。</li>
+            </ul>
+          </div>
+          <p class="kiji-section__text">
+            損失を小さく、利益を大きくする考え方は、<a href="sonshou-ridai-toha.html">損小利大とは？</a>でも重要なテーマです。リスクリワードは、その考え方を具体的な売買ルールに落とし込むときに役立ちます。
+          </p>
+        </section>
+
+        <section id="meaning" class="kiji-section" aria-labelledby="meaning-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Basic</p>
+            <h2 class="kiji-section__title" id="meaning-title">リスクリワードとは？</h2>
+            <p class="kiji-section__text">
+              リスクリワードとは、1回の取引で想定する損失額と利益額の比率を考える指標です。投資やFX、短期売買などでよく使われる考え方で、利益と損失のバランスを見ることが目的です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Risk</p>
+              <h3 class="kiji-info-card__title">どこまで損失を許容するか</h3>
+              <p class="kiji-info-card__text">購入価格からどこまで下がったら損切りするかを考えます。これは、感情で耐えるためではなく、事前に損失の上限を決めるためです。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Reward</p>
+              <h3 class="kiji-info-card__title">どこまで利益を狙うか</h3>
+              <p class="kiji-info-card__text">どこで利益確定を考えるかを決めます。上がったら何となく売るのではなく、目標や出口を先に整理する考え方です。</p>
+            </section>
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">Balance</p>
+              <h3 class="kiji-info-card__title">損失と利益を比べる</h3>
+              <p class="kiji-info-card__text">損失1に対して利益2を狙うなら、リスク1：リワード2というように整理できます。細かい数式より、まずは考え方を理解しましょう。</p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text"><span class="risk-formula">例：損失の目安 1万円 ／ 利益の目安 2万円 → リスク1：リワード2</span></p>
+        </section>
+
+        <section id="important" class="kiji-section" aria-labelledby="important-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Why Important</p>
+            <h2 class="kiji-section__title" id="important-title">なぜリスクリワードが重要なのか？</h2>
+            <p class="kiji-section__text">
+              リスクリワードを考えると、勝率だけでは見えない投資成績の中身を確認しやすくなります。特に、損切りや利益確定をその場の感情で決めてしまう人ほど、事前に比率を整理しておく意味があります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">勝率だけでは判断できない</h3>
+              <p class="kiji-feature-card__text">10回中7回勝っても、負けた3回の損失が大きければ、全体ではマイナスになることがあります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">長期的な資産形成に役立つ</h3>
+              <p class="kiji-feature-card__text">1回ごとの結果に振り回されず、複数回の取引を通じてどう資金を守るかを考えやすくなります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">感情的な取引を減らせる</h3>
+              <p class="kiji-feature-card__text">損失が出たときに耐え続ける、少し利益が出たらすぐ売る、といった感情的な判断を減らしやすくなります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">売買ルールを作りやすくなる</h3>
+              <p class="kiji-feature-card__text">どこで買い、どこで売るかを考えるとき、損切り幅と利益目標をセットで決めやすくなります。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="relation" class="kiji-section" aria-labelledby="relation-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Win Rate</p>
+            <h2 class="kiji-section__title" id="relation-title">勝率とリスクリワードの関係</h2>
+            <p class="kiji-section__text">
+              リスクリワードを理解するうえで大切なのは、勝率とセットで考えることです。勝率だけ、リスクリワードだけ、どちらか一方ではなく、両方のバランスを見ることで投資成績を考えやすくなります。
+            </p>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="勝率とリスクリワードの比較表">
+              <table class="table-modern">
+                <caption>勝率とリスクリワードの関係例</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">ケース</th>
+                    <th scope="col">勝率</th>
+                    <th scope="col">1回の利益</th>
+                    <th scope="col">1回の損失</th>
+                    <th scope="col">10回の結果例</th>
+                    <th scope="col">見方</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">勝率は高いが損失が大きい</th>
+                    <td>70%</td>
+                    <td>+5,000円</td>
+                    <td>-20,000円</td>
+                    <td>+35,000円 −60,000円 = -25,000円</td>
+                    <td>勝ちが多くても利益が残りにくい</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">勝率は低いが利益が大きい</th>
+                    <td>40%</td>
+                    <td>+20,000円</td>
+                    <td>-8,000円</td>
+                    <td>+80,000円 −48,000円 = +32,000円</td>
+                    <td>勝ちが少なくても利益が残る場合がある</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">バランス型</th>
+                    <td>50%</td>
+                    <td>+12,000円</td>
+                    <td>-8,000円</td>
+                    <td>+60,000円 −40,000円 = +20,000円</td>
+                    <td>勝率と損益幅を両方見る</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ 横にスクロールできます</p>
+          </div>
+
+          <div class="kiji-stack">
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">勝率が高くても利益が残らないケース</h3>
+              <p>小さな利益を何度も積み上げても、1回の大きな損失でそれまでの利益を失うことがあります。利益確定が早すぎて、損切りが遅い状態は特に注意が必要です。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">勝率が低くても利益が残るケース</h3>
+              <p>損失を小さく限定し、利益を伸ばせる場合は、勝率が低くても結果が残ることがあります。ただし、実際には連敗への耐性や資金管理も必要です。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">利益と損失のバランス</h3>
+              <p>リスクリワードは「必ず利益を伸ばせばよい」という単純な話ではありません。相場環境、投資期間、商品の値動きに合わせて、現実的なバランスを考える必要があります。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">初心者が理解しておきたいポイント</h3>
+              <p>最初は難しい数式よりも、「この取引でどれくらい失う可能性があり、どれくらい利益を狙っているのか」を言葉で説明できる状態を目指すと分かりやすいです。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="merit" class="kiji-section" aria-labelledby="merit-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Merit</p>
+            <h2 class="kiji-section__title" id="merit-title">リスクリワードを考えるメリット</h2>
+            <p class="kiji-section__text">
+              リスクリワードを考えるメリットは、単に数字を出すことではありません。取引前に損切り、利益確定、資金配分、出口の考え方を整理しやすくなる点にあります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">損切りを決めやすい</h3>
+              <p class="kiji-feature-card__text">どこまで下がったら撤退するかを先に考えるため、含み損を感情で放置しにくくなります。詳しくは<a href="songiri-toha.html">損切りとは？判断方法の例を解説</a>も参考になります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">利益確定を考えやすい</h3>
+              <p class="kiji-feature-card__text">上がったら何となく売るのではなく、どの水準で利益確定を考えるかを整理しやすくなります。これは<a href="deguchi-senryaku-toha.html">出口戦略とは？</a>の考え方にもつながります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">感情的な取引を減らせる</h3>
+              <p class="kiji-feature-card__text">事前に想定を決めておくことで、焦りや欲に振り回されにくくなります。すべてを機械的に行うというより、判断の基準を持つイメージです。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">長期的な投資計画を立てやすい</h3>
+              <p class="kiji-feature-card__text">1回の勝ち負けではなく、資金をどのように守りながら続けるかを考えやすくなります。資金配分は<a href="shikin-kanri-toha.html">資金管理とは？初心者向けに解説</a>と合わせて考えると整理しやすいです。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="mistake" class="kiji-section" aria-labelledby="mistake-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Mistake</p>
+            <h2 class="kiji-section__title" id="mistake-title">初心者がやりがちな失敗</h2>
+            <p class="kiji-section__text">
+              リスクリワードを意識しないと、勝っているつもりなのに資金が増えない状態になりやすいです。特に初心者は、次のような行動に注意しましょう。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Mistake 01</p>
+              <h3 class="kiji-info-card__title">利益をすぐ確定してしまう</h3>
+              <p class="kiji-info-card__text">少し利益が出ると不安になり、早く売ってしまうことがあります。利益を守る意識は大切ですが、毎回利益が小さいと損失をカバーしにくくなります。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Mistake 02</p>
+              <h3 class="kiji-info-card__title">損切りを先延ばしにする</h3>
+              <p class="kiji-info-card__text">「いつか戻るかもしれない」と考えて損切りを遅らせると、1回の損失が大きくなりやすいです。損失が出たときほど冷静な判断が必要です。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Mistake 03</p>
+              <h3 class="kiji-info-card__title">勝率だけを追いかける</h3>
+              <p class="kiji-info-card__text">勝率が高い手法に見えても、損失が大きい設計なら安定しません。勝率とリスクリワードはセットで見る必要があります。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Mistake 04</p>
+              <h3 class="kiji-info-card__title">リスク管理を考えない</h3>
+              <p class="kiji-info-card__text">どれだけ良い考え方でも、1回あたりの投資額が大きすぎると連敗に耐えにくくなります。資金管理を抜きにリスクリワードだけを見るのは危険です。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="point" class="kiji-section" aria-labelledby="point-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Beginner Point</p>
+            <h2 class="kiji-section__title" id="point-title">初心者が意識したいこと</h2>
+            <p class="kiji-section__text">
+              リスクリワードは大切な考え方ですが、これだけで勝てるわけではありません。勝率、資金管理、相場環境、投資目的と組み合わせて考えることが重要です。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>リスクリワードだけで判断しない</strong>
+              <p>リスク1：リワード3のように見えても、実際に到達しにくい利益目標であれば現実的ではありません。</p>
+            </li>
+            <li>
+              <strong>勝率とのバランスを見る</strong>
+              <p>利益幅を大きく狙うほど勝率が下がる場合もあります。自分の手法や投資期間に合ったバランスを考えましょう。</p>
+            </li>
+            <li>
+              <strong>資金管理と組み合わせる</strong>
+              <p>1回の損失を資金全体の中でどこまで許容するかを決めることで、連敗時のダメージを抑えやすくなります。</p>
+            </li>
+            <li>
+              <strong>自分なりの投資ルールを作る</strong>
+              <p>買う理由、損切りする理由、利益確定する理由を言葉にしておくと、取引後の振り返りもしやすくなります。詳しくは<a href="tousi-rule.html">投資ルールを決める重要性とは？</a>も参考になります。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="entry-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Entry And Exit</p>
+            <h2 class="kiji-section__title" id="entry-title">購入計画と売却計画をセットで考える</h2>
+            <p class="kiji-section__text">
+              リスクリワードは、買った後に考えるものではなく、買う前に整理しておく考え方です。どの水準で入るのか、どこで撤退するのか、どこで利益確定を考えるのかをセットにすると、売買の流れが見えやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-compare-box">
+            <div class="kiji-compare-box__item">
+              <h3>購入前</h3>
+              <p><a href="entry-timing-toha.html">エントリータイミングの考え方とは？</a>を参考に、なぜその価格で買うのかを整理します。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>保有中</h3>
+              <p>価格が動いたときに、最初の想定が崩れていないかを確認します。感情ではなく、事前の条件を見直します。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>売却時</h3>
+              <p>利益確定・損切り・保有継続の判断は、<a href="deguchi-senryaku-toha.html">出口戦略とは？</a>の考え方とつながります。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
+            <p class="kiji-section__text">
+              リスクリワードは、利益と損失のバランスを考えるための指標です。投資成績は勝率だけでは決まらず、1回の利益と1回の損失の大きさにも大きく影響されます。
+            </p>
+          </div>
+
+          <div class="kiji-note-box">
+            <ul class="kiji-bullet-list">
+              <li>リスクリワードは利益と損失のバランスを見る考え方です。</li>
+              <li>勝率が高くても、損失が大きいと利益は残りにくくなります。</li>
+              <li>損切りと利益確定をセットで考えることが重要です。</li>
+              <li>資金管理や投資ルールと組み合わせて、長期的な視点で続けることが大切です。</li>
+            </ul>
+          </div>
+          <p class="kiji-section__text">
+            短期売買だけでなく、資産形成では<a href="tyoukitousi-kaisetu.html">長期投資とは？</a>や<a href="ikkatsu-bunkatsu-toushi.html">一括投資と分割投資の違いとは？</a>のように、投資期間や購入方法もあわせて考えると全体像をつかみやすくなります。
+          </p>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Q. リスクリワードとは何ですか？</summary>
+              <div class="faq-answer">
+                <p>リスクリワードとは、1回の取引で想定する利益と損失のバランスを考える指標です。損失をどこまで許容し、利益をどこまで狙うかを事前に整理するために使います。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Q. 勝率が高ければ利益は出ますか？</summary>
+              <div class="faq-answer">
+                <p>勝率が高くても、1回の損失が大きく、1回の利益が小さい場合は利益が残らないことがあります。勝率とリスクリワードはセットで考えることが大切です。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Q. リスクリワードは初心者にも必要ですか？</summary>
+              <div class="faq-answer">
+                <p>初心者にも必要です。難しい計算をするためではなく、取引前に損切りと利益確定の目安を考えるために役立ちます。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Q. リスクリワードだけで投資判断できますか？</summary>
+              <div class="faq-answer">
+                <p>リスクリワードだけで投資判断するのは不十分です。勝率、資金管理、投資期間、相場環境、銘柄や商品の特徴もあわせて確認しましょう。</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-cta" aria-labelledby="next-title">
+          <p class="kiji-cta__eyebrow">Next Learning</p>
+          <h2 class="kiji-cta__title" id="next-title">リスク管理と出口戦略もセットで学ぶ</h2>
+          <p class="kiji-cta__text">
+            リスクリワードは、損切り・利益確定・資金管理とつながる考え方です。1つずつ学ぶことで、感情に左右されにくい投資ルールを作りやすくなります。
+          </p>
+          <div class="kiji-hero__actions">
+            <a class="kiji-btn kiji-btn--primary" href="songiri-toha.html">損切りを学ぶ</a>
+            <a class="kiji-btn kiji-btn--ghost" href="deguchi-senryaku-toha.html">出口戦略を学ぶ</a>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。株式・投資信託・FX・外国証券等の取引は元本保証がなく、相場変動等により損失が生じる場合があります。取引開始前に、契約締結前交付書面や商品説明書、目論見書等を必ずご確認のうえ、<strong>ご自身の判断と責任</strong>でお取引ください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</body>
+</html>

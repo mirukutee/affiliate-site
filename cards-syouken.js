@@ -37,10 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <span>三菱UFJ eスマート<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
       </a>
       
-      <a href="https://tousiportal.jp/Webull.html" class="card">
-        <img src="Xcard/imagesender (3).png" alt="Webull証券のバナー" loading="lazy" width="300" height="250">
-        <span>Webull証券<br><small class="fee-rating" data-stars="1" data-draft="true">手数料</small></span>
-      </a>
+
 
       <a href="https://tousiportal.jp/saxo.html" class="card">
         <img src="Xcard/300x250_Banner_Affiliate_AT_Stocks.png" alt="SAXO証券のバナー" loading="lazy" width="300" height="250">

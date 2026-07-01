@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+
+  <link rel="canonical" href="https://tousiportal.jp/rikaku-toha.html" />
+
+  <title>利益確定（利確）とは？初心者向けにタイミングと考え方を解説</title>
+  <meta name="description" content="利益確定（利確）とは何かを投資初心者向けに解説。利益確定の意味、損切りとの違い、タイミングの考え方、やりがちな失敗、出口戦略・リスクリワードとの関係を中立的に整理します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="利益確定（利確）とは？初心者向けにタイミングと考え方を解説" />
+  <meta property="og:description" content="利益が出たときに迷いやすい売却判断を、初心者向けに中立的に整理。利確の基本、タイミング、失敗例、投資ルールとの関係を解説します。" />
+  <meta property="og:url" content="https://tousiportal.jp/rikaku-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/rikaku-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="利益確定（利確）とは？初心者向けにタイミングと考え方を解説" />
+  <meta name="twitter:description" content="利益確定の基本とタイミングの考え方を、株式投資・FXの両方に応用できる形でやさしく解説します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/rikaku-toha.webp" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="amphtml" href="rikaku-toha-amp.html" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * { box-sizing: border-box; }
+    .kiji-page { overflow-x: hidden; }
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video {
+      max-width: 100%;
+      height: auto;
+    }
+    .kiji-page .kiji-hero-image {
+      width: 100%;
+      max-width: 520px;
+      margin: 16px 0 0;
+      border-radius: 16px;
+      box-shadow: var(--kiji-shadow-mini);
+    }
+    .kiji-page .purpose-nav {
+      width: 100%;
+      min-width: 0;
+    }
+    .kiji-page .purpose-nav a {
+      min-width: 0;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.35;
+    }
+    .kiji-page .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .kiji-page .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+    .kiji-page .table-modern {
+      width: max-content;
+      min-width: 720px;
+      max-width: none;
+    }
+    @media (max-width: 960px) {
+      .kiji-page .container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+      }
+      .kiji-page aside,
+      .kiji-page #sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+      .kiji-page #main.kiji-main {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main { padding: 0.75rem; }
+      .kiji-page .breadcrumb {
+        padding: 0.65rem 0.75rem;
+        margin: 0.2rem 0 0.75rem;
+      }
+      .kiji-page .kiji-article { gap: 16px; }
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+      .kiji-page .kiji-title {
+        font-size: clamp(1.28rem, 6vw, 1.58rem);
+        line-height: 1.42;
+      }
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p {
+        font-size: 0.94rem;
+        line-height: 1.75;
+      }
+      .kiji-page .kiji-tags li { font-size: 0.8rem; }
+      .kiji-page .purpose-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .kiji-page .purpose-nav a {
+        width: 100%;
+        min-height: 42px;
+        padding: 0.55em 0.5em;
+        font-size: 0.86rem;
+      }
+      .kiji-page .table-modern {
+        min-width: 640px;
+        font-size: 0.82rem;
+      }
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td { padding: 9px 10px; }
+    }
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main { padding: 0.55rem; }
+      .kiji-page .purpose-nav { grid-template-columns: 1fr; }
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer { padding: 14px 12px; }
+      .kiji-page .table-modern {
+        min-width: 560px;
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://tousiportal.jp/index.html"},
+      {"@type":"ListItem","position":2,"name":"記事","item":"https://tousiportal.jp/column.html"},
+      {"@type":"ListItem","position":3,"name":"利益確定（利確）とは","item":"https://tousiportal.jp/rikaku-toha.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "利益確定（利確）とは？初心者向けにタイミングと考え方を解説",
+    "description": "利益確定（利確）とは何かを投資初心者向けに解説。利益確定の意味、損切りとの違い、タイミングの考え方、やりがちな失敗、出口戦略・リスクリワードとの関係を中立的に整理します。",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "mainEntityOfPage": "https://tousiportal.jp/rikaku-toha.html",
+    "inLanguage": "ja",
+    "author": {"@type":"Organization","name":"投資ポータル"},
+    "publisher": {"@type":"Organization","name":"投資ポータル"},
+    "image": "https://tousiportal.jp/sonota/rikaku-toha.webp"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"利益確定（利確）とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"利益確定（利確）とは、保有している株式やFXなどの含み益がある状態で売却・決済し、利益を確定させる行動のことです。価格が動いている間の含み益は変動するため、売却や決済によって利益を確保します。"}},
+      {"@type":"Question","name":"利益確定は早い方が良いですか？","acceptedAnswer":{"@type":"Answer","text":"必ず早い方が良いとは限りません。早すぎる利確は利益を伸ばす機会を小さくする場合があり、遅すぎる利確は利益を減らす場合があります。事前に決めた投資ルールや目標価格に沿って判断することが大切です。"}},
+      {"@type":"Question","name":"利益確定のタイミングはどう決めればいいですか？","acceptedAnswer":{"@type":"Answer","text":"目標価格に到達したとき、投資ルールに達したとき、相場環境が変化したとき、出口戦略に沿うときなどを目安に考えます。絶対的な正解はないため、自分の投資目的やリスクリワードと合わせて判断します。"}},
+      {"@type":"Question","name":"初心者は利益が出たらすぐ売るべきですか？","acceptedAnswer":{"@type":"Answer","text":"利益が出たらすぐ売るという考え方も一つですが、毎回感情で判断するとルールが崩れやすくなります。初心者ほど、買う前に利確の目安、損切りの目安、保有期間を決めておくと判断しやすくなります。"}}
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">利益確定（利確）とは</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Investment Method</p>
+              <h1 class="kiji-title">利益確定（利確）とは？初心者向けにタイミングと考え方を解説</h1>
+              <p class="kiji-lead">
+                投資では「いつ買うか」だけでなく、「いつ売るか」も大切です。利益が出ていても、売るタイミングは簡単ではありません。「まだ上がるかも」「今売ると早すぎるかも」と迷いやすく、利益確定には心理的な揺れが生まれます。この記事では、利益確定の基本とタイミングの考え方を、株式投資とFXの両方に応用しやすい形で整理します。
+              </p>
+              <ul class="kiji-tags" aria-label="この記事でわかること">
+                <li>利益確定の意味</li>
+                <li>利確と損切りの違い</li>
+                <li>利確タイミングの考え方</li>
+                <li>出口戦略との関係</li>
+              </ul>
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#timing">タイミングを見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#faq">FAQを見る</a>
+              </div>
+              <img class="kiji-hero-image" src="sonota/rikaku-toha.webp" alt="利益確定の考え方を初心者向けに整理した教材画像" width="1200" height="630" loading="lazy" decoding="async">
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">利確は「利益を確保する行動」。正解探しより、事前ルールが大切</h2>
+                <ul class="kiji-check-list">
+                  <li>含み益は確定するまで増減する</li>
+                  <li>利益確定に絶対的な正解はない</li>
+                  <li>目標価格・投資ルール・相場環境で判断する</li>
+                  <li>損切りやリスクリワードとセットで考える</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#meaning">利確とは</a>
+          <a href="#difficulty">難しい理由</a>
+          <a href="#timing">タイミング</a>
+          <a href="#mistake">失敗例</a>
+          <a href="#point">ポイント</a>
+          <a href="#links">関連リンク</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section id="meaning" class="kiji-section" aria-labelledby="meaning-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Meaning</p>
+            <h2 class="kiji-section__title" id="meaning-title">利益確定（利確）とは？</h2>
+            <p class="kiji-section__text">
+              利益確定とは、保有している金融商品に利益が出ている状態で売却・決済し、利益を確定させることです。株式投資では保有株を売却すること、FXでは保有しているポジションを決済することが、利確にあたります。
+            </p>
+          </div>
+
+          <div class="kiji-compare-box">
+            <div class="kiji-compare-box__item">
+              <h3>利確</h3>
+              <p>利益が出ている状態で売却・決済し、利益を確保する行動です。含み益を実現益に変える判断とも言えます。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>損切り</h3>
+              <p>損失が出ている状態で売却・決済し、損失の拡大を防ぐ行動です。資金を守るための判断です。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>共通点</h3>
+              <p>どちらも「売る・決済する」判断です。感情ではなく、事前に決めたルールに沿って行うことが重要です。</p>
+            </div>
+          </div>
+
+          <p class="kiji-section__text">
+            含み益は、画面上では利益に見えても、価格が下がれば減ってしまいます。利確は、その変動する利益を一度確保するための行動です。ただし、利確した後に価格がさらに上がることもあるため、「必ずここが正解」というタイミングはありません。
+          </p>
+        </section>
+
+        <section id="difficulty" class="kiji-section" aria-labelledby="difficulty-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Psychology</p>
+            <h2 class="kiji-section__title" id="difficulty-title">なぜ利益確定は難しいのか？</h2>
+            <p class="kiji-section__text">
+              利益確定が難しい理由は、価格の予測だけではなく、心理面にもあります。利益が出ると安心する一方で、「もっと伸びるかもしれない」という期待も生まれます。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">期待</p>
+              <h3 class="kiji-info-card__title">もっと利益が伸びるかもしれない</h3>
+              <p class="kiji-info-card__text">上昇しているときほど、今売るのがもったいなく感じます。その結果、目標を超えても売れないことがあります。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">不安</p>
+              <h3 class="kiji-info-card__title">利益が減るのが怖い</h3>
+              <p class="kiji-info-card__text">少し下がっただけで不安になり、予定より早く売ってしまう場合があります。短期の値動きに振り回されやすくなります。</p>
+            </section>
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">欲張り</p>
+              <h3 class="kiji-info-card__title">利益を取り切ろうとしてしまう</h3>
+              <p class="kiji-info-card__text">天井で売ろうとすると判断が難しくなります。結果的に、利益が減ってから慌てて売ることもあります。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="timing" class="kiji-section" aria-labelledby="timing-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Timing</p>
+            <h2 class="kiji-section__title" id="timing-title">利益確定を考えるタイミング</h2>
+            <p class="kiji-section__text">
+              利益確定のタイミングに絶対的な正解はありません。初心者は、感覚だけで売るよりも、いくつかの判断基準を持っておくと迷いにくくなります。
+            </p>
+          </div>
+
+          <div class="kiji-stack">
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">目標価格に到達したとき</h3>
+              <p>たとえば「1,000円で買った株が1,150円になったら一部売る」「FXで想定した値幅まで動いたら決済する」など、買う前に目標を決めておく方法です。目標を決めておくと、価格が動いた後に感情で迷いにくくなります。</p>
+            </section>
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">投資ルールに達したとき</h3>
+              <p>「利益が10％出たら半分売る」「損失許容額の2倍の利益が出たら利確を検討する」など、自分の投資ルールに沿って判断する方法です。毎回の判断を統一しやすくなります。</p>
+            </section>
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">相場環境が変化したとき</h3>
+              <p>上昇トレンドが崩れた、重要なニュースが出た、相場全体が不安定になったなど、保有理由が変わったときは利確を考えるきっかけになります。株式投資でもFXでも、環境変化の確認は重要です。</p>
+            </section>
+            <section class="kiji-panel">
+              <h3 class="kiji-panel__title">出口戦略に沿って判断するとき</h3>
+              <p>出口戦略とは、買う前に「どこで売るか」「どこまで損失を許容するか」「どの条件なら保有を続けるか」を決める考え方です。利確だけでなく、損切りや保有継続の条件もセットで考えると整理しやすくなります。</p>
+            </section>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="利益確定のタイミング比較表">
+              <table class="table-modern">
+                <caption>利益確定を考える主なタイミング</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">タイミング</th>
+                    <th scope="col">考え方</th>
+                    <th scope="col">具体例</th>
+                    <th scope="col">初心者の注意点</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">目標価格</th>
+                    <td>事前に決めた価格で売却・決済する</td>
+                    <td>購入価格から10％上がったら一部利確</td>
+                    <td>後から目標を何度も変えない</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">投資ルール</th>
+                    <td>自分で決めた条件に沿って判断する</td>
+                    <td>損失許容額の2倍の利益で利確を検討</td>
+                    <td>損切りルールとセットで考える</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">相場環境</th>
+                    <td>保有理由や相場の流れが変わったかを見る</td>
+                    <td>上昇トレンドが崩れたら一部売却</td>
+                    <td>短期の小さな値動きだけで判断しない</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">出口戦略</th>
+                    <td>買う前に決めた売却計画に沿う</td>
+                    <td>分割利確・保有継続・損切りを事前に決める</td>
+                    <td>利確だけでなく再投資や資金管理も考える</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ 横にスクロールできます</p>
+          </div>
+        </section>
+
+        <section id="mistake" class="kiji-section" aria-labelledby="mistake-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Mistakes</p>
+            <h2 class="kiji-section__title" id="mistake-title">利益確定でやりがちな失敗</h2>
+            <p class="kiji-section__text">
+              利確は利益を守るための行動ですが、やり方によっては投資ルールが崩れる原因にもなります。初心者は次の失敗に注意しましょう。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">利益をすぐ確定してしまう</h3>
+              <p class="kiji-feature-card__text">少し利益が出ただけで不安になって売ると、損失は大きく、利益は小さくなりやすいです。損小利大の考え方と逆にならないよう注意が必要です。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">欲張りすぎて利益を逃す</h3>
+              <p class="kiji-feature-card__text">もっと上がると考え続けているうちに、相場が反転して利益が減ることがあります。天井で売ることを目指しすぎない姿勢も大切です。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">ルールを決めずに売却する</h3>
+              <p class="kiji-feature-card__text">その場の気分で売ると、毎回の判断がバラバラになります。結果を振り返っても、何が良かったのか分析しにくくなります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">感情だけで判断する</h3>
+              <p class="kiji-feature-card__text">不安、欲、焦りだけで売買すると、冷静な判断が難しくなります。価格・ルール・保有理由を分けて確認しましょう。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="point" class="kiji-section" aria-labelledby="point-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Key Points</p>
+            <h2 class="kiji-section__title" id="point-title">初心者が意識したいポイント</h2>
+            <p class="kiji-section__text">
+              利益確定は、単に「上がったら売る」だけではありません。投資全体のルール、損失管理、資金管理とつなげて考えることが大切です。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>利益確定に絶対の正解はないと理解する</strong>
+              <p>利確後にさらに上がることも、利確せずに利益が減ることもあります。完璧なタイミングを当てるより、納得できる判断基準を持つことが大切です。</p>
+            </li>
+            <li>
+              <strong>事前に売却ルールを決める</strong>
+              <p>買った後に考えると、利益や損失に感情が引っ張られやすくなります。買う前に目標価格、損切りライン、保有条件を決めておきましょう。</p>
+            </li>
+            <li>
+              <strong>損切りとのバランスを考える</strong>
+              <p>利確幅が小さく、損切り幅が大きいと、勝率が高くても資金が減る場合があります。利益と損失の幅をセットで確認することが重要です。</p>
+            </li>
+            <li>
+              <strong>リスクリワードを意識する</strong>
+              <p>どれくらいの損失を許容して、どれくらいの利益を狙うのかを考える視点です。利確の判断は、リスクリワードを崩さない範囲で考えると整理しやすくなります。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="links" class="kiji-section" aria-labelledby="links-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="links-title">あわせて読みたい関連記事</h2>
+            <p class="kiji-section__text">利益確定は、出口戦略・損小利大・リスクリワード・損切りとつなげて学ぶと理解しやすくなります。</p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a class="kiji-link-card" href="deguchi-senryaku-toha.html">
+              <span class="kiji-link-card__label">導入</span>
+              <strong class="kiji-link-card__title">出口戦略とは？</strong>
+              <span class="kiji-link-card__text">買う前に売り方を決める考え方を整理します。</span>
+            </a>
+            <a class="kiji-link-card" href="sonshou-ridai-toha.html">
+              <span class="kiji-link-card__label">利益管理</span>
+              <strong class="kiji-link-card__title">損小利大とは？</strong>
+              <span class="kiji-link-card__text">損失を小さく、利益を伸ばす考え方を確認できます。</span>
+            </a>
+            <a class="kiji-link-card" href="risk-reward-toha.html">
+              <span class="kiji-link-card__label">利益と損失</span>
+              <strong class="kiji-link-card__title">リスクリワードとは？</strong>
+              <span class="kiji-link-card__text">利確幅と損切り幅のバランスを考える基本です。</span>
+            </a>
+            <a class="kiji-link-card" href="tousi-rule.html">
+              <span class="kiji-link-card__label">投資ルール</span>
+              <strong class="kiji-link-card__title">投資ルールを決める重要性とは？</strong>
+              <span class="kiji-link-card__text">感情に流されない判断の土台を作ります。</span>
+            </a>
+            <a class="kiji-link-card" href="kachi-hajimeta-kiken.html">
+              <span class="kiji-link-card__label">心理面</span>
+              <strong class="kiji-link-card__title">勝ち始めた時が一番危険な理由</strong>
+              <span class="kiji-link-card__text">利益が出た後に判断が崩れやすい理由を整理します。</span>
+            </a>
+            <a class="kiji-link-card" href="songiri-toha.html">
+              <span class="kiji-link-card__label">損失管理</span>
+              <strong class="kiji-link-card__title">損切りとは？判断方法の例を解説</strong>
+              <span class="kiji-link-card__text">利確と対になる、資金を守る判断を学べます。</span>
+            </a>
+            <a class="kiji-link-card" href="entry-timing-toha.html">
+              <span class="kiji-link-card__label">まとめ</span>
+              <strong class="kiji-link-card__title">エントリータイミングの考え方とは？</strong>
+              <span class="kiji-link-card__text">買うタイミングと売るタイミングをセットで考えます。</span>
+            </a>
+            <a class="kiji-link-card" href="shikin-kanri-toha.html">
+              <span class="kiji-link-card__label">まとめ</span>
+              <strong class="kiji-link-card__title">資金管理とは？初心者向けに解説</strong>
+              <span class="kiji-link-card__text">利確後の資金の扱いも含めて投資全体を整えます。</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="summary" class="kiji-cta" aria-labelledby="summary-title">
+          <p class="kiji-cta__eyebrow">Summary</p>
+          <h2 class="kiji-cta__title" id="summary-title">まとめ｜利確は利益を守るための大切な判断</h2>
+          <p class="kiji-cta__text">
+            利益確定は、投資で得た利益を確保する大切な行動です。ただし、早すぎる利確は利益を伸ばす機会を小さくし、欲張りすぎると利益を逃す場合があります。大切なのは、相場の正解を当て続けることではなく、事前に決めたルールに沿って判断することです。
+          </p>
+          <p class="kiji-cta__text">
+            利確は、損切り・リスクリワード・出口戦略・資金管理とつながっています。長期的に投資を続けるためにも、利益が出たときほど冷静に判断できる準備をしておきましょう。
+          </p>
+          <div class="kiji-hero__actions">
+            <a class="kiji-btn kiji-btn--primary" href="deguchi-senryaku-toha.html">出口戦略を学ぶ</a>
+            <a class="kiji-btn kiji-btn--ghost" href="risk-reward-toha.html">リスクリワードを見る</a>
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">利益確定（利確）に関するよくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>利益確定（利確）とは何ですか？</summary>
+              <div class="faq-answer">
+                <p>利益確定（利確）とは、保有している株式やFXなどに利益が出ている状態で売却・決済し、利益を確定させることです。含み益は価格変動で増減するため、売却や決済によって利益を確保します。</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>利益確定は早い方が良いですか？</summary>
+              <div class="faq-answer">
+                <p>必ず早い方が良いとは限りません。早すぎると利益を伸ばす機会を逃す場合があり、遅すぎると利益が減る場合があります。事前に決めたルールに沿って判断することが大切です。</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>利益確定のタイミングはどう決めればいいですか？</summary>
+              <div class="faq-answer">
+                <p>目標価格、投資ルール、相場環境、出口戦略などを基準に考えます。絶対的な正解はないため、損切り幅やリスクリワードも含めて判断すると整理しやすくなります。</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>初心者は利益が出たらすぐ売るべきですか？</summary>
+              <div class="faq-answer">
+                <p>利益が出たらすぐ売るという考え方もありますが、毎回感情で判断すると一貫性がなくなります。初心者ほど、買う前に利確の目安、損切りの目安、保有継続の条件を決めておくことが重要です。</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。株式・投資信託・FX・外国証券等の取引は元本保証がなく、相場変動等により損失が生じる場合があります。取引開始前に、契約締結前交付書面や商品説明書、目論見書等を必ずご確認のうえ、<strong>ご自身の判断と責任</strong>でお取引ください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</body>
+</html>

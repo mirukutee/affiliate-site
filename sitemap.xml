@@ -478,6 +478,13 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+
+<url>
+<loc>https://tousiportal.jp/rikaku-toha.html</loc>
+<lastmod>2026-07-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->
 
@@ -688,12 +695,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
-<url>
-<loc>https://tousiportal.jp/Webull.html</loc>
-<lastmod>2026-03-14</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
+
 <url>
 <loc>https://tousiportal.jp/bloomo.html</loc>
 <lastmod>2026-03-14</lastmod>

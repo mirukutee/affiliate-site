@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+
+  <link rel="canonical" href="https://tousiportal.jp/position-size-toha.html" />
+
+  <title>ポジションサイズとは？初心者向けに考え方を解説｜資金管理とリスク管理の基本</title>
+  <meta name="description" content="ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資やFXで重要になる資金管理・損切り・リスクリワードとの関係を、初心者向けに中立的に解説します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ポジションサイズとは？初心者向けに考え方を解説" />
+  <meta property="og:description" content="1回の取引でどれくらい投資するか。ポジションサイズの基本と、資金管理・リスク管理との関係を初心者向けに整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/position-size-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/position-size-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ポジションサイズとは？初心者向けに考え方を解説" />
+  <meta name="twitter:description" content="ポジションサイズの意味と、資金管理・損切り・リスクリワードとの関係を初心者向けに解説します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/position-size-toha.webp" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="amphtml" href="position-size-toha-amp.html" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * { box-sizing: border-box; }
+    .kiji-page { overflow-x: hidden; }
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card { min-width: 0; max-width: 100%; }
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video { max-width: 100%; height: auto; }
+    .kiji-page .purpose-nav { width: 100%; min-width: 0; }
+    .kiji-page .purpose-nav a { min-width: 0; white-space: normal; text-align: center; line-height: 1.35; }
+    .kiji-page .table-responsive { width: 100%; max-width: 100%; min-width: 0; overflow: hidden; }
+    .kiji-page .table-scroll { width: 100%; max-width: 100%; min-width: 0; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+    .kiji-page .table-modern { width: max-content; min-width: 720px; max-width: none; }
+    .kiji-page .review,
+    .kiji-page .review-card { width: 100%; max-width: 100%; min-width: 0; }
+    .kiji-page .review-card { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .kiji-page .review-card img { flex: 0 1 300px; max-width: 100%; }
+
+    @media (max-width: 960px) {
+      .kiji-page .container { flex-direction: column; gap: 0; padding: 0; }
+      .kiji-page aside,
+      .kiji-page #sidebar { width: 100%; max-width: 100%; }
+      .kiji-page #main.kiji-main { width: 100%; max-width: 100%; border-radius: 0; }
+      .kiji-page .kiji-hero__inner { grid-template-columns: 1fr; }
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main { padding: 0.75rem; }
+      .kiji-page .breadcrumb { padding: 0.65rem 0.75rem; margin: 0.2rem 0 0.75rem; }
+      .kiji-page .kiji-article { gap: 16px; }
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer { padding: 16px 14px; border-radius: 16px; }
+      .kiji-page .kiji-title { font-size: clamp(1.28rem, 6vw, 1.58rem); line-height: 1.42; }
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p { font-size: 0.94rem; line-height: 1.75; }
+      .kiji-page .purpose-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .kiji-page .purpose-nav a { width: 100%; min-height: 42px; padding: 0.55em 0.5em; font-size: 0.86rem; }
+      .kiji-page .table-modern { min-width: 640px; font-size: 0.82rem; }
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td { padding: 9px 10px; }
+      .kiji-page .review-card { display: block; text-align: center; }
+      .kiji-page .review-card img { display: block; margin: 0 auto 10px; }
+    }
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main { padding: 0.55rem; }
+      .kiji-page .purpose-nav { grid-template-columns: 1fr; }
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer { padding: 14px 12px; }
+      .kiji-page .table-modern { min-width: 560px; font-size: 0.78rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ホーム","item":"https://tousiportal.jp/index.html"},
+      {"@type":"ListItem","position":2,"name":"記事","item":"https://tousiportal.jp/column.html"},
+      {"@type":"ListItem","position":3,"name":"ポジションサイズとは？","item":"https://tousiportal.jp/position-size-toha.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ポジションサイズとは？初心者向けに考え方を解説",
+    "description": "ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資やFXで重要になる資金管理・損切り・リスクリワードとの関係を初心者向けに中立的に解説します。",
+    "datePublished": "2026-07-03",
+    "dateModified": "2026-07-03",
+    "mainEntityOfPage": "https://tousiportal.jp/position-size-toha.html",
+    "inLanguage": "ja",
+    "author": {"@type":"Organization","name":"投資ポータル"},
+    "publisher": {"@type":"Organization","name":"投資ポータル"},
+    "image": "https://tousiportal.jp/sonota/position-size-toha.webp"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"ポジションサイズとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資では何株買うか、FXでは何通貨・何ロット取引するかといった資金配分の考え方に関係します。"}},
+      {"@type":"Question","name":"初心者はどれくらいの金額で投資すれば良いですか？","acceptedAnswer":{"@type":"Answer","text":"一律の正解はありません。生活費や予備資金を除いた余裕資金の範囲で、損失が出ても冷静に判断できる金額から考えることが大切です。"}},
+      {"@type":"Question","name":"ポジションサイズは毎回同じにするべきですか？","acceptedAnswer":{"@type":"Answer","text":"必ず同じにする必要はありません。ただし、毎回感情で大きく変えると資金管理が崩れやすくなるため、投資資金・損切りライン・リスク許容度に合わせたルールを決めておくと管理しやすくなります。"}},
+      {"@type":"Question","name":"ポジションサイズと資金管理の違いは何ですか？","acceptedAnswer":{"@type":"Answer","text":"ポジションサイズは1回の取引でどれくらい資金を使うかという考え方です。資金管理は、投資資金全体の配分、損失の抑え方、分割投資、余力の残し方などを含む、より広い考え方です。"}}
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ポジションサイズとは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">Position Sizing</p>
+              <h1 class="kiji-title">ポジションサイズとは？初心者向けに考え方を解説</h1>
+              <p class="kiji-lead">
+                投資初心者は「何を買うか」に注目しやすいですが、実際には「どれくらい買うか」も同じくらい重要です。ポジションサイズは、1回の取引で使う金額や数量を考えるための資金管理の基本です。この記事では、株式投資やFXにも応用できる考え方を、断定的な金額指定ではなく中立的に整理します。
+              </p>
+              <ul class="kiji-tags" aria-label="この記事でわかること">
+                <li>ポジションサイズの意味</li>
+                <li>資金管理との関係</li>
+                <li>大きくしすぎるリスク</li>
+                <li>初心者が決めるときの考え方</li>
+              </ul>
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#point">考え方を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#faq">FAQを見る</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">ポジションサイズは「利益を増やすため」だけでなく、資金を守るために考える</h2>
+                <ul class="kiji-check-list">
+                  <li>1回の取引に資金を集中させすぎない</li>
+                  <li>損切りラインとセットで考える</li>
+                  <li>精神的に耐えられる範囲に抑える</li>
+                  <li>感情ではなく事前ルールで決める</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#meaning">意味</a>
+          <a href="#importance">重要性</a>
+          <a href="#risk">大きすぎるリスク</a>
+          <a href="#point">考えるポイント</a>
+          <a href="#mistake">失敗例</a>
+          <a href="#related">関連記事</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section id="intro" class="kiji-section" aria-labelledby="intro-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Introduction</p>
+            <h2 class="kiji-section__title" id="intro-title">「何を買うか」と同じくらい「どれくらい買うか」が大切</h2>
+            <p class="kiji-section__text">
+              投資では、銘柄選びやエントリータイミングに目が向きやすいものです。しかし、同じ銘柄を買っても、少額で買う場合と資金の大半を使って買う場合では、損失が出たときの影響が大きく変わります。
+            </p>
+          </div>
+
+          <img src="sonota/position-size-toha.webp" alt="ポジションサイズと資金管理を初心者向けに整理した教材画像" width="1200" height="630" loading="lazy" decoding="async">
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">買う対象</p>
+              <h3 class="kiji-info-card__title">何を買うか</h3>
+              <p class="kiji-info-card__text">株式、投資信託、FX、ETFなど、投資対象を選ぶ視点です。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">資金配分</p>
+              <h3 class="kiji-info-card__title">どれくらい買うか</h3>
+              <p class="kiji-info-card__text">1回の取引に使う金額や数量を決める視点です。これがポジションサイズの考え方です。</p>
+            </section>
+            <section class="kiji-info-card kiji-info-card--soft">
+              <p class="kiji-info-card__eyebrow">目的</p>
+              <h3 class="kiji-info-card__title">続けられる投資にする</h3>
+              <p class="kiji-info-card__text">利益だけでなく、損失が出たときに資金と判断力を守ることが大切です。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="meaning" class="kiji-section" aria-labelledby="meaning-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Meaning</p>
+            <h2 class="kiji-section__title" id="meaning-title">ポジションサイズとは？</h2>
+            <p class="kiji-section__text">
+              ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資では「何株買うか」、FXでは「何通貨・何ロット取引するか」といった形で考えます。
+            </p>
+          </div>
+
+          <div class="kiji-stack">
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">株式投資での例</h3>
+              <p>同じ銘柄を買う場合でも、1株だけ買うのか、100株買うのか、資金の大半を使うのかでリスクは変わります。値動きの方向だけでなく、保有数量も結果に影響します。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">FXでの例</h3>
+              <p>FXでは取引数量が大きくなるほど、為替が少し動いただけでも損益が大きくなります。レバレッジを使えるため、初心者ほど数量を大きくしすぎない意識が重要です。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">資金配分を決める考え方</h3>
+              <p>ポジションサイズは「たくさん買えばよい」という話ではありません。自分の投資資金、損切りライン、リスク許容度に合わせて、無理のない範囲を考えるためのものです。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="importance" class="kiji-section" aria-labelledby="importance-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Importance</p>
+            <h2 class="kiji-section__title" id="importance-title">なぜポジションサイズが重要なのか？</h2>
+            <p class="kiji-section__text">
+              ポジションサイズを意識すると、一度の損失を抑えやすくなり、資金管理もしやすくなります。また、損益の振れ幅が大きすぎないため、感情的な売買を減らしやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">一度の損失を抑えやすい</h3>
+              <p class="kiji-feature-card__text">取引数量が小さければ、予想と反対に動いたときの損失も抑えやすくなります。資金を一度に大きく減らさないことは、投資を続けるうえで大切です。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">資金管理がしやすい</h3>
+              <p class="kiji-feature-card__text">1回の取引に使う金額を決めておくと、残りの資金や次の取引の余力を把握しやすくなります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">感情的な売買を減らせる</h3>
+              <p class="kiji-feature-card__text">ポジションが大きすぎると、少しの値動きで不安や欲が強くなります。無理のないサイズにすることで、冷静に判断しやすくなります。</p>
+            </section>
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">長期的に続けやすい</h3>
+              <p class="kiji-feature-card__text">投資は一度の取引で終わりではありません。資金を守りながら経験を積むためにも、継続できるサイズを考えることが重要です。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="risk" class="kiji-section" aria-labelledby="risk-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Risk</p>
+            <h2 class="kiji-section__title" id="risk-title">ポジションサイズを大きくしすぎるリスク</h2>
+            <p class="kiji-section__text">
+              ポジションサイズを大きくしすぎると、損失額だけでなく心理面にも影響が出ます。初心者ほど「少しなら大丈夫」と考えて大きくしがちですが、冷静な判断を保てるかも重要な判断材料です。
+            </p>
+          </div>
+
+          <div class="kiji-stack">
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">損失が大きくなる</h3>
+              <p>たとえば、同じ5％の下落でも、1万円の投資なら500円の損失、10万円の投資なら5,000円の損失になります。値動きの割合が同じでも、投資金額が大きいほど実際の損失額は大きくなります。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">精神的な負担が増える</h3>
+              <p>含み損が大きくなると、チャートを何度も見たり、仕事や生活中も気になったりすることがあります。自分が落ち着いて見られる範囲に収めることも、リスク管理の一部です。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">冷静な判断ができなくなる</h3>
+              <p>損失が大きいと、事前に決めた損切りラインを守れなくなることがあります。「少し戻ったら売る」と考えているうちに、判断が遅れる場合もあります。</p>
+            </div>
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">ナンピンや無理な取引につながる</h3>
+              <p>大きな含み損を抱えると、平均取得単価を下げようとして追加で買い増すことがあります。計画的な分割投資ではなく、損失を取り返すためのナンピンになると、さらに資金が偏りやすくなります。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="point" class="kiji-section" aria-labelledby="point-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Point</p>
+            <h2 class="kiji-section__title" id="point-title">ポジションサイズを考える際のポイント</h2>
+            <p class="kiji-section__text">
+              ポジションサイズに絶対的な正解はありません。大切なのは、投資資金全体・損切りライン・リスク許容度・資金管理ルールを組み合わせて考えることです。
+            </p>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="ポジションサイズを考えるポイントの表">
+              <table class="table-modern">
+                <caption>ポジションサイズを決めるときの確認ポイント</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">確認ポイント</th>
+                    <th scope="col">考えること</th>
+                    <th scope="col">初心者の見方</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">投資資金全体とのバランス</th>
+                    <td>1回の取引に資金を集中させすぎていないか</td>
+                    <td>余力を残しておくと、急な値動きにも対応しやすい</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">損切りラインとの関係</th>
+                    <td>損切りした場合に、いくら損失になるか</td>
+                    <td>価格だけでなく、数量を合わせて考える</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">リスク許容度</th>
+                    <td>損失が出ても生活や心理に大きく影響しないか</td>
+                    <td>不安で眠れないサイズは大きすぎる可能性がある</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">資金管理ルール</th>
+                    <td>毎回の取引で守る基準を決めているか</td>
+                    <td>気分で金額を変えすぎないようにする</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ 横にスクロールできます</p>
+          </div>
+
+          <div class="kiji-note-box">
+            <ul class="kiji-bullet-list">
+              <li>「何％が正解」と断定できるものではありません。</li>
+              <li>投資資金や生活費、経験、投資期間によって適切なサイズは変わります。</li>
+              <li>迷う場合は、利益の大きさよりも資金を守れるかを優先して考えましょう。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="mistake" class="kiji-section" aria-labelledby="mistake-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Mistake</p>
+            <h2 class="kiji-section__title" id="mistake-title">初心者がやりがちな失敗</h2>
+            <p class="kiji-section__text">
+              ポジションサイズの失敗は、知識不足だけでなく感情から起こることもあります。特に、利益が出た直後や損失を取り返したい場面では、取引額を急に大きくしやすいため注意が必要です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">失敗例 01</p>
+              <h3 class="kiji-info-card__title">一度に全額投資する</h3>
+              <p class="kiji-info-card__text">余力を残さず買ってしまうと、下落時に対応しにくくなります。追加投資や損切りの判断も難しくなります。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">失敗例 02</p>
+              <h3 class="kiji-info-card__title">利益が出たから急に投資額を増やす</h3>
+              <p class="kiji-info-card__text">勝ちが続くと自信が大きくなり、普段より大きな取引をしたくなることがあります。成功体験の直後ほどルール確認が必要です。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">失敗例 03</p>
+              <h3 class="kiji-info-card__title">損失を取り返そうとして投資額を増やす</h3>
+              <p class="kiji-info-card__text">損失後に取引額を大きくすると、さらに損失が膨らむ可能性があります。取り返す意識よりも、資金を守る判断が大切です。</p>
+            </section>
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">失敗例 04</p>
+              <h3 class="kiji-info-card__title">毎回投資額が変わる</h3>
+              <p class="kiji-info-card__text">理由なく金額や数量が変わると、損益の振れ幅も安定しません。自分なりの基準を作ると振り返りやすくなります。</p>
+            </section>
+          </div>
+        </section>
+
+        <section id="mindset" class="kiji-section" aria-labelledby="mindset-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Mindset</p>
+            <h2 class="kiji-section__title" id="mindset-title">初心者が意識したいこと</h2>
+            <p class="kiji-section__text">
+              ポジションサイズは、利益を最大化するためだけの考え方ではありません。むしろ初心者にとっては、損失を抑え、冷静に続けるための土台として考える方が自然です。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>ポジションサイズに正解はない</strong>
+              <p>投資資金、生活状況、経験、投資対象によって適切なサイズは変わります。他人の金額をそのまま真似する必要はありません。</p>
+            </li>
+            <li>
+              <strong>自分の資金に合ったルールを決める</strong>
+              <p>1回の取引で使う上限、損切り時の最大損失、追加投資する条件などを事前に決めておくと判断がぶれにくくなります。</p>
+            </li>
+            <li>
+              <strong>利益よりも資金を守ることを優先する</strong>
+              <p>大きく勝つことよりも、投資を続けられる状態を保つことが大切です。資金が残っていれば、次の機会を待つことができます。</p>
+            </li>
+            <li>
+              <strong>継続できる投資を目指す</strong>
+              <p>無理な取引は一時的に利益が出ても、長く続けるのが難しくなります。自分が冷静でいられるサイズを基準にしましょう。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="summary" class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ｜ポジションサイズは資金管理の基本</h2>
+            <p class="kiji-section__text">
+              ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資でもFXでも、資金をどれくらい使うかによって、損失額や心理的な負担は大きく変わります。
+            </p>
+          </div>
+
+          <div class="kiji-note-box">
+            <ul class="kiji-bullet-list">
+              <li>ポジションサイズは資金管理の基本です。</li>
+              <li>一度の取引に資金を集中させすぎないことが重要です。</li>
+              <li>損切りラインやリスクリワードと合わせて考えると整理しやすくなります。</li>
+              <li>長期的に投資を続けるための土台として、無理のないサイズを意識しましょう。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="related" class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="related-title">ポジションサイズとあわせて読みたい関連記事</h2>
+            <p class="kiji-section__text">
+              ポジションサイズは、資金管理・損切り・リスクリワード・投資ルールとつながっています。あわせて読むと、投資判断の全体像を整理しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <a class="kiji-link-card" href="shikin-kanri-toha.html">
+              <span class="kiji-link-card__label">資金管理</span>
+              <strong class="kiji-link-card__title">資金管理とは？初心者向けに解説</strong>
+              <span class="kiji-link-card__text">ポジションサイズを考える前提になる、資金全体の守り方を整理します。</span>
+            </a>
+            <a class="kiji-link-card" href="ikkatsu-bunkatsu-tousi.html">
+              <span class="kiji-link-card__label">資金配分</span>
+              <strong class="kiji-link-card__title">一括投資と分割投資の違いとは？</strong>
+              <span class="kiji-link-card__text">一度に投資するか、分けて投資するかの考え方を確認できます。</span>
+            </a>
+            <a class="kiji-link-card" href="songiri-line-kimekata.html">
+              <span class="kiji-link-card__label">リスク管理</span>
+              <strong class="kiji-link-card__title">損切りラインの決め方とは？</strong>
+              <span class="kiji-link-card__text">ポジションサイズとセットで考えたい、損失を限定する考え方です。</span>
+            </a>
+            <a class="kiji-link-card" href="risk-reward-toha.html">
+              <span class="kiji-link-card__label">利益と損失</span>
+              <strong class="kiji-link-card__title">リスクリワードとは？</strong>
+              <span class="kiji-link-card__text">損失幅と利益幅のバランスを考えるための基本です。</span>
+            </a>
+            <a class="kiji-link-card" href="sonshou-ridai-toha.html">
+              <span class="kiji-link-card__label">投資手法</span>
+              <strong class="kiji-link-card__title">損小利大とは？</strong>
+              <span class="kiji-link-card__text">損失を小さく、利益を伸ばす考え方を整理します。</span>
+            </a>
+            <a class="kiji-link-card" href="tousi-rule.html">
+              <span class="kiji-link-card__label">投資ルール</span>
+              <strong class="kiji-link-card__title">投資ルールを決める重要性とは？</strong>
+              <span class="kiji-link-card__text">感情で取引額を変えないためのルール作りを確認できます。</span>
+            </a>
+            <a class="kiji-link-card" href="kachi-hajimeta-kiken.html">
+              <span class="kiji-link-card__label">心理面</span>
+              <strong class="kiji-link-card__title">勝ち始めた時が一番危険な理由</strong>
+              <span class="kiji-link-card__text">利益が出た後に取引額を急に増やしやすい心理を整理します。</span>
+            </a>
+            <a class="kiji-link-card" href="sonshitsu-reisei-handan.html">
+              <span class="kiji-link-card__label">心理面</span>
+              <strong class="kiji-link-card__title">損失が出ると冷静な判断ができなくなる理由</strong>
+              <span class="kiji-link-card__text">含み損や焦りが判断に与える影響を確認できます。</span>
+            </a>
+            <a class="kiji-link-card" href="entry-timing-toha.html">
+              <span class="kiji-link-card__label">エントリー</span>
+              <strong class="kiji-link-card__title">エントリータイミングの考え方とは？</strong>
+              <span class="kiji-link-card__text">いつ入るかと、どれくらい入るかを分けて考えやすくなります。</span>
+            </a>
+            <a class="kiji-link-card" href="deguchi-senryaku-toha.html">
+              <span class="kiji-link-card__label">出口戦略</span>
+              <strong class="kiji-link-card__title">出口戦略とは？</strong>
+              <span class="kiji-link-card__text">利確・損切り・保有継続を事前に整理する考え方です。</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">ポジションサイズに関するよくある質問</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>ポジションサイズとは何ですか？</summary>
+              <p>ポジションサイズとは、1回の取引で投資する金額や数量のことです。株式投資では何株買うか、FXでは何通貨・何ロット取引するかといった資金配分に関係します。</p>
+            </details>
+            <details class="faq-item">
+              <summary>初心者はどれくらいの金額で投資すれば良いですか？</summary>
+              <p>一律の正解はありません。生活費や予備資金を除いた余裕資金の範囲で、損失が出ても冷静に判断できる金額から考えることが大切です。</p>
+            </details>
+            <details class="faq-item">
+              <summary>ポジションサイズは毎回同じにするべきですか？</summary>
+              <p>必ず同じにする必要はありません。ただし、毎回感情で大きく変えると資金管理が崩れやすくなるため、投資資金・損切りライン・リスク許容度に合わせたルールを決めておくと管理しやすくなります。</p>
+            </details>
+            <details class="faq-item">
+              <summary>ポジションサイズと資金管理の違いは何ですか？</summary>
+              <p>ポジションサイズは、1回の取引でどれくらい資金を使うかという考え方です。資金管理は、投資資金全体の配分、損失の抑え方、余力の残し方などを含む、より広い考え方です。</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。株式・投資信託・外国証券・FX等の取引は元本保証がなく、相場変動等により損失が生じる場合があります。取引開始前に、契約締結前交付書面や商品説明書、目論見書等を必ずご確認のうえ、<strong>ご自身の判断と責任</strong>でお取引ください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</body>
+</html>

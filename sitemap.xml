@@ -517,7 +517,13 @@
 
 <url>
 <loc>https://tousiportal.jp/yen-yasui-toha.html</loc>
-<lastmod>2026-07-06</lastmod>
+<lastmod>2026-07-08</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<loc>https://tousiportal.jp/fomc-toha.html</loc>
+<lastmod>2026-07-09</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>

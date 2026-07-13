@@ -27,10 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <span>Bloomo証券<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
       </a>
 
-      <a href="https://tousiportal.jp/moomoo-kabu.html" class="card">
-        <img src="Xcard/moomooookuchi1200675.png" alt="moomoo証券のバナー" loading="lazy" width="300" height="250">
-        <span>moomoo証券<br><small class="fee-rating" data-stars="2" data-draft="true">手数料</small></span>
-      </a>
+      
 
       <a href="https://tousiportal.jp/MUFGesmart.html" class="card">
         <img src="Xcard/34-200x200.jpg" alt="三菱UFJ eスマート証券のバナー" loading="lazy" width="300" height="250">

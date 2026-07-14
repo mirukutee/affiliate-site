@@ -1,841 +1,830 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>外為ファイネストは初心者向けじゃない｜MT4・EA自由のガチ向けFX口座を解説</title>
-  <meta name="description" content="外為ファイネストは、MT4・MT5対応、EA制限なし、スキャルピングOKの自由度が強みの国内FX口座です。初心者向けではなく、MT4を自分で動かしたい人、EAを回したい人、スプレッドや約定環境を重視する上級者向けに特徴と注意点を整理します。">
-  <link rel="canonical" href="https://tousiportal.jp/FINEST-FX.html" />
-  <link rel="amphtml" href="AMP/FINEST-FX.html" />
-
-  <meta property="og:title" content="外為ファイネストは初心者向けじゃない｜MT4・EA自由のガチ向けFX口座を解説" />
-  <meta property="og:description" content="外為ファイネストは、MT4・MT5対応、EA制限なし、スキャルピングOKの自由度が強みの国内FX口座です。初心者向けではなく、MT4を自分で動かしたい人やEAを回したい人向けに特徴と注意点を整理します。" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://tousiportal.jp/FINEST-FX.html" />
-  <meta property="og:image" content="https://tousiportal.jp/Xcard/finest-fx.webp" />
-  <meta property="og:site_name" content="投資ポータル" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
-  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="menu-card.css" />
-  <link rel="stylesheet" href="table.css" />
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="sidebar.css" />
-  <link rel="stylesheet" href="kiji.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="/hamburger-menu.css">
-<script src="/hamburger-menu.js" defer></script>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>外為ファイネストとは？MT4・MT5・EA・NDD・約定環境を解説</title>
+<meta content="外為ファイネストの特徴をMT4・MT5、EA、スキャルピング、NDD方式、約定環境から解説。MT5の21時間足、80種類以上の指標、プライスボード、バックテスト、信託保全まで整理します。" name="description"/>
+<link href="https://tousiportal.jp/FINEST-FX.html" rel="canonical"/>
+<link href="AMP/FINEST-FX.html" rel="amphtml"/>
+<meta content="外為ファイネストとは？MT4・MT5・EA・NDD・約定環境を解説" property="og:title"/>
+<meta content="外為ファイネストのMT4・MT5、EA、NDD方式、約定環境を解説。MT5の分析機能、バックテスト、プライスボード、信託保全まで中立的に整理します。" property="og:description">
+<meta content="article" property="og:type"/>
+<meta content="https://tousiportal.jp/FINEST-FX.html" property="og:url"/>
+<meta content="https://tousiportal.jp/sonota/top.png" property="og:image"/>
+<meta content="投資ポータル" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="menu-card.css" rel="stylesheet"/>
+<link href="table.css" rel="stylesheet"/>
+<link href="header.css" rel="stylesheet"/>
+<link href="sidebar.css" rel="stylesheet"/>
+<link href="kiji.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="/hamburger-menu.css" rel="stylesheet">
+<script defer="" src="/hamburger-menu.js"></script>
+<script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
       {
-        "@type":"ListItem",
-        "position":1,
-        "name":"ホーム",
-        "item":"https://tousiportal.jp/index.html"
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/index.html"
       },
       {
-        "@type":"ListItem",
-        "position":2,
-        "name":"FX一覧",
-        "item":"https://tousiportal.jp/FX-syoukai.html"
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FX一覧",
+        "item": "https://tousiportal.jp/FX-syoukai.html"
       },
       {
-        "@type":"ListItem",
-        "position":3,
-        "name":"外為ファイネスト",
-        "item":"https://tousiportal.jp/FINEST-FX.html"
+        "@type": "ListItem",
+        "position": 3,
+        "name": "外為ファイネスト",
+        "item": "https://tousiportal.jp/FINEST-FX.html"
       }
     ]
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"外為ファイネストは初心者向けじゃない｜MT4・EA自由のガチ向けFX口座を解説",
-    "author":{
-      "@type":"Organization",
-      "name":"投資ポータル"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"投資ポータル"
-    },
-    "datePublished":"2026-04-14",
-    "dateModified":"2026-04-14",
-    "inLanguage":"ja",
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://tousiportal.jp/FINEST-FX.html"
-    },
-    "image":[
-      "https://tousiportal.jp/Xcard/finest-fx.webp"
-    ],
-    "description":"外為ファイネストの特徴や向いている人・向いていない人、MT4/MT5対応、EA自由、スキャルピングOK、NDD方式の意味を整理した解説記事です。"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"外為ファイネストは初心者向けですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"初心者向けとは言いにくいです。MT4・MT5やEA運用を前提にした自由度の高い口座で、スマホ中心で簡単に始めたい人より、取引環境や自由度を重視する人向けです。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"外為ファイネストの強みは何ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"MT4・MT5対応、EA利用制限なし、スキャルピングOK、NDD方式など、自由度の高い取引環境にあります。特に自分でMT4を動かしたい人やEAを回したい人に相性が良いです。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"外為ファイネストはどんな人に向いていませんか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"スマホで手軽に始めたい人、選ぶだけの自動売買を想定している人、少額で気軽にFXを体験したい人には向きにくいです。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"MT4とMT5の両方に対応している意味は何ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"既存のMT4資産を活かしたい人にも、新しくMT5環境で運用したい人にも対応しやすい点が強みです。国内で両対応なのは、自由度を重視する人にとって価値があります。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"EAが使えるなら放置でも大丈夫ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"放置前提ではおすすめしにくいです。EA運用でも、ロット管理、バックテスト、VPSの安定性確認、相場急変時の見直しは必要です。"
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "外為ファイネストとは？MT4・MT5・EA・NDD・約定環境を解説",
+  "description": "外為ファイネストの特徴をMT4・MT5、EA、スキャルピング、NDD方式、約定環境から解説。MT5の21時間足、80種類以上の指標、プライスボード、バックテスト、信託保全まで整理します。",
+  "author": {
+    "@type": "Person",
+    "name": "投資ポータル運営者",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "投資ポータル",
+    "url": "https://tousiportal.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tousiportal.jp/favicon-192.png"
+    }
+  },
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-07-15",
+  "inLanguage": "ja",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/FINEST-FX.html"
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/top.png"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "外為ファイネストはどんな人に向いていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MT4・MT5を使った裁量トレードや、EAによるシステムトレードを自分で設計・検証・管理したい人に向いています。ロット管理やドローダウン管理まで自分で行える人と相性があります。"
       }
-    ]
-  }
-  </script>
-</head>
-
-<body id="top" class="kiji-page">
-
-  <div id="header"></div>
-
-  <div class="container">
-    <aside id="sidebar"></aside>
-
-    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
-
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-          <li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
-          <li class="breadcrumb-item active" aria-current="page">外為ファイネスト</li>
-        </ol>
-      </nav>
-
-      <section class="top-proof" aria-label="サイトの検証方針">
-        <p class="top-proof__text">
-          <strong>公開情報や取引環境の特徴、自由度、注意点を踏まえながら、向いている人と向いていない人がズレないように整理しています。</strong>
-        </p>
-      </section>
-
-      <article class="kiji-article">
-
-        <header class="kiji-hero kiji-hero--single">
-          <div class="kiji-hero__inner">
-            <div class="kiji-hero__main">
-              <p class="kiji-eyebrow">FX Guide</p>
-
-              <h1 class="kiji-title" id="page-title">外為ファイネストは初心者向けじゃない｜MT4・EA自由のガチ向けFX口座を解説</h1>
-
-              <p class="kiji-lead">
+    },
+    {
+      "@type": "Question",
+      "name": "外為ファイネストではEAを自由に使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公式案内ではMT4・MT5ともにEAの利用制限は設けられていません。自作EAや購入したEAを利用できますが、EAの品質や運用結果は利用者の検証とリスク管理に左右されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MT4とMT5はどちらを選べばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "既存のMQL4製EAやカスタムインジケーターを使う場合はMT4、MQL5環境や処理性能、複数時間足、標準インジケーターの多さを重視する場合はMT5が候補です。MQL4とMQL5には互換性がありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "外為ファイネストのMT5にはどのような特徴がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "外為ファイネストのMT5は、21種類の時間足、80種類以上のテクニカルインディケーター、プライスボードからのワンクリック発注、フォワードテストを含む検証機能に対応しています。金・日経225・NYダウなどのCFDレートも表示できますが、CFD取引自体はできません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "NDD方式なら必ず有利に約定しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NDD方式はディーラーによる手動介入を挟みにくい方式ですが、有利な価格や利益を保証するものではありません。流動性、相場急変、注文数量、レイテンシによってスプレッド拡大やスリッページが起こる可能性があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "バックテストで利益が出たEAなら実運用でも勝てますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "バックテストの成績だけで実運用の利益は保証されません。過剰最適化、スプレッド、スリッページ、レイテンシ、相場環境の変化を考慮し、デモ口座や小さいロットでフォワードテストを行うことが重要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "外為ファイネストは初心者にも向いていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1,000通貨から取引できますが、MT4・MT5の設定、EA管理、VPS、ロット管理などを自分で判断する場面が多いため、操作の簡単さを最優先する初心者向け口座とは性格が異なります。"
+      }
+    }
+  ]
+}
+</script>
+</link></link></link></meta></head>
+<body class="kiji-page" id="top">
+<div id="header"></div>
+<div class="container">
+<aside id="sidebar"></aside>
+<main aria-labelledby="page-title" class="kiji-main" id="main" role="main" tabindex="-1">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+<li class="breadcrumb-item"><a href="FX-syoukai.html">FX一覧</a></li>
+<li aria-current="page" class="breadcrumb-item active">外為ファイネスト</li>
+</ol>
+</nav>
+<section aria-label="サイトの検証方針" class="top-proof">
+<p class="top-proof__text">
+<strong>20口座以上を開設し、100時間以上比較してきた運営経験と公開情報をもとに、外為ファイネストの取引環境・自由度・注意点を中立的に整理しています。</strong>
+</p>
+</section>
+<article class="kiji-article">
+<header class="kiji-hero kiji-hero--single">
+<div class="kiji-hero__inner">
+<div class="kiji-hero__main">
+<p class="kiji-eyebrow">FX Guide</p>
+<h1 class="kiji-title" id="page-title">外為ファイネストとは？MT4・MT5・EA・NDD・約定環境を解説</h1>
+<p class="kiji-lead">
                 外為ファイネストは、
-                <strong>スマホで気軽にポチポチ始めるためのFX口座ではありません。</strong>
-                むしろ、
-                <strong>MT4 / MT5を自分で動かしたい人、優秀なEAを回したい人、スプレッドや約定環境を重視する人向けの口座</strong>です。
-                EA利用制限なし、スキャルピングOK、NDD方式といった特徴はかなり尖っていますが、
-                そのぶん
-                <strong>操作の親切さや初心者向けのわかりやすさを期待する口座でもありません。</strong>
-                いわば、
-                <strong>使える人だけが使いこなせる「上級者専用の武器屋」</strong>として見る方が、実態に近いです。
+                <strong>MT4・MT5、EA、スキャルピング、NDD方式を重視する人向けの国内FX口座</strong>です。
+                自作EAや購入したEAを利用したシステムトレードだけでなく、カスタムインジケーターを使う裁量トレードにも対応しやすく、取引スタイルを制限されにくい点が特徴です。
+                一方で、自由度が高いほど、
+                <strong>バックテスト、フォワードテスト、VPS、ロット管理、ドローダウン管理まで利用者自身が判断する範囲</strong>も広がります。
+                この記事では、単に「MT4対応」と紹介するのではなく、どのような運用ができ、どのような人には合わないのかまで整理します。
               </p>
-
-              <ul class="kiji-tags" aria-label="特徴タグ">
-                <li>MT4 / MT5対応</li>
-                <li>EA制限なし</li>
-                <li>スキャルピングOK</li>
-              </ul>
-
-              <div class="kiji-hero__actions">
-                <a href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67"
-                   class="kiji-btn kiji-btn--primary"
-                   rel="nofollow noopener noreferrer"
-                   referrerpolicy="no-referrer-when-downgrade">
+<ul aria-label="特徴タグ" class="kiji-tags">
+<li>MT4 / MT5対応</li>
+<li>EA利用制限なし</li>
+<li>NDD方式</li>
+</ul>
+<div class="kiji-hero__actions">
+<a class="kiji-btn kiji-btn--primary" href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67" referrerpolicy="no-referrer-when-downgrade" rel="nofollow sponsored noopener noreferrer">
                   外為ファイネストの公式サイトを見る
                 </a>
-                <a href="FX-syoukai.html" class="kiji-btn kiji-btn--ghost">FX一覧で比較する</a>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <section class="kiji-section" aria-labelledby="quick-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Quick View</p>
-            <h2 class="kiji-section__title" id="quick-title">最初に結論だけ知りたい人向けの要点</h2>
-            <p class="kiji-section__text">
-              外為ファイネストは、
-              <strong>「誰でも使いやすい口座」ではなく、「必要な人にだけ刺さる口座」</strong>です。
-              スマホ中心の手軽さや親切設計ではなく、
-              <strong>MT4 / MT5、EA、スキャル、約定環境の自由度</strong>を重視する人向けです。
+<a class="kiji-btn kiji-btn--ghost" href="FX-syoukai.html">FX一覧で比較する</a>
+</div>
+</div>
+</div>
+</header>
+<section aria-labelledby="quick-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Quick View</p>
+<h2 class="kiji-section__title" id="quick-title">外為ファイネストが向いている人を先に整理</h2>
+<p class="kiji-section__text">
+              結論からいえば、
+              <strong>用意された自動売買を選ぶ人ではなく、自分で取引環境を構築したい人向け</strong>です。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--3">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">向いている人</p>
-              <h3 class="kiji-info-card__title">こういう人にはかなり相性が良いです</h3>
-              <ul class="kiji-bullet-list">
-                <li>MT4 / MT5を自分で使いたい人</li>
-                <li>EAを自由に動かしたい人</li>
-                <li>海外FXは不安だが自由度は欲しい人</li>
-                <li>スプレッドや約定環境を重視する人</li>
-              </ul>
-            </section>
-
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">強み</p>
-              <h3 class="kiji-info-card__title">自由度の高さがこの口座の価値です</h3>
-              <ul class="kiji-bullet-list">
-                <li>MT4 / MT5の両方に対応</li>
-                <li>EA利用制限なし</li>
-                <li>スキャルピングOK</li>
-                <li>NDD方式で取引環境を見やすい</li>
-              </ul>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">注意点</p>
-              <h3 class="kiji-info-card__title">初心者向けの親切さを期待するとズレます</h3>
-              <ul class="kiji-bullet-list">
-                <li>スマホ中心で気軽に使う口座ではありません</li>
-                <li>設定や前提知識がないと詰まりやすいです</li>
-                <li>選ぶだけ自動売買とは別物です</li>
-                <li>EAが使えるからといって楽に勝てるわけではありません</li>
-              </ul>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="position-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Position</p>
-            <h2 class="kiji-section__title" id="position-title">外為ファイネストの立ち位置は「初心者向け口座」ではなく「上級者専用の武器屋」です</h2>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">この口座の正体</p>
-              <h3 class="kiji-info-card__title">自分で戦う人のための取引環境です</h3>
-              <p class="kiji-info-card__text">
-                外為ファイネストは、
-                <strong>用意された売買ルールを選ぶ口座でも、少額で体験しやすい入口口座でもありません。</strong>
-                どちらかといえば、
-                <strong>MT4 / MT5を自分で触り、EAや裁量を自分の考えで動かしたい人のための環境</strong>です。
-                「始める場所」ではなく、
-                <strong>使いこなせる人が選ぶ場所</strong>として見る方がズレません。
+</div>
+<div class="kiji-grid kiji-grid--3">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">向いている人</p>
+<h3 class="kiji-info-card__title">裁量・自動売買を自分で組み立てたい人</h3>
+<ul class="kiji-bullet-list">
+<li>MT4・MT5を使い分けたい人</li>
+<li>自作EAや購入EAを運用したい人</li>
+<li>カスタムインジケーターを使いたい人</li>
+<li>約定環境やレイテンシを確認したい人</li>
+</ul>
+</section>
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">強み</p>
+<h3 class="kiji-info-card__title">取引スタイルを制限されにくい環境</h3>
+<ul class="kiji-bullet-list">
+<li>MT4・MT5の両方に対応</li>
+<li>EA利用制限なし</li>
+<li>スキャルピング制限なし</li>
+<li>裁量取引と自動売買を両立しやすい</li>
+</ul>
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">注意点</p>
+<h3 class="kiji-info-card__title">自由度と同じだけ自己管理が必要</h3>
+<ul class="kiji-bullet-list">
+<li>EAの品質は利用者の選定次第です</li>
+<li>バックテストだけでは判断できません</li>
+<li>VPSや通信環境も約定結果に影響します</li>
+<li>ロット管理と停止基準が欠かせません</li>
+</ul>
+</section>
+</div>
+</section>
+<section aria-labelledby="position-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Position</p>
+<h2 class="kiji-section__title" id="position-title">外為ファイネストは「自由度の高い取引環境」で選ぶ口座</h2>
+<p class="kiji-section__text">
+              外為ファイネストの価値は、単にMT4へ対応していることではありません。
+              <strong>MT4・MT5、EA、裁量取引、スキャルピングを一つの国内口座で使い分けやすいこと</strong>にあります。
+            </p>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">取引の自由度</p>
+<h3 class="kiji-info-card__title">戦略を持ち込めることが強みです</h3>
+<p class="kiji-info-card__text">
+                自作EA、市販EA、MQL4・MQL5で作られたカスタムインジケーターを利用し、
+                <strong>システムトレードと裁量トレードを同じ運用方針の中で組み合わせやすい</strong>環境です。
+                用意されたストラテジーを選ぶ方式ではないため、売買ロジック、時間足、通貨ペア、停止条件まで自分で設計できます。
               </p>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">他の自動売買との違い</p>
-              <h3 class="kiji-info-card__title">選ぶだけ系とは思想がかなり違います</h3>
-              <p class="kiji-info-card__text">
-                アイネット証券やシストレセレクト365のような
-                <strong>「用意された戦略を選んで運用する自動売買」</strong>とは立ち位置が違います。
-                外為ファイネストは、
-                <strong>戦略そのものを自分で持ち込みたい人、EAを自由に回したい人向け</strong>です。
-                手軽さではなく、
-                <strong>制限の少なさそのものが価値</strong>になっています。
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">自己管理</p>
+<h3 class="kiji-info-card__title">自由度は利益保証を意味しません</h3>
+<p class="kiji-info-card__text">
+                EAの利用制限がないことは利点ですが、
+                <strong>過剰最適化、最大ドローダウン、相場環境の変化、スリッページを自分で確認する必要</strong>があります。
+                自動売買であっても、完全放置ではなく、稼働状況と証拠金余力を定期的に確認する運用が前提です。
               </p>
-            </section>
-          </div>
-
-          <div class="kiji-note-box" style="margin-top:14px;">
-            <p>
-              つまりこの口座は、
-              <strong>「誰にでもおすすめできる万能型」ではなく、「必要な人にだけ強く刺さる尖った環境」</strong>
-              です。ここを外すと、記事全体がぼやけやすくなります。
+</section>
+</div>
+</section>
+<section aria-labelledby="merit-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Feature</p>
+<h2 class="kiji-section__title" id="merit-title">外為ファイネストの主な特徴</h2>
+<p class="kiji-section__text">
+              機能名だけでなく、実際の運用で何ができるかを整理します。
             </p>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="merit-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Merit</p>
-            <h2 class="kiji-section__title" id="merit-title">外為ファイネストの強み</h2>
-            <p class="kiji-section__text">
-              この口座の魅力は、
-              <strong>余計な親切機能ではなく、取引環境の自由度と尖った実用性</strong>にあります。
+</div>
+<div class="kiji-grid kiji-grid--3">
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">01</span>
+<h3 class="kiji-feature-card__title">MT4・MT5の両方に対応</h3>
+<ul class="kiji-bullet-list">
+<li>既存のMQL4資産を活かせます</li>
+<li>MQL5環境へ移行する選択肢もあります</li>
+<li>裁量・EAの運用方針で使い分けられます</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">02</span>
+<h3 class="kiji-feature-card__title">EAの利用制限がありません</h3>
+<ul class="kiji-bullet-list">
+<li>自作EAと購入EAを利用できます</li>
+<li>複数EAの組み合わせも検討できます</li>
+<li>運用停止基準は自分で設定します</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">03</span>
+<h3 class="kiji-feature-card__title">スキャルピング制限なし</h3>
+<ul class="kiji-bullet-list">
+<li>短期売買を前提に戦略を組めます</li>
+<li>裁量・EAの両方で利用できます</li>
+<li>スプレッドと約定結果の確認が重要です</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">04</span>
+<h3 class="kiji-feature-card__title">NDD方式を採用</h3>
+<ul class="kiji-bullet-list">
+<li>ディーラー介入を挟みにくい方式です</li>
+<li>約定の透明性を重視する人向けです</li>
+<li>スリッページがなくなるわけではありません</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">05</span>
+<h3 class="kiji-feature-card__title">1,000通貨から取引可能</h3>
+<ul class="kiji-bullet-list">
+<li>小さいロットで検証を始められます</li>
+<li>フォワードテストに利用しやすいです</li>
+<li>少額でもレバレッジ管理は必要です</li>
+</ul>
+</section>
+</div>
+</section>
+<section aria-labelledby="mt-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">MT4 / MT5</p>
+<h2 class="kiji-section__title" id="mt-title">MT4・MT5の違いと外為ファイネストでできること</h2>
+<p class="kiji-section__text">
+      MT4とMT5は、対応するEA・カスタムインジケーター、処理性能、時間足、分析機能が異なります。
+      <strong>既存のMQL4資産を重視するならMT4、裁量分析と高速な検証環境を重視するならMT5</strong>が基本的な選び方です。
+      MQL4とMQL5には直接の互換性がないため、利用予定のEAやインジケーターを先に確認します。
+    </p>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">MT4</p>
+<h3 class="kiji-info-card__title">既存EA・カスタムインジケーターを活かしやすい</h3>
+<p class="kiji-info-card__text">
+        MT4は長年利用されてきたため、MQL4で開発されたEAやカスタムインジケーターの選択肢が豊富です。
+        すでに運用しているEA、テンプレート、設定ファイルを継続したい人に向きます。
+        一方で32bit環境のため、大量のヒストリカルデータや複数条件を使う検証では処理時間が長くなる場合があります。
+      </p>
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">MT5</p>
+<h3 class="kiji-info-card__title">処理性能・多時間足分析・裁量発注を重視する人向け</h3>
+<p class="kiji-info-card__text">
+        MT5は64bit環境で、外為ファイネストの案内では<strong>21種類の時間足と80種類以上のテクニカルインディケーター</strong>を利用できます。
+        複数チャートや複数インジケーターを表示しながら、短期足と上位足を組み合わせたマルチタイムフレーム分析を行いやすい点が特徴です。
+        ただし、分析機能が増えても取引精度や収益性が自動的に高まるわけではありません。
+      </p>
+</section>
+</div>
+<div class="kiji-grid kiji-grid--3" style="margin-top:14px;">
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">01</span>
+<h3 class="kiji-feature-card__title">進化したプライスボード</h3>
+<ul class="kiji-bullet-list">
+<li>複数通貨ペアのレート・スプレッド・高値・安値を一覧表示</li>
+<li>SELL・BUYパネルからワンクリック発注が可能</li>
+<li>短期の裁量取引で監視から発注まで進めやすい</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">02</span>
+<h3 class="kiji-feature-card__title">21種類の時間足</h3>
+<ul class="kiji-bullet-list">
+<li>MT4の9種類に対してMT5は21種類</li>
+<li>2分足・3分足・6分足・12分足なども選択可能</li>
+<li>スキャルピングやデイトレードの検証幅を広げやすい</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">03</span>
+<h3 class="kiji-feature-card__title">80種類以上のテクニカル指標</h3>
+<ul class="kiji-bullet-list">
+<li>トレンド系・オシレーター系を幅広く利用可能</li>
+<li>複数指標を組み合わせた裁量分析に対応</li>
+<li>カスタムインジケーターで表示環境を調整できる</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">04</span>
+<h3 class="kiji-feature-card__title">バックテスト機能を強化</h3>
+<ul class="kiji-bullet-list">
+<li>64bit環境で大量データを処理しやすい</li>
+<li>検証期間を分けたフォワードテストに対応</li>
+<li>グラフを使って損益推移やドローダウンを確認できる</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">05</span>
+<h3 class="kiji-feature-card__title">他市場のレートを確認</h3>
+<ul class="kiji-bullet-list">
+<li>金・日経225・NYダウなどのCFDレートを表示可能</li>
+<li>株価指数や金価格をFXの判断材料として確認できる</li>
+<li>外為ファイネストのMT5上でCFD取引はできない</li>
+</ul>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">06</span>
+<h3 class="kiji-feature-card__title">モバイル機能も拡張</h3>
+<ul class="kiji-bullet-list">
+<li>ストップリミット注文に対応</li>
+<li>保有ポジションの一括決済が可能</li>
+<li>EAの常時稼働はPC・VPS側の管理が基本</li>
+</ul>
+</section>
+</div>
+<div class="kiji-table-wrap" style="margin-top:14px;">
+<table class="table">
+<tbody>
+<tr><th>比較項目</th><th>MT4</th><th>MT5</th></tr>
+<tr><th>処理環境</th><td>32bit</td><td>64bit</td></tr>
+<tr><th>時間足</th><td>9種類</td><td>21種類</td></tr>
+<tr><th>標準インディケーター</th><td>50種類以上</td><td>80種類以上</td></tr>
+<tr><th>開発言語</th><td>MQL4</td><td>MQL5</td></tr>
+<tr><th>バックテスト</th><td>大量データでは時間がかかる場合あり</td><td>高速処理・フォワードテスト・グラフ分析</td></tr>
+<tr><th>気配値画面</th><td>基本的なレート表示</td><td>詳細表示・プライスボード・ワンクリック発注</td></tr>
+<tr><th>既存EAの選択肢</th><td>比較的豊富</td><td>MT4より限定される場合がある</td></tr>
+<tr><th>向いている人</th><td>既存EA・MQL4資産を継続したい人</td><td>裁量分析・処理性能・新規開発を重視する人</td></tr>
+<tr><th>互換性</th><td colspan="2">MQL4製EA・インジケーターをそのままMT5で使うことはできません</td></tr>
+</tbody>
+</table>
+</div>
+<p class="margin_min"><small>※ MT5の処理速度やバックテスト所要時間は、PC性能、データ量、EAの複雑さ、検証条件によって異なります。</small></p>
+</section>
+<section aria-labelledby="ea-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">EA Operation</p>
+<h2 class="kiji-section__title" id="ea-title">EA運用はバックテストからフォワードテストまで必要</h2>
+<p class="kiji-section__text">
+              EAを導入するだけでは運用設計は完成しません。
+              <strong>検証・稼働・監視・停止判断</strong>まで含めてシステムトレードです。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--3">
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">01</span>
-              <h3 class="kiji-feature-card__title">MT4 / MT5の両方に対応しています</h3>
-              <ul class="kiji-bullet-list">
-                <li>既存のMT4資産を活かしやすいです</li>
-                <li>MT5環境に移行したい人も候補にしやすいです</li>
-                <li>国内で両対応なのは自由度面で価値があります</li>
-              </ul>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">02</span>
-              <h3 class="kiji-feature-card__title">EA利用制限なしで動かしやすいです</h3>
-              <ul class="kiji-bullet-list">
-                <li>自作EAや市販EAを使いたい人に向いています</li>
-                <li>運営側の用意した戦略に縛られにくいです</li>
-                <li>自分で戦略を回したい人向けです</li>
-              </ul>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">03</span>
-              <h3 class="kiji-feature-card__title">スキャルピングOKの自由度があります</h3>
-              <ul class="kiji-bullet-list">
-                <li>短期売買を前提に考えやすいです</li>
-                <li>回転数を重視する人にも相性があります</li>
-                <li>細かい制限を嫌う人に向いています</li>
-              </ul>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">04</span>
-              <h3 class="kiji-feature-card__title">NDD方式で約定環境を見やすいです</h3>
-              <ul class="kiji-bullet-list">
-                <li>価格への介入が少ない環境を重視する人向けです</li>
-                <li>EAやスキャルとの相性を考えやすいです</li>
-                <li>約定の透明性を重視する人に向いています</li>
-              </ul>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">05</span>
-              <h3 class="kiji-feature-card__title">国内業者という安心感があります</h3>
-              <ul class="kiji-bullet-list">
-                <li>海外FXに抵抗がある人でも候補にしやすいです</li>
-                <li>国内環境でMT4 / MT5を使いたい人向けです</li>
-                <li>自由度と国内業者の安心感を両立しやすいです</li>
-              </ul>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="bad-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Caution</p>
-            <h2 class="kiji-section__title" id="bad-title">強い口座ですが、親切な口座ではありません</h2>
-            <p class="kiji-section__text">
-              外為ファイネストの弱点は、
-              <strong>「自由度が高い代わりに、初心者向けの親切さがかなり薄いこと」</strong>です。
-              ここを理解せずに入ると、入口で詰まりやすいです。
+</div>
+<ol class="kiji-step-list">
+<li>
+<strong>バックテストでロジックの傾向を確認する</strong>
+<p>利益だけでなく、最大ドローダウン、連敗数、取引回数、相場局面ごとの成績を確認します。パラメーターを過度に調整すると、過去相場だけに適合する過剰最適化が起こりやすくなります。</p>
+</li>
+<li>
+<strong>デモ口座や小さいロットでフォワードテストする</strong>
+<p>実時間の価格配信、スプレッド、スリッページ、レイテンシを含め、バックテストとの差を確認します。1,000通貨から取引できるため、小さいロットで検証しやすい点は利点です。</p>
+</li>
+<li>
+<strong>VPSと通信環境を整える</strong>
+<p>EAを継続稼働させる場合、PCの停止、回線切断、再起動による機会損失を抑えるためVPSが候補になります。ただし、VPSを使っても遅延や障害が完全になくなるわけではありません。</p>
+</li>
+<li>
+<strong>ロット管理と停止基準を決める</strong>
+<p>許容ドローダウン、証拠金維持率、1回の損失額、月間損失上限を決めます。EAの勝率よりも、損失局面で運用を継続できるロット設定が重要です。</p>
+</li>
+</ol>
+</section>
+<section aria-labelledby="execution-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Execution</p>
+<h2 class="kiji-section__title" id="execution-title">NDD方式・約定力・スリッページの見方</h2>
+<p class="kiji-section__text">
+              約定環境は「速い」「強い」という抽象表現だけでは判断できません。
+              <strong>注文方式、流動性、スプレッド、スリッページ、レイテンシをまとめて確認</strong>します。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">危険な点</p>
-              <h3 class="kiji-info-card__title">スマホで手軽に使いたい人には向きません</h3>
-              <ul class="kiji-bullet-list">
-                <li>スマホアプリだけで完結したい人にはズレやすいです</li>
-                <li>設定の意味がわからないと最初から苦しくなりやすいです</li>
-                <li>「なんとなく始める」タイプの口座ではありません</li>
-              </ul>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">誤解しやすい点</p>
-              <h3 class="kiji-info-card__title">EA自由 = 楽に勝てる、ではありません</h3>
-              <ul class="kiji-bullet-list">
-                <li>EAの質が悪ければ普通に負けます</li>
-                <li>バックテストと実運用は同じではありません</li>
-                <li>ロット管理や停止判断は自分で考える必要があります</li>
-              </ul>
-            </section>
-          </div>
-
-          <div class="kiji-note-box" style="margin-top:14px;">
-            <p>
-              この口座は、
-              <strong>「甘えのある初心者向けスペックで包まれた口座」ではなく、必要な人だけが使えばいいタイプ</strong>
-              です。親切設計を求める人より、
-              <strong>余計な制限がないことを価値と感じる人</strong>に向いています。
-            </p>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="mt-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">MT4 / MT5</p>
-            <h2 class="kiji-section__title" id="mt-title">MT4とMT5の両対応が嬉しい人はかなりハッキリしています</h2>
-            <p class="kiji-section__text">
-              MT4 / MT5両対応の価値は、
-              <strong>単に選べることではなく、自分の資産や運用スタイルをそのまま持ち込みやすいこと</strong>にあります。
-            </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">MT4を使いたい人</p>
-              <h3 class="kiji-info-card__title">既存EAや慣れた環境を活かしたい人向けです</h3>
-              <p class="kiji-info-card__text">
-                MT4は、既存EAやインジケーター資産を持っている人にとって、
-                まだまだ重要な環境です。
-                外為ファイネストなら、
-                <strong>海外FXに行かなくても国内でMT4を使いたい人</strong>の候補になりやすいです。
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">NDD方式</p>
+<h3 class="kiji-info-card__title">ディーラーの手動介入を挟みにくい発注方式</h3>
+<p class="kiji-info-card__text">
+                NDDはNo Dealing Deskの略で、顧客注文をディーラーが手動で処理する工程を挟みにくい方式です。
+                ただし、NDDという名称だけでECNと同一とは限らず、価格配信や注文処理の詳細は会社ごとに異なります。
               </p>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">MT5を使いたい人</p>
-              <h3 class="kiji-info-card__title">新しい環境で運用したい人にも対応しやすいです</h3>
-              <p class="kiji-info-card__text">
-                新しく始めるならMT5を考える人も多いです。
-                外為ファイネストは、
-                <strong>MT4だけに寄り切らず、MT5環境も選べる</strong>ため、
-                今後を見ながら運用したい人にも整理しやすいです。
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">約定結果</p>
+<h3 class="kiji-info-card__title">スリッページとレイテンシは実測で確認</h3>
+<p class="kiji-info-card__text">
+                注文送信から約定までの遅延をレイテンシと呼びます。相場急変時や流動性が低い時間帯は、表示価格と約定価格がずれるスリッページやスプレッド拡大が発生することがあります。
+                スキャルピングやEAでは、平均利益が小さいほど小さな約定差が成績へ影響します。
               </p>
-            </section>
-          </div>
-
-          <div class="kiji-table-wrap" style="margin-top:14px;">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th>項目</th>
-                  <th>MT4</th>
-                  <th>MT5</th>
-                </tr>
-                <tr>
-                  <th>向いている人</th>
-                  <td>既存EAや慣れた環境を活かしたい人</td>
-                  <td>新しい環境で運用したい人</td>
-                </tr>
-                <tr>
-                  <th>イメージ</th>
-                  <td>EA資産を引き継ぎやすい</td>
-                  <td>今後も見据えて使いやすい</td>
-                </tr>
-                <tr>
-                  <th>外為ファイネストでの価値</th>
-                  <td>国内でMT4を使いたい人の候補</td>
-                  <td>国内でMT5も使いたい人の候補</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="ndd-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Execution</p>
-            <h2 class="kiji-section__title" id="ndd-title">NDD方式は「魔法」ではなく、EA勢や短期売買勢が気にする環境要素です</h2>
-            <p class="kiji-section__text">
-              NDD方式という言葉だけで安心してしまうのは危険ですが、
-              <strong>スキャルやEAを回す人にとって、約定環境をどう見るかはかなり大事</strong>です。
+</section>
+</div>
+<div class="kiji-note-box" style="margin-top:14px;">
+<p>
+<strong>「約定力が高いから必ず有利」ではありません。</strong>
+              同じEAでも、通貨ペア、時間帯、注文数量、VPSの設置場所によって結果が変わるため、実口座では小さいロットから確認するのが現実的です。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">見方</p>
-              <h3 class="kiji-info-card__title">短期売買やEAでは約定の癖が気になりやすいです</h3>
-              <p class="kiji-info-card__text">
-                数秒〜数分単位の売買や、
-                条件どおりに機械的に動くEAでは、
-                <strong>価格や約定のズレに敏感になりやすい</strong>です。
-                そのため、
-                NDD方式を含む取引環境そのものに注目する意味があります。
+</div>
+</section>
+<section aria-labelledby="spread-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Spread</p>
+<h2 class="kiji-section__title" id="spread-title">スプレッドは固定値ではなく実績と変動幅で確認</h2>
+<p class="kiji-section__text">
+              外為ファイネストは主要通貨ペアのスプレッド実績を公開しています。
+              ただし、スプレッドは市場の流動性や相場変動によって変わるため、
+              <strong>広告上の最小値だけでなく、自分が取引する時間帯の実績</strong>を確認することが重要です。
+            </p>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">短期売買</p>
+<h3 class="kiji-info-card__title">取引回数が多いほどコスト差が積み上がる</h3>
+<p class="kiji-info-card__text">
+                スキャルピングや高頻度のEAでは、1回のスプレッド差が小さくても、取引回数が増えるほど累積コストへ影響します。
+                バックテスト時には現実的なスプレッドとスリッページを設定する必要があります。
               </p>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">注意</p>
-              <h3 class="kiji-info-card__title">NDDでも利益が保証されるわけではありません</h3>
-              <p class="kiji-info-card__text">
-                NDD方式だからといって、
-                自動的に勝ちやすくなるわけではありません。
-                相場急変、スリッページ、EAのロジック不良など、
-                <strong>負ける要素は普通に残ります。</strong>
-                だからこそ、
-                環境だけでなく戦略の質も必要です。
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">確認事項</p>
+<h3 class="kiji-info-card__title">早朝・指標発表時・週明けは拡大に注意</h3>
+<p class="kiji-info-card__text">
+                流動性が低下する時間帯や重要経済指標の前後では、平常時よりスプレッドが拡大する可能性があります。
+                稼働時間を限定するEAでは、サーバー時間と日本時間のずれも確認しておきます。
               </p>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="ea-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">EA</p>
-            <h2 class="kiji-section__title" id="ea-title">EA運用を前提にするなら、自由度と同時に自己管理も必要です</h2>
-            <p class="kiji-section__text">
-              外為ファイネストの魅力はEA自由度にありますが、
-              その価値を活かせるかどうかは
-              <strong>自分で運用設計をできるか</strong>にかなり左右されます。
+</section>
+</div>
+</section>
+<section aria-labelledby="fit-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Fit</p>
+<h2 class="kiji-section__title" id="fit-title">向いている人・向いていない人</h2>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">向いている人</p>
+<h3 class="kiji-info-card__title">運用環境を自分で管理できる人</h3>
+<ul class="kiji-bullet-list">
+<li>MT4・MT5を使った経験がある人</li>
+<li>EAを自分で検証・停止できる人</li>
+<li>カスタムインジケーターを使う裁量トレーダー</li>
+<li>スキャルピングや短期売買を行う人</li>
+<li>ロット管理とドローダウン管理を重視する人</li>
+</ul>
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">向いていない人</p>
+<h3 class="kiji-info-card__title">設定や検証を任せたい人には合いにくい</h3>
+<ul class="kiji-bullet-list">
+<li>スマホだけで簡単に取引したい人</li>
+<li>用意された自動売買を選ぶだけで使いたい人</li>
+<li>EAを完全放置したい人</li>
+<li>バックテストやVPSを管理したくない人</li>
+<li>初心者向けの学習導線を最優先する人</li>
+</ul>
+</section>
+</div>
+</section>
+<section aria-labelledby="spec-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Spec</p>
+<h2 class="kiji-section__title" id="spec-title">外為ファイネストの基本情報</h2>
+</div>
+<div class="kiji-table-wrap">
+<table class="table">
+<tbody>
+<tr>
+<th>サービス名</th>
+<td>外為ファイネスト</td>
+</tr>
+<tr>
+<th>対応プラットフォーム</th>
+<td>MT4 / MT5</td>
+</tr>
+<tr>
+<th>自動売買</th>
+<td>EA利用可能・利用制限なし</td>
+</tr>
+<tr>
+<th>裁量取引</th>
+<td>対応</td>
+</tr>
+<tr>
+<th>スキャルピング</th>
+<td>制限なし</td>
+</tr>
+<tr>
+<th>注文方式</th>
+<td>NDD方式</td>
+</tr>
+<tr>
+<th>最低取引数量</th>
+<td>1,000通貨</td>
+</tr>
+<tr>
+<th>MT5取扱通貨ペア</th>
+<td>25通貨ペア</td>
+</tr>
+<tr>
+<th>取引手数料</th>
+<td>無料</td>
+</tr>
+<tr>
+<th>個人コースのレバレッジ</th>
+<td>25倍</td>
+</tr>
+<tr><th>MT5時間足</th><td>21種類</td></tr><tr><th>MT5標準インディケーター</th><td>80種類以上</td></tr><tr><th>クイック入金</th><td>24時間対応・振込手数料無料・最低5,000円</td></tr><tr><th>信託保全</th><td>三井住友銀行の信託口座で区分管理</td></tr><tr><th>登録番号</th><td>関東財務局長（金商）第102号</td></tr><tr>
+<th>向いている人</th>
+<td>EA運用者 / 裁量トレーダー / スキャルピング重視 / MT4・MT5利用者</td>
+</tr>
+<tr>
+<th>注意点</th>
+<td>EA選定、VPS、ロット管理、ドローダウン管理を自分で行う必要があります</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="margin_min">
+<small>※ 取扱通貨ペア、スプレッド、取引ルール、プラットフォーム仕様などは変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
+</p>
+</section><section aria-labelledby="safety-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Safety &amp; Deposit</p>
+<h2 class="kiji-section__title" id="safety-title">信託保全・登録情報・入金環境も確認</h2>
+<p class="kiji-section__text">
+      取引ツールだけでなく、証拠金の管理方法、金融商品取引業者としての登録、入金手段も口座選びの確認項目です。
+    </p>
+</div>
+<div class="kiji-grid kiji-grid--3">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">信託保全</p>
+<h3 class="kiji-info-card__title">顧客証拠金を区分して管理</h3>
+<p class="kiji-info-card__text">外為ファイネストは、顧客から預かった証拠金を三井住友銀行の信託口座で固有財産と分けて管理すると案内しています。信託保全は会社の信用リスクに備える仕組みですが、FX取引による相場損失を補償する制度ではありません。</p>
+</section>
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">登録・加入協会</p>
+<h3 class="kiji-info-card__title">国内登録業者として運営</h3>
+<p class="kiji-info-card__text">商号は外為ファイネスト株式会社、金融商品取引業者の登録番号は関東財務局長（金商）第102号、一般社団法人金融先物取引業協会の会員番号は1586です。</p>
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">クイック入金</p>
+<h3 class="kiji-info-card__title">24時間の即時入金に対応</h3>
+<p class="kiji-info-card__text">提携金融機関のネットバンキングを利用したクイック入金に対応し、振込手数料は無料、最低入金額は5,000円です。利用可能時間や対応銀行、法人利用の条件は公式サイトで確認してください。</p>
+</section>
+</div>
+</section>
+<section aria-labelledby="flow-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Operation Flow</p>
+<h2 class="kiji-section__title" id="flow-title">外為ファイネストを使う前の確認手順</h2>
+<p class="kiji-section__text">
+              口座開設前に、使いたいEAや取引方法から逆算して環境を決めます。
             </p>
-          </div>
-
-          <ol class="kiji-step-list">
-            <li>
-              <strong>バックテストを過信しすぎない</strong>
-              <p>テスト上で強く見えても、実運用ではスプレッド拡大やスリッページ、相場環境の変化で結果がズレることがあります。</p>
-            </li>
-            <li>
-              <strong>ロット管理を先に考える</strong>
-              <p>EAの勝率やロジックより前に、どのロットで回すか、どの程度の含み損まで耐えるかを決めておく方が重要です。</p>
-            </li>
-            <li>
-              <strong>VPSや稼働安定性も意識する</strong>
-              <p>EAを継続運用するなら、通信断やPC停止のリスクも無視しにくいです。安定稼働の前提を整える方がズレにくいです。</p>
-            </li>
-            <li>
-              <strong>完全放置前提にしない</strong>
-              <p>EAでも相場急変やロジック不適合は起こります。稼働停止や見直しの判断は最終的に自分で行う必要があります。</p>
-            </li>
-          </ol>
-
-          <div class="kiji-note-box" style="margin-top:14px;">
-            <p>
-              EA自由度が高いということは、
-              <strong>運営側の制限が少ない代わりに、自分の責任で設計・検証・管理する範囲が広い</strong>
-              ということでもあります。ここを理解できる人には強い口座です。
-            </p>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="fit-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Fit</p>
-            <h2 class="kiji-section__title" id="fit-title">向いている人・向いていない人</h2>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">向いている人</p>
-              <h3 class="kiji-info-card__title">このタイプなら候補にしやすいです</h3>
-              <ul class="kiji-bullet-list">
-                <li>MT4 / MT5を使いたい人</li>
-                <li>自作EAや市販EAを動かしたい人</li>
-                <li>スキャルピングも視野に入れている人</li>
-                <li>海外FXの代替候補を探している人</li>
-                <li>取引環境の自由度を最優先する人</li>
-              </ul>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">向いていない人</p>
-              <h3 class="kiji-info-card__title">こういう人は他の口座の方が整理しやすいです</h3>
-              <ul class="kiji-bullet-list">
-                <li>スマホだけで気軽にFXを始めたい人</li>
-                <li>選ぶだけ自動売買を求める人</li>
-                <li>少額で軽く体験したい人</li>
-                <li>初心者向けの親切設計を重視する人</li>
-                <li>設定や検証を自分でやりたくない人</li>
-              </ul>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="spec-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Spec</p>
-            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
-          </div>
-
-          <div class="kiji-table-wrap">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th>サービス名</th>
-                  <td>外為ファイネスト</td>
-                </tr>
-                <tr>
-                  <th>主な立ち位置</th>
-                  <td>MT4 / MT5やEAの自由度を重視する人向けの国内FX口座</td>
-                </tr>
-                <tr>
-                  <th>向いている人</th>
-                  <td>MT4 / MT5利用者 / EA運用をしたい人 / スキャルや約定環境を重視する人</td>
-                </tr>
-                <tr>
-                  <th>向いていない人</th>
-                  <td>初心者 / スマホ中心の人 / 選ぶだけ自動売買を求める人 / 少額で軽く試したい人</td>
-                </tr>
-                <tr>
-                  <th>主な特徴</th>
-                  <td>MT4対応 / MT5対応 / EA利用制限なし / スキャルピングOK / NDD方式</td>
-                </tr>
-                <tr>
-                  <th>この口座の本質</th>
-                  <td>「始める場所」ではなく「使いこなせる人が選ぶ場所」</td>
-                </tr>
-                <tr>
-                  <th>注意点</th>
-                  <td>親切設計ではない / 前提知識が必要 / EAでも自己管理は必須</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p class="margin_min">
-            <small>※ 取引条件、スプレッド、取引ルール、対応プラットフォーム、各種仕様は変更される場合があります。最新情報は必ず公式サイトでご確認ください。</small>
-          </p>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="compare-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Compare</p>
-            <h2 class="kiji-section__title" id="compare-title">重視ポイント別の比較先</h2>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <a href="iNET.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">選ぶだけ自動売買</span>
-              <strong class="kiji-link-card__title">アイネット証券を見る</strong>
-              <span class="kiji-link-card__text">自分でEAを持ち込むより、用意された自動売買を選びたい人向け</span>
-            </a>
-
-            <a href="fujimi-fx.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">選択型の自動売買</span>
-              <strong class="kiji-link-card__title">シストレセレクト365を見る</strong>
-              <span class="kiji-link-card__text">キャラクターや戦略を比較しながら自動売買したい人向け</span>
-            </a>
-
-            <a href="matsui-FX.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">少額スタート重視</span>
-              <strong class="kiji-link-card__title">松井証券FXを見る</strong>
-              <span class="kiji-link-card__text">まずは少額でFXに慣れたい人向け</span>
-            </a>
-
-            <a href="FX-syoukai.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">一覧比較</span>
-              <strong class="kiji-link-card__title">FX一覧ページを見る</strong>
-              <span class="kiji-link-card__text">各FX口座をまとめて比較したい人向け</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="step-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Step</p>
-            <h2 class="kiji-section__title" id="step-title">口座開設から利用開始までの流れ</h2>
-            <p class="kiji-section__text">
-              外為ファイネストは、
-              <strong>口座開設だけでなく、MT4 / MT5やEA運用の前提を整えてから使う方が自然</strong>です。
-            </p>
-          </div>
-
-          <ol class="kiji-step-list">
-            <li>
-              <strong>公式サイトから口座開設を申し込む</strong>
-              <p>必要事項を入力し、本人確認や各種手続きを進めます。取引条件や最新仕様もこの時点で確認しておくとズレにくいです。</p>
-            </li>
-            <li>
-              <strong>MT4またはMT5の利用前提を整える</strong>
-              <p>自分がどちらの環境を使うかを決め、EAやインジケーターを含めた運用前提を整理します。</p>
-            </li>
-            <li>
-              <strong>必要ならEAやVPS環境も準備する</strong>
-              <p>EA運用を前提にするなら、ロジックの確認や安定稼働の環境もあわせて考える方が安全です。</p>
-            </li>
-            <li>
-              <strong>少量で確認しながら運用を始める</strong>
-              <p>最初から大きく張るより、約定感や運用挙動を確認しながら進める方が判断しやすいです。</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="faq-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">FAQ</p>
-            <h2 class="kiji-section__title" id="faq-title">よくある質問</h2>
-          </div>
-
-          <div class="faq-list">
-            <details class="faq-item">
-              <summary>
-                外為ファイネストは初心者向けですか？
+</div>
+<ol class="kiji-step-list">
+<li>
+<strong>利用するEA・インジケーターの対応環境を確認する</strong>
+<p>MQL4ならMT4、MQL5ならMT5が基本です。対応OSや必要メモリ、同時稼働数も確認します。</p>
+</li>
+<li>
+<strong>バックテスト条件を現実に近づける</strong>
+<p>スプレッド、手数料、スリッページ、取引時間を実運用に近づけます。利益だけでなく最大ドローダウンも確認します。</p>
+</li>
+<li>
+<strong>デモまたは1,000通貨でフォワードテストする</strong>
+<p>約定結果や稼働安定性を確認し、バックテストとの差が大きい場合はロジックや設定を見直します。</p>
+</li>
+<li>
+<strong>停止条件を決めてからロットを上げる</strong>
+<p>連敗数、月間損失、最大ドローダウンなどの停止基準を明文化し、問題がなければ段階的にロットを調整します。</p>
+</li>
+</ol>
+</section>
+<section aria-label="外為ファイネスト公式サイト案内" class="kiji-section kiji-banner-zone">
+<div class="kiji-note-box">
+<p class="kiji-banner-zone__text">外為ファイネストは、<strong>MT4の既存EA資産と、MT5の分析・検証・裁量発注機能を運用目的に応じて選びたい人向け</strong>の口座です。対応プラットフォーム、通貨ペア、スプレッド実績、入出金条件、取引ルールを公式サイトで確認してから判断してください。</p>
+<div class="kiji-banner-zone__square">
+<a href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67" referrerpolicy="no-referrer-when-downgrade" rel="nofollow sponsored noopener noreferrer">
+<img alt="外為ファイネスト" loading="lazy" src="https://h.accesstrade.net/sp/rr?rk=0100ptzk00od67"/>
+</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="compare-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Compare</p>
+<h2 class="kiji-section__title" id="compare-title">取引スタイル別の比較先</h2>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<a class="kiji-link-card" href="LION-FX.html">
+<span class="kiji-link-card__label">短期裁量を比較</span>
+<strong class="kiji-link-card__title">LION FXを見る</strong>
+<span class="kiji-link-card__text">スキャルピング、注文機能、裁量取引の使いやすさを比較したい人向け</span>
+</a>
+<a class="kiji-link-card" href="saxo-fx.html">
+<span class="kiji-link-card__label">分析環境を比較</span>
+<strong class="kiji-link-card__title">サクソバンク証券FXを見る</strong>
+<span class="kiji-link-card__text">多通貨ペアと高機能な裁量取引ツールを重視する人向け</span>
+</a>
+<a class="kiji-link-card" href="matsui-FX.html">
+<span class="kiji-link-card__label">少額・操作性を比較</span>
+<strong class="kiji-link-card__title">松井証券FXを見る</strong>
+<span class="kiji-link-card__text">1通貨からの少額取引やシンプルな操作性を重視する人向け</span>
+</a>
+<a class="kiji-link-card" href="fujimi-fx.html">
+<span class="kiji-link-card__label">選択型自動売買を比較</span>
+<strong class="kiji-link-card__title">シストレセレクト365を見る</strong>
+<span class="kiji-link-card__text">EAを持ち込まず、用意されたストラテジーから選びたい人向け</span>
+</a>
+<a class="kiji-link-card" href="shikin-kanri-toha.html">
+<span class="kiji-link-card__label">運用ルールを学ぶ</span>
+<strong class="kiji-link-card__title">資金管理とは？を見る</strong>
+<span class="kiji-link-card__text">ロット管理、損失上限、ドローダウン管理の基本を確認したい人向け</span>
+</a>
+<a class="kiji-link-card" href="position-size-toha.html">
+<span class="kiji-link-card__label">ロットを決める</span>
+<strong class="kiji-link-card__title">ポジションサイズとは？を見る</strong>
+<span class="kiji-link-card__text">許容損失から取引数量を計算する考え方を確認したい人向け</span>
+</a>
+<a class="kiji-link-card" href="risk-reward-toha.html">
+<span class="kiji-link-card__label">損益設計を学ぶ</span>
+<strong class="kiji-link-card__title">リスクリワードとは？を見る</strong>
+<span class="kiji-link-card__text">損切り幅と利益目標のバランスを整理したい人向け</span>
+</a>
+<a class="kiji-link-card" href="FX-syoukai.html">
+<span class="kiji-link-card__label">一覧比較</span>
+<strong class="kiji-link-card__title">FX一覧ページを見る</strong>
+<span class="kiji-link-card__text">取引ツール、自動売買、スプレッド、少額取引をまとめて比較したい人向け</span>
+</a>
+</div>
+</section>
+<section aria-labelledby="faq-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">FAQ</p>
+<h2 class="kiji-section__title" id="faq-title">外為ファイネストのよくある質問</h2>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary>
+                外為ファイネストはどんな人に向いていますか？
                 <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  初心者向けとは言いにくいです。
-                  MT4・MT5やEA運用の自由度を重視する口座で、
-                  スマホで簡単に始めたい人や、選ぶだけの自動売買を想定する人には向きにくいです。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary>
-                外為ファイネストの強みは何ですか？
+</summary>
+<div class="faq-answer">
+<p>MT4・MT5を使った裁量トレードや、EAによるシステムトレードを自分で設計・検証・管理したい人に向いています。ロット管理やドローダウン管理まで自分で行える人と相性があります。</p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+                外為ファイネストではEAを自由に使えますか？
                 <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  MT4 / MT5対応、EA利用制限なし、スキャルピングOK、NDD方式など、
-                  自由度の高い取引環境にあります。
-                  特に、自分でMT4を動かしたい人やEAを回したい人に刺さりやすいです。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary>
-                外為ファイネストはどんな人に向いていませんか？
+</summary>
+<div class="faq-answer">
+<p>公式案内ではMT4・MT5ともにEAの利用制限は設けられていません。自作EAや購入したEAを利用できますが、EAの品質や運用結果は利用者の検証とリスク管理に左右されます。</p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+                MT4とMT5はどちらを選べばよいですか？
                 <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  スマホで手軽に使いたい人、少額で軽く始めたい人、
-                  用意された自動売買戦略を選びたい人には向きにくいです。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary>
-                MT4とMT5の両方に対応している意味は何ですか？
+</summary>
+<div class="faq-answer">
+<p>既存のMQL4製EAやカスタムインジケーターを使う場合はMT4、MQL5環境や処理性能、複数時間足、標準インジケーターの多さを重視する場合はMT5が候補です。MQL4とMQL5には互換性がありません。</p>
+</div>
+</details><details class="faq-item"><summary>外為ファイネストのMT5にはどのような特徴がありますか？<span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span></summary><div class="faq-answer"><p>外為ファイネストのMT5は、21種類の時間足、80種類以上のテクニカルインディケーター、プライスボードからのワンクリック発注、フォワードテストを含む検証機能に対応しています。金・日経225・NYダウなどのCFDレートも表示できますが、CFD取引自体はできません。</p></div></details>
+<details class="faq-item">
+<summary>
+                NDD方式なら必ず有利に約定しますか？
                 <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  既存のMT4資産を活かしたい人にも、
-                  新しくMT5環境を使いたい人にも対応しやすいことです。
-                  国内で両対応なのは、自由度を重視する人にとって価値があります。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary>
-                EAが使えるなら放置でも大丈夫ですか？
+</summary>
+<div class="faq-answer">
+<p>NDD方式はディーラーによる手動介入を挟みにくい方式ですが、有利な価格や利益を保証するものではありません。流動性、相場急変、注文数量、レイテンシによってスプレッド拡大やスリッページが起こる可能性があります。</p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+                バックテストで利益が出たEAなら実運用でも勝てますか？
                 <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  放置前提ではおすすめしにくいです。
-                  EA運用でも、ロット管理、バックテスト、VPSの安定性確認、
-                  相場急変時の見直しは必要です。
-                </p>
-              </div>
-            </details>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="summary-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Summary</p>
-            <h2 class="kiji-section__title" id="summary-title">まとめ</h2>
-          </div>
-
-          <div class="kiji-note-box">
-            <p>
-              外為ファイネストは、
-              <strong>MT4 / MT5やEAの自由度を重視する人向けの国内FX口座</strong>です。
-              一方で、
-              <strong>初心者向けの親切さや、スマホ中心の手軽さを求める人には向いていません。</strong>
-            </p>
-
-            <ul class="kiji-bullet-list">
-              <li>MT4 / MT5を国内で使いたい人向け</li>
-              <li>EA利用制限なし・スキャルピングOKの自由度が強み</li>
-              <li>選ぶだけ自動売買とは立ち位置が違う</li>
-              <li>初心者向けではなく、使える人が選ぶ口座</li>
-              <li>自由度の高さと自己管理はセットで考える必要がある</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="kiji-cta">
-          <div class="kiji-cta__body">
-            <p class="kiji-cta__eyebrow">Official Site</p>
-            <h2 class="kiji-cta__title">MT4 / EA環境を重視するなら、まずは公式で最新条件を確認</h2>
-            <p class="kiji-cta__text">
-              取引条件、対応プラットフォーム、スプレッド、各種ルールは変更される場合があります。
-              外為ファイネストは誰にでも合う口座ではないぶん、
-              自分の運用スタイルと合うかを公式サイトで先に確認しておくと判断しやすいです。
-            </p>
-            <a href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67"
-               class="kiji-btn kiji-btn--primary"
-               rel="nofollow noopener noreferrer"
-               referrerpolicy="no-referrer-when-downgrade">
+</summary>
+<div class="faq-answer">
+<p>バックテストの成績だけで実運用の利益は保証されません。過剰最適化、スプレッド、スリッページ、レイテンシ、相場環境の変化を考慮し、デモ口座や小さいロットでフォワードテストを行うことが重要です。</p>
+</div>
+</details>
+<details class="faq-item">
+<summary>
+                外為ファイネストは初心者にも向いていますか？
+                <span class="faq-caret"><i class="fa-solid fa-chevron-down"></i></span>
+</summary>
+<div class="faq-answer">
+<p>1,000通貨から取引できますが、MT4・MT5の設定、EA管理、VPS、ロット管理などを自分で判断する場面が多いため、操作の簡単さを最優先する初心者向け口座とは性格が異なります。</p>
+</div>
+</details>
+</div>
+</section>
+<section class="kiji-cta">
+<div class="kiji-cta__body">
+<p class="kiji-cta__eyebrow">Official Site</p>
+<h2 class="kiji-cta__title">MT4・MT5の仕様と取引条件を公式サイトで確認</h2>
+<p class="kiji-cta__text">MT5の時間足・インディケーター・プライスボード、EA利用条件、取扱通貨ペア、スプレッド実績、クイック入金などは変更される場合があります。利用予定のEAやカスタムインジケーターとの互換性も含め、最新条件を確認してから口座を選びましょう。</p>
+<a class="kiji-btn kiji-btn--primary" href="https://h.accesstrade.net/sp/cc?rk=0100ptzk00od67" referrerpolicy="no-referrer-when-downgrade" rel="nofollow sponsored noopener noreferrer">
               外為ファイネストの公式サイトを見る
             </a>
-          </div>
-        </section>
-
-        <section class="anime-item" aria-labelledby="review-entry-title">
-          <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
-          <div class="review">
-            <a href="userreview.html" class="review-card">
-              <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-              <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
-            </a>
-          </div>
-        </section>
-
-        <div id="fx-list"></div>
-        <script src="cards-FX.js"></script>
-
-        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
-          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
-          <ul class="kiji-bullet-list">
-            <li>本ページは情報提供を目的としており、特定の金融商品の勧誘を目的としたものではありません。</li>
-            <li>取引条件、スプレッド、対応プラットフォーム、各種ルール、サービス内容は変更される場合があります。</li>
-            <li>最新情報は必ず外為ファイネストの公式サイトでご確認ください。</li>
-            <li>FX（外国為替証拠金取引）は元本保証のない金融商品であり、相場変動等により損失が生じる場合があります。</li>
-            <li>EAや自動売買を利用した場合でも利益は保証されません。相場状況や運用設計によって損失が拡大する場合があります。</li>
-            <li>預け入れた証拠金を上回る損失が発生する可能性があります。取引前に契約締結前交付書面や商品説明を十分にご確認ください。</li>
-          </ul>
-        </section>
-
-      </article>
-
-      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-
-    </main>
-  </div>
-
-  <div id="footer"></div>
-
-  <script src="include.js" defer></script>
-  <script src="sidebar.js" defer></script>
+</div>
+</section>
+<section aria-labelledby="review-entry-title" class="anime-item">
+<h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+<div class="review">
+<a class="review-card" href="userreview.html">
+<img alt="個人レビュー（証券／FX／仮想通貨）" decoding="async" loading="lazy" src="Xcard/review_300x250.jpg"/>
+<span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
+</a>
+</div>
+</section>
+<div id="fx-list"></div>
+<script src="cards-FX.js"></script>
+<section aria-labelledby="disclaimer-title" class="kiji-disclaimer">
+<h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+<ul class="kiji-bullet-list">
+<li>本ページは情報提供を目的としており、特定の金融商品の勧誘を目的としたものではありません。</li>
+<li>スプレッド、取扱通貨ペア、取引ツール、EA利用条件、取引ルール、キャンペーンなどは変更される場合があります。</li>
+<li>最新情報は必ず外為ファイネストの公式サイトでご確認ください。</li>
+<li>EAや自動売買を利用しても利益は保証されません。バックテストと実運用の結果が異なる場合があります。</li>
+<li>FX（外国為替証拠金取引）は元本保証のない金融商品であり、相場変動等により損失が生じる場合があります。</li>
+<li>相場状況によっては、預け入れた証拠金を上回る損失が発生する可能性があります。取引前に契約締結前交付書面や商品説明を十分にご確認ください。</li>
+</ul>
+</section>
+</article>
+<a aria-label="ページ上部へ" class="back-to-top" href="#top">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+</main>
+</div>
+<div id="footer"></div>
+<script defer="" src="include.js"></script>
+<script defer="" src="sidebar.js"></script>
 </body>
 </html>

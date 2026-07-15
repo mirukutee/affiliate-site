@@ -1,621 +1,698 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>マネックスの暗号資産CFDとは？特徴・仕組み・向いている人をわかりやすく解説</title>
-  <meta name="description" content="マネックスの暗号資産CFDの特徴、仕組み、現物との違い、売りから入れる点、レバレッジ、口座開設の流れ、注意点まで初心者〜中級者向けに整理。現物保有ではなく値動きを取引したい人向けのサービスです。" />
-  <link rel="canonical" href="https://tousiportal.jp/Monex-coin.html" />
-
-  <meta property="og:title" content="マネックスの暗号資産CFDとは？特徴・仕組み・向いている人をわかりやすく解説" />
-  <meta property="og:description" content="マネックスの暗号資産CFDは、暗号資産そのものを保有せずに値動きを取引するサービスです。現物との違い、売りから入れる特徴、最大2倍のレバレッジ、スマホ取引、注意点までわかりやすく整理しました。" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://tousiportal.jp/Monex-coin.html" />
-  <meta property="og:image" content="https://tousiportal.jp/sonota/top.png" />
-  <meta property="og:site_name" content="投資ポータル" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
-  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="menu-card.css" />
-  <link rel="stylesheet" href="table.css" />
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="sidebar.css" />
-  <link rel="stylesheet" href="kiji.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="amphtml" href="AMP/Monex-coin.html" />
-
-  <link rel="stylesheet" href="/hamburger-menu.css">
-<script src="/hamburger-menu.js" defer></script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {
-        "@type":"ListItem",
-        "position":1,
-        "name":"ホーム",
-        "item":"https://tousiportal.jp/index.html"
-      },
-      {
-        "@type":"ListItem",
-        "position":2,
-        "name":"仮想通貨・暗号資産関連",
-        "item":"https://tousiportal.jp/coincheck.html"
-      },
-      {
-        "@type":"ListItem",
-        "position":3,
-        "name":"マネックスの暗号資産CFD",
-        "item":"https://tousiportal.jp/Monex-coin.html"
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>マネックス 暗号資産CFDとは？差金決済・売り建て・リスクを解説</title>
+<meta content="マネックス 暗号資産CFDの差金決済、売り建て、最大2倍のレバレッジ、現物との違い、注文方法、証拠金管理とロスカットを中立的に解説します。" name="description"/>
+<link href="https://tousiportal.jp/Monex-coin.html" rel="canonical"/>
+<meta content="マネックス 暗号資産CFDとは？差金決済・売り建て・リスクを解説" property="og:title"/>
+<meta content="マネックス 暗号資産CFDの差金決済、売り建て、最大2倍のレバレッジ、現物との違い、注文方法、証拠金管理とロスカットを中立的に解説します。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tousiportal.jp/Monex-coin.html" property="og:url"/>
+<meta content="https://tousiportal.jp/sonota/top.png" property="og:image"/>
+<meta content="投資ポータル" property="og:site_name"/><meta content="ja_JP" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="style.css" rel="stylesheet">
+<link href="menu-card.css" rel="stylesheet">
+<link href="table.css" rel="stylesheet">
+<link href="header.css" rel="stylesheet">
+<link href="sidebar.css" rel="stylesheet">
+<link href="kiji.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="AMP/Monex-coin.html" rel="amphtml"/>
+<link href="/hamburger-menu.css" rel="stylesheet"/>
+<script defer="" src="/hamburger-menu.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "仮想通貨・暗号資産サービス一覧",
+      "item": "https://tousiportal.jp/#sec-crypto"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "マネックスの暗号資産CFD",
+      "item": "https://tousiportal.jp/Monex-coin.html"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/Monex-coin.html#article",
+  "headline": "マネックス 暗号資産CFDとは？差金決済・売り建て・リスクを解説",
+  "description": "マネックス 暗号資産CFDの差金決済、売り建て、最大2倍のレバレッジ、現物との違い、注文方法、証拠金管理とロスカットを中立的に解説します。",
+  "author": {
+    "@id": "https://tousiportal.jp/#person"
+  },
+  "publisher": {
+    "@id": "https://tousiportal.jp/#organization"
+  },
+  "datePublished": "2026-04-16",
+  "dateModified": "2026-07-16",
+  "inLanguage": "ja",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/Monex-coin.html"
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/top.png"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "マネックス 暗号資産CFD"
+    },
+    {
+      "@type": "Thing",
+      "name": "差金決済取引"
+    },
+    {
+      "@type": "Thing",
+      "name": "暗号資産CFD"
+    }
+  ],
+  "isPartOf": {
+    "@id": "https://tousiportal.jp/#website"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "マネックスの暗号資産CFDは現物の暗号資産を保有できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "保有できません。暗号資産を原資産とする差金決済取引であり、BTCやETHの受け渡し、外部ウォレットへの送金、積立を行うサービスではありません。"
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"マネックスの暗号資産CFDとは？特徴・仕組み・向いている人をわかりやすく解説",
-    "author":{
-      "@type":"Organization",
-      "name":"投資ポータル"
     },
-    "publisher":{
-      "@type":"Organization",
-      "name":"投資ポータル"
-    },
-    "datePublished":"2026-04-16",
-    "dateModified":"2026-04-16",
-    "inLanguage":"ja",
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://tousiportal.jp/Monex-coin.html"
-    },
-    "image":[
-      "https://tousiportal.jp/sonota/top.png"
-    ],
-    "description":"マネックスの暗号資産CFDの特徴、現物との違い、売りから入れる仕組み、レバレッジ、口座開設の流れ、注意点まで初心者〜中級者向けに整理した解説記事です。"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"マネックスの暗号資産CFDは現物の暗号資産を持つ取引ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"いいえ。暗号資産CFDは、現物の暗号資産を受け渡しせず、売買価格差によって損益が決まる差金決済取引です。ビットコインなどの値動きを取引する仕組みであり、現物を長期保有するサービスとは性格が異なります。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"マネックスの暗号資産CFDは下落相場でも利益を狙えますか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"狙えます。マネックスの暗号資産CFDは売りから入ることができるため、上昇相場だけでなく下落相場でも利益機会を探せます。ただし、相場が逆に動けば損失も発生します。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"マネックスの暗号資産CFDのレバレッジは何倍ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"原則2倍です。少額の証拠金で大きめの取引ができる一方で、値動きが逆方向に出た場合は損失も大きくなりやすいため、証拠金管理とロスカットの理解が重要です。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"マネックスの暗号資産CFDはスマホだけで取引しますか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"取引はスマートフォン専用アプリ「MONEX TRADER CRYPTO」で行います。PC版取引ツールはないため、スマホ中心で使うサービスとして考える必要があります。"
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"マネックスの暗号資産CFDを始めるには何が必要ですか？",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"証券総合取引口座を開設したうえで、暗号資産CFD口座の申込みが必要です。暗号資産CFD口座のみを単独で開設することはできません。"
-        }
+    {
+      "@type": "Question",
+      "name": "売り建てなら下落相場で必ず利益になりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必ず利益になるわけではありません。売り建て後に価格が下落すれば利益を狙えますが、上昇すれば損失になります。逆指値や取引数量の管理が必要です。"
       }
-    ]
-  }
-  </script>
-</head>
-
-<body id="top" class="kiji-page">
-
-  <div id="header"></div>
-
-  <div class="container">
-    <aside id="sidebar"></aside>
-
-    <main id="main" role="main" tabindex="-1" aria-labelledby="page-title" class="kiji-main">
-
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
-          <li class="breadcrumb-item"><a href="coincheck.html">仮想通貨・暗号資産関連</a></li>
-          <li class="breadcrumb-item active" aria-current="page">マネックスの暗号資産CFD</li>
-        </ol>
-      </nav>
-
-      <section class="top-proof" aria-label="サイトの検証方針">
-        <p class="top-proof__text">
-          <strong>国内の暗号資産口座やCFD系サービスを比較し、現物保有向けか、値動き重視の取引向けかまで含めて判断しやすいよう整理しています。</strong>
-        </p>
-      </section>
-
-      <article class="kiji-article">
-
-        <header class="kiji-hero kiji-hero--single">
-          <div class="kiji-hero__inner">
-            <div class="kiji-hero__main">
-              <p class="kiji-eyebrow">Crypto CFD Guide</p>
-              <h1 class="kiji-title" id="page-title">マネックスの暗号資産CFDとは？特徴・仕組み・向いている人をわかりやすく解説</h1>
-
-              <p class="kiji-lead">
-                マネックスの暗号資産CFDは、<strong>ビットコインやイーサリアムなどの値動きを、現物を保有せずに取引できる差金決済型サービス</strong>です。
-                売りから入れるため、上昇相場だけでなく<strong>下落相場でも利益機会を狙える</strong>のが大きな特徴で、
-                原則2倍のレバレッジにも対応しています。
-                一方で、これは現物の暗号資産を長期保有するサービスとは別物であり、
-                <strong>価格変動の大きさ・ロスカット・証拠金管理を理解したうえで使うべき取引</strong>です。
+    },
+    {
+      "@type": "Question",
+      "name": "レバレッジは何倍ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最大2倍です。必要証拠金率は原則50％以上ですが、相場状況などにより変更される場合があります。最大倍率を使うほど損益変動も大きくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "取引手数料が無料ならコストはかかりませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "取引手数料は無料ですが、ASKとBIDの差であるスプレッドがあります。また、建玉をロールオーバーした場合は、日ごとに設定されるレバレッジ手数料が発生します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ロスカットがあれば証拠金以上の損失は防げますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "防げるとは限りません。急激な価格変動や流動性低下により不利な価格で約定し、預入証拠金を上回る損失や不足金が発生する可能性があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "パソコンから取引できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "暗号資産CFDの取引はスマートフォン専用アプリ「MONEX TRADER CRYPTO」で行います。iPhoneとAndroidに対応しています。"
+      }
+    }
+  ]
+}</script>
+</link></link></link></link></link></head>
+<body class="kiji-page" id="top">
+<div id="header"></div>
+<div class="container">
+<aside id="sidebar"></aside>
+<main aria-labelledby="page-title" class="kiji-main" id="main" role="main" tabindex="-1">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+<li class="breadcrumb-item"><a href="index.html#sec-crypto">仮想通貨・暗号資産サービス一覧</a></li>
+<li aria-current="page" class="breadcrumb-item active">マネックスの暗号資産CFD</li>
+</ol>
+</nav>
+<section aria-label="サイトの検証方針" class="top-proof">
+<p class="top-proof__text">
+<strong>20口座以上を開設し100時間以上比較してきた運営視点から、現物保有向けか、短期の値動きを取引するCFD向けかを判断しやすいよう整理しています。</strong>
+</p>
+</section>
+<article class="kiji-article">
+<header class="kiji-hero kiji-hero--single">
+<div class="kiji-hero__inner">
+<div class="kiji-hero__main">
+<p class="kiji-eyebrow">Crypto CFD Guide</p>
+<h1 class="kiji-title" id="page-title">マネックス 暗号資産CFDとは？差金決済・売り建て・リスクを解説</h1>
+<p class="kiji-lead">
+                マネックスの暗号資産CFD（マネックスビットコイン）は、<strong>ビットコインなどの現物を保有せず、買値と売値の差額で損益を確定する差金決済取引</strong>です。
+                買い建てだけでなく売り建てにも対応し、上昇局面と下落局面の両方を取引対象にできます。
+                一方で、証拠金を使うレバレッジ取引のため、建玉管理、証拠金維持率、逆指値注文、ロスカットまで理解して使う必要があります。
+                <strong>積立や長期保有の代わりではなく、短期から中期の値動きを取引したい人向けのCFDサービス</strong>として判断することが重要です。
               </p>
-
-              <ul class="kiji-tags" aria-label="特徴タグ">
-                <li>売りから取引可能</li>
-                <li>原則2倍のレバレッジ</li>
-                <li>原則24時間365日取引</li>
-                <li>スマホ専用アプリ対応</li>
-              </ul>
-
-              <div class="kiji-hero__actions">
-                <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC1&SQ=0&isq=90" class="kiji-btn kiji-btn--primary" rel="nofollow noopener noreferrer sponsored" referrerpolicy="no-referrer-when-downgrade">マネックス証券の公式サイトを見る</a>
-                <a href="coincheck.html" class="kiji-btn kiji-btn--ghost">現物の暗号資産口座も比較する</a>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <section class="kiji-section" aria-labelledby="quick-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Quick View</p>
-            <h2 class="kiji-section__title" id="quick-title">マネックスの暗号資産CFDは「現物保有」ではなく「値動きを取る」サービス</h2>
-            <p class="kiji-section__text">
-              このサービスを理解するうえで大事なのは、暗号資産を買って持つ口座とは目的が違うことです。
-              まずは、特に重要なポイントを3つに絞って見ると判断しやすくなります。
+<ul aria-label="特徴タグ" class="kiji-tags">
+<li>買い建て・売り建てに対応</li>
+<li>最大2倍のレバレッジ</li>
+<li>原則24時間365日</li>
+<li>スマホ専用アプリ</li>
+</ul>
+<div class="kiji-hero__actions">
+<a class="kiji-btn kiji-btn--primary" href="https://www.tcs-asp.net/alink?AC=C137723&amp;LC=MXSEC1&amp;SQ=0&amp;isq=90" referrerpolicy="no-referrer-when-downgrade" rel="nofollow noopener noreferrer sponsored">マネックス証券の公式サイトを見る</a>
+<a class="kiji-btn kiji-btn--ghost" href="index.html#sec-crypto">仮想通貨サービス一覧と比較する</a>
+</div>
+</div>
+</div>
+</header>
+<section aria-labelledby="quick-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Quick View</p>
+<h2 class="kiji-section__title" id="quick-title">マネックス 暗号資産CFDは現物を持たずに価格差を取引するサービス</h2>
+<p class="kiji-section__text">
+              暗号資産という名称が付いていますが、取引の中心はコインの購入や送金ではありません。
+              証拠金を預けて買い建玉または売り建玉を持ち、反対売買で決済したときの価格差が損益になります。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--3">
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">何のサービス？</p>
-              <h3 class="kiji-info-card__title">現物を持たず、暗号資産の値動きを売買するCFD</h3>
-              <p class="kiji-info-card__text">
-                マネックスの暗号資産CFDは、ビットコインなどの<strong>価格差を取引する差金決済型サービス</strong>です。
-                現物の受け渡しはなく、保有目的よりも値動き重視の人に向いています。
+</div>
+<div class="kiji-grid kiji-grid--3">
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">取引の仕組み</p>
+<h3 class="kiji-info-card__title">現物の受け渡しをしない差金決済</h3>
+<p class="kiji-info-card__text">
+                BTCやETHをウォレットへ保有するのではなく、<strong>新規注文で建玉を持ち、決済注文で価格差を確定</strong>します。
+                送金や積立を目的とする現物口座とは役割が異なります。
               </p>
-            </section>
-
-            <section class="kiji-info-card">
-              <p class="kiji-info-card__eyebrow">どこが強い？</p>
-              <h3 class="kiji-info-card__title">上昇相場だけでなく、下落相場でも取引チャンスを狙える</h3>
-              <p class="kiji-info-card__text">
-                売りから入れるため、相場が下がる場面でも利益機会を探れます。
-                <strong>現物保有だけでは取りにくい局面にも対応しやすい</strong>のが特徴です。
+</section>
+<section class="kiji-info-card">
+<p class="kiji-info-card__eyebrow">取引方向</p>
+<h3 class="kiji-info-card__title">買い建てと売り建ての両方向に対応</h3>
+<p class="kiji-info-card__text">
+                上昇を予想するときは買い建て、下落を予想するときは売り建てから入れます。
+                ただし予想と逆方向へ動けば、どちらの建玉でも損失が発生します。
               </p>
-            </section>
-
-            <section class="kiji-info-card kiji-info-card--soft">
-              <p class="kiji-info-card__eyebrow">注意点</p>
-              <h3 class="kiji-info-card__title">初心者向けの現物積立とは別物。仕組み理解が前提</h3>
-              <ul class="kiji-bullet-list">
-                <li>原則2倍のレバレッジがかかる</li>
-                <li>暗号資産自体の値動きが大きい</li>
-                <li>ロスカットや不足金の可能性もある</li>
-                <li>長期保有目的には向きにくい</li>
-              </ul>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="merit-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Merit</p>
-            <h2 class="kiji-section__title" id="merit-title">マネックスの暗号資産CFDで感じる主な特徴</h2>
-            <p class="kiji-section__text">
-              このサービスの強みは、単に暗号資産関連の取引ができることではなく、
-              <strong>現物を持たずに相場へ参加できること、売りから入れること、スマホで完結しやすいこと</strong>にあります。
-              現物の長期保有ではなく、相場の動きを見て取引したい人向けの構成です。
+</section>
+<section class="kiji-info-card kiji-info-card--soft">
+<p class="kiji-info-card__eyebrow">判断の前提</p>
+<h3 class="kiji-info-card__title">短期売買向けで、長期保有や積立とは別物</h3>
+<ul class="kiji-bullet-list">
+<li>最大2倍のレバレッジがかかる</li>
+<li>建玉保有中にレバレッジ手数料が発生し得る</li>
+<li>証拠金維持率の低下でロスカット対象になる</li>
+<li>現物暗号資産の保有・送金・積立はできない</li>
+</ul>
+</section>
+</div>
+</section>
+<section aria-labelledby="spec-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Spec</p>
+<h2 class="kiji-section__title" id="spec-title">マネックスビットコインの基本情報</h2>
+<p class="kiji-section__text">
+              取引条件は変更される場合があります。以下は公式情報をもとに整理した概要で、申込み前には最新の取引ルールと契約締結前交付書面を確認してください。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--3">
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">01</span>
-              <h3 class="kiji-feature-card__title">現物の暗号資産を持たずに値動きを取引できる</h3>
-              <p class="kiji-feature-card__text">
-                CFDは現物の受け渡しがないため、
-                <strong>保管やウォレット管理よりも値動きの売買そのものに集中しやすい</strong>仕組みです。
-              </p>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">02</span>
-              <h3 class="kiji-feature-card__title">売りから入れるため、下落相場でも利益機会を探せる</h3>
-              <p class="kiji-feature-card__text">
-                現物取引では基本的に上昇待ちになりやすいですが、
-                マネックスの暗号資産CFDでは<strong>下げ相場も取引対象にしやすい</strong>のが強みです。
-              </p>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">03</span>
-              <h3 class="kiji-feature-card__title">原則24時間365日、土日を含めて相場を追いやすい</h3>
-              <p class="kiji-feature-card__text">
-                暗号資産市場の動きに合わせて、原則24時間365日取引に対応しています。
-                ただし、メンテナンス時間などは事前確認が必要です。
-              </p>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">04</span>
-              <h3 class="kiji-feature-card__title">原則2倍のレバレッジで、少額資金でも取引効率を高めやすい</h3>
-              <p class="kiji-feature-card__text">
-                預けた証拠金をもとに、より大きな金額の取引が可能です。
-                ただし、<strong>利益だけでなく損失の動きも大きくなりやすい</strong>点には注意が必要です。
-              </p>
-            </section>
-
-            <section class="kiji-feature-card">
-              <span class="kiji-feature-card__num">05</span>
-              <h3 class="kiji-feature-card__title">専用スマホアプリで注文・管理をまとめやすい</h3>
-              <p class="kiji-feature-card__text">
-                取引は<strong>スマートフォン専用アプリ「MONEX TRADER CRYPTO」</strong>で行います。
-                指値・逆指値だけでなく、OCO・IFD・IFOなどの複合注文にも対応しています。
-              </p>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="spec-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Spec</p>
-            <h2 class="kiji-section__title" id="spec-title">基本情報のまとめ</h2>
-          </div>
-
-          <div class="kiji-table-wrap">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th>サービス名</th>
-                  <td>マネックスの暗号資産CFD（マネックスビットコイン）</td>
-                </tr>
-                <tr>
-                  <th>主な立ち位置</th>
-                  <td>現物保有ではなく、暗号資産の値動きを取引する差金決済型サービス</td>
-                </tr>
-                <tr>
-                  <th>取引の特徴</th>
-                  <td>売りから取引可能 / 原則24時間365日対応 / スマホ専用アプリ取引</td>
-                </tr>
-                <tr>
-                  <th>レバレッジ</th>
-                  <td>原則2倍</td>
-                </tr>
-                <tr>
-                  <th>主な対象</th>
-                  <td>ビットコイン/円、イーサリアム/円、エックスアールピー/円など主要銘柄</td>
-                </tr>
-                <tr>
-                  <th>取引手数料</th>
-                  <td>取引手数料無料（そのほかのコストや条件は公式サイトで要確認）</td>
-                </tr>
-                <tr>
-                  <th>取引チャネル</th>
-                  <td>スマートフォン専用アプリ「MONEX TRADER CRYPTO」</td>
-                </tr>
-                <tr>
-                  <th>向いている人</th>
-                  <td>短中期で値動きを狙いたい人 / 下落相場にも対応したい人 / 現物とは別の手段を持ちたい人</td>
-                </tr>
-                <tr>
-                  <th>向きにくい人</th>
-                  <td>現物を長期保有したい人 / 積立中心で考えている人 / レバレッジやロスカットに不慣れな人</td>
-                </tr>
-                <tr>
-                  <th>注意点</th>
-                  <td>暗号資産の値動きが大きい / ロスカット水準あり / 預けた証拠金を上回る損失の可能性あり</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="cfd-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">CFD Basics</p>
-            <h2 class="kiji-section__title" id="cfd-title">暗号資産CFDとは何か？現物との違いを先に理解しておきたい</h2>
-            <p class="kiji-section__text">
-              マネックスの暗号資産CFDを検討するうえで最も大事なのは、
-              これが「暗号資産を買って保有するサービス」ではないと理解することです。
-              CFDは、価格差によって損益が決まる取引であり、現物保有とは使い方も考え方も変わります。
+</div>
+<div class="kiji-table-wrap">
+<table class="table">
+<tbody>
+<tr>
+<th>サービス名</th>
+<td>マネックスビットコイン（暗号資産CFD）</td>
+</tr>
+<tr>
+<th>取引方式</th>
+<td>暗号資産を原資産とする店頭CFD（差金決済取引）</td>
+</tr>
+<tr>
+<th>取扱銘柄</th>
+<td>BTC/JPY、ETH/JPY、XRP/JPY、BCH/JPY</td>
+</tr>
+<tr>
+<th>レバレッジ</th>
+<td>最大2倍（必要証拠金率は原則50％以上）</td>
+</tr>
+<tr>
+<th>取引方向</th>
+<td>買い建て・売り建て</td>
+</tr>
+<tr>
+<th>注文受付時間</th>
+<td>原則24時間365日（週次メンテナンスを除く）</td>
+</tr>
+<tr>
+<th>週次メンテナンス</th>
+<td>毎週水曜日12:00～15:00を基本とするため、注文・資金振替に制限あり</td>
+</tr>
+<tr>
+<th>取引手数料</th>
+<td>無料。ただし売値と買値の差であるスプレッド、建玉をロールオーバーした際のレバレッジ手数料がある</td>
+</tr>
+<tr>
+<th>主な注文方法</th>
+<td>ストリーミング、成行、指値、逆指値、OCO、IFD、IFO</td>
+</tr>
+<tr>
+<th>取引ツール</th>
+<td>スマートフォン専用アプリ「MONEX TRADER CRYPTO」（iPhone・Android）</td>
+</tr>
+<tr>
+<th>ロスカット</th>
+<td>証拠金維持率100％以下でロスカット判定。120％以下でアラート</td>
+</tr>
+<tr>
+<th>向いている人</th>
+<td>短期から中期の値動きを狙う人、下落局面でも売り建てを使いたい人、注文による損失管理を行える人</td>
+</tr>
+<tr>
+<th>向きにくい人</th>
+<td>現物を長期保有・積立・送金したい人、レバレッジやロスカットに不慣れな人</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section aria-labelledby="cfd-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">CFD Basics</p>
+<h2 class="kiji-section__title" id="cfd-title">差金決済・建玉・決済の流れを理解する</h2>
+<p class="kiji-section__text">
+              CFDでは、注文を出して終わりではありません。新規注文で建玉を持ち、保有中の評価損益を確認しながら、反対売買による決済で損益を確定します。
             </p>
-          </div>
-
-          <div class="kiji-compare-box">
-            <section class="kiji-compare-box__item">
-              <h3>現物取引</h3>
-              <p>
-                ビットコインなどを実際に買って保有する形です。
-                長期保有や積立との相性は良い一方で、基本的に上昇相場でないと利益を出しづらい面があります。
+</div>
+<div class="kiji-compare-box">
+<section class="kiji-compare-box__item">
+<h3>買い建て</h3>
+<p>
+                価格上昇を予想して買いから始めます。建値より高い価格で売り決済できれば利益、安い価格で決済すれば損失です。
               </p>
-            </section>
-
-            <section class="kiji-compare-box__item">
-              <h3>暗号資産CFD</h3>
-              <p>
-                現物の受け渡しはなく、売買価格差が損益になります。
-                上昇・下落の両方を取引対象にしやすく、短中期の売買向きです。
+</section>
+<section class="kiji-compare-box__item">
+<h3>売り建て</h3>
+<p>
+                価格下落を予想して売りから始めます。建値より安い価格で買い戻せれば利益、高い価格で決済すれば損失です。
               </p>
-            </section>
-
-            <section class="kiji-compare-box__item">
-              <h3>気をつける点</h3>
-              <p>
-                CFDは証拠金取引であり、レバレッジやロスカットが関わります。
-                現物よりも値動きの影響を受けやすく、損失管理がより重要になります。
+</section>
+<section class="kiji-compare-box__item">
+<h3>建玉と決済</h3>
+<p>
+                未決済の取引を建玉と呼びます。建玉を保有している間は評価損益と必要証拠金が変動し、反対売買を行った時点で損益が確定します。
               </p>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="fit-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Fit</p>
-            <h2 class="kiji-section__title" id="fit-title">向いている人・向いていない人</h2>
-            <p class="kiji-section__text">
-              このサービスは、暗号資産に興味がある人全員に合うわけではありません。
-              現物保有向けの口座と混同せず、目的ベースで考えることが大切です。
+</section>
+</div>
+</section>
+<section aria-labelledby="comparison-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Comparison</p>
+<h2 class="kiji-section__title" id="comparison-title">暗号資産CFDと現物取引の違い</h2>
+<p class="kiji-section__text">
+              どちらが優れているかではなく、取引目的が違います。積立や長期保有なら現物、上昇・下落の値動きを短期的に取引するならCFDという整理が基本です。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--2">
-            <section class="kiji-note-box">
-              <h3 class="kiji-panel__title">向いている人</h3>
-              <ul class="kiji-bullet-list">
-                <li>暗号資産の短中期の値動きを狙いたい人</li>
-                <li>上昇だけでなく下落相場でも取引したい人</li>
-                <li>現物保有とは別に売買手段を持ちたい人</li>
-                <li>スマホ中心で機動的に取引したい人</li>
-                <li>レバレッジやロスカットの仕組みを理解して使える人</li>
-              </ul>
-            </section>
-
-            <section class="kiji-note-box">
-              <h3 class="kiji-panel__title">向いていない人</h3>
-              <ul class="kiji-bullet-list">
-                <li>ビットコインなどを実際に保有したい人</li>
-                <li>毎月コツコツ積立したい人</li>
-                <li>長期ガチホを前提に考えている人</li>
-                <li>暗号資産の急変動にまだ慣れていない人</li>
-                <li>証拠金取引のリスク管理に自信がない人</li>
-              </ul>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="step-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Step</p>
-            <h2 class="kiji-section__title" id="step-title">口座開設の流れ</h2>
-            <p class="kiji-section__text">
-              マネックスの暗号資産CFDは、単独口座では始められません。
-              まず証券総合取引口座を用意し、その後に暗号資産CFD口座を追加で開設する流れになります。
+</div>
+<div class="kiji-table-wrap">
+<table class="table">
+<tbody>
+<tr>
+<th>比較項目</th>
+<td><strong>マネックス 暗号資産CFD</strong></td>
+<td><strong>暗号資産の現物取引</strong></td>
+</tr>
+<tr>
+<th>保有するもの</th>
+<td>価格差を取引する建玉</td>
+<td>BTCなどの現物暗号資産</td>
+</tr>
+<tr>
+<th>取引方向</th>
+<td>買い・売りの両方向</td>
+<td>基本は買ってから売る</td>
+</tr>
+<tr>
+<th>資金の仕組み</th>
+<td>証拠金取引・最大2倍のレバレッジ</td>
+<td>購入代金を支払って保有</td>
+</tr>
+<tr>
+<th>主な使い方</th>
+<td>短期売買、デイトレード、スイング取引</td>
+<td>長期保有、積立、送金</td>
+</tr>
+<tr>
+<th>下落相場</th>
+<td>売り建てで下落方向も取引可能</td>
+<td>保有資産の値下がりを受けやすい</td>
+</tr>
+<tr>
+<th>主な注意点</th>
+<td>ロスカット、証拠金不足、スプレッド、レバレッジ手数料</td>
+<td>価格下落、取引所・保管・送金のリスク</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section aria-labelledby="merit-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Merit</p>
+<h2 class="kiji-section__title" id="merit-title">マネックス 暗号資産CFDの特徴</h2>
+<p class="kiji-section__text">
+              特徴は「暗号資産を扱えること」ではなく、CFDとして売買方向、注文方法、取引時間を選びやすい点にあります。
             </p>
-          </div>
-
-          <ol class="kiji-step-list">
-            <li>
-              <strong>マネックス証券の証券総合取引口座を開設する</strong>
-              <p>暗号資産CFDを利用する前提として、まず証券総合取引口座が必要です。まだ持っていない場合は、先にこちらの開設から進めます。</p>
-            </li>
-            <li>
-              <strong>ログイン後、暗号資産CFD口座を申し込む</strong>
-              <p>総合口座へログインし、「暗号資産CFD口座開設」の画面から申込みます。暗号資産CFD口座のみを単独で作ることはできません。</p>
-            </li>
-            <li>
-              <strong>スマホアプリを使って取引を始める</strong>
-              <p>口座開設後は、スマートフォン専用アプリ「MONEX TRADER CRYPTO」を使って注文や口座管理を行います。</p>
-            </li>
-          </ol>
-
-          <p class="margin_min">
-            <small>※ 未成年または法人は申込みできません。最新の受付条件や必要手続きは公式サイトでご確認ください。</small>
-          </p>
-        </section>
-
-        <section class="kiji-section kiji-banner-zone" aria-label="マネックス証券公式サイト案内">
-          <div class="kiji-note-box">
-            <p class="kiji-banner-zone__text">
-              マネックスの暗号資産CFDは、現物保有向けではなく、
-              暗号資産の値動きを機動的に取引したい人向けのサービスです。
-              対象銘柄、注文方法、必要証拠金、リスク・手数料などの条件は変わる場合があるため、
-              申し込む前に公式サイトで最新情報を確認しておくと判断しやすくなります。
+</div>
+<div class="kiji-grid kiji-grid--3">
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">01</span>
+<h3 class="kiji-feature-card__title">売り建てで下落局面も取引対象にできる</h3>
+<p class="kiji-feature-card__text">
+                下落を予想する場面では売り建てから入り、価格が下がった後に買い戻して決済できます。
+                現物保有だけでは対応しにくい下落方向も取引できますが、上昇すれば損失になります。
+              </p>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">02</span>
+<h3 class="kiji-feature-card__title">最大2倍のレバレッジで資金効率を高められる</h3>
+<p class="kiji-feature-card__text">
+                必要証拠金を預けることで、手元資金の最大2倍まで取引できます。
+                ただし取引金額が大きくなるほど損益の振れも大きくなるため、最大倍率を常に使う必要はありません。
+               レバレッジの性質と危険性は、<a href="rebarejji-buki-ka.html">レバレッジは武器か？</a>でも解説しています。</p>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">03</span>
+<h3 class="kiji-feature-card__title">土日を含め原則24時間365日取引できる</h3>
+<p class="kiji-feature-card__text">
+                暗号資産市場に合わせ、週次メンテナンスを除いて原則24時間365日注文できます。
+                ただしメンテナンス中は新規注文や決済、資金振替が制限され、発注済み注文も約定しません。
+              </p>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">04</span>
+<h3 class="kiji-feature-card__title">主要4銘柄の対円CFDに対応</h3>
+<p class="kiji-feature-card__text">
+                BTC/JPY、ETH/JPY、XRP/JPY、BCH/JPYを取引できます。
+                銘柄数を広くそろえるサービスではなく、主要銘柄を絞って取引する構成です。
+              </p>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">05</span>
+<h3 class="kiji-feature-card__title">取引手数料無料でも総コストは確認が必要</h3>
+<p class="kiji-feature-card__text">
+                取引手数料は無料ですが、ASKとBIDの差であるスプレッドがあります。
+                建玉を日をまたいで保有すると、銘柄と日ごとに設定されるレバレッジ手数料も発生します。
+              </p>
+</section>
+<section class="kiji-feature-card">
+<span class="kiji-feature-card__num">06</span>
+<h3 class="kiji-feature-card__title">スマホアプリで注文と建玉管理をまとめられる</h3>
+<p class="kiji-feature-card__text">
+                「MONEX TRADER CRYPTO」はiPhone・Androidに対応し、注文、建玉確認、口座状況の確認をスマホで行えます。
+                PC専用取引ツールはないため、スマホ中心で使う人向けです。
+              </p>
+</section>
+</div>
+</section>
+<section aria-labelledby="order-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Order</p>
+<h2 class="kiji-section__title" id="order-title">成行・指値・逆指値と複合注文の使い分け</h2>
+<p class="kiji-section__text">
+              暗号資産CFDでは、相場へ入る注文だけでなく、利益確定と損切りをどう決めるかが重要です。注文方法は便利さではなく、建玉のリスク管理に使う機能として理解しましょう。
             </p>
-            <div class="kiji-banner-zone__square">
-              <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC1&SQ=0&isq=90" rel="nofollow noopener noreferrer sponsored" referrerpolicy="no-referrer-when-downgrade">
-                <img src="https://img.tcs-asp.net/imagesender?ac=C137723&lc=MXSEC1&isq=90&psq=0" alt="マネックス証券 暗号資産CFD">
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="detail-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Detail</p>
-            <h2 class="kiji-section__title" id="detail-title">特徴を詳しく見る</h2>
-          </div>
-
-          <div class="kiji-stack">
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">暗号資産そのものを持たずに相場へ参加できる</h3>
-              <p>
-                マネックスの暗号資産CFDは、現物を受け取るのではなく、価格変動による差額を取引する仕組みです。
-                そのため、ウォレット保管や送金用途よりも、<strong>相場の方向性を読んで売買したい人</strong>に向いています。
+</div>
+<div class="kiji-stack">
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">ストリーミング注文・成行注文</h3>
+<p>
+                現在の提示価格を見ながら、約定を優先して発注する方法です。急変時には表示価格と実際の約定価格がずれる可能性があるため、値動きの大きい場面では取引数量を抑える判断も必要です。
               </p>
-            </section>
-
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">売りから入れるため、相場下落局面も使いやすい</h3>
-              <p>
-                暗号資産は値動きが大きく、上がる時だけでなく急落する場面もあります。
-                このサービスでは売りから入れるため、
-                <strong>下げ相場でもチャンスを探しやすい</strong>のが現物取引との大きな違いです。
+</section>
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">指値注文</h3>
+<p>
+                買いたい価格、売りたい価格をあらかじめ指定します。希望価格まで待てる一方、その価格へ到達しなければ約定しません。
               </p>
-            </section>
-
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">レバレッジにより少額資金でも大きめの取引ができる</h3>
-              <p>
-                原則2倍のレバレッジにより、預けた証拠金以上の金額感で取引できます。
-                ただし、暗号資産は元々値動きが大きいため、
-                <strong>少額で始めても損益の動きは軽く見ない方が良い</strong>です。
+</section>
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">逆指値注文</h3>
+<p>
+                一定価格へ到達したら注文を発動させる方法で、損切りやトレンドへの追随に使われます。ロスカット任せにせず、建玉を持つ時点で許容損失を決めるために有効です。
               </p>
-            </section>
-
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">スマホ専用アプリで注文しやすく、複合注文にも対応</h3>
-              <p>
-                取引は「MONEX TRADER CRYPTO」で行い、
-                ストリーミング注文、指値、逆指値、OCO、IFD、IFOなどに対応しています。
-                つまり、単純な成行だけでなく、
-                <strong>ある程度リスク管理を意識した注文もしやすい設計</strong>です。
+</section>
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">OCO・IFD・IFO注文</h3>
+<p>
+                OCOは2つの注文の一方が成立すると他方を取り消し、IFDは新規注文と決済注文を連続して設定します。IFOはIFDとOCOを組み合わせ、新規注文と利益確定・損切りをまとめて設定できます。
               </p>
-            </section>
-
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">ただし、ロスカットと急変動リスクは軽く見ない方がいい</h3>
-              <p>
-                証拠金維持率が所定水準を下回るとロスカットが発動します。
-                それでも、相場急変時には想定より不利な価格で約定したり、
-                預けた証拠金を上回る損失が発生したりする可能性があります。
-                <strong>「2倍だから安全」とは考えず、暗号資産特有の急変動も含めて慎重に使うべき取引</strong>です。
-              </p>
-            </section>
-
-            <section class="kiji-panel">
-              <h3 class="kiji-panel__title">税金面も現物や株とは感覚が違う</h3>
-              <p>
-                マネックスの暗号資産CFDは、総合課税の雑所得として扱われる案内があります。
-                株式の譲渡所得や、申告分離課税のFX・先物系とは通算関係が異なるため、
-                利益が出た場合は税区分も含めて事前に理解しておくと安心です。
-              </p>
-            </section>
-          </div>
-        </section>
-
-        <section class="kiji-cta">
-          <div class="kiji-cta__body">
-            <p class="kiji-cta__eyebrow">Official Site</p>
-            <h2 class="kiji-cta__title">マネックス証券の公式サイトで暗号資産CFDの最新条件を確認する</h2>
-            <p class="kiji-cta__text">
-              対象銘柄、必要証拠金、注文方法、メンテナンス時間、リスク・手数料などの条件は変更される場合があります。
-              申し込み前に一度公式サイトで最新情報を確認しておくと安心です。
+</section>
+</div>
+</section>
+<section aria-labelledby="risk-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Risk Management</p>
+<h2 class="kiji-section__title" id="risk-title">証拠金維持率・ロスカット・急変動リスク</h2>
+<p class="kiji-section__text">
+              最大2倍という数字だけを見ると穏やかに感じるかもしれませんが、原資産である暗号資産自体の価格変動が大きいため、証拠金管理は欠かせません。
             </p>
-
-            <a href="https://www.tcs-asp.net/alink?AC=C137723&LC=MXSEC1&SQ=0&isq=90"
-               class="kiji-btn kiji-btn--primary"
-               rel="nofollow noopener noreferrer sponsored"
-               referrerpolicy="no-referrer-when-downgrade">
-              公式サイトから確認する
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-note-box">
+<h3 class="kiji-panel__title">証拠金維持率を余裕ある水準に保つ</h3>
+<p>
+                証拠金維持率は、保有建玉に必要な証拠金に対して口座の純資産がどの程度あるかを示します。
+                マネックスでは120％以下でアラート、100％以下でロスカット判定となるため、ぎりぎりまで建玉を増やさず、余裕資金を残すことが重要です。
+              </p>
+</section>
+<section class="kiji-note-box">
+<h3 class="kiji-panel__title">ロスカットでも損失額は保証されない</h3>
+<p>
+                ロスカット時は予約注文の取消し後、証拠金維持率が回復しなければ全建玉が成行で強制決済されます。
+                急変時や流動性低下時には不利な価格で約定し、預入証拠金を上回る損失や不足金が発生する場合があります。
+              </p>
+</section>
+</div>
+<div class="kiji-stack">
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">1回の損失額から取引数量を決める</h3>
+<p>
+                「最大何円取引できるか」ではなく、「逆指値に到達したとき何円失うか」から建玉数量を逆算する方が安全です。
+                20口座以上を開設し100時間以上比較してきた運営視点でも、アプリの使いやすさ以上に、損切り注文を置きやすく建玉を把握しやすいかを重視しています。
+               証拠金や建玉の基本は、<a href="siotuke-syoukokin-tatedama.html">塩漬け・証拠金・建玉の解説</a>でも確認できます。</p>
+</section>
+<section class="kiji-panel">
+<h3 class="kiji-panel__title">テクニカル指標は判断材料の一つに留める</h3>
+<p>
+                アプリのチャートでは、ローソク足や移動平均線で方向性を確認し、RSIやMACDで過熱感や勢いを見る方法があります。
+                ただし指標は将来を保証しないため、複数の根拠と逆指値を組み合わせ、指標だけで取引数量を増やさないことが大切です。
+              </p>
+</section>
+</div>
+</section>
+<section aria-labelledby="fit-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Fit</p>
+<h2 class="kiji-section__title" id="fit-title">マネックス 暗号資産CFDが向いている人・向かない人</h2>
+<p class="kiji-section__text">
+              暗号資産に興味があるだけでは適性を判断できません。保有目的、売買期間、損失管理の方法まで考えて選ぶ必要があります。
+            </p>
+</div>
+<div class="kiji-grid kiji-grid--2">
+<section class="kiji-note-box">
+<h3 class="kiji-panel__title">向いている人</h3>
+<ul class="kiji-bullet-list">
+<li>暗号資産の短期・中期の値動きを取引したい人</li>
+<li>上昇局面だけでなく下落局面でも売り建てを使いたい人</li>
+<li>指値・逆指値・IFOなどで決済条件を事前に設定したい人</li>
+<li>証拠金維持率と建玉数量を自分で管理できる人</li>
+<li>スマホ中心で取引したい人</li>
+</ul>
+</section>
+<section class="kiji-note-box">
+<h3 class="kiji-panel__title">向かない人</h3>
+<ul class="kiji-bullet-list">
+<li>ビットコインなどを実際に保有・送金したい人</li>
+<li>毎月の積立や長期保有を目的としている人</li>
+<li>ロスカットがあれば損失は必ず限定されると考えている人</li>
+<li>値動きを頻繁に確認できず、決済ルールも決めていない人</li>
+<li>レバレッジ手数料やスプレッドを含むコストを避けたい人</li>
+</ul>
+</section>
+</div>
+</section>
+<section aria-labelledby="step-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Step</p>
+<h2 class="kiji-section__title" id="step-title">口座開設から取引開始までの流れ</h2>
+<p class="kiji-section__text">
+              暗号資産CFD口座だけを単独で開設することはできません。マネックス証券の証券総合取引口座を用意した後、追加口座として申し込みます。
+            </p>
+</div>
+<ol class="kiji-step-list">
+<li>
+<strong>マネックス証券の証券総合取引口座を開設する</strong>
+<p>本人確認と審査を経て、証券総合取引口座を開設します。すでに総合口座を持っている場合は次の手続きへ進みます。</p>
+</li>
+<li>
+<strong>暗号資産CFD口座を追加で申し込む</strong>
+<p>ログイン後の申込画面から契約締結前交付書面とリスクを確認し、暗号資産CFD口座を申し込みます。</p>
+</li>
+<li>
+<strong>MONEX TRADER CRYPTOを準備する</strong>
+<p>iPhoneまたはAndroidへ専用アプリをインストールし、多要素認証を含むログイン設定を行います。</p>
+</li>
+<li>
+<strong>資金を振り替え、少額から注文する</strong>
+<p>証券総合取引口座から暗号資産CFD口座へ資金を振り替えます。最初から最大レバレッジを使わず、逆指値と決済ルールを設定して始める方が管理しやすくなります。</p>
+</li>
+</ol>
+<p class="margin_min">
+<small>※ 申込条件、本人確認方法、取引ルール、メンテナンス時間は変更される場合があります。最新情報はマネックス証券公式サイトでご確認ください。</small>
+</p>
+</section>
+<section aria-label="マネックス証券公式サイト案内" class="kiji-section kiji-banner-zone">
+<div class="kiji-note-box">
+<p class="kiji-banner-zone__text">
+              マネックスの暗号資産CFDは、現物を保有する口座ではなく、買い建て・売り建てで価格差を狙う証拠金取引です。
+              取扱銘柄、必要証拠金、レバレッジ手数料、スプレッド、注文方法、メンテナンス時間を確認し、許容できる損失額まで決めたうえで検討してください。
+            </p>
+<div class="kiji-banner-zone__square">
+<a href="https://www.tcs-asp.net/alink?AC=C137723&amp;LC=MXSEC1&amp;SQ=0&amp;isq=90" referrerpolicy="no-referrer-when-downgrade" rel="nofollow noopener noreferrer sponsored">
+<img alt="マネックス証券 暗号資産CFD" src="https://img.tcs-asp.net/imagesender?ac=C137723&amp;lc=MXSEC1&amp;isq=90&amp;psq=0"/>
+</a>
+</div>
+</div>
+</section>
+<section class="kiji-cta">
+<div class="kiji-cta__body">
+<p class="kiji-cta__eyebrow">Official Site</p>
+<h2 class="kiji-cta__title">マネックス 暗号資産CFDの取引条件とリスクを公式サイトで確認する</h2>
+<p class="kiji-cta__text">
+              申込み前に、最新の取扱銘柄、必要証拠金、ロスカット基準、レバレッジ手数料、スプレッド、メンテナンス時間を確認してください。
+              CFDは現物保有とは異なり、預けた証拠金を上回る損失が発生する可能性があります。
+            </p>
+<a class="kiji-btn kiji-btn--primary" href="https://www.tcs-asp.net/alink?AC=C137723&amp;LC=MXSEC1&amp;SQ=0&amp;isq=90" referrerpolicy="no-referrer-when-downgrade" rel="nofollow noopener noreferrer sponsored">
+              公式サイトで取引条件を確認する
             </a>
-          </div>
-        </section>
-
-        <section class="anime-item" aria-labelledby="review-entry-title">
-          <h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
-          <div class="review">
-            <a href="userreview.html" class="review-card">
-              <img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async">
-              <span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="kiji-section" aria-labelledby="related-title">
-          <div class="kiji-section__head">
-            <p class="kiji-section__eyebrow">Related</p>
-            <h2 class="kiji-section__title" id="related-title">比較して考えたい人はこちら</h2>
-            <p class="kiji-section__text">
-              マネックスの暗号資産CFDは、現物保有よりも値動き重視の人向けです。
-              もし「積立したい」「実際にコインを持ちたい」「初心者向けの入口がほしい」という軸なら、別ページも合わせて見ると判断しやすくなります。
+</div>
+</section>
+<section aria-labelledby="review-entry-title" class="anime-item">
+<h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2>
+<div class="review">
+<a class="review-card" href="userreview.html">
+<img alt="個人レビュー（証券／FX／仮想通貨）" decoding="async" loading="lazy" src="Xcard/review_300x250.jpg"/>
+<span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span>
+</a>
+</div>
+</section>
+<section aria-labelledby="related-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Related</p>
+<h2 class="kiji-section__title" id="related-title">現物取引・リスク管理も比較して自分に合う方法を選ぶ</h2>
+<p class="kiji-section__text">マネックスの暗号資産CFDは、現物保有や積立ではなく、価格変動を短期・中期で売買するためのサービスです。現物口座との違いに加え、資金管理や損切りの考え方も合わせて確認すると、自分に合う取引方法を判断しやすくなります。</p>
+</div>
+<div class="kiji-grid kiji-grid--3">
+<a class="kiji-link-card" href="index.html#sec-crypto">
+<span class="kiji-link-card__label">サービス一覧</span>
+<strong class="kiji-link-card__title">仮想通貨サービス一覧を見る</strong>
+<span class="kiji-link-card__text">現物口座、暗号資産CFD、レンディングなどを用途別に確認できます。</span>
+</a>
+<a class="kiji-link-card" href="shikin-kanri-toha.html">
+<span class="kiji-link-card__label">リスク管理</span>
+<strong class="kiji-link-card__title">資金管理の基本を確認する</strong>
+<span class="kiji-link-card__text">1回の損失額や取引資金の配分を決める基本を整理しています。</span>
+</a>
+<a class="kiji-link-card" href="songiri-line-kimekata.html">
+<span class="kiji-link-card__label">損失管理</span>
+<strong class="kiji-link-card__title">損切りラインの決め方を見る</strong>
+<span class="kiji-link-card__text">逆指値注文を使う前に、損切り位置の考え方を確認できます。</span>
+</a>
+</div>
+</section>
+<div id="coins-list"></div>
+<script src="coin-cords.js"></script>
+<section aria-labelledby="faq-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">FAQ</p>
+<h2 class="kiji-section__title" id="faq-title">マネックス 暗号資産CFDのよくある質問</h2>
+</div>
+<div class="kiji-stack">
+<details class="kiji-panel">
+<summary class="kiji-panel__title">マネックスの暗号資産CFDは現物の暗号資産を保有できますか？</summary>
+<p>保有できません。暗号資産を原資産とする差金決済取引であり、BTCやETHの受け渡し、外部ウォレットへの送金、積立を行うサービスではありません。</p>
+</details>
+<details class="kiji-panel">
+<summary class="kiji-panel__title">売り建てなら下落相場で必ず利益になりますか？</summary>
+<p>必ず利益になるわけではありません。売り建て後に価格が下落すれば利益を狙えますが、上昇すれば損失になります。逆指値や取引数量の管理が必要です。</p>
+</details>
+<details class="kiji-panel">
+<summary class="kiji-panel__title">レバレッジは何倍ですか？</summary>
+<p>最大2倍です。必要証拠金率は原則50％以上ですが、相場状況などにより変更される場合があります。最大倍率を使うほど損益変動も大きくなります。</p>
+</details>
+<details class="kiji-panel">
+<summary class="kiji-panel__title">取引手数料が無料ならコストはかかりませんか？</summary>
+<p>取引手数料は無料ですが、ASKとBIDの差であるスプレッドがあります。また、建玉をロールオーバーした場合は、日ごとに設定されるレバレッジ手数料が発生します。</p>
+</details>
+<details class="kiji-panel">
+<summary class="kiji-panel__title">ロスカットがあれば証拠金以上の損失は防げますか？</summary>
+<p>防げるとは限りません。急激な価格変動や流動性低下により不利な価格で約定し、預入証拠金を上回る損失や不足金が発生する可能性があります。</p>
+</details>
+<details class="kiji-panel">
+<summary class="kiji-panel__title">パソコンから取引できますか？</summary>
+<p>暗号資産CFDの取引はスマートフォン専用アプリ「MONEX TRADER CRYPTO」で行います。iPhoneとAndroidに対応しています。</p>
+</details>
+</div>
+</section>
+<section aria-labelledby="summary-title" class="kiji-section">
+<div class="kiji-section__head">
+<p class="kiji-section__eyebrow">Summary</p>
+<h2 class="kiji-section__title" id="summary-title">まとめ｜マネックス 暗号資産CFDは売買目的と損失管理で判断する</h2>
+<p class="kiji-section__text">
+              マネックスビットコインは、主要4銘柄を対象に、買い建て・売り建て、最大2倍のレバレッジ、複合注文を利用できる暗号資産CFDです。
+              下落局面も取引対象にできる一方、現物を保有するサービスではなく、スプレッド、レバレッジ手数料、証拠金維持率、ロスカットを管理する必要があります。
+              長期保有や積立が目的なら現物口座、短期から中期の価格差を取引し、逆指値を含む決済ルールを守れるならCFDが候補になります。
             </p>
-          </div>
-
-          <div class="kiji-grid kiji-grid--3">
-            <a href="coincheck.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">現物口座</span>
-              <strong class="kiji-link-card__title">コインチェックを見る</strong>
-              <span class="kiji-link-card__text">現物を保有したい人、スマホ中心で始めたい人向けの比較候補です。</span>
-            </a>
-
-            <a href="gmocoin.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">総合型</span>
-              <strong class="kiji-link-card__title">GMOコインを見る</strong>
-              <span class="kiji-link-card__text">少額購入・積立・送金・取引所まで幅広く使いたい人向けです。</span>
-            </a>
-
-            <a href="userreview.html" class="kiji-link-card">
-              <span class="kiji-link-card__label">個人目線</span>
-              <strong class="kiji-link-card__title">実体験ベースのレビューを見る</strong>
-              <span class="kiji-link-card__text">証券・FX・仮想通貨をまとめて比較したい人はこちら。</span>
-            </a>
-          </div>
-        </section>
-
-        <div id="coins-list"></div>
-        <script src="coin-cords.js"></script>
-
-        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
-          <h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
-          <ul class="kiji-bullet-list">
-            <li>本ページは情報提供を目的としたものであり、特定の投資行動を推奨するものではありません。</li>
-            <li>暗号資産CFDは価格変動リスクが大きく、元本割れや預けた証拠金を上回る損失が発生する可能性があります。</li>
-            <li>ロスカットがある場合でも、相場急変時には想定以上の損失が出ることがあります。</li>
-            <li>税金、取扱銘柄、必要証拠金、取引時間、注文方法、各種条件は変更される場合があります。</li>
-            <li>最新情報や詳細なリスク・手数料は必ずマネックス証券の公式サイトでご確認ください。</li>
-          </ul>
-        </section>
-
-      </article>
-
-      <a href="#top" class="back-to-top" aria-label="ページ上部へ">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-
-    </main>
-  </div>
-
-  <div id="footer"></div>
-
-  <script src="include.js" defer></script>
-  <script src="sidebar.js" defer></script>
+</div>
+</section>
+<section aria-labelledby="disclaimer-title" class="kiji-disclaimer">
+<h2 class="kiji-disclaimer__title" id="disclaimer-title">ご確認ください</h2>
+<ul class="kiji-bullet-list">
+<li>本ページは情報提供を目的としたものであり、特定の投資行動や利益を保証するものではありません。</li>
+<li>暗号資産CFDは現物暗号資産の取引ではなく、暗号資産を原資産とする差金決済取引です。</li>
+<li>価格変動、レバレッジ、スプレッド拡大、流動性低下などにより、預入証拠金を上回る損失が発生する可能性があります。</li>
+<li>ロスカットが執行されても、急変時には想定価格より不利な価格で約定し、不足金が生じる場合があります。</li>
+<li>取扱銘柄、必要証拠金、レバレッジ手数料、注文方法、メンテナンス時間、税務上の取扱いは変更される場合があります。</li>
+<li>申込み前にマネックス証券公式サイトの契約締結前交付書面、取引ルール、リスク・手数料をご確認ください。</li>
+</ul>
+</section>
+</article>
+<a aria-label="ページ上部へ" class="back-to-top" href="#top">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+</main>
+</div>
+<div id="footer"></div>
+<script defer="" src="include.js"></script>
+<script defer="" src="sidebar.js"></script>
 </body>
 </html>

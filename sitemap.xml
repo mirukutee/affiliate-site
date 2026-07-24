@@ -557,6 +557,18 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+
+<loc>https://tousiportal.jp/gpif-toha.html</loc>
+<lastmod>2026-07-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<loc>https://tousiportal.jp/kabushiki-bunkatsu-toha.html</loc>
+<lastmod>2026-07-25</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 <!-- update 2026-07-20 -->
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->

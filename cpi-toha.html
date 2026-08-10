@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- update 2026-08-10 -->
+  <link rel="canonical" href="https://tousiportal.jp/cpi-toha.html" />
+
+  <title>CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？初心者向けに解説</title>
+  <meta name="description" content="CPI（消費者物価指数）とは何か、インフレとの関係、総合CPIとコアCPIの違い、米国CPIの発表で株価・金利・ドル円が動く理由、市場予想の見方を投資初心者向けに分かりやすく解説します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？初心者向けに解説" />
+  <meta property="og:description" content="CPIの基本、インフレ、FRB・FOMC・金利との関係、株価やドル円が動く理由、市場予想の見方を初心者向けに整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/cpi-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/cpi-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル.jp" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？" />
+  <meta name="twitter:description" content="CPIとインフレ、FRB・FOMC・金利、株価・ドル円との関係を初心者向けに解説します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/cpi-toha.webp" />
+  <meta name="twitter:site" content="@QwZd0ksG2138610" />
+  <meta name="twitter:creator" content="@QwZd0ksG2138610" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * {
+      box-sizing: border-box;
+    }
+
+    .kiji-page {
+      overflow-x: hidden;
+    }
+
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-main-image {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 18px;
+      border: 1px solid #d9e4ee;
+      box-shadow: 0 10px 26px rgba(20, 45, 90, 0.08);
+    }
+
+    .purpose-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 14px;
+      border: 1px solid #d9e4ee;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .92);
+    }
+
+    .purpose-nav a {
+      flex: 1 1 140px;
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .6rem .75rem;
+      border: 1px solid #cbdcec;
+      border-radius: 10px;
+      background: #fff;
+      color: #1f6fb2;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .purpose-nav a:hover,
+    .purpose-nav a:focus-visible {
+      background: #edf6ff;
+      text-decoration: none;
+    }
+
+    .kiji-page .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .kiji-page .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .kiji-page .table-modern {
+      width: max-content;
+      min-width: 700px;
+      max-width: none;
+    }
+
+    .kiji-keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .kiji-keyword-list li {
+      margin: 0;
+      padding: .55rem .78rem;
+      border: 1px solid #d9e4ee;
+      border-radius: 999px;
+      background: #f8fbff;
+      color: #27445f;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .kiji-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+
+    .kiji-flow__item {
+      position: relative;
+      padding: 14px 10px;
+      border: 1px solid #d9e4ee;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+      color: #27445f;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .kiji-flow__item:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: #1f6fb2;
+      font-weight: 800;
+    }
+
+    .kiji-example-box {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid #cfe0ef;
+      border-radius: 16px;
+      background: #f7fbff;
+    }
+
+    .kiji-example-box__row {
+      padding: 14px;
+      border: 1px solid #d9e4ee;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .kiji-example-box__row strong {
+      color: #16324a;
+    }
+
+    .kiji-faq-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (max-width: 960px) {
+      .kiji-page .container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+      }
+
+      .kiji-page aside,
+      .kiji-page #sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .kiji-page #main.kiji-main {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box {
+        grid-template-columns: 1fr;
+      }
+
+      .kiji-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .kiji-flow__item:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: 50%;
+        bottom: -17px;
+        transform: translateX(50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main {
+        padding: .75rem;
+      }
+
+      .kiji-page .breadcrumb {
+        padding: .65rem .75rem;
+        margin: .2rem 0 .75rem;
+      }
+
+      .kiji-page .kiji-article {
+        gap: 16px;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .kiji-page .kiji-title {
+        font-size: clamp(1.28rem, 6vw, 1.58rem);
+        line-height: 1.42;
+      }
+
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p {
+        font-size: .94rem;
+        line-height: 1.75;
+      }
+
+      .purpose-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .purpose-nav a {
+        width: 100%;
+        min-height: 42px;
+        padding: .55rem .5rem;
+        font-size: .84rem;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 620px;
+        font-size: .82rem;
+      }
+
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td {
+        padding: 9px 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main {
+        padding: .55rem;
+      }
+
+      .purpose-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 14px 12px;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 560px;
+        font-size: .78rem;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "投資コラム・解説記事一覧",
+        "item": "https://tousiportal.jp/column.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CPI（消費者物価指数）とは？",
+        "item": "https://tousiportal.jp/cpi-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://tousiportal.jp/cpi-toha.html#article",
+    "headline": "CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？初心者向けに解説",
+    "description": "CPI（消費者物価指数）とは何か、インフレとの関係、総合CPIとコアCPIの違い、米国CPIの発表で株価・金利・ドル円が動く理由、市場予想の見方を投資初心者向けに分かりやすく解説します。",
+    "image": "https://tousiportal.jp/sonota/cpi-toha.webp",
+    "datePublished": "2026-08-10",
+    "dateModified": "2026-08-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/cpi-toha.html"
+    },
+    "inLanguage": "ja",
+    "articleSection": "話題・トレンド",
+    "author": {
+      "@type": "Person",
+      "@id": "https://tousiportal.jp/#person",
+      "name": "ミルクティー",
+      "url": "https://tousiportal.jp/profile.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://tousiportal.jp/#organization",
+      "name": "投資ポータル.jp",
+      "url": "https://tousiportal.jp/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tousiportal.jp/favicon-512.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "CPIとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPIはConsumer Price Indexの略で、日本語では消費者物価指数と呼ばれます。消費者が購入する商品やサービスの価格が、時間の経過とともにどのように変化しているかを見る代表的な経済指標です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CPIが上がるとどうなりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一般には物価の上昇ペースが強いことを示します。ただし、CPIが上昇したからといって株価や為替が必ず一定方向へ動くわけではなく、市場予想や金利見通しなども影響します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CPIとインフレの違いは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "インフレは物価全体が継続的に上昇する状態を指し、CPIはその物価変化を測るために利用される代表的な指標の一つです。CPIとインフレは完全に同じ意味ではありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ米国CPIで日本株も動くのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "米国CPIはFRBの金融政策や米国金利の見通しに影響し、それが米国株、ドル円、世界の投資家心理を通じて日本株にも波及する場合があるためです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CPIが高いと円安になりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必ず円安になるわけではありません。米国CPIが市場予想を上回り、米国金利が高い状態が続くとの見方が強まればドル高・円安要因になる場合がありますが、日銀の政策や景気、他の経済指標なども為替に影響します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "コアCPIとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "価格変動の大きい一部の品目を除き、物価の基調を見やすくしたCPIです。ただし、日本では一般に生鮮食品を除く総合指数がコアCPIと呼ばれる一方、米国では食品とエネルギーを除く指数がコアCPIとして注目されるなど、定義に違いがあります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "CPIはいつ発表されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPIは日本や米国など各国の統計機関から定期的に発表されます。米国CPIは米労働省労働統計局（BLS）が毎月公表しており、発表日は月によって異なるため公式の公表予定を確認することが大切です。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">CPI（消費者物価指数）とは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">話題・トレンド</p>
+
+              <h1 class="kiji-title">
+                CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？初心者向けに解説
+              </h1>
+
+              <p class="kiji-lead">
+                ニュースで「米国CPI」「インフレ率」「市場予想を上回った」といった言葉を見ても、
+                投資初心者にはなぜ株価やドル円まで大きく動くのか分かりにくいかもしれません。
+                CPIは物価の変化を見る代表的な経済指標で、特に米国CPIはFRBの金融政策や金利見通しと結びつけて注目されています。
+                この記事では、CPIの意味から株価・金利・為替との関係まで順番に整理します。
+              </p>
+
+              <ul class="kiji-tags" aria-label="この記事で分かること">
+                <li>CPIの意味</li>
+                <li>インフレとの関係</li>
+                <li>総合・コアCPI</li>
+                <li>株価への影響</li>
+                <li>ドル円への影響</li>
+                <li>市場予想の見方</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#why-market">株価・為替との関係を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#news-point">ニュースの見方を見る</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">
+                  CPIは「物価の変化」を確認する重要指標。相場では数字そのものだけでなく、市場予想との差が重要です。
+                </h2>
+                <ul class="kiji-check-list">
+                  <li>CPIは消費者が購入する商品・サービスの価格変化を見る指標</li>
+                  <li>インフレの強さを判断する材料になる</li>
+                  <li>米国CPIはFRBの金利見通しにつながりやすい</li>
+                  <li>株価や為替は市場予想との差でも動く</li>
+                  <li>CPIだけで相場方向を決めつけない</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#definition">CPIとは</a>
+          <a href="#up-down">上昇・低下の意味</a>
+          <a href="#core">総合とコア</a>
+          <a href="#usa">米国CPI</a>
+          <a href="#stock">株価との関係</a>
+          <a href="#fx">ドル円との関係</a>
+          <a href="#forecast">市場予想</a>
+          <a href="#news-point">見るポイント</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="kiji-section" aria-labelledby="intro-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Current Topic</p>
+            <h2 class="kiji-section__title" id="intro-title">2026年8月も米国CPIが重要イベントとして注目</h2>
+          </div>
+
+          <img
+            class="kiji-main-image"
+            src="sonota/cpi-toha.webp"
+            alt="CPI（消費者物価指数）と株価・金利・為替の関係を初心者向けに整理した教材画像"
+            width="1200"
+            height="630"
+            loading="eager"
+            decoding="async" />
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            2026年8月も、米国CPIは金融市場で注目される経済イベントの一つです。
+            米労働省労働統計局（BLS）の公表予定では、2026年7月分の米国CPIは
+            <strong>2026年8月12日午前8時30分（米東部時間）</strong>に発表予定です。
+            CPIは毎月発表されるため、特定の月だけを追うのではなく、基本的な読み方を知っておくと今後のニュースにも応用できます。
+          </p>
+          <!-- Web verification: BLS release schedule :contentReference[oaicite:0]{index=0} -->
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>この記事では最新値の予想はしません。</strong>
+              CPIが高い・低いという数字だけで相場方向を決めるのではなく、
+              「何を表す数字なのか」「市場予想と比べてどうだったのか」を理解することを目的としています。
+            </p>
+          </div>
+        </section>
+
+        <section id="definition" class="kiji-section" aria-labelledby="definition-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Definition</p>
+            <h2 class="kiji-section__title" id="definition-title">CPI（消費者物価指数）とは？</h2>
+            <p class="kiji-section__text">
+              CPIは<strong>Consumer Price Index</strong>の略で、日本語では「消費者物価指数」と呼ばれます。
+              消費者が日常生活で購入する商品やサービスの価格が、時間の経過とともにどのように変化しているかを測る代表的な経済指標です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">CPIの役割</p>
+              <h3 class="kiji-info-card__title">物価の変化を指数で確認する</h3>
+              <p class="kiji-info-card__text">
+                食料品、衣類、家賃、電気代、交通、医療、通信など、家計が購入するさまざまな商品・サービスの価格変化をまとめて確認します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">なぜ重要？</p>
+              <h3 class="kiji-info-card__title">インフレ状況を判断する材料になる</h3>
+              <p class="kiji-info-card__text">
+                物価がどの程度上昇しているか、上昇ペースが強まっているか弱まっているかを見る材料になるため、政府・中央銀行・企業・投資家などから注目されます。
+              </p>
+            </section>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">何の物価を調べているの？</h3>
+          <p class="kiji-section__text">
+            日本の総務省統計局は、CPIを「全国の世帯が購入する家計に係る財及びサービスの価格等を総合した物価の変動を時系列的に測定するもの」と説明しています。
+            米国でも、都市部の消費者が購入する幅広い商品・サービスの価格変化をCPIとして集計しています。
+          </p>
+          <!-- Official definition: Statistics Bureau of Japan / BLS :contentReference[oaicite:1]{index=1} -->
+
+          <ul class="kiji-keyword-list" aria-label="CPIに含まれる代表的な分野" style="margin-top:16px;">
+            <li>食料</li>
+            <li>住居</li>
+            <li>電気・ガス</li>
+            <li>衣類</li>
+            <li>交通</li>
+            <li>医療</li>
+            <li>通信</li>
+            <li>教育・娯楽</li>
+          </ul>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              CPIは世界共通で一つだけ存在する数字ではありません。
+              日本では総務省統計局、米国では米労働省労働統計局（BLS）がそれぞれ自国のCPIを公表しています。
+            </p>
+          </div>
+        </section>
+
+        <section id="up-down" class="kiji-section" aria-labelledby="up-down-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Reading CPI</p>
+            <h2 class="kiji-section__title" id="up-down-title">CPIが上がると何を意味する？</h2>
+            <p class="kiji-section__text">
+              CPIが上昇している場合、一般には消費者が購入する商品やサービスの価格水準が以前より高くなっていることを示します。
+              ただし「CPIが低下した」というニュースの意味には注意が必要です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">CPIの伸びが強い</p>
+              <h3 class="kiji-info-card__title">物価上昇の勢いが強い可能性</h3>
+              <p class="kiji-info-card__text">
+                CPIの前年比などが高くなると、インフレ圧力が強いと受け止められる場合があります。
+                ただし、どの品目が値上がりしているのかも重要です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">CPIの伸びが鈍化</p>
+              <h3 class="kiji-info-card__title">物価上昇ペースが弱まっている可能性</h3>
+              <p class="kiji-info-card__text">
+                例えば前年比が4％から3％へ低下した場合、物価水準そのものが前年より下がったとは限りません。
+                「上昇しているが、その上昇ペースが鈍くなった」というケースがあります。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>CPI低下＝すべての商品が値下がりした、ではありません。</strong>
+              「指数そのものが下がった」のか、「前年同月比の上昇率が低下した」のかを分けて見ることが大切です。
+            </p>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">前月比と前年同月比の違い</h3>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="CPIの前月比と前年同月比の比較表">
+              <table class="table-modern">
+                <caption>CPIの代表的な比較方法</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">項目</th>
+                    <th scope="col">比較する期間</th>
+                    <th scope="col">初心者向けの見方</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">前月比</th>
+                    <td>前の月との比較</td>
+                    <td>直近1か月で物価がどの程度動いたかを見る</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">前年同月比</th>
+                    <td>1年前の同じ月との比較</td>
+                    <td>1年間で物価がどの程度変化したかを見る</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ スマートフォンでは横にスクロールできます。</p>
+          </div>
+        </section>
+
+        <section id="core" class="kiji-section" aria-labelledby="core-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Headline vs Core</p>
+            <h2 class="kiji-section__title" id="core-title">総合CPIとコアCPIの違い</h2>
+            <p class="kiji-section__text">
+              CPIニュースでは「総合CPI」と「コアCPI」が並んで紹介されることがあります。
+              コアCPIは、価格変動の大きい一部の品目を除くことで、物価の基調を確認しやすくするための指標です。
+            </p>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="総合CPIとコアCPIの違い">
+              <table class="table-modern">
+                <caption>総合CPIとコアCPIの主な違い</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">種類</th>
+                    <th scope="col">概要</th>
+                    <th scope="col">見るポイント</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">総合CPI</th>
+                    <td>対象となる幅広い商品・サービスを含める</td>
+                    <td>家計全体の物価変化を広く確認しやすい</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">コアCPI</th>
+                    <td>変動の大きい特定品目を除いて算出する</td>
+                    <td>一時的な価格変動の影響を抑えて物価の基調を見る</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ スマートフォンでは横にスクロールできます。</p>
+          </div>
+
+          <div class="kiji-note-box">
+            <p>
+              <strong>日本と米国では「コア」の定義に注意が必要です。</strong>
+            </p>
+            <ul class="kiji-bullet-list">
+              <li>日本では、一般に「生鮮食品を除く総合」がコアCPIとして扱われます。</li>
+              <li>日本ではさらに「生鮮食品及びエネルギーを除く総合」も公表されています。</li>
+              <li>米国では「食品とエネルギーを除く総合（All items less food and energy）」がコアCPIとして広く注目されます。</li>
+            </ul>
+          </div>
+          <!-- Official definitions: Statistics Bureau of Japan / BLS :contentReference[oaicite:2]{index=2} -->
+
+          <p class="kiji-section__text">
+            「コアCPI」という言葉だけを見て、日本と米国でまったく同じ品目を除外していると思わないことが重要です。
+            海外ニュースを見るときは、どの国のCPIで、何を除いた数字なのかも確認しましょう。
+          </p>
+        </section>
+
+        <section id="usa" class="kiji-section" aria-labelledby="usa-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">U.S. CPI</p>
+            <h2 class="kiji-section__title" id="usa-title">なぜ米国CPIが世界中から注目されるの？</h2>
+            <p class="kiji-section__text">
+              米国は世界最大級の金融市場を持ち、米国の金利は世界中の株式・債券・為替市場に影響します。
+              米国CPIはインフレ状況を確認する重要指標として、FRBの金融政策を考える材料の一つになります。
+            </p>
+          </div>
+
+          <div class="kiji-flow" aria-label="CPIから株価や為替へ影響が波及する流れ">
+            <div class="kiji-flow__item">CPI</div>
+            <div class="kiji-flow__item">インフレ見通し</div>
+            <div class="kiji-flow__item">FRB・FOMC</div>
+            <div class="kiji-flow__item">金利見通し</div>
+            <div class="kiji-flow__item">株価・為替</div>
+          </div>
+
+          <div class="kiji-stack" style="margin-top:20px;">
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">1．CPIでインフレの強さを確認する</h3>
+              <p>
+                CPIの伸びが強ければ、物価上昇圧力が根強いと受け止められる場合があります。
+                反対に、上昇ペースが落ち着けばインフレ圧力の緩和が意識されることがあります。
+              </p>
+            </div>
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">2．FRBの金融政策への見方が変わる</h3>
+              <p>
+                FRBは物価安定と最大雇用などを目標に金融政策を運営しています。
+                CPIはFRBが正式な物価目標として採用しているPCE価格指数とは別の指標ですが、
+                インフレを早い段階で確認する重要なデータとして市場から注目されます。
+              </p>
+            </div>
+            <!-- Federal Reserve states its longer-run inflation target is measured by PCE, not CPI. :contentReference[oaicite:3]{index=3} -->
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">3．利上げ・利下げ観測が変化する</h3>
+              <p>
+                インフレが想定より強いと「高い金利が長く続くのではないか」と考える投資家が増える場合があります。
+                逆にインフレ鈍化が確認されれば、将来の利下げを意識する動きが強まる場合があります。
+              </p>
+            </div>
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">4．米国金利から世界の市場へ波及する</h3>
+              <p>
+                米国金利の見通しは米国株だけでなく、ドル円などの為替、日本株、世界の債券市場にも影響します。
+                そのため米国CPIは世界中の投資家から注目されます。
+              </p>
+            </div>
+          </div>
+
+          <p class="kiji-section__text">
+            FRBや金利との関係をさらに確認したい場合は、
+            <a href="fomc-toha.html">FOMCとは？</a>、
+            <a href="kinri-joushou-toha.html">金利上昇とは？</a>
+            もあわせて確認すると流れを理解しやすくなります。
+          </p>
+        </section>
+
+        <section id="why-market" class="kiji-section" aria-labelledby="why-market-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market Reaction</p>
+            <h2 class="kiji-section__title" id="why-market-title">CPI発表で株価や為替が動く基本構造</h2>
+            <p class="kiji-section__text">
+              CPIが直接すべての株価や為替を動かしているわけではありません。
+              CPIを受けて「インフレ」「FRB」「金利」に対する投資家の予想が変化し、
+              その結果として株式・債券・為替へ売買が広がります。
+            </p>
+          </div>
+
+          <div class="kiji-compare-box">
+            <div class="kiji-compare-box__item">
+              <h3>CPI</h3>
+              <p>物価上昇の強さや変化を確認する。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>金利</h3>
+              <p>FRBの金融政策や将来の政策金利見通しが変化する。</p>
+            </div>
+            <div class="kiji-compare-box__item">
+              <h3>市場</h3>
+              <p>株式・債券・ドル円などの評価や資金の流れが変わる。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="stock" class="kiji-section" aria-labelledby="stock-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Stocks</p>
+            <h2 class="kiji-section__title" id="stock-title">CPIで株価が動く理由</h2>
+            <p class="kiji-section__text">
+              CPI発表後に株価が動く大きな理由の一つが、将来の金利見通しです。
+              特に市場予想と大きく違う結果が出ると、投資家が想定していた金融政策シナリオが修正され、株価が大きく動く場合があります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">市場予想より高いCPI</p>
+              <h3 class="kiji-info-card__title">金利が高い状態が続くとの見方につながる場合</h3>
+              <p class="kiji-info-card__text">
+                インフレが予想以上に強いと判断されると、利下げが遠のく、あるいは金融引き締めが長引くとの見方が広がることがあります。
+                その場合、株式市場の重しになることがあります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">市場予想より低いCPI</p>
+              <h3 class="kiji-info-card__title">金利低下への期待につながる場合</h3>
+              <p class="kiji-info-card__text">
+                インフレ鈍化が意識されると、将来的な利下げへの期待が強まり、株式市場に追い風となる場合があります。
+                ただし景気悪化への警戒が同時に強まることもあります。
+              </p>
+            </section>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">なぜ成長株・ハイテク株は金利の影響を受けやすいの？</h3>
+
+          <p class="kiji-section__text">
+            成長株やハイテク株は、現在の利益だけでなく将来大きく利益が伸びるという期待で高く評価されることがあります。
+            金利が上昇すると将来の利益を現在価値へ割り引いたときの評価が低下しやすくなるため、
+            金利上昇局面では株価の重しになる場合があります。
+          </p>
+
+          <p class="kiji-section__text">
+            半導体などの成長分野も金利の影響を受ける場合があります。
+            詳しくは<a href="handoutai-kabu-toha.html">半導体株とは？</a>でも整理しています。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>「CPI上昇＝必ず株安」「CPI低下＝必ず株高」ではありません。</strong>
+              景気、企業業績、FRB発言、すでに株価へ織り込まれていた期待など複数の要因が同時に影響します。
+            </p>
+          </div>
+
+          <p class="kiji-section__text">
+            株価が一つの材料だけで決まらない理由は、
+            <a href="kabuka-naze-ugoku.html">株価はなぜ上下するのか？</a>
+            でも解説しています。
+          </p>
+        </section>
+
+        <section id="fx" class="kiji-section" aria-labelledby="fx-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Foreign Exchange</p>
+            <h2 class="kiji-section__title" id="fx-title">CPIでドル円が動く理由</h2>
+            <p class="kiji-section__text">
+              ドル円などの為替市場でも、米国CPIは重要な材料になります。
+              特に注目されるのが、米国金利の見通しと日本の金利との関係です。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>米国CPIが発表される</strong>
+              <p>市場予想より強いのか弱いのかが確認されます。</p>
+            </li>
+            <li>
+              <strong>FRBの金融政策予想が変わる</strong>
+              <p>利上げ・据え置き・利下げの可能性について市場の見方が変化します。</p>
+            </li>
+            <li>
+              <strong>米国金利が動く</strong>
+              <p>米国債の利回りなどが反応し、ドルを保有する魅力への評価が変化する場合があります。</p>
+            </li>
+            <li>
+              <strong>日米金利差への見方が変わる</strong>
+              <p>米国と日本の金利差が広がるのか縮小するのかという予想が、ドル円の材料になります。</p>
+            </li>
+            <li>
+              <strong>ドル円が動く</strong>
+              <p>投資家がドルや円を売買し、短時間で為替が大きく変動する場合があります。</p>
+            </li>
+          </ol>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>CPIが高ければ必ず円安になるわけではありません。</strong>
+              すでに市場へ織り込まれていた場合や、日本側の金融政策、景気、他の経済指標、
+              投資家のリスク回避姿勢などによって反応が変わることがあります。
+            </p>
+          </div>
+
+          <p class="kiji-section__text">
+            為替の基本については<a href="yen-yasui-toha.html">円安とは？</a>でも解説しています。
+          </p>
+        </section>
+
+        <section id="forecast" class="kiji-section" aria-labelledby="forecast-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market Expectations</p>
+            <h2 class="kiji-section__title" id="forecast-title">「市場予想」が重要なのはなぜ？</h2>
+            <p class="kiji-section__text">
+              CPIニュースを見るとき、初心者が特に覚えておきたいのが
+              <strong>数字そのものより「市場予想との差」が相場を動かす場合がある</strong>という点です。
+            </p>
+          </div>
+
+          <div class="kiji-example-box">
+            <div class="kiji-example-box__row">
+              <strong>実際のCPI：3.0％</strong><br>
+              市場予想：2.5％<br>
+              → 実際の数字は市場予想より<strong>高い</strong>
+            </div>
+
+            <div class="kiji-example-box__row">
+              <strong>実際のCPI：3.0％</strong><br>
+              市場予想：3.5％<br>
+              → 実際の数字は市場予想より<strong>低い</strong>
+            </div>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            どちらも実際のCPIは3.0％ですが、市場が事前に想定していた数字によって受け止め方は逆になります。
+            株式市場や為替市場では、多くの投資家が発表前から一定の予想をもとに売買しているためです。
+          </p>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">予想通り</h3>
+              <p class="kiji-feature-card__text">
+                すでに市場へ織り込まれている場合、数字だけでは大きく動かないこともあります。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">予想を上回る</h3>
+              <p class="kiji-feature-card__text">
+                インフレが市場想定より強いとして、金利見通しが修正される場合があります。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">予想を下回る</h3>
+              <p class="kiji-feature-card__text">
+                インフレが市場想定より弱いとして、将来の金融政策予想が変化する場合があります。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              CPIが「高いか低いか」だけでなく、
+              <strong>市場予想・前回値・今回の数字をセットで見る</strong>とニュースを理解しやすくなります。
+            </p>
+          </div>
+        </section>
+
+        <section id="news-point" class="kiji-section" aria-labelledby="news-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">News Checklist</p>
+            <h2 class="kiji-section__title" id="news-title">初心者がCPIニュースを見るポイント</h2>
+            <p class="kiji-section__text">
+              CPI発表日は数字や速報が大量に流れます。
+              見出しの「CPI○％」だけで慌てず、次の項目を順番に確認すると整理しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">前年同月比・前月比</h3>
+              <p class="kiji-feature-card__text">
+                1年前との比較なのか、前月との比較なのかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">総合・コアCPI</h3>
+              <p class="kiji-feature-card__text">
+                総合指数なのか、変動の大きい一部品目を除いた数字なのかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">市場予想との差</h3>
+              <p class="kiji-feature-card__text">
+                発表された数字だけでなく、事前予想を上回ったか下回ったかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">前回値</h3>
+              <p class="kiji-feature-card__text">
+                前回からインフレの勢いが強まったのか、弱まったのかを比較します。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">05</span>
+              <h3 class="kiji-feature-card__title">FRBへの影響</h3>
+              <p class="kiji-feature-card__text">
+                金利据え置き・利下げ・利上げへの市場予想がどう変わったかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">06</span>
+              <h3 class="kiji-feature-card__title">市場の実際の反応</h3>
+              <p class="kiji-feature-card__text">
+                株価、米国金利、ドル円が実際にどう反応したのかを確認します。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <ul class="kiji-bullet-list">
+              <li>「CPI○％」という見出しだけで売買を決めない</li>
+              <li>市場予想と実際の数字をセットで見る</li>
+              <li>総合CPIとコアCPIを混同しない</li>
+              <li>日本と米国でコアCPIの定義が異なる点に注意する</li>
+              <li>FRBの反応をCPIだけで決めつけない</li>
+              <li>発表直後は株価・為替が大きく上下する場合がある</li>
+            </ul>
+          </div>
+
+          <p class="kiji-section__text">
+            短期的な経済指標に振り回されにくい投資の考え方を確認したい場合は、
+            <a href="tyoukitousi-kaisetu.html">長期投資とは？</a>も参考になります。
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="japan-stock-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Japan Market</p>
+            <h2 class="kiji-section__title" id="japan-stock-title">米国CPIが日本株にも影響するのはなぜ？</h2>
+            <p class="kiji-section__text">
+              米国CPIは米国の経済指標ですが、日本株にも影響することがあります。
+              米国株、米国金利、ドル円、世界の投資家心理がつながっているためです。
+            </p>
+          </div>
+
+          <div class="kiji-stack">
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">米国株市場が動く</h3>
+              <p>
+                CPIを受けて米国株が大きく動くと、その流れを翌日の日本市場が引き継ぐことがあります。
+              </p>
+            </div>
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">ドル円が動く</h3>
+              <p>
+                為替の変化は輸出企業や海外売上比率の高い企業の業績期待へ影響する場合があります。
+              </p>
+            </div>
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">金利に敏感な業種が動く</h3>
+              <p>
+                半導体・ハイテクなどの成長株だけでなく、銀行、不動産など、金利変化によって評価が変わりやすい業種もあります。
+              </p>
+            </div>
+
+            <div class="kiji-panel">
+              <h3 class="kiji-panel__title">世界的なリスクオン・リスクオフ</h3>
+              <p>
+                CPIが市場予想と大きく異なると、世界の投資家がリスク資産への投資姿勢を変えることがあり、日本株にも資金の流れが波及します。
+              </p>
+            </div>
+          </div>
+
+          <p class="kiji-section__text">
+            日本市場を見る際は、
+            <a href="nikkei-70000-nisa.html">日経平均に関する記事</a>や
+            <a href="topix-4000-toha.html">TOPIXとは？</a>、
+            <a href="sector-tousi-toha.html">セクター投資とは？</a>
+            もあわせて確認すると、市場全体と業種別の動きを分けて考えやすくなります。
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="related-title">CPIと一緒に確認したい関連記事</h2>
+            <p class="kiji-section__text">
+              CPIニュースを理解するには、金融政策・金利・為替・株価指数などの基本を一緒に確認すると理解しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a class="kiji-link-card" href="fomc-toha.html">
+              <span class="kiji-link-card__label">金融政策</span>
+              <strong class="kiji-link-card__title">FOMCとは？</strong>
+              <span class="kiji-link-card__text">
+                FRBが金融政策を決める会合と、金利・株価・為替への影響を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="kinri-joushou-toha.html">
+              <span class="kiji-link-card__label">金利</span>
+              <strong class="kiji-link-card__title">金利上昇とは？</strong>
+              <span class="kiji-link-card__text">
+                金利と株式・預金・住宅ローンなどの関係を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="yen-yasui-toha.html">
+              <span class="kiji-link-card__label">為替</span>
+              <strong class="kiji-link-card__title">円安とは？</strong>
+              <span class="kiji-link-card__text">
+                ドル円と日本株・生活への影響を初心者向けに整理します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="kabuka-naze-ugoku.html">
+              <span class="kiji-link-card__label">投資の基礎</span>
+              <strong class="kiji-link-card__title">株価はなぜ上下するのか？</strong>
+              <span class="kiji-link-card__text">
+                業績・金利・需給・ニュースなど株価を動かす基本要因を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="topix-4000-toha.html">
+              <span class="kiji-link-card__label">株価指数</span>
+              <strong class="kiji-link-card__title">TOPIXとは？</strong>
+              <span class="kiji-link-card__text">
+                日経平均との違いと、日本株市場全体を見る考え方を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="nikkei-70000-nisa.html">
+              <span class="kiji-link-card__label">日本株</span>
+              <strong class="kiji-link-card__title">日経平均と高値圏の考え方</strong>
+              <span class="kiji-link-card__text">
+                日経平均が高値圏にあるときの初心者向けの考え方を整理します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="handoutai-kabu-toha.html">
+              <span class="kiji-link-card__label">成長株</span>
+              <strong class="kiji-link-card__title">半導体株とは？</strong>
+              <span class="kiji-link-card__text">
+                金利の影響も受けやすい半導体株と世界市場の関係を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="sector-tousi-toha.html">
+              <span class="kiji-link-card__label">業種</span>
+              <strong class="kiji-link-card__title">セクター投資とは？</strong>
+              <span class="kiji-link-card__text">
+                金利や景気によって業種ごとの動きが異なる理由を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="tyoukitousi-kaisetu.html">
+              <span class="kiji-link-card__label">投資手法</span>
+              <strong class="kiji-link-card__title">長期投資とは？</strong>
+              <span class="kiji-link-card__text">
+                毎月の経済指標だけに振り回されにくい投資の考え方を整理します。
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">CPIに関するよくある質問</h2>
+          </div>
+
+          <ul class="kiji-faq-list">
+            <li>
+              <details class="faq-item">
+                <summary>CPIとは何ですか？</summary>
+                <div class="faq-answer">
+                  CPIはConsumer Price Indexの略で、日本語では消費者物価指数と呼ばれます。
+                  消費者が購入する商品やサービスの価格が、時間の経過とともにどのように変化しているかを見る代表的な経済指標です。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>CPIが上がるとどうなりますか？</summary>
+                <div class="faq-answer">
+                  一般には物価の上昇ペースが強いことを示します。
+                  ただしCPIが上がったからといって、株価・金利・為替が必ず一方向へ動くわけではありません。
+                  市場予想との差やFRBの金融政策見通しなども影響します。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>CPIとインフレの違いは？</summary>
+                <div class="faq-answer">
+                  インフレは、一般に物価全体が継続的に上昇する状態を指します。
+                  CPIは、その物価の変化を測定するために使われる代表的な指標の一つです。
+                  そのためCPIとインフレは密接に関係していますが、完全に同じ意味ではありません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>なぜ米国CPIで日本株も動くのですか？</summary>
+                <div class="faq-answer">
+                  米国CPIがFRBの金融政策や米国金利の見通しへ影響し、
+                  その結果として米国株、ドル円、世界の投資家心理が変化する場合があるためです。
+                  こうした動きが日本株にも波及することがあります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>CPIが高いと円安になりますか？</summary>
+                <div class="faq-answer">
+                  必ず円安になるわけではありません。
+                  米国CPIが市場予想を上回り、米国金利が高い状態が続くとの見方が強まればドル高・円安要因になる場合があります。
+                  一方、日本の金融政策や景気、他の経済指標、市場への織り込み状況によって反対方向へ動くこともあります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>コアCPIとは何ですか？</summary>
+                <div class="faq-answer">
+                  価格変動の大きい一部の品目を除き、物価の基調を確認しやすくしたCPIです。
+                  日本では一般に生鮮食品を除く総合指数がコアCPIと呼ばれる一方、
+                  米国では食品とエネルギーを除く指数がコアCPIとして注目されます。
+                  国によって定義が異なる点に注意が必要です。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>CPIはいつ発表されますか？</summary>
+                <div class="faq-answer">
+                  CPIは各国の統計機関から定期的に発表されます。
+                  米国CPIは米労働省労働統計局（BLS）が原則として毎月公表していますが、具体的な発表日は月によって異なります。
+                  2026年7月分は2026年8月12日午前8時30分（米東部時間）に発表予定です。
+                  最新の日程はBLSなど公的機関の公表予定を確認してください。
+                </div>
+              </details>
+            </li>
+          </ul>
+          <!-- BLS August 2026 release schedule verification :contentReference[oaicite:4]{index=4} -->
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ｜CPIは数字と市場予想をセットで見ることが重要</h2>
+          </div>
+
+          <ul class="kiji-check-list">
+            <li>CPIは、消費者が購入する商品・サービスの価格変化を見る代表的な経済指標です。</li>
+            <li>CPIはインフレの状況を判断する材料の一つですが、CPIとインフレは完全に同じ意味ではありません。</li>
+            <li>米国CPIはFRBの金融政策や金利見通しに影響するため、世界中の金融市場から注目されます。</li>
+            <li>株価やドル円はCPIそのものだけでなく、市場予想との差によって大きく動く場合があります。</li>
+            <li>「CPI上昇＝必ず株安・円安」のように相場方向を一つに決めつけるのは注意が必要です。</li>
+            <li>初心者は前年同月比・前月比、総合・コア、市場予想、前回値をセットで確認することが大切です。</li>
+          </ul>
+        </section>
+
+        <section class="kiji-cta" aria-labelledby="cta-title">
+          <p class="kiji-cta__eyebrow">Next Step</p>
+          <h2 class="kiji-cta__title" id="cta-title">次はFOMC・金利・為替の関係も確認する</h2>
+          <p class="kiji-cta__text">
+            CPIの数字だけを見るよりも、FRBが金融政策をどう考えるのか、
+            金利変化が株式・為替へどう波及するのかまで理解すると、経済ニュースを落ち着いて読みやすくなります。
+          </p>
+
+          <div class="kiji-hero__actions">
+            <a class="kiji-btn kiji-btn--primary" href="fomc-toha.html">FOMCの記事を見る</a>
+            <a class="kiji-btn kiji-btn--ghost" href="kinri-joushou-toha.html">金利上昇の記事を見る</a>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は一般的な情報提供と金融教育を目的としており、特定の企業・銘柄・通貨・金融商品・証券会社・FX会社の推奨や、
+            投資の勧誘を目的としたものではありません。
+            株式、投資信託、外国為替などの金融商品は、相場変動、為替変動、金利変動、信用状況、制度変更などにより損失が生じる場合があります。
+            CPIや経済指標の発表結果だけで将来の相場方向を判断することはできません。
+            取引を行う際は最新の公式情報や契約締結前交付書面などをご確認のうえ、
+            <strong>ご自身の判断と責任</strong>で行ってください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">▲</a>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
+  <script>
+    (function () {
+      const btn = document.querySelector('.back-to-top');
+      if (!btn) return;
+
+      const showAt = 320;
+
+      const onScroll = function () {
+        if (window.scrollY > showAt) {
+          btn.classList.add('is-visible');
+        } else {
+          btn.classList.remove('is-visible');
+        }
+      };
+
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+</body>
+</html>

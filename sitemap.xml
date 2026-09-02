@@ -522,109 +522,126 @@
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/fomc-toha.html</loc>
 <lastmod>2026-07-09</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/etf-kessan-bunpaikin-uriatsuryoku.html</loc>
 <lastmod>2026-07-10</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/topix-4000-toha.html</loc>
 <lastmod>2026-07-17</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/handoutai-kabu-toha.html</loc>
 <lastmod>2026-07-20</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/crypto-tax-20percent.html</loc>
 <lastmod>2026-07-21</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/1kabu-tousi-tangenmiman.html</loc>
 <lastmod>2026-07-22</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/gpif-toha.html</loc>
 <lastmod>2026-07-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/kabushiki-bunkatsu-toha.html</loc>
 <lastmod>2026-07-25</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/tob-toha.html</loc>
 <lastmod>2026-07-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
-
+<url>
 <loc>https://tousiportal.jp/prime-standard-growth-toha.html</loc>
 <lastmod>2026-07-28</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/sector-tousi-toha.html</loc>
 <lastmod>2026-07-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/natsugare-souba-toha.html</loc>
 <lastmod>2026-07-31</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/kabunushi-yutai-toha.html</loc>
 <lastmod>2026-08-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/kessan-happyou-toha.html</loc>
 <lastmod>2026-08-04</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/jouhou-shuusei-kahou-shuusei-toha.html</loc>
 <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://tousiportal.jp/cpi-toha.html</loc>
 <lastmod>2026-08-10</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://bunsantousi-sector-kaisetu.html</loc>
 <lastmod>2026-08-12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://genyu-kakaku-kabu-bukka.html</loc>
 <lastmod>2026-08-15</lastmod>
 <changefreq>monthly</changefreq>
@@ -632,40 +649,58 @@
 </url>
 
 
+<url>
 <loc>https://jackson-hole-kaigi-toha.html</loc>
 <lastmod>2026-08-17</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://saxo-overseas-stocks-5markets.html</loc>
 <lastmod>2026-08-21</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
-
+<url>
 <loc>https://pce-deflator-toha.html</loc>
 <lastmod>2026-08-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
-
+<url>
 <loc>https://kokusai-toha.html</loc>
 <lastmod>2026-08-25</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://taka-ha-hato-ha-toha.html</loc>
 <lastmod>2026-08-31</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
+<url>
 <loc>https://nvidia-kessan-nihonkabu.html</loc>
 <lastmod>2026-08-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://taka-ha-hato-ha-toha.html</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://nvidia-kessan-nihonkabu.html</loc>
+<lastmod>2026-09-2</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>

@@ -313,12 +313,7 @@
 <priority>0.6</priority>
 </url>
 
-<url>
-<loc>https://tousiportal.jp/kabu-chart-mikata.html</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
+
 
 <url>
 <loc>https://tousiportal.jp/fx-chart-mikata.html</loc>
@@ -635,14 +630,14 @@
 </url>
 
 <url>
-<loc>https://bunsantousi-sector-kaisetu.html</loc>
+<loc>https://tousiportal.jp/bunsantousi-sector-kaisetu.html</loc>
 <lastmod>2026-08-12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://genyu-kakaku-kabu-bukka.html</loc>
+<loc>https://tousiportal.jp/genyu-kakaku-kabu-bukka.html</loc>
 <lastmod>2026-08-15</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -650,56 +645,51 @@
 
 
 <url>
-<loc>https://jackson-hole-kaigi-toha.html</loc>
+<loc>https://tousiportal.jp/jackson-hole-kaigi-toha.html</loc>
 <lastmod>2026-08-17</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://saxo-overseas-stocks-5markets.html</loc>
+<loc>https://tousiportal.jp/saxo-overseas-stocks-5markets.html</loc>
 <lastmod>2026-08-21</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://pce-deflator-toha.html</loc>
+<loc>https://tousiportal.jp/pce-deflator-toha.html</loc>
 <lastmod>2026-08-24</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://kokusai-toha.html</loc>
+<loc>https://tousiportal.jp/kokusai-toha.html</loc>
 <lastmod>2026-08-25</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
-<url>
-<loc>https://taka-ha-hato-ha-toha.html</loc>
-<lastmod>2026-08-31</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
+
 
 <url>
-<loc>https://nvidia-kessan-nihonkabu.html</loc>
+<loc>https://tousiportal.jp/nvidia-kessan-nihonkabu.html</loc>
 <lastmod>2026-08-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://taka-ha-hato-ha-toha.html</loc>
+<loc>https://tousiportal.jp/taka-ha-hato-ha-toha.html</loc>
 <lastmod>2026-08-30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://nvidia-kessan-nihonkabu.html</loc>
+<loc>https://tousiportal.jp/saiken-shijou-toha.html</loc>
 <lastmod>2026-09-2</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>

@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>米国雇用統計とは？なぜ「雇用が強い」と株価が下がることがあるの？初心者向けに解説 | 投資ポータル.jp</title>
+
+  <meta name="description" content="米国雇用統計とは何かを投資初心者向けに解説。非農業部門雇用者数、失業率、平均時給の見方から、雇用が強いとFRBの利下げ期待が後退し、金利上昇・株安・ドル高につながることがある理由まで分かりやすく整理します。">
+
+  <meta name="author" content="投資ポータル.jp">
+
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <link rel="canonical" href="https://tousiportal.jp/beikoku-koyou-toukei-toha.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="投資ポータル.jp">
+  <meta property="og:title" content="米国雇用統計とは？なぜ「雇用が強い」と株価が下がることがあるの？初心者向けに解説">
+  <meta property="og:description" content="米国雇用統計の基本と、雇用の強さがFRBの金利予想・米国債・株価・ドル円へ波及する仕組みを初心者向けに解説します。">
+  <meta property="og:url" content="https://tousiportal.jp/beikoku-koyou-toukei-toha.html">
+  <meta property="og:image" content="https://tousiportal.jp/sonota/beikoku-koyou-toukei-toha.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="米国雇用統計とは？なぜ「雇用が強い」と株価が下がることがあるの？">
+  <meta name="twitter:description" content="雇用統計→FRBの金利予想→国債金利→株価・ドル円へ波及する仕組みを初心者向けに整理。">
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/beikoku-koyou-toukei-toha.webp">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu-card.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="kiji.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+
+  <style>
+    .kiji-page .kiji-main {
+      min-width: 0;
+    }
+
+    .article-lead {
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .article-point-box {
+      margin: 24px 0;
+      padding: 20px;
+      border: 1px solid #dce7f2;
+      border-radius: 14px;
+      background: #f8fbff;
+    }
+
+    .article-point-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .article-point-box ul {
+      margin: 10px 0 0;
+      padding-left: 1.4em;
+    }
+
+    .article-point-box li + li {
+      margin-top: 8px;
+    }
+
+    .article-nav {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid #e0e7ef;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .article-nav h2 {
+      margin-top: 0;
+      font-size: 1.18rem;
+    }
+
+    .article-nav ol {
+      margin-bottom: 0;
+      padding-left: 1.4em;
+    }
+
+    .article-nav li + li {
+      margin-top: 8px;
+    }
+
+    .article-nav a {
+      text-decoration: none;
+    }
+
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin: 24px 0;
+      align-items: stretch;
+    }
+
+    .flow-item {
+      position: relative;
+      padding: 18px 12px;
+      border: 1px solid #dbe5ef;
+      border-radius: 12px;
+      background: #fff;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .flow-item:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -13px;
+      z-index: 2;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: #607080;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .metric-card {
+      padding: 20px;
+      border: 1px solid #dfe7ef;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .metric-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .metric-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .latest-data-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .latest-data-card {
+      padding: 18px;
+      border: 1px solid #dce6f0;
+      border-radius: 12px;
+      background: #f9fbfd;
+    }
+
+    .latest-data-card .label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: .9rem;
+      color: #5f6b76;
+    }
+
+    .latest-data-card .value {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .latest-data-card .sub {
+      display: block;
+      margin-top: 6px;
+      font-size: .88rem;
+      color: #66727d;
+    }
+
+    .simple-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 24px 0;
+    }
+
+    .simple-table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+    }
+
+    .simple-table th,
+    .simple-table td {
+      padding: 13px 14px;
+      border: 1px solid #dfe5eb;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .simple-table th {
+      background: #f4f7fa;
+      font-weight: 700;
+    }
+
+    .kiji-source-box {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border: 1px solid #dfe6ec;
+      border-radius: 12px;
+      background: #fafbfc;
+      font-size: .94rem;
+      line-height: 1.75;
+    }
+
+    .kiji-source-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .kiji-source-box ul {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    .kiji-source-box li + li {
+      margin-top: 6px;
+    }
+
+    .kiji-source-box a {
+      word-break: break-all;
+    }
+
+    .relation-box {
+      margin: 22px 0;
+      padding: 20px;
+      border-radius: 14px;
+      background: #f7f9fc;
+      border: 1px solid #e0e7ef;
+    }
+
+    .relation-box h3 {
+      margin-top: 0;
+    }
+
+    .relation-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .attention-box {
+      margin: 24px 0;
+      padding: 20px;
+      border-left: 5px solid #c7972d;
+      background: #fffaf0;
+      border-radius: 8px;
+    }
+
+    .attention-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .goodbad-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .goodbad-card {
+      padding: 20px;
+      border: 1px solid #dfe6ed;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .goodbad-card h3 {
+      margin-top: 0;
+    }
+
+    .related-link-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .related-link-card {
+      display: block;
+      height: 100%;
+      padding: 18px;
+      border: 1px solid #dfe6ed;
+      border-radius: 12px;
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .related-link-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .related-link-card span {
+      display: block;
+      color: #5f6973;
+      font-size: .94rem;
+      line-height: 1.7;
+    }
+
+    .faq-list {
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+      border: 1px solid #dfe6ed;
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 17px 18px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      padding: 0 18px 18px;
+      line-height: 1.8;
+    }
+
+    .faq-answer p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .flow-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-item:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: auto;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .metric-grid,
+      .latest-data-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .goodbad-grid,
+      .related-link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-nav,
+      .article-point-box,
+      .relation-box,
+      .attention-box {
+        padding: 17px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "コラム",
+        "item": "https://tousiportal.jp/column.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "米国雇用統計とは？",
+        "item": "https://tousiportal.jp/beikoku-koyou-toukei-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "米国雇用統計とは？なぜ「雇用が強い」と株価が下がることがあるの？初心者向けに解説",
+    "description": "米国雇用統計の基本と、雇用の強さがFRBの金利予想・米国債・株価・ドル円へ波及する仕組みを初心者向けに解説します。",
+    "image": "https://tousiportal.jp/sonota/beikoku-koyou-toukei-toha.webp",
+    "datePublished": "2026-09-05",
+    "dateModified": "2026-09-05",
+    "author": {
+      "@type": "Person",
+      "@id": "https://tousiportal.jp/#person"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://tousiportal.jp/#organization"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/beikoku-koyou-toukei-toha.html"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "米国雇用統計とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "米国の雇用状況を示す統計の総称で、特に米労働省労働統計局（BLS）が原則毎月公表するEmployment Situationが市場で注目されています。非農業部門雇用者数、失業率、平均時給などが代表的な指標です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ雇用が強いと株価が下がることがあるのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "雇用が強いと景気や賃金の強さが意識され、FRBが利下げを急がない、または金融引き締めを続けるとの見方が強まることがあります。その結果、米国債利回りが上昇し、株式の割高感が意識されて株価が下がる場合があります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "米国雇用統計では何を見ればよいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "非農業部門雇用者数、失業率、平均時給に加え、市場予想との差や前月分の改定も確認すると、数字の意味を理解しやすくなります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "雇用統計が弱ければ株価は必ず上がりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必ず上がるわけではありません。適度な雇用の減速は利下げ期待につながる場合がありますが、急激な悪化は景気後退への警戒を強め、株価下落につながることもあります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "米国雇用統計はドル円にも影響しますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "影響することがあります。強い雇用統計によって米国金利の上昇が意識されると、日米金利差への期待などからドル高・円安方向に動く場合があります。ただし為替は日銀政策や他の経済指標など多くの要因でも動きます。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+
+  <div id="header"></div>
+
+  <div class="container">
+
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="index.html">ホーム</a>
+        <span aria-hidden="true">›</span>
+        <a href="column.html">コラム</a>
+        <span aria-hidden="true">›</span>
+        <span>米国雇用統計とは？</span>
+      </nav>
+
+      <article class="kiji-article">
+
+        <header class="kiji-hero">
+
+          <p class="kiji-category">話題・トレンド</p>
+
+          <h1>米国雇用統計とは？なぜ「雇用が強い」と株価が下がることがあるの？初心者向けに解説</h1>
+
+          <p class="article-lead">
+            米国雇用統計は、世界の金融市場で特に注目される経済指標の一つです。
+            ニュースでは「雇用者数が予想を上回った」「失業率が低下した」といった数字が報じられますが、
+            一見すると良いニュースなのに株価が下落することもあります。
+          </p>
+
+          <p class="article-lead">
+            その理由を理解するポイントは、
+            <strong>雇用統計そのものだけでなく、FRBの金融政策や金利予想までつなげて考えること</strong>です。
+            この記事では、非農業部門雇用者数・失業率・平均時給の基本から、
+            株価・米国債・ドル円へ影響が広がる仕組みまで初心者向けに整理します。
+          </p>
+
+          <figure class="kiji-main-image">
+            <img
+              src="sonota/beikoku-koyou-toukei-toha.webp"
+              alt="米国雇用統計からFRBの金利予想、国債、株価、ドル円へ影響が波及する仕組みを初心者向けに整理した教材画像"
+              width="1200"
+              height="675"
+              loading="eager"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="article-point-box">
+            <strong>この記事のポイント</strong>
+            <ul>
+              <li>米国雇用統計は米国の雇用・賃金の状態を見る重要な経済指標</li>
+              <li>非農業部門雇用者数・失業率・平均時給が特に注目される</li>
+              <li>重要なのは「良い数字か悪い数字か」だけでなく市場予想との差</li>
+              <li>強い雇用統計はFRBの利下げ期待を後退させ、金利上昇につながることがある</li>
+              <li>その結果として株安・ドル高が起こる場合がある</li>
+            </ul>
+          </div>
+
+        </header>
+
+        <nav class="article-nav" aria-label="この記事の目次">
+          <h2>この記事で分かること</h2>
+          <ol>
+            <li><a href="#what">米国雇用統計とは？</a></li>
+            <li><a href="#three-points">初心者が見る3つの指標</a></li>
+            <li><a href="#fed">なぜFRBが雇用統計を重視するのか</a></li>
+            <li><a href="#strong-stock-down">なぜ「雇用が強い」と株価が下がることがあるのか</a></li>
+            <li><a href="#weak-stock-up">雇用が弱いと株価が上がることもある理由</a></li>
+            <li><a href="#forecast">市場予想との差が重要な理由</a></li>
+            <li><a href="#revision">前月分の改定にも注意</a></li>
+            <li><a href="#bond">米国債・金利への影響</a></li>
+            <li><a href="#fx">ドル円への影響</a></li>
+            <li><a href="#japan-stock">日本株への影響</a></li>
+            <li><a href="#latest">直近の米国雇用統計</a></li>
+            <li><a href="#check">初心者向けチェックポイント</a></li>
+          </ol>
+        </nav>
+
+        <section class="kiji-section" id="what">
+
+          <h2>米国雇用統計とは？</h2>
+
+          <p>
+            一般に金融ニュースで「米国雇用統計」と呼ばれているものは、
+            米労働省労働統計局（BLS）が原則として毎月公表する
+            <strong>Employment Situation（雇用情勢）</strong>を指します。
+          </p>
+
+          <p>
+            米国でどれくらい雇用が増えているのか、失業者がどれくらいいるのか、
+            賃金がどの程度上昇しているのかなどを確認できるため、
+            米国景気の状態を判断する重要な材料として世界中の投資家から注目されています。
+          </p>
+
+          <p>
+            米国は世界最大規模の経済を持ち、FRBの金融政策は米国株だけでなく、
+            米国債・為替・日本株を含む世界の市場へ大きな影響を与えることがあります。
+            そのため、雇用統計の発表直後には市場が大きく動くことも珍しくありません。
+          </p>
+
+          <div class="flow-wrap" aria-label="米国雇用統計から市場へ影響する基本的な流れ">
+            <div class="flow-item">米国雇用統計</div>
+            <div class="flow-item">景気・賃金を判断</div>
+            <div class="flow-item">FRB政策予想</div>
+            <div class="flow-item">米国金利</div>
+            <div class="flow-item">株・為替へ波及</div>
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="three-points">
+
+          <h2>米国雇用統計で初心者がまず見る3つの指標</h2>
+
+          <p>
+            雇用統計には多くのデータが含まれていますが、
+            初心者はまず次の3つを押さえておくとニュースを理解しやすくなります。
+          </p>
+
+          <div class="metric-grid">
+
+            <article class="metric-card">
+              <h3>① 非農業部門雇用者数</h3>
+              <p>
+                農業部門を除く事業所で働く人が前月からどれだけ増減したかを見る指標です。
+                英語ではNonfarm Payrollsと呼ばれ、NFPと略されることもあります。
+              </p>
+              <p>
+                市場では特に注目度が高く、
+                「雇用統計が強かった・弱かった」と表現するときの中心になる数字の一つです。
+              </p>
+            </article>
+
+            <article class="metric-card">
+              <h3>② 失業率</h3>
+              <p>
+                労働力人口のうち、仕事を探している失業者がどの程度いるかを示す割合です。
+              </p>
+              <p>
+                一般には低いほど雇用環境が強いと考えられますが、
+                労働参加率など他の指標と合わせて見ることも重要です。
+              </p>
+            </article>
+
+            <article class="metric-card">
+              <h3>③ 平均時給</h3>
+              <p>
+                労働者の賃金がどの程度増えているかを見る指標です。
+              </p>
+              <p>
+                賃金上昇は家計の購買力を支える一方、
+                強すぎる賃金上昇はサービス価格などのインフレ圧力につながる可能性もあるため、
+                FRBの政策判断を考えるうえで重要視されます。
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="fed">
+
+          <h2>なぜFRBは雇用統計を重視するの？</h2>
+
+          <p>
+            FRB（米連邦準備制度）は、米国の中央銀行にあたる組織です。
+            金融政策では<strong>最大雇用と物価の安定</strong>が重要な目標となっています。
+          </p>
+
+          <p>
+            そのためFRBは、CPIやPCEデフレーターなどの物価指標だけでなく、
+            雇用者数・失業率・賃金など労働市場のデータも確認しながら政策を判断します。
+          </p>
+
+          <div class="relation-box">
+            <h3>雇用と金融政策の基本的な考え方</h3>
+            <p>
+              雇用が非常に強く、賃金や需要も強い状態が続くと、
+              インフレが再び強まる可能性が意識されます。
+              その場合、市場では「FRBが利下げを急がないのではないか」
+              「高い金利が長く続くのではないか」と予想されることがあります。
+            </p>
+          </div>
+
+          <p>
+            反対に雇用が緩やかに弱まり、インフレも落ち着いている場合には、
+            金融政策を緩和しやすくなるとの見方が強まることがあります。
+          </p>
+
+          <p>
+            FRBの政策そのものについては
+            <a href="fomc-toha.html">FOMCとは？初心者向けに解説</a>や
+            <a href="taka-ha-hato-ha-toha.html">タカ派・ハト派とは？</a>
+            もあわせて読むと理解しやすくなります。
+          </p>
+
+        </section>
+
+        <section class="kiji-section" id="strong-stock-down">
+
+          <h2>なぜ「雇用が強い」と株価が下がることがあるの？</h2>
+
+          <p>
+            投資初心者が特に混乱しやすいのが、
+            <strong>「雇用が増えたのに株価が下がる」</strong>という動きです。
+          </p>
+
+          <p>
+            景気だけを考えれば、雇用が増えることは通常プラス材料です。
+            働く人が増えれば所得が増え、消費や企業業績を支える可能性があります。
+          </p>
+
+          <p>
+            しかし金融市場は、現在の景気だけでなく
+            <strong>その数字を受けてFRBが今後どう動くか</strong>まで先回りして考えます。
+          </p>
+
+          <div class="flow-wrap" aria-label="強い雇用統計で株価が下がることがある流れ">
+            <div class="flow-item">雇用が予想以上に強い</div>
+            <div class="flow-item">景気・賃金の強さを意識</div>
+            <div class="flow-item">利下げ期待が後退</div>
+            <div class="flow-item">米国金利が上昇</div>
+            <div class="flow-item">株価に下押し圧力</div>
+          </div>
+
+          <p>
+            金利が上昇すると、株式の将来利益を現在価値に換算したときの評価が低くなりやすく、
+            特に将来の成長期待を大きく織り込んでいるグロース株やハイテク株では
+            株価の重荷になる場合があります。
+          </p>
+
+          <p>
+            また、国債利回りが上昇すると、
+            投資家にとって債券の魅力が相対的に高まり、
+            株式から資金が移る可能性もあります。
+          </p>
+
+          <div class="attention-box">
+            <strong>「雇用が強い＝株安」ではありません</strong>
+            雇用が強いことで企業業績の拡大期待が高まり、株価が上昇する場合もあります。
+            市場がその時点で「景気」を重視しているのか、
+            「インフレや金利」を重視しているのかによって反応は変わります。
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="weak-stock-up">
+
+          <h2>雇用が弱いと株価が上がることもある理由</h2>
+
+          <p>
+            反対に、雇用統計が市場予想より少し弱かったにもかかわらず、
+            株価が上昇することもあります。
+          </p>
+
+          <p>
+            これは雇用の緩やかな減速によって、
+            「景気が過熱しすぎていない」
+            「FRBが利下げしやすくなる」
+            と投資家が考えるためです。
+          </p>
+
+          <div class="flow-wrap" aria-label="弱い雇用統計で株価が上がることがある流れ">
+            <div class="flow-item">雇用がやや弱い</div>
+            <div class="flow-item">景気の過熱感が後退</div>
+            <div class="flow-item">利下げ期待が高まる</div>
+            <div class="flow-item">米国金利が低下</div>
+            <div class="flow-item">株価を支える場合</div>
+          </div>
+
+          <p>
+            ただし、雇用が急激に悪化した場合は話が変わります。
+            失業率が急上昇するなど景気後退への警戒が強まれば、
+            利下げ期待よりも企業業績悪化への不安が大きくなり、
+            株価が下落することがあります。
+          </p>
+
+          <div class="goodbad-grid">
+
+            <article class="goodbad-card">
+              <h3>適度な雇用の減速</h3>
+              <p>
+                インフレ沈静化や利下げ期待につながり、
+                株式市場に好意的に受け止められることがあります。
+              </p>
+            </article>
+
+            <article class="goodbad-card">
+              <h3>急激な雇用悪化</h3>
+              <p>
+                景気後退や企業利益の減少が警戒され、
+                株式市場にマイナスとなることがあります。
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="forecast">
+
+          <h2>雇用統計は「良い・悪い」より市場予想との差が重要</h2>
+
+          <p>
+            経済指標を見るときに初心者が覚えておきたいのが、
+            <strong>市場は発表された数字だけでなく、事前予想との差に反応する</strong>という点です。
+          </p>
+
+          <p>
+            例えば雇用者数が10万人増えていても、
+            市場が20万人増を予想していたのであれば「予想より弱い」と評価されます。
+            一方、市場予想が5万人増だったところ実際には10万人増えれば、
+            同じ10万人でも「強い」と受け止められる可能性があります。
+          </p>
+
+          <div class="simple-table-wrap">
+            <table class="simple-table">
+              <thead>
+                <tr>
+                  <th>市場予想</th>
+                  <th>実際の結果</th>
+                  <th>一般的な受け止め方</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>雇用者数 +5万人</td>
+                  <td>+15万人</td>
+                  <td>予想より強い</td>
+                </tr>
+                <tr>
+                  <td>雇用者数 +20万人</td>
+                  <td>+15万人</td>
+                  <td>増加していても予想より弱い</td>
+                </tr>
+                <tr>
+                  <td>失業率 4.2%</td>
+                  <td>4.0%</td>
+                  <td>予想より雇用環境が強い可能性</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            そのためニュースを見るときは、
+            「何万人増えたか」だけでなく
+            <strong>市場予想はいくつだったのか</strong>まで確認することが重要です。
+          </p>
+
+        </section>
+
+        <section class="kiji-section" id="revision">
+
+          <h2>前月分の「改定」にも注意</h2>
+
+          <p>
+            米国雇用統計では、過去に発表された雇用者数が後から改定されることがあります。
+          </p>
+
+          <p>
+            例えば今月の数字が強くても、
+            前月・前々月分が大きく下方修正されていれば、
+            労働市場全体としては最初に考えたほど強くなかった可能性があります。
+          </p>
+
+          <p>
+            逆に、最新値がそれほど強くなくても、
+            過去分が大幅に上方修正されれば市場の評価が変わる場合があります。
+          </p>
+
+          <div class="article-point-box">
+            <strong>雇用統計を見る順番</strong>
+            <ul>
+              <li>今回の非農業部門雇用者数</li>
+              <li>市場予想との差</li>
+              <li>失業率</li>
+              <li>平均時給</li>
+              <li>前月・前々月分の改定</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="bond">
+
+          <h2>米国雇用統計と米国債・金利の関係</h2>
+
+          <p>
+            雇用統計の結果は、米国債市場にも大きな影響を与えることがあります。
+          </p>
+
+          <p>
+            雇用が市場予想より強く、
+            FRBが高い政策金利を長期間維持するとの見方が強まると、
+            特に金融政策の予想を反映しやすい短期国債の利回りが上昇することがあります。
+          </p>
+
+          <p>
+            長期金利も、景気・インフレ・財政・国債需給など複数の要因を反映しながら動きます。
+            金利上昇が株式市場へ影響する仕組みについては
+            <a href="saiken-shijou-toha.html">債券市場とは？なぜ国債売りで株価まで下がるの？</a>
+            で詳しく解説しています。
+          </p>
+
+          <p>
+            国債価格と金利の基本関係は
+            <a href="kokusai-toha.html">国債とは？国債が売られるとなぜ金利が上がるの？</a>
+            も参考にしてください。
+          </p>
+
+        </section>
+
+        <section class="kiji-section" id="fx">
+
+          <h2>米国雇用統計はドル円にも影響する</h2>
+
+          <p>
+            雇用統計発表後には、ドル円など為替相場も大きく動くことがあります。
+          </p>
+
+          <p>
+            強い雇用統計によって米国の利下げ期待が後退し、
+            米国金利が上昇すると、
+            ドルが買われやすくなる場合があります。
+          </p>
+
+          <div class="flow-wrap" aria-label="強い雇用統計からドル円へ影響する流れ">
+            <div class="flow-item">強い雇用統計</div>
+            <div class="flow-item">利下げ期待後退</div>
+            <div class="flow-item">米金利上昇</div>
+            <div class="flow-item">ドル買い</div>
+            <div class="flow-item">ドル高・円安方向</div>
+          </div>
+
+          <p>
+            ただしドル円は米国だけで決まるわけではありません。
+            日銀の金融政策、日本の金利、物価、政治情勢、リスク回避の動きなども影響します。
+          </p>
+
+          <p>
+            円安そのものについては
+            <a href="yen-yasui-toha.html">円安とは？初心者向けに解説</a>
+            で基本から整理しています。
+          </p>
+
+        </section>
+
+        <section class="kiji-section" id="japan-stock">
+
+          <h2>米国雇用統計は日本株にも影響する？</h2>
+
+          <p>
+            米国雇用統計は米国の指標ですが、日本株にも間接的に影響することがあります。
+          </p>
+
+          <p>
+            例えば強い雇用統計によって米国株が下落すると、
+            翌営業日の日本株にもリスク回避の流れが波及する場合があります。
+          </p>
+
+          <p>
+            一方で、雇用統計を受けてドル高・円安が進んだ場合には、
+            輸出企業の業績期待などを通じて一部の日本株を支える可能性もあります。
+          </p>
+
+          <p>
+            つまり日本株への影響も一方向ではなく、
+            <strong>米国株・米国金利・ドル円の動きを組み合わせて考えること</strong>が大切です。
+          </p>
+
+          <p>
+            株価がさまざまな材料で動く基本的な仕組みは
+            <a href="kabuka-naze-ugoku.html">株価はなぜ上がったり下がったりするの？</a>
+            も参考になります。
+          </p>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>「Good News is Bad News」とは？</h2>
+
+          <p>
+            金融ニュースでは、ときどき
+            <strong>「Good News is Bad News（良いニュースが悪いニュースになる）」</strong>
+            という表現が使われます。
+          </p>
+
+          <p>
+            雇用統計が強いこと自体は経済にとって良いニュースでも、
+            その結果として金融引き締めが長期化し、
+            金利上昇が株価を圧迫すると考えられれば、
+            株式市場にとっては悪材料になることがあります。
+          </p>
+
+          <p>
+            逆に、やや弱い経済指標が利下げ期待につながることで、
+            株式市場では好材料と受け止められる場合もあります。
+          </p>
+
+          <div class="attention-box">
+            <strong>重要なのは「経済に良いか」と「株価に良いか」を分けて考えること</strong>
+            金融市場は現在の数字だけでなく、
+            その数字によって将来の金利や企業利益がどう変わるかを先回りして動きます。
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="latest">
+
+          <h2>直近の米国雇用統計｜2026年8月分</h2>
+
+          <p>
+            2026年9月4日に米労働省労働統計局（BLS）が公表した
+            2026年8月分の雇用統計では、
+            非農業部門雇用者数が前月比<strong>16万2,000人増</strong>となりました。
+          </p>
+
+          <div class="latest-data-grid">
+
+            <div class="latest-data-card">
+              <span class="label">非農業部門雇用者数</span>
+              <span class="value">+16.2万人</span>
+              <span class="sub">2026年8月</span>
+            </div>
+
+            <div class="latest-data-card">
+              <span class="label">失業率</span>
+              <span class="value">4.1%</span>
+              <span class="sub">前月から横ばい</span>
+            </div>
+
+            <div class="latest-data-card">
+              <span class="label">平均時給</span>
+              <span class="value">前月比 +0.3%</span>
+              <span class="sub">前年比 +3.1%</span>
+            </div>
+
+          </div>
+
+          <p>
+            民間非農業部門の平均時給は37.75ドルとなり、
+            前月から0.10ドル、0.3%上昇しました。
+            前年同月比では3.1%の上昇です。
+          </p>
+
+          <p>
+            また過去分については、
+            6月の雇用者数が2万人増から3万1,000人増へ、
+            7月が2万3,000人減から2万1,000人増へ改定され、
+            2か月合計では従来公表値より5万5,000人上方修正されました。
+          </p>
+
+          <p>
+            市場予想を大きく上回る雇用増加となったことで、
+            発表後はFRBが早期に金融緩和へ向かうとの期待が後退し、
+            米国債利回りが上昇しました。
+            ドルも上昇する一方、米国株は下落しました。
+          </p>
+
+          <div class="simple-table-wrap">
+            <table class="simple-table">
+              <thead>
+                <tr>
+                  <th>市場</th>
+                  <th>発表後の主な動き</th>
+                  <th>背景</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>米2年国債利回り</td>
+                  <td>約4.37%へ上昇</td>
+                  <td>FRBの政策金利見通しを反映しやすい短期金利が上昇</td>
+                </tr>
+                <tr>
+                  <td>米10年国債利回り</td>
+                  <td>約4.78%へ上昇</td>
+                  <td>強い景気・金利高止まりへの警戒</td>
+                </tr>
+                <tr>
+                  <td>ドル指数</td>
+                  <td>約0.21%上昇</td>
+                  <td>米金利上昇を受けたドル買い</td>
+                </tr>
+                <tr>
+                  <td>ドル円</td>
+                  <td>約156.19円</td>
+                  <td>ドル高・円安方向へ</td>
+                </tr>
+                <tr>
+                  <td>S&amp;P500</td>
+                  <td>約0.38%下落</td>
+                  <td>利下げ期待後退と金利上昇</td>
+                </tr>
+                <tr>
+                  <td>NASDAQ</td>
+                  <td>約0.29%下落</td>
+                  <td>高金利への警戒</td>
+                </tr>
+                <tr>
+                  <td>NYダウ</td>
+                  <td>約0.51%下落</td>
+                  <td>金利上昇への警戒</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            この動きは、
+            <strong>「雇用が強いこと自体は景気にとって良いが、金融市場では金利上昇が意識されて株価には逆風になることがある」</strong>
+            という典型例の一つです。
+          </p>
+
+          <div class="kiji-source-box">
+            <strong>直近データの主な参照元</strong>
+            <ul>
+              <li>
+                米労働省労働統計局（BLS）
+                「The Employment Situation — August 2026」
+              </li>
+              <li>
+                Reuters
+                「US nonfarm payrolls surge in August, unemployment rate steady at 4.1%」
+              </li>
+            </ul>
+          </div>
+
+          <div class="attention-box">
+            <strong>この部分は最新発表に合わせて更新します</strong>
+            雇用統計は毎月発表されるため、
+            最新の数値や市場反応は発表のたびに変化します。
+            記事の基本解説部分は常設知識として利用できます。
+          </div>
+
+        </section>
+
+        <section class="kiji-section" id="check">
+
+          <h2>初心者が米国雇用統計を見るときのチェックポイント</h2>
+
+          <p>
+            雇用統計では大量の数字が発表されますが、
+            初心者がすべてを追いかける必要はありません。
+            まずは次の順番で確認すると整理しやすくなります。
+          </p>
+
+          <div class="article-point-box">
+            <strong>初心者向け5項目</strong>
+            <ul>
+              <li><strong>非農業部門雇用者数：</strong>雇用が増えたか減ったか</li>
+              <li><strong>市場予想との差：</strong>予想より強かったか弱かったか</li>
+              <li><strong>失業率：</strong>労働市場が悪化していないか</li>
+              <li><strong>平均時給：</strong>賃金インフレが強まっていないか</li>
+              <li><strong>FRBの金利予想：</strong>発表後に利下げ・利上げ予想がどう変化したか</li>
+            </ul>
+          </div>
+
+          <p>
+            そのうえで米国債利回り、ドル円、米国株の反応を見ると、
+            なぜ市場がその方向へ動いたのかを理解しやすくなります。
+          </p>
+
+          <p>
+            「数字が良いから株を買う」「悪いから売る」と単純に判断するのではなく、
+            <strong>数字 → FRB予想 → 金利 → 株価・為替</strong>
+            という流れを意識することが大切です。
+          </p>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>雇用統計と一緒に覚えたい経済指標</h2>
+
+          <p>
+            FRBは雇用だけで金融政策を決めているわけではありません。
+            物価や景気を示す複数のデータを確認しながら判断します。
+          </p>
+
+          <div class="related-link-grid">
+
+            <a class="related-link-card" href="cpi-toha.html">
+              <strong>CPIとは？</strong>
+              <span>米国のインフレを見る代表的な物価指標。雇用統計と並んでFRB政策を考える重要材料です。</span>
+            </a>
+
+            <a class="related-link-card" href="pce-deflator-toha.html">
+              <strong>PCEデフレーターとは？</strong>
+              <span>FRBが物価動向を見るうえで重視する指標の一つ。CPIとの違いも整理できます。</span>
+            </a>
+
+            <a class="related-link-card" href="fomc-toha.html">
+              <strong>FOMCとは？</strong>
+              <span>FRBが政策金利などを決める会合。雇用統計がなぜ重要なのかを理解しやすくなります。</span>
+            </a>
+
+            <a class="related-link-card" href="taka-ha-hato-ha-toha.html">
+              <strong>タカ派・ハト派とは？</strong>
+              <span>中央銀行関係者の発言から金融政策の方向性を読むための基本用語です。</span>
+            </a>
+
+          </div>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>米国雇用統計と金利・株価をあわせて学ぶ</h2>
+
+          <div class="related-link-grid">
+
+            <a class="related-link-card" href="kinri-joushou-toha.html">
+              <strong>金利上昇とは？</strong>
+              <span>金利が上がると株式や預金などにどのような影響が出るのかを初心者向けに解説。</span>
+            </a>
+
+            <a class="related-link-card" href="kokusai-toha.html">
+              <strong>国債とは？</strong>
+              <span>国債が売られるとなぜ金利が上昇するのか、価格と利回りの関係を整理します。</span>
+            </a>
+
+            <a class="related-link-card" href="saiken-shijou-toha.html">
+              <strong>債券市場とは？</strong>
+              <span>世界的な国債売りや長期金利上昇が株価へ波及する仕組みを解説。</span>
+            </a>
+
+            <a class="related-link-card" href="yen-yasui-toha.html">
+              <strong>円安とは？</strong>
+              <span>ドル円や日本経済への影響を初心者向けに整理しています。</span>
+            </a>
+
+            <a class="related-link-card" href="kabuka-naze-ugoku.html">
+              <strong>株価はなぜ上がったり下がったりするの？</strong>
+              <span>経済指標や企業業績、金利などが株価へ影響する基本を学べます。</span>
+            </a>
+
+            <a class="related-link-card" href="nikkei-70000-nisa.html">
+              <strong>日経平均が高値圏のとき投資はどう考える？</strong>
+              <span>相場が大きく動いている場面で初心者が意識したい考え方を整理しています。</span>
+            </a>
+
+          </div>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>米国雇用統計で初心者が注意したいこと</h2>
+
+          <p>
+            雇用統計の発表直後は、株式・為替・債券が短時間で大きく動くことがあります。
+            最初の反応と、その後の値動きが逆になるケースもあります。
+          </p>
+
+          <p>
+            例えば非農業部門雇用者数だけを見て市場が反応した後、
+            失業率や平均時給、過去分の改定が確認され、
+            投資家の評価が変わることもあります。
+          </p>
+
+          <div class="attention-box">
+            <strong>発表直後の値動きだけで判断しない</strong>
+            経済指標発表時には価格変動が大きくなることがあります。
+            初心者は無理に短期売買を行うのではなく、
+            「なぜ市場が動いたのか」を学ぶ材料として確認する方法もあります。
+          </div>
+
+          <p>
+            長期投資や積立投資を行っている場合も、
+            毎月の雇用統計だけを理由に投資方針を大きく変更する必要があるとは限りません。
+            分散や資金管理を意識しながら、長期的な視点で考えることが重要です。
+          </p>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>よくある質問</h2>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>米国雇用統計とは何ですか？</summary>
+              <div class="faq-answer">
+                <p>
+                  米国の雇用状況を示す統計です。
+                  特に米労働省労働統計局（BLS）が原則毎月公表するEmployment Situationが注目され、
+                  非農業部門雇用者数・失業率・平均時給などが市場で重要視されています。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>なぜ雇用が強いと株価が下がることがあるのですか？</summary>
+              <div class="faq-answer">
+                <p>
+                  雇用が強いことでFRBの利下げ期待が後退し、
+                  米国金利が上昇する場合があるためです。
+                  金利上昇は株式の評価や資金の流れに影響し、
+                  株価の下押し要因になることがあります。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>雇用統計では何を見ればいいですか？</summary>
+              <div class="faq-answer">
+                <p>
+                  初心者は非農業部門雇用者数、失業率、平均時給、
+                  市場予想との差、過去分の改定を確認すると全体像をつかみやすくなります。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>雇用が弱ければ株価は必ず上がりますか？</summary>
+              <div class="faq-answer">
+                <p>
+                  必ずではありません。
+                  適度な雇用の減速は利下げ期待につながることがありますが、
+                  急激な悪化は景気後退への警戒を強め、株価下落につながる可能性があります。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>米国雇用統計はドル円にも影響しますか？</summary>
+              <div class="faq-answer">
+                <p>
+                  影響することがあります。
+                  強い雇用統計によって米国金利が上昇すると、
+                  ドル高・円安方向に動く場合があります。
+                  ただし日銀の金融政策など他の要因にも左右されます。
+                </p>
+              </div>
+            </details>
+
+          </div>
+
+        </section>
+
+        <section class="kiji-section">
+
+          <h2>まとめ｜雇用統計は「FRBと金利」までつなげて見る</h2>
+
+          <p>
+            米国雇用統計は、米国の労働市場の状態を確認する重要な経済指標です。
+            非農業部門雇用者数、失業率、平均時給などが特に注目されています。
+          </p>
+
+          <p>
+            初心者が覚えておきたいのは、
+            <strong>雇用が強いから株価が必ず上がるわけではない</strong>という点です。
+          </p>
+
+          <p>
+            雇用が予想以上に強いと、
+            FRBの利下げ期待が後退し、
+            米国債利回りの上昇を通じて株価が下落することがあります。
+            反対に適度な雇用の減速が利下げ期待につながり、
+            株価を支えることもあります。
+          </p>
+
+          <div class="flow-wrap" aria-label="米国雇用統計を理解する基本の流れ">
+            <div class="flow-item">雇用統計</div>
+            <div class="flow-item">予想との差</div>
+            <div class="flow-item">FRB政策予想</div>
+            <div class="flow-item">金利・ドル</div>
+            <div class="flow-item">株価へ波及</div>
+          </div>
+
+          <p>
+            毎月のニュースを見るときは数字だけを見るのではなく、
+            <strong>「この結果でFRBの金融政策予想がどう変わったのか」</strong>
+            まで確認すると、市場の値動きを理解しやすくなります。
+          </p>
+
+        </section>
+
+        <section class="kiji-cta">
+          <h2>投資の基本をさらに学びたい方へ</h2>
+          <p>
+            投資ポータル.jpでは、株式・金利・為替・経済指標などを
+            投資初心者向けにできるだけ分かりやすく整理しています。
+          </p>
+          <a href="column.html" class="kiji-cta-button">
+            投資コラム一覧を見る
+          </a>
+        </section>
+
+        <section class="kiji-disclaimer">
+          <h2>免責事項</h2>
+          <p>
+            当記事は、投資・経済・金融に関する一般的な情報提供および学習を目的としたものであり、
+            特定の金融商品の売買や投資判断を推奨するものではありません。
+            市場環境や経済指標は変化するため、実際の投資判断はご自身の責任で行ってください。
+          </p>
+        </section>
+
+      </article>
+
+    </main>
+
+  </div>
+
+  <button
+    id="backToTop"
+    type="button"
+    aria-label="ページ上部へ戻る"
+    title="ページ上部へ戻る"
+  >
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backToTop = document.getElementById("backToTop");
+
+      if (!backToTop) return;
+
+      const toggleBackToTop = function () {
+        if (window.scrollY > 500) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      };
+
+      window.addEventListener("scroll", toggleBackToTop, { passive: true });
+
+      backToTop.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+      toggleBackToTop();
+    });
+  </script>
+
+</body>
+</html>

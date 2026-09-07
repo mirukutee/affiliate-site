@@ -701,7 +701,14 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-<!-- update 2026-07-20 -->
+
+<url>
+<loc>https://tousiportal.jp/ppi-toha.html</loc>
+<lastmod>2026-09-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->
 

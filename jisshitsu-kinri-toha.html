@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- update 2026-09-09 -->
+  <link rel="canonical" href="https://tousiportal.jp/jisshitsu-kinri-toha.html" />
+
+  <title>実質金利とは？なぜ金や株価に影響するの？初心者向けに解説</title>
+  <meta name="description" content="実質金利とは何かを初心者向けに解説。名目金利とインフレ率の違い、金（ゴールド）・株価・ドル・為替への影響、米10年実質金利やTIPSを見るポイントを分かりやすく整理します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="実質金利とは？なぜ金や株価に影響するの？初心者向けに解説" />
+  <meta property="og:description" content="名目金利とインフレ率の違い、金・株価・ドルとの関係、米10年実質金利の見方を初心者向けに整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/jisshitsu-kinri-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/jisshitsu-kinri-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル.jp" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="実質金利とは？なぜ金や株価に影響するの？" />
+  <meta name="twitter:description" content="実質金利の基本と、金・株価・ドル・インフレとの関係を初心者向けに解説します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/jisshitsu-kinri-toha.webp" />
+  <meta name="twitter:site" content="@QwZd0ksG2138610" />
+  <meta name="twitter:creator" content="@QwZd0ksG2138610" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * { box-sizing: border-box; }
+
+    .kiji-page { overflow-x: hidden; }
+
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-main-image {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 18px;
+      border: 1px solid #d9e4ee;
+      box-shadow: 0 10px 26px rgba(20, 45, 90, 0.08);
+    }
+
+    .purpose-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 14px;
+      border: 1px solid #d9e4ee;
+      border-radius: 16px;
+      background: rgba(255,255,255,.92);
+    }
+
+    .purpose-nav a {
+      flex: 1 1 140px;
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .6rem .75rem;
+      border: 1px solid #cbdcec;
+      border-radius: 10px;
+      background: #fff;
+      color: #1f6fb2;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .purpose-nav a:hover,
+    .purpose-nav a:focus-visible {
+      background: #edf6ff;
+      text-decoration: none;
+    }
+
+    .kiji-page .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .kiji-page .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .kiji-page .table-modern {
+      width: max-content;
+      min-width: 700px;
+      max-width: none;
+    }
+
+    .kiji-keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .kiji-keyword-list li {
+      margin: 0;
+      padding: .55rem .78rem;
+      border: 1px solid #d9e4ee;
+      border-radius: 999px;
+      background: #f8fbff;
+      color: #27445f;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .kiji-faq-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (max-width: 960px) {
+      .kiji-page .container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+      }
+
+      .kiji-page aside,
+      .kiji-page #sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .kiji-page #main.kiji-main {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main { padding: .75rem; }
+
+      .kiji-page .breadcrumb {
+        padding: .65rem .75rem;
+        margin: .2rem 0 .75rem;
+      }
+
+      .kiji-page .kiji-article { gap: 16px; }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .kiji-page .kiji-title {
+        font-size: clamp(1.28rem, 6vw, 1.58rem);
+        line-height: 1.42;
+      }
+
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p {
+        font-size: .94rem;
+        line-height: 1.75;
+      }
+
+      .purpose-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .purpose-nav a {
+        width: 100%;
+        min-height: 42px;
+        padding: .55rem .5rem;
+        font-size: .84rem;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 620px;
+        font-size: .82rem;
+      }
+
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td {
+        padding: 9px 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main { padding: .55rem; }
+
+      .purpose-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 14px 12px;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 560px;
+        font-size: .78rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "投資コラム・解説記事一覧",
+        "item": "https://tousiportal.jp/column.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "実質金利とは？",
+        "item": "https://tousiportal.jp/jisshitsu-kinri-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://tousiportal.jp/jisshitsu-kinri-toha.html#article",
+    "headline": "実質金利とは？なぜ金や株価に影響するの？初心者向けに解説",
+    "description": "実質金利とは何か、名目金利とインフレ率の違い、金・株価・ドルへの影響、米10年実質金利やTIPSの見方を初心者向けに解説します。",
+    "image": "https://tousiportal.jp/sonota/jisshitsu-kinri-toha.webp",
+    "datePublished": "2026-09-09",
+    "dateModified": "2026-09-09",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/jisshitsu-kinri-toha.html"
+    },
+    "inLanguage": "ja",
+    "articleSection": "話題・トレンド",
+    "author": {
+      "@type": "Person",
+      "@id": "https://tousiportal.jp/#person",
+      "name": "ミルクティー",
+      "url": "https://tousiportal.jp/profile.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://tousiportal.jp/#organization",
+      "name": "投資ポータル.jp",
+      "url": "https://tousiportal.jp/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tousiportal.jp/favicon-512.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "実質金利とは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "実質金利は、名目金利から物価上昇の影響を考慮した金利です。初心者向けには「実質金利≒名目金利−インフレ率」と考えると理解しやすくなります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "名目金利と実質金利の違いは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "名目金利は表示されている金利そのものです。実質金利は、そこからインフレによる購買力の変化を考慮した金利です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "実質金利が上がるとなぜ金価格が下がることがあるの？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "金は利息を生まないため、実質金利が上昇すると利息を得られる債券などの相対的な魅力が高まり、金を保有する機会費用が意識されやすくなるためです。ただし必ず金価格が下落するわけではありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "実質金利が上がると株価は下がる？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "実質金利の上昇は企業の資金調達コストや株式評価の重しになる場合がありますが、企業業績や景気が強ければ株価が上昇することもあります。金利だけで株価の方向は決まりません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "実質金利とドルにはどんな関係がある？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "米国の実質金利が上昇すると、ドル建て資産の相対的な魅力が高まり、ドル買いにつながる場合があります。ただし為替は日米金利差や金融政策、景気、リスク回避など複数の要因で動きます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "米10年実質金利とは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "米国の10年程度の期間における実質的な金利水準を示す指標です。金融市場では10年物の物価連動国債（TIPS）の利回りが実質金利の参考として広く確認されています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "初心者は実質金利のニュースをどう見ればいい？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "実質金利が上がったか下がったかだけでなく、その原因が名目金利なのか期待インフレ率なのかを確認し、金・株価・ドルなど他の市場材料と合わせて見ることが大切です。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">実質金利とは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">話題・トレンド</p>
+
+              <h1 class="kiji-title">
+                実質金利とは？なぜ金や株価に影響するの？初心者向けに解説
+              </h1>
+
+              <p class="kiji-lead">
+                金融ニュースでは「米国の実質金利が上昇したため金が売られた」
+                「実質金利の低下が株価を支えた」といった表現がよく登場します。
+                実質金利とは、単に銀行や国債に表示される金利ではなく、
+                <strong>インフレによるお金の価値の変化まで考慮した金利</strong>です。
+                金（ゴールド）、株式、ドルなど多くの資産価格を理解するうえで重要な考え方です。
+              </p>
+
+              <ul class="kiji-tags" aria-label="この記事で分かること">
+                <li>実質金利とは</li>
+                <li>名目金利との違い</li>
+                <li>インフレ率</li>
+                <li>金価格との関係</li>
+                <li>株価への影響</li>
+                <li>ドル・為替</li>
+                <li>TIPS</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#definition">実質金利の基本を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#gold">金との関係を見る</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+
+                <h2 class="kiji-summary-card__title">
+                  実質金利は「金利からインフレを考慮した、実際の購買力に近い金利」
+                </h2>
+
+                <ul class="kiji-check-list">
+                  <li>基本式は「実質金利 ≒ 名目金利 − インフレ率」</li>
+                  <li>実質金利上昇は金の逆風になる場合がある</li>
+                  <li>株式の評価にも影響する</li>
+                  <li>米国の実質金利はドルにも影響することがある</li>
+                  <li>市場ではTIPS利回りが参考にされる</li>
+                  <li>一つの指標だけで相場は決まらない</li>
+                </ul>
+              </div>
+            </aside>
+
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#definition">実質金利とは</a>
+          <a href="#nominal">名目金利との違い</a>
+          <a href="#gold">金との関係</a>
+          <a href="#stocks">株価との関係</a>
+          <a href="#dollar">ドルとの関係</a>
+          <a href="#tips">TIPSとは</a>
+          <a href="#news-point">ニュースの見方</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="kiji-section" aria-labelledby="intro-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Overview</p>
+            <h2 class="kiji-section__title" id="intro-title">
+              金利が上がったのに、なぜ金や株価まで動くの？
+            </h2>
+            <p class="kiji-section__text">
+              金利は預金や住宅ローンだけに関係するものではありません。
+              金融市場では、金利が変わると債券の魅力、企業の資金調達コスト、
+              株式の評価、通貨の魅力なども変わります。
+              そのため、金利の変化は金・株式・為替など多くの市場へ波及します。
+            </p>
+          </div>
+
+          <img
+            class="kiji-main-image"
+            src="sonota/jisshitsu-kinri-toha.webp"
+            alt="実質金利とインフレ・金・株価・ドルの関係を初心者向けに整理した教材画像"
+            width="1200"
+            height="630"
+            loading="eager"
+            decoding="async" />
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <ul class="kiji-bullet-list">
+              <li>金利を見るときは「名目金利」と「実質金利」を分けて考えます。</li>
+              <li>実質金利はインフレによる購買力の変化まで考慮します。</li>
+              <li>金は利息を生まないため、実質金利との関係が特に注目されます。</li>
+              <li>株価やドルも金利変化の影響を受けますが、必ず一方向に動くわけではありません。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="definition" class="kiji-section" aria-labelledby="definition-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Definition</p>
+            <h2 class="kiji-section__title" id="definition-title">
+              実質金利とは？
+            </h2>
+            <p class="kiji-section__text">
+              実質金利とは、金利から物価上昇による影響を考慮した金利です。
+              初心者向けには、次の式で考えると分かりやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-info-card">
+            <p class="kiji-info-card__eyebrow">基本式</p>
+            <h3 class="kiji-info-card__title">
+              実質金利 ≒ 名目金利 − インフレ率
+            </h3>
+            <p class="kiji-info-card__text">
+              例えば、名目金利が3％で、物価が年間2％上昇している場合、
+              単純化すると実質金利はおおむね1％と考えることができます。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3" style="margin-top:16px;">
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">名目金利</h3>
+              <p class="kiji-feature-card__text">
+                銀行預金や国債などで表示される、物価変動を考慮する前の金利です。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">インフレ率</h3>
+              <p class="kiji-feature-card__text">
+                商品やサービスの価格が、一定期間でどの程度上昇したかを示す割合です。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">実質金利</h3>
+              <p class="kiji-feature-card__text">
+                インフレによる購買力低下を考慮した、実質的な金利の考え方です。
+              </p>
+            </article>
+
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>注意：</strong>
+              「実質金利 ≒ 名目金利 − インフレ率」は初心者向けに単純化した式です。
+              厳密な計算方法や、金融市場で使われる実質金利は、
+              将来の物価上昇をどのように見込むかによって異なる場合があります。
+            </p>
+          </div>
+        </section>
+
+        <section id="nominal" class="kiji-section" aria-labelledby="nominal-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Nominal vs Real</p>
+            <h2 class="kiji-section__title" id="nominal-title">
+              名目金利と実質金利の違い
+            </h2>
+            <p class="kiji-section__text">
+              名目金利だけを見ていると、「金利が高いからお金の価値も増えている」と考えやすくなります。
+              しかし、同時に物価が上昇していれば、実際に買える商品やサービスの量はそれほど増えていない場合があります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">例1</p>
+              <h3 class="kiji-info-card__title">名目金利3％・インフレ率2％</h3>
+              <p class="kiji-info-card__text">
+                簡略的には、
+                <strong>3％ − 2％ ＝ 実質金利約1％</strong>
+                と考えます。
+                金利収入は得られていても、物価も上昇しているため、
+                購買力の増加は名目金利3％より小さくなります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">例2</p>
+              <h3 class="kiji-info-card__title">名目金利2％・インフレ率3％</h3>
+              <p class="kiji-info-card__text">
+                簡略的には、
+                <strong>2％ − 3％ ＝ 実質金利約マイナス1％</strong>
+                です。
+                金利を受け取っていても、それ以上に物価が上がれば、
+                お金の購買力は低下する可能性があります。
+              </p>
+            </section>
+
+          </div>
+
+          <div class="kiji-info-card kiji-info-card--soft" style="margin-top:16px;">
+            <p class="kiji-info-card__eyebrow">初心者向けポイント</p>
+            <h3 class="kiji-info-card__title">
+              「金利が何％あるか」だけでなく「物価が何％上がっているか」も見る
+            </h3>
+            <p class="kiji-info-card__text">
+              金融市場では、金利の高さそのものだけでなく、
+              インフレを差し引いた後にどれだけの利回りが残るかが重要になります。
+              これが実質金利を見る理由です。
+            </p>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            物価の動きを確認する代表的な指標には
+            <a href="cpi-toha.html">CPI（消費者物価指数）</a>、
+            <a href="pce-deflator-toha.html">PCEデフレーター</a>、
+            <a href="ppi-toha.html">PPI（生産者物価指数）</a>
+            などがあります。
+          </p>
+        </section>
+
+        <section id="gold" class="kiji-section" aria-labelledby="gold-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Gold</p>
+            <h2 class="kiji-section__title" id="gold-title">
+              なぜ実質金利が上がると金が売られることがあるの？
+            </h2>
+            <p class="kiji-section__text">
+              実質金利と特に関係が深い資産として注目されるのが金（ゴールド）です。
+              理由は、<strong>金そのものは利息や配当を生まない</strong>からです。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>実質金利が上昇する</strong><br>
+              債券など、利息を得られる資産の実質的な魅力が高まりやすくなります。
+            </li>
+
+            <li>
+              <strong>金を持つ機会費用が高くなる</strong><br>
+              金を持っている間は、利息を受け取ることができません。
+            </li>
+
+            <li>
+              <strong>資金が利息を得られる資産へ向かう場合がある</strong><br>
+              投資家が金よりも債券などを選ぶ動きが強まることがあります。
+            </li>
+
+            <li>
+              <strong>金価格の下押し材料になる場合がある</strong><br>
+              金への需要が相対的に弱まり、価格が下落することがあります。
+            </li>
+          </ol>
+
+          <div class="kiji-grid kiji-grid--2" style="margin-top:16px;">
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">実質金利が上昇</p>
+              <h3 class="kiji-info-card__title">金には逆風になりやすい</h3>
+              <p class="kiji-info-card__text">
+                利息を得られる資産の魅力が高まり、
+                利息を生まない金を保有する機会費用が大きくなりやすいためです。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">実質金利が低下</p>
+              <h3 class="kiji-info-card__title">金には追い風になりやすい</h3>
+              <p class="kiji-info-card__text">
+                債券などから得られる実質的な利回りが低下すると、
+                金を保有する機会費用が小さくなり、金の相対的な魅力が高まる場合があります。
+              </p>
+            </section>
+
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>実質金利が上がれば、必ず金が下がるわけではありません。</strong>
+              金価格はドル相場、地政学リスク、中央銀行の金購入、
+              投資家のリスク回避、需給など複数の材料で動きます。
+              実質金利は重要な要因の一つとして考える必要があります。
+            </p>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            金そのものの特徴やインフレ・ドルとの関係については、
+            <a href="gold-toha.html">「金（ゴールド）とは？なぜインフレや金利で価格が動くの？」</a>
+            でも詳しく解説しています。
+          </p>
+        </section>
+
+        <section id="stocks" class="kiji-section" aria-labelledby="stocks-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Stocks</p>
+            <h2 class="kiji-section__title" id="stocks-title">
+              実質金利と株価にはどんな関係がある？
+            </h2>
+            <p class="kiji-section__text">
+              実質金利の変化は株価にも影響します。
+              主な理由は、企業の資金調達コストと、将来の利益を現在の価値に置き換えるときの考え方です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">借入コストが上がる</h3>
+              <p class="kiji-feature-card__text">
+                金利が上昇すると、企業が銀行から借りたり社債を発行したりするときの負担が増える場合があります。
+                利払いが増えれば利益を圧迫する要因になります。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">将来利益の評価が低くなりやすい</h3>
+              <p class="kiji-feature-card__text">
+                金利が高くなると、将来受け取る利益よりも、
+                今すぐ得られる利回りの価値が相対的に高くなります。
+                そのため株式の評価が下がる場合があります。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">債券との比較が起きる</h3>
+              <p class="kiji-feature-card__text">
+                安全性が比較的高い国債でも高い利回りが得られるようになると、
+                株式へ投資するために求められるリターンも高くなりやすくなります。
+              </p>
+            </article>
+
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">
+            成長株が金利変化に敏感になりやすい理由
+          </h3>
+
+          <p class="kiji-section__text">
+            将来の大きな成長を期待されている企業は、
+            現在の利益よりも「数年後にどれだけ利益を生み出すか」が株価評価で重視される場合があります。
+            実質金利が上昇すると、遠い将来の利益の現在価値が低く評価されやすくなるため、
+            成長期待の大きい企業ほど金利上昇の影響を強く受けることがあります。
+          </p>
+
+          <div class="kiji-info-card kiji-info-card--soft" style="margin-top:16px;">
+            <p class="kiji-info-card__eyebrow">ただし</p>
+            <h3 class="kiji-info-card__title">
+              実質金利上昇＝株価下落ではない
+            </h3>
+            <p class="kiji-info-card__text">
+              金利が上昇していても、景気が強く企業利益が大きく伸びていれば、
+              株価が上昇する場合があります。
+              株価は金利だけでなく、企業業績、景気、為替、投資家心理など複数の要因で動きます。
+            </p>
+          </div>
+        </section>
+
+        <section id="dollar" class="kiji-section" aria-labelledby="dollar-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Dollar & FX</p>
+            <h2 class="kiji-section__title" id="dollar-title">
+              実質金利とドル・為替の関係
+            </h2>
+            <p class="kiji-section__text">
+              米国の実質金利は、ドル相場を見るうえでも注目されます。
+              実質金利が上昇すると、米国の国債などドル建て資産から得られる実質的な利回りが高くなり、
+              海外投資家から見たドル建て資産の魅力が高まる場合があります。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>米国の実質金利が上昇する</strong><br>
+              米国の債券などから得られる実質的な利回りが高くなります。
+            </li>
+
+            <li>
+              <strong>ドル建て資産の魅力が高まる</strong><br>
+              より高い利回りを求める資金が米国市場へ向かう場合があります。
+            </li>
+
+            <li>
+              <strong>ドル買いにつながる場合がある</strong><br>
+              米国資産へ投資するためにドルを購入する動きが強まることがあります。
+            </li>
+          </ol>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>為替は実質金利だけでは決まりません。</strong>
+              ドル円の場合は、日本と米国の金利差、FRBと日銀の金融政策、
+              景気見通し、貿易、リスク回避、投資家のポジションなど多くの要因が影響します。
+              実質金利はその中の一つの材料です。
+            </p>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            中央銀行の金融政策についてニュースを見る際は、
+            <a href="taka-ha-hato-ha-toha.html">「タカ派・ハト派とは？」</a>
+            もあわせて確認すると、金利予想と為替のつながりを理解しやすくなります。
+          </p>
+        </section>
+
+        <section id="tips" class="kiji-section" aria-labelledby="tips-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">TIPS</p>
+            <h2 class="kiji-section__title" id="tips-title">
+              ニュースで見る「米10年実質金利」とTIPSとは？
+            </h2>
+            <p class="kiji-section__text">
+              金融ニュースでは「米10年実質金利」という言葉が登場することがあります。
+              このとき参考にされる代表的な指標が、
+              米国の<strong>物価連動国債（TIPS：Treasury Inflation-Protected Securities）</strong>の利回りです。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">TIPSとは</p>
+              <h3 class="kiji-info-card__title">インフレに合わせて元本が調整される米国債</h3>
+              <p class="kiji-info-card__text">
+                TIPSは米国財務省が発行する物価連動国債です。
+                物価の変化を反映する仕組みを持っており、
+                その利回りは市場で実質金利を見るための代表的な指標として利用されます。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">米10年実質金利</p>
+              <h3 class="kiji-info-card__title">10年TIPS利回りが参考にされる</h3>
+              <p class="kiji-info-card__text">
+                金価格や米国株のニュースでは、
+                10年物TIPSの利回りが「米10年実質金利」として紹介されることがあります。
+                この利回りが上昇したか、低下したかが市場で注目されます。
+              </p>
+            </section>
+
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">
+            「実際のインフレ率」と「期待インフレ率」は違う
+          </h3>
+
+          <p class="kiji-section__text">
+            初心者向けの説明では、
+            「名目金利 − 実際のインフレ率」で実質金利を考えることがあります。
+            一方、金融市場では将来の物価上昇を織り込んだ
+            <strong>期待インフレ率</strong>が重要になります。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2" style="margin-top:16px;">
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">初心者向けの簡略式</p>
+              <h3 class="kiji-info-card__title">
+                名目金利 − 実際のインフレ率
+              </h3>
+              <p class="kiji-info-card__text">
+                過去や現在の購買力の変化をイメージしやすくするための単純化した説明です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">市場で重視される考え方</p>
+              <h3 class="kiji-info-card__title">
+                名目金利 − 期待インフレ率
+              </h3>
+              <p class="kiji-info-card__text">
+                投資家は将来のインフレを予想しながら資産価格を決めるため、
+                市場では期待インフレ率が重要になります。
+              </p>
+            </section>
+
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            国債と利回りの基本的な仕組みについては
+            <a href="kokusai-toha.html">「国債とは？」</a>、
+            債券市場全体の動きについては
+            <a href="saiken-shijou-toha.html">「債券市場とは？」</a>
+            で解説しています。
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="latest-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market Context</p>
+            <h2 class="kiji-section__title" id="latest-title">
+              2026年9月時点でも金利と金価格が注目される理由
+            </h2>
+            <p class="kiji-section__text">
+              2026年9月の金融市場では、原油価格上昇によるインフレ懸念や、
+              米国をはじめとする長期金利の上昇が注目されています。
+              一方で地政学的な不安から、安全資産として金が買われる場面も見られています。
+            </p>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              2026年9月9日の市場では、中東情勢の緊迫化と原油価格上昇を背景に
+              インフレ懸念が強まり、米国債利回りが高い水準で推移する一方、
+              金は安全資産需要から上昇する場面が報じられました。
+              このように、金利上昇が金の逆風になり得る局面でも、
+              地政学リスクなど別の材料が強ければ金価格が上昇する場合があります。
+            </p>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:20px;">
+            ここから分かること
+          </h3>
+
+          <ul class="kiji-check-list">
+            <li>実質金利は金価格を見る重要材料の一つです。</li>
+            <li>しかし、地政学リスクやドル、中央銀行の需要など他の材料も同時に動きます。</li>
+            <li>一つの理論だけで短期的な相場を説明しきることはできません。</li>
+            <li>ニュースでは「何が上がったか」だけでなく「なぜ動いたか」を確認することが重要です。</li>
+          </ul>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            参考：
+            <a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-09-09/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Reuters（2026年9月9日）：世界市場・原油・金・国債利回りの動向
+            </a>
+          </p>
+        </section>
+
+        <section id="news-point" class="kiji-section" aria-labelledby="news-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">How To Read News</p>
+            <h2 class="kiji-section__title" id="news-title">
+              初心者が実質金利のニュースを見るときのポイント
+            </h2>
+            <p class="kiji-section__text">
+              「実質金利が上がった」というニュースを見たら、
+              数字だけで投資判断をするのではなく、その背景を順番に確認すると理解しやすくなります。
+            </p>
+          </div>
+
+          <ol class="kiji-step-list">
+
+            <li>
+              <strong>名目金利が動いたのか確認する</strong><br>
+              米10年国債利回りなど、通常の国債利回りが上昇したのかを確認します。
+            </li>
+
+            <li>
+              <strong>インフレ予想が動いたのか確認する</strong><br>
+              CPIやPCE、原油価格などによって市場のインフレ見通しが変化していないかを見ます。
+            </li>
+
+            <li>
+              <strong>実質金利の方向を見る</strong><br>
+              TIPS利回りなどを使い、実質金利が上昇しているのか低下しているのかを確認します。
+            </li>
+
+            <li>
+              <strong>金・株価・ドルの反応を見る</strong><br>
+              実質金利の変化に対して、それぞれの市場がどのように反応しているかを確認します。
+            </li>
+
+            <li>
+              <strong>別の材料がないか確認する</strong><br>
+              地政学リスク、企業業績、中央銀行の発言、雇用統計など、
+              金利以外の材料が市場を動かしていないか確認します。
+            </li>
+
+          </ol>
+
+          <div class="kiji-grid kiji-grid--3" style="margin-top:16px;">
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">CHECK 1</span>
+              <h3 class="kiji-feature-card__title">米10年実質金利</h3>
+              <p class="kiji-feature-card__text">
+                上昇しているか、低下しているかを確認します。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">CHECK 2</span>
+              <h3 class="kiji-feature-card__title">期待インフレ率</h3>
+              <p class="kiji-feature-card__text">
+                市場が将来の物価上昇をどう見ているか確認します。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">CHECK 3</span>
+              <h3 class="kiji-feature-card__title">FRBの政策予想</h3>
+              <p class="kiji-feature-card__text">
+                利上げ・利下げ予想が変化していないか確認します。
+              </p>
+            </article>
+
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            米国の景気や金利予想を動かす代表的な材料としては、
+            <a href="beikoku-koyou-toukei-toha.html">米国雇用統計</a>
+            も重要です。
+          </p>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="caution-point-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Caution</p>
+            <h2 class="kiji-section__title" id="caution-point-title">
+              初心者が注意したいこと
+            </h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">実質金利だけで予測しない</h3>
+              <p class="kiji-feature-card__text">
+                金、株、為替は複数の材料で動きます。
+                一つの指標だけで上昇・下落を断定しないことが大切です。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">名目金利とインフレを分ける</h3>
+              <p class="kiji-feature-card__text">
+                金利上昇だけでなく、同時にインフレ期待がどう動いたのか確認します。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">金には別の要因もある</h3>
+              <p class="kiji-feature-card__text">
+                ドル、地政学リスク、中央銀行の金需要なども価格へ影響します。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">04</span>
+              <h3 class="kiji-feature-card__title">株価は業績も重要</h3>
+              <p class="kiji-feature-card__text">
+                金利が高くても企業利益が成長すれば、株価が上昇する場合があります。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">05</span>
+              <h3 class="kiji-feature-card__title">為替は金利差だけではない</h3>
+              <p class="kiji-feature-card__text">
+                金融政策、景気、リスク回避、資金フローなど多くの要因が影響します。
+              </p>
+            </article>
+
+            <article class="kiji-feature-card">
+              <span class="kiji-feature-card__num">06</span>
+              <h3 class="kiji-feature-card__title">短期ニュースだけで判断しない</h3>
+              <p class="kiji-feature-card__text">
+                一日の金利や価格変動だけを見て、急いで投資判断をする必要はありません。
+              </p>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="related-title">
+              実質金利とあわせて読みたい関連記事
+            </h2>
+            <p class="kiji-section__text">
+              物価、国債、中央銀行、金の順に確認すると、
+              実質金利のニュースをより理解しやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+
+            <a class="kiji-link-card" href="gold-toha.html">
+              <span class="kiji-link-card__label">金</span>
+              <strong class="kiji-link-card__title">金（ゴールド）とは？</strong>
+              <span class="kiji-link-card__text">
+                インフレ・実質金利・ドルと金価格の関係を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="cpi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">CPIとは？</strong>
+              <span class="kiji-link-card__text">
+                消費者物価指数とインフレ、金利の関係を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="pce-deflator-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">PCEデフレーターとは？</strong>
+              <span class="kiji-link-card__text">
+                FRBが注目する物価指標と金融政策の関係を学びます。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="ppi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">PPIとは？</strong>
+              <span class="kiji-link-card__text">
+                生産者物価とCPI、金利予想への波及を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="kokusai-toha.html">
+              <span class="kiji-link-card__label">国債</span>
+              <strong class="kiji-link-card__title">国債とは？</strong>
+              <span class="kiji-link-card__text">
+                国債価格と利回りが逆に動く仕組みを確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="saiken-shijou-toha.html">
+              <span class="kiji-link-card__label">債券市場</span>
+              <strong class="kiji-link-card__title">債券市場とは？</strong>
+              <span class="kiji-link-card__text">
+                世界の金利が株価や為替へ波及する仕組みを学びます。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="taka-ha-hato-ha-toha.html">
+              <span class="kiji-link-card__label">中央銀行</span>
+              <strong class="kiji-link-card__title">タカ派・ハト派とは？</strong>
+              <span class="kiji-link-card__text">
+                中央銀行の発言が金利・株価・為替へ与える影響を確認します。
+              </span>
+            </a>
+
+            <a class="kiji-link-card" href="beikoku-koyou-toukei-toha.html">
+              <span class="kiji-link-card__label">米国経済</span>
+              <strong class="kiji-link-card__title">米国雇用統計とは？</strong>
+              <span class="kiji-link-card__text">
+                雇用統計からFRBの金利予想へ波及する流れを確認します。
+              </span>
+            </a>
+
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">
+              実質金利に関するよくある質問
+            </h2>
+          </div>
+
+          <ul class="kiji-faq-list">
+
+            <li>
+              <details class="faq-item">
+                <summary>実質金利とは？</summary>
+                <div class="faq-answer">
+                  実質金利は、名目金利から物価上昇の影響を考慮した金利です。
+                  初心者向けには「実質金利 ≒ 名目金利 − インフレ率」と考えると理解しやすくなります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>名目金利と実質金利の違いは？</summary>
+                <div class="faq-answer">
+                  名目金利は表示されている金利そのものです。
+                  実質金利は、そこからインフレによる購買力の変化を考慮した金利です。
+                  名目金利が高くても、それ以上に物価が上昇していれば実質金利は低くなる場合があります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>実質金利が上がるとなぜ金価格が下がることがあるの？</summary>
+                <div class="faq-answer">
+                  金は利息を生まないためです。
+                  実質金利が上昇すると債券など利息を得られる資産の魅力が高まり、
+                  金を保有する機会費用が意識されやすくなります。
+                  ただし、必ず金価格が下落するわけではありません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>実質金利が上がると株価は下がる？</summary>
+                <div class="faq-answer">
+                  実質金利の上昇は企業の借入コストや株式評価の重しになる場合があります。
+                  ただし、景気や企業業績が強ければ株価が上昇する場合もあります。
+                  金利だけで株価の方向は決まりません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>実質金利とドルにはどんな関係がある？</summary>
+                <div class="faq-answer">
+                  米国の実質金利が上昇すると、
+                  ドル建て資産の相対的な魅力が高まり、ドル買いにつながる場合があります。
+                  ただし為替は日米金利差、金融政策、景気、リスク回避など複数の要因で動きます。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>米10年実質金利とは？</summary>
+                <div class="faq-answer">
+                  米国の10年程度の期間における実質的な金利水準を示す指標です。
+                  金融市場では10年物の物価連動国債（TIPS）の利回りが、
+                  米10年実質金利の参考として広く確認されています。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>初心者は実質金利のニュースをどう見ればいい？</summary>
+                <div class="faq-answer">
+                  実質金利が上昇したか低下したかだけでなく、
+                  名目金利、期待インフレ率、FRBの金融政策予想、
+                  金・株価・ドルの反応を合わせて確認することが大切です。
+                </div>
+              </details>
+            </li>
+
+          </ul>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">
+              まとめ｜実質金利は金・株価・ドルを理解する重要な指標
+            </h2>
+          </div>
+
+          <ul class="kiji-check-list">
+            <li>実質金利は、名目金利からインフレの影響を考慮した金利です。</li>
+            <li>初心者向けには「実質金利 ≒ 名目金利 − インフレ率」と考えると理解しやすくなります。</li>
+            <li>名目金利が高くても、物価上昇率がそれ以上なら購買力は増えにくくなります。</li>
+            <li>金は利息を生まないため、実質金利上昇が逆風になる場合があります。</li>
+            <li>実質金利の上昇は企業の資金調達コストや株式評価にも影響します。</li>
+            <li>米国の実質金利上昇はドル建て資産の魅力を高め、ドル買いにつながる場合があります。</li>
+            <li>市場ではTIPS利回りが実質金利を見る代表的な指標として利用されます。</li>
+            <li>金・株価・為替は複数の要因で動くため、実質金利だけで方向を断定しないことが重要です。</li>
+          </ul>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="review-entry-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Review</p>
+            <h2 class="kiji-section__title" id="review-entry-title">
+              一般ユーザー目線の体験でおすすめの会社をご紹介
+            </h2>
+          </div>
+
+          <div class="review">
+            <a href="userreview.html" class="review-card">
+              <img
+                src="Xcard/review_300x250.jpg"
+                alt="個人レビュー（証券・FX・仮想通貨）"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>
+                証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <div id="securities-list"></div>
+        <script src="cards-syouken.js"></script>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">
+            ご利用にあたっての注意事項
+          </h2>
+
+          <p>
+            本記事は一般的な情報提供と金融教育を目的としており、
+            特定の株式、債券、金、ETF、投資信託、通貨その他の金融商品の購入・売却を推奨するものではありません。
+            金融商品には価格変動、金利変動、為替変動、信用、流動性などのリスクがあり、
+            損失が生じる場合があります。
+            投資を行う際は最新の公式情報、商品説明書、目論見書、契約締結前交付書面などを確認し、
+            <strong>ご自身の判断と責任</strong>で行ってください。
+          </p>
+        </section>
+
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
+</body>
+</html>

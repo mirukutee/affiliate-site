@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="canonical" href="https://tousiportal.jp/yield-curve-toha.html" />
+
+  <title>イールドカーブとは？長期金利と短期金利の差から何が分かるの？初心者向けに解説</title>
+  <meta name="description" content="イールドカーブとは何か、長期金利と短期金利の違い、順イールド・フラット化・逆イールド・スティープ化、政策金利・景気・銀行株との関係を初心者向けに分かりやすく解説します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="イールドカーブとは？長期金利と短期金利の差から何が分かるの？" />
+  <meta property="og:description" content="順イールド・フラット化・逆イールド・スティープ化の違いと、政策金利・景気・株式市場との関係を初心者向けに解説します。" />
+  <meta property="og:url" content="https://tousiportal.jp/yield-curve-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/yield-curve-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル.jp" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="イールドカーブとは？長期金利と短期金利の差から何が分かるの？" />
+  <meta name="twitter:description" content="順イールド・逆イールド・フラット化・スティープ化と景気・金融政策の関係を初心者向けに整理します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/yield-curve-toha.webp" />
+  <meta name="twitter:site" content="@QwZd0ksG2138610" />
+  <meta name="twitter:creator" content="@QwZd0ksG2138610" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * { box-sizing: border-box; }
+
+    .kiji-page { overflow-x: hidden; }
+
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-main-image {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 18px;
+      border: 1px solid #d9e4ee;
+      box-shadow: 0 10px 26px rgba(20, 45, 90, 0.08);
+    }
+
+    .purpose-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 14px;
+      border: 1px solid #d9e4ee;
+      border-radius: 16px;
+      background: rgba(255,255,255,.92);
+    }
+
+    .purpose-nav a {
+      flex: 1 1 140px;
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .6rem .75rem;
+      border: 1px solid #cbdcec;
+      border-radius: 10px;
+      background: #fff;
+      color: #1f6fb2;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .purpose-nav a:hover,
+    .purpose-nav a:focus-visible {
+      background: #edf6ff;
+      text-decoration: none;
+    }
+
+    .kiji-page .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .kiji-page .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .kiji-page .table-modern {
+      width: max-content;
+      min-width: 760px;
+      max-width: none;
+    }
+
+    .kiji-keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .kiji-keyword-list li {
+      margin: 0;
+      padding: .55rem .78rem;
+      border: 1px solid #d9e4ee;
+      border-radius: 999px;
+      background: #f8fbff;
+      color: #27445f;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .kiji-faq-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .yield-flow {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .yield-flow__item {
+      padding: 14px 16px;
+      border: 1px solid #d9e4ee;
+      border-radius: 14px;
+      background: #f8fbff;
+      text-align: center;
+      font-weight: 700;
+      color: #27445f;
+    }
+
+    .yield-flow__arrow {
+      text-align: center;
+      color: #1f6fb2;
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .yield-formula {
+      padding: 16px;
+      margin: 16px 0 0;
+      border: 1px solid #cbdcec;
+      border-radius: 16px;
+      background: #f8fbff;
+      text-align: center;
+    }
+
+    .yield-formula strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #174f83;
+      font-size: 1.08rem;
+    }
+
+    .yield-shape-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .yield-shape {
+      padding: 16px;
+      border: 1px solid #d9e4ee;
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .yield-shape h3 {
+      margin-top: 0;
+      color: #174f83;
+    }
+
+    .yield-shape__chart {
+      position: relative;
+      height: 130px;
+      margin: 14px 0;
+      border-left: 2px solid #9db3c8;
+      border-bottom: 2px solid #9db3c8;
+      overflow: hidden;
+    }
+
+    .yield-shape__chart::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      right: 5%;
+      height: 4px;
+      border-radius: 999px;
+      background: #1f6fb2;
+      transform-origin: left center;
+    }
+
+    .yield-shape__chart--normal::after {
+      bottom: 24px;
+      transform: rotate(-22deg);
+    }
+
+    .yield-shape__chart--flat::after {
+      bottom: 58px;
+      transform: rotate(-3deg);
+    }
+
+    .yield-shape__chart--inverted::after {
+      top: 30px;
+      transform: rotate(22deg);
+    }
+
+    .yield-shape__chart--steep::after {
+      bottom: 18px;
+      transform: rotate(-34deg);
+    }
+
+    .yield-shape__axis-x,
+    .yield-shape__axis-y {
+      position: absolute;
+      color: #637b91;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .yield-shape__axis-x {
+      right: 4px;
+      bottom: 3px;
+    }
+
+    .yield-shape__axis-y {
+      left: 5px;
+      top: 4px;
+    }
+
+    .latest-data {
+      border-left: 4px solid #1f6fb2;
+      padding-left: 16px;
+    }
+
+    @media (max-width: 960px) {
+      .kiji-page .container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+      }
+
+      .kiji-page aside,
+      .kiji-page #sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .kiji-page #main.kiji-main {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box,
+      .yield-shape-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main { padding: .75rem; }
+
+      .kiji-page .breadcrumb {
+        padding: .65rem .75rem;
+        margin: .2rem 0 .75rem;
+      }
+
+      .kiji-page .kiji-article { gap: 16px; }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .kiji-page .kiji-title {
+        font-size: clamp(1.28rem, 6vw, 1.58rem);
+        line-height: 1.42;
+      }
+
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p {
+        font-size: .94rem;
+        line-height: 1.75;
+      }
+
+      .purpose-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .purpose-nav a {
+        width: 100%;
+        min-height: 42px;
+        padding: .55rem .5rem;
+        font-size: .84rem;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 680px;
+        font-size: .82rem;
+      }
+
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td {
+        padding: 9px 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main { padding: .55rem; }
+      .purpose-nav { grid-template-columns: 1fr; }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 14px 12px;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 640px;
+        font-size: .78rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "投資コラム・解説記事一覧",
+        "item": "https://tousiportal.jp/column.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "イールドカーブとは？",
+        "item": "https://tousiportal.jp/yield-curve-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://tousiportal.jp/yield-curve-toha.html#article",
+    "headline": "イールドカーブとは？長期金利と短期金利の差から何が分かるの？初心者向けに解説",
+    "description": "イールドカーブとは何か、長期金利と短期金利の違い、順イールド・フラット化・逆イールド・スティープ化、政策金利・景気・銀行株との関係を初心者向けに解説します。",
+    "image": "https://tousiportal.jp/sonota/yield-curve-toha.webp",
+    "datePublished": "2026-09-17",
+    "dateModified": "2026-09-17",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/yield-curve-toha.html"
+    },
+    "inLanguage": "ja",
+    "articleSection": "話題・トレンド",
+    "author": {
+      "@type": "Person",
+      "@id": "https://tousiportal.jp/#person",
+      "name": "ミルクティー",
+      "url": "https://tousiportal.jp/profile.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://tousiportal.jp/#organization",
+      "name": "投資ポータル.jp",
+      "url": "https://tousiportal.jp/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tousiportal.jp/favicon-512.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "イールドカーブとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "イールドカーブは、償還までの期間が異なる債券の利回りを並べ、残存期間と利回りの関係を曲線で表したものです。一般に横軸へ期間、縦軸へ利回りを取ります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "順イールドとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "短期金利より長期金利のほうが高く、イールドカーブが右肩上がりになっている状態です。ただし順イールドだから景気が必ず良いとは限りません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "逆イールドとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "短期金利が長期金利を上回り、通常とは逆方向の傾きになる状態です。米国では2年国債利回りと10年国債利回りの差などがよく注目されます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "フラット化とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "長期金利と短期金利の差が縮まり、イールドカーブの傾きが小さくなって平らに近づくことです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "スティープ化とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "長期金利と短期金利の差が拡大し、イールドカーブの傾きが大きくなることです。長期金利上昇で起こる場合と短期金利低下で起こる場合があり、背景は同じではありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ逆イールドは景気後退のサインといわれるのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "短期金利が高い一方、市場が将来の景気減速や政策金利低下を予想すると長期金利が相対的に低くなり、逆イールドになる場合があるためです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "逆イールドになると必ず景気後退しますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必ず景気後退するわけではありません。金融政策、インフレ、国債需給、タームプレミアムなどもイールドカーブへ影響し、景気後退までの期間も一定ではありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ2年債と10年債が注目されるのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2年国債利回りは比較的近い将来の金融政策予想に敏感で、10年国債利回りはより長期の景気、インフレ、金融政策予想などを反映するため、その差が代表的な長短金利差として利用されます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "政策金利と長期金利は何が違うのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "政策金利は中央銀行が金融政策のために設定する基準となる金利です。長期金利は将来の政策金利予想、インフレ期待、景気見通し、国債需給、タームプレミアムなどを反映して市場で形成されます。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">イールドカーブとは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">話題・トレンド</p>
+              <h1 class="kiji-title">イールドカーブとは？長期金利と短期金利の差から何が分かるの？初心者向けに解説</h1>
+              <p class="kiji-lead">
+                金融ニュースでは「逆イールド」「長短金利差の縮小」「イールドカーブがスティープ化した」といった表現が登場します。イールドカーブは、期間の異なる国債などの利回りを並べることで、金融政策やインフレ、景気に対する市場の見方を読み取る材料の一つです。
+              </p>
+
+              <ul class="kiji-tags" aria-label="この記事で分かること">
+                <li>イールドカーブの意味</li>
+                <li>順イールドと逆イールド</li>
+                <li>長期金利と短期金利</li>
+                <li>景気・銀行株との関係</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#shape">4つの形を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#news-point">ニュースの見方を見る</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">イールドカーブは「期間」と「利回り」の関係を表す曲線</h2>
+                <ul class="kiji-check-list">
+                  <li>短期金利と長期金利では動く要因が異なる</li>
+                  <li>通常は右肩上がりの順イールドになりやすい</li>
+                  <li>逆イールドは景気後退の兆候として注目されることがある</li>
+                  <li>形だけでなく「なぜ変化したか」を見ることが重要</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#definition">基本</a>
+          <a href="#shape">4つの形</a>
+          <a href="#inverted">逆イールド</a>
+          <a href="#policy">政策金利</a>
+          <a href="#bank">銀行株</a>
+          <a href="#news-point">ニュースの見方</a>
+          <a href="#latest">直近の状況</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="kiji-section" aria-labelledby="overview-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Overview</p>
+            <h2 class="kiji-section__title" id="overview-title">イールドカーブの4つの形を最初に整理</h2>
+          </div>
+
+          <img
+            class="kiji-main-image"
+            src="sonota/yield-curve-toha.webp"
+            alt="順イールド・フラット・逆イールド・スティープ化の違いと、長期金利・短期金利・景気との関係を初心者向けに整理した教材画像"
+            width="1200"
+            height="630"
+            loading="eager"
+            decoding="async" />
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              イールドカーブを見るときは、単に「右肩上がりか右肩下がりか」を見るだけではなく、<strong>短期金利と長期金利のどちらが動いた結果なのか</strong>を確認することが大切です。同じ形の変化でも背景が異なる場合があります。
+            </p>
+          </div>
+        </section>
+
+        <section id="definition" class="kiji-section" aria-labelledby="definition-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Definition</p>
+            <h2 class="kiji-section__title" id="definition-title">イールドカーブとは？</h2>
+            <p class="kiji-section__text">
+              イールドカーブ（Yield Curve／利回り曲線）とは、<strong>償還までの期間が異なる債券の利回りを並べ、期間と利回りの関係を曲線で表したもの</strong>です。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">横軸</p>
+              <h3 class="kiji-info-card__title">債券の残存期間</h3>
+              <p class="kiji-info-card__text">
+                3カ月、2年、5年、10年、30年など、満期までどれくらいの期間が残っているかを並べます。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">縦軸</p>
+              <h3 class="kiji-info-card__title">債券の利回り</h3>
+              <p class="kiji-info-card__text">
+                各期間の債券が市場でどの程度の利回りになっているかを表します。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            例えば米国債なら、2年国債、5年国債、10年国債、30年国債などの利回りを並べることで、短期から長期までの金利構造を確認できます。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>国債価格と国債利回りは別物です。</strong>一般に、すでに発行されている債券の市場価格が上がると利回りは低下し、価格が下がると利回りは上昇する関係があります。詳しくは<a href="kokusai-toha.html">「国債とは？」</a>と<a href="saiken-shijou-toha.html">「債券市場とは？」</a>で解説しています。
+            </p>
+          </div>
+        </section>
+
+        <section id="long-short" class="kiji-section" aria-labelledby="long-short-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Long vs Short</p>
+            <h2 class="kiji-section__title" id="long-short-title">長期金利と短期金利は何が違う？</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">短期金利</p>
+              <h3 class="kiji-info-card__title">政策金利の影響を受けやすい</h3>
+              <p class="kiji-info-card__text">
+                短期金利は、中央銀行が設定する政策金利や、近い将来に政策金利がどのように変化すると市場が予想しているかの影響を受けやすい特徴があります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">長期金利</p>
+              <h3 class="kiji-info-card__title">より長い将来への予想を反映</h3>
+              <p class="kiji-info-card__text">
+                長期金利は将来の政策金利だけでなく、インフレ期待、景気見通し、国債の需給、期間の長い債券を保有することへの上乗せ利回りなど、複数の要因から影響を受けます。
+              </p>
+            </section>
+          </div>
+
+          <ul class="kiji-keyword-list" aria-label="長期金利を動かす主な要因" style="margin-top:16px;">
+            <li>将来の政策金利</li>
+            <li>インフレ期待</li>
+            <li>景気見通し</li>
+            <li>国債需給</li>
+            <li>タームプレミアム</li>
+          </ul>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              政策金利が上昇したからといって、10年国債や30年国債の利回りが必ず同じ幅だけ上昇するわけではありません。市場が将来の景気減速や利下げを予想すれば、長期金利の動きが短期金利と異なる場合があります。
+            </p>
+          </div>
+        </section>
+
+        <section id="normal-reason" class="kiji-section" aria-labelledby="normal-reason-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Term Premium</p>
+            <h2 class="kiji-section__title" id="normal-reason-title">なぜ通常は長期金利のほうが高くなりやすいの？</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            長い期間お金を貸す場合、その間に物価や市場金利、経済環境が変化する可能性があります。そのため、投資家が長期間の債券を保有する際に、こうした不確実性に対する上乗せの利回りを求める場合があります。
+          </p>
+
+          <div class="kiji-grid kiji-grid--3">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">将来のインフレ</h3>
+              <p class="kiji-feature-card__text">
+                将来物価が上昇すると、債券から受け取るお金の実質的な価値が低下する可能性があります。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">金利変動</h3>
+              <p class="kiji-feature-card__text">
+                将来市場金利が上昇すると、すでに発行された低利回りの債券価格が下落する場合があります。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">03</span>
+              <h3 class="kiji-feature-card__title">将来の不確実性</h3>
+              <p class="kiji-feature-card__text">
+                期間が長くなるほど、経済や金融政策などを正確に予測することは難しくなります。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            ただし「期間が長ければ必ず利回りが高い」という意味ではありません。将来の政策金利予想、インフレ、景気、債券需給などによって、長期金利が短期金利を下回ることもあります。
+          </p>
+        </section>
+
+        <section id="shape" class="kiji-section" aria-labelledby="shape-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Curve Shapes</p>
+            <h2 class="kiji-section__title" id="shape-title">イールドカーブにはどんな形がある？</h2>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll">
+              <table class="table-modern">
+                <thead>
+                  <tr>
+                    <th>形</th>
+                    <th>長期金利と短期金利</th>
+                    <th>カーブ</th>
+                    <th>市場で注目されるポイント</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>順イールド</th>
+                    <td>短期金利 ＜ 長期金利</td>
+                    <td>右肩上がり</td>
+                    <td>通常の金利構造として見られることが多い</td>
+                  </tr>
+                  <tr>
+                    <th>フラット化</th>
+                    <td>長短金利差が縮小</td>
+                    <td>平らに近づく</td>
+                    <td>金融引き締めや将来の景気見通しなどが注目される</td>
+                  </tr>
+                  <tr>
+                    <th>逆イールド</th>
+                    <td>短期金利 ＞ 長期金利</td>
+                    <td>一部で右肩下がり</td>
+                    <td>将来の景気減速や利下げ予想との関係で注目される</td>
+                  </tr>
+                  <tr>
+                    <th>スティープ化</th>
+                    <td>長短金利差が拡大</td>
+                    <td>傾きが大きくなる</td>
+                    <td>長期金利上昇か短期金利低下かで意味が異なる</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="yield-shape-grid">
+            <div class="yield-shape">
+              <h3>順イールド</h3>
+              <div class="yield-shape__chart yield-shape__chart--normal" aria-hidden="true">
+                <span class="yield-shape__axis-y">利回り</span>
+                <span class="yield-shape__axis-x">期間 →</span>
+              </div>
+              <p>短期から長期へ向かうほど利回りが高くなる右肩上がりの形です。</p>
+            </div>
+
+            <div class="yield-shape">
+              <h3>フラット</h3>
+              <div class="yield-shape__chart yield-shape__chart--flat" aria-hidden="true">
+                <span class="yield-shape__axis-y">利回り</span>
+                <span class="yield-shape__axis-x">期間 →</span>
+              </div>
+              <p>短期と長期の利回り差が小さく、カーブが平らに近い状態です。</p>
+            </div>
+
+            <div class="yield-shape">
+              <h3>逆イールド</h3>
+              <div class="yield-shape__chart yield-shape__chart--inverted" aria-hidden="true">
+                <span class="yield-shape__axis-y">利回り</span>
+                <span class="yield-shape__axis-x">期間 →</span>
+              </div>
+              <p>短期金利が長期金利を上回り、通常とは逆方向の傾きが生じます。</p>
+            </div>
+
+            <div class="yield-shape">
+              <h3>スティープ化</h3>
+              <div class="yield-shape__chart yield-shape__chart--steep" aria-hidden="true">
+                <span class="yield-shape__axis-y">利回り</span>
+                <span class="yield-shape__axis-x">期間 →</span>
+              </div>
+              <p>短期と長期の利回り差が拡大し、カーブの傾きが大きくなります。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="normal" class="kiji-section" aria-labelledby="normal-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Normal Yield Curve</p>
+            <h2 class="kiji-section__title" id="normal-title">順イールドとは？</h2>
+          </div>
+
+          <div class="yield-formula">
+            <strong>順イールド</strong>
+            短期金利 ＜ 長期金利
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            順イールドは、短い期間の債券より長い期間の債券の利回りが高く、イールドカーブが右肩上がりになっている状態です。
+          </p>
+
+          <p class="kiji-section__text">
+            長期間資金を固定することへの不確実性やタームプレミアムなどが長期金利へ上乗せされる場合があるため、一般的には順イールドが通常の形として見られます。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              ただし、<strong>順イールド＝景気が必ず良い</strong>という意味ではありません。長期金利がインフレ懸念や国債需給の変化によって上昇し、結果としてカーブが急になっている場合もあります。
+            </p>
+          </div>
+        </section>
+
+        <section id="flattening" class="kiji-section" aria-labelledby="flattening-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Flattening</p>
+            <h2 class="kiji-section__title" id="flattening-title">イールドカーブのフラット化とは？</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            フラット化とは、<strong>長期金利と短期金利の差が縮小し、イールドカーブの傾きが小さくなること</strong>です。
+          </p>
+
+          <div class="yield-flow">
+            <div class="yield-flow__item">中央銀行が利上げ</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">政策金利に敏感な短期金利が上昇</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">長期金利との差が縮小</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">イールドカーブがフラット化</div>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            ただし、フラット化は短期金利の上昇だけで起こるわけではありません。将来の景気減速やインフレ鈍化への予想から長期金利が低下し、短期金利との差が縮まる場合もあります。
+          </p>
+        </section>
+
+        <section id="inverted" class="kiji-section" aria-labelledby="inverted-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Inverted Yield Curve</p>
+            <h2 class="kiji-section__title" id="inverted-title">逆イールドとは？</h2>
+          </div>
+
+          <div class="yield-formula">
+            <strong>逆イールド</strong>
+            短期金利 ＞ 長期金利
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            逆イールドは、通常の順イールドとは反対に、短期金利が長期金利を上回っている状態です。金融ニュースでは米国の<strong>2年国債利回りと10年国債利回り</strong>の比較がよく使われます。
+          </p>
+
+          <div class="kiji-panel">
+            <h3 class="kiji-panel__title">10年－2年の長短金利差</h3>
+            <p>
+              10年国債利回りから2年国債利回りを引くと、代表的な長短金利差を計算できます。
+            </p>
+            <ul class="kiji-bullet-list">
+              <li><strong>プラス：</strong>10年金利のほうが高い</li>
+              <li><strong>0付近：</strong>2年と10年の差が小さくフラットに近い</li>
+              <li><strong>マイナス：</strong>2年金利のほうが高く、2年－10年では逆イールド</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="recession" class="kiji-section" aria-labelledby="recession-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Recession Signal</p>
+            <h2 class="kiji-section__title" id="recession-title">なぜ逆イールドは景気後退のサインとして注目されるの？</h2>
+          </div>
+
+          <div class="yield-flow">
+            <div class="yield-flow__item">中央銀行がインフレ抑制のため高い政策金利を維持</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">短期金利が高くなる</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">市場では将来の景気減速や利下げを予想</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">長期金利が相対的に低くなる場合がある</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">逆イールド</div>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            長期債の利回りには、将来の短期金利がどのように推移すると市場が考えているかが影響します。そのため、市場参加者が「将来は景気が減速し、中央銀行が政策金利を引き下げる可能性がある」と考えれば、長期金利が短期金利を下回ることがあります。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>逆イールドは景気後退を確定させるものではありません。</strong>過去に景気後退前に逆イールドが見られた例があるため注目されますが、景気後退までの期間は一定ではなく、金融政策、インフレ、国債需給、タームプレミアムなど他の要因もイールドカーブへ影響します。
+            </p>
+          </div>
+        </section>
+
+        <section id="steepening" class="kiji-section" aria-labelledby="steepening-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Steepening</p>
+            <h2 class="kiji-section__title" id="steepening-title">スティープ化とは？</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            スティープ化とは、<strong>長期金利と短期金利の差が拡大し、イールドカーブの傾きが大きくなること</strong>です。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">長期金利上昇型</p>
+              <h3 class="kiji-info-card__title">長期金利が上がって差が広がる</h3>
+              <p class="kiji-info-card__text">
+                景気やインフレへの予想、国債需給、タームプレミアムなどを背景に長期金利が上昇し、短期金利との差が拡大する場合があります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">短期金利低下型</p>
+              <h3 class="kiji-info-card__title">短期金利が下がって差が広がる</h3>
+              <p class="kiji-info-card__text">
+                利下げや将来の金融緩和への予想によって短期金利が低下し、長期金利との差が拡大する場合があります。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              同じスティープ化でも原因によって意味は異なります。<strong>スティープ化＝必ず景気回復</strong>と考えず、長期金利と短期金利のどちらが動いたのかを確認することが重要です。
+            </p>
+          </div>
+        </section>
+
+        <section id="policy" class="kiji-section" aria-labelledby="policy-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Monetary Policy</p>
+            <h2 class="kiji-section__title" id="policy-title">政策金利とイールドカーブの関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            中央銀行は金融政策の基準となる政策金利を決定しますが、<strong>すべての年限の国債利回りを同じように直接決めているわけではありません。</strong>
+          </p>
+
+          <div class="yield-flow">
+            <div class="yield-flow__item">政策金利</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">短期金利へ強く影響</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">将来の政策金利予想</div>
+            <div class="yield-flow__arrow">↓</div>
+            <div class="yield-flow__item">中長期金利にも影響</div>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            そのため、FRBのFOMCや日本銀行の金融政策決定会合では、実際の利上げ・利下げだけでなく「今後の政策金利がどうなるのか」という市場予想もイールドカーブを動かします。
+          </p>
+
+          <p class="kiji-section__text">
+            政策金利から市場金利へ影響が波及する仕組みは<a href="seisaku-kinri-toha.html">「政策金利とは？」</a>、米国の金融政策会合は<a href="fomc-toha.html">「FOMCとは？」</a>、中央銀行関係者の発言は<a href="taka-ha-hato-ha-toha.html">「タカ派・ハト派とは？」</a>で詳しく整理しています。
+          </p>
+        </section>
+
+        <section id="bank" class="kiji-section" aria-labelledby="bank-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Banks</p>
+            <h2 class="kiji-section__title" id="bank-title">イールドカーブと銀行株の関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            銀行は預金などで資金を調達し、企業や個人への貸出などを通じて収益を得ています。そのため、短期と長期の金利差は銀行の収益環境を考える材料の一つとして注目されます。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">金利差が拡大</p>
+              <h3 class="kiji-info-card__title">利ざやにプラスとなる場合</h3>
+              <p class="kiji-info-card__text">
+                資金調達コストより貸出金利の上昇が大きい場合には、銀行の利ざや改善につながる可能性があります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">ただし</p>
+              <h3 class="kiji-info-card__title">金利差だけでは決まらない</h3>
+              <p class="kiji-info-card__text">
+                預金金利、貸出金利、資金調達構造、貸倒れ、保有債券の評価、景気など多くの要因が銀行収益へ影響します。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            銀行と金利の基本的な関係は<a href="ginkou-kabu-toha.html">「銀行株とは？」</a>で詳しく解説しています。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>イールドカーブがスティープ化したから銀行株が必ず上昇するわけではありません。</strong>特に景気悪化によって貸倒れが増える場合などは、金利差とは別の要因が銀行業績の重荷になる可能性があります。
+            </p>
+          </div>
+        </section>
+
+        <section id="stocks" class="kiji-section" aria-labelledby="stocks-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Stocks</p>
+            <h2 class="kiji-section__title" id="stocks-title">イールドカーブと株価の関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            イールドカーブには景気、インフレ、金融政策に対する市場の予想が反映されるため、株式市場でも重要な材料として注目されます。
+          </p>
+
+          <ul class="kiji-keyword-list" aria-label="株価を見る主な要因">
+            <li>企業業績</li>
+            <li>金利</li>
+            <li>景気</li>
+            <li>インフレ</li>
+            <li>市場予想</li>
+            <li>バリュエーション</li>
+          </ul>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            例えば逆イールドが景気減速への警戒を反映している場合、企業業績への不安が株式市場で意識されることがあります。一方、将来の利下げ予想が強まれば、金利低下への期待が株価を支える材料として受け止められる場合もあります。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              イールドカーブは市場を見る材料の一つであり、<strong>「逆イールドになったから株を売る」といった単純な投資判断には結びつけられません。</strong>
+            </p>
+          </div>
+        </section>
+
+        <section id="two-ten" class="kiji-section" aria-labelledby="two-ten-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">2Y / 10Y Spread</p>
+            <h2 class="kiji-section__title" id="two-ten-title">イールドカーブを見るとき「2年債と10年債」が注目されるのはなぜ？</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">米国2年国債</p>
+              <h3 class="kiji-info-card__title">比較的近い金融政策予想に敏感</h3>
+              <p class="kiji-info-card__text">
+                2年国債利回りは、今後数年間の政策金利がどのように推移すると市場が考えているかの影響を受けやすい年限です。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">米国10年国債</p>
+              <h3 class="kiji-info-card__title">より長期の経済予想を反映</h3>
+              <p class="kiji-info-card__text">
+                10年国債利回りは、長期的な政策金利予想だけでなく、景気、インフレ、国債需給、タームプレミアムなど複数の要因を反映します。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            このため「10年－2年」の利回り差は、代表的な長短金利差として市場分析で利用されています。
+          </p>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              ただし、<strong>イールドカーブ＝2年債と10年債だけではありません。</strong>米国では10年－3カ月など別の年限の組み合わせも景気分析で利用されます。また、本来のイールドカーブは短期から30年などまで複数の年限をつないだ曲線です。
+            </p>
+          </div>
+        </section>
+
+        <section id="news-point" class="kiji-section" aria-labelledby="news-point-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">News Checklist</p>
+            <h2 class="kiji-section__title" id="news-point-title">イールドカーブのニュースはどう読めばいい？</h2>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>どの国の国債か</strong>
+              <p>米国債、日本国債など、どの国の金利を見ているのか確認します。</p>
+            </li>
+            <li>
+              <strong>何年債と何年債を比較しているか</strong>
+              <p>2年－10年なのか、3カ月－10年なのかによって意味合いが異なります。</p>
+            </li>
+            <li>
+              <strong>長期金利と短期金利のどちらが動いたのか</strong>
+              <p>同じフラット化やスティープ化でも、どちらの金利が変化したかで背景は変わります。</p>
+            </li>
+            <li>
+              <strong>政策金利の予想は変化したか</strong>
+              <p>利上げ・利下げ予想の変化は特に短期金利へ影響しやすくなります。</p>
+            </li>
+            <li>
+              <strong>インフレ指標はどうなっているか</strong>
+              <p><a href="cpi-toha.html">CPI</a>、<a href="ppi-toha.html">PPI</a>、<a href="pce-deflator-toha.html">PCEデフレーター</a>などを確認します。</p>
+            </li>
+            <li>
+              <strong>景気・雇用指標はどうなっているか</strong>
+              <p>景気減速や金融政策への予想が変化していないか確認します。米国の雇用は<a href="beikoku-koyou-toukei-toha.html">「米国雇用統計とは？」</a>で整理しています。</p>
+            </li>
+            <li>
+              <strong>中央銀行は何を発信しているか</strong>
+              <p>現在の政策だけでなく、インフレや景気に対する中央銀行の評価や今後の方針も確認します。</p>
+            </li>
+          </ol>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              ニュースで「逆イールド」「フラット化」「スティープ化」と書かれていたら、結果だけを見るのではなく、<strong>なぜカーブの形が変化したのか</strong>を確認することが重要です。
+            </p>
+          </div>
+        </section>
+
+        <section id="latest" class="kiji-section" aria-labelledby="latest-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Latest Update</p>
+            <h2 class="kiji-section__title" id="latest-title">直近のイールドカーブはどうなっている？</h2>
+            <p class="kiji-section__text">
+              以下は<strong>2026年9月17日時点で確認できる直近の米財務省・FRB公表資料</strong>をもとに整理しています。この部分は国債利回りや金融政策の変化に合わせて更新が必要です。
+            </p>
+          </div>
+
+          <div class="latest-data">
+            <h3>米国債は2年より10年の利回りが高い状態</h3>
+            <p>
+              米財務省が公表するDaily Treasury Par Yield Curve Ratesでは、2026年9月16日の米国2年国債利回りは<strong>4.74％</strong>、10年国債利回りは<strong>5.01％</strong>でした。
+            </p>
+
+            <div class="yield-formula">
+              <strong>2026年9月16日の10年－2年金利差</strong>
+              5.01％ － 4.74％ ＝ ＋0.27％ポイント（約＋27bp）
+            </div>
+
+            <p>
+              この2年－10年の組み合わせだけを見ると、10年金利が2年金利を上回っており、逆イールドではありません。米財務省の同日のデータでは、3カ月4.14％、1年4.45％、5年4.86％、10年5.01％、30年5.35％となっており、より広い年限でもカーブの形を確認できます。
+            </p>
+          </div>
+
+          <div class="latest-data" style="margin-top:20px;">
+            <h3>FRBは9月16日に政策金利を0.25％ポイント引き上げ</h3>
+            <p>
+              FRBは2026年9月15～16日のFOMCで、フェデラルファンド金利の誘導目標を<strong>3.75～4.00％</strong>へ0.25％ポイント引き上げました。FOMC声明では、経済活動は堅調なペースで拡大している一方、インフレは依然として高いとの認識が示されています。
+            </p>
+          </div>
+
+          <div class="latest-data" style="margin-top:20px;">
+            <h3>政策金利と長期金利が同じ数字になるわけではない</h3>
+            <p>
+              今回のようにFOMCが政策金利を変更しても、2年、10年、30年など各年限の国債利回りは市場でそれぞれ形成されます。短期側では現在の政策金利や近い将来の政策予想が意識されやすい一方、長期側ではインフレ、景気、将来の政策金利、国債需給、タームプレミアムなども影響します。
+            </p>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:20px;">
+            <p style="margin:0;">
+              <strong>現在のカーブが順イールドだから将来の景気拡大が保証されるわけではありません。</strong>また、過去に逆イールドだったカーブが正常化する過程でも、長期金利上昇型と短期金利低下型では背景が異なります。最新のイールドカーブは、その形だけでなく各年限が動いた理由まで確認する必要があります。
+            </p>
+          </div>
+
+          <div class="kiji-panel" style="margin-top:16px;">
+            <h3 class="kiji-panel__title">このセクションの主な確認先</h3>
+            <ul class="kiji-bullet-list">
+              <li>U.S. Department of the Treasury「Daily Treasury Par Yield Curve Rates」：2026年9月16日分</li>
+              <li>Federal Reserve「Federal Reserve issues FOMC statement」：2026年9月16日公表</li>
+              <li>Federal Reserve「Implementation Note issued September 16, 2026」</li>
+              <li>Federal Reserve「September 15-16, 2026 FOMC Meeting」</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">イールドカーブのよくある質問</h2>
+          </div>
+
+          <ul class="kiji-faq-list">
+            <li>
+              <details class="faq-item">
+                <summary>イールドカーブとは何ですか？</summary>
+                <div class="faq-answer">
+                  償還までの期間が異なる債券の利回りを並べ、期間と利回りの関係を曲線で表したものです。一般に横軸へ債券の残存期間、縦軸へ利回りを取ります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>順イールドとは何ですか？</summary>
+                <div class="faq-answer">
+                  短期金利より長期金利のほうが高く、イールドカーブが右肩上がりになっている状態です。ただし、順イールドだから景気が必ず良いとは限りません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>逆イールドとは何ですか？</summary>
+                <div class="faq-answer">
+                  短期金利が長期金利を上回る状態です。米国では2年国債利回りが10年国債利回りを上回る場合などが金融ニュースでよく取り上げられます。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>フラット化とは何ですか？</summary>
+                <div class="faq-answer">
+                  長期金利と短期金利の差が縮まり、イールドカーブが平らに近づくことです。短期金利の上昇でも長期金利の低下でも起こる可能性があります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>スティープ化とは何ですか？</summary>
+                <div class="faq-answer">
+                  長期金利と短期金利の差が拡大し、カーブの傾きが大きくなることです。長期金利が上昇して起こる場合と短期金利が低下して起こる場合があり、背景は異なります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>なぜ逆イールドは景気後退のサインといわれるのですか？</summary>
+                <div class="faq-answer">
+                  短期金利が高い一方、市場が将来の景気減速や政策金利の低下を予想すると長期金利が相対的に低くなる場合があるためです。過去に景気後退前に逆イールドが見られた例があることから注目されています。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>逆イールドになると必ず景気後退しますか？</summary>
+                <div class="faq-answer">
+                  必ず景気後退するわけではありません。金融政策、インフレ、国債需給、タームプレミアムなど他の要因も影響し、逆イールドから景気後退までの期間も一定ではありません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>なぜ2年債と10年債が注目されるのですか？</summary>
+                <div class="faq-answer">
+                  2年国債利回りは比較的近い将来の金融政策予想に敏感で、10年国債利回りはより長期の景気、インフレ、金融政策、国債需給などを反映するため、その差が代表的な長短金利差として利用されています。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>政策金利と長期金利は何が違うのですか？</summary>
+                <div class="faq-answer">
+                  政策金利は中央銀行が金融政策のために設定する基準となる金利です。一方、長期金利は将来の政策金利予想、インフレ期待、景気見通し、国債需給、タームプレミアムなどを反映して市場で形成されます。
+                </div>
+              </details>
+            </li>
+          </ul>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="related-title">あわせて読みたい関連記事</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a class="kiji-link-card" href="seisaku-kinri-toha.html">
+              <span class="kiji-link-card__label">金融政策</span>
+              <strong class="kiji-link-card__title">政策金利とは？</strong>
+              <span class="kiji-link-card__text">政策金利から短期金利・景気・株価・為替へ影響が波及する仕組みを確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="kokusai-toha.html">
+              <span class="kiji-link-card__label">国債</span>
+              <strong class="kiji-link-card__title">国債とは？</strong>
+              <span class="kiji-link-card__text">国債価格と利回りが逆方向に動く基本を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="saiken-shijou-toha.html">
+              <span class="kiji-link-card__label">債券市場</span>
+              <strong class="kiji-link-card__title">債券市場とは？</strong>
+              <span class="kiji-link-card__text">国債売買と長期金利・株価・為替の関係を整理します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="jisshitsu-kinri-toha.html">
+              <span class="kiji-link-card__label">金利</span>
+              <strong class="kiji-link-card__title">実質金利とは？</strong>
+              <span class="kiji-link-card__text">インフレを考慮した金利と株価・金・ドルの関係を学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="fomc-toha.html">
+              <span class="kiji-link-card__label">FRB</span>
+              <strong class="kiji-link-card__title">FOMCとは？</strong>
+              <span class="kiji-link-card__text">米国の政策金利が決まる金融政策会合の基本を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="taka-ha-hato-ha-toha.html">
+              <span class="kiji-link-card__label">中央銀行</span>
+              <strong class="kiji-link-card__title">タカ派・ハト派とは？</strong>
+              <span class="kiji-link-card__text">中央銀行の発言と金利・株価・為替の関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="cpi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">CPIとは？</strong>
+              <span class="kiji-link-card__text">インフレ指標と政策金利・国債利回りの関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="ppi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">PPIとは？</strong>
+              <span class="kiji-link-card__text">企業側の価格変化と金融政策への影響を学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="pce-deflator-toha.html">
+              <span class="kiji-link-card__label">米国指標</span>
+              <strong class="kiji-link-card__title">PCEデフレーターとは？</strong>
+              <span class="kiji-link-card__text">FRBが注目する物価指標の基本を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="beikoku-koyou-toukei-toha.html">
+              <span class="kiji-link-card__label">雇用</span>
+              <strong class="kiji-link-card__title">米国雇用統計とは？</strong>
+              <span class="kiji-link-card__text">雇用とFRBの政策金利予想がつながる仕組みを確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="ginkou-kabu-toha.html">
+              <span class="kiji-link-card__label">銀行株</span>
+              <strong class="kiji-link-card__title">銀行株とは？</strong>
+              <span class="kiji-link-card__text">貸出金利・預金金利・利ざやと銀行株の関係を学びます。</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">まとめ｜イールドカーブは形だけでなく「なぜ変化したか」を見る</h2>
+          </div>
+
+          <ul class="kiji-check-list">
+            <li>イールドカーブは債券の期間と利回りの関係を表す曲線です。</li>
+            <li>通常は短期金利より長期金利が高い右肩上がりの順イールドになりやすい傾向があります。</li>
+            <li>長期金利と短期金利の差が縮小すると、イールドカーブはフラット化します。</li>
+            <li>短期金利が長期金利を上回る状態を逆イールドと呼びます。</li>
+            <li>逆イールドは景気後退の兆候として注目されますが、景気後退を確定させるものではありません。</li>
+            <li>スティープ化は長期金利上昇でも短期金利低下でも起こるため、背景を確認する必要があります。</li>
+            <li>政策金利は特に短期金利へ影響しやすい一方、長期金利はインフレ・景気・国債需給など複数の要因で動きます。</li>
+            <li>イールドカーブは景気・インフレ・金融政策に対する市場予想を見る材料の一つです。</li>
+            <li>「逆イールドになった」という結果だけでなく、長期金利と短期金利のどちらが、なぜ動いたのかを見ることが重要です。</li>
+          </ul>
+        </section>
+
+        <section class="kiji-cta" aria-labelledby="cta-title">
+          <div>
+            <p class="kiji-section__eyebrow">Next Step</p>
+            <h2 class="kiji-section__title" id="cta-title">国債と政策金利の基本からつなげて理解する</h2>
+            <p class="kiji-section__text">
+              イールドカーブを理解すると、FOMCや利上げ・利下げ、長期金利、銀行株などのニュースを一つの流れとして読みやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-hero__actions">
+            <a class="kiji-btn kiji-btn--primary" href="kokusai-toha.html">国債とは？</a>
+            <a class="kiji-btn kiji-btn--ghost" href="column.html">解説記事一覧へ戻る</a>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 id="disclaimer-title">免責事項</h2>
+          <p>
+            本記事は、イールドカーブ、国債利回り、政策金利、景気、株式市場などの仕組みを初心者向けに解説することを目的とした一般的な情報提供です。特定の金融商品・銘柄・投資手法の購入、売却、保有を推奨するものではありません。
+          </p>
+          <p>
+            国債利回り、金融政策、経済指標などは日々変化します。最新情報については米財務省、FRB、日本銀行、各国統計機関などの公表資料をご確認ください。投資判断はご自身の目的、資産状況、リスク許容度などを踏まえて行ってください。
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <button id="back-to-top" type="button" aria-label="ページ上部へ戻る">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="include.js"></script>
+  <script src="sidebar.js"></script>
+
+  <script>
+    (function () {
+      const button = document.getElementById('back-to-top');
+      if (!button) return;
+
+      const toggleButton = () => {
+        if (window.scrollY > 400) {
+          button.classList.add('is-visible');
+        } else {
+          button.classList.remove('is-visible');
+        }
+      };
+
+      window.addEventListener('scroll', toggleButton, { passive: true });
+      toggleButton();
+
+      button.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

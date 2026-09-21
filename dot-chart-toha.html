@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0653a6" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="canonical" href="https://tousiportal.jp/dot-chart-toha.html" />
+
+  <title>ドットチャートとは？FRBの金利見通しをどう読む？初心者向けに解説</title>
+  <meta name="description" content="ドットチャート（ドットプロット）とは何か、1つの点や中央値の意味、市場予想との違い、政策金利・国債利回り・株価・ドル円との関係を投資初心者向けに分かりやすく解説します。" />
+  <meta name="author" content="ミルクティー情報発信" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ドットチャートとは？FRBの金利見通しをどう読む？初心者向けに解説" />
+  <meta property="og:description" content="FOMCで注目されるドットチャートの読み方、中央値・点のばらつき、市場予想との違い、株価・国債・ドル円との関係を初心者向けに整理します。" />
+  <meta property="og:url" content="https://tousiportal.jp/dot-chart-toha.html" />
+  <meta property="og:image" content="https://tousiportal.jp/sonota/dot-chart-toha.webp" />
+  <meta property="og:site_name" content="投資ポータル.jp" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ドットチャートとは？FRBの金利見通しをどう読む？" />
+  <meta name="twitter:description" content="FOMC参加者の金利見通しを示すドットチャートの読み方と、市場が反応する仕組みを初心者向けに解説します。" />
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/dot-chart-toha.webp" />
+  <meta name="twitter:site" content="@QwZd0ksG2138610" />
+  <meta name="twitter:creator" content="@QwZd0ksG2138610" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu-card.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <link rel="stylesheet" href="table.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="kiji.css" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    .kiji-page,
+    .kiji-page * {
+      box-sizing: border-box;
+    }
+
+    .kiji-page {
+      overflow-x: hidden;
+    }
+
+    .kiji-page .container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .kiji-page #main.kiji-main {
+      width: 100%;
+      max-width: 1120px;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .kiji-page .kiji-article,
+    .kiji-page .kiji-section,
+    .kiji-page .kiji-hero,
+    .kiji-page .kiji-cta,
+    .kiji-page .kiji-disclaimer,
+    .kiji-page .kiji-grid,
+    .kiji-page .kiji-stack,
+    .kiji-page .kiji-panel,
+    .kiji-page .kiji-info-card,
+    .kiji-page .kiji-feature-card,
+    .kiji-page .kiji-link-card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .kiji-page img,
+    .kiji-page iframe,
+    .kiji-page video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kiji-main-image {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 18px;
+      border: 1px solid #d9e4ee;
+      box-shadow: 0 10px 26px rgba(20, 45, 90, 0.08);
+    }
+
+    .purpose-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 14px;
+      border: 1px solid #d9e4ee;
+      border-radius: 16px;
+      background: rgba(255,255,255,.92);
+    }
+
+    .purpose-nav a {
+      flex: 1 1 140px;
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .6rem .75rem;
+      border: 1px solid #cbdcec;
+      border-radius: 10px;
+      background: #fff;
+      color: #1f6fb2;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .purpose-nav a:hover,
+    .purpose-nav a:focus-visible {
+      background: #edf6ff;
+      text-decoration: none;
+    }
+
+    .kiji-page .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .kiji-page .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .kiji-page .table-modern {
+      width: max-content;
+      min-width: 700px;
+      max-width: none;
+    }
+
+    .kiji-keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .kiji-keyword-list li {
+      margin: 0;
+      padding: .55rem .78rem;
+      border: 1px solid #d9e4ee;
+      border-radius: 999px;
+      background: #f8fbff;
+      color: #27445f;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .kiji-faq-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .market-flow {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    .market-flow span {
+      display: block;
+      padding: 11px 14px;
+      border: 1px solid #d7e4ef;
+      border-radius: 10px;
+      background: #f8fbff;
+      color: #164d7a;
+      font-weight: 700;
+    }
+
+    .market-flow span:not(:last-child)::after {
+      content: "↓";
+      display: block;
+      margin: 9px 0 -20px;
+      color: #1f6fb2;
+      font-size: 1.1rem;
+    }
+
+    .dot-example {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .dot-example__item {
+      padding: 16px 12px;
+      border: 1px solid #d9e4ee;
+      border-radius: 14px;
+      background: #f8fbff;
+      text-align: center;
+    }
+
+    .dot-example__dots {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 5px;
+      min-height: 120px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .dot-example__dot {
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-radius: 50%;
+      background: #1f6fb2;
+    }
+
+    .dot-example__label {
+      font-weight: 700;
+      color: #27445f;
+    }
+
+    .update-box {
+      border-left: 5px solid #1f6fb2;
+      background: #f8fbff;
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .source-list {
+      font-size: .9rem;
+    }
+
+    .source-list a {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 960px) {
+      .kiji-page .container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+      }
+
+      .kiji-page aside,
+      .kiji-page #sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .kiji-page #main.kiji-main {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      .kiji-page .kiji-hero__inner,
+      .kiji-page .kiji-grid--3,
+      .kiji-page .kiji-grid--2,
+      .kiji-page .kiji-compare-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kiji-page #main.kiji-main {
+        padding: .75rem;
+      }
+
+      .kiji-page .breadcrumb {
+        padding: .65rem .75rem;
+        margin: .2rem 0 .75rem;
+      }
+
+      .kiji-page .kiji-article {
+        gap: 16px;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .kiji-page .kiji-title {
+        font-size: clamp(1.28rem, 6vw, 1.58rem);
+        line-height: 1.42;
+      }
+
+      .kiji-page .kiji-lead,
+      .kiji-page .kiji-section__text,
+      .kiji-page .kiji-info-card__text,
+      .kiji-page .kiji-feature-card__text,
+      .kiji-page .kiji-panel p {
+        font-size: .94rem;
+        line-height: 1.75;
+      }
+
+      .purpose-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .purpose-nav a {
+        width: 100%;
+        min-height: 42px;
+        padding: .55rem .5rem;
+        font-size: .84rem;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 620px;
+        font-size: .82rem;
+      }
+
+      .kiji-page .table-modern th,
+      .kiji-page .table-modern td {
+        padding: 9px 10px;
+      }
+
+      .dot-example {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .kiji-page #main.kiji-main {
+        padding: .55rem;
+      }
+
+      .purpose-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .kiji-page .kiji-hero,
+      .kiji-page .kiji-section,
+      .kiji-page .kiji-cta,
+      .kiji-page .kiji-disclaimer {
+        padding: 14px 12px;
+      }
+
+      .kiji-page .table-modern {
+        min-width: 560px;
+        font-size: .78rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://tousiportal.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "投資コラム・解説記事一覧",
+        "item": "https://tousiportal.jp/column.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ドットチャートとは？",
+        "item": "https://tousiportal.jp/dot-chart-toha.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://tousiportal.jp/dot-chart-toha.html#article",
+    "headline": "ドットチャートとは？FRBの金利見通しをどう読む？初心者向けに解説",
+    "description": "ドットチャートとは何か、1つの点や中央値の意味、市場予想との違い、政策金利・国債利回り・株価・ドル円との関係を初心者向けに解説します。",
+    "image": "https://tousiportal.jp/sonota/dot-chart-toha.webp",
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/dot-chart-toha.html"
+    },
+    "inLanguage": "ja",
+    "articleSection": "話題・トレンド",
+    "author": {
+      "@type": "Person",
+      "@id": "https://tousiportal.jp/#person",
+      "name": "ミルクティー",
+      "url": "https://tousiportal.jp/profile.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://tousiportal.jp/#organization",
+      "name": "投資ポータル.jp",
+      "url": "https://tousiportal.jp/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tousiportal.jp/favicon-512.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ドットチャートとは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FRBが公表する経済見通し（SEP）の中で、FOMC参加者それぞれが適切だと考える将来の政策金利水準を点で示したものです。ドットプロットとも呼ばれます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ドットチャートは誰が予想しているのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FOMC参加者であるFRB理事と地区連銀総裁が、それぞれの経済見通しと適切な金融政策の判断に基づいて示しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "1つの点は何を意味しますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1つの点は、FOMC参加者1人が適切だと考える対象年末などのフェデラルファンド金利の水準を表します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ドットチャートの中央値とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参加者の政策金利見通しを並べたとき中央に位置する値です。参加者全体の見通しを大まかに把握する材料として注目されますが、将来の政策金利を約束するものではありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "誰がどの点を付けたか分かりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "分かりません。個々の点と参加者の氏名は対応付けて公表されていません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ドットチャート通りに政策金利は動きますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必ずしも動きません。インフレ、雇用、景気、金融環境などが変化すれば参加者の適切な政策金利に対する判断も変化します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ドットチャートと市場予想は何が違いますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ドットチャートはFOMC参加者側の政策金利見通しです。市場予想は金融市場の価格や調査などから読み取られる市場参加者側の予想であり、両者は一致するとは限りません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜドットチャートで株価や為替が動くのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "公表された金利見通しが市場の事前予想と異なると、将来の金利予想が修正され、国債利回りや株式の評価、為替市場の金利差に対する見方などが変化する場合があるためです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ドットチャートはいつ公表されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ドットチャートはFOMC参加者の経済見通しであるSEPの一部として公表されます。2026年のFOMC日程では、3月、6月、9月、12月の会合がSEPを伴う会合として設定されています。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="kiji-page">
+  <div id="header"></div>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main id="main" class="kiji-main" tabindex="-1">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+          <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ドットチャートとは？</li>
+        </ol>
+      </nav>
+
+      <article class="kiji-article">
+
+        <header class="kiji-hero" id="top">
+          <div class="kiji-hero__inner">
+            <div class="kiji-hero__main">
+              <p class="kiji-eyebrow">話題・トレンド</p>
+
+              <h1 class="kiji-title">
+                ドットチャートとは？FRBの金利見通しをどう読む？初心者向けに解説
+              </h1>
+
+              <p class="kiji-lead">
+                FOMCのニュースで「ドットチャートの中央値が上がった」「FRBの利下げ見通しが変化した」と報道されることがあります。
+                ドットチャートは将来の政策金利を考える重要な資料ですが、FRBが将来の金利を約束した表ではありません。
+                1つの点が何を意味するのか、市場予想と何が違うのか、なぜ国債・株価・ドル円が反応することがあるのかを初心者向けに整理します。
+              </p>
+
+              <ul class="kiji-tags" aria-label="この記事で分かること">
+                <li>ドットチャートの意味</li>
+                <li>1つの点と中央値の読み方</li>
+                <li>市場予想との違い</li>
+                <li>株・債券・為替との関係</li>
+              </ul>
+
+              <div class="kiji-hero__actions">
+                <a class="kiji-btn kiji-btn--primary" href="#reading">読み方を見る</a>
+                <a class="kiji-btn kiji-btn--ghost" href="#latest">最新SEPを見る</a>
+              </div>
+            </div>
+
+            <aside class="kiji-hero__aside" aria-label="要点まとめ">
+              <div class="kiji-summary-card">
+                <p class="kiji-summary-card__label">この記事の結論</p>
+                <h2 class="kiji-summary-card__title">
+                  ドットチャートは「FRBの決定表」ではなく、FOMC参加者それぞれの政策金利見通し
+                </h2>
+                <ul class="kiji-check-list">
+                  <li>1つの点は参加者1人の見通し</li>
+                  <li>誰がどの点を付けたかは公表されない</li>
+                  <li>中央値は注目されるが政策の約束ではない</li>
+                  <li>市場予想との差が相場を動かす材料になる</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <nav class="purpose-nav" aria-label="ページ内メニュー">
+          <a href="#definition">ドットチャートとは</a>
+          <a href="#one-dot">1つの点</a>
+          <a href="#reading">読み方</a>
+          <a href="#median">中央値</a>
+          <a href="#market">市場への影響</a>
+          <a href="#market-expectation">市場予想との違い</a>
+          <a href="#latest">最新ドットチャート</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <section class="kiji-section" aria-labelledby="overview-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Overview</p>
+            <h2 class="kiji-section__title" id="overview-title">
+              ドットチャートから市場へ影響する流れを最初に整理
+            </h2>
+          </div>
+
+          <img
+            class="kiji-main-image"
+            src="sonota/dot-chart-toha.webp"
+            alt="FOMC参加者の点から中央値、市場の金利予想、国債・株価・為替への波及を初心者向けに整理した教材画像"
+            width="1200"
+            height="630"
+            loading="eager"
+            decoding="async" />
+
+          <div class="market-flow" aria-label="ドットチャートと金融市場の関係">
+            <span>FOMC参加者が適切だと考える政策金利を示す</span>
+            <span>ドットチャートとして公表</span>
+            <span>市場の事前予想と比較される</span>
+            <span>将来の金利予想が修正される</span>
+            <span>国債利回り・株価・為替などが反応する場合がある</span>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>最重要ポイント：</strong>
+              相場が反応するときに重要なのは、ドットチャートの数字だけではありません。
+              <strong>「発表前に市場が何を予想していたのか」との差</strong>を見ることが大切です。
+            </p>
+          </div>
+        </section>
+
+        <section id="definition" class="kiji-section" aria-labelledby="definition-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Definition</p>
+            <h2 class="kiji-section__title" id="definition-title">ドットチャートとは？</h2>
+            <p class="kiji-section__text">
+              ドットチャートは、FRBが公表する<strong>Summary of Economic Projections（SEP：経済見通し）</strong>の中で示される、
+              FOMC参加者それぞれの政策金利見通しを点で表したものです。
+              一般には「ドットチャート」や「ドットプロット」と呼ばれています。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">SEP</p>
+              <h3 class="kiji-info-card__title">FOMC参加者による経済見通し</h3>
+              <p class="kiji-info-card__text">
+                SEPでは、実質GDP成長率、失業率、PCEインフレ率、コアPCEインフレ率などの経済見通しとともに、
+                各参加者が適切だと判断するフェデラルファンド金利の水準が示されます。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Appropriate Policy</p>
+              <h3 class="kiji-info-card__title">「適切だと考える金利」の見通し</h3>
+              <p class="kiji-info-card__text">
+                ドットは単純な「金利がこうなるだろう」という予想だけではなく、
+                各参加者が物価安定と最大雇用という目標を達成するために<strong>適切だと考える政策金利の経路</strong>を前提としています。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            2026年のFOMC日程では、SEPを伴う会合は3月・6月・9月・12月に設定されています。
+            FOMCそのものの仕組みは<a href="fomc-toha.html">「FOMCとは？」</a>でも詳しく解説しています。
+          </p>
+        </section>
+
+        <section id="one-dot" class="kiji-section" aria-labelledby="one-dot-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">One Dot</p>
+            <h2 class="kiji-section__title" id="one-dot-title">1つの「点」は何を意味する？</h2>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0; text-align:center; font-size:1.05rem;">
+              <strong>1つの点 ＝ FOMC参加者1人の政策金利見通し</strong>
+            </p>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            FRBの公式資料では、各点は参加者1人が対象年末または長期的に適切だと判断する
+            フェデラルファンド金利の目標レンジの中央値、または適切な目標水準を表しています。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">匿名</p>
+              <h3 class="kiji-info-card__title">誰がどの点を付けたかは分からない</h3>
+              <p class="kiji-info-card__text">
+                個々の点は参加者の見通しですが、「この点はFRB議長」「この点は○○連銀総裁」という対応関係は公表されません。
+                そのため特定の人物の将来予想として読むことはできません。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Not a Decision</p>
+              <h3 class="kiji-info-card__title">将来の政策金利を決定したものではない</h3>
+              <p class="kiji-info-card__text">
+                ドットはFOMCで正式決定された将来の政策金利ではありません。
+                参加者それぞれが、その時点の情報をもとに適切だと考えている政策金利の見通しです。
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <section id="reading" class="kiji-section" aria-labelledby="reading-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">How to Read</p>
+            <h2 class="kiji-section__title" id="reading-title">ドットチャートはどうやって読む？</h2>
+            <p class="kiji-section__text">
+              ドットチャートでは、縦方向に政策金利の水準、横方向に対象となる年や「Longer run（長期）」が並びます。
+              各年の列に複数の点が配置され、参加者の見通しの分布を確認できます。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">縦方向</p>
+              <h3 class="kiji-info-card__title">政策金利の水準</h3>
+              <p class="kiji-info-card__text">
+                上にある点ほど高い政策金利を適切だと考えており、下にある点ほど低い政策金利を適切だと考えていることを表します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">横方向</p>
+              <h3 class="kiji-info-card__title">対象年・長期見通し</h3>
+              <p class="kiji-info-card__text">
+                最新の2026年9月SEPでは、2026年・2027年・2028年・2029年とLonger runについて参加者の政策金利見通しが示されています。
+              </p>
+            </section>
+          </div>
+
+          <div class="dot-example" aria-label="ドットチャートの簡易イメージ">
+            <div class="dot-example__item">
+              <div class="dot-example__dots">
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+              </div>
+              <span class="dot-example__label">対象年A</span>
+            </div>
+
+            <div class="dot-example__item">
+              <div class="dot-example__dots">
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+              </div>
+              <span class="dot-example__label">対象年B</span>
+            </div>
+
+            <div class="dot-example__item">
+              <div class="dot-example__dots">
+                <span class="dot-example__dot"></span>
+                <span class="dot-example__dot"></span>
+              </div>
+              <span class="dot-example__label">Longer run</span>
+            </div>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              上の図は仕組みを理解するための簡易イメージです。実際の点の配置や数値は、FRBが公表する最新のSEPを確認してください。
+            </p>
+          </div>
+        </section>
+
+        <section id="median" class="kiji-section" aria-labelledby="median-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Median</p>
+            <h2 class="kiji-section__title" id="median-title">「中央値」とは？</h2>
+            <p class="kiji-section__text">
+              金融ニュースでは「ドットチャートの中央値」「年末の政策金利見通し」という表現がよく使われます。
+              複数の参加者の見通しを並べ、その中央に位置する値を見ることで、参加者全体の見方を大まかに把握できるためです。
+            </p>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>中央値 ＝ FOMCが約束した将来の政策金利ではありません。</strong><br>
+              あくまで参加者の見通しを並べたときの中央の値です。
+            </p>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            また、中央値だけを見ると参加者間の意見の違いが見えにくくなります。
+            そのため、中央値と同時に<strong>点がどの程度ばらついているのか</strong>も確認することが重要です。
+          </p>
+        </section>
+
+        <section id="dispersion" class="kiji-section" aria-labelledby="dispersion-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Dispersion</p>
+            <h2 class="kiji-section__title" id="dispersion-title">点の「ばらつき」から何が分かる？</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            同じ年について高い金利から低い金利まで点が広く分散している場合、
+            FOMC参加者の間で経済や適切な金融政策について見方に違いがある可能性があります。
+          </p>
+
+          <ul class="kiji-keyword-list" aria-label="ドットのばらつきに関係する主な要素">
+            <li>インフレ</li>
+            <li>雇用</li>
+            <li>景気</li>
+            <li>経済成長</li>
+            <li>金融環境</li>
+            <li>適切な金融政策</li>
+          </ul>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            反対に点が比較的集中していれば、参加者の見通しが近いことを示します。
+            ただし、点が集中しているからといって将来の政策が確定したわけではありません。
+          </p>
+        </section>
+
+        <section id="market" class="kiji-section" aria-labelledby="market-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Market Reaction</p>
+            <h2 class="kiji-section__title" id="market-title">なぜドットチャートで株価や為替が動くの？</h2>
+            <p class="kiji-section__text">
+              金融市場はFOMCが発表される前から、経済指標やFRB関係者の発言などをもとに将来の金利を予想しています。
+              そのため、新しいドットチャートが市場の想定と異なると、金利予想の修正が起きる場合があります。
+            </p>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:18px;">市場が多くの利下げを予想していた場合</h3>
+
+          <div class="market-flow">
+            <span>市場「今後かなり利下げされそう」</span>
+            <span>新しいドットチャートは市場が想定したほど低い金利を示していない</span>
+            <span>市場の利下げ予想が修正される</span>
+            <span>国債利回り・株価・ドルなどが反応する場合がある</span>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:22px;">逆方向の場合</h3>
+
+          <div class="market-flow">
+            <span>市場「金利はあまり下がらないかもしれない」</span>
+            <span>ドットチャートが市場想定より低い金利見通しを示す</span>
+            <span>市場がより多くの利下げを意識する</span>
+            <span>国債利回り・株価・ドルなどが反応する場合がある</span>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              <strong>重要なのは「数字そのもの」より「市場予想との差」です。</strong>
+              同じドットチャートでも、事前にどこまで市場へ織り込まれていたかによって反応は変わります。
+              この考え方は<a href="shijou-yosou-toha.html">「市場予想とは？」</a>でも詳しく解説しています。
+            </p>
+          </div>
+        </section>
+
+        <section id="market-expectation" class="kiji-section" aria-labelledby="market-expectation-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Dot Plot vs Market</p>
+            <h2 class="kiji-section__title" id="market-expectation-title">ドットチャートと「市場予想」は別物</h2>
+          </div>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="ドットチャートと市場予想の違い">
+              <table class="table-modern">
+                <caption>ドットチャートと市場予想の違い</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">比較項目</th>
+                    <th scope="col">ドットチャート</th>
+                    <th scope="col">市場予想</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">誰の見通しか</th>
+                    <td>FOMC参加者</td>
+                    <td>金融市場の参加者</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">何を見るか</th>
+                    <td>各参加者が適切だと考える政策金利</td>
+                    <td>市場価格や調査などから読み取られる将来予想</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">一致するか</th>
+                    <td colspan="2">一致するとは限らない</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">FOMC時の注目点</th>
+                    <td colspan="2">FRB側の見通しと市場側の予想にどの程度の差があるか</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ スマートフォンでは横にスクロールできます。</p>
+          </div>
+
+          <p class="kiji-section__text">
+            市場がすでにドットチャートに近い水準を予想していれば、発表されても大きな反応が起きない場合があります。
+            一方、両者に大きな差があれば、市場参加者が金利見通しを修正する材料になることがあります。
+          </p>
+        </section>
+
+        <section id="policy-rate" class="kiji-section" aria-labelledby="policy-rate-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Policy Rate</p>
+            <h2 class="kiji-section__title" id="policy-rate-title">ドットチャートと政策金利の関係</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">現在</p>
+              <h3 class="kiji-info-card__title">FOMCで決定する政策金利</h3>
+              <p class="kiji-info-card__text">
+                FOMCでは、その時点でのフェデラルファンド金利の誘導目標などを決定します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">将来</p>
+              <h3 class="kiji-info-card__title">ドットチャートの金利見通し</h3>
+              <p class="kiji-info-card__text">
+                将来について各参加者が適切だと考える政策金利の水準を示します。将来のFOMC決定そのものではありません。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            「現在決定された政策金利」と「将来について参加者が示した政策金利見通し」を混同しないことが重要です。
+            政策金利の基本は<a href="seisaku-kinri-toha.html">「政策金利とは？」</a>で確認できます。
+          </p>
+        </section>
+
+        <section id="not-promise" class="kiji-section" aria-labelledby="not-promise-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Important Caution</p>
+            <h2 class="kiji-section__title" id="not-promise-title">ドットチャート通りに金利が動くとは限らない</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            ドットチャートを見るうえで最も重要な注意点の一つです。
+            ドットは将来の政策金利を予告したものでも、FRBがその水準にすると約束したものでもありません。
+          </p>
+
+          <ul class="kiji-keyword-list" aria-label="金融政策が変化する主な要因">
+            <li>インフレ</li>
+            <li>雇用</li>
+            <li>景気</li>
+            <li>金融環境</li>
+            <li>経済データ</li>
+            <li>リスク要因</li>
+          </ul>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>「ドットチャートで4％だから将来必ず4％になる」という読み方はできません。</strong><br>
+              ドットチャートは、その時点で利用可能な情報と各参加者の経済見通しを前提とした判断です。
+            </p>
+          </div>
+        </section>
+
+        <section id="change" class="kiji-section" aria-labelledby="change-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Why It Changes</p>
+            <h2 class="kiji-section__title" id="change-title">ドットチャートはなぜ変化するの？</h2>
+          </div>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">01</span>
+              <h3 class="kiji-feature-card__title">インフレが想定より強い場合</h3>
+              <p class="kiji-feature-card__text">
+                物価上昇圧力が想定より長く続くと判断されれば、高い金利をより長く維持することが適切だと考える参加者が増える可能性があります。
+              </p>
+            </section>
+
+            <section class="kiji-feature-card">
+              <span class="kiji-feature-card__num">02</span>
+              <h3 class="kiji-feature-card__title">景気・雇用が弱い場合</h3>
+              <p class="kiji-feature-card__text">
+                景気や雇用が想定以上に弱くなれば、より低い政策金利が適切だと判断される可能性があります。
+              </p>
+            </section>
+          </div>
+
+          <p class="kiji-section__text" style="margin-top:16px;">
+            ただし「インフレ上昇＝必ずドット上昇」「雇用悪化＝必ず利下げ」という単純な関係ではありません。
+            FOMC参加者は幅広い経済データやリスクを総合して判断します。
+            中央銀行の政策姿勢を表す用語は<a href="taka-ha-hato-ha-toha.html">「タカ派・ハト派とは？」</a>でも解説しています。
+          </p>
+        </section>
+
+        <section id="economic-data" class="kiji-section" aria-labelledby="economic-data-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Economic Data</p>
+            <h2 class="kiji-section__title" id="economic-data-title">CPI・PCE・雇用統計とドットチャートの関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            FOMC参加者が金融政策を考える際には、1つの経済指標だけを見るわけではありません。
+            物価、雇用、賃金、景気、金融環境など幅広い情報が判断材料になります。
+          </p>
+
+          <div class="market-flow">
+            <span>CPI・PCE・雇用統計・賃金・景気指標など</span>
+            <span>景気・物価・雇用に対する見通し</span>
+            <span>適切な金融政策に対する判断</span>
+            <span>SEP・ドットチャート</span>
+            <span>市場の金利予想との比較</span>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a class="kiji-link-card" href="cpi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">CPIとは？</strong>
+              <span class="kiji-link-card__text">消費者物価と金利・株価・為替の関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="pce-deflator-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">PCEデフレーターとは？</strong>
+              <span class="kiji-link-card__text">FRBの物価判断で重要となる指標を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="beikoku-koyou-toukei-toha.html">
+              <span class="kiji-link-card__label">雇用</span>
+              <strong class="kiji-link-card__title">米国雇用統計とは？</strong>
+              <span class="kiji-link-card__text">雇用からFRBの金利予想へつながる仕組みを学びます。</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="bond" class="kiji-section" aria-labelledby="bond-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Bond Market</p>
+            <h2 class="kiji-section__title" id="bond-title">ドットチャートと国債利回りの関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            ドットチャートによって将来の政策金利に対する市場の見方が変化すると、
+            米国債利回りが反応する場合があります。
+            特に金融政策への感応度が比較的高い年限では、政策金利見通しの変化が意識されやすくなります。
+          </p>
+
+          <div class="market-flow">
+            <span>政策金利見通しの変化</span>
+            <span>市場の将来金利予想が変化</span>
+            <span>米国債利回りが反応</span>
+            <span>イールドカーブの形状にも影響する場合がある</span>
+          </div>
+
+          <p class="kiji-section__text">
+            ただし、国債利回りはドットチャートだけで決まりません。
+            インフレ期待、景気見通し、国債の需給、財政状況、タームプレミアムなど多くの要因が影響します。
+          </p>
+
+          <div class="kiji-grid kiji-grid--3">
+            <a class="kiji-link-card" href="kokusai-toha.html">
+              <span class="kiji-link-card__label">国債</span>
+              <strong class="kiji-link-card__title">国債とは？</strong>
+              <span class="kiji-link-card__text">国債価格と利回りが逆に動く仕組みを確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="saiken-shijou-toha.html">
+              <span class="kiji-link-card__label">債券</span>
+              <strong class="kiji-link-card__title">債券市場とは？</strong>
+              <span class="kiji-link-card__text">国債利回りが株価や為替へ波及する仕組みを学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="yield-curve-toha.html">
+              <span class="kiji-link-card__label">金利</span>
+              <strong class="kiji-link-card__title">イールドカーブとは？</strong>
+              <span class="kiji-link-card__text">長期金利と短期金利の差から何が分かるのか確認します。</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="stocks" class="kiji-section" aria-labelledby="stocks-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Stocks</p>
+            <h2 class="kiji-section__title" id="stocks-title">ドットチャートと株価の関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            将来の政策金利見通しが変化すると、企業の資金調達環境や景気見通し、株式のバリュエーション、
+            投資家のリスク選好などを通じて株価が反応する場合があります。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">高い金利が意識される場合</p>
+              <h3 class="kiji-info-card__title">株価の重しになる場合がある</h3>
+              <p class="kiji-info-card__text">
+                市場が想定していたより高い金利が長く続くとの見方になれば、企業の資金調達コストや株式評価への影響が意識されることがあります。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">低い金利が意識される場合</p>
+              <h3 class="kiji-info-card__title">株価の支援材料になる場合がある</h3>
+              <p class="kiji-info-card__text">
+                市場予想より低い金利が適切との見通しが示されれば、金融環境の緩和期待が株価の支援材料になる場合があります。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              <strong>ドット上昇＝必ず株安、ドット低下＝必ず株高ではありません。</strong>
+              金利見通しが変化した理由、景気・企業業績、市場が事前に何を織り込んでいたかなどによって反応は変わります。
+              株価変動の基本は<a href="kabuka-naze-ugoku.html">「株価はなぜ上下するのか？」</a>でも解説しています。
+            </p>
+          </div>
+        </section>
+
+        <section id="usd-jpy" class="kiji-section" aria-labelledby="usd-jpy-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">USD/JPY</p>
+            <h2 class="kiji-section__title" id="usd-jpy-title">ドットチャートとドル円の関係</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            米国の将来の政策金利見通しが変わると、米国債利回りや日米金利差に対する市場の見方が変化し、
+            ドル円が反応する場合があります。
+          </p>
+
+          <div class="market-flow">
+            <span>米国の政策金利見通しが変化</span>
+            <span>米国債利回りへの見方が変化</span>
+            <span>日米金利差への見方も変化</span>
+            <span>ドル円が反応する場合がある</span>
+          </div>
+
+          <p class="kiji-section__text">
+            ただし為替市場は、日本銀行の金融政策、米国以外の金利、世界景気、リスク選好、
+            地政学リスク、投資家のポジション調整など多数の要因で動きます。
+            ドットチャートだけでドル円の方向が決まるわけではありません。
+          </p>
+        </section>
+
+        <section id="sep" class="kiji-section" aria-labelledby="sep-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">SEP</p>
+            <h2 class="kiji-section__title" id="sep-title">ドットチャートと経済見通し（SEP）はセットで見る</h2>
+          </div>
+
+          <p class="kiji-section__text">
+            ドットチャートだけを切り離して見るのではなく、その背景にあるSEPの経済見通しも確認することが重要です。
+            最新の2026年9月SEPでは、実質GDP成長率、失業率、PCEインフレ率、コアPCEインフレ率、
+            そして適切な政策金利の見通しなどが掲載されています。
+          </p>
+
+          <div class="kiji-grid kiji-grid--2">
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Growth</p>
+              <h3 class="kiji-info-card__title">実質GDP成長率</h3>
+              <p class="kiji-info-card__text">
+                経済がどの程度成長すると参加者が見込んでいるかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Employment</p>
+              <h3 class="kiji-info-card__title">失業率</h3>
+              <p class="kiji-info-card__text">
+                雇用環境に対する参加者の見通しを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Inflation</p>
+              <h3 class="kiji-info-card__title">PCE・コアPCEインフレ率</h3>
+              <p class="kiji-info-card__text">
+                FRBの物価安定目標との関係から、インフレがどのように推移すると考えられているかを確認します。
+              </p>
+            </section>
+
+            <section class="kiji-info-card">
+              <p class="kiji-info-card__eyebrow">Policy</p>
+              <h3 class="kiji-info-card__title">政策金利見通し</h3>
+              <p class="kiji-info-card__text">
+                その経済見通しのもとで、各参加者がどのような政策金利を適切だと考えているかを確認します。
+              </p>
+            </section>
+          </div>
+
+          <div class="kiji-note-box" style="margin-top:16px;">
+            <p style="margin:0;">
+              「ドットが上がった・下がった」だけでなく、
+              <strong>なぜ参加者の金利見通しが変化したのか</strong>を考えるために、GDP・失業率・インフレ見通しも合わせて確認すると理解しやすくなります。
+            </p>
+          </div>
+        </section>
+
+        <section id="checklist" class="kiji-section" aria-labelledby="checklist-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FOMC Checklist</p>
+            <h2 class="kiji-section__title" id="checklist-title">FOMCニュースを見るときは何を確認する？</h2>
+          </div>
+
+          <ol class="kiji-step-list">
+            <li>
+              <strong>今回の政策金利はどうなったか</strong>
+              <p>利上げ・据え置き・利下げのどれだったのか、目標レンジを確認します。</p>
+            </li>
+            <li>
+              <strong>事前の市場予想と一致したか</strong>
+              <p>決定そのものより、市場が想定していた内容との差が重要になる場合があります。</p>
+            </li>
+            <li>
+              <strong>ドットチャートの中央値はどう変化したか</strong>
+              <p>前回SEPと比べて、各年の中央値が上がったのか下がったのかを確認します。</p>
+            </li>
+            <li>
+              <strong>点のばらつきはどうなったか</strong>
+              <p>参加者の見通しが集中しているのか、広く分散しているのかを確認します。</p>
+            </li>
+            <li>
+              <strong>経済成長・失業率・インフレ見通しはどう変化したか</strong>
+              <p>金利見通しが変化した背景をSEPから確認します。</p>
+            </li>
+            <li>
+              <strong>FOMC声明はどう変化したか</strong>
+              <p>前回から表現が変更されていないか確認します。</p>
+            </li>
+            <li>
+              <strong>FRB議長会見では何が説明されたか</strong>
+              <p>政策判断の背景、リスク、今後のデータへの考え方などを確認します。</p>
+            </li>
+            <li>
+              <strong>米国債利回り・株価・為替がどう反応したか</strong>
+              <p>市場が発表内容をどのように受け止めたのかを確認します。</p>
+            </li>
+          </ol>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              FOMCは「利上げした」「利下げした」という1点だけで判断せず、
+              <strong>政策決定・SEP・ドットチャート・声明・議長会見・市場反応</strong>を合わせて見ることが大切です。
+            </p>
+          </div>
+        </section>
+
+        <section id="latest" class="kiji-section" aria-labelledby="latest-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Latest SEP</p>
+            <h2 class="kiji-section__title" id="latest-title">最新のドットチャートはどうなっている？</h2>
+            <p class="kiji-section__text">
+              2026年9月22日の記事作成時点で最新のSEPは、
+              <strong>2026年9月15～16日のFOMC会合</strong>に伴って公表された2026年9月SEPです。
+            </p>
+          </div>
+
+          <div class="update-box">
+            <strong>最新データ：2026年9月16日公表</strong>
+            <p>
+              FRB公式SEPによると、参加者の「適切な政策金利」の中央値は、
+              2026年末4.1％、2027年末4.1％、2028年末3.9％、2029年末3.6％、
+              Longer run（長期）が3.2％でした。
+            </p>
+            <p style="margin-bottom:0;">
+              これは将来の政策金利をFOMCが決定したという意味ではなく、
+              2026年9月時点での参加者の見通しの中央値です。
+            </p>
+          </div>
+
+          <div class="table-responsive" style="margin-top:18px;">
+            <div class="table-scroll" tabindex="0" aria-label="2026年9月SEPの政策金利中央値">
+              <table class="table-modern">
+                <caption>2026年9月SEP：適切なフェデラルファンド金利の中央値</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">対象</th>
+                    <th scope="col">2026年9月SEP</th>
+                    <th scope="col">2026年6月SEP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">2026年末</th>
+                    <td>4.1％</td>
+                    <td>3.8％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2027年末</th>
+                    <td>4.1％</td>
+                    <td>3.6％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2028年末</th>
+                    <td>3.9％</td>
+                    <td>3.4％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2029年末</th>
+                    <td>3.6％</td>
+                    <td>―</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Longer run</th>
+                    <td>3.2％</td>
+                    <td>3.1％</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ スマートフォンでは横にスクロールできます。</p>
+          </div>
+
+          <p class="kiji-section__text">
+            6月SEPと比べると、9月SEPでは2026年から2028年の政策金利中央値が高くなっています。
+            ただし、この変化だけから将来のFOMC決定を断定することはできません。
+            点の分布や経済見通しも合わせて確認する必要があります。
+          </p>
+
+          <h3 class="kiji-section__title" style="margin-top:22px;">2026年9月SEPの主な経済見通し</h3>
+
+          <div class="table-responsive">
+            <div class="table-scroll" tabindex="0" aria-label="2026年9月SEPの経済見通し">
+              <table class="table-modern">
+                <caption>2026年9月SEPの主な中央値</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">項目</th>
+                    <th scope="col">2026年</th>
+                    <th scope="col">2027年</th>
+                    <th scope="col">2028年</th>
+                    <th scope="col">2029年</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">実質GDP成長率</th>
+                    <td>2.3％</td>
+                    <td>2.4％</td>
+                    <td>2.2％</td>
+                    <td>2.1％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">失業率</th>
+                    <td>4.1％</td>
+                    <td>4.1％</td>
+                    <td>4.1％</td>
+                    <td>4.1％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PCEインフレ率</th>
+                    <td>3.7％</td>
+                    <td>2.3％</td>
+                    <td>2.1％</td>
+                    <td>2.0％</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">コアPCEインフレ率</th>
+                    <td>3.4％</td>
+                    <td>2.5％</td>
+                    <td>2.2％</td>
+                    <td>2.0％</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-box__hint">※ スマートフォンでは横にスクロールできます。</p>
+          </div>
+
+          <div class="kiji-note-box">
+            <p style="margin:0;">
+              SEPの数値は将来の経済状況を保証するものではありません。
+              経済データや金融環境などが変化すれば、次回以降のSEPとドットチャートも変化する可能性があります。
+            </p>
+          </div>
+
+          <h3 class="kiji-section__title" style="margin-top:22px;">公式資料</h3>
+
+          <ul class="source-list">
+            <li>
+              <a href="https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Federal Reserve - September 16, 2026: FOMC Projections materials
+              </a>
+            </li>
+            <li>
+              <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Federal Reserve - FOMC Meeting calendars and information
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="related-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Related Articles</p>
+            <h2 class="kiji-section__title" id="related-title">ドットチャートと一緒に読みたい基礎知識</h2>
+            <p class="kiji-section__text">
+              ドットチャートは、FOMC・政策金利・物価・雇用・債券市場をつなげて理解すると読みやすくなります。
+            </p>
+          </div>
+
+          <div class="kiji-grid kiji-grid--3">
+
+            <a class="kiji-link-card" href="fomc-toha.html">
+              <span class="kiji-link-card__label">金融政策</span>
+              <strong class="kiji-link-card__title">FOMCとは？</strong>
+              <span class="kiji-link-card__text">FRBの政策判断と金融市場の関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="seisaku-kinri-toha.html">
+              <span class="kiji-link-card__label">金利</span>
+              <strong class="kiji-link-card__title">政策金利とは？</strong>
+              <span class="kiji-link-card__text">中央銀行が金利を動かす理由を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="shijou-yosou-toha.html">
+              <span class="kiji-link-card__label">市場</span>
+              <strong class="kiji-link-card__title">市場予想とは？</strong>
+              <span class="kiji-link-card__text">予想との差で相場が動く仕組みを学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="taka-ha-hato-ha-toha.html">
+              <span class="kiji-link-card__label">中央銀行</span>
+              <strong class="kiji-link-card__title">タカ派・ハト派とは？</strong>
+              <span class="kiji-link-card__text">金融政策に対する姿勢の違いを確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="cpi-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">CPIとは？</strong>
+              <span class="kiji-link-card__text">物価指標と金利予想の関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="pce-deflator-toha.html">
+              <span class="kiji-link-card__label">物価</span>
+              <strong class="kiji-link-card__title">PCEデフレーターとは？</strong>
+              <span class="kiji-link-card__text">FRBの物価判断で重要な指標を学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="beikoku-koyou-toukei-toha.html">
+              <span class="kiji-link-card__label">雇用</span>
+              <strong class="kiji-link-card__title">米国雇用統計とは？</strong>
+              <span class="kiji-link-card__text">雇用とFRBの金利予想の関係を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="kokusai-toha.html">
+              <span class="kiji-link-card__label">国債</span>
+              <strong class="kiji-link-card__title">国債とは？</strong>
+              <span class="kiji-link-card__text">国債価格と利回りの基本を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="saiken-shijou-toha.html">
+              <span class="kiji-link-card__label">債券市場</span>
+              <strong class="kiji-link-card__title">債券市場とは？</strong>
+              <span class="kiji-link-card__text">国債利回りから株価・為替へ波及する仕組みを学びます。</span>
+            </a>
+
+            <a class="kiji-link-card" href="jisshitsu-kinri-toha.html">
+              <span class="kiji-link-card__label">金利</span>
+              <strong class="kiji-link-card__title">実質金利とは？</strong>
+              <span class="kiji-link-card__text">金利とインフレを組み合わせた見方を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="yield-curve-toha.html">
+              <span class="kiji-link-card__label">債券</span>
+              <strong class="kiji-link-card__title">イールドカーブとは？</strong>
+              <span class="kiji-link-card__text">長期金利と短期金利の差を確認します。</span>
+            </a>
+
+            <a class="kiji-link-card" href="kabuka-naze-ugoku.html">
+              <span class="kiji-link-card__label">株式</span>
+              <strong class="kiji-link-card__title">株価はなぜ上下するのか？</strong>
+              <span class="kiji-link-card__text">期待と市場予想から株価が動く基本を学びます。</span>
+            </a>
+
+          </div>
+        </section>
+
+        <section id="faq" class="kiji-section" aria-labelledby="faq-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">FAQ</p>
+            <h2 class="kiji-section__title" id="faq-title">ドットチャートに関するよくある質問</h2>
+          </div>
+
+          <ul class="kiji-faq-list">
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャートとは何ですか？</summary>
+                <div class="faq-answer">
+                  FRBが公表するSEP（経済見通し）の中で、FOMC参加者それぞれが適切だと考える将来の政策金利水準を点で示したものです。「ドットプロット」とも呼ばれます。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャートは誰が予想しているのですか？</summary>
+                <div class="faq-answer">
+                  FOMC参加者であるFRB理事と地区連銀総裁が、それぞれの経済見通しと適切な金融政策の判断に基づいて示しています。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>1つの点は何を意味しますか？</summary>
+                <div class="faq-answer">
+                  1つの点はFOMC参加者1人の政策金利見通しです。対象年末などに適切だと考えるフェデラルファンド金利の水準を表します。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャートの中央値とは何ですか？</summary>
+                <div class="faq-answer">
+                  参加者の政策金利見通しを並べたとき中央に位置する値です。参加者全体の見方を大まかに把握する材料として注目されますが、将来の政策金利を約束するものではありません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>誰がどの点を付けたか分かりますか？</summary>
+                <div class="faq-answer">
+                  分かりません。個々の点とFOMC参加者の氏名は対応付けて公表されていません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャート通りに政策金利は動きますか？</summary>
+                <div class="faq-answer">
+                  必ずしも動きません。インフレ、雇用、景気、金融環境などが変化すれば、参加者が適切だと考える政策金利も変化する可能性があります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャートと市場予想は何が違いますか？</summary>
+                <div class="faq-answer">
+                  ドットチャートはFOMC参加者側の政策金利見通しです。一方、市場予想は金融市場の価格や調査などから読み取られる市場参加者側の予想です。両者が一致するとは限りません。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>なぜドットチャートで株価や為替が動くのですか？</summary>
+                <div class="faq-answer">
+                  ドットチャートが市場の事前予想と異なると、将来の金利予想が修正される場合があるためです。その結果、国債利回り、株式の評価、為替市場で意識される金利差などが変化することがあります。
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="faq-item">
+                <summary>ドットチャートはいつ公表されますか？</summary>
+                <div class="faq-answer">
+                  ドットチャートはFOMC参加者の経済見通しであるSEPの一部として公表されます。2026年のFOMC日程では、3月・6月・9月・12月の会合がSEPを伴う会合として設定されています。
+                </div>
+              </details>
+            </li>
+
+          </ul>
+        </section>
+
+        <section class="kiji-section" aria-labelledby="summary-title">
+          <div class="kiji-section__head">
+            <p class="kiji-section__eyebrow">Summary</p>
+            <h2 class="kiji-section__title" id="summary-title">
+              まとめ｜ドットチャートは「将来の金利を約束する表」ではない
+            </h2>
+          </div>
+
+          <ul class="kiji-check-list">
+            <li>ドットチャートはFOMC参加者の政策金利見通しを点で示したものです。</li>
+            <li>1つの点は参加者1人の見通しを表します。</li>
+            <li>誰がどの点を付けたのかは公開されません。</li>
+            <li>中央値は市場で注目されますが、将来の政策金利を約束するものではありません。</li>
+            <li>中央値だけでなく、点のばらつきも重要です。</li>
+            <li>ドットチャートと市場予想は別物です。</li>
+            <li>市場予想との差によって株式・債券・為替が反応する場合があります。</li>
+            <li>経済データや金融環境が変化すれば、ドットチャートも変化する可能性があります。</li>
+            <li>SEPのGDP・失業率・インフレ見通しと合わせて読むことが重要です。</li>
+            <li>ドットチャートだけを根拠に投資判断を行わないことが大切です。</li>
+          </ul>
+        </section>
+
+        <section class="kiji-cta" aria-labelledby="cta-title">
+          <p class="kiji-cta__eyebrow">Next Step</p>
+          <h2 class="kiji-cta__title" id="cta-title">FOMCと政策金利の基本も一緒に確認する</h2>
+          <p class="kiji-cta__text">
+            ドットチャートを理解したら、FOMCが実際に何を決める会合なのか、政策金利が景気・物価・株価・為替へどのようにつながるのかも確認すると、金融ニュースを読みやすくなります。
+          </p>
+
+          <div class="kiji-hero__actions">
+            <a class="kiji-btn kiji-btn--primary" href="fomc-toha.html">FOMCの記事を見る</a>
+            <a class="kiji-btn kiji-btn--ghost" href="seisaku-kinri-toha.html">政策金利の記事を見る</a>
+          </div>
+        </section>
+
+        <section class="kiji-disclaimer" aria-labelledby="caution-title">
+          <h2 class="kiji-disclaimer__title" id="caution-title">ご利用にあたっての注意事項</h2>
+          <p>
+            本記事は一般的な情報提供と金融教育を目的としており、特定の企業・銘柄・ETF・通貨・金融商品の推奨や、投資の勧誘を目的としたものではありません。
+            金融政策、経済見通し、市場予想は今後の経済状況や政策判断によって変化する可能性があります。
+            株式、債券、外国為替、投資信託などの金融商品は元本保証がなく、相場変動、為替変動、金利変動、信用状況、制度変更などにより損失が生じる場合があります。
+            実際の投資判断や取引を行う際は、FRBなど関係機関の最新の公式情報、金融機関の契約締結前交付書面、商品説明書、目論見書などを確認し、
+            <strong>ご自身の判断と責任</strong>で行ってください。
+          </p>
+        </section>
+
+      </article>
+    </main>
+  </div>
+
+  <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">▲</a>
+
+  <div id="footer"></div>
+
+  <script src="include.js" defer></script>
+  <script src="sidebar.js" defer></script>
+
+  <script>
+    (function () {
+      const btn = document.querySelector('.back-to-top');
+      if (!btn) return;
+
+      const showAt = 320;
+
+      const onScroll = function () {
+        if (window.scrollY > showAt) {
+          btn.classList.add('is-visible');
+        } else {
+          btn.classList.remove('is-visible');
+        }
+      };
+
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+</body>
+</html>

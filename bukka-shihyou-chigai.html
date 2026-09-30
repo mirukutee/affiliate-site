@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>物価指標の違いと関係を一覧で解説｜CPI・PPI・PCE・期待インフレ</title>
+    <meta name="description" content="CPI・PPI・PCE価格指数・期待インフレ率の違いを比較表と関係図で整理。日米の統計やコア指数の違い、価格転嫁の仕組み、物価ニュースのチェックフローを解説し、金利の教材へつなげます。">
+    <link rel="canonical" href="https://tousiportal.jp/bukka-shihyou-chigai.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="物価指標の違いと関係を一覧で解説｜CPI・PPI・PCE・期待インフレ">
+    <meta property="og:description" content="CPI・PPI・PCE価格指数・期待インフレ率の違いを比較表と関係図で整理。日米の統計やコア指数の違い、価格転嫁の仕組み、物価ニュースのチェックフローを解説し、金利の教材へつなげます。">
+    <meta property="og:url" content="https://tousiportal.jp/bukka-shihyou-chigai.html">
+    <meta property="og:site_name" content="投資ポータル.jp">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@QwZd0ksG2138610">
+    <meta name="twitter:title" content="物価指標の違いと関係を一覧で解説｜CPI・PPI・PCE・期待インフレ">
+    <meta name="twitter:description" content="CPI・PPI・PCE価格指数・期待インフレ率の違いを比較表と関係図で整理。日米の統計やコア指数の違い、価格転嫁の仕組み、物価ニュースのチェックフローを解説し、金利の教材へつなげます。">
+    <meta property="og:image" content="https://tousiportal.jp/sonota/bukka-shihyou-chigai.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1729">
+    <meta property="og:image:height" content="910">
+    <meta property="og:image:alt" content="CPI・PPI・PCE価格指数の実績の価格動向と、期待インフレの将来予想を区別した教材画像">
+    <meta name="twitter:image" content="https://tousiportal.jp/sonota/bukka-shihyou-chigai.webp">
+    <meta name="twitter:image:alt" content="CPI・PPI・PCE価格指数の実績の価格動向と、期待インフレの将来予想を区別した教材画像">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-card.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+      .bukka-page #main {
+        min-width:0;
+        width:100%;
+        overflow:visible;
+        padding:24px;
+        max-width:1120px;
+        background:#f7fafc
+      }
+      .bukka-page .anime-item {
+        padding:26px;
+        margin:20px 0;
+        background:#fff;
+        box-shadow:none;
+        border:1px solid #d4e0e8;
+        transition:none
+      }
+      .bukka-page .anime-item:hover {
+        transform:none;
+        box-shadow:none
+      }
+      .bukka-page .title {
+        font-size:clamp(1.55rem,3vw,2.25rem);
+        line-height:1.55;
+        color:#103753;
+        margin:12px 0 18px
+      }
+      .bukka-page .anime-title {
+        font-size:1.45rem;
+        line-height:1.55;
+        color:#123f5b;
+        border-color:#087f8c
+      }
+      .bukka-page #main p,.bukka-page #main li,.bukka-page #main dd {
+        font-size:1rem;
+        line-height:1.95
+      }
+      .bukka-page #main p {
+        margin:12px 0
+      }
+      .bukka-page #main li {
+        margin:8px 0
+      }
+      .bukka-page #main h3 {
+        font-size:1.12rem;
+        color:#124a69;
+        margin:24px 0 8px
+      }
+      .bukka-page #main a {
+        color:#075e9b;
+        text-underline-offset:3px;
+        overflow-wrap:anywhere
+      }
+      .bukka-page #main a:hover {
+        color:#003c65
+      }
+      .bukka-page :focus-visible {
+        outline:3px solid #c27a00;
+        outline-offset:4px
+      }
+      .bukka-page .eyebrow {
+        font-weight:700;
+        letter-spacing:.12em;
+        color:#087781;
+        font-size:.85rem!important
+      }
+      .bukka-page .meta,.bukka-page .source-note {
+        font-size:.86rem!important;
+        color:#526574
+      }
+      .bukka-page .note,.bukka-page .formula,.bukka-page .readmore {
+        padding:15px 18px;
+        border-left:4px solid #16848b;
+        background:#eff8f8;
+        border-radius:0 8px 8px 0;
+        margin:16px 0
+      }
+      .bukka-page .note--gold {
+        border-color:#b18428;
+        background:#fff8e8
+      }
+      .bukka-page .formula {
+        font-weight:700;
+        font-size:1.12rem;
+        line-height:1.8
+      }
+      .bukka-page .readmore {
+        border-color:#448cc3;
+        background:#f0f7fd
+      }
+      .bukka-page .toc ul {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:6px 24px;
+        padding-left:22px
+      }
+      .bukka-page .table-scroll,.bukka-page .diagram-scroll {
+        overflow-x:auto;
+        max-width:100%;
+        border:1px solid #cbdce6;
+        border-radius:8px;
+        margin:16px 0;
+        overscroll-behavior-x:contain
+      }
+      .bukka-page .hub-table {
+        border-collapse:collapse;
+        width:100%;
+        min-width:850px;
+        table-layout:fixed;
+        font-size:.94rem;
+        line-height:1.8;
+        background:white
+      }
+      .bukka-page .hub-table caption {
+        text-align:left;
+        padding:14px;
+        font-weight:700;
+        color:#174661;
+        background:#eef5fa;
+        caption-side:top
+      }
+      .bukka-page .hub-table th,.bukka-page .hub-table td {
+        border:1px solid #d5e0e7;
+        padding:14px;
+        text-align:left;
+        vertical-align:top;
+        overflow-wrap:anywhere
+      }
+      .bukka-page .hub-table thead th {
+        color:#fff;
+        background:#16465f
+      }
+      .bukka-page .hub-table tbody th {
+        background:#f0f6f9;
+        color:#16465f;
+        width:15%
+      }
+      .bukka-page .hub-table tbody tr:nth-child(even) td {
+        background:#f8fbfc
+      }
+      .bukka-page .diagram-scroll svg {
+        display:block;
+        width:100%;
+        min-width:760px;
+        height:auto;
+        background:#f7fbfd
+      }
+      .bukka-page figcaption {
+        font-size:.87rem;
+        line-height:1.8;
+        color:#4c6574;
+        margin:12px 0
+      }
+      .bukka-page .flow {
+        list-style:none;
+        counter-reset:step;
+        padding:0!important;
+        margin:20px 0
+      }
+      .bukka-page .flow li {
+        counter-increment:step;
+        position:relative;
+        padding:18px 20px 18px 64px;
+        background:#f1f7fa;
+        border:1px solid #d0e0e9;
+        border-radius:8px;
+        margin:0 0 24px!important
+      }
+      .bukka-page .flow li:before {
+        content:counter(step);
+        position:absolute;
+        left:16px;
+        top:18px;
+        background:#12627d;
+        color:#fff;
+        border-radius:50%;
+        width:32px;
+        height:32px;
+        text-align:center;
+        line-height:32px
+      }
+      .bukka-page .flow li:not(:last-child):after {
+        content:'↓';
+        position:absolute;
+        bottom:-29px;
+        left:29px;
+        color:#12627d;
+        font-size:24px
+      }
+      .bukka-page .flow strong {
+        display:block
+      }
+      .bukka-page .link-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px
+      }
+      .bukka-page .link-card {
+        border:1px solid #ccdee9;
+        border-radius:8px;
+        padding:15px;
+        background:#f8fbfd
+      }
+      .bukka-page .link-card p {
+        font-size:.92rem!important;
+        margin:8px 0 0!important
+      }
+      .bukka-page dt {
+        font-weight:700;
+        color:#154c67;
+        margin-top:20px
+      }
+      .bukka-page dd {
+        margin:6px 0 18px
+      }
+      .bukka-page section[id] {
+        scroll-margin-top:90px
+      }
+      .bukka-page .skip {
+        position:absolute;
+        left:12px;
+        top:-100px;
+        background:#fff;
+        padding:12px;
+        z-index:9999
+      }
+      .bukka-page .skip:focus {
+        top:12px
+      }
+      @media(max-width:768px) {
+        .bukka-page #main {
+          padding:12px;
+          max-width:100%
+        }
+        .bukka-page .anime-item {
+          padding:18px 14px
+        }
+        .bukka-page .anime-title {
+          font-size:1.2rem
+        }
+        .bukka-page .toc ul,.bukka-page .link-grid {
+          grid-template-columns:1fr
+        }
+        .bukka-page #main p,.bukka-page #main li,.bukka-page #main dd {
+          font-size:.96rem
+        }
+        .bukka-page .hub-table {
+          font-size:.9rem
+        }
+        .bukka-page .flow li {
+          padding-left:58px
+        }
+        .bukka-page .breadcrumb {
+          font-size:.8rem
+        }
+      }
+      @media print {
+        #header,#sidebar,#footer,.skip,.toc {
+          display:none!important
+        }
+        .bukka-page .container {
+          display:block;
+          margin:0;
+          padding:0
+        }
+        .bukka-page #main {
+          max-width:none;
+          padding:0
+        }
+        .bukka-page .anime-item {
+          break-inside:auto
+        }
+        .bukka-page .table-scroll,.bukka-page .diagram-scroll {
+          overflow:visible
+        }
+        .bukka-page .hub-table {
+          min-width:0;
+          font-size:9pt
+        }
+        .bukka-page .hub-table th,.bukka-page .hub-table td {
+          padding:6px
+        }
+        .bukka-page .diagram-scroll svg {
+          min-width:0
+        }
+        .bukka-page figure {
+          break-inside:avoid
+        }
+      }
+      .bukka-page .hub-table {
+        min-width: 960px;
+      }
+      .bukka-page .compact-table {
+        min-width: 680px;
+      }
+      .bukka-page .bridge {
+        border:2px solid #137c83;
+        background:#edf9f6;
+        padding:22px;
+        border-radius:10px;
+      }
+      .bukka-page .diagram-scroll svg {
+        min-width:850px;
+      }
+      .bukka-page .print-button {
+        padding:10px 18px;
+        border:1px solid #176582;
+        background:#fff;
+        color:#154c67;
+        border-radius:6px;
+        cursor:pointer;
+        font:inherit;
+      }
+      @media print {
+        @page {
+          size: A4 landscape;
+          margin: 12mm;
+        }
+        .bukka-page, .bukka-page #main {
+          background:white;
+        }
+        .bukka-page .hub-table, .bukka-page .compact-table {
+          min-width:0;
+          font-size:8.5pt;
+        }
+        .bukka-page .diagram-scroll svg {
+          min-width:0;
+          max-height:158mm;
+        }
+        .bukka-page .print-button {
+          display:none;
+        }
+        .bukka-page thead {
+          display:table-header-group;
+        }
+        .bukka-page tr, .bukka-page .link-card, .bukka-page .flow li {
+          break-inside:avoid;
+        }
+        .bukka-page h2, .bukka-page h3 {
+          break-after:avoid;
+        }
+      }
+      .bukka-page .hub-cover {
+        margin: 20px 0;
+      }
+      .bukka-page .hub-cover img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      @media print {
+        .bukka-page .hub-cover {
+          display: none;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://tousiportal.jp/bukka-shihyou-chigai.html#article",
+        "headline": "物価指標の違いと関係を一覧で解説｜CPI・PPI・PCE・期待インフレ",
+        "description": "CPI・PPI・PCE価格指数・期待インフレ率の違いを比較表と関係図で整理。日米の統計やコア指数の違い、価格転嫁の仕組み、物価ニュースのチェックフローを解説し、金利の教材へつなげます。",
+        "datePublished": "2026-10-01",
+        "dateModified": "2026-10-01",
+        "inLanguage": "ja",
+        "articleSection": "教材・資料",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tousiportal.jp/bukka-shihyou-chigai.html"
+        },
+        "author": {
+          "@type": "Person",
+          "@id": "https://tousiportal.jp/#person",
+          "name": "ミルクティー",
+          "url": "https://tousiportal.jp/profile.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://tousiportal.jp/#organization",
+          "name": "投資ポータル.jp",
+          "url": "https://tousiportal.jp/"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://tousiportal.jp/sonota/bukka-shihyou-chigai.webp",
+          "width": 1729,
+          "height": 910
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://tousiportal.jp/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "投資コラム・解説記事一覧",
+            "item": "https://tousiportal.jp/column.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "物価指標の違いと関係",
+            "item": "https://tousiportal.jp/bukka-shihyou-chigai.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bukka-page" id="top">
+    <a class="skip" href="#main">
+      本文へ移動
+    </a>
+    <div id="header">
+    </div>
+    <div class="container">
+      <aside id="sidebar">
+      </aside>
+      <main id="main" tabindex="-1">
+        <nav aria-label="パンくず">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+            <li class="breadcrumb-item" aria-current="page">物価指標の違いと関係</li>
+          </ul>
+        </nav>
+        <p class="eyebrow">教材・資料 02 ／ 物価の全体像</p>
+        <h1 class="title">物価指標の違いと関係を一覧で解説｜CPI・PPI・PCE・期待インフレ</h1>
+        <p class="meta">作成・最終確認：<time datetime="2026-10-01">2026年10月1日</time> ／ <a href="profile.html">管理人プロフィール</a></p>
+        <figure class="hub-cover">
+          <img src="sonota/bukka-shihyou-chigai.webp" alt="CPI・PPI・PCE価格指数の実績の価格動向と、期待インフレの将来予想を区別した教材画像" width="1729" height="910" fetchpriority="high" decoding="async">
+        </figure>
+        <button type="button" class="print-button" onclick="window.print()">
+          この教材を印刷する
+        </button>
+        <section class="anime-item" id="intro" aria-labelledby="intro-title">
+          <h2 class="anime-title" id="intro-title">物価ニュースを「何を測る数字か」から整理する</h2>
+          <p>「CPIは鈍化したのに、PPIは上昇」「PCEが市場予想を上回った」。こうしたニュースは、必ずしも矛盾していません。対象とする価格や集計範囲、比較する期間が異なるからです。</p>
+          <p>このページは、物価指標の<strong>違い・つながり・ニュースでの使い分け</strong>を確認する教材です。各統計の細かな仕組みは個別記事へ、金利との関係は教材01へ進めます。</p>
+          <div class="note">
+            <strong>
+              最初に：同じ分類の「4種類」ではありません
+            </strong>
+            <p>CPI・PPI・PCE価格指数は、実際の価格動向を統計として把握する指標です。一方、<strong>期待インフレ率は将来の物価上昇についての予想</strong>です。実績の統計と将来の期待を分けて読みましょう。</p>
+          </div>
+          <p class="source-note">本ページのPPI・PCE価格指数は主に米国の統計を指します。CPIは日米を区別し、日本の企業物価指数は別の統計として補足します。指数の水準と、その変化率である物価上昇率も区別します。</p>
+        </section>
+        <section class="anime-item" id="comparison" aria-labelledby="comparison-title">
+          <h2 class="anime-title" id="comparison-title">1．CPI・PPI・PCE・期待インフレの比較表</h2>
+          <p>見分ける軸は<strong>買い手か売り手か、どこまで含むか、実績か予想か</strong>です。スマートフォンでは表を左右にスクロールできます。</p>
+          <div class="table-scroll" role="region" aria-label="資料1｜物価に関する4項目の違い（横スクロールできます）" tabindex="0">
+            <table class="hub-table ">
+              <caption>資料1｜物価に関する4項目の違い</caption>
+              <thead>
+                <tr>
+                  <th scope="col">比較する点</th>
+                  <th scope="col">CPI（日米を区別）</th>
+                  <th scope="col">PPI（米国）</th>
+                  <th scope="col">PCE価格指数（米国）</th>
+                  <th scope="col">期待インフレ率</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">何を表す？</th>
+                  <td>消費者が購入する財・サービスの価格変化。日本と米国にそれぞれのCPIがある。</td>
+                  <td>米国の国内生産者が、財・サービスの販売で受け取る価格の変化。</td>
+                  <td>米国の個人消費支出に関する価格変化。PCE（支出額）そのものとは区別。</td>
+                  <td>将来の物価上昇率についての予想。単一の公式指数ではない。</td>
+                </tr>
+                <tr>
+                  <th scope="row">実績／予想</th>
+                  <td>実績の価格を統計化。</td>
+                  <td>実績の販売価格を統計化。</td>
+                  <td>実績の消費関連データから推計。改定されることがある。</td>
+                  <td>将来予想。調査回答や市場価格などから把握する。</td>
+                </tr>
+                <tr>
+                  <th scope="row">主に見る段階</th>
+                  <td>家計が購入する段階。</td>
+                  <td>売り手・生産者側。中間需要だけでなく最終需要も対象。</td>
+                  <td>家計等の消費段階。家計のために第三者が支払う分も含む。</td>
+                  <td>特定の取引段階ではなく、将来の物価に対する見方。</td>
+                </tr>
+                <tr>
+                  <th scope="row">公表主体</th>
+                  <td>日本：総務省統計局。米国：BLS（労働統計局）。</td>
+                  <td>米国：BLS。日本の企業物価指数は日本銀行が公表する別統計。</td>
+                  <td>米国：BEA（経済分析局）。FRBが作成する統計ではない。</td>
+                  <td>調査機関・中央銀行など。市場由来の指標は債券価格等を基に算出。</td>
+                </tr>
+                <tr>
+                  <th scope="row">主な対象</th>
+                  <td>家計の消費に関わる財・サービス。米国の代表的なCPI-Uは都市消費者が対象。</td>
+                  <td>国内生産の財・サービスなど。輸出も含み、輸入品は原則として対象外。</td>
+                  <td>家計・対家計民間非営利団体の消費。医療では政府・雇用主などの負担分も反映。</td>
+                  <td>家計・企業・専門家などの予想、または債券市場等が示す情報。期間もさまざま。</td>
+                </tr>
+                <tr>
+                  <th scope="row">市場が注目する理由</th>
+                  <td>消費者物価の広がり・持続性や、発表前予想との差を確認するため。</td>
+                  <td>生産者側の価格動向や、一部のPCE構成項目の推計材料を確認するため。</td>
+                  <td>FRBの物価目標を確認する尺度で、消費全体の価格動向を見るため。</td>
+                  <td>物価上昇が長引くと人々が考えているか、期待が安定しているかを見るため。</td>
+                </tr>
+                <tr>
+                  <th scope="row">中央銀行・金利との関係</th>
+                  <td>物価基調を判断する材料の一つ。政策金利の見通しにも関係。</td>
+                  <td>消費者物価への波及や物価見通しを考える材料。機械的な政策決定ルールではない。</td>
+                  <td>FRBは総合PCEの上昇率を物価目標の尺度とし、コアなども基調判断に使う。</td>
+                  <td>政策判断・市場予想に関係し、同じ期間の名目金利から実質金利を考える材料にもなる。</td>
+                </tr>
+                <tr>
+                  <th scope="row">ニュースでの注意点</th>
+                  <td>国、総合／除外項目、前月比／前年比、季節調整の有無を確認。</td>
+                  <td>「仕入れコストそのもの」ではない。最終需要／中間需要、対象品目も確認。</td>
+                  <td>CPIとは範囲・ウェイト・算式等が違う。支出増加率と価格上昇率を混同しない。</td>
+                  <td>誰の何年先の予想かを確認。BEIは純粋な期待だけでなくリスク等も含む。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="source-note">参考：<a href="#src-jpcpi">総務省統計局</a>、<a href="#src-cpi">BLS・CPI</a>、<a href="#src-ppi">BLS・PPI</a>、<a href="#src-pce">BEA</a>、<a href="#src-bei">FRB</a>。表は当サイト作成。</p>
+        </section>
+        <nav class="anime-item toc" aria-label="目次">
+          <h2 class="anime-title">このページで確認できること</h2>
+          <ul>
+            <li><a href="#comparison">4項目の比較表</a></li>
+            <li><a href="#relationship">物価の関係図</a></li>
+            <li><a href="#cpi">CPI</a></li>
+            <li><a href="#ppi">PPIと日本の企業物価</a></li>
+            <li><a href="#pce">PCEとCPIの違い</a></li>
+            <li><a href="#expectations">期待インフレ率</a></li>
+            <li><a href="#transmission">価格転嫁のつながり</a></li>
+            <li><a href="#rates">中央銀行・金利へ</a></li>
+            <li><a href="#news-flow">ニュースのチェックフロー</a></li>
+            <li><a href="#faq">混同しやすいポイント</a></li>
+            <li><a href="#related">関連記事</a></li>
+            <li><a href="#sources">公式一次情報</a></li>
+          </ul>
+        </nav>
+        <section class="anime-item" id="relationship" aria-labelledby="relationship-title">
+          <h2 class="anime-title" id="relationship-title">2．物価の伝わり方と、指標の位置を俯瞰する</h2>
+          <p>図は価格が波及し得る経路と、統計がどこを見ているかを重ねたものです。すべての財・サービスが同じ順番で値上がりするわけではありません。</p>
+          <figure>
+            <div class="diagram-scroll" role="region" aria-label="物価の関係図。狭い画面では横スクロールできます" tabindex="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1120" role="img" aria-labelledby="map-title map-desc">
+                <title id="map-title">物価の伝わり方と各指標が見る場所</title>
+                <desc id="map-desc">
+                  原材料・輸入価格から企業コスト、企業間価格、小売・サービス価格、家計の物価へ波及し得る。矢印は必然の経路ではない。賃金、需要、企業の価格設定、期待も各段階に影響する。PPIは生産者の販売価格を、CPIとPCEは異なる範囲で消費段階の価格を把握する。実績は期待を変え、期待は価格設定や賃金交渉にも影響し得る。
+                </desc>
+                <defs>
+                  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                    <path d="M0 0L8 4L0 8" fill="#416c82"/>
+                  </marker>
+                </defs>
+                <g font-family="sans-serif" fill="#143d54">
+                  <text x="30" y="42" font-size="26" font-weight="700">資料2｜物価はどのように経済の中を伝わる？</text>
+                  <rect x="30" y="70" width="590" height="90" rx="12" fill="#e8f3fc" stroke="#a7c7d6"/>
+                  <text x="48" y="102" font-size="23" font-weight="700">原材料・エネルギー・輸入価格</text>
+                  <text x="48" y="132" font-size="19">原油などの商品価格と為替も関係</text>
+                  <rect x="30" y="210" width="590" height="95" rx="12" fill="#e8f3fc" stroke="#a7c7d6"/>
+                  <text x="48" y="242" font-size="23" font-weight="700">企業の仕入れ・生産コスト</text>
+                  <text x="48" y="272" font-size="19">原材料だけでなく、人件費・物流費なども関係</text>
+                  <rect x="30" y="370" width="590" height="100" rx="12" fill="#e8f3fc" stroke="#a7c7d6"/>
+                  <text x="48" y="402" font-size="23" font-weight="700">企業間で取引される価格</text>
+                  <text x="48" y="432" font-size="19">企業が決める販売価格／コストと同じではない</text>
+                  <rect x="30" y="540" width="590" height="100" rx="12" fill="#e8f3fc" stroke="#a7c7d6"/>
+                  <text x="48" y="572" font-size="23" font-weight="700">小売価格・サービス価格</text>
+                  <text x="48" y="602" font-size="19">需要・競争・利益率・契約や改定時期も関係</text>
+                  <rect x="30" y="700" width="590" height="110" rx="12" fill="#e7f4ef" stroke="#a7c7d6"/>
+                  <text x="48" y="732" font-size="23" font-weight="700">家計が直面する物価</text>
+                  <text x="48" y="762" font-size="19">CPI：消費者の購入価格を統計化</text>
+                  <text x="48" y="789" font-size="19">PCE：米国の消費をより広い範囲で把握</text>
+                  <path d="M315 160V202" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M315 305V362" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M315 470V532" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M315 640V692" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <text x="335" y="337" font-size="17">コスト吸収・転嫁の遅れもある</text>
+                  <text x="335" y="503" font-size="17">値上げが実現するとは限らない</text>
+                  <rect x="690" y="70" width="360" height="145" rx="12" fill="#fff5dc" stroke="#a7c7d6"/>
+                  <text x="708" y="102" font-size="23" font-weight="700">価格を左右する条件</text>
+                  <text x="708" y="132" font-size="19">賃金・需要・企業の価格設定</text>
+                  <text x="708" y="159" font-size="19">コストを利益で吸収する場合も</text>
+                  <text x="708" y="186" font-size="19">各段階に作用する</text>
+                  <path d="M690 170H655V265H627" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M655 265V585H627" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <rect x="690" y="355" width="360" height="150" rx="12" fill="#e7f4ef" stroke="#a7c7d6"/>
+                  <text x="708" y="387" font-size="23" font-weight="700">生産者側の価格を見る</text>
+                  <text x="708" y="417" font-size="18">米国PPI：財・サービス等</text>
+                  <text x="708" y="444" font-size="18">中間需要も最終需要も含む</text>
+                  <text x="708" y="471" font-size="18">日本の企業物価指数とは別制度</text>
+                  <path d="M620 420H685" stroke="#416c82" stroke-width="2"/>
+                  <text x="706" y="531" font-size="17">PPIは上流だけの指標ではない</text>
+                  <rect x="690" y="640" width="360" height="190" rx="12" fill="#fff5dc" stroke="#a7c7d6"/>
+                  <text x="708" y="672" font-size="23" font-weight="700">期待インフレ率</text>
+                  <text x="708" y="702" font-size="19">将来の物価上昇の予想</text>
+                  <text x="708" y="729" font-size="19">実績を受けて予想が変わり、</text>
+                  <text x="708" y="756" font-size="19">価格設定・賃金交渉などへ</text>
+                  <text x="708" y="783" font-size="19">影響が戻ることもある</text>
+                  <path d="M620 760H682" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M1030 640V585H627" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M315 810V882" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <path d="M870 830V882" fill="none" stroke="#416c82" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+                  <rect x="30" y="890" width="1020" height="125" rx="12" fill="#e8f3fc" stroke="#a7c7d6"/>
+                  <text x="48" y="922" font-size="23" font-weight="700">物価の実績・期待 ＋ 景気・雇用など</text>
+                  <text x="48" y="952" font-size="19">中央銀行の政策判断／市場の政策予想 → 政策金利・長期金利・実質金利</text>
+                  <text x="48" y="979" font-size="19">金利の詳しい関係は「教材01」へ。単一指標から政策や値動きは決まらない。</text>
+                  <text x="30" y="1050" font-size="18">破線矢印：影響し得る経路（方向・順番・大きさは一定ではありません）。</text>
+                  <text x="30" y="1080" font-size="18">CPIとPCEは前後する工程ではなく、消費段階を異なる範囲・方法で測る統計です。</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption>図：投資ポータル.jp作成。BLS・BEA・日本銀行の統計定義を踏まえた概念的な整理です。指標間の因果関係や将来の価格変動を保証する図ではありません。</figcaption>
+          </figure>
+          <p class="note"><strong>図の読み方：</strong>左側は価格が波及する経路の例、右側は価格を左右する条件・測定の視点・将来の期待です。輸入された完成品が直接家計へ届くなど、途中の段階を通らない経路もあります。</p>
+        </section>
+        <section class="anime-item" id="cpi" aria-labelledby="cpi-title">
+          <h2 class="anime-title" id="cpi-title">3．CPI：消費者が購入する価格を見る</h2>
+          <p>CPIは、消費者が購入する財・サービスの価格変化をまとめた指数です。日本は総務省統計局、米国はBLSが公表します。両国とも消費者物価を測りますが、対象・品目・ウェイトなどをそのまま同一視はできません。</p>
+          <p>ニュースでは、物価上昇がどの品目へ広がっているかを確認する入口になります。平均的な支出構成に基づくため、家賃や食費などにどれだけ使うかが異なる個々の家計の実感とはずれることがあります。</p>
+          <p>日本の「全国」と「東京都区部」、米国の代表的なCPI-Uなど、<strong>地域・対象集団まで確認する</strong>と取り違えを防げます。</p>
+          <p class="readmore">詳しく読む：<a href="cpi-toha.html">CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？</a></p>
+        </section>
+        <section class="anime-item" id="ppi" aria-labelledby="ppi-title">
+          <h2 class="anime-title" id="ppi-title">4．PPI：生産者が受け取る販売価格を見る</h2>
+          <p>米国PPIは、国内生産者が財・サービスを販売して受け取る価格の変化を測ります。<strong>企業の仕入れコストだけを集計した指標ではありません。</strong>ある企業の販売価格が、別の企業の仕入れ価格につながるため、コスト波及を読む材料にもなります。</p>
+          <p>中間需要と最終需要の系列があり、最終需要には家計消費以外の設備投資・政府向け・輸出なども含まれます。PPIを「CPIの一つ前の工程」とだけ覚えると、対象範囲を見誤ります。</p>
+          <h3>日本の企業物価指数との違い</h3>
+          <p>日本銀行の企業物価指数は、企業間で取引される<strong>財</strong>を対象とし、国内企業物価・輸出物価・輸入物価の各指数があります。企業間のサービス価格は、別の「<a href="#src-sppi">企業向けサービス価格指数</a>」で把握します。サービスも含む米国PPIを、そのまま日本の企業物価指数と同じ統計として扱わないことが大切です。</p>
+          <p class="source-note">参考：<a href="#src-ppi">BLSのPPI概要</a>、<a href="#src-cgpi">日本銀行の企業物価指数の説明</a>。</p>
+          <p class="readmore">詳しく読む：<a href="ppi-toha.html">PPIとは？生産者物価指数とCPIの違い、株価・金利が注目する理由</a></p>
+        </section>
+        <section class="anime-item" id="pce" aria-labelledby="pce-title">
+          <h2 class="anime-title" id="pce-title">5．PCE価格指数：米国の消費を広くとらえる</h2>
+          <p>PCEはPersonal Consumption Expenditures（個人消費支出）の略です。<strong>支出額の増減を表すPCEと、価格変化を表すPCE価格指数は別</strong>です。物価ニュースで「PCE」と略されていたら、何の数値か確認しましょう。</p>
+          <p>BEAが公表するPCE価格指数は、家計が直接支払う分に加え、政府や雇用主が家計のために支払う医療費なども対象に含みます。消費支出の構成の変化を反映する連鎖方式を採用し、CPIとは各項目の比重や集計方法も異なります。</p>
+          <div class="table-scroll" role="region" aria-label="米国CPIとPCE価格指数：違いを見る3つの軸（横スクロールできます）" tabindex="0">
+            <table class="hub-table compact-table">
+              <caption>米国CPIとPCE価格指数：違いを見る3つの軸</caption>
+              <thead>
+                <tr>
+                  <th scope="col">比較軸</th>
+                  <th scope="col">CPI（主にCPI-U）</th>
+                  <th scope="col">PCE価格指数</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">対象範囲</th>
+                  <td>都市消費者の家計が負担する消費支出を中心に把握。</td>
+                  <td>家計・対家計民間非営利団体の消費。第三者による家計向け支払いも含む。</td>
+                </tr>
+                <tr>
+                  <th scope="row">項目の比重</th>
+                  <td>家計の支出調査等に基づく。</td>
+                  <td>事業者の調査などを用い、CPIと異なる比重になる。</td>
+                </tr>
+                <tr>
+                  <th scope="row">集計方法</th>
+                  <td>代表的なCPI-UとPCEでは算式が異なる。CPIにも一部の代替行動を反映する仕組みはある。</td>
+                  <td>連鎖方式で消費構成の変化を反映。「CPIの単なる改良版」という位置づけではない。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>FRBの長期的な物価目標の尺度は<strong>総合PCE価格指数の上昇率</strong>です。食料とエネルギーを除くコアPCEも基調を見るために注目されますが、「目標＝コアPCE」と同一視しないようにします。</p>
+          <p class="source-note">参考：<a href="#src-diff">BEAのCPI・PCE比較</a>、<a href="#src-fed">FRBの物価目標の説明</a>。</p>
+          <p class="readmore">詳しく読む：<a href="pce-deflator-toha.html">PCEデフレーターとは？CPIとの違いと株価・為替が注目する理由を初心者向けに解説</a></p>
+        </section>
+        <section class="anime-item" id="expectations" aria-labelledby="expectations-title">
+          <h2 class="anime-title" id="expectations-title">6．期待インフレ率：将来の物価に対する見方</h2>
+          <p>期待インフレ率は、「これから物価がどの程度上がると考えられているか」を示す概念です。過去の価格から作るCPIなどと異なり、<strong>誰の、何年先の予想か</strong>によって数字が変わります。</p>
+          <ul>
+            <li><strong>調査に基づく指標：</strong>家計・企業・専門家などに将来の物価を尋ねたもの。質問や集計方法にも注意します。</li>
+            <li><strong>市場に基づく指標：</strong>名目国債と物価連動国債の利回り差であるBEIなど。インフレリスクや流動性の影響も含み、期待そのものと完全には一致しません。</li>
+          </ul>
+          <p>期待は実際の物価や中央銀行の説明を受けて変わります。一方で、期待の変化が企業の値付けや賃金交渉に影響することもあります。実績と期待は関係していますが、同じ数字ではありません。</p>
+          <p class="readmore">詳しく読む：<a href="kitai-inflation-toha.html">期待インフレ率とは？物価上昇の予想がなぜ長期金利や株価を動かすの？</a></p>
+        </section>
+        <section class="anime-item" id="transmission" aria-labelledby="transmission-title">
+          <h2 class="anime-title" id="transmission-title">7．原材料から家計まで、値上げはどこまで伝わる？</h2>
+          <p>原材料高はコスト増の要因になり得ますが、その分がそのまま店頭価格へ移るとは限りません。価格転嫁の有無・大きさ・時期は、企業や商品によって異なります。</p>
+          <div class="table-scroll" role="region" aria-label="価格転嫁を読むときの確認点（横スクロールできます）" tabindex="0">
+            <table class="hub-table compact-table">
+              <caption>価格転嫁を読むときの確認点</caption>
+              <thead>
+                <tr>
+                  <th scope="col">要因</th>
+                  <th scope="col">起こり得ること</th>
+                  <th scope="col">読み違えを防ぐ確認</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">原油・為替・輸入価格</th>
+                  <td>輸入コストが増減する。</td>
+                  <td>契約通貨、為替ヘッジ、在庫などで反映時期がずれる。</td>
+                </tr>
+                <tr>
+                  <th scope="row">需要・競争</th>
+                  <td>売れ行きが弱いと、値上げせず利益で吸収する場合がある。</td>
+                  <td>コスト増と販売価格上昇を同じものとして扱わない。</td>
+                </tr>
+                <tr>
+                  <th scope="row">賃金・サービス価格</th>
+                  <td>人件費やサービス需要から価格が動く場合がある。</td>
+                  <td>原材料価格が落ち着いても、他の要因が残っていないか。</td>
+                </tr>
+                <tr>
+                  <th scope="row">企業の価格設定</th>
+                  <td>契約更新時に値上げ、内容量変更などで対応することもある。</td>
+                  <td>価格改定の時期や品質・内容量の調整を確認する。</td>
+                </tr>
+                <tr>
+                  <th scope="row">期待インフレ</th>
+                  <td>将来の値上がり予想が、賃金交渉や価格設定に関係する。</td>
+                  <td>期待が上がっただけで、実績も同じ幅だけ上がるとは限らない。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note note--gold"><strong>PPI上昇＝将来のCPI上昇、ではありません。</strong>対象範囲の違いに加えて、企業のコスト吸収、需要、輸入品、サービス価格などが関係します。PPIは、ほかの情報と合わせて使う材料です。</p>
+        </section>
+        <section class="anime-item" id="rates" aria-labelledby="rates-title">
+          <h2 class="anime-title" id="rates-title">8．物価統計から中央銀行・金利へつなげて読む</h2>
+          <p>物価統計は、政策判断の材料です。「数字が高いから必ず利上げ」という自動的な関係ではありません。中央銀行は物価の持続性に加え、景気・雇用・賃金・金融環境なども確認します。</p>
+          <ol>
+            <li>物価統計で、現在までの上昇率と内訳を確認する。</li>
+            <li>一時的な要因か、幅広く続く動きかを考え、期待インフレなどと照合する。</li>
+            <li>中央銀行の説明と市場の政策予想が、どう変わったかを確認する。</li>
+            <li>政策金利・長期金利・実質金利を分けて、市場の反応を読む。</li>
+          </ol>
+          <p>米国では総合PCEが物価目標の尺度ですが、CPIやPPI、コア系指標も判断材料です。日本銀行は消費者物価の前年比上昇率で物価安定の目標を示し、物価の基調を複数の材料から判断しています。</p>
+          <p>市場は実際の政策変更を待たず、予想の変化だけでも動きます。金利が上がっても、その背景が景気改善なのかインフレ懸念なのかで、株・為替などの受け止め方は変わります。</p>
+          <div class="bridge">
+            <strong>
+              次に読む：教材01「金利」
+            </strong>
+            <p><a href="kinri-shurui-kankei.html">金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ</a></p>
+            <p>物価の実績・期待を整理できたら、政策金利・長期金利・実質金利の違いとつながりへ進みます。各金利の個別コラムにも移動できます。</p>
+          </div>
+          <p class="source-note">参考：<a href="#src-fed">FRB</a>、<a href="#src-bojtarget">日本銀行の物価目標</a>。</p>
+        </section>
+        <section class="anime-item" id="news-flow" aria-labelledby="news-flow-title">
+          <h2 class="anime-title" id="news-flow-title">9．物価ニュースを見る8つのチェックフロー</h2>
+          <p>数値の大きさを見る前に、国・指標・比較方法をそろえましょう。</p>
+          <ol class="flow">
+            <li><strong>どの国・地域の、何月の数字か？</strong>日本か米国か。全国か東京都区部か。発表日と統計の対象月は別です。</li>
+            <li><strong>何を測る指標か？</strong>CPI・PPI・PCE価格指数か、期待インフレか。PCEの支出額や物価指数の水準と、上昇率を取り違えていないか。</li>
+            <li><strong>総合か、何を除く指数か？</strong>「コア」という略称だけで判断せず、除外項目を確認。PPIなら最終需要・中間需要も区別します。</li>
+            <li><strong>何と比較し、季節調整されているか？</strong>前月比、前年比、年率換算を区別。季節調整済みか未調整か、改定値かも確認します。</li>
+            <li><strong>市場予想との差は？</strong>同じ対象月・系列・比較方法の予想と比べます。「前回より高い」と「予想より高い」は別です。前月分の改定も確認します。</li>
+            <li><strong>単月の動きか、続いている基調か？</strong>複数月、内訳、価格上昇の広がりを確認。前年の水準やエネルギー・補助金などの影響も考えます。</li>
+            <li><strong>中央銀行の判断材料としてどう位置づくか？</strong>目標の尺度と基調を測る補助指標を区別。賃金・雇用・景気などと合わせ、政策を一つの数値で決めつけません。</li>
+            <li><strong>金利・為替などの反応と照合する</strong>どの期間の金利が動いたか。他の発表や発言もなかったか。同時に動いたことだけで原因を断定しません。</li>
+          </ol>
+          <div class="note note--gold">
+            <strong>
+              読み方の練習（説明用の仮定）
+            </strong>
+            <p>「前年比は3.0％から2.8％に鈍化したが、前月比は市場予想を上回った」というニュースは両立します。まず比較期間を分け、次に内訳と基調を確認します。この見出しだけで利下げや株高を結論づけることはできません。</p>
+          </div>
+        </section>
+        <section class="anime-item" id="faq" aria-labelledby="faq-title">
+          <h2 class="anime-title" id="faq-title">10．初心者が混同しやすいポイント</h2>
+          <dl>
+            <dt>CPIとPCEは、どちらが正しい物価？</dt>
+            <dd>どちらも目的と定義に沿った統計です。米国では対象範囲・項目の比重・算式などが異なり、同じ数字になる必要はありません。使う目的に合わせて選び、両方を照合します。</dd>
+            <dt>PPIが上がれば、CPIも必ず上がる？</dt>
+            <dd>必ずではありません。PPIは国内生産者の販売価格を見る統計で、対象もCPIと違います。コスト吸収、需要、契約、輸入品などによって波及の程度や時期が変わります。</dd>
+            <dt>総合CPIとコアCPIは何が違う？</dt>
+            <dd>総合は対象品目全体を集計します。コア系は基調を読むために一部を除いた系列ですが、国や統計で除外項目が異なります。下の表で正式名称を確認してください。</dd>
+            <dt>物価上昇率が下がると、物価そのものも下がる？</dt>
+            <dd>同じではありません。仮に指数が100→105→108と上がれば、上昇率は5％から約2.9％へ下がっても、価格水準は上昇しています。上昇ペースの鈍化と、比較対象より価格水準が下がることは区別します。この数値は説明用の仮定です。</dd>
+            <dt>期待インフレ率は、実際のCPIなの？</dt>
+            <dd>違います。CPIは実績の価格を統計化したもの、期待インフレは将来の予想です。期待の対象がどの物価指標なのか、どの期間なのかも確認します。</dd>
+            <dt>前年比と前月比はなぜ違う動きをする？</dt>
+            <dd>比較相手が前年同月と前月で異なるからです。前年の価格が高い・低いことによるベース効果もあります。さらに、公表系列では季節調整の有無が異なる場合もあるため、注記を確認します。</dd>
+            <dt>インフレ指標が上がれば、中央銀行は必ず利上げする？</dt>
+            <dd>必ずではありません。一時的な要因、先行き、雇用・景気、金融環境なども判断材料になります。政策変更がなくても、市場の予想が変われば金利や為替が動くことはあります。</dd>
+          </dl>
+          <div class="table-scroll" role="region" aria-label="「コア」の呼び方より、除外項目を確認する（横スクロールできます）" tabindex="0">
+            <table class="hub-table compact-table">
+              <caption>「コア」の呼び方より、除外項目を確認する</caption>
+              <thead>
+                <tr>
+                  <th scope="col">国・指標</th>
+                  <th scope="col">よく使われる系列</th>
+                  <th scope="col">除くもの・注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">日本CPI</th>
+                  <td>生鮮食品を除く総合（一般にコアと呼ばれる）</td>
+                  <td>生鮮食品。エネルギーや加工食品などは含む。</td>
+                </tr>
+                <tr>
+                  <th scope="row">日本CPI</th>
+                  <td>生鮮食品及びエネルギーを除く総合</td>
+                  <td>生鮮食品とエネルギー。食料全体を除くわけではない。</td>
+                </tr>
+                <tr>
+                  <th scope="row">米国CPI／PCE</th>
+                  <td>食料・エネルギーを除く指数（コア）</td>
+                  <td>食料全体とエネルギー。日本の一般的なコアCPIと同じ除き方ではない。</td>
+                </tr>
+                <tr>
+                  <th scope="row">米国PPI</th>
+                  <td>食料・エネルギーを除く系列など</td>
+                  <td>流通サービスも除く系列がある。「コアPPI」の見出しだけでは特定しない。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="source-note">「コアコア」などの略称も使用者によって指す系列が異なることがあります。必ず発表元の正式な系列名と除外項目に戻って確認してください。</p>
+        </section>
+        <section class="anime-item" id="related" aria-labelledby="related-title">
+          <h2 class="anime-title" id="related-title">11．関連記事：物価の個別解説と、金利の教材へ</h2>
+          <div class="link-grid">
+            <div class="link-card">
+              <a href="cpi-toha.html">
+                <strong>
+                  CPI（消費者物価指数）とは？なぜ発表されると株価や為替が動くの？
+                </strong>
+              </a>
+              <p>消費者物価と発表時の市場反応を詳しく確認</p>
+            </div>
+            <div class="link-card">
+              <a href="ppi-toha.html">
+                <strong>
+                  PPIとは？生産者物価指数とCPIの違い、株価・金利が注目する理由
+                </strong>
+              </a>
+              <p>生産者側の物価とCPIとの違いを確認</p>
+            </div>
+            <div class="link-card">
+              <a href="pce-deflator-toha.html">
+                <strong>
+                  PCEデフレーターとは？CPIとの違いと株価・為替が注目する理由を初心者向けに解説
+                </strong>
+              </a>
+              <p>PCE価格指数の仕組みと注目点を確認</p>
+            </div>
+            <div class="link-card">
+              <a href="kitai-inflation-toha.html">
+                <strong>
+                  期待インフレ率とは？物価上昇の予想がなぜ長期金利や株価を動かすの？
+                </strong>
+              </a>
+              <p>将来の物価予想と金利の関係を確認</p>
+            </div>
+            <div class="link-card">
+              <a href="kinri-shurui-kankei.html">
+                <strong>
+                  金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ
+                </strong>
+              </a>
+              <p>教材01。物価の理解を政策金利・長期金利・実質金利へつなぐ</p>
+            </div>
+          </div>
+          <p><a href="column.html">投資コラム・解説記事一覧へ</a></p>
+        </section>
+        <section class="anime-item" id="sources" aria-labelledby="sources-title">
+          <h2 class="anime-title" id="sources-title">12．公式一次情報・参考資料</h2>
+          <p>定義・対象範囲は統計作成機関と中央銀行の資料を確認し、比較表・関係図・チェックフローは当サイト独自の教材として整理しました。<strong>資料確認日：2026年10月1日。</strong></p>
+          <ul>
+            <li id="src-jpcpi"><a href="https://www.stat.go.jp/data/cpi/4-1.html" target="_blank" rel="noopener noreferrer">総務省統計局｜消費者物価指数に関するQ&A</a><br>日本CPIの目的、指数と上昇率、除外項目の考え方。</li>
+            <li id="src-cpi"><a href="https://www.bls.gov/cpi/questions-and-answers.htm" target="_blank" rel="noopener noreferrer">BLS｜Consumer Price Index Frequently Asked Questions</a><br>米国CPIの対象、家計ごとの実感との差、指数の見方。</li>
+            <li id="src-ppi"><a href="https://www.bls.gov/ppi/overview.htm" target="_blank" rel="noopener noreferrer">BLS｜Producer Price Index Overview</a><br>米国PPIの売り手側の定義、財・サービス、最終需要と中間需要。</li>
+            <li id="src-cgpi"><a href="https://www.boj.or.jp/statistics/outline/exp/pi/cgpi_2020/outline.htm" target="_blank" rel="noopener noreferrer">日本銀行｜企業物価指数（2020年基準）の概要</a><br>日本の企業物価指数の対象と国内・輸出・輸入の区分。</li>
+            <li id="src-sppi"><a href="https://www.boj.or.jp/statistics/pi/sppi_2020/" target="_blank" rel="noopener noreferrer">日本銀行｜企業向けサービス価格指数</a><br>企業間で取引されるサービスの価格を確認する入口。</li>
+            <li id="src-ppifaq"><a href="https://www.bls.gov/ppi/faqs/questions-and-answers.htm" target="_blank" rel="noopener noreferrer">BLS｜PPI Frequently Asked Questions</a><br>PPIの対象範囲と、食料・エネルギー・流通サービスを除く系列の確認。</li>
+            <li id="src-pce"><a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank" rel="noopener noreferrer">BEA｜Personal Consumption Expenditures Price Index</a><br>PCE価格指数の定義と総合・コアの確認。</li>
+            <li id="src-diff"><a href="https://www.bea.gov/help/faq/555" target="_blank" rel="noopener noreferrer">BEA｜CPIとPCE価格指数の違い</a><br>対象範囲、算式、ウェイトなどの違い。</li>
+            <li id="src-calc"><a href="https://www.bea.gov/help/faq/521" target="_blank" rel="noopener noreferrer">BEA｜PCEの価格・数量の推計方法</a><br>連鎖方式と価格指数の基礎データ。</li>
+            <li id="src-fed"><a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank" rel="noopener noreferrer">FRB｜長期的なインフレ目標の説明</a><br>物価目標の尺度としてのPCE価格指数。</li>
+            <li id="src-bojtarget"><a href="https://www.boj.or.jp/mopo/outline/target.htm" target="_blank" rel="noopener noreferrer">日本銀行｜2％の「物価安定の目標」</a><br>日本の物価安定目標と消費者物価の位置づけ。</li>
+            <li id="src-bei"><a href="https://www.federalreserve.gov/data/tips-yield-curve-and-inflation-compensation.htm" target="_blank" rel="noopener noreferrer">FRB｜TIPS Yield Curve and Inflation Compensation</a><br>市場由来の期待インフレ指標とリスクプレミアムの注意点。</li>
+          </ul>
+          <p>本ページには直近のCPI・PCE上昇率などの実績値を掲載していません。数値例は説明用の仮定です。対象範囲・基準年・集計方法は改定されることがあるため、最新の公表値を読む際は発表元の注記も確認してください。</p>
+        </section>
+        <section class="anime-item" id="summary" aria-labelledby="summary-title">
+          <h2 class="anime-title" id="summary-title">13．迷ったら「対象・実績／予想・比較方法」に戻る</h2>
+          <ul>
+            <li><strong>CPI：</strong>消費者が購入する価格。日米で公表主体や統計の詳細は異なる。</li>
+            <li><strong>PPI：</strong>米国の国内生産者が受け取る販売価格。仕入れコストだけの指標ではない。</li>
+            <li><strong>PCE価格指数：</strong>米国の消費関連価格を広い範囲で把握。CPIとは範囲・比重・算式などが違う。</li>
+            <li><strong>期待インフレ率：</strong>将来の物価上昇の予想。実績値と区別し、誰の何年先の予想かを見る。</li>
+          </ul>
+          <p>ニュースで迷ったときは、<a href="#comparison">比較表</a>で指標を特定し、<a href="#relationship">関係図</a>で位置を確認して、<a href="#news-flow">チェックフロー</a>で数字の条件をそろえましょう。その先の政策・市場金利の話は<a href="kinri-shurui-kankei.html">教材01「金利の種類と関係」</a>で確認できます。</p>
+          <p class="source-note">編集・作成：<a href="profile.html">ミルクティー（運営者プロフィール）</a>／投資ポータル.jp</p>
+        </section>
+        <section class="anime-item" id="caution" aria-labelledby="caution-title">
+          <h2 class="anime-title" id="caution-title">ご利用にあたって</h2>
+          <p>本ページは経済ニュースを理解するための情報提供を目的としており、特定の商品や売買を推奨するものではありません。物価指標・政策判断・市場価格の関係は条件によって異なり、将来の値動きを保証するものではありません。</p>
+        </section>
+        <p><a href="#top">ページの先頭へ戻る</a></p>
+      </main>
+    </div>
+    <div id="footer">
+    </div>
+    <script src="include.js" defer>
+    </script>
+    <script src="sidebar.js" defer>
+    </script>
+  </body>
+</html>

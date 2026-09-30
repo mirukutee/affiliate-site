@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ</title>
+    <meta name="description" content="政策金利・長期金利・実質金利・イールドカーブの違いを比較表と関係図で整理。期待インフレ・国債とのつながり、FOMCや金融ニュースのチェックフロー、株・為替・金への波及を俯瞰できる初心者向け教材です。">
+    <link rel="canonical" href="https://tousiportal.jp/kinri-shurui-kankei.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ">
+    <meta property="og:description" content="政策金利・長期金利・実質金利・イールドカーブの違いを比較表と関係図で整理。期待インフレ・国債とのつながり、FOMCや金融ニュースのチェックフロー、株・為替・金への波及を俯瞰できる初心者向け教材です。">
+    <meta property="og:url" content="https://tousiportal.jp/kinri-shurui-kankei.html">
+    
+  <meta property="og:image" content="https://tousiportal.jp/sonota/kinri-shurui-kankei.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@QwZd0ksG2138610" />
+<meta name="twitter:title" content="金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ" />
+<meta name="twitter:description" content="金利の違いとつながりを比較表・関係図で整理。金融ニュースの読み方や、株・為替・金への波及を初心者向けに解説します。" />
+<meta name="twitter:image" content="https://tousiportal.jp/sonota/kinri-shurui-kankei.webp" />
+<meta name="twitter:image:alt" content="政策金利・長期金利・実質金利・イールドカーブの4項目を紹介する、金利の種類と関係の教材画像" />
+
+    <meta property="og:site_name" content="投資ポータル.jp">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@QwZd0ksG2138610">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-card.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+      .kinri-page #main {
+        min-width:0;
+        width:100%;
+        overflow:visible;
+        padding:24px;
+        max-width:1120px;
+        background:#f7fafc
+      }
+      .kinri-page .anime-item {
+        padding:26px;
+        margin:20px 0;
+        background:#fff;
+        box-shadow:none;
+        border:1px solid #d4e0e8;
+        transition:none
+      }
+      .kinri-page .anime-item:hover {
+        transform:none;
+        box-shadow:none
+      }
+      .kinri-page .title {
+        font-size:clamp(1.55rem,3vw,2.25rem);
+        line-height:1.55;
+        color:#103753;
+        margin:12px 0 18px
+      }
+      .kinri-page .anime-title {
+        font-size:1.45rem;
+        line-height:1.55;
+        color:#123f5b;
+        border-color:#087f8c
+      }
+      .kinri-page #main p,.kinri-page #main li,.kinri-page #main dd {
+        font-size:1rem;
+        line-height:1.95
+      }
+      .kinri-page #main p {
+        margin:12px 0
+      }
+      .kinri-page #main li {
+        margin:8px 0
+      }
+      .kinri-page #main h3 {
+        font-size:1.12rem;
+        color:#124a69;
+        margin:24px 0 8px
+      }
+      .kinri-page #main a {
+        color:#075e9b;
+        text-underline-offset:3px;
+        overflow-wrap:anywhere
+      }
+      .kinri-page #main a:hover {
+        color:#003c65
+      }
+      .kinri-page :focus-visible {
+        outline:3px solid #c27a00;
+        outline-offset:4px
+      }
+      .kinri-page .eyebrow {
+        font-weight:700;
+        letter-spacing:.12em;
+        color:#087781;
+        font-size:.85rem!important
+      }
+      .kinri-page .meta,.kinri-page .source-note {
+        font-size:.86rem!important;
+        color:#526574
+      }
+      .kinri-page .note,.kinri-page .formula,.kinri-page .readmore {
+        padding:15px 18px;
+        border-left:4px solid #16848b;
+        background:#eff8f8;
+        border-radius:0 8px 8px 0;
+        margin:16px 0
+      }
+      .kinri-page .note--gold {
+        border-color:#b18428;
+        background:#fff8e8
+      }
+      .kinri-page .formula {
+        font-weight:700;
+        font-size:1.12rem;
+        line-height:1.8
+      }
+      .kinri-page .readmore {
+        border-color:#448cc3;
+        background:#f0f7fd
+      }
+      .kinri-page .toc ul {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:6px 24px;
+        padding-left:22px
+      }
+      .kinri-page .table-scroll,.kinri-page .diagram-scroll {
+        overflow-x:auto;
+        max-width:100%;
+        border:1px solid #cbdce6;
+        border-radius:8px;
+        margin:16px 0;
+        overscroll-behavior-x:contain
+      }
+      .kinri-page .hub-table {
+        border-collapse:collapse;
+        width:100%;
+        min-width:850px;
+        table-layout:fixed;
+        font-size:.94rem;
+        line-height:1.8;
+        background:white
+      }
+      .kinri-page .hub-table caption {
+        text-align:left;
+        padding:14px;
+        font-weight:700;
+        color:#174661;
+        background:#eef5fa;
+        caption-side:top
+      }
+      .kinri-page .hub-table th,.kinri-page .hub-table td {
+        border:1px solid #d5e0e7;
+        padding:14px;
+        text-align:left;
+        vertical-align:top;
+        overflow-wrap:anywhere
+      }
+      .kinri-page .hub-table thead th {
+        color:#fff;
+        background:#16465f
+      }
+      .kinri-page .hub-table tbody th {
+        background:#f0f6f9;
+        color:#16465f;
+        width:15%
+      }
+      .kinri-page .hub-table tbody tr:nth-child(even) td {
+        background:#f8fbfc
+      }
+      .kinri-page .diagram-scroll svg {
+        display:block;
+        width:100%;
+        min-width:760px;
+        height:auto;
+        background:#f7fbfd
+      }
+      .kinri-page figcaption {
+        font-size:.87rem;
+        line-height:1.8;
+        color:#4c6574;
+        margin:12px 0
+      }
+      .kinri-page .flow {
+        list-style:none;
+        counter-reset:step;
+        padding:0!important;
+        margin:20px 0
+      }
+      .kinri-page .flow li {
+        counter-increment:step;
+        position:relative;
+        padding:18px 20px 18px 64px;
+        background:#f1f7fa;
+        border:1px solid #d0e0e9;
+        border-radius:8px;
+        margin:0 0 24px!important
+      }
+      .kinri-page .flow li:before {
+        content:counter(step);
+        position:absolute;
+        left:16px;
+        top:18px;
+        background:#12627d;
+        color:#fff;
+        border-radius:50%;
+        width:32px;
+        height:32px;
+        text-align:center;
+        line-height:32px
+      }
+      .kinri-page .flow li:not(:last-child):after {
+        content:'↓';
+        position:absolute;
+        bottom:-29px;
+        left:29px;
+        color:#12627d;
+        font-size:24px
+      }
+      .kinri-page .flow strong {
+        display:block
+      }
+      .kinri-page .link-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px
+      }
+      .kinri-page .link-card {
+        border:1px solid #ccdee9;
+        border-radius:8px;
+        padding:15px;
+        background:#f8fbfd
+      }
+      .kinri-page .link-card p {
+        font-size:.92rem!important;
+        margin:8px 0 0!important
+      }
+      .kinri-page dt {
+        font-weight:700;
+        color:#154c67;
+        margin-top:20px
+      }
+      .kinri-page dd {
+        margin:6px 0 18px
+      }
+      .kinri-page section[id] {
+        scroll-margin-top:90px
+      }
+      .kinri-page .skip {
+        position:absolute;
+        left:12px;
+        top:-100px;
+        background:#fff;
+        padding:12px;
+        z-index:9999
+      }
+      .kinri-page .skip:focus {
+        top:12px
+      }
+      @media(max-width:768px) {
+        .kinri-page #main {
+          padding:12px;
+          max-width:100%
+        }
+        .kinri-page .anime-item {
+          padding:18px 14px
+        }
+        .kinri-page .anime-title {
+          font-size:1.2rem
+        }
+        .kinri-page .toc ul,.kinri-page .link-grid {
+          grid-template-columns:1fr
+        }
+        .kinri-page #main p,.kinri-page #main li,.kinri-page #main dd {
+          font-size:.96rem
+        }
+        .kinri-page .hub-table {
+          font-size:.9rem
+        }
+        .kinri-page .flow li {
+          padding-left:58px
+        }
+        .kinri-page .breadcrumb {
+          font-size:.8rem
+        }
+      }
+      @media print {
+        #header,#sidebar,#footer,.skip,.toc {
+          display:none!important
+        }
+        .kinri-page .container {
+          display:block;
+          margin:0;
+          padding:0
+        }
+        .kinri-page #main {
+          max-width:none;
+          padding:0
+        }
+        .kinri-page .anime-item {
+          break-inside:auto
+        }
+        .kinri-page .table-scroll,.kinri-page .diagram-scroll {
+          overflow:visible
+        }
+        .kinri-page .hub-table {
+          min-width:0;
+          font-size:9pt
+        }
+        .kinri-page .hub-table th,.kinri-page .hub-table td {
+          padding:6px
+        }
+        .kinri-page .diagram-scroll svg {
+          min-width:0
+        }
+        .kinri-page figure {
+          break-inside:avoid
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://tousiportal.jp/kinri-shurui-kankei.html#article",
+        "headline": "金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ",
+        "description": "政策金利・長期金利・実質金利・イールドカーブの違いを比較表と関係図で整理。期待インフレ・国債とのつながり、FOMCや金融ニュースのチェックフロー、株・為替・金への波及を俯瞰できる初心者向け教材です。",
+        "datePublished": "2026-09-30",
+        "dateModified": "2026-09-30",
+        "inLanguage": "ja",
+        "articleSection": "教材・資料",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://tousiportal.jp/kinri-shurui-kankei.html"
+        },
+        "author": {
+          "@type": "Person",
+          "@id": "https://tousiportal.jp/#person",
+          "name": "ミルクティー",
+          "url": "https://tousiportal.jp/profile.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://tousiportal.jp/#organization",
+          "name": "投資ポータル.jp",
+          "url": "https://tousiportal.jp/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://tousiportal.jp/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "投資コラム・解説記事一覧",
+            "item": "https://tousiportal.jp/column.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "金利の種類と関係",
+            "item": "https://tousiportal.jp/kinri-shurui-kankei.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="kinri-page" id="top">
+    <a href="#main" class="skip">
+      本文へ移動
+    </a>
+    <div id="header">
+    </div>
+    <div class="container">
+      <aside id="sidebar">
+      </aside>
+      <main id="main" tabindex="-1">
+        <nav aria-label="パンくず">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+            <li class="breadcrumb-item" aria-current="page">金利の種類と関係</li>
+          </ul>
+        </nav>
+        <p class="eyebrow">教材・資料 01 ／ 金利の全体像</p>
+        <h1 class="title">金利の種類と関係を一覧で解説｜政策金利・長期金利・実質金利・イールドカーブ</h1>
+        <p class="meta">作成・最終確認：<time datetime="2026-09-30">2026年9月30日</time> ／ <a href="profile.html">ミルクティー</a></p>
+        <section class="anime-item" id="intro" aria-labelledby="intro-title">
+          <h2 class="anime-title" id="intro-title">金融ニュースの「金利」を、ひとつの地図で整理する</h2>
+          <p>「中央銀行が利上げした」「長期金利が低下した」「実質金利が上昇した」。同じ日にこうしたニュースが並んでも、必ずしも矛盾しているわけではありません。見ている金利の<strong>決まり方・期間・物価の扱い</strong>が違うからです。</p>
+          <p>このページでは、よく登場する4項目を比較し、つながりとニュースの読み方を整理します。各用語の詳しい仕組みは、リンク先の個別記事で確認できます。</p>
+          <div class="note">
+            <strong>
+              最初に押さえる違い
+            </strong>
+            <p>政策金利は「政策の基準」、長期金利は「長い期間の市場金利」、実質金利は「物価を考慮した金利」、イールドカーブは「期間別の金利を並べた図」です。<strong>同じ分類軸で分かれた4種類ではありません。</strong></p>
+          </div>
+        </section>
+        <section class="anime-item" id="comparison" aria-labelledby="comparison-title">
+          <h2 class="anime-title" id="comparison-title">1．政策金利・長期金利・実質金利・イールドカーブの比較表</h2>
+          <p>まず「政策」「期間」「物価調整」「期間別の形」という見方の違いを確認しましょう。スマートフォンでは表を左右にスクロールできます。</p>
+          <div class="table-scroll" role="region" aria-label="金利4項目の比較表。横にスクロールできます" tabindex="0">
+            <table class="hub-table">
+              <caption>資料1｜金利に関する4項目の違い</caption>
+              <colgroup>
+                <col style="width:15%">
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">比較する点</th>
+                  <th scope="col"><a style="color:white" href="#policy">政策金利</a></th>
+                  <th scope="col"><a style="color:white" href="#long">長期金利</a></th>
+                  <th scope="col"><a style="color:white" href="#real">実質金利</a></th>
+                  <th scope="col"><a style="color:white" href="#curve">イールドカーブ</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">何を表す？</th>
+                  <td>中央銀行が金融政策のために設定する金利・誘導目標など。</td>
+                  <td>長い期間の資金取引の金利。ニュースでは10年国債利回りが代表例。</td>
+                  <td>物価変動を調整した金利。将来を考えるときは期待インフレ率を差し引く。</td>
+                  <td>同じ時点の、満期までの期間と利回りの関係を示す曲線。</td>
+                </tr>
+                <tr>
+                  <th scope="row">誰・何が決める？</th>
+                  <td>中央銀行の政策判断。目標と実際の市場取引金利は区別する。</td>
+                  <td>国債市場の売買。将来の短期金利予想、景気・物価見通し、需給やリスク評価など。</td>
+                  <td>名目金利とインフレの見通しから考える。中央銀行が直接決める単一の金利ではない。</td>
+                  <td>同じ通貨・発行体など条件をそろえた各期間の市場利回りから描く。</td>
+                </tr>
+                <tr>
+                  <th scope="row">短期／長期との関係</th>
+                  <td>短期金利への働きかけが基本。将来の政策予想を通じ長期にも影響。</td>
+                  <td>一般に1年を超える期間。代表的な10年金利と、20年・30年などは動きが異なることも。</td>
+                  <td>短期にも長期にもある。同じ期間の名目金利と期待インフレ率を対応させる。</td>
+                  <td>短期から長期までを横断。1本の金利や単なる長短差そのものではない。</td>
+                </tr>
+                <tr>
+                  <th scope="row">インフレとの関係</th>
+                  <td>物価・景気の状況や見通しが政策判断の材料。</td>
+                  <td>期待インフレや、それに対する将来の政策対応が織り込まれる。</td>
+                  <td>概算では「名目金利 − 期待インフレ率」。過去の実績を使う見方もある。</td>
+                  <td>期間ごとの物価・政策予想やリスクの変化が形に表れる。</td>
+                </tr>
+                <tr>
+                  <th scope="row">市場が注目する理由</th>
+                  <td>借入コストや資金環境の起点になり、政策の先行きを示す。</td>
+                  <td>長期の資金調達や資産評価の基準になり、先行きの見通しも反映する。</td>
+                  <td>お金の購買力を踏まえた運用・借入の条件を把握するため。</td>
+                  <td>どの期間の金利が動いたか、長短の関係がどう変わったかを読めるため。</td>
+                </tr>
+                <tr>
+                  <th scope="row">株・為替・金との主な関係</th>
+                  <td>株の資金調達、通貨間の金利差予想、金の保有コストへ波及。</td>
+                  <td>株の割引率、国債の魅力、通貨間の利回り差などに関係。金では実質面も確認。</td>
+                  <td>株の評価や投資需要、通貨の相対的な魅力、利息を生まない金の機会費用に関係。</td>
+                  <td>景気・金融環境の見方や銀行の収益構造を考える材料。形だけで株・為替・金の方向は決まらない。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note note--gold"><strong>市場への影響は一定ではありません。</strong>同じ金利上昇でも、景気改善が理由なのか、インフレ懸念が理由なのかで受け止め方は変わります。事前予想や企業業績、他国の動きも合わせて読みます。</p>
+          <p class="source-note">定義・整理の参考：<a href="#source-boj">日本銀行</a>、<a href="#source-curve">FRBの金利曲線資料</a>。比較表は当サイト作成。</p>
+        </section>
+        <nav class="anime-item toc" aria-label="目次">
+          <h2 class="anime-title">このページで確認できること</h2>
+          <ul>
+            <li><a href="#comparison">4項目の比較表</a></li>
+            <li><a href="#relationship">金利の関係図</a></li>
+            <li><a href="#policy">政策金利</a></li>
+            <li><a href="#long">長期金利</a></li>
+            <li><a href="#real">実質金利</a></li>
+            <li><a href="#curve">イールドカーブ</a></li>
+            <li><a href="#inflation-bonds">期待インフレ・国債</a></li>
+            <li><a href="#news-flow">ニュースのチェックフロー</a></li>
+            <li><a href="#markets">株・為替・金への波及</a></li>
+            <li><a href="#pitfalls">混同しやすいポイント</a></li>
+            <li><a href="#related">関連記事一覧</a></li>
+            <li><a href="#sources">公式一次情報</a></li>
+          </ul>
+        </nav>
+        <section class="anime-item" id="relationship" aria-labelledby="relationship-title">
+          <h2 class="anime-title" id="relationship-title">2．金利全体の関係図：政策から市場、物価調整まで</h2>
+          <p>政策金利と長期金利はつながっていますが、同じものではありません。長期金利には<strong>将来にわたる短期金利の予想</strong>が反映されるため、実際の政策変更より先に動くこともあります。</p>
+          <figure>
+            <div class="diagram-scroll" role="region" aria-label="金利の関係図。狭い画面では横にスクロールできます" tabindex="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1040" role="img" aria-labelledby="map-title map-desc">
+                <title id="map-title">金利の種類と関係の全体図</title>
+                <desc id="map-desc">
+                  中央銀行の政策は短期金利に働きかける。将来の短期金利予想と、景気・期待インフレ・国債需給・リスク評価が長期金利に関係する。名目金利を期待インフレで調整した見方が実質金利。各期間の金利を並べた図がイールドカーブ。これらは株・為替・金の評価にも関係する。
+                </desc>
+                <defs>
+                  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                    <path d="M0 0L8 4L0 8" fill="#416c82"/>
+                  </marker>
+                </defs>
+                <g font-family="sans-serif" fill="#143d54">
+                  <text x="30" y="40" font-size="24" font-weight="700">資料2｜金利のつながりを俯瞰する</text>
+                  <rect x="30" y="65" width="540" height="100" rx="12" fill="#e8f3fc" stroke="#a9c8d8"/>
+                  <text x="50" y="99" font-size="22" font-weight="700">中央銀行・政策金利</text>
+                  <text x="50" y="130" font-size="18">政策判断／目標・適用金利の設定</text>
+                  <path d="M300 165V207" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <rect x="30" y="215" width="540" height="105" rx="12" fill="#e8f3fc" stroke="#a9c8d8"/>
+                  <text x="50" y="249" font-size="22" font-weight="700">短期金利</text>
+                  <text x="50" y="280" font-size="18">短期の市場金利へ働きかける</text>
+                  <path d="M300 320V375" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <text x="320" y="353" font-size="16">政策・発言・指標を受けて予想が変化</text>
+                  <rect x="30" y="385" width="540" height="110" rx="12" fill="#e8f3fc" stroke="#a9c8d8"/>
+                  <text x="50" y="419" font-size="22" font-weight="700">市場の政策金利予想</text>
+                  <text x="50" y="450" font-size="18">将来の短期金利は、どう推移するか？</text>
+                  <rect x="30" y="520" width="540" height="115" rx="12" fill="#fff6df" stroke="#a9c8d8"/>
+                  <text x="50" y="554" font-size="22" font-weight="700">景気 ＋ 期待インフレ ＋ 国債需給</text>
+                  <text x="50" y="585" font-size="18">政策予想やリスクへの対価に影響</text>
+                  <text x="50" y="612" font-size="18">海外金利・中央銀行の国債売買なども関係</text>
+                  <path d="M300 495V512" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M300 635V677" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <rect x="30" y="685" width="540" height="125" rx="12" fill="#e7f4ef" stroke="#a9c8d8"/>
+                  <text x="50" y="719" font-size="22" font-weight="700">長期金利（例：10年国債利回り）</text>
+                  <text x="50" y="750" font-size="18">将来の短期金利予想の平均的な水準</text>
+                  <text x="50" y="777" font-size="18">＋ 期間リスク等への対価（概念的な整理）</text>
+                  <rect x="625" y="150" width="305" height="220" rx="12" fill="#e7f4ef" stroke="#a9c8d8"/>
+                  <text x="645" y="184" font-size="22" font-weight="700">実質金利という見方</text>
+                  <text x="645" y="215" font-size="18">名目金利</text>
+                  <text x="645" y="242" font-size="18">− 同じ期間の期待インフレ率</text>
+                  <text x="645" y="269" font-size="18">≈ 実質金利</text>
+                  <text x="645" y="296" font-size="18">短期にも長期にもある</text>
+                  <rect x="625" y="460" width="305" height="205" rx="12" fill="#e7f4ef" stroke="#a9c8d8"/>
+                  <text x="645" y="494" font-size="22" font-weight="700">イールドカーブという図</text>
+                  <text x="645" y="525" font-size="18">同じ時点・比較可能な債券の</text>
+                  <text x="645" y="552" font-size="18">短期 ～ 長期の利回りを並べる</text>
+                  <text x="645" y="579" font-size="18">横軸：満期までの期間</text>
+                  <text x="645" y="606" font-size="18">縦軸：利回り</text>
+                  <path d="M570 267H614" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M570 748H592V335H614" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M570 290H604V500H614" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M570 780H605V625H614" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M300 810V865" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <path d="M782 665V865" fill="none" stroke="#416c82" stroke-width="2.5" marker-end="url(#arrow)"/>
+                  <rect x="30" y="875" width="900" height="100" rx="12" fill="#e8f3fc" stroke="#a9c8d8"/>
+                  <text x="50" y="909" font-size="22" font-weight="700">株・為替・金などの評価へ波及</text>
+                  <text x="50" y="940" font-size="18">割引率・借入コスト／国同士の金利差予想／金を持つ機会費用など</text>
+                  <text x="30" y="1008" font-size="17">矢印は主なつながり。値動きの方向・順番・大きさを保証するものではありません。</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption>図：投資ポータル.jp作成。日本銀行・FRBの説明を参考にした概念図です。景気・期待インフレ・需給を、それぞれ独立した数値として足し算する式ではありません。政策予想や期間リスクへの対価には、これらの要因が重なって反映されます。</figcaption>
+          </figure>
+          <div class="note">
+            <strong>
+              図の読み方
+            </strong>
+            <p>左は金利が形成される主な経路。右上の実質金利は「物価を調整する見方」、右下のイールドカーブは「期間別に並べる見方」です。金利の変化は景気や物価にも影響し、その結果が次の政策判断や市場予想に戻ってきます。</p>
+          </div>
+          <p>長期金利の「期間リスク等への対価」は、タームプレミアムと呼ばれます。長く保有する間の不確実性に対する評価で、需給や安全資産への需要にも左右され、マイナスになる場合もあります。</p>
+          <p class="source-note">参考：<a href="#source-long">日本銀行の長期金利の分析</a>、<a href="#source-curve">FRBの金利曲線資料</a>。</p>
+        </section>
+        <section class="anime-item" id="policy" aria-labelledby="policy-title">
+          <h2 class="anime-title" id="policy-title">3．政策金利：中央銀行の判断と市場金利の接点</h2>
+          <p>政策金利は、中央銀行が金融政策を実行するために設定する金利や誘導目標などを指します。日本では日銀の金融政策決定会合、米国ではFOMCによる政策判断が注目されます。具体的な操作対象や手段は、国・時期によって異なります。</p>
+          <p>政策判断は短期金利に働きかけ、さらに「今後どこまで上がる・下がるか」という予想を通じて長期金利にも関係します。ただし、<strong>政策金利の変更幅と長期金利の変化幅が同じになるわけではありません。</strong></p>
+          <p>政策金利は預金金利や住宅ローン金利とも別です。金融機関が提示する金利には調達コスト、信用リスク、競争環境なども反映されます。</p>
+          <p class="readmore">詳しく読む：<a href="seisaku-kinri-toha.html">政策金利そのものの仕組み・利上げや利下げによる影響はこちら</a></p>
+        </section>
+        <section class="anime-item" id="long" aria-labelledby="long-title">
+          <h2 class="anime-title" id="long-title">4．長期金利：将来の予想と国債市場を映す</h2>
+          <p>長期金利は、一般に1年を超える期間の金利を指し、ニュースでは<strong>10年国債の市場利回り</strong>が代表的な指標です。「日本の長期金利」と「米国の長期金利」は、通貨も経済環境も異なります。</p>
+          <p>形成を考える軸は、将来の短期金利の予想と、長期保有に伴うリスク等への対価です。国債の発行・買入れ、投資家の需要なども関係します。したがって、政策金利が据え置かれていても長期金利は動きます。</p>
+          <p>例えば、利上げが発表されても、先行きの景気減速や物価安定を市場が強く見込めば、長期金利が低下することもあります。これは可能な読み方の一例で、実際の理由は声明や指標、需給と照合する必要があります。</p>
+          <p class="readmore">詳しく読む：<a href="chouki-kinri-toha.html">長期金利の決まり方・政策金利との違いを詳しく読む</a></p>
+        </section>
+        <section class="anime-item" id="real" aria-labelledby="real-title">
+          <h2 class="anime-title" id="real-title">5．実質金利：名目金利から何を差し引く？</h2>
+          <p>実質金利は、物価変動を考慮した金利です。市場の先行きを読む場合は、次の近似式で考えます。</p>
+          <div class="formula">
+            実質金利 ≈ 名目金利 − 期待インフレ率
+          </div>
+          <p><strong>名目金利と期待インフレ率は、通貨と対象期間をそろえます。</strong>10年の名目金利から直近1か月の物価変化を引いただけでは、10年の予想実質金利を適切に表せません。</p>
+          <p>仮に、同じ期間の名目金利が3％、期待インフレ率が2％なら、実質金利は概算で1％です。期待インフレ率だけが2.5％に上がれば、実質金利は概算で0.5％に下がります。<strong>ここで使う数値は説明用の仮定で、現在の金利水準ではありません。</strong></p>
+          <p>過去の結果を振り返るときは、実際のインフレ率を差し引く「事後的な実質金利」も使います。ニュースでは、期待を使ったものか、実績を使ったものかを確認しましょう。</p>
+          <p class="source-note">米国の物価連動国債（TIPS）の利回りも実質金利の指標として使われますが、単純な引き算による推計と常に同じではありません。<a href="#source-tips">FRBの解説</a>も参照。</p>
+          <p class="readmore">詳しく読む：<a href="jisshitsu-kinri-toha.html">実質金利の仕組み・金や株価との関係を詳しく読む</a></p>
+        </section>
+        <section class="anime-item" id="curve" aria-labelledby="curve-title">
+          <h2 class="anime-title" id="curve-title">6．イールドカーブ：期間別の金利を並べて見る</h2>
+          <p>イールドカーブは、<strong>横軸に満期までの期間、縦軸に利回り</strong>をとった曲線です。例えば同じ日の日本国債を期間別に比較します。日本の短期金利と米国の長期金利をつないだものではありません。</p>
+          <ul>
+            <li><strong>順イールド：</strong>長い期間の金利が短い期間より高い形。</li>
+            <li><strong>逆イールド：</strong>比較する期間で、短い金利が長い金利を上回る形。</li>
+            <li><strong>フラット化／スティープ化：</strong>曲線の傾きが小さくなる／大きくなる変化。</li>
+          </ul>
+          <p>大切なのは形の名前だけでなく、「短期が上がったのか」「長期が下がったのか」という内訳です。同じ長短金利差の縮小でも背景は異なります。逆イールドは景気を見る材料になりますが、景気後退の時期や発生を確定するものではありません。</p>
+          <p class="readmore">詳しく読む：<a href="yield-curve-toha.html">イールドカーブの形・長短金利差・読み方を詳しく読む</a></p>
+        </section>
+        <section class="anime-item" id="inflation-bonds" aria-labelledby="inflation-bonds-title">
+          <h2 class="anime-title" id="inflation-bonds-title">7．期待インフレ・国債は、どこにつながる？</h2>
+          <h3>期待インフレは「政策予想」と「実質金利」の両方に関係する</h3>
+          <p>期待インフレ率は、将来の物価上昇率についての予想です。上昇すれば、中央銀行が引き締めるという予想を通じて名目金利に影響する可能性があります。一方、名目金利が変わらなければ、近似式上は実質金利を下げる方向に働きます。<strong>どちらがどれだけ動いたか</strong>を合わせて見ます。</p>
+          <p>名目国債と物価連動国債の利回り差であるBEI（ブレークイーブン・インフレ率）は参考指標ですが、インフレリスクや流動性の影響も含みます。「市場が予想するインフレ率そのもの」と断定しないようにしましょう。</p>
+          <p class="readmore">詳しく読む：<a href="kitai-inflation-toha.html">期待インフレ率の意味・指標・金利とのつながりを読む</a></p>
+          <h3>国債価格と利回りは逆方向に動く</h3>
+          <p>同じ固定利付国債で将来の受取額が変わらなければ、市場価格が下がるほど、そこから買う人の利回りは上がります。ニュースの「国債売りで長期金利上昇」は、この価格と利回りの関係です。固定された表面利率が売買のたびに変更される、という意味ではありません。</p>
+          <p>国債入札は、新たな発行などに対する投資家の需要を確認する場です。需要の弱さが価格低下・利回り上昇の材料になる場合がありますが、入札前に織り込まれていたか、同じ期間の他の入札とどう違うかも確認します。</p>
+          <p class="readmore">詳しく読む：<a href="kokusai-toha.html">国債の仕組み・価格と利回りの関係を読む</a></p>
+          <p class="readmore">詳しく読む：<a href="kokusai-nyusatsu-toha.html">国債入札の見方・結果が金利に影響する仕組みを読む</a></p>
+        </section>
+        <section class="anime-item" id="news-flow" aria-labelledby="news-flow-title">
+          <h2 class="anime-title" id="news-flow-title">8．FOMC・経済ニュースを読むチェックフロー</h2>
+          <p>見出しに「金利」とあったら、次の順番で確認すると、何が変わったニュースなのかを整理できます。</p>
+          <ol class="flow">
+            <li><strong>国・通貨・金利の種類を特定する</strong>日本か米国か。政策金利、国債利回り、実質金利のどれか。国債なら何年物か。</li>
+            <li><strong>今回の決定と、将来の見通しを分ける</strong>利上げ・据え置き・利下げという決定に加え、声明・会見・見通しで何が変わったか。</li>
+            <li><strong>事前予想との差を確認する</strong>変更は予想済みだったか。予想より大きい・小さい変更か。織り込み済みなら反応が小さい場合もある。</li>
+            <li><strong>どの期間・どの成分が動いたかを見る</strong>短期と長期は同方向か。名目金利だけでなく期待インフレや実質金利も変わったか。</li>
+            <li><strong>理由の候補を絞る</strong>政策予想、景気、物価、国債の需給のどれか。判断材料が足りなければ、原因を決めつけず「未確認」にする。</li>
+            <li><strong>株・為替・金の動きと照合する</strong>業績や他国金利、ドル、リスク回避も確認。同時に動いたことだけで金利が原因とは断定しない。</li>
+          </ol>
+          <h3>FOMCでは「決定」「参加者の見通し」「市場予想」を分ける</h3>
+          <p>政策決定は今回の判断です。ドットチャートは、各参加者が適切と考える政策金利の見通しを示すもので、将来の決定を約束するものでも、市場参加者の予想を集計したものでもありません。公表される回では、経済見通しと合わせて読みます。</p>
+          <div class="note note--gold">
+            <strong>
+              読み方の練習（仮のニュース）
+            </strong>
+            <p>「政策金利は据え置き、10年国債利回りは上昇」なら、据え置きと長期金利上昇を矛盾と考える必要はありません。将来の利下げ予想が後退したのか、期待インフレが上がったのか、需給やリスク評価が変わったのかを確認します。見出しだけでは原因を一つに絞れません。</p>
+          </div>
+          <p class="readmore">詳しく読む：<a href="fomc-toha.html">FOMCの役割・発表で確認するポイントを読む</a></p>
+          <p class="readmore">詳しく読む：<a href="dot-chart-toha.html">ドットチャートの点・中央値・注意点を読む</a></p>
+        </section>
+        <section class="anime-item" id="markets" aria-labelledby="markets-title">
+          <h2 class="anime-title" id="markets-title">9．金利が株・為替・金などへ波及する経路</h2>
+          <p>以下は、一般的な仕組みを整理したものです。将来の価格を予測したり、特定の資産の売買を勧めたりする表ではありません。</p>
+          <div class="table-scroll" role="region" aria-label="資産への波及の比較表" tabindex="0">
+            <table class="hub-table">
+              <caption>資産ごとの主な経路と、一方向に断定できない理由</caption>
+              <thead>
+                <tr>
+                  <th scope="col" style="width:15%">資産</th>
+                  <th scope="col">主な経路</th>
+                  <th scope="col">合わせて見るもの</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">株式</th>
+                  <td>長期金利の上昇は、将来利益を現在の価値に直す割引率や借入コストを通じ、評価の重荷になり得る。</td>
+                  <td>景気改善で利益見通しが上方修正されれば、金利と株価が同時に上がることも。業種や負債構成でも違う。</td>
+                </tr>
+                <tr>
+                  <th scope="row">為替</th>
+                  <td>相手国との金利差や将来の差の予想が、通貨を保有する魅力に関係する。</td>
+                  <td>自国金利の上昇だけで通貨高とは限らない。相手国の変化、織り込み、リスク回避なども影響する。</td>
+                </tr>
+                <tr>
+                  <th scope="row">金（ゴールド）</th>
+                  <td>実質金利上昇は、利息を生まない金を保有する機会費用を高め、価格の重荷になり得る。</td>
+                  <td>ドル相場、安全資産需要、中央銀行の購入などでも動く。円建て価格にはドル円の変化も関係する。</td>
+                </tr>
+                <tr>
+                  <th scope="row">債券</th>
+                  <td>同じ固定利付債では、要求される利回りの上昇と市場価格の下落が対応する。</td>
+                  <td>満期までの期間や利払い条件で価格変動の大きさが違う。変動利付債や個人向け国債は商品性を分けて確認する。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>金利の数字だけでなく、動いた理由と事前予想との差を見る</strong>ことが共通のポイントです。金利低下でも、深刻な景気悪化が理由なら株価には重荷となる場合があります。</p>
+          <p class="source-note">金融政策の波及経路の参考：<a href="#source-transmission">FRBの解説</a>。表の整理・条件分けは当サイトによるものです。</p>
+        </section>
+        <section class="anime-item" id="pitfalls" aria-labelledby="pitfalls-title">
+          <h2 class="anime-title" id="pitfalls-title">10．初心者が混同しやすいポイント</h2>
+          <dl>
+            <dt>政策金利と実質金利は、どちらが正しい金利？</dt>
+            <dd>比べている軸が違います。政策金利は政策の基準、実質金利は物価を調整した見方です。政策金利についても、対応する期間の期待インフレを考慮し、実質的な水準を考えることができます。</dd>
+            <dt>長期金利が上がったら、中央銀行が利上げした？</dt>
+            <dd>そうとは限りません。市場の政策予想や国債需給などの変化だけでも長期金利は動きます。</dd>
+            <dt>インフレ率は、実績でも予想でも同じ？</dt>
+            <dd>異なります。公表済みの物価指数は実績、期待インフレ率は将来の予想です。名目金利から何を引いた指標か確認します。</dd>
+            <dt>逆イールドになったら、必ず不況になる？</dt>
+            <dd>景気判断の材料ですが、確定的な予言ではありません。どの期間を比較したか、需給やリスク評価がどう変わったかも重要です。</dd>
+            <dt>金利が1％から1.25％なら「0.25％上昇」？</dt>
+            <dd>水準の差は0.25パーセントポイント、または25bp（ベーシスポイント）です。相対的な増加率25％とは区別します。</dd>
+          </dl>
+        </section>
+        <section class="anime-item" id="related" aria-labelledby="related-title">
+          <h2 class="anime-title" id="related-title">11．目的別に選ぶ関連記事一覧</h2>
+          <p>全体像をつかんだら、疑問が残った項目だけ個別記事で確認してください。</p>
+          <div class="link-grid">
+            <div class="link-card">
+              <a href="seisaku-kinri-toha.html">
+                <strong>
+                  政策金利の個別解説
+                </strong>
+              </a>
+              <p>中央銀行が動かす金利と利上げ・利下げの仕組み</p>
+            </div>
+            <div class="link-card">
+              <a href="chouki-kinri-toha.html">
+                <strong>
+                  長期金利の個別解説
+                </strong>
+              </a>
+              <p>市場での決まり方と株価への影響</p>
+            </div>
+            <div class="link-card">
+              <a href="jisshitsu-kinri-toha.html">
+                <strong>
+                  実質金利の個別解説
+                </strong>
+              </a>
+              <p>物価を考慮する意味と金・株との関係</p>
+            </div>
+            <div class="link-card">
+              <a href="yield-curve-toha.html">
+                <strong>
+                  イールドカーブの個別解説
+                </strong>
+              </a>
+              <p>曲線の形と長短金利差の読み方</p>
+            </div>
+            <div class="link-card">
+              <a href="kitai-inflation-toha.html">
+                <strong>
+                  期待インフレ率の個別解説
+                </strong>
+              </a>
+              <p>物価の予想が金利を動かす経路</p>
+            </div>
+            <div class="link-card">
+              <a href="kokusai-toha.html">
+                <strong>
+                  国債の個別解説
+                </strong>
+              </a>
+              <p>価格と利回りが逆に動く仕組み</p>
+            </div>
+            <div class="link-card">
+              <a href="kokusai-nyusatsu-toha.html">
+                <strong>
+                  国債入札の個別解説
+                </strong>
+              </a>
+              <p>入札結果と投資家需要の見方</p>
+            </div>
+            <div class="link-card">
+              <a href="fomc-toha.html">
+                <strong>
+                  FOMCの個別解説
+                </strong>
+              </a>
+              <p>米国の金融政策決定と市場の注目点</p>
+            </div>
+            <div class="link-card">
+              <a href="dot-chart-toha.html">
+                <strong>
+                  ドットチャートの個別解説
+                </strong>
+              </a>
+              <p>参加者の金利見通しを読むときの注意点</p>
+            </div>
+          </div>
+          <p><a href="column.html">投資コラム・解説記事一覧へ</a></p>
+        </section>
+        <section class="anime-item" id="sources" aria-labelledby="sources-title">
+          <h2 class="anime-title" id="sources-title">12．公式一次情報・参考資料</h2>
+          <p>仕組みの説明は以下の中央銀行・政府機関の資料を参考に整理しています。表・関係図・チェックフローは当サイト独自の編集です。<strong>資料確認日：2026年9月30日。</strong></p>
+          <ul>
+            <li id="source-boj"><a href="https://www.boj.or.jp/mopo/outline/" target="_blank" rel="noopener noreferrer">日本銀行｜金融政策の概要</a><br>金融政策の目的、政策決定と市場への働きかけ。</li>
+            <li id="source-long"><a href="https://www.boj.or.jp/research/wps_rev/lab/lab15j07.htm" target="_blank" rel="noopener noreferrer">日本銀行｜量的・質的金融緩和と長期金利</a><br>将来の短期金利予想とタームプレミアムの考え方。過去の研究資料であり、現在の政策制度の説明としては使用していません。</li>
+            <li id="source-curve"><a href="https://www.federalreserve.gov/data/yield-curve-models.htm" target="_blank" rel="noopener noreferrer">FRB｜Yield Curve Models and Data</a><br>金利の期間構造、名目・実質の金利曲線。</li>
+            <li id="source-tips"><a href="https://www.federalreserve.gov/data/tips-yield-curve-and-inflation-compensation.htm" target="_blank" rel="noopener noreferrer">FRB｜TIPS Yield Curve and Inflation Compensation</a><br>実質利回り、BEIと期待インフレの違い。</li>
+            <li id="source-rates"><a href="https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics" target="_blank" rel="noopener noreferrer">米国財務省｜Interest Rate Statistics</a><br>米国債の期間別名目・実質利回りを確認する入口。</li>
+            <li id="source-auction"><a href="https://www.mof.go.jp/jgbs/auction/calendar/index.htm" target="_blank" rel="noopener noreferrer">財務省｜入札カレンダー</a><br>日本国債の入札予定と結果の確認。</li>
+            <li id="source-fomc"><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener noreferrer">FRB｜FOMC・会合資料</a><br>声明、記者会見、経済見通し、議事要旨の確認。</li>
+            <li id="source-transmission"><a href="https://www.federalreserve.gov/newsevents/speech/kugler20250422a.htm" target="_blank" rel="noopener noreferrer">FRB｜The Transmission of Monetary Policy</a><br>金利・期待・資産価格などを通じた金融政策の波及経路。</li>
+          </ul>
+          <p>本ページは長期利用する教材のため、現在の政策金利水準や直近の会合結果は掲載していません。最新の数値や政策方針は公式発表で確認してください。</p>
+        </section>
+        <section class="anime-item" id="summary" aria-labelledby="summary-title">
+          <h2 class="anime-title" id="summary-title">13．迷ったら「政策・期間・物価・形」に戻る</h2>
+          <ul>
+            <li><strong>政策金利：</strong>中央銀行の政策判断の基準。</li>
+            <li><strong>長期金利：</strong>将来の予想や需給を反映する、長い期間の市場金利。</li>
+            <li><strong>実質金利：</strong>名目金利を物価変動で調整した見方。</li>
+            <li><strong>イールドカーブ：</strong>短期から長期までの金利を並べた図。</li>
+          </ul>
+          <p>ニュースでは「どの国の、どの期間の、どの金利か」を特定し、事前予想との差と動いた理由を確認します。用語が混ざったときは、<a href="#comparison">比較表</a>・<a href="#relationship">関係図</a>・<a href="#news-flow">チェックフロー</a>に戻って整理してください。</p>
+          <p class="source-note">編集・作成：<a href="profile.html">ミルクティー（運営者プロフィール）</a>／投資ポータル.jp</p>
+        </section>
+        <section class="anime-item" id="caution" aria-labelledby="caution-title">
+          <h2 class="anime-title" id="caution-title">ご利用にあたって</h2>
+          <p>本ページは金融ニュースを理解するための情報提供を目的とし、特定の金融商品や売買を推奨するものではありません。市場への影響は条件によって異なり、将来の値動きを保証するものではありません。</p>
+        </section>
+        <p><a href="#top">ページの先頭へ戻る</a></p>
+      </main>
+    </div>
+    <div id="footer">
+    </div>
+    <script src="include.js" defer>
+    </script>
+    <script src="sidebar.js" defer>
+    </script>
+  </body>
+</html>

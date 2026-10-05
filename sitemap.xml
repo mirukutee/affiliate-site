@@ -809,6 +809,21 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+
+<url>
+<loc>https://tousiportal.jp/kokusai-kakaku-rimawari.html</loc>
+<lastmod>2026-10-05</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+
+<url>
+<loc>https://tousiportal.jp/churitsu-kinri-toha.html</loc>
+<lastmod>2026-10-05</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 <!-- コラムのヤツここまで -->
 <!-- 単一ページここから -->
 

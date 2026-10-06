@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0653a6">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://tousiportal.jp/term-premium-toha.html">
+  <title>タームプレミアムとは？なぜ利上げ予想が後退しても長期金利が上がることがあるの？初心者向けに解説</title>
+  <meta name="description" content="タームプレミアムの意味と、利下げ予想でも長期金利が上がる仕組みを図解。インフレの不確実性、国債需給・入札、QT、中立金利との違い、ACMモデルによる推計の見方を初心者向けに解説します。">
+  <meta name="author" content="ミルクティー情報発信">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="タームプレミアムとは？なぜ利上げ予想が後退しても長期金利が上がることがあるの？初心者向けに解説">
+  <meta property="og:description" content="タームプレミアムの意味と、利下げ予想でも長期金利が上がる仕組みを図解。インフレの不確実性、国債需給・入札、QT、中立金利との違い、ACMモデルによる推計の見方を初心者向けに解説します。">
+  <meta property="og:url" content="https://tousiportal.jp/term-premium-toha.html">
+  <meta property="og:image" content="https://tousiportal.jp/sonota/term-premium-toha-ogp.webp">
+  <meta property="og:image:alt" content="タームプレミアムとは？利下げ予想でも長期金利が上がるのはなぜ？">
+  <meta property="og:site_name" content="投資ポータル.jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@QwZd0ksG2138610">
+  <meta name="twitter:creator" content="@QwZd0ksG2138610">
+  <meta name="twitter:title" content="タームプレミアムとは？なぜ利上げ予想が後退しても長期金利が上がることがあるの？初心者向けに解説">
+  <meta name="twitter:description" content="タームプレミアムの意味と、利下げ予想でも長期金利が上がる仕組みを図解。インフレの不確実性、国債需給・入札、QT、中立金利との違い、ACMモデルによる推計の見方を初心者向けに解説します。">
+  <meta name="twitter:image" content="https://tousiportal.jp/sonota/term-premium-toha-ogp.webp">
+  <meta name="twitter:image:alt" content="タームプレミアムとは？利下げ予想でも長期金利が上がるのはなぜ？">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu-card.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
+<style>
+    .term-page #main{min-width:0;width:100%;max-width:1120px;overflow:visible;padding:24px;background:#f7fafc}
+    .term-page .anime-item{padding:26px;margin:20px 0;background:#fff;border:1px solid #d4e0e8;box-shadow:none}
+    .term-page .title{font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.55;color:#103753;margin:12px 0 18px}
+    .term-page .anime-title{font-size:1.45rem;line-height:1.55;color:#123f5b;border-color:#087f8c}
+    .term-page #main p,.term-page #main li,.term-page #main dd{font-size:1rem;line-height:1.95}
+    .term-page #main p{margin:12px 0}.term-page #main li{margin:8px 0}
+    .term-page #main h3{font-size:1.12rem;color:#124a69;margin:24px 0 8px}
+    .term-page #main a{color:#075e9b;text-underline-offset:3px;overflow-wrap:anywhere}
+    .term-page .eyebrow{font-weight:700;letter-spacing:.12em;color:#087781;font-size:.85rem!important}
+    .term-page .meta,.term-page .source-note{font-size:.86rem!important;color:#526574}
+    .term-page .note,.term-page .formula,.term-page .readmore{padding:15px 18px;border-left:4px solid #16848b;background:#eff8f8;border-radius:0 8px 8px 0;margin:16px 0}
+    .term-page .note--gold{border-color:#b18428;background:#fff8e8}.term-page .formula{font-weight:700;font-size:1.12rem;line-height:1.8}.term-page .readmore{border-color:#448cc3;background:#f0f7fd}
+    .term-page .toc ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;padding-left:22px}
+    .term-page .table-scroll{overflow-x:auto;max-width:100%;border:1px solid #cbdce6;border-radius:8px;margin:16px 0;overscroll-behavior-x:contain}
+    .term-page .hub-table{border-collapse:collapse;width:100%;min-width:760px;table-layout:fixed;font-size:.94rem;line-height:1.8;background:#fff}
+    .term-page .hub-table caption{text-align:left;padding:14px;font-weight:700;color:#174661;background:#eef5fa;caption-side:top}
+    .term-page .hub-table th,.term-page .hub-table td{border:1px solid #d5e0e7;padding:14px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+    .term-page .hub-table thead th{color:#fff;background:#16465f}.term-page .hub-table tbody th{background:#f0f6f9;color:#16465f;width:22%}.term-page .hub-table tbody tr:nth-child(even) td{background:#f8fbfc}
+    .term-page .hero-image{display:block;width:100%;max-width:860px;height:auto;margin:0 auto;border:1px solid #d9e4ee;border-radius:12px}
+    .term-page .flow{list-style:none;counter-reset:step;padding:0!important;margin:20px 0}.term-page .flow li{counter-increment:step;position:relative;padding:18px 20px 18px 64px;background:#f1f7fa;border:1px solid #d0e0e9;border-radius:8px;margin:0 0 24px!important}.term-page .flow li:before{content:counter(step);position:absolute;left:16px;top:18px;background:#12627d;color:#fff;border-radius:50%;width:32px;height:32px;text-align:center;line-height:32px}.term-page .flow li:not(:last-child):after{content:'↓';position:absolute;bottom:-29px;left:29px;color:#12627d;font-size:24px}.term-page .flow strong{display:block}
+    .term-page .link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.term-page .link-card{border:1px solid #ccdee9;border-radius:8px;padding:15px;background:#f8fbfd}.term-page .link-card p{font-size:.92rem!important;margin:8px 0 0!important}.term-page dt{font-weight:700;color:#154c67;margin-top:20px}.term-page dd{margin:6px 0 18px}.term-page section[id]{scroll-margin-top:90px}.term-page .source-list{padding-left:22px}.term-page .source-list li{font-size:.9rem!important}
+    @media(max-width:768px){.term-page #main{padding:12px;max-width:100%}.term-page .anime-item{padding:18px 14px}.term-page .anime-title{font-size:1.2rem}.term-page .toc ul,.term-page .link-grid{grid-template-columns:1fr}.term-page #main p,.term-page #main li,.term-page #main dd{font-size:.96rem}.term-page .hub-table{font-size:.9rem}.term-page .flow li{padding-left:58px}.term-page .breadcrumb{font-size:.8rem}}
+    @media print{#header,#sidebar,#footer,.skip,.toc{display:none!important}.term-page .container{display:block;margin:0;padding:0}.term-page #main{max-width:none;padding:0}.term-page .table-scroll{overflow:visible}.term-page .hub-table{min-width:0;font-size:9pt}}
+  
+.term-page .anime-item:hover{transform:none;box-shadow:none}
+.term-page #main figure{margin:20px 0}.term-page figcaption{font-size:.88rem;line-height:1.7;color:#526574;margin:10px 0}
+.term-page .example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:center}.term-page .example-grid>div{padding:16px;background:#f5f8fb;border:1px solid #ccdee9;border-radius:10px}.term-page .example-grid h3{margin:0 0 12px!important}
+.term-page .expect-part,.term-page .premium-part{padding:12px;border-radius:8px}.term-page .expect-part{background:#ddecf8;color:#124869}.term-page .premium-part{background:#fff0cb;color:#654b11}.term-page .example-total{background:#0d5964;color:white;padding:12px;border-radius:8px}.term-page .example-grid strong{font-size:1.7rem}
+.term-page .checklist{padding-left:1.5em}.term-page details{border-bottom:1px solid #d4e0e8;padding:16px 0}.term-page summary{font-weight:700;cursor:pointer;line-height:1.7;color:#123f5b}.term-page :focus-visible{outline:3px solid #b18428;outline-offset:3px}
+@media(max-width:480px){.term-page .example-grid{gap:8px}.term-page .example-grid>div{padding:10px 6px}.term-page .example-grid p{font-size:.85rem!important}.term-page .hub-table{min-width:620px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/term-premium-toha.html#article",
+  "headline": "タームプレミアムとは？なぜ利上げ予想が後退しても長期金利が上がることがあるの？初心者向けに解説",
+  "description": "タームプレミアムの意味と、利下げ予想でも長期金利が上がる仕組みを図解。インフレの不確実性、国債需給・入札、QT、中立金利との違い、ACMモデルによる推計の見方を初心者向けに解説します。",
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "inLanguage": "ja",
+  "articleSection": "話題・トレンド",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/term-premium-toha.html"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://tousiportal.jp/#person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tousiportal.jp/#organization",
+    "name": "投資ポータル.jp",
+    "url": "https://tousiportal.jp/"
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/term-premium-toha-ogp.webp"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "投資コラム・解説記事一覧",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "タームプレミアムとは？",
+      "item": "https://tousiportal.jp/term-premium-toha.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "タームプレミアムとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "長期の債券を保有する際の不確実性や金利変動リスクなどに対して、投資家が求める上乗せ収益を考える概念です。手数料や保証された利益ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムはなぜ必要なのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "長期債の保有には将来の金利や物価が予想から外れるリスクがあるため、その補償が求められることがあります。ただし、制度上必須の追加金利ではなく、推計値がゼロやマイナスになることもあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムはどこで確認できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "米国ではニューヨーク連銀のACMモデルなどの公表推計を確認できます。モデル名、年限、データ日、確認日をそろえて読みましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムは直接観測できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "直接観測できません。債券利回りなどのデータからモデルを使って推計され、方法や前提によって値が異なります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムと長期金利は何が違いますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "長期金利は長期国債利回りなどを指します。タームプレミアムは、その利回りを将来の短期金利予想と分けて考える際の、期間リスクなどへの補償に当たる推計上の要素です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムと中立金利は何が違いますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "中立金利は景気を刺激も抑制もしない金利水準の概念です。タームプレミアムは長期債を保有する不確実性などへの補償の概念であり、目的も意味も異なります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムと期待インフレ率は同じですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "異なります。期待インフレ率は将来の物価上昇率の予想です。インフレの不確実性がタームプレミアムに影響することはありますが、同じ指標ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "利下げすると長期金利も必ず下がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必ずではありません。期間全体の短期金利予想やタームプレミアム、需給などによって、高止まりしたり上昇したりする場合があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国債発行が増えるとタームプレミアムは必ず上がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必ずではありません。発行される年限、投資家需要、金融政策、景気、インフレ、リスク回避需要などによって影響が異なります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タームプレミアムが上がると株価は下がりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "長期金利や割引率を通じて株価への下押し圧力になる可能性はありますが、必ず下がるわけではありません。景気や企業利益なども株価に影響します。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="term-page" id="top">
+<a class="skip" href="#main">本文へ移動</a>
+<div id="header"></div>
+<div class="container">
+<aside id="sidebar"></aside>
+<main id="main" tabindex="-1">
+<nav aria-label="パンくず"><ul class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">ホーム</a></li><li class="breadcrumb-item"><a href="column.html">記事</a></li><li class="breadcrumb-item" aria-current="page">タームプレミアムとは？</li></ul></nav>
+<article id="article" aria-labelledby="article-title">
+<p class="eyebrow">話題・トレンド ／ 金利の基礎</p>
+<h1 class="title" id="article-title">タームプレミアムとは？なぜ利上げ予想が後退しても長期金利が上がることがあるの？初心者向けに解説</h1>
+<p class="meta">公開・最終更新：<time datetime="2026-10-06">2026年10月6日</time> ／ <a href="profile.html">管理人プロフィール</a></p>
+<p>「利上げ予想が後退したのに、長期金利は上がった」。一見矛盾するニュースを理解する鍵の一つが、タームプレミアムです。長期金利を「金利の予想」と「長い期間のリスクへの補償」に分けて考えてみましょう。</p>
+<figure><img class="hero-image" src="sonota/term-premium-toha-ogp.webp" width="1200" height="630" fetchpriority="high" decoding="async" alt="長期金利は将来の短期金利の平均予想とタームプレミアムに分けて考える。利下げ予想が強まっても、プレミアムが上昇すれば長期金利は必ずしも下がらない"><figcaption>長期金利を理解するための概念図。実際の市場価格を単純計算する式ではありません。</figcaption></figure>
+<nav class="anime-item toc" aria-labelledby="toc-title"><h2 class="anime-title" id="toc-title">目次</h2><ul><li><a href="#definition">タームプレミアムとは？</a></li><li><a href="#long-rate">長期金利は何で決まる？</a></li><li><a href="#cut-example">なぜ利下げ予想でも長期金利が上がることがあるの？</a></li><li><a href="#drivers">タームプレミアムはなぜ変化する？</a></li><li><a href="#inflation">インフレとタームプレミアムの関係</a></li><li><a href="#supply">国債発行・国債需給とタームプレミアム</a></li><li><a href="#auction">国債入札とタームプレミアムの関係</a></li><li><a href="#qt">QTとタームプレミアムの関係</a></li><li><a href="#yield-curve">タームプレミアムとイールドカーブの関係</a></li><li><a href="#neutral">タームプレミアムと中立金利は何が違う？</a></li><li><a href="#comparison">タームプレミアムと実質金利・期待インフレ率は何が違う？</a></li><li><a href="#where">タームプレミアムはどこで確認できる？</a></li><li><a href="#estimates">タームプレミアムの推計値は正解なの？</a></li><li><a href="#stocks">タームプレミアムが上昇すると株価はどうなる？</a></li><li><a href="#fx">タームプレミアムとドル円・為替の関係</a></li><li><a href="#decompose">「金利が上がった理由」を分解して考えよう</a></li><li><a href="#sticky">利下げ局面でも長期金利が高止まりすることはある？</a></li><li><a href="#current">最新のタームプレミアムはどうなっている？</a></li><li><a href="#checklist">タームプレミアムのニュースを見るときのポイント</a></li><li><a href="#faq">FAQ｜タームプレミアムのよくある質問</a></li><li><a href="#summary">まとめ</a></li></ul></nav>
+<section class="anime-item" id="definition" aria-labelledby="definition-title">
+<h2 class="anime-title" id="definition-title">タームプレミアムとは？</h2>
+<p><strong>タームプレミアム（Term Premium）とは、長期の債券を持つ際の不確実性や金利変動リスクなどに対して、投資家が求める上乗せ収益を考える概念</strong>です。「期間プレミアム」とも呼ばれます。</p>
+<p>「10年間、一定の金利で運用するなら、その間に物価や金利がどうなるか分からない。短期で運用し直す場合と比べ、その不確実性を引き受ける補償がほしい」と考えるイメージです。比較対象は、おおむね短期債などを順次買い替えて運用することです。</p>
+<p>ただし、国債は途中で売却できるため、必ず10年間お金が引き出せないという意味ではありません。満期前に売る場合は価格変動の影響を受けます。一般に、ほかの条件が同じなら満期が長い固定利付債ほど金利変化による価格の振れが大きくなります。満期まで持っても、受け取るお金の購買力がインフレで目減りする可能性は残ります。</p>
+<div class="note"><strong>手数料でも、保証された追加利益でもありません。</strong>別途請求・支給される金額ではなく、債券利回りに含まれると考えられる要素です。買った後に実際に得られる収益とも区別しましょう。</div>
+<p>「上乗せ」と呼びますが、推計値はゼロやマイナスになることもあります。長期国債が景気悪化時の備えとして求められるなど、投資家が低い期待収益でも保有したい局面があるためです。必ずプラスの補償が付く制度ではありません。</p>
+<p class="source-note">参考：<a href="#source-acm">ニューヨーク連銀のACM解説［1］</a>、<a href="#source-kw">FRBの期間構造モデル解説［3］</a>。</p>
+</section>
+<section class="anime-item" id="long-rate" aria-labelledby="long-rate-title">
+<h2 class="anime-title" id="long-rate-title">長期金利は何で決まる？</h2>
+<p><a href="chouki-kinri-toha.html">長期金利</a>の代表例は10年国債利回りです。中央銀行が設定・誘導する<a href="seisaku-kinri-toha.html">政策金利</a>とは異なり、市場での国債価格と結び付いて動きます。</p>
+<div class="formula">長期金利 ≒ 将来の短期金利の平均的な予想 ＋ タームプレミアム</div>
+<p>10年という期間なら、「次の会合で金利がどうなるか」だけでなく、今後10年間の短期金利の道筋を平均的に考えます。近い将来の利下げ予想が強まっても、その後の金利見通しが上がれば、期間全体の平均予想は下がらないこともあります。</p>
+<p>この式は理解のための簡略化した枠組みです。実際には対象とする利回りの定義やモデル、流動性なども関わり、画面上の市場金利を誰でも単純な足し算で算出できるという意味ではありません。モデルが推計する利回りと実際の市場利回りに差が生じることもあります。</p>
+<p class="readmore"><a href="fomc-toha.html">FOMC</a>や<a href="dot-chart-toha.html">ドットチャート</a>は政策の先行きを考える材料ですが、FOMC参加者の見通しと<a href="shijou-yosou-toha.html">市場予想</a>は同一ではありません。</p>
+</section>
+<section class="anime-item" id="cut-example" aria-labelledby="cut-example-title">
+<h2 class="anime-title" id="cut-example-title">なぜ利下げ予想でも長期金利が上がることがあるの？</h2>
+<p><strong>短期金利予想の低下を、タームプレミアムの上昇が上回る場合があるから</strong>です。利上げ予想の後退と、長期債を安心して保有できるかどうかは、別の問題です。</p>
+<ol class="flow"><li><strong>景気減速で利下げ予想が強まる</strong>将来の短期金利の平均予想を押し下げる方向に働きます。</li><li><strong>同時に、長期債への警戒が強まる</strong>インフレの不確実性や国債供給、財政への懸念などから、期間リスクへの補償が大きくなる可能性があります。</li><li><strong>両方の変化が長期金利に反映される</strong>上乗せ部分の増加が大きければ、長期金利は下がらず、上昇することもあります。</li></ol>
+<figure class="example-diagram"><figcaption>仕組みを理解するための架空例（実際の市場データではありません）</figcaption><div class="example-grid"><div><h3>変化前</h3><p class="expect-part">短期金利予想部分<br><strong>3.0％</strong></p><p aria-hidden="true">＋</p><p class="premium-part">タームプレミアム<br><strong>0.5％</strong></p><p class="example-total">長期金利のイメージ<br><strong>3.5％</strong></p></div><div><h3>変化後</h3><p class="expect-part">短期金利予想部分 ↓<br><strong>2.7％</strong></p><p aria-hidden="true">＋</p><p class="premium-part">タームプレミアム ↑<br><strong>1.0％</strong></p><p class="example-total">長期金利のイメージ ↑<br><strong>3.7％</strong></p></div></div></figure>
+<p>予想部分は0.3ポイント低下しても、プレミアムが0.5ポイント上昇すれば、合計のイメージは0.2ポイント上昇します。これは説明用の仮定であり、実際の長期金利をこの単純計算だけで求められるわけではありません。</p>
+</section>
+<section class="anime-item" id="drivers" aria-labelledby="drivers-title">
+<h2 class="anime-title" id="drivers-title">タームプレミアムはなぜ変化する？</h2>
+<div class="table-scroll" role="region" aria-label="タームプレミアムに影響し得る材料" tabindex="0"><table class="hub-table"><caption>タームプレミアムに影響し得る材料</caption><thead><tr><th scope="col">材料</th><th scope="col">考え方・注意点</th></tr></thead><tbody><tr><th scope="row">インフレの不確実性</th><td>物価の先行きが読みにくいと、固定されたお金を受け取るリスクへの補償が求められることがあります。</td></tr><tr><th scope="row">政策金利の不確実性</th><td>金利の道筋が予想から外れる可能性が大きいと、長期債の価格変動を警戒する材料になります。</td></tr><tr><th scope="row">景気の不確実性</th><td>警戒が高まる一方、景気悪化への備えとして国債が買われる場合もあり、作用は一方向ではありません。</td></tr><tr><th scope="row">国債の供給と需要</th><td>発行量だけでなく、年限別の供給と、それを引き受ける投資家需要の釣り合いが重要です。</td></tr><tr><th scope="row">投資家のリスク許容度</th><td>価格変動を引き受ける余力が小さくなると、より高い補償を求める場合があります。</td></tr><tr><th scope="row">中央銀行の保有・資産政策</th><td>保有規模や将来の買入れ・縮小方針が、市場に残る期間リスクを変える可能性があります。</td></tr><tr><th scope="row">市場流動性</th><td>希望する量を売買しにくくなると価格に影響します。ただし、流動性に対する補償とタームプレミアムは概念上同じではありません。</td></tr></tbody></table></div>
+<p>これらが必ず一定方向に動かすわけではありません。同じ材料が将来の短期金利予想にも影響し、複数の要因が同時に働きます。<a href="#source-nyfed">ニューヨーク連銀の2023年講演［4］</a>でも、不確実性や投資家需要などが論点として挙げられています。</p>
+</section>
+<section class="anime-item" id="inflation" aria-labelledby="inflation-title">
+<h2 class="anime-title" id="inflation-title">インフレとタームプレミアムの関係</h2>
+<p>固定利付の長期国債は、受け取る名目の利子や元本が決まっています。将来の物価が予想以上に上がると、そのお金で買えるものが減るため、投資家にとってリスクになります。</p>
+<p>ここでは「予想の中心」と「予想のばらつき」を分けましょう。たとえば予想の中心が2％で同じでも、1.8〜2.2％程度を見込む場合と、0〜4％まであり得ると考える場合では、不確実性が異なります。この数値は考え方を示す架空例です。</p>
+<ul><li><strong>期待インフレ率：</strong>将来の物価上昇率を平均的にどの程度と見込むか。</li><li><strong>インフレの不確実性：</strong>その見通しがどの程度外れ得るか、どれほど読みにくいか。</li></ul>
+<p>不確実性が増すと、長期債の保有に高い補償を求める要因になり得ます。ただし、<strong>期待インフレ率の上昇とタームプレミアムの上昇は同じ意味ではありません</strong>。インフレ見通しは政策金利予想にも作用します。</p>
+<p class="readmore">実際の物価動向は<a href="cpi-toha.html">CPIとは？</a>、<a href="pce-deflator-toha.html">PCEデフレーターとは？</a>で確認し、将来の見通しは<a href="kitai-inflation-toha.html">期待インフレ率とは？</a>と区別して読みましょう。</p>
+</section>
+<section class="anime-item" id="supply" aria-labelledby="supply-title">
+<h2 class="anime-title" id="supply-title">国債発行・国債需給とタームプレミアム</h2>
+<p><a href="kokusai-toha.html">国債</a>の発行が増え、特に長期債を市場が多く引き受ける必要があるとき、投資家がより高い利回りを求める可能性があります。長い期間の金利変動リスクを、誰がどの価格で保有するかという問題です。</p>
+<p>しかし、発行増に見合う年金・保険会社などの需要があれば、影響は吸収されることもあります。景気悪化で安全資産への需要が強まる場合や、中央銀行の政策が変わる場合もあります。短期国債と長期国債では、市場に供給する期間リスクも異なります。</p>
+<div class="note note--gold"><strong>「国債発行増加＝必ずタームプレミアム上昇」「政府債務増加＝必ず長期金利上昇」ではありません。</strong>財政への警戒がどの経路で価格に反映されるかも国や局面で異なり、信用リスクを含むすべての上乗せをタームプレミアムと呼ぶことも適切ではありません。</div>
+<p>取引の全体像は<a href="saiken-shijou-toha.html">債券市場とは？</a>、価格と利回りの関係は<a href="kokusai-kakaku-rimawari.html">国債価格・利回り・長期金利の関係</a>で整理しています。</p>
+</section>
+<section class="anime-item" id="auction" aria-labelledby="auction-title">
+<h2 class="anime-title" id="auction-title">国債入札とタームプレミアムの関係</h2>
+<p><a href="kokusai-nyusatsu-toha.html">国債入札</a>は、発行される国債にどれくらいの需要があるかを考える材料です。需要が想定より弱いと受け止められた場合、次のような経路が考えられます。</p>
+<div class="formula">高い利回りが求められる → 国債価格への下押し圧力 → 長期金利への上昇圧力</div>
+<p>ただし、<strong>一回の入札だけでタームプレミアム上昇とは断定できません</strong>。入札時点の市場金利や発行条件、直前の経済指標も影響するためです。</p>
+<ul><li><strong>応札倍率：</strong>募集・落札額に対してどれだけ応札があったか。同じ年限の過去の結果とも比較します。</li><li><strong>落札利回り：</strong>直前の市場で想定されていた水準との差を確認します。</li><li><strong>テール：</strong>米国では最高落札利回りと入札直前の市場利回りの差などが用いられます。国や資料によって定義が異なるため、比較対象を確認します。</li><li><strong>投資家別の需要：</strong>公表される入札参加者区分や落札配分を確認します。区分だけで最終投資家の実態をすべて把握できるわけではありません。</li></ul>
+</section>
+<section class="anime-item" id="qt" aria-labelledby="qt-title">
+<h2 class="anime-title" id="qt-title">QTとタームプレミアムの関係</h2>
+<p><strong>量的引き締め（QT）</strong>は、中央銀行が保有資産を縮小する政策です。満期を迎えた債券の償還資金を再投資しない方法や、売却する方法などがあります。政策金利の引上げとは別の政策手段です。</p>
+<p>中央銀行の国債保有が減ると、ほかの条件が同じなら、民間が吸収する国債の量や期間リスクが増える方向に働きます。その結果、長期金利やタームプレミアムに上昇圧力がかかる可能性があります。</p>
+<p>ただし、予定されたQTが既に価格に織り込まれていれば、実施のたびに新たな金利上昇が起きるとは限りません。縮小の速度、保有する年限、市場の需要や流動性も関係します。</p>
+<p class="source-note"><a href="#source-qt">FRBウォラー理事の2024年3月1日講演［5］</a>は、資産購入・保有期間・将来のQTへの予想が金利への効果に関わることを説明しています。これは当時の講演を使った仕組みの解説であり、現在のQT実施状況を示すものではありません。</p>
+<div class="note">QTと量的緩和（QE）は、異なる市場環境で実施されることがあります。効果が同じ大きさで反対向きになると決め付けず、「QT＝必ずタームプレミアム上昇」とも考えないようにしましょう。</div>
+</section>
+<section class="anime-item" id="yield-curve" aria-labelledby="yield-curve-title">
+<h2 class="anime-title" id="yield-curve-title">タームプレミアムとイールドカーブの関係</h2>
+<p><a href="yield-curve-toha.html">イールドカーブ</a>は、債券の年限と利回りの関係を描いた曲線です。短期側があまり変わらず、長期側のタームプレミアムが上昇すると、長期金利が相対的に上がって傾きが大きくなる場合があります。これが長期側の金利上昇による<strong>スティープ化</strong>の一例です。</p>
+<p>ただし、短期金利の低下によってもスティープ化は起こります。将来の政策金利予想の変化でも形は変わるので、曲線が急になったことだけでタームプレミアム上昇とは判断できません。</p>
+<p>「どの年限が、どれだけ、上がった／下がったか」を先に確認し、モデル推計などで背景を考えましょう。</p>
+</section>
+<section class="anime-item" id="neutral" aria-labelledby="neutral-title">
+<h2 class="anime-title" id="neutral-title">タームプレミアムと中立金利は何が違う？</h2>
+<div class="table-scroll" role="region" aria-label="中立金利とタームプレミアムの比較" tabindex="0"><table class="hub-table"><caption>中立金利とタームプレミアムの比較</caption><thead><tr><th scope="col">概念</th><th scope="col">考えていること</th><th scope="col">主な使い方</th></tr></thead><tbody><tr><th scope="row">中立金利</th><td>景気を刺激も抑制もしない金利水準</td><td>金融政策が引き締め的か緩和的かを考える目安</td></tr><tr><th scope="row">タームプレミアム</th><td>長期債保有の不確実性などに対する上乗せ収益</td><td>長期金利のうち、短期金利予想だけでは説明できない部分を考える</td></tr></tbody></table></div>
+<p>どちらも市場で直接観測できる単純な金利ではありませんが、意味は異なります。<a href="churitsu-kinri-toha.html">中立金利とは？</a>で扱う「経済に中立的な水準」と、「長い期間のリスクを引き受ける補償」を分けましょう。</p>
+<p>中立金利の見通しが変われば将来の短期金利予想にも影響し得ますが、中立金利をタームプレミアムへそのまま加える、といった読み方はしません。</p>
+</section>
+<section class="anime-item" id="comparison" aria-labelledby="comparison-title">
+<h2 class="anime-title" id="comparison-title">タームプレミアムと実質金利・期待インフレ率は何が違う？</h2>
+<div class="table-scroll" role="region" aria-label="金利・物価に関する4つの概念" tabindex="0"><table class="hub-table"><caption>金利・物価に関する4つの概念</caption><thead><tr><th scope="col">概念</th><th scope="col">初心者向けの意味</th><th scope="col">混同しやすい点</th></tr></thead><tbody><tr><th scope="row">名目金利</th><td>物価変動を差し引く前の金利</td><td>短期・長期など対象期間をそろえて比較する</td></tr><tr><th scope="row">実質金利</th><td>物価上昇を考慮した金利</td><td>事前の実質金利では期待インフレ率を用いる。タームプレミアムそのものではない</td></tr><tr><th scope="row">期待インフレ率</th><td>将来の物価上昇率の予想</td><td>物価への予想であり、長期債のリスク補償と同じではない</td></tr><tr><th scope="row">タームプレミアム</th><td>長期債を保有する期間リスクなどへの補償</td><td>名目金利から期待インフレ率を引いた残りではない</td></tr></tbody></table></div>
+<div class="formula">名目金利 − 期待インフレ率 ≒ 事前の実質金利</div>
+<p>これは「物価の影響を除く」という切り口です。同じ期間の金利と期待インフレ率を用いる近似で、現在のCPI上昇率を機械的に引く話とは区別します。</p>
+<div class="formula">長期金利 ≒ 将来の短期金利の平均的な予想 ＋ タームプレミアム</div>
+<p>こちらは「将来の金利予想とリスクへの補償に分ける」という切り口です。<strong>両方の式に出てくる要素を、独立した部品のように全部足してはいけません</strong>。物価連動国債から読み取る実質利回りにも期間リスクや流動性などが関わり、名目債との利回り差も純粋な期待インフレ率だけではありません。</p>
+<p class="readmore">詳しくは<a href="jisshitsu-kinri-toha.html">実質金利とは？</a>、<a href="kitai-inflation-toha.html">期待インフレ率とは？</a>、全体の整理は<a href="kinri-shurui-kankei.html">金利の種類と関係</a>をご覧ください。</p>
+</section>
+<section class="anime-item" id="where" aria-labelledby="where-title">
+<h2 class="anime-title" id="where-title">タームプレミアムはどこで確認できる？</h2>
+<p><strong>タームプレミアムは市場で直接観測できません。</strong>株価や10年国債利回りのように、その瞬間の「正確なタームプレミアム」が取引所に表示されるわけではなく、経済モデルなどを使って推計します。</p>
+<p>米国の代表例は、ニューヨーク連銀が公表する<strong>Adrian–Crump–Moench（ACM）モデル</strong>です。国債の利回りデータから、将来の短期金利予想に対応する部分とタームプレミアムを推計します。</p>
+<p><a href="https://www.newyorkfed.org/research/data_indicators/term-premia-tabs" target="_blank" rel="noopener noreferrer">ニューヨーク連銀：Treasury Term Premia</a>や、同連銀の<a href="https://www.newyorkfed.org/medialibrary/media/research/data_indicators/ACMTermPremium.xls">公式データ（Excel）</a>で確認できます。ACMは唯一の方法ではなく、FRBのKim–Wright系のモデルなどもあります。</p>
+<p>グラフを見るときは国、年限、日次／月次、データ日、モデル名を確認してください。10年物の推計と、将来のある時点から始まる金利の推計を混ぜないことも大切です。<a href="#current">今回確認した値</a>は下段にまとめています。</p>
+</section>
+<section class="anime-item" id="estimates" aria-labelledby="estimates-title">
+<h2 class="anime-title" id="estimates-title">タームプレミアムの推計値は正解なの？</h2>
+<p><strong>唯一の確定した正解ではありません。</strong>直接観測できないため、モデルを通して債券市場を解釈した結果です。</p>
+<ul><li><strong>モデル：</strong>金利を何個の要因で表すか、どの関係を仮定するか。</li><li><strong>データ：</strong>債券利回りだけか、専門家への予測調査も使うか。</li><li><strong>前提：</strong>金利の動きやリスクの価格をどう表現するか。</li><li><strong>推計期間：</strong>どの時期のデータで関係を推定するか。</li></ul>
+<p>こうした違いで同じ国・年限・日でも値が異なります。モデルの再推計やデータ更新で過去の値が改定されることもあるため、確認日も残しましょう。</p>
+<p>FRBの<a href="#source-kw">モデル解説［3］</a>も、モデルは市場を近似したものだと説明しています。「現在○％だから確定」とせず、同じモデルでの変化を追い、ほかの推計や金利予想と照合する材料にします。モデル同士を途中でつないだグラフには注意が必要です。</p>
+</section>
+<section class="anime-item" id="stocks" aria-labelledby="stocks-title">
+<h2 class="anime-title" id="stocks-title">タームプレミアムが上昇すると株価はどうなる？</h2>
+<ol class="flow"><li><strong>タームプレミアムが上昇</strong>ほかの条件が同じなら、長期金利への上昇圧力になります。</li><li><strong>資金調達コストや割引率が意識される</strong>企業が借りる金利や、将来の利益を現在の価値に換算する基準に影響します。</li><li><strong>株価の評価へ波及する可能性</strong>同じ将来利益でも割引率が高いほど現在価値は小さくなるため、株価の評価に下押し圧力がかかり得ます。</li></ol>
+<p>遠い将来の利益への期待が大きい成長株では、この影響が意識されることがあります。ただし企業の借入条件は国債利回りだけでは決まらず、信用力や借換え時期も関係します。</p>
+<p><strong>「タームプレミアム上昇＝必ず株安」ではありません。</strong>景気や企業利益への期待、インフレ、政策金利予想なども同時に株価へ作用します。基本は<a href="kabuka-naze-ugoku.html">株価はなぜ上下するのか？</a>で解説しています。</p>
+</section>
+<section class="anime-item" id="fx" aria-labelledby="fx-title">
+<h2 class="anime-title" id="fx-title">タームプレミアムとドル円・為替の関係</h2>
+<p>タームプレミアムそのものが為替を直接決めるわけではありません。米国のタームプレミアム上昇が米長期金利を押し上げれば、次のような経路で材料になる可能性があります。</p>
+<div class="formula">米国債利回りの変化 → 日米金利差への見方 → ドル円などの為替相場への影響</div>
+<p>ただし、日本側の金利、両国の金融政策、景気、投資家のリスク選好、為替ヘッジの費用なども関係します。金利上昇が米国資産への不安と同時に起きている場合には、利回りが高くなってもドルが買われるとは限りません。</p>
+<p><strong>「米タームプレミアム上昇＝必ずドル高・円安」ではなく、金利が上がった背景と両国の変化を確認する</strong>ことが大切です。</p>
+</section>
+<section class="anime-item" id="decompose" aria-labelledby="decompose-title">
+<h2 class="anime-title" id="decompose-title">「金利が上がった理由」を分解して考えよう</h2>
+<p>「10年国債利回りが上がった」というニュースを読んだら、次の順で材料を分けると理解しやすくなります。</p>
+<ol class="checklist"><li><strong>将来の政策金利予想が上昇したのか。</strong>利上げの回数だけでなく、高金利が続く期間への見方も確認します。</li><li><strong>期待インフレ率が上昇したのか。</strong>予想の中心が変わったのか、不確実性が増したのかも区別します。</li><li><strong>実質金利が上昇したのか。</strong>どの指標・年限の実質金利かをそろえて見ます。</li><li><strong>タームプレミアムが上昇したと推計されているのか。</strong>モデル名・対象期間・比較日を確認します。</li><li><strong>国債需給や入札が影響したのか。</strong>発行計画、投資家需要、中央銀行の保有方針と合わせて読みます。</li></ol>
+<div class="note">この5項目は互いに独立した足し算の部品ではありません。複数の切り口から同じ値動きを確かめるチェック項目です。<strong>「10年国債利回り上昇＝利上げ予想が強まった」とは限りません。</strong></div>
+</section>
+<section class="anime-item" id="sticky" aria-labelledby="sticky-title">
+<h2 class="anime-title" id="sticky-title">利下げ局面でも長期金利が高止まりすることはある？</h2>
+<p><strong>あります。</strong>中央銀行が政策金利を下げても、長期金利には、将来の短期金利の道筋と期間リスクへの補償などが反映されるからです。</p>
+<p>インフレの不確実性、国債供給、財政への警戒、長期債需要の弱さなどでタームプレミアムが高まれば、短期金利予想の低下による効果が一部または全部打ち消される可能性があります。また、直近は利下げでも、その先には高い金利が必要になると市場が考える場合もあります。</p>
+<p>利下げが既に織り込まれていれば、決定当日の長期金利がほとんど反応しないこともあります。<strong>「中央銀行が利下げする＝10年・30年国債利回りも必ず同じ方向・同じ幅で低下する」ではありません。</strong></p>
+</section>
+<section class="anime-item" id="current" aria-labelledby="current-title">
+<h2 class="anime-title" id="current-title">最新のタームプレミアムはどうなっている？</h2>
+<!-- 更新範囲：公式ファイルの最新日・ACMTP10・確認日を同時に更新。本文の日付とArticle.dateModifiedも確認する。 -->
+<p>本記事で<strong>2026年10月6日（日本時間）に取得・確認したニューヨーク連銀の公式Excel</strong>では、日次シートの最新データ日は<strong>2026年10月2日</strong>でした。確認日とデータ日は異なります。</p>
+<div class="table-scroll" role="region" aria-label="今回確認できた米国10年物タームプレミアム推計" tabindex="0"><table class="hub-table"><caption>今回確認できた米国10年物タームプレミアム推計</caption><thead><tr><th scope="col">項目</th><th scope="col">確認内容</th></tr></thead><tbody><tr><th scope="row">公表元・モデル</th><td>ニューヨーク連銀／Adrian–Crump–Moench（ACM）モデル</td></tr><tr><th scope="row">国・対象年限</th><td>米国／10年物（モデルの10年ゼロクーポン国債利回りに対応）</td></tr><tr><th scope="row">データ日</th><td>2026年10月2日</td></tr><tr><th scope="row">推計値</th><td>約0.914％（約91.4ベーシスポイント）</td></tr><tr><th scope="row">データ系列</th><td>ACMTermPremium.xls → ACM Daily → ACMTP10</td></tr><tr><th scope="row">取得・確認日</th><td>2026年10月6日（日本時間）</td></tr><tr><th scope="row">数値の性質</th><td>モデル推計値。直接観測値でも、10年国債利回り全体でもありません。</td></tr></tbody></table></div>
+<p class="source-note">出典：<a href="https://www.newyorkfed.org/medialibrary/media/research/data_indicators/ACMTermPremium.xls">ニューヨーク連銀・ACM公式Excel［2］</a>。値は小数第3位に丸めています。1ベーシスポイント（bp）は0.01パーセントポイントです。</p>
+<p>この値は、このモデルが10年利回りのうち約0.914パーセントポイントをタームプレミアムとして推計したことを意味します。<strong>年0.914％の追加利益が保証される意味ではありません。</strong>記事閲覧時にはデータが更新・改定されている場合があります。</p>
+<p>この単独の値だけでは、直近の長期金利変動の原因や、株価・為替の方向は判断できません。本記事では現在の市場変動を一つの要因に帰属させず、仕組みの理解に使う確認例として掲載しています。</p>
+<!-- /更新範囲 -->
+</section>
+<section class="anime-item" id="checklist" aria-labelledby="checklist-title">
+<h2 class="anime-title" id="checklist-title">タームプレミアムのニュースを見るときのポイント</h2>
+<ol class="checklist"><li>どの国の長期金利か</li><li>何年国債を見ているのか</li><li>政策金利予想は変化したのか</li><li>インフレ期待は変化したのか</li><li>実質金利はどう動いたのか</li><li>国債発行・国債入札などの需給材料はあったか</li><li>中央銀行のバランスシート政策に変化はあるか</li><li>どのモデルのタームプレミアム推計なのか</li><li>イールドカーブはどう変化したか</li><li>株・為替など他市場はどう反応したか</li></ol><p>同じ日・年限・モデルで比較することが出発点です。「上昇した」という見出しだけでなく、比較の起点や推計の出所まで確認しましょう。</p>
+</section>
+<section class="anime-item" id="faq" aria-labelledby="faq-title">
+<h2 class="anime-title" id="faq-title">FAQ｜タームプレミアムのよくある質問</h2>
+<details><summary>タームプレミアムとは何ですか？</summary><p>長期の債券を保有する際の不確実性や金利変動リスクなどに対して、投資家が求める上乗せ収益を考える概念です。手数料や保証された利益ではありません。</p></details>
+<details><summary>タームプレミアムはなぜ必要なのですか？</summary><p>長期債の保有には将来の金利や物価が予想から外れるリスクがあるため、その補償が求められることがあります。ただし、制度上必須の追加金利ではなく、推計値がゼロやマイナスになることもあります。</p></details>
+<details><summary>タームプレミアムはどこで確認できますか？</summary><p>米国ではニューヨーク連銀のACMモデルなどの公表推計を確認できます。モデル名、年限、データ日、確認日をそろえて読みましょう。</p></details>
+<details><summary>タームプレミアムは直接観測できますか？</summary><p>直接観測できません。債券利回りなどのデータからモデルを使って推計され、方法や前提によって値が異なります。</p></details>
+<details><summary>タームプレミアムと長期金利は何が違いますか？</summary><p>長期金利は長期国債利回りなどを指します。タームプレミアムは、その利回りを将来の短期金利予想と分けて考える際の、期間リスクなどへの補償に当たる推計上の要素です。</p></details>
+<details><summary>タームプレミアムと中立金利は何が違いますか？</summary><p>中立金利は景気を刺激も抑制もしない金利水準の概念です。タームプレミアムは長期債を保有する不確実性などへの補償の概念であり、目的も意味も異なります。</p></details>
+<details><summary>タームプレミアムと期待インフレ率は同じですか？</summary><p>異なります。期待インフレ率は将来の物価上昇率の予想です。インフレの不確実性がタームプレミアムに影響することはありますが、同じ指標ではありません。</p></details>
+<details><summary>利下げすると長期金利も必ず下がりますか？</summary><p>必ずではありません。期間全体の短期金利予想やタームプレミアム、需給などによって、高止まりしたり上昇したりする場合があります。</p></details>
+<details><summary>国債発行が増えるとタームプレミアムは必ず上がりますか？</summary><p>必ずではありません。発行される年限、投資家需要、金融政策、景気、インフレ、リスク回避需要などによって影響が異なります。</p></details>
+<details><summary>タームプレミアムが上がると株価は下がりますか？</summary><p>長期金利や割引率を通じて株価への下押し圧力になる可能性はありますが、必ず下がるわけではありません。景気や企業利益なども株価に影響します。</p></details>
+</section>
+<section class="anime-item" id="summary" aria-labelledby="summary-title">
+<h2 class="anime-title" id="summary-title">まとめ</h2>
+<ul><li>タームプレミアムは長期債保有の不確実性などに対する上乗せ収益を考える概念。</li><li>長期金利は将来の短期金利予想だけで決まるわけではありません。</li><li>プレミアムが上昇すれば、利下げ予想でも長期金利が上がる場合があります。</li><li>インフレの不確実性、国債需給・供給、金融政策など複数の要因が関係します。</li><li>国債入札やQTも材料になりますが、一定方向の変化を保証しません。</li><li>中立金利・実質金利・期待インフレ率とは別の概念です。</li><li>直接観測できずモデルで推計され、ゼロやマイナスの値になることもあります。</li><li>モデルや前提によって推計が異なり、過去の値も改定され得ます。</li><li>「タームプレミアム上昇＝必ず株安・ドル高」ではありません。</li><li>長期金利のニュースでは「なぜ上がったのか」を分けて考えましょう。</li></ul>
+</section>
+<section class="anime-item" id="sources" aria-labelledby="sources-title">
+<h2 class="anime-title" id="sources-title">参考資料・一次情報</h2>
+<p class="source-note">参照・データ確認日：2026年10月6日。過去の講演は仕組みの説明に利用し、現在の政策判断とは区別しています。</p><ol class="source-list"><li id="source-acm"><a href="https://libertystreeteconomics.newyorkfed.org/2014/05/treasury-term-premia-1961-present/" target="_blank" rel="noopener noreferrer">ニューヨーク連銀：Treasury Term Premia: 1961–Present（2014年5月12日）</a><br>ACMモデル、利回りの分解、負の推計値の基本。</li><li id="source-data"><a href="https://www.newyorkfed.org/medialibrary/media/research/data_indicators/ACMTermPremium.xls" target="_blank" rel="noopener noreferrer">ニューヨーク連銀：ACMTermPremium.xls（公式データ）</a><br>最新値の出典。ACM DailyシートのACMTP10を使用。</li><li id="source-kw"><a href="https://www.federalreserve.gov/data/three-factor-nominal-term-structure-model.htm" target="_blank" rel="noopener noreferrer">FRB：Three-Factor Nominal Term Structure Model</a><br>別の推計手法、モデルの限界と改定の注意点。</li><li id="source-nyfed"><a href="https://www.newyorkfed.org/newsevents/speeches/2023/per231116" target="_blank" rel="noopener noreferrer">ニューヨーク連銀：Disentangling Messages from the Treasury Market（2023年11月16日）</a><br>政策金利予想・期間プレミアムの区別、不確実性・需要の論点。</li><li id="source-qt"><a href="https://www.federalreserve.gov/newsevents/speech/waller20240301a.htm" target="_blank" rel="noopener noreferrer">FRB：ウォラー理事のQTに関する講演（2024年3月1日）</a><br>資産保有・縮小予想と金利への波及。</li></ol>
+</section>
+<section class="anime-item" id="related" aria-labelledby="related-title">
+<h2 class="anime-title" id="related-title">関連記事・関連教材</h2>
+<div class="link-grid"><div class="link-card"><a href="churitsu-kinri-toha.html"><strong>中立金利とは？</strong></a><p>景気に中立的な金利水準と金融政策の関係。</p></div><div class="link-card"><a href="kinri-shurui-kankei.html"><strong>金利の種類と関係を一覧で解説</strong></a><p>政策金利・長期金利・実質金利を俯瞰する教材。</p></div><div class="link-card"><a href="kokusai-kakaku-rimawari.html"><strong>国債価格・利回り・長期金利の関係</strong></a><p>価格と利回りが逆に動く理由を整理。</p></div><div class="link-card"><a href="bukka-shihyou-chigai.html"><strong>物価指標の違いと関係</strong></a><p>CPI・PCE・期待インフレの役割を比較。</p></div></div>
+</section>
+</article>
+      <section class="anime-item" aria-labelledby="review-entry-title"><h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介</h2><div class="review"><a href="userreview.html" class="review-card"><img src="Xcard/review_300x250.jpg" alt="個人レビュー（証券／FX／仮想通貨）" loading="lazy" decoding="async"><span>証券・FX・仮想通貨を実体験的にまとめた個人レビューを見る（忖度なし）</span></a></div></section>
+      <section class="anime-item" aria-labelledby="caution-title"><h3 class="anime-title" id="caution-title">ご利用にあたっての注意事項</h3><p>本記事は情報提供を目的としており、投資の勧誘を目的としたものではありません。株式・投資信託・外国証券等の取引は元本保証がなく、相場変動等により損失が生じる場合があります。取引開始前に、契約締結前交付書面や商品説明書、目論見書等を必ずご確認のうえ、<strong>ご自身の判断と責任</strong>でお取引ください。</p></section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <script src="include.js" defer></script><script src="sidebar.js" defer></script>
+</body>
+</html>

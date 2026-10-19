@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#0653a6" name="theme-color"/>
+  <title>
+   松井証券FXに自動売買シミュレーション機能が追加！使い方・実効レバレッジ表示も解説｜投資ポータル.jp
+  </title>
+  <meta content="松井証券FXの2026年10月17日の機能改善を解説。自動売買シミュレーションの使い方、実効レバレッジ表示、FXアプリVer.6.3.0への更新、過去の試算と実際の取引の違いを整理。" name="description"/>
+  <meta content="ミルクティー情報発信" name="author"/>
+  <meta content="index,follow" name="robots"/>
+  <link href="https://tousiportal.jp/matsui-fx-simulation.html" rel="canonical"/>
+  <meta content="article" property="og:type"/>
+  <meta content="松井証券FXに自動売買シミュレーション機能が追加！使い方・実効レバレッジ表示も解説" property="og:title"/>
+  <meta content="松井証券FXの2026年10月17日の機能改善を解説。自動売買シミュレーションの使い方、実効レバレッジ表示、FXアプリVer.6.3.0への更新、過去の試算と実際の取引の違いを整理。" property="og:description"/>
+  <meta content="https://tousiportal.jp/matsui-fx-simulation.html" property="og:url"/>
+  <meta content="https://tousiportal.jp/sonota/matsui-fx-simulation-ogp.webp" property="og:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <meta content="投資ポータル.jp" property="og:site_name"/>
+  <meta content="ja_JP" property="og:locale"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="松井証券FXに自動売買シミュレーション機能が追加！使い方・実効レバレッジ表示も解説" name="twitter:title"/>
+  <meta content="松井証券FXの2026年10月17日の機能改善を解説。自動売買シミュレーションの使い方、実効レバレッジ表示、FXアプリVer.6.3.0への更新、過去の試算と実際の取引の違いを整理。" name="twitter:description"/>
+  <meta content="https://tousiportal.jp/sonota/matsui-fx-simulation-ogp.webp" name="twitter:image"/>
+  <meta content="@QwZd0ksG2138610" name="twitter:site"/>
+  <link href="/favicon.ico" rel="icon"/>
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="menu-card.css" rel="stylesheet"/>
+  <link href="sidebar.css" rel="stylesheet"/>
+  <link href="table.css" rel="stylesheet"/>
+  <link href="header.css" rel="stylesheet"/>
+  <style>
+   .fx-page #main{min-width:0;width:100%;max-width:1120px;padding:24px;background:#f7fafc}
+.fx-page .anime-item{padding:24px;margin:20px 0;background:#fff;border:1px solid #d4e0e8;box-shadow:none}
+.fx-page .title{font-size:clamp(1.5rem,3vw,2.2rem);color:#103753;line-height:1.5}
+.fx-page .anime-title{color:#123f5b;border-color:#087f8c;line-height:1.5}
+.fx-page #main p,.fx-page #main li{line-height:1.9}
+.fx-page #main a{color:#0864a3;text-decoration:underline;text-underline-offset:3px}
+.fx-page .meta,.fx-page .source{font-size:.87rem;color:#526574}
+.fx-page .table-scroll{overflow-x:auto;max-width:100%;margin:16px 0}
+.fx-page table{min-width:620px;border-collapse:collapse;width:100%;background:#fff}
+.fx-page th,.fx-page td{border:1px solid #d5e0e7;padding:12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.fx-page thead th{background:#16465f;color:#fff}
+.fx-page .note,.fx-page .formula{padding:15px;border-left:4px solid #16848b;background:#eff8f8;margin:16px 0;border-radius:5px}
+.fx-page .warning{padding:18px;background:#fff5e6;border-left:5px solid #bd7d16;color:#713b08}
+.fx-page .toc ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px}
+.fx-page .steps{counter-reset:s;list-style:none;padding:0}
+.fx-page .steps li{counter-increment:s;padding:12px 14px 12px 48px;position:relative;border-bottom:1px solid #e3ebf3}
+.fx-page .steps li:before{content:counter(s);position:absolute;left:7px;top:12px;background:#087f8c;color:white;border-radius:50%;width:28px;text-align:center}
+.fx-page .hero-image{display:block;width:100%;max-width:860px;height:auto;margin:auto;border-radius:12px}
+.fx-page details{border-bottom:1px solid #d4e0e8;padding:14px 0}
+.fx-page summary{cursor:pointer;font-weight:700;color:#16465f}
+.fx-page .related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fx-page .related a{padding:14px;background:#f0f7fd;border:1px solid #cbdce6;border-radius:8px}
+.fx-page section[id]{scroll-margin-top:90px}
+@media(max-width:768px){.fx-page #main{padding:12px}
+.fx-page .anime-item{padding:17px 13px}
+.fx-page .toc ul,.fx-page .related{grid-template-columns:1fr}
+.fx-page table{font-size:.87rem}
+}
+  </style>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://tousiportal.jp/matsui-fx-simulation.html#article",
+      "headline": "松井証券FXに自動売買シミュレーション機能が追加！使い方・実効レバレッジ表示も解説",
+      "description": "松井証券FXの2026年10月17日の機能改善を解説。自動売買シミュレーションの使い方、実効レバレッジ表示、FXアプリVer.6.3.0への更新、過去の試算と実際の取引の違いを整理。",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "inLanguage": "ja",
+      "articleSection": "話題・トレンド",
+      "mainEntityOfPage": "https://tousiportal.jp/matsui-fx-simulation.html",
+      "author": {
+        "@type": "Person",
+        "name": "ミルクティー",
+        "url": "https://tousiportal.jp/profile.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "投資ポータル.jp",
+        "url": "https://tousiportal.jp/"
+      },
+      "image": "https://tousiportal.jp/sonota/matsui-fx-simulation-ogp.webp",
+      "citation": "https://www.matsui.co.jp/news/2026/detail_1016_02.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://tousiportal.jp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "記事",
+          "item": "https://tousiportal.jp/column.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "松井証券FXの機能改善",
+          "item": "https://tousiportal.jp/matsui-fx-simulation.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+ </head>
+ <body class="fx-page">
+  <a class="skip" href="#main">
+   本文へ移動
+  </a>
+  <div id="header">
+  </div>
+  <div class="container">
+   <aside id="sidebar">
+   </aside>
+   <main id="main" tabindex="-1">
+    <nav aria-label="パンくず">
+     <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+       <a href="index.html">
+        ホーム
+       </a>
+      </li>
+      <li class="breadcrumb-item">
+       <a href="column.html">
+        記事
+       </a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+       松井証券FXの機能改善
+      </li>
+     </ol>
+    </nav>
+    <p>
+     話題・トレンド ／ FX・証券会社サービス
+    </p>
+    <h1 class="title">
+     松井証券FXに自動売買シミュレーション機能が追加！使い方・実効レバレッジ表示も解説
+    </h1>
+    <p class="meta">
+     公開・最終更新：
+     <time datetime="2026-10-19">
+      2026年10月19日
+     </time>
+     ／
+     <a href="profile.html">
+      運営者プロフィール
+     </a>
+    </p>
+    <p>
+     松井証券FXの新機能を、公式発表と一般的なFXのリスクを分けて解説します。特に、過去の試算結果と将来の運用成績は同じではない点が重要です。
+    </p>
+    <figure>
+     <img alt="松井証券FXの自動売買シミュレーションと実効レバレッジ表示を抽象的に示した解説用画像。画面や数値は架空のイメージ" class="hero-image" decoding="async" fetchpriority="high" height="630" src="sonota/matsui-fx-simulation-link.webp" width="1200"/>
+     <figcaption>
+      図は機能の概念を表すイメージです。実際の画面・数値・成績ではありません。
+     </figcaption>
+    </figure>
+    <nav aria-label="目次" class="anime-item toc">
+     <h2 class="anime-title">
+      目次
+     </h2>
+     <ul>
+      <li>
+       <a href="#changes">
+        松井証券FXが2026年10月17日に機能改善
+       </a>
+      </li>
+      <li>
+       <a href="#simulation">
+        自動売買シミュレーションとは？
+       </a>
+      </li>
+      <li>
+       <a href="#howto">
+        シミュレーションの基本的な使い方
+       </a>
+      </li>
+      <li>
+       <a href="#order">
+        「同じ条件で注文する」とは？
+       </a>
+      </li>
+      <li>
+       <a href="#limits">
+        過去のシミュレーション結果は将来も再現する？
+       </a>
+      </li>
+      <li>
+       <a href="#leverage">
+        実効レバレッジの表示機能
+       </a>
+      </li>
+      <li>
+       <a href="#risk">
+        実効レバレッジが高いとどうなる？
+       </a>
+      </li>
+      <li>
+       <a href="#update">
+        FXアプリのアップデートについて
+       </a>
+      </li>
+      <li>
+       <a href="#share">
+        FXアプリからのシミュレーション結果共有
+       </a>
+      </li>
+      <li>
+       <a href="#proscons">
+        今回の機能改善のメリットと注意点
+       </a>
+      </li>
+      <li>
+       <a href="#faq">
+        よくある質問
+       </a>
+      </li>
+      <li>
+       <a href="#summary">
+        まとめ
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <section class="anime-item" id="changes">
+     <h2 class="anime-title">
+      松井証券FXが2026年10月17日に機能改善
+     </h2>
+     <p>
+      松井証券は
+      <strong>
+       2026年10月16日
+      </strong>
+      に、翌
+      <strong>
+       10月17日（土）
+      </strong>
+      のFXお客様サイト・FXアプリの機能改善を発表しました。自動売買の損益を事前に試算する機能に加え、実効レバレッジの表示などが追加されました。
+     </p>
+     <div class="table-scroll">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          変更点
+         </th>
+         <th>
+          内容
+         </th>
+         <th>
+          確認するポイント
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th>
+          自動売買シミュレーション
+         </th>
+         <td>
+          過去の相場に基づき、設定した条件の損益を試算
+         </td>
+         <td>
+          結果は将来の利益を保証しない
+         </td>
+        </tr>
+        <tr>
+         <th>
+          実効レバレッジ表示
+         </th>
+         <td>
+          「ホーム」「資産状況」（スマホでは「口座状況」）に表示
+         </td>
+         <td>
+          保有取引のリスクの目安
+         </td>
+        </tr>
+        <tr>
+         <th>
+          FXアプリ更新
+         </th>
+         <td>
+          iPhone・AndroidともにVer.6.3.0へ更新
+         </td>
+         <td>
+          メンテナンス後は旧版を利用できない
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="source">
+      出典：
+      <a href="https://www.matsui.co.jp/news/2026/detail_1016_02.html" rel="noopener noreferrer" target="_blank">
+       松井証券公式発表（2026年10月16日）
+      </a>
+     </p>
+    </section>
+    <section class="anime-item" id="simulation">
+     <h2 class="anime-title">
+      自動売買シミュレーションとは？
+     </h2>
+     <p>
+      FX自動売買で取引したい
+      <strong>
+       通貨ペア・期間・設定値
+      </strong>
+      を入力し、過去の相場に基づく損益を試算できる機能です。自動売買の設定を検討する際に、過去の一定期間でどのような結果になったかを参考にできます。
+     </p>
+     <p>
+      ただし、
+      <strong>
+       シミュレーションは過去データを使った試算であり、実際に資金を使って売買する取引とは異なります。
+      </strong>
+      画面に利益が表示されても、その利益が確定したわけではありません。
+     </p>
+    </section>
+    <section class="anime-item" id="howto">
+     <h2 class="anime-title">
+      シミュレーションの基本的な使い方
+     </h2>
+     <p>
+      松井証券が公表した入力項目と機能の説明に沿った基本的な流れです。実際の画面構成や操作手順は公式案内をご確認ください。
+     </p>
+     <ol class="steps">
+      <li>
+       <strong>
+        通貨ペアを選ぶ
+       </strong>
+       ：試したい通貨ペアを指定します。
+      </li>
+      <li>
+       <strong>
+        期間を指定する
+       </strong>
+       ：過去の相場の対象期間を選びます。
+      </li>
+      <li>
+       <strong>
+        設定値を入力する
+       </strong>
+       ：検討したい自動売買の条件を入力します。
+      </li>
+      <li>
+       <strong>
+        シミュレーション結果を確認する
+       </strong>
+       ：試算された損益を確認します。
+      </li>
+      <li>
+       <strong>
+        必要に応じて設定を見直す
+       </strong>
+       ：条件を変えた場合の違いを比較・検討します。
+      </li>
+     </ol>
+     <p class="note">
+      入力可能な値の範囲や損益の詳細な計算仕様は、実際のツールおよび公式の操作案内で確認してください。
+     </p>
+    </section>
+    <section class="anime-item" id="order">
+     <h2 class="anime-title">
+      「同じ条件で注文する」とは？
+     </h2>
+     <p>
+      公式発表によると、シミュレーション結果にある
+      <strong>
+       「同じ条件で注文する」
+      </strong>
+      を押すと、シミュレーションと同じ条件を利用する注文画面へ移動できます。
+     </p>
+     <p>
+      <strong>
+       シミュレーションの実行と、実際の注文は別の行為
+      </strong>
+      です。注文画面へ進んだ際は、通貨ペア、売買条件、取引数量、必要資金、損失の可能性などを確認し、意図しない注文を避けましょう。
+     </p>
+    </section>
+    <section class="anime-item" id="limits">
+     <h2 class="anime-title">
+      過去のシミュレーション結果は将来も再現する？
+     </h2>
+     <p class="warning">
+      <strong>
+       過去の相場に基づくシミュレーション結果は、将来の利益を保証しません。
+      </strong>
+     </p>
+     <p>
+      過去に良好な試算結果が出た条件でも、将来の為替相場で同じ値動きが起きるとは限りません。相場環境の変化、スプレッドの拡大、約定価格や約定状況、取引コスト、設定条件などによって、実際の取引結果は異なり得ます。
+     </p>
+     <p>
+      また、シミュレーションにスプレッド・スワップポイント・約定条件などがどのように反映されるかについて、今回の発表だけから一律には断定できません。
+      <strong>
+       計算対象や前提条件を公式の仕様で確認する
+      </strong>
+      ことが大切です。
+     </p>
+     <p>
+      結果を見る際は利益額だけでなく、損失が生じた場面や相場環境が変化した場合も想定しましょう。
+     </p>
+    </section>
+    <section class="anime-item" id="leverage">
+     <h2 class="anime-title">
+      実効レバレッジの表示機能
+     </h2>
+     <p>
+      今回の改善では、FXお客様サイトの
+      <strong>
+       「ホーム」と「資産状況」
+      </strong>
+      、スマートフォンでは
+      <strong>
+       「口座状況」
+      </strong>
+      に実効レバレッジが表示されます。
+     </p>
+     <p>
+      実効レバレッジは、FX口座内の総資産に対して何倍の取引を行っているかを示す倍率で、リスクの目安となる指標です。
+     </p>
+     <div class="formula">
+      <strong>
+       一般的な概念の計算例
+      </strong>
+      <br/>
+      取引の想定元本 200万円 ÷ 口座資産 50万円 ＝
+      <strong>
+       4倍
+      </strong>
+     </div>
+     <p>
+      この数値は理解のための架空例です。松井証券が実際に画面へ表示する数値の正式な算出方法を示すものではありません。
+     </p>
+    </section>
+    <section class="anime-item" id="risk">
+     <h2 class="anime-title">
+      実効レバレッジが高いとどうなる？
+     </h2>
+     <p>
+      一般に実効レバレッジが高いほど、為替レートの変化に対する口座資産の損益変動が大きくなりやすくなります。利益だけでなく
+      <strong>
+       損失も拡大する
+      </strong>
+      点に注意が必要です。
+     </p>
+     <p>
+      相場が急変すると証拠金維持率が低下し、ロスカットが行われる可能性があります。急激な変動や流動性の低下などにより、想定した水準で決済できず、預けた資金を上回る損失が発生する場合もあります。
+     </p>
+     <p>
+      実効レバレッジが低くても損失がなくなるわけではありません。口座残高、保有ポジション、相場変動を合わせて確認することが重要です。
+     </p>
+    </section>
+    <section class="anime-item" id="update">
+     <h2 class="anime-title">
+      FXアプリのアップデートについて
+     </h2>
+     <p>
+      2026年10月17日のメンテナンス終了後、FXアプリは更新が必要になりました。松井証券の発表では、旧バージョン
+      <strong>
+       Ver.6.2.0
+      </strong>
+      はメンテナンス後に利用できなくなると案内されています。
+     </p>
+     <div class="table-scroll">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          対象
+         </th>
+         <th>
+          10月17日更新時の新バージョン
+         </th>
+         <th>
+          旧バージョン
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th>
+          iPhone版
+         </th>
+         <td>
+          Ver.6.3.0
+         </td>
+         <td>
+          Ver.6.2.0
+         </td>
+        </tr>
+        <tr>
+         <th>
+          Android版
+         </th>
+         <td>
+          Ver.6.3.0
+         </td>
+         <td>
+          Ver.6.2.0
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      アプリ起動時の「更新する」または「アップデート」をタップします。案内が表示されない場合はApp StoreまたはGoogle Playストアから更新します。
+     </p>
+     <p class="note">
+      Ver.6.3.0は
+      <strong>
+       2026年10月17日の更新時点
+      </strong>
+      のバージョンです。現在の最新版を意味するものではありません。
+     </p>
+    </section>
+    <section class="anime-item" id="share">
+     <h2 class="anime-title">
+      FXアプリからのシミュレーション結果共有
+     </h2>
+     <p>
+      公式発表では、FXアプリの
+      <strong>
+       「共有」
+      </strong>
+      ボタンからシミュレーション結果をSNSなどへ共有できると案内されています。
+     </p>
+     <p>
+      共有するときは、過去の相場による
+      <strong>
+       試算結果であって実際の運用実績ではない
+      </strong>
+      ことが伝わるようにしましょう。画面に口座情報などが含まれていないかも、投稿前に確認することをおすすめします。
+     </p>
+    </section>
+    <section class="anime-item" id="proscons">
+     <h2 class="anime-title">
+      今回の機能改善のメリットと注意点
+     </h2>
+     <div class="table-scroll">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          メリット
+         </th>
+         <th>
+          注意点
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          自動売買の設定を事前に検討しやすい
+         </td>
+         <td>
+          過去の成績は将来の利益を保証しない
+         </td>
+        </tr>
+        <tr>
+         <td>
+          過去相場を使って損益イメージを確認できる
+         </td>
+         <td>
+          相場環境・約定状況・コストで結果が変わり得る
+         </td>
+        </tr>
+        <tr>
+         <td>
+          実効レバレッジを把握しやすい
+         </td>
+         <td>
+          FXは元本保証ではなく、レバレッジで損失が拡大し得る
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      便利な機能が追加されたことと、取引自体のリスクが小さくなったことは同じではありません。
+     </p>
+    </section>
+    <section class="anime-item" id="faq">
+     <h2 class="anime-title">
+      よくある質問（FAQ）
+     </h2>
+     <details>
+      <summary>
+       松井証券FXの新機能はいつ追加された？
+      </summary>
+      <p>
+       2026年10月16日に発表され、10月17日の機能改善として案内されました。
+      </p>
+     </details>
+     <details>
+      <summary>
+       自動売買シミュレーションでは何ができる？
+      </summary>
+      <p>
+       通貨ペア・期間・設定値を入力し、過去の相場に基づく自動売買の損益を試算できます。
+      </p>
+     </details>
+     <details>
+      <summary>
+       シミュレーションだけで注文される？
+      </summary>
+      <p>
+       シミュレーションは試算です。実際の注文とは別で、注文する場合は注文画面で内容を確認する必要があります。
+      </p>
+     </details>
+     <details>
+      <summary>
+       過去のシミュレーション結果は将来も再現する？
+      </summary>
+      <p>
+       再現する保証はありません。相場環境や約定状況などによって結果は異なります。
+      </p>
+     </details>
+     <details>
+      <summary>
+       実効レバレッジとは？
+      </summary>
+      <p>
+       FX口座内の総資産の何倍の取引を行っているかを示す倍率です。
+      </p>
+     </details>
+     <details>
+      <summary>
+       FXアプリの更新は必要？
+      </summary>
+      <p>
+       2026年10月17日のメンテナンス終了後に更新が必要です。当時の新バージョンはiPhone・AndroidともにVer.6.3.0です。
+      </p>
+     </details>
+     <details>
+      <summary>
+       シミュレーション結果をSNSで共有できる？
+      </summary>
+      <p>
+       FXアプリの「共有」ボタンからSNSなどへ共有できると公式発表で案内されています。
+      </p>
+     </details>
+    </section>
+    <section class="anime-item" id="summary">
+     <h2 class="anime-title">
+      まとめ
+     </h2>
+     <p>
+      2026年10月17日の松井証券FXの機能改善では、過去の相場を使う自動売買シミュレーション、実効レバレッジ表示、FXアプリの更新が実施されました。
+     </p>
+     <p>
+      <strong>
+       シミュレーションは設定を検討するための参考情報であり、利益の保証ではありません。
+      </strong>
+      取引する場合は、資金やレバレッジ、相場急変のリスクを確認しましょう。
+     </p>
+    </section>
+    <section class="anime-item">
+     <h2 class="anime-title">
+      関連記事・参考情報
+     </h2>
+     <div class="related">
+      <a href="risk-off.html">
+       リスクオフとは？市場の変動を解説
+      </a>
+      <a href="column.html">
+       投資コラム・解説記事一覧
+      </a>
+      <a href="https://www.matsui.co.jp/news/2026/detail_1016_02.html" rel="noopener noreferrer" target="_blank">
+       松井証券：2026年10月16日の公式発表
+      </a>
+      <a href="profile.html">
+       運営者プロフィール
+      </a>
+     </div>
+    </section>
+    <section aria-labelledby="disclaimer" class="anime-item">
+     <h2 class="anime-title" id="disclaimer">
+      ご利用にあたっての注意事項
+     </h2>
+     <p>
+      本記事は一般的な情報提供を目的とし、投資の勧誘や特定の売買手法の推奨を目的とするものではありません。FX（外国為替証拠金取引）は元本保証ではなく、為替変動やレバレッジによって大きな損失が生じることがあり、預託した証拠金を上回る損失が発生する可能性もあります。取引前に最新の取引ルール、契約締結前交付書面、手数料・リスク説明を確認し、ご自身の判断と責任でご利用ください。
+     </p>
+    </section>
+   </main>
+  </div>
+  <div id="footer">
+  </div>
+  <script defer="" src="include.js">
+  </script>
+  <script defer="" src="sidebar.js">
+  </script>
+ </body>
+</html>
+

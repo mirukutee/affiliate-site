@@ -1020,22 +1020,23 @@
 
 <!-- 常駐ボタン -->
 <script>
-  (function () {
-    const btn = document.querySelector('.back-to-top');
-    if (!btn) return;
-    const SHOW_AT = 320;
 
-    const onScroll = () => {
-      if (window.scrollY > SHOW_AT) {
-        btn.classList.add('is-visible');
-      } else {
-        btn.classList.remove('is-visible');
-      }
-    };
+(function () {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
 
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  })();
+  const SHOW_AT = 320;
+
+  const onScroll = () => {
+    btn.classList.toggle('is-visible', window.scrollY > SHOW_AT);
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  window.addEventListener('load', () => {
+    requestAnimationFrame(onScroll);
+  }, { once: true });
+})();
 </script>
 
 <!-- サイト内検索候補 -->

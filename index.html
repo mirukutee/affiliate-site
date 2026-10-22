@@ -47,7 +47,16 @@
   <link rel="stylesheet" href="sidebar.css" />
 
   <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="diagnosis.css" />
+  
+<link rel="preload"
+      href="diagnosis.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+  <link rel="stylesheet" href="diagnosis.css">
+</noscript>
+
   <link rel="stylesheet" href="top-index.css" />
   <link rel="stylesheet" href="remaketop-sp.css">
  <link rel="stylesheet" href="remaketop-pro.css">

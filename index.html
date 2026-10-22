@@ -47,8 +47,8 @@
   <link rel="stylesheet" href="sidebar.css" />
 
   <link rel="stylesheet" href="header.css" />
-
-<link rel="stylesheet" href="diagnosis.css" />
+  
+  <link rel="stylesheet" href="diagnosis.css" />
 
   <link rel="stylesheet" href="top-index.css" />
   <link rel="stylesheet" href="remaketop-sp.css">
@@ -1020,31 +1020,22 @@
 
 <!-- 常駐ボタン -->
 <script>
-(function () {
-  const btn = document.querySelector('.back-to-top');
-  if (!btn) return;
+  (function () {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    const SHOW_AT = 320;
 
-  const SHOW_AT = 320;
+    const onScroll = () => {
+      if (window.scrollY > SHOW_AT) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    };
 
-  const onScroll = () => {
-    btn.classList.toggle('is-visible', window.scrollY > SHOW_AT);
-  };
-
-  // スクロール時の表示切り替え
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // 初期表示の確認
-  requestAnimationFrame(onScroll);
-
-  // ボタンを押したらページ上部へ戻る
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-})();
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
 </script>
 
 <!-- サイト内検索候補 -->

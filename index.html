@@ -69,6 +69,21 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </noscript>
 
+<style>
+/* トップページ：共通パーツ読み込み前のレイアウト確保 */
+@media (min-width: 769px) {
+  #sidebar {
+    flex: 0 0 240px;
+    min-width: 240px;
+  }
+
+  #main {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+</style>
+
   <!-- AMP -->
   <link rel="amphtml" href="AMP/index.html" />
 
@@ -261,6 +276,8 @@
 }
 </script>
 </head>
+
+
 <body>
 <a class="skip-link" href="#main">メインコンテンツへ移動</a>
 

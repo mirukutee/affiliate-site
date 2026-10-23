@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const reveal = (el) => {
     if (!el) return;
@@ -8,8 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const inject = (id, url) => {
     const mount = document.getElementById(id);
     if (!mount) return;
+
     fetch(url, { cache: "no-cache" })
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+        return res.text();
+      })
       .then(html => {
         mount.innerHTML = html;
         reveal(mount);
@@ -17,6 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error(`[include] ${url} load error:`, err));
   };
 
+  // ヘッダーは従来どおり読み込む
   inject("header", "/header.html");
-  inject("footer", "/footer.html");
+
+  // フッターだけページ読み込み完了後に1秒遅延
+  const loadFooter = () => {
+    setTimeout(() => {
+      inject("footer", "/footer.html");
+    }, 1000);
+  };
+
+  if (document.readyState === "complete") {
+    loadFooter();
+  } else {
+    window.addEventListener("load", loadFooter, { once: true });
+  }
 });

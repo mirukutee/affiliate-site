@@ -183,7 +183,7 @@ html, body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
-  /* background: linear-gradient(90deg, #c2cfda, #a1e0f0 60%, #64c5cf); */
+  background: linear-gradient(90deg, #c2cfda, #a1e0f0 60%, #64c5cf);
   background-attachment: scroll;   /* fixed → scroll */
   background-size: cover;
   position: relative;
@@ -251,10 +251,9 @@ footer {
   flex: 1;
   margin-top: 60px;
   margin-bottom: 50px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 20px;
 }
-
 
 
 

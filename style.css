@@ -251,9 +251,10 @@ footer {
   flex: 1;
   margin-top: 60px;
   margin-bottom: 50px;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 20px;
 }
+
 
 
 

@@ -171,7 +171,7 @@
   line-height: 1.75;
   color: #2f3f52;
   letter-spacing: 0.01em;
-  text-wrap: pretty;
+  /* text-wrap: pretty; */
 }
 
 .top-hero__actions {

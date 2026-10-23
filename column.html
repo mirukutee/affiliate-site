@@ -55,7 +55,15 @@
 </noscript>
 
 
-<link href="menu-card.css" rel="stylesheet"/>
+<link
+  rel="preload"
+  as="style"
+  href="menu-card.css"
+  onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+  <link href="menu-card.css" rel="stylesheet">
+</noscript>
 
 <link href="sidebar.css" rel="stylesheet"/>
 <link href="header.css" rel="stylesheet"/>

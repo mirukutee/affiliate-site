@@ -21,12 +21,12 @@
   max-width: 1320px;
 }
 
-.clm-page #main {
+/* .clm-page #main {
   background: var(--clm-surface);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(219, 230, 239, 0.8);
   box-shadow: 0 12px 40px rgba(15, 35, 55, 0.06);
-}
+}*/
 
 .clm-page .breadcrumb {
   margin-bottom: 1rem;

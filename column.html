@@ -48,7 +48,11 @@
 <link href="https://cdnjs.cloudflare.com/" rel="dns-prefetch"/>
 
 
-<link href="table.css" rel="stylesheet"/>
+<link rel="preload" as="style" href="table.css"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link href="table.css" rel="stylesheet">
+</noscript>
 
 
 <link href="menu-card.css" rel="stylesheet"/>

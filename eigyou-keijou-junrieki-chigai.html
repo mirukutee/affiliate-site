@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0653a6">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ミルクティー情報発信">
+    <title>営業利益・経常利益・純利益の違いとは？決算書の利益の種類と見方を初心者向けに解説</title>
+    <meta name="description" content="営業利益・経常利益・純利益の違いを比較表と計算例で解説。営業黒字でも最終赤字になる理由、利益率、キャッシュフローとの違いも初心者向けに整理します。">
+    <link rel="canonical" href="https://tousiportal.jp/eigyou-keijou-junrieki-chigai.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="営業利益・経常利益・純利益の違いとは？決算書の利益の種類と見方を初心者向けに解説">
+    <meta property="og:description" content="営業利益・経常利益・純利益の違いを比較表と計算例で解説。営業黒字でも最終赤字になる理由、利益率、キャッシュフローとの違いも初心者向けに整理します。">
+    <meta property="og:url" content="https://tousiportal.jp/eigyou-keijou-junrieki-chigai.html">
+    <meta property="og:site_name" content="投資ポータル.jp">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://tousiportal.jp/sonota/eigyou-keijou-junrieki-ogp.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="営業利益・経常利益・純利益の違いを階段状に解説する画像">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="営業利益・経常利益・純利益の違いとは？決算書の利益の種類と見方を初心者向けに解説">
+    <meta name="twitter:description" content="営業利益・経常利益・純利益の違いを比較表と計算例で解説。営業黒字でも最終赤字になる理由、利益率、キャッシュフローとの違いも初心者向けに整理します。">
+    <meta name="twitter:image" content="https://tousiportal.jp/sonota/eigyou-keijou-junrieki-ogp.webp">
+    <meta name="twitter:site" content="@QwZd0ksG2138610">
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-card.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="header.css">
+
+    <style>
+      body.profit-page #main {
+    min-width:0;
+    max-width:1120px;
+    padding:22px;
+    background:#f7fafc
+}
+.profit-page .anime-item {
+    padding:23px;
+    background:#fff;
+    border:1px solid #d6e3ec;
+    box-shadow:none
+}
+.profit-page .title {
+    font-size:clamp(1.5rem,3vw,2.15rem);
+    line-height:1.5;
+    color:#103753
+}
+.profit-page .anime-title {
+    color:#123f5b;
+    border-color:#087f8c
+}
+.profit-page main p,.profit-page main li {
+    line-height:1.85;
+    margin:10px 0
+}
+.profit-page main a {
+    color:#075e9b;
+    text-decoration:underline
+}
+.profit-page .hero-img {
+    width:100%;
+    max-width:850px;
+    height:auto;
+    display:block;
+    margin:16px auto;
+    border-radius:12px
+}
+.profit-page .table-scroll {
+    overflow-x:auto;
+    max-width:100%;
+    margin:16px 0
+}
+.profit-page .hub-table {
+    min-width:740px;
+    width:100%;
+    font-size:.9rem
+}
+.profit-page .hub-table th,.profit-page .hub-table td {
+    padding:11px;
+    text-align:left;
+    vertical-align:top
+}
+.profit-page .hub-table tbody th {
+    background:#eef6fa;
+    color:#12435e
+}
+.profit-page .flow {
+    display:grid;
+    gap:7px;
+    margin:16px 0
+}
+.profit-page .flow-step {
+    padding:13px 16px;
+    border-left:5px solid #087f8c;
+    background:#eff7fa;
+    border-radius:7px
+}
+.profit-page .flow-step strong {
+    display:block;
+    color:#123f5b
+}
+.profit-page .flow-arrow {
+    text-align:center;
+    color:#236f87;
+    font-weight:bold
+}
+.profit-page .note {
+    padding:14px;
+    background:#fff8e8;
+    border-left:4px solid #c39a38;
+    border-radius:6px
+}
+.profit-page .formula {
+    padding:12px 15px;
+    background:#edf6ff;
+    border-radius:6px;
+    font-weight:700
+}
+.profit-page .toc ul {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px 20px
+}
+.profit-page .checklist li {
+    list-style:none;
+    padding:5px 0
+}
+.profit-page .checklist li::before {
+    content:'□ ';
+    color:#087f8c;
+    font-weight:bold
+}
+.profit-page details {
+    border:1px solid #d5e2eb;
+    border-radius:8px;
+    margin:9px 0;
+    padding:13px;
+    background:#fafcfe
+}
+.profit-page summary {
+    cursor:pointer;
+    font-weight:700;
+    color:#16465f
+}
+.profit-page .related a {
+    display:block;
+    padding:9px;
+    border-bottom:1px solid #e4edf2
+}
+.profit-page section[id] {
+    scroll-margin-top:85px
+}
+@media(max-width:768px) {
+body.profit-page #main {
+    padding:10px
+}
+.profit-page .anime-item {
+    padding:15px 12px
+}
+.profit-page .toc ul {
+    grid-template-columns:1fr
+}
+.profit-page .hub-table {
+    min-width:660px;
+    font-size:.82rem
+}
+
+}
+    </style>
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/eigyou-keijou-junrieki-chigai.html#article",
+  "headline": "営業利益・経常利益・純利益の違いとは？決算書の利益の種類と見方を初心者向けに解説",
+  "description": "営業利益・経常利益・純利益の違いを比較表と計算例で解説。営業黒字でも最終赤字になる理由、利益率、キャッシュフローとの違いも初心者向けに整理します。",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "inLanguage": "ja",
+  "articleSection": "株式投資・企業分析",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/eigyou-keijou-junrieki-chigai.html"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://tousiportal.jp/#person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tousiportal.jp/#organization",
+    "name": "投資ポータル.jp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tousiportal.jp/favicon-512.png"
+    }
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/eigyou-keijou-junrieki-ogp.webp"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "記事",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "営業利益・経常利益・純利益の違い",
+      "item": "https://tousiportal.jp/eigyou-keijou-junrieki-chigai.html"
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="profit-page" id="top">
+    <div id="header">
+    </div>
+    <div class="container">
+      <aside id="sidebar">
+      </aside>
+      <main id="main" tabindex="-1">
+        <nav aria-label="パンくず">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="index.html">ホーム</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="column.html">記事</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              利益の種類の違い
+            </li>
+          </ol>
+        </nav>
+        <p>
+          株式投資・企業分析
+        </p>
+        <h1 class="title">
+          営業利益・経常利益・純利益の違いとは？決算書の利益の種類と見方を初心者向けに解説
+        </h1>
+        <p>
+          <time datetime="2026-10-27">公開・更新：2026年10月27日</time> ／ <a href="profile.html">運営者プロフィール</a>
+        </p>
+        <p>
+          「営業黒字なのに最終赤字？」という決算ニュースの疑問を、利益の種類・計算例・利益率・キャッシュフローの順に整理します。
+        </p>
+        <img class="hero-img" src="sonota/eigyou-keijou-junrieki-ogp.webp" alt="売上高から売上総利益、営業利益、経常利益、純利益へ進む階段状の利益の種類の図" width="1200" height="630" fetchpriority="high" decoding="async">
+        <section class="anime-item toc">
+          <h2 class="anime-title">
+            この記事の目次
+          </h2>
+          <ul>
+            <li>
+              <a href="#types">利益の種類を比較</a>
+            </li>
+            <li>
+              <a href="#flow">利益の流れ</a>
+            </li>
+            <li>
+              <a href="#example">計算例</a>
+            </li>
+            <li>
+              <a href="#operating">営業利益</a>
+            </li>
+            <li>
+              <a href="#ordinary">経常利益</a>
+            </li>
+            <li>
+              <a href="#net">純利益</a>
+            </li>
+            <li>
+              <a href="#red">営業黒字と最終赤字</a>
+            </li>
+            <li>
+              <a href="#reverse">営業赤字と最終黒字</a>
+            </li>
+            <li>
+              <a href="#margin">利益率</a>
+            </li>
+            <li>
+              <a href="#cash">キャッシュフロー</a>
+            </li>
+            <li>
+              <a href="#check">ニュースのチェック</a>
+            </li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </section>
+        <section class="anime-item" id="why" aria-labelledby="why-title">
+          <h2 class="anime-title" id="why-title">
+            決算書にはなぜ複数の利益がある？
+          </h2>
+          <p>
+            売上高がそのまま企業の儲けになるわけではありません。仕入れや製造の費用、販売・管理の費用、利息などの営業外損益、特別損益、税金を段階的に反映することで、企業の収益を異なる角度から確認できます。
+          </p>
+          <p>
+            ここでは<strong>日本基準の一般的な損益計算書</strong>を中心に解説します。IFRS（国際会計基準）や米国会計基準では表示項目・定義・区分が異なる場合があります。
+          </p>
+        </section>
+        <section class="anime-item" id="types" aria-labelledby="types-title">
+          <h2 class="anime-title" id="types-title">
+            利益の種類を一覧表で比較
+          </h2>
+          <div class="table-scroll" role="region" aria-label="利益5種類の比較表" tabindex="0">
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    利益
+                  </th>
+                  <th scope="col">
+                    意味
+                  </th>
+                  <th scope="col">
+                    計算の考え方
+                  </th>
+                  <th scope="col">
+                    何が分かるか
+                  </th>
+                  <th scope="col">
+                    注意点
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    売上総利益（粗利益）
+                  </th>
+                  <td>
+                    売上から売上原価を引いた利益
+                  </td>
+                  <td>
+                    売上高−売上原価
+                  </td>
+                  <td>
+                    商品・サービスの基本的な採算
+                  </td>
+                  <td>
+                    販管費はまだ反映していない
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    営業利益
+                  </th>
+                  <td>
+                    主に本業の営業活動による利益
+                  </td>
+                  <td>
+                    売上総利益−販管費
+                  </td>
+                  <td>
+                    本業の収益力の目安
+                  </td>
+                  <td>
+                    業種・会計基準で定義や表示が異なる
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    経常利益
+                  </th>
+                  <td>
+                    営業外損益を含めた利益
+                  </td>
+                  <td>
+                    営業利益＋営業外収益−営業外費用
+                  </td>
+                  <td>
+                    利息などを含む通常の収益状況
+                  </td>
+                  <td>
+                    日本基準に特徴的な指標
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    税引前当期純利益
+                  </th>
+                  <td>
+                    税金を反映する前の利益
+                  </td>
+                  <td>
+                    経常利益＋特別利益−特別損失
+                  </td>
+                  <td>
+                    特別損益を含めた税引前の結果
+                  </td>
+                  <td>
+                    一時的な要因で変動する
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    当期純利益
+                  </th>
+                  <td>
+                    法人税等を反映した利益
+                  </td>
+                  <td>
+                    税引前当期純利益−法人税等
+                  </td>
+                  <td>
+                    最終的な会計上の利益
+                  </td>
+                  <td>
+                    連結では親会社帰属分と区別する
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">
+            連結決算の「当期純利益」は非支配株主に帰属する利益を含む場合があります。<strong>親会社株主に帰属する当期純利益</strong>とは必ずしも一致しません。
+          </p>
+        </section>
+        <section class="anime-item" id="flow" aria-labelledby="flow-title">
+          <h2 class="anime-title" id="flow-title">
+            売上高から純利益までの流れ
+          </h2>
+          <div class="flow" aria-label="売上高から当期純利益までの流れ">
+            <div class="flow-step">
+              <strong>売上高</strong>売上原価を差し引く
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              ↓
+            </div>
+            <div class="flow-step">
+              <strong>売上総利益</strong>販売費及び一般管理費を差し引く
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              ↓
+            </div>
+            <div class="flow-step">
+              <strong>営業利益</strong>営業外収益・営業外費用を加減
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              ↓
+            </div>
+            <div class="flow-step">
+              <strong>経常利益</strong>特別利益・特別損失を加減
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              ↓
+            </div>
+            <div class="flow-step">
+              <strong>税引前当期純利益</strong>法人税等を反映
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              ↓
+            </div>
+            <div class="flow-step">
+              <strong>当期純利益</strong>最終段階
+            </div>
+          </div>
+          <p class="note">
+            日本基準の一般的な損益計算書を簡略化した図です。実際の表示は企業や会計基準、連結・個別の別によって異なります。
+          </p>
+        </section>
+        <section class="anime-item" id="example" aria-labelledby="example-title">
+          <h2 class="anime-title" id="example-title">
+            架空企業の決算で計算してみよう
+          </h2>
+          <p>
+            以下は<strong>理解のための架空の企業・架空の数字</strong>です。実在企業の決算ではありません。
+          </p>
+          <div class="table-scroll">
+            <table class="hub-table" style="min-width:380px">
+              <thead>
+                <tr>
+                  <th>
+                    項目
+                  </th>
+                  <th>
+                    金額（億円）
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    売上高
+                  </th>
+                  <td>
+                    1,000
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    売上原価
+                  </th>
+                  <td>
+                    600
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    売上総利益
+                  </th>
+                  <td>
+                    400
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    販売費及び一般管理費
+                  </th>
+                  <td>
+                    250
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    営業利益
+                  </th>
+                  <td>
+                    150
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    営業外収益
+                  </th>
+                  <td>
+                    10
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    営業外費用
+                  </th>
+                  <td>
+                    30
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    経常利益
+                  </th>
+                  <td>
+                    130
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    特別利益
+                  </th>
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    特別損失
+                  </th>
+                  <td>
+                    35
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    税引前当期純利益
+                  </th>
+                  <td>
+                    100
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    法人税等
+                  </th>
+                  <td>
+                    30
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    当期純利益
+                  </th>
+                  <td>
+                    70
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="formula">
+            1,000−600＝400（売上総利益）<br>400−250＝150（営業利益）<br>150＋10−30＝130（経常利益）<br>130＋5−35＝100（税引前当期純利益）<br>100−30＝70（当期純利益）
+          </p>
+        </section>
+        <section class="anime-item" id="operating" aria-labelledby="operating-title">
+          <h2 class="anime-title" id="operating-title">
+            営業利益とは？
+          </h2>
+          <p>
+            <strong>営業利益</strong>は、売上総利益から販売費及び一般管理費を差し引いたもので、本業の収益力を考える代表的な指標です。人件費や広告宣伝費などを負担して、どれだけ利益が残ったかを見る手掛かりになります。
+          </p>
+          <p>
+            ただし、金融業など業種によって利益表示が異なり、IFRSなどでは営業利益の定義や表示方法が日本基準と一致しない場合があります。
+          </p>
+        </section>
+        <section class="anime-item" id="ordinary" aria-labelledby="ordinary-title">
+          <h2 class="anime-title" id="ordinary-title">
+            経常利益とは？
+          </h2>
+          <p>
+            <strong>経常利益＝営業利益＋営業外収益−営業外費用</strong>です。例えば預金や貸付による受取利息は営業外収益、借入金の支払利息は営業外費用になる場合があります。
+          </p>
+          <p>
+            経常利益は日本基準で使われる代表的な指標です。<strong>IFRSの財務諸表には通常、同じ名称の項目はありません。</strong>海外企業を比較する際は同じ名前の利益があると決めつけないようにしましょう。
+          </p>
+        </section>
+        <section class="anime-item" id="net" aria-labelledby="net-title">
+          <h2 class="anime-title" id="net-title">
+            純利益とは？
+          </h2>
+          <p>
+            税引前当期純利益に法人税等を反映した、最終段階の会計上の利益が当期純利益です。連結決算では、親会社の株主に帰属する部分を示す<strong>親会社株主に帰属する当期純利益</strong>が重要です。
+          </p>
+          <p>
+            EPS（1株当たり利益）は、基本的に親会社の普通株主に帰属する利益を期中平均株式数などで割って算定する指標です。株式数の変化も影響するため、利益総額と合わせて見ます。
+          </p>
+        </section>
+        <section class="anime-item" id="red" aria-labelledby="red-title">
+          <h2 class="anime-title" id="red-title">
+            営業黒字なのに最終赤字になる理由
+          </h2>
+          <p>
+            本業で黒字でも、特別損失などが大きければ最終赤字になることがあります。以下も<strong>架空例</strong>です。
+          </p>
+          <p class="formula">
+            営業利益 ＋100億円<br>営業外損益 −10億円 → 経常利益90億円<br>特別損失 −150億円 → 税引前当期純損失60億円<br>法人税等 0億円（簡略化）<br>＝ <strong>当期純損失60億円</strong>
+          </p>
+          <p>
+            例えば固定資産の減損損失や事業撤退に伴う損失などが影響します。ただし、<strong>特別損失がすべて一時的とは限らず、発生時に現金支出を伴うとも限りません。</strong>注記やキャッシュフローも確認しましょう。
+          </p>
+        </section>
+        <section class="anime-item" id="reverse" aria-labelledby="reverse-title">
+          <h2 class="anime-title" id="reverse-title">
+            営業赤字なのに最終黒字になることはある？
+          </h2>
+          <p>
+            あります。例えば営業損失が20億円でも、資産売却益などが50億円あり、ほかの損益・税金を差し引いても利益が残れば最終黒字になり得ます（架空例）。
+          </p>
+          <p>
+            ただし資産売却益などが毎年続くとは限りません。<strong>継続的な収益力と一時的な利益を分けて評価</strong>することが重要です。
+          </p>
+        </section>
+        <section class="anime-item" id="margin" aria-labelledby="margin-title">
+          <h2 class="anime-title" id="margin-title">
+            利益率で比較すると何が分かる？
+          </h2>
+          <p>
+            利益の金額だけでなく、売上高に対する割合を見ると採算を比較しやすくなります。先ほどの架空例（売上高1,000億円）では次のとおりです。
+          </p>
+          <p class="formula">
+            売上総利益率＝400÷1,000×100＝40％<br>営業利益率＝150÷1,000×100＝15％<br>純利益率＝70÷1,000×100＝7％
+          </p>
+          <p>
+            同業他社との比較や過去数年間の推移を見ると変化に気付きやすくなります。ただし業種によって費用構造が違うため、異業種間で単純に高低を比較しないでください。
+          </p>
+        </section>
+        <section class="anime-item" id="cash" aria-labelledby="cash-title">
+          <h2 class="anime-title" id="cash-title">
+            利益とキャッシュフローは何が違う？
+          </h2>
+          <p>
+            利益は会計上の収益と費用に基づく数字で、現金の増減とは一致しません。売掛金は売上を計上しても代金回収がまだの状態を生み、減価償却費は支出時期と費用計上時期が異なります。設備投資は多額の現金支出につながる場合があります。
+          </p>
+          <p class="note">
+            <strong>黒字＝現金が増えている、ではありません。</strong>フリーキャッシュフローの記事は既存資料でURLを確認できなかったため、推測したリンクを設置していません。URL確認後に追加してください。
+          </p>
+        </section>
+        <section class="anime-item" id="check" aria-labelledby="check-title">
+          <h2 class="anime-title" id="check-title">
+            決算ニュースで確認したいポイント
+          </h2>
+          <ul class="checklist">
+            <li>
+              売上高は増えているか
+            </li>
+            <li>
+              営業利益は増えているか
+            </li>
+            <li>
+              営業利益率は改善しているか
+            </li>
+            <li>
+              経常利益と営業利益に大きな差がないか
+            </li>
+            <li>
+              特別損益が発生していないか
+            </li>
+            <li>
+              最終利益の増減理由は何か
+            </li>
+            <li>
+              一時的な要因による増益・減益ではないか
+            </li>
+            <li>
+              前年同期や会社予想と比較してどうか
+            </li>
+            <li>
+              キャッシュフローの状況はどうか
+            </li>
+          </ul>
+          <p>
+            数字だけでなく、決算短信の説明や注記、会社予想も合わせて読みましょう。
+          </p>
+        </section>
+        <section class="anime-item" id="faq" aria-labelledby="faq-title">
+          <h2 class="anime-title" id="faq-title">
+            よくある質問（FAQ）
+          </h2>
+          <details>
+            <summary>
+              営業利益と経常利益は何が違いますか？
+            </summary>
+            <p>
+              経常利益は営業利益に営業外収益と営業外費用を反映した利益です。
+            </p>
+          </details>
+          <details>
+            <summary>
+              営業利益と純利益は何が違いますか？
+            </summary>
+            <p>
+              営業利益は主に本業の利益、純利益は営業外損益・特別損益・税金なども反映した利益です。
+            </p>
+          </details>
+          <details>
+            <summary>
+              売上総利益とは何ですか？
+            </summary>
+            <p>
+              売上高から売上原価を差し引いた利益で、粗利益とも呼びます。
+            </p>
+          </details>
+          <details>
+            <summary>
+              営業黒字なのに最終赤字になるのはなぜですか？
+            </summary>
+            <p>
+              特別損失や営業外費用などが営業利益を上回る場合があるためです。
+            </p>
+          </details>
+          <details>
+            <summary>
+              経常利益はIFRSにもありますか？
+            </summary>
+            <p>
+              IFRSの財務諸表には通常、日本基準と同じ経常利益という名称の項目はありません。
+            </p>
+          </details>
+          <details>
+            <summary>
+              当期純利益と親会社株主に帰属する当期純利益は同じですか？
+            </summary>
+            <p>
+              必ずしも同じではありません。連結の当期純利益には非支配株主に帰属する利益が含まれる場合があります。
+            </p>
+          </details>
+          <details>
+            <summary>
+              利益が増えれば現金も増えますか？
+            </summary>
+            <p>
+              必ずしも増えません。売掛金の増加、設備投資、減価償却などで現金の動きと利益は異なります。
+            </p>
+          </details>
+          <details>
+            <summary>
+              企業分析ではどの利益を重視すればよいですか？
+            </summary>
+            <p>
+              目的によって異なります。営業利益・経常利益・純利益・利益率・キャッシュフローを組み合わせて確認しましょう。
+            </p>
+          </details>
+        </section>
+        <section class="anime-item" id="summary" aria-labelledby="summary-title">
+          <h2 class="anime-title" id="summary-title">
+            まとめ
+          </h2>
+          <p>
+            売上総利益は基本的な採算、営業利益は本業の収益力、経常利益は営業外損益を含む状況、税引前当期純利益は特別損益まで含む結果、当期純利益は税金などを反映した最終段階の利益を表します。
+          </p>
+          <p>
+            <strong>どれか一つの利益だけで企業の良し悪しは判断できません。</strong>利益率、増減理由、会計基準、キャッシュフローも併せて確認しましょう。
+          </p>
+        </section>
+        <section class="anime-item" id="related" aria-labelledby="related-title">
+          <h2 class="anime-title" id="related-title">
+            関連記事・一次情報
+          </h2>
+          <div class="related">
+            <a href="kessan-happyou-toha.html">決算発表とは？</a><a href="jouhou-shuusei-kahou-shuusei-toha.html">上方修正・下方修正とは？</a><a href="kabuka-naze-ugoku.html">株価はなぜ上下するのか？</a><a href="kabukaisetu.html">株式投資の基礎</a>
+          </div>
+          <h3>
+            一次情報の確認先
+          </h3>
+          <p>
+            <a href="https://disclosure2.edinet-fsa.go.jp/">金融庁 EDINET</a> ／ <a href="https://www.jpx.co.jp/">日本取引所グループ（JPX）</a> ／ <a href="https://www.asb-j.jp/">企業会計基準委員会（ASBJ）</a> ／ <a href="https://www.ifrs.org/">IFRS Foundation</a>
+          </p>
+          <p>
+            実際の企業分析では各社の決算短信・有価証券報告書と注記を確認してください。
+          </p>
+        </section>
+        <section class="anime-item">
+          <h2 class="anime-title">
+            関連記事を画像で確認
+          </h2>
+          <img src="sonota/eigyou-keijou-junrieki-link.webp" width="900" height="420" loading="lazy" decoding="async" alt="営業利益・経常利益・純利益の違いを決算書の利益の一覧で解説する専用リンク画像">
+        </section>
+        <section class="anime-item">
+          <h2 class="anime-title">
+            ご利用にあたっての注意事項
+          </h2>
+          <p>
+            本記事は金融教育を目的とした一般的な情報であり、特定銘柄の売買を推奨するものではありません。会計基準・企業の事業内容によって利益の表示は異なります。投資判断は最新の開示資料を確認し、ご自身の判断と責任で行ってください。
+          </p>
+        </section>
+      </main>
+    </div>
+    <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">▲</a>
+    <div id="footer">
+    </div>
+    <script src="include.js" defer>
+    </script>
+    <script src="sidebar.js" defer>
+    </script>
+  </body>
+</html>

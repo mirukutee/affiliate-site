@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0653a6" name="theme-color"/>
+<meta content="index, follow" name="robots"/>
+<meta content="ミルクティー情報発信" name="author"/>
+<title>ROICとは？ROE・ROAとの違いと企業の資本効率の見方を初心者向けに解説</title>
+<meta content="ROIC・ROE・ROAの違いを比較表と計算例で解説。NOPAT、投下資本、ROEの注意点、WACCとの関係、FCFや株主還元の見方を初心者向けに整理します。" name="description"/>
+<link href="https://tousiportal.jp/roic-roe-roa-chigai.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="ROICとは？ROE・ROAとの違いと企業の資本効率の見方を初心者向けに解説" property="og:title"/>
+<meta content="ROIC・ROE・ROAの違いを比較表と計算例で解説。NOPAT、投下資本、ROEの注意点、WACCとの関係、FCFや株主還元の見方を初心者向けに整理します。" property="og:description"/>
+<meta content="https://tousiportal.jp/roic-roe-roa-chigai.html" property="og:url"/>
+<meta content="投資ポータル.jp" property="og:site_name"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://tousiportal.jp/sonota/roic-roe-roa-chigai-ogp.webp" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="ROIC・ROE・ROAと資本効率を比較する図解" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="ROICとは？ROE・ROAとの違いと企業の資本効率の見方を初心者向けに解説" name="twitter:title"/>
+<meta content="ROIC・ROE・ROAの違いを比較表と計算例で解説。NOPAT、投下資本、ROEの注意点、WACCとの関係、FCFや株主還元の見方を初心者向けに整理します。" name="twitter:description"/>
+<meta content="https://tousiportal.jp/sonota/roic-roe-roa-chigai-ogp.webp" name="twitter:image"/>
+<meta content="@QwZd0ksG2138610" name="twitter:site"/>
+<link href="/favicon.ico" rel="icon"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="menu-card.css" rel="stylesheet"/>
+<link href="sidebar.css" rel="stylesheet"/>
+<link href="table.css" rel="stylesheet"/>
+<link href="header.css" rel="stylesheet"/>
+<style>
+      body.profit-page #main {
+    min-width:0;
+    max-width:1120px;
+    padding:22px;
+    background:#f7fafc
+}
+.profit-page .anime-item {
+    padding:23px;
+    background:#fff;
+    border:1px solid #d6e3ec;
+    box-shadow:none
+}
+.profit-page .title {
+    font-size:clamp(1.5rem,3vw,2.15rem);
+    line-height:1.5;
+    color:#103753
+}
+.profit-page .anime-title {
+    color:#123f5b;
+    border-color:#087f8c
+}
+.profit-page main p,.profit-page main li {
+    line-height:1.85;
+    margin:10px 0
+}
+.profit-page main a {
+    color:#075e9b;
+    text-decoration:underline
+}
+.profit-page .hero-img {
+    width:100%;
+    max-width:850px;
+    height:auto;
+    display:block;
+    margin:16px auto;
+    border-radius:12px
+}
+.profit-page .table-scroll {
+    overflow-x:auto;
+    max-width:100%;
+    margin:16px 0
+}
+.profit-page .hub-table {
+    min-width:740px;
+    width:100%;
+    font-size:.9rem
+}
+.profit-page .hub-table th,.profit-page .hub-table td {
+    padding:11px;
+    text-align:left;
+    vertical-align:top
+}
+.profit-page .hub-table tbody th {
+    background:#eef6fa;
+    color:#12435e
+}
+.profit-page .flow {
+    display:grid;
+    gap:7px;
+    margin:16px 0
+}
+.profit-page .flow-step {
+    padding:13px 16px;
+    border-left:5px solid #087f8c;
+    background:#eff7fa;
+    border-radius:7px
+}
+.profit-page .flow-step strong {
+    display:block;
+    color:#123f5b
+}
+.profit-page .flow-arrow {
+    text-align:center;
+    color:#236f87;
+    font-weight:bold
+}
+.profit-page .note {
+    padding:14px;
+    background:#fff8e8;
+    border-left:4px solid #c39a38;
+    border-radius:6px
+}
+.profit-page .formula {
+    padding:12px 15px;
+    background:#edf6ff;
+    border-radius:6px;
+    font-weight:700
+}
+.profit-page .toc ul {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px 20px
+}
+.profit-page .checklist li {
+    list-style:none;
+    padding:5px 0
+}
+.profit-page .checklist li::before {
+    content:'□ ';
+    color:#087f8c;
+    font-weight:bold
+}
+.profit-page details {
+    border:1px solid #d5e2eb;
+    border-radius:8px;
+    margin:9px 0;
+    padding:13px;
+    background:#fafcfe
+}
+.profit-page summary {
+    cursor:pointer;
+    font-weight:700;
+    color:#16465f
+}
+.profit-page .related a {
+    display:block;
+    padding:9px;
+    border-bottom:1px solid #e4edf2
+}
+.profit-page section[id] {
+    scroll-margin-top:85px
+}
+@media(max-width:768px) {
+body.profit-page #main {
+    padding:10px
+}
+.profit-page .anime-item {
+    padding:15px 12px
+}
+.profit-page .toc ul {
+    grid-template-columns:1fr
+}
+.profit-page .hub-table {
+    min-width:660px;
+    font-size:.82rem
+}
+
+}
+    </style>
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/roic-roe-roa-chigai.html#article",
+  "headline": "ROICとは？ROE・ROAとの違いと企業の資本効率の見方を初心者向けに解説",
+  "description": "ROIC・ROE・ROAの違いを比較表と計算例で解説。NOPAT、投下資本、ROEの注意点、WACCとの関係、FCFや株主還元の見方を初心者向けに整理します。",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "inLanguage": "ja",
+  "articleSection": "株式投資・企業分析",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/roic-roe-roa-chigai.html"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://tousiportal.jp/#person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tousiportal.jp/#organization",
+    "name": "投資ポータル.jp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tousiportal.jp/favicon-512.png"
+    }
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/roic-roe-roa-chigai-ogp.webp"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "投資コラム",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ROIC・ROE・ROAの違い",
+      "item": "https://tousiportal.jp/roic-roe-roa-chigai.html"
+    }
+  ]
+}</script></head>
+<body class="profit-page" id="top">
+<div id="header">
+</div>
+<div class="container">
+<aside id="sidebar">
+</aside>
+<main id="main" tabindex="-1"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">ホーム</a></li><li class="breadcrumb-item"><a href="column.html">投資コラム・解説記事一覧</a></li><li aria-current="page" class="breadcrumb-item active">ROIC・ROE・ROAの違い</li></ol></nav>
+<article><header class="anime-item"><p>株式投資・企業分析 ｜ 公開日・更新日：<time datetime="2026-10-29">2026年10月29日</time></p><h1 class="title">ROICとは？ROE・ROAとの違いと企業の資本効率の見方を初心者向けに解説</h1><img alt="ROICは投下資本、ROEは自己資本、ROAは総資産を基準に収益性を比較する図解" class="hero-img" decoding="async" fetchpriority="high" height="420" src="sonota/roic-roe-roa-chigai-link.webp" width="900"/><p>ROIC・ROE・ROAは、企業が利益を生み出す効率を異なる角度から見る指標です。利益額だけでは見えない資本の使い方を、計算例と比較表で整理します。</p></header>
+<section class="anime-item toc"><h2 class="anime-title">この記事の目次</h2><ul><li><a href="#what">ROICとは？</a></li><li><a href="#compare">ROIC・ROE・ROAの違い</a></li><li><a href="#roic-example">ROICの計算例</a></li><li><a href="#roe-example">ROE・ROAの計算例</a></li><li><a href="#roe-risk">ROEが高くても安心できない理由</a></li><li><a href="#merit">ROICを見るメリット</a></li><li><a href="#wacc">ROICとWACCの関係</a></li><li><a href="#high">ROICが高い企業は優良企業？</a></li><li><a href="#fcf">ROICとフリーキャッシュフロー</a></li><li><a href="#returns">ROICと自社株買い・配当性向</a></li><li><a href="#check">チェックリスト</a></li><li><a href="#documents">決算資料の確認先</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#summary">まとめ</a></li></ul></section><section class="anime-item" id="what"><h2 class="anime-title">1. ROICとは？</h2><p><strong>ROIC（Return on Invested Capital／投下資本利益率）</strong>は、事業に投じた資本に対してどれだけ税引後の営業利益を生み出したかを測る指標です。</p><p class="formula">ROIC ＝ NOPAT（税引後営業利益）÷ 投下資本 × 100</p><h3>NOPATとは？</h3><p>本業の営業利益に税負担を反映した利益の概念です。簡便には「営業利益×（1－仮定した税率）」で求めますが、実務では税金や営業外項目などの調整方法が異なります。</p><h3>投下資本とは？</h3><p>事業の運営に使われている資本で、例えば有利子負債と自己資本を基礎に算出したり、運転資本と事業用固定資産から算出したりします。余剰現金、のれん、リース負債などの扱いも企業により異なります。</p><p class="note"><strong>重要：</strong>ROICに唯一の統一計算式があるわけではありません。投下資本の範囲やNOPATの調整、期中平均の利用など、企業の定義を必ず確認しましょう。</p></section><section class="anime-item" id="compare"><h2 class="anime-title">2. ROIC・ROE・ROAの違い</h2><p>違いは、利益を「何に対して」比較するかです。</p><div class="table-responsive"><div aria-label="ROIC、ROE、ROAの比較表" class="table-scroll" role="region" tabindex="0"><table class="table-modern"><thead><tr><th scope="col">指標</th><th scope="col">主な計算方法</th><th scope="col">何を見る？</th></tr></thead><tbody><tr><th scope="row">ROIC</th><td>NOPAT ÷ 投下資本 × 100</td><td>事業に投じた資本の効率</td></tr><tr><th scope="row">ROE</th><td>当期純利益 ÷ 自己資本 × 100</td><td>株主に帰属する資本に対する利益</td></tr><tr><th scope="row">ROA</th><td>利益 ÷ 総資産 × 100</td><td>総資産に対する収益性</td></tr></tbody></table></div><p class="table-box__hint">表は左右にスクロールできます。</p></div><p>連結ROEでは、一般に親会社株主に帰属する当期純利益と、それに対応する自己資本を使います。ROAは当期純利益、経常利益など採用する利益によって値が変わります。分母には期首・期末の平均残高を使う場合があり、比較時には定義を揃える必要があります。</p></section><section class="anime-item" id="roic-example"><h2 class="anime-title">3. ROICの計算例</h2><p>架空企業Aの営業利益が100億円、説明用に仮定した実効税率が30％、投下資本が700億円とします。</p><div class="flow"><div class="flow-step"><strong>① NOPATを計算</strong>100億円 ×（1－0.30）＝70億円</div><div class="flow-arrow">↓</div><div class="flow-step"><strong>② ROICを計算</strong>70億円 ÷ 700億円 × 100 ＝ <strong>10％</strong></div></div><p class="note">税率30％は計算例の仮定です。実際の企業の税率や納税額を示すものではありません。</p></section><section class="anime-item" id="roe-example"><h2 class="anime-title">4. ROE・ROAの計算例</h2><p>別の架空企業Bの当期純利益60億円、自己資本400億円、総資産1,000億円とします。</p><p class="formula">ROE ＝ 60 ÷ 400 × 100 ＝ 15％</p><p class="formula">ROA ＝ 60 ÷ 1,000 × 100 ＝ 6％（当期純利益を使用）</p><p>いずれも説明用の単純計算であり、実在企業のデータではありません。ここでは期末平均ではなく、提示した残高をそのまま用いています。</p></section><section class="anime-item" id="roe-risk"><h2 class="anime-title">5. なぜROEが高くても安心できないの？</h2><p>ROEは分母の自己資本が小さくなるだけでも上がることがあります。借入金を増やして事業を拡大した場合、財務レバレッジの影響でROEが高まることがあります。また、自社株買いで自己資本が減少すると、利益が同じでもROEが上昇する場合があります。</p><p class="note"><strong>ROEの上昇＝本業の収益力向上、とは限りません。</strong>負債、自己資本の変化、利益の継続性を一緒に見ましょう。</p></section><section class="anime-item" id="merit"><h2 class="anime-title">6. ROICを見るメリット</h2><p>ROICは株主の自己資本だけでなく、事業に使う負債性資本も含めた資本効率の評価に役立ちます。設備投資、事業拡大、M&amp;Aなどに投じた資本が収益を生んでいるか考える手掛かりです。ただし、投資直後は利益がまだ伸びず、一時的にROICが低くなることもあります。ROIC単独で企業価値や投資の成否は決まりません。</p></section><section class="anime-item" id="wacc"><h2 class="anime-title">7. ROICとWACCの関係</h2><p><strong>WACC（加重平均資本コスト）</strong>は、株主が期待するリターンと借入金などの調達コストを、資本構成に応じて加重平均した推計値です。</p><ul class="mini-list"><li>ROIC ＞ WACC：資本コストを超える収益を生んでいる可能性</li><li>ROIC ＜ WACC：資本コストに見合う収益を生んでいない可能性</li></ul><p class="formula">架空例：ROIC 10％ － WACC 7％ ＝ ＋3％ポイント</p><p>この差は資本効率を考える参考になりますが、将来の企業価値向上や株価上昇を保証しません。WACCは市場環境、負債・株主資本コストの推計方法、税率などの前提によって変わるため、ROICと比較する際は算出条件を確認しましょう。</p></section><section class="anime-item" id="high"><h2 class="anime-title">8. ROICが高い企業は優良企業？</h2><p>高いROICは資本効率を示す一つの材料ですが、それだけで優良企業と断定できません。業種・ビジネスモデル、設備投資の規模、成長段階、一時的な利益、投下資本の定義、将来の投資計画、財務状況を確認します。特に設備集約型と資産の少ない事業など、異業種間での単純比較は避けましょう。</p></section><section class="anime-item" id="fcf"><h2 class="anime-title">9. ROICとフリーキャッシュフロー</h2><p>ROICは投下資本に対する<strong>利益の効率</strong>、フリーキャッシュフロー（FCF）は事業活動と投資を経た<strong>現金創出力や資金余力</strong>を考える指標です。ROICが高くても、設備投資や運転資本の増加でFCFがマイナスになる場合があります。</p><p><a href="free-cash-flow-toha.html">関連記事：フリーキャッシュフローとは？黒字でも現金が足りない理由</a></p></section><section class="anime-item" id="returns"><h2 class="anime-title">10. ROICと自社株買い・配当性向</h2><p>企業が生み出した利益や資金は、成長投資、借入金返済、配当、自社株買いなどに配分されます。ROICは投下資本からの収益性、配当性向は利益に対する配当の割合であり、同じ指標ではありません。自社株買いは資本構成やROEに影響することもあります。</p><p>配当政策や自社株買いを考える際は、利益の継続性とFCF、財務余力も確認しましょう。</p></section><section class="anime-item" id="check"><h2 class="anime-title">11. ROICを見るときのチェックリスト</h2><ul class="checklist"><li>ROICの算出方法は何か</li><li>投下資本に何が含まれているか</li><li>ROICは複数年で改善しているか</li><li>WACCとの関係はどうか</li><li>ROE・ROAと比較してどうか</li><li>有利子負債が増えていないか</li><li>営業利益やNOPATは安定しているか</li><li>フリーキャッシュフローはどうか</li><li>成長投資と株主還元のバランスはどうか</li></ul></section><section class="anime-item" id="documents"><h2 class="anime-title">12. 決算資料ではどこを確認する？</h2><p>決算短信で利益や財務状況、有価証券報告書で財務諸表と注記、統合報告書や中期経営計画で資本政策・ROIC目標・投資方針を確認できます。ROICを公表していない企業もあります。企業独自のROICがある場合は、算出方法、対象事業、調整項目、対象期間を確認してください。</p><p><a href="kessan-happyou-toha.html">決算発表とは？</a></p></section><section class="anime-item" id="faq"><h2 class="anime-title">13. よくある質問（FAQ）</h2><details><summary>ROICとは何ですか？</summary><p>事業に投じた資本に対して、税引後営業利益をどれだけ生み出したかを見る指標です。</p></details><details><summary>ROICとROEは何が違いますか？</summary><p>ROICは事業に投じた資本、ROEは主に株主に帰属する自己資本を基準にします。</p></details><details><summary>ROICとROAは何が違いますか？</summary><p>ROICは投下資本、ROAは総資産を分母とする点が主な違いです。</p></details><details><summary>ROICはどう計算しますか？</summary><p>代表例はNOPAT÷投下資本×100です。実際の定義は企業によって異なります。</p></details><details><summary>NOPATとは何ですか？</summary><p>税負担を考慮した営業利益の概念です。</p></details><details><summary>投下資本とは何ですか？</summary><p>事業に投入されている資本です。有利子負債と自己資本などから求める方法があります。</p></details><details><summary>ROICが高ければ優良企業ですか？</summary><p>断定できません。業種、投資段階、財務状況、利益の継続性なども重要です。</p></details><details><summary>ROICとWACCはどう関係しますか？</summary><p>ROICと資本コストであるWACCを比較し、資本コストを上回る収益性か考えます。</p></details><details><summary>ROEが高い企業は安全ですか？</summary><p>ROEだけで安全性は判断できません。借入金や自己資本の変化も確認してください。</p></details></section><section class="anime-item" id="summary"><h2 class="anime-title">14. まとめ</h2><p>ROICは投下資本、ROEは自己資本、ROAは総資産に対する収益性を測る指標です。利益の大きさだけでなく、投下資本、財務構造、現金創出力、資本コストを総合的に確認しましょう。いずれも株価上昇を保証する指標ではありません。</p></section><section class="anime-item" id="related"><h2 class="anime-title">関連記事・一次情報</h2><div class="related"><a href="eigyou-keijou-junrieki-chigai.html">営業利益・経常利益・純利益の違い</a><a href="free-cash-flow-toha.html">フリーキャッシュフローとは？</a><a href="kessan-happyou-toha.html">決算発表とは？</a><a href="kabusikitousi-toha.html">株式投資とは？</a></div><h3>一次情報の確認先</h3><p><a href="https://disclosure2.edinet-fsa.go.jp/">金融庁 EDINET</a> ／ <a href="https://www.jpx.co.jp/">日本取引所グループ（JPX）</a> ／ <a href="https://www.meti.go.jp/">経済産業省</a></p><p>具体的なROICやWACCの定義は各社の最新開示資料で確認してください。</p></section><section class="anime-item"><h2 class="anime-title">ご利用にあたっての注意事項</h2><p>本記事は一般的な金融教育情報であり、特定銘柄の購入や売却を推奨するものではありません。各指標の定義・会計基準は企業ごとに異なります。投資判断は最新の開示資料を確認し、ご自身の判断と責任で行ってください。</p></section></article></main>
+</div>
+<a aria-label="ページ上部へ戻る" class="back-to-top" href="#top">▲</a>
+<div id="footer">
+</div>
+<script defer="" src="include.js">
+</script>
+<script defer="" src="sidebar.js">
+</script>
+</body>
+</html>

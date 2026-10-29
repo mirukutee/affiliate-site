@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0653a6" name="theme-color"/>
+<meta content="index, follow" name="robots"/>
+<meta content="ミルクティー情報発信" name="author"/>
+<title>配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説</title>
+<meta content="配当性向・配当利回り・DOEの違いを比較表と計算例で解説。配当性向100％超、高配当利回りの落とし穴、ROEやフリーキャッシュフローとの関係、減配リスクの確認方法を初心者向けに整理します。" name="description"/>
+<link href="https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説" property="og:title"/>
+<meta content="配当性向・配当利回り・DOEの違いを比較表と計算例で解説。配当性向100％超、高配当利回りの落とし穴、ROEやフリーキャッシュフローとの関係、減配リスクの確認方法を初心者向けに整理します。" property="og:description"/>
+<meta content="https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.html" property="og:url"/>
+<meta content="投資ポータル.jp" property="og:site_name"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.webp" property="og:image"/>
+
+
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説" name="twitter:title"/>
+<meta content="配当性向・配当利回り・DOEの違いを比較表と計算例で解説。配当性向100％超、高配当利回りの落とし穴、ROEやフリーキャッシュフローとの関係、減配リスクの確認方法を初心者向けに整理します。" name="twitter:description"/>
+<meta content="https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.webp" name="twitter:image"/>
+<meta content="@QwZd0ksG2138610" name="twitter:site"/>
+<link href="/favicon.ico" rel="icon"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="menu-card.css" rel="stylesheet"/>
+<link href="sidebar.css" rel="stylesheet"/>
+<link href="table.css" rel="stylesheet"/>
+<link href="header.css" rel="stylesheet"/>
+<style>
+      body.profit-page #main {
+    min-width:0;
+    max-width:1120px;
+    padding:22px;
+    background:#f7fafc
+}
+.profit-page .anime-item {
+    padding:23px;
+    background:#fff;
+    border:1px solid #d6e3ec;
+    box-shadow:none
+}
+.profit-page .title {
+    font-size:clamp(1.5rem,3vw,2.15rem);
+    line-height:1.5;
+    color:#103753
+}
+.profit-page .anime-title {
+    color:#123f5b;
+    border-color:#087f8c
+}
+.profit-page main p,.profit-page main li {
+    line-height:1.85;
+    margin:10px 0
+}
+.profit-page main a {
+    color:#075e9b;
+    text-decoration:underline
+}
+.profit-page .hero-img {
+    width:100%;
+    max-width:850px;
+    height:auto;
+    display:block;
+    margin:16px auto;
+    border-radius:12px
+}
+.profit-page .table-scroll {
+    overflow-x:auto;
+    max-width:100%;
+    margin:16px 0
+}
+.profit-page .hub-table {
+    min-width:740px;
+    width:100%;
+    font-size:.9rem
+}
+.profit-page .hub-table th,.profit-page .hub-table td {
+    padding:11px;
+    text-align:left;
+    vertical-align:top
+}
+.profit-page .hub-table tbody th {
+    background:#eef6fa;
+    color:#12435e
+}
+.profit-page .flow {
+    display:grid;
+    gap:7px;
+    margin:16px 0
+}
+.profit-page .flow-step {
+    padding:13px 16px;
+    border-left:5px solid #087f8c;
+    background:#eff7fa;
+    border-radius:7px
+}
+.profit-page .flow-step strong {
+    display:block;
+    color:#123f5b
+}
+.profit-page .flow-arrow {
+    text-align:center;
+    color:#236f87;
+    font-weight:bold
+}
+.profit-page .note {
+    padding:14px;
+    background:#fff8e8;
+    border-left:4px solid #c39a38;
+    border-radius:6px
+}
+.profit-page .formula {
+    padding:12px 15px;
+    background:#edf6ff;
+    border-radius:6px;
+    font-weight:700
+}
+.profit-page .toc ul {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px 20px
+}
+.profit-page .checklist li {
+    list-style:none;
+    padding:5px 0
+}
+.profit-page .checklist li::before {
+    content:'□ ';
+    color:#087f8c;
+    font-weight:bold
+}
+.profit-page details {
+    border:1px solid #d5e2eb;
+    border-radius:8px;
+    margin:9px 0;
+    padding:13px;
+    background:#fafcfe
+}
+.profit-page summary {
+    cursor:pointer;
+    font-weight:700;
+    color:#16465f
+}
+.profit-page .related a {
+    display:block;
+    padding:9px;
+    border-bottom:1px solid #e4edf2
+}
+.profit-page section[id] {
+    scroll-margin-top:85px
+}
+@media(max-width:768px) {
+body.profit-page #main {
+    padding:10px
+}
+.profit-page .anime-item {
+    padding:15px 12px
+}
+.profit-page .toc ul {
+    grid-template-columns:1fr
+}
+.profit-page .hub-table {
+    min-width:660px;
+    font-size:.82rem
+}
+
+}
+    
+.dividend-page .hub-table{min-width:620px}.dividend-page .formula{overflow-wrap:anywhere}.dividend-page .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.dividend-page .related-grid a{display:block;padding:14px;border:1px solid #d6e3ec;border-radius:8px;background:#f7fbff;text-decoration:none}.dividend-page .related-grid small{display:block;color:#475569;margin-top:5px}.dividend-page .checklist li{list-style:none}.dividend-page .checklist{padding-left:0}.dividend-page .toc ul{padding-left:1.3rem}.dividend-page .toc li{list-style:disc}.dividend-page .hero-intro{padding:17px;border-left:5px solid #087f8c;background:#edf6ff;border-radius:8px;margin:18px 0}.dividend-page .formula{line-height:1.9}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.html#article",
+  "headline": "配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説",
+  "description": "配当性向・配当利回り・DOEの違いを比較表と計算例で解説。配当性向100％超、高配当利回りの落とし穴、ROEやフリーキャッシュフローとの関係、減配リスクの確認方法を初心者向けに整理します。",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "inLanguage": "ja",
+  "articleSection": "株式投資・企業分析",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.html"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://tousiportal.jp/#person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://tousiportal.jp/#organization",
+    "name": "投資ポータル.jp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.webp"
+    }
+  },
+  "image": [
+    "https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.webp"
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "記事",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "配当性向・配当利回り・DOEの違い",
+      "item": "https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.html"
+    }
+  ]
+}</script>
+</head>
+<body class="profit-page dividend-page" id="top">
+<div id="header">
+</div>
+<div class="container">
+<aside id="sidebar">
+</aside>
+<main id="main" tabindex="-1"><nav aria-label="パンくず"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">ホーム</a></li><li class="breadcrumb-item"><a href="column.html">記事</a></li><li aria-current="page" class="breadcrumb-item active">配当性向・DOE</li></ol></nav>
+<p>株式投資・企業分析</p><h1 class="title">配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説</h1><p><time datetime="2026-10-28">公開・更新：2026年10月28日</time> ／ <a href="profile.html">運営者プロフィール</a></p>
+<div class="hero-intro"><strong>高配当利回り＝安心して配当を受け取れる、とは限りません。</strong><p>配当性向は利益、配当利回りは株価、DOEは株主資本を基準に配当を見る指標です。3つの違いと減配リスクの確認方法を、架空例で順番に整理します。</p></div>
+<section class="anime-item toc"><h2 class="anime-title">この記事の目次</h2><ul><li><a href="#definition">配当性向とは？</a></li><li><a href="#comparison">配当性向・配当利回り・DOEの違い</a></li><li><a href="#example">架空企業で3つの指標を計算</a></li><li><a href="#high">配当性向が高い企業は良い企業？</a></li><li><a href="#over100">配当性向100％超とは？</a></li><li><a href="#yield">配当利回りが高くなる理由</a></li><li><a href="#doe">DOEを採用する企業があるのはなぜ？</a></li><li><a href="#roe">配当性向とROEの関係</a></li><li><a href="#fcf">配当金とフリーキャッシュフローの関係</a></li><li><a href="#buyback">配当金と自社株買いの違い</a></li><li><a href="#checklist">減配リスクを考えるチェックリスト</a></li><li><a href="#documents">決算資料でどこを確認する？</a></li><li><a href="#faq">よくある質問（FAQ）</a></li><li><a href="#summary">まとめ</a></li></ul></section><section aria-labelledby="definition-title" class="anime-item" id="definition"><h2 class="anime-title" id="definition-title">配当性向とは？</h2><p>配当性向は、企業が生み出した利益のうち、どの程度を株主への配当に充てたかを表す割合です。</p><p class="formula">配当性向（％）＝年間配当総額 ÷ 当期純利益 × 100</p><p>例えば利益100億円、年間配当総額40億円なら配当性向は40％です。1株当たり配当金÷1株当たり利益（EPS）×100で表す場合もあります。連結決算では、親会社株主に帰属する当期純利益などを基準とすることがあり、分子・分母の対象期間や定義をそろえて確認します。</p></section>
+<section aria-labelledby="comparison-title" class="anime-item" id="comparison"><h2 class="anime-title" id="comparison-title">配当性向・配当利回り・DOEの違い</h2><div aria-label="指標の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">指標</th><th scope="col">計算の考え方</th><th scope="col">分かること</th><th scope="col">主な注意点</th></tr></thead><tbody><tr><th scope="row">配当性向</th><td>年間配当総額 ÷ 利益 × 100</td><td>利益に対する配当の割合</td><td>利益の急減で上昇する</td></tr><tr><th scope="row">配当利回り</th><td>1株当たり年間配当 ÷ 株価 × 100</td><td>株価に対する配当の割合</td><td>株価下落でも上昇する</td></tr><tr><th scope="row">DOE（株主資本配当率）</th><td>年間配当総額 ÷ 株主資本 × 100</td><td>株主資本に対する配当の割合</td><td>資本の定義・平均残高の扱いに注意</td></tr></tbody></table></div><p><strong>DOEとROEは別の指標</strong>です。DOEは配当、ROEは利益を株主資本・自己資本と比較します。利益や株主資本の定義、期末残高か期中平均残高かなどは企業の開示によって異なります。</p></section>
+<section aria-labelledby="example-title" class="anime-item" id="example"><h2 class="anime-title" id="example-title">架空企業で3つの指標を計算</h2><p>以下は仕組みを理解するための<strong>単純化した架空例</strong>であり、実在企業の数値ではありません。株主資本は便宜上800億円の一定額とします。</p><div aria-label="項目の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">項目</th><th scope="col">架空の数値</th></tr></thead><tbody><tr><th scope="row">当期純利益</th><td>100億円</td></tr><tr><th scope="row">年間配当総額</th><td>40億円</td></tr><tr><th scope="row">株主資本</th><td>800億円</td></tr><tr><th scope="row">1株当たり年間配当</th><td>40円</td></tr><tr><th scope="row">株価</th><td>1,000円</td></tr></tbody></table></div><p class="formula">配当性向＝40億円 ÷ 100億円 × 100＝<strong>40％</strong><br/>配当利回り＝40円 ÷ 1,000円 × 100＝<strong>4％</strong><br/>DOE＝40億円 ÷ 800億円 × 100＝<strong>5％</strong></p><p>同じ企業でも、何を分母にするかによって違う数字になります。</p></section>
+<section aria-labelledby="high-title" class="anime-item" id="high"><h2 class="anime-title" id="high-title">配当性向が高い企業は良い企業？</h2><p>配当性向が高い企業は、利益の多くを株主に還元している可能性があります。一方で、研究開発・設備投資・借入返済などに回せる利益とのバランスも大切です。</p><p>成熟企業と成長企業では必要な再投資額が異なります。配当性向が高いだけで優良企業とも危険企業とも判断できません。利益の安定性、財務余力、配当方針を合わせて確認しましょう。</p></section>
+<section aria-labelledby="over100-title" class="anime-item" id="over100"><h2 class="anime-title" id="over100-title">配当性向100％超とは？</h2><p>黒字の企業で配当性向が100％を超えるとは、対象期間の利益を上回る配当を行っている状態です。</p><ul><li>一時的に利益が減少した</li><li>特別損失などで純利益が小さくなった</li><li>過去に蓄積した資金を配当に活用した</li><li>安定配当などの方針を維持しようとした</li></ul><p class="note"><strong>100％超＝直ちに減配・倒産、ではありません。</strong>ただし継続可能かどうかは別問題です。利益がゼロなら通常の割り算はできず、赤字の場合は計算上の負値が出ても比較指標として意味を持ちにくくなります。無理に配当性向の数値だけで評価しないことが重要です。</p><p>純利益が減少した理由は<a href="eigyou-keijou-junrieki-chigai.html">営業利益・経常利益・純利益の違い</a>も参考にしてください。</p></section>
+<section aria-labelledby="yield-title" class="anime-item" id="yield"><h2 class="anime-title" id="yield-title">配当利回りが高くなる理由</h2><p>配当利回りは、年間配当金が変わらなくても株価が下落すると上昇します。年間配当50円の場合を比べます。</p><div aria-label="株価の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">株価</th><th scope="col">年間配当</th><th scope="col">配当利回り</th></tr></thead><tbody><tr><th scope="row">1,000円</th><td>50円</td><td>5％</td></tr><tr><th scope="row">800円</th><td>50円</td><td>6.25％</td></tr></tbody></table></div><p>この場合、配当が増えたわけではありません。業績悪化への懸念で株価が下落した結果、見かけ上の利回りが高くなっている可能性もあります。</p><p>また<strong>予想配当</strong>は会社予想などに基づく将来の見込み、<strong>実績配当</strong>は過去に確定した配当です。予想配当は修正される場合があります。配当の対象年度と株価の基準時点も確認しましょう。</p></section>
+<section aria-labelledby="doe-title" class="anime-item" id="doe"><h2 class="anime-title" id="doe-title">DOEを採用する企業があるのはなぜ？</h2><p>DOE（株主資本配当率）は、単年度の利益ではなく株主資本を基準に配当水準を考える指標です。利益の一時的な変動だけに左右されにくい配当方針を設計する目的で採用される場合があります。</p><p>ただし、株主資本自体が変化することや、財務・事業環境が悪化することもあります。<strong>DOE採用企業でも減配しない保証はありません。</strong>目標DOEの定義と配当方針の条件を確認してください。</p></section>
+<section aria-labelledby="roe-title" class="anime-item" id="roe"><h2 class="anime-title" id="roe-title">配当性向とROEの関係</h2><p>ROE（自己資本利益率）は自己資本に対してどれだけ利益を生んだかを示す指標です。計算に使う利益と資本の定義・期間をそろえれば、概念的に次の関係が成り立ちます。</p><p class="formula">DOE ≒ ROE × 配当性向</p><p>架空例では、ROE＝100億円÷800億円＝12.5％、配当性向＝40％です。12.5％×40％＝<strong>5％（DOE）</strong>となります。掛け算の際は40％を0.4として扱います。</p><p class="note">実際の企業開示ではROEの分母に期中平均自己資本を使い、DOEでは別の株主資本の定義を使うなど、算出基準が異なることがあります。常に厳密に一致する式ではありません。</p></section>
+<section aria-labelledby="fcf-title" class="anime-item" id="fcf"><h2 class="anime-title" id="fcf-title">配当金とフリーキャッシュフローの関係</h2><p>配当を継続するには、会計上の利益だけでなく、事業が生む現金や手元資金、借入返済・設備投資の必要額も重要です。営業キャッシュフローやフリーキャッシュフロー（FCF）は、その状況を考える手掛かりになります。</p><p>ただし、FCFがマイナスでも一時的な大型投資や手元資金の活用により直ちに配当不能とは限らず、FCFがプラスでも配当は保証されません。<strong>FCFと会社法上の分配可能額は別の概念</strong>であり、法的に配当できる額は会社法上のルールなどに従います。</p><p>詳しくは<a href="free-cash-flow-toha.html">フリーキャッシュフローとは？黒字でも現金が足りなくなる理由</a>をご覧ください。</p></section>
+<section aria-labelledby="buyback-title" class="anime-item" id="buyback"><h2 class="anime-title" id="buyback-title">配当金と自社株買いの違い</h2><div aria-label="比較項目の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">比較項目</th><th scope="col">現金配当</th><th scope="col">自社株買い</th></tr></thead><tbody><tr><th scope="row">株主還元の方法</th><td>株主に現金を支払う</td><td>市場等で自社株式を取得する</td></tr><tr><th scope="row">株式数への影響</th><td>通常、発行済株式数は変わらない</td><td>自己株式が増える。消却すれば発行済株式数が減る</td></tr><tr><th scope="row">企業資金への影響</th><td>支払分の現金が流出</td><td>取得に使う現金が流出</td></tr><tr><th scope="row">株主への効果</th><td>保有株数などに応じて配当を受け取る</td><td>売却株主は対価を得る。保有継続株主は持分比率等が変わり得る</td></tr></tbody></table></div><p><strong>総還元性向</strong>は配当と自社株買いを合わせた株主還元の規模を利益と比較する指標です。例えば「（配当総額＋自己株式取得額）÷利益×100」とする場合がありますが、自己株式取得額の対象範囲など定義が企業ごとに異なるため、開示内容を確認してください。</p><p>仕組みの詳細は<a href="jishakabu-kai-toha.html">自社株買いとは？</a>をご覧ください。</p></section>
+<section aria-labelledby="checklist-title" class="anime-item" id="checklist"><h2 class="anime-title" id="checklist-title">減配リスクを考えるチェックリスト</h2><p>複数の観点を組み合わせて確認しましょう。単一の指標で将来の減配を予測することはできません。</p><ul class="checklist"><li>配当性向が極端に高くないか</li><li>利益が安定しているか</li><li>営業キャッシュフローはどうか</li><li>フリーキャッシュフローはどうか</li><li>有利子負債が増えていないか</li><li>配当方針が変更されていないか</li><li>過去の配当実績はどうか</li><li>株価下落だけで高配当利回りになっていないか</li><li>成長投資と株主還元のバランスはどうか</li></ul><p>増益・減益の背景を調べるときは<a href="jouhou-shuusei-kahou-shuusei-toha.html">上方修正・下方修正とは？</a>も参考になります。</p></section>
+<section aria-labelledby="documents-title" class="anime-item" id="documents"><h2 class="anime-title" id="documents-title">決算資料でどこを確認する？</h2><p>企業のIRサイトや適時開示資料で、配当の根拠となる数値・方針を確認します。</p><ul><li><strong>決算短信：</strong>配当の状況、配当予想、損益・財政状態・キャッシュフロー</li><li><strong>有価証券報告書：</strong>配当政策、利益・純資産、リスク、財務諸表と注記</li><li><strong>決算説明資料：</strong>株主還元方針、DOE目標、投資計画</li><li><strong>配当予想の修正に関する適時開示：</strong>増配・減配の理由や修正後の予想</li></ul><p>数字を比較する際は<strong>対象期間、単位（円・百万円・億円）、連結か個別か、予想か実績か</strong>を必ずそろえましょう。この記事の計算例はすべて架空で、実在企業の数値は使用していません。</p><p>関連解説：<a href="kessan-happyou-toha.html">決算発表とは？</a>。一次情報：<a href="https://www.jpx.co.jp/" rel="noopener noreferrer">日本取引所グループ</a> ／ <a href="https://disclosure2.edinet-fsa.go.jp/" rel="noopener noreferrer">金融庁 EDINET</a>。</p></section>
+<section aria-labelledby="faq-title" class="anime-item" id="faq"><h2 class="anime-title" id="faq-title">よくある質問（FAQ）</h2><details><summary>配当性向とは何ですか？</summary><p>利益のうち配当に回した割合です。通常は年間配当総額を対象となる当期純利益で割って計算します。</p></details><details><summary>配当性向と配当利回りは何が違いますか？</summary><p>配当性向は利益に対する割合、配当利回りは株価に対する年間配当の割合です。</p></details><details><summary>DOEとは何ですか？</summary><p>株主資本配当率です。年間配当総額を株主資本で割った割合で、ROEとは異なります。</p></details><details><summary>配当性向100％超は危険ですか？</summary><p>利益を上回る配当を意味しますが、一時的な利益減少などの事情もあるため、直ちに減配や倒産を意味しません。</p></details><details><summary>配当性向が低い企業は悪い企業ですか？</summary><p>必ずしもそうではありません。成長投資や財務健全化に利益を使っている場合もあります。</p></details><details><summary>配当利回りが高ければお得ですか？</summary><p>株価下落だけでも利回りは上がります。配当の持続可能性と業績も確認しましょう。</p></details><details><summary>DOEを採用する企業は減配しませんか？</summary><p>減配しない保証はありません。財務状況や配当方針の変更によって減配する場合があります。</p></details><details><summary>フリーキャッシュフローと配当金はどう関係しますか？</summary><p>FCFは現金創出力を見る参考指標ですが、FCFだけで配当の可否は決まりません。会社法上の分配可能額とも別の概念です。</p></details></section>
+<section aria-labelledby="summary-title" class="anime-item" id="summary"><h2 class="anime-title" id="summary-title">まとめ</h2><p><strong>配当性向は利益、配当利回りは株価、DOEは株主資本</strong>を基準に配当を評価する指標です。それぞれ異なる情報を示しているため、単独で優劣は決められません。</p><p>高配当利回りだけで投資判断せず、利益の安定性、現金創出力、財務状況、成長投資、配当方針を総合的に確認しましょう。</p></section>
+<section aria-labelledby="related-title" class="anime-item" id="related"><h2 class="anime-title" id="related-title">関連記事</h2><div class="related-grid"><a href="eigyou-keijou-junrieki-chigai.html"><strong>営業利益・経常利益・純利益の違い</strong><small>配当性向の分母となる利益を理解</small></a><a href="free-cash-flow-toha.html"><strong>フリーキャッシュフローとは？</strong><small>利益と現金の違いを確認</small></a><a href="jishakabu-kai-toha.html"><strong>自社株買いとは？</strong><small>配当以外の株主還元</small></a><a href="kessan-happyou-toha.html"><strong>決算発表とは？</strong><small>配当情報の確認方法</small></a><a href="jouhou-shuusei-kahou-shuusei-toha.html"><strong>上方修正・下方修正とは？</strong><small>利益予想の変化を理解</small></a><a href="haitoutousi-kaisetu.html"><strong>配当投資の基礎</strong><small>配当投資を基本から整理</small></a><a href="kabukaisetu.html"><strong>株式投資の基礎</strong><small>初心者向けの基本知識</small></a><a href="risuku-to-return.html"><strong>リスクとリターン</strong><small>高利回りとリスクの関係</small></a></div></section>
+<section aria-labelledby="notice-title" class="anime-item" id="notice"><h2 class="anime-title" id="notice-title">ご利用にあたっての注意事項</h2><p>本記事は金融教育を目的とした一般的な情報であり、特定銘柄の売買を推奨するものではありません。配当・会計指標の定義は企業や会計基準によって異なります。最新の開示資料を確認のうえ、ご自身の判断と責任で投資を検討してください。</p></section>
+</main>
+</div>
+<a aria-label="ページ上部へ戻る" class="back-to-top" href="#top">▲</a>
+<div id="footer">
+</div>
+<script defer="" src="include.js">
+</script>
+<script defer="" src="sidebar.js">
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!DOCTYPE html>
 
 <html lang="ja">
 <head>
@@ -18,9 +18,6 @@
 <meta content="投資ポータル.jp" property="og:site_name"/>
 <meta content="ja_JP" property="og:locale"/>
 <meta content="https://tousiportal.jp/haitou-seikou-rimawari-doe-chigai.webp" property="og:image"/>
-
-
-
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説" name="twitter:title"/>
 <meta content="配当性向・配当利回り・DOEの違いを比較表と計算例で解説。配当性向100％超、高配当利回りの落とし穴、ROEやフリーキャッシュフローとの関係、減配リスクの確認方法を初心者向けに整理します。" name="twitter:description"/>
@@ -233,16 +230,176 @@ body.profit-page #main {
     }
   ]
 }</script>
-</head>
-<body class="profit-page dividend-page" id="top">
+<style id="article-layout-refresh">
+/* Article layout refresh — scoped to this article only. */
+body.layout-refresh {
+  --lr-accent:#176bbb;
+  --lr-accent-ink:#154968;
+  --lr-border:#dbe6ef;
+  --lr-text:#243b4d;
+  --lr-muted:#5b7182;
+  --lr-shadow:0 7px 24px rgba(17,52,82,.055);
+}
+body.layout-refresh .container { align-items:flex-start; gap:24px; }
+body.layout-refresh #main {
+  flex:1 1 0; width:auto; max-width:1120px; min-width:0;
+  padding:clamp(12px,2.2vw,24px);
+  border:1px solid rgba(219,230,239,.85); border-radius:20px;
+  background:rgba(250,252,255,.95);
+  box-shadow:0 10px 32px rgba(16,42,67,.06);
+  overflow:visible;
+}
+body.layout-refresh #main > article { min-width:0; }
+body.layout-refresh #main .breadcrumb { font-size:.88rem; line-height:1.5; margin:0 0 16px; padding:10px 14px; }
+body.layout-refresh .layout-hero {
+  position:relative; margin:0 0 20px; padding:clamp(18px,2.7vw,30px);
+  border:1px solid #d4e4f2; border-radius:22px; overflow:hidden;
+  background:radial-gradient(circle at 100% 0%,rgba(27,116,216,.105),transparent 40%),linear-gradient(160deg,#fff 0%,#f1f8ff 100%);
+  box-shadow:var(--lr-shadow);
+}
+body.layout-refresh .layout-hero > p:first-child:not(.formula) {
+  display:inline-block; margin:0 0 10px; color:#176bbb;
+  font-size:.88rem; font-weight:750; letter-spacing:.025em;
+}
+body.layout-refresh .layout-hero h1, body.layout-refresh .layout-hero .title {
+  margin:0 0 14px; font-size:clamp(1.55rem,2.4vw,2.25rem);
+  line-height:1.5; letter-spacing:-.018em; color:#103753;
+}
+body.layout-refresh .layout-hero p { line-height:1.85; margin:10px 0; color:var(--lr-text); }
+body.layout-refresh .layout-hero time { color:var(--lr-muted); }
+body.layout-refresh .layout-hero img.hero-img,
+body.layout-refresh .layout-hero img.hero-image,
+body.layout-refresh .layout-hero img:not([class]) {
+  display:block; width:100%; max-width:850px; height:auto;
+  margin:18px auto 8px; border:1px solid #d8e5ef;
+  border-radius:15px; object-fit:contain; background:#fff;
+  box-shadow:0 4px 16px rgba(15,40,65,.045);
+}
+body.layout-refresh .layout-hero .hero-intro { margin:12px 0 0; }
+body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc {
+  margin:0 0 18px; padding:clamp(16px,2vw,25px);
+  border:1px solid var(--lr-border); border-radius:19px;
+  background:#fff; box-shadow:var(--lr-shadow);
+  transform:none;
+}
+body.layout-refresh .anime-item:hover { transform:none; box-shadow:var(--lr-shadow); }
+body.layout-refresh .anime-item .anime-title,
+body.layout-refresh .toc > .anime-title {
+  margin:0 0 16px; padding:0 0 12px 14px;
+  border:0; border-left:5px solid #1679c5; border-bottom:1px solid #e7eef5;
+  border-radius:0; background:transparent; color:#123e5a;
+  font-size:clamp(1.18rem,1.5vw,1.46rem); line-height:1.5;
+}
+body.layout-refresh .anime-item h3 { color:#164968; font-size:1.08rem; line-height:1.5; margin:24px 0 10px; }
+body.layout-refresh #main p,body.layout-refresh #main li,body.layout-refresh #main dd { line-height:1.88; overflow-wrap:anywhere; }
+body.layout-refresh #main a { color:#0867a8; text-underline-offset:3px; }
+body.layout-refresh #main a:focus-visible,body.layout-refresh #main summary:focus-visible { outline:3px solid #80b8f3; outline-offset:3px; }
+body.layout-refresh .toc { background:linear-gradient(180deg,#f9fcff,#f1f7ff); }
+body.layout-refresh .toc ul,body.layout-refresh .toc ol {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px 12px; columns:auto; padding:0; margin:0; list-style:none; counter-reset:toc;
+}
+body.layout-refresh .toc li { margin:0!important; min-width:0; list-style:none; }
+body.layout-refresh .toc li a {
+  display:flex; align-items:center; min-height:44px;
+  padding:10px 13px; border:1px solid #dbe7f2; border-radius:11px;
+  background:#fff; color:#174869; font-size:.93rem; font-weight:650;
+  line-height:1.5; text-decoration:none;
+  transition:border-color .2s,background-color .2s,box-shadow .2s;
+}
+body.layout-refresh .toc li a:hover { border-color:#a7caed; background:#edf6ff; box-shadow:0 2px 10px rgba(23,107,187,.08); }
+body.layout-refresh .table-responsive { max-width:100%; min-width:0; margin:18px 0; }
+body.layout-refresh .table-scroll {
+  width:100%; max-width:100%; overflow-x:auto; overflow-y:hidden;
+  -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain;
+  margin:16px 0; border:1px solid #d0deeb; border-radius:12px;
+  background:#fff;
+}
+body.layout-refresh .table-responsive .table-scroll { margin:0; }
+body.layout-refresh .table-scroll table,body.layout-refresh .table-scroll .hub-table,body.layout-refresh .table-scroll .table-modern {
+  border-collapse:collapse; width:100%; max-width:none; font-size:.92rem;
+  letter-spacing:normal; line-height:1.65;
+}
+body.layout-refresh .table-scroll table th,body.layout-refresh .table-scroll table td {
+  padding:12px 13px; border:1px solid #deE8f0;
+  vertical-align:top; text-align:left; overflow-wrap:anywhere; white-space:normal;
+}
+body.layout-refresh .table-scroll table thead th { background:#164e77; color:#fff; font-weight:700; }
+body.layout-refresh .table-scroll table tbody th { background:#eff6fb; color:#174869; font-weight:700; }
+body.layout-refresh .table-scroll table tbody tr:nth-child(even) td { background:#fafcff; }
+body.layout-refresh .formula { border:1px solid #d4e8f8; border-left:5px solid #257abd; background:#eff7ff; border-radius:10px; padding:16px 18px; overflow-wrap:anywhere; }
+body.layout-refresh .note { border-radius:10px; padding:15px 18px; }
+body.layout-refresh .anime-item details { border:1px solid #dbe7f0; background:#fafdff; border-radius:11px; padding:0; margin:10px 0; overflow:hidden; }
+body.layout-refresh .anime-item details > summary { display:block; list-style:none; position:relative; padding:14px 45px 14px 16px; color:#164768; cursor:pointer; font-weight:750; line-height:1.55; }
+body.layout-refresh .anime-item details > summary::-webkit-details-marker { display:none; }
+body.layout-refresh .anime-item details > summary::after { content:'+'; position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:1.5rem; color:#176bbb; }
+body.layout-refresh .anime-item details[open] > summary { background:#eef7ff; border-bottom:1px solid #dbe7f0; }
+body.layout-refresh .anime-item details[open] > summary::after { content:'−'; }
+body.layout-refresh .anime-item details > :not(summary) { margin:12px 16px!important; }
+body.layout-refresh .related,body.layout-refresh .related-grid,body.layout-refresh .link-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px;
+}
+body.layout-refresh .related > a,body.layout-refresh .related-grid > a,body.layout-refresh .link-card {
+  display:block; border:1px solid #d3e3f0; background:linear-gradient(150deg,#fff,#f3f9ff);
+  border-radius:12px; padding:14px 16px; text-decoration:none;
+  font-weight:650; min-width:0;
+}
+body.layout-refresh .related > a:hover,body.layout-refresh .related-grid > a:hover,body.layout-refresh .link-card:hover { border-color:#9bc6e8; background:#eaf5ff; }
+body.layout-refresh .related-grid small { font-weight:400; line-height:1.55; }
+body.layout-refresh section[id] { scroll-margin-top:90px; }
+body.layout-refresh #main .anime-item img:not(.hero-img) { max-width:100%; height:auto; }
+body.layout-refresh .checklist { padding-left:0; }
+body.layout-refresh .checklist li { list-style:none; margin:6px 0; padding:7px 11px; border-radius:8px; background:#f5f9fc; }
+body.layout-refresh .table-box__hint { color:#587186; font-size:.8rem; }
+@media (min-width:769px) {
+  body.layout-refresh #sidebar { flex:0 0 240px; min-width:240px; }
+}
+@media (max-width:768px) {
+  body.layout-refresh .container { display:flex; flex-direction:column; gap:12px; padding:10px; }
+  body.layout-refresh #main { order:1; width:100%; max-width:100%; padding:12px; }
+  body.layout-refresh #sidebar { order:2; width:100%; max-width:100%; }
+  body.layout-refresh .layout-hero { padding:18px 15px; border-radius:16px; }
+  body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc { padding:17px 14px; border-radius:15px; margin-bottom:14px; }
+  body.layout-refresh .toc ul,body.layout-refresh .toc ol { grid-template-columns:1fr; gap:7px; }
+  body.layout-refresh .toc li a { min-height:42px; font-size:.92rem; }
+  body.layout-refresh .related,body.layout-refresh .related-grid,body.layout-refresh .link-grid { grid-template-columns:1fr; }
+  body.layout-refresh .table-scroll table,body.layout-refresh .table-scroll .hub-table,body.layout-refresh .table-scroll .table-modern { font-size:.85rem; }
+  body.layout-refresh .table-scroll table th,body.layout-refresh .table-scroll table td { padding:10px 11px; }
+}
+@media (max-width:380px) {
+  body.layout-refresh #main { padding:8px; }
+  body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc { padding:14px 11px; }
+}
+@media (prefers-reduced-motion:reduce) { body.layout-refresh .toc li a { transition:none; } }
+/* Duration article special layout: preserve its flow diagram, bars and SVG. */
+body.layout-refresh.duration-page .container { max-width:1400px; margin:30px auto 50px; }
+body.layout-refresh.duration-page .container #sidebar { order:0; }
+body.layout-refresh.duration-page .container #main { order:1; }
+body.layout-refresh.duration-page .toc { margin:0 0 18px; }
+body.layout-refresh.duration-page .toc > strong { display:block; font-size:1.3rem; margin:0 0 14px; padding:0 0 12px 14px; border-left:5px solid #1679c5; border-bottom:1px solid #e7eef5; color:#123e5a; }
+body.layout-refresh.duration-page .toc ol { columns:auto; }
+body.layout-refresh.duration-page .bars { overflow:hidden; }
+body.layout-refresh.duration-page .bars>div { min-width:0; }
+body.layout-refresh.duration-page .bars i { max-width:100%; }
+body.layout-refresh.duration-page .process { gap:9px; }
+body.layout-refresh.duration-page .process span { min-width:min(100%,145px); }
+body.layout-refresh.duration-page .anime-item .anime-title { background:transparent; color:#123e5a; border-radius:0; }
+body.layout-refresh.duration-page .layout-hero > img { fetchpriority:high; }
+@media(max-width:768px) {
+  body.layout-refresh.duration-page .container { margin:10px auto 30px; padding:10px; display:flex; }
+  body.layout-refresh.duration-page .container #main { order:1; }
+  body.layout-refresh.duration-page .container #sidebar { order:2; }
+}
+</style></head>
+<body class="profit-page dividend-page layout-refresh" id="top">
 <div id="header">
 </div>
 <div class="container">
 <aside id="sidebar">
 </aside>
 <main id="main" tabindex="-1"><nav aria-label="パンくず"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">ホーム</a></li><li class="breadcrumb-item"><a href="column.html">記事</a></li><li aria-current="page" class="breadcrumb-item active">配当性向・DOE</li></ol></nav>
-<p>株式投資・企業分析</p><h1 class="title">配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説</h1><p><time datetime="2026-10-28">公開・更新：2026年10月28日</time> ／ <a href="profile.html">運営者プロフィール</a></p>
-<div class="hero-intro"><strong>高配当利回り＝安心して配当を受け取れる、とは限りません。</strong><p>配当性向は利益、配当利回りは株価、DOEは株主資本を基準に配当を見る指標です。3つの違いと減配リスクの確認方法を、架空例で順番に整理します。</p></div>
+<header class="layout-hero"><p>株式投資・企業分析</p><h1 class="title">配当性向とは？配当利回り・DOEとの違いと高配当株を見るときの注意点を初心者向けに解説</h1><p><time datetime="2026-10-28">公開・更新：2026年10月28日</time> ／ <a href="profile.html">運営者プロフィール</a></p><div class="hero-intro"><strong>高配当利回り＝安心して配当を受け取れる、とは限りません。</strong><p>配当性向は利益、配当利回りは株価、DOEは株主資本を基準に配当を見る指標です。3つの違いと減配リスクの確認方法を、架空例で順番に整理します。</p></div></header>
+
 <section class="anime-item toc"><h2 class="anime-title">この記事の目次</h2><ul><li><a href="#definition">配当性向とは？</a></li><li><a href="#comparison">配当性向・配当利回り・DOEの違い</a></li><li><a href="#example">架空企業で3つの指標を計算</a></li><li><a href="#high">配当性向が高い企業は良い企業？</a></li><li><a href="#over100">配当性向100％超とは？</a></li><li><a href="#yield">配当利回りが高くなる理由</a></li><li><a href="#doe">DOEを採用する企業があるのはなぜ？</a></li><li><a href="#roe">配当性向とROEの関係</a></li><li><a href="#fcf">配当金とフリーキャッシュフローの関係</a></li><li><a href="#buyback">配当金と自社株買いの違い</a></li><li><a href="#checklist">減配リスクを考えるチェックリスト</a></li><li><a href="#documents">決算資料でどこを確認する？</a></li><li><a href="#faq">よくある質問（FAQ）</a></li><li><a href="#summary">まとめ</a></li></ul></section><section aria-labelledby="definition-title" class="anime-item" id="definition"><h2 class="anime-title" id="definition-title">配当性向とは？</h2><p>配当性向は、企業が生み出した利益のうち、どの程度を株主への配当に充てたかを表す割合です。</p><p class="formula">配当性向（％）＝年間配当総額 ÷ 当期純利益 × 100</p><p>例えば利益100億円、年間配当総額40億円なら配当性向は40％です。1株当たり配当金÷1株当たり利益（EPS）×100で表す場合もあります。連結決算では、親会社株主に帰属する当期純利益などを基準とすることがあり、分子・分母の対象期間や定義をそろえて確認します。</p></section>
 <section aria-labelledby="comparison-title" class="anime-item" id="comparison"><h2 class="anime-title" id="comparison-title">配当性向・配当利回り・DOEの違い</h2><div aria-label="指標の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">指標</th><th scope="col">計算の考え方</th><th scope="col">分かること</th><th scope="col">主な注意点</th></tr></thead><tbody><tr><th scope="row">配当性向</th><td>年間配当総額 ÷ 利益 × 100</td><td>利益に対する配当の割合</td><td>利益の急減で上昇する</td></tr><tr><th scope="row">配当利回り</th><td>1株当たり年間配当 ÷ 株価 × 100</td><td>株価に対する配当の割合</td><td>株価下落でも上昇する</td></tr><tr><th scope="row">DOE（株主資本配当率）</th><td>年間配当総額 ÷ 株主資本 × 100</td><td>株主資本に対する配当の割合</td><td>資本の定義・平均残高の扱いに注意</td></tr></tbody></table></div><p><strong>DOEとROEは別の指標</strong>です。DOEは配当、ROEは利益を株主資本・自己資本と比較します。利益や株主資本の定義、期末残高か期中平均残高かなどは企業の開示によって異なります。</p></section>
 <section aria-labelledby="example-title" class="anime-item" id="example"><h2 class="anime-title" id="example-title">架空企業で3つの指標を計算</h2><p>以下は仕組みを理解するための<strong>単純化した架空例</strong>であり、実在企業の数値ではありません。株主資本は便宜上800億円の一定額とします。</p><div aria-label="項目の比較表" class="table-scroll" role="region" tabindex="0"><table class="hub-table"><thead><tr><th scope="col">項目</th><th scope="col">架空の数値</th></tr></thead><tbody><tr><th scope="row">当期純利益</th><td>100億円</td></tr><tr><th scope="row">年間配当総額</th><td>40億円</td></tr><tr><th scope="row">株主資本</th><td>800億円</td></tr><tr><th scope="row">1株当たり年間配当</th><td>40円</td></tr><tr><th scope="row">株価</th><td>1,000円</td></tr></tbody></table></div><p class="formula">配当性向＝40億円 ÷ 100億円 × 100＝<strong>40％</strong><br/>配当利回り＝40円 ÷ 1,000円 × 100＝<strong>4％</strong><br/>DOE＝40億円 ÷ 800億円 × 100＝<strong>5％</strong></p><p>同じ企業でも、何を分母にするかによって違う数字になります。</p></section>

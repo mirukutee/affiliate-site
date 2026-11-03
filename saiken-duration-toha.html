@@ -1,8 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="ja">
-  <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説｜投資ポータル.jp</title><meta name="description" content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。"><link rel="canonical" href="https://tousiportal.jp/saiken-duration-toha.html"><meta property="og:type" content="article"><meta property="og:site_name" content="投資ポータル.jp"><meta property="og:title" content="債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説"><meta property="og:description" content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。"><meta property="og:url" content="https://tousiportal.jp/saiken-duration-toha.html"><meta property="og:image" content="https://tousiportal.jp/sonota/saiken-duration-ogp.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説"><meta name="twitter:description" content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。"><meta name="twitter:image" content="https://tousiportal.jp/sonota/saiken-duration-ogp.webp"><link rel="stylesheet" href="style.css">
-    <style>
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説｜投資ポータル.jp</title><meta content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。" name="description"/><link href="https://tousiportal.jp/saiken-duration-toha.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="投資ポータル.jp" property="og:site_name"/><meta content="債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説" property="og:title"/><meta content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。" property="og:description"/><meta content="https://tousiportal.jp/saiken-duration-toha.html" property="og:url"/><meta content="https://tousiportal.jp/sonota/saiken-duration-ogp.webp" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説" name="twitter:title"/><meta content="債券のデュレーションを初心者向けに解説。マコーレー・修正・実効の違い、金利1％ポイント変化時の価格概算、残存期間・コンベクシティ・債券ETFの見方を図表で整理。" name="twitter:description"/><meta content="https://tousiportal.jp/sonota/saiken-duration-ogp.webp" name="twitter:image"/><link href="style.css" rel="stylesheet"/><link href="header.css" rel="stylesheet"/><link href="table.css" rel="stylesheet"/><link href="sidebar.css" rel="stylesheet"/><link href="menu-card.css" rel="stylesheet"/>
+<style>
       .duration-page .container {
   display:flex;
   gap:28px;
@@ -192,7 +194,7 @@
   }
 }
     </style>
-    <script type="application/ld+json">
+<script type="application/ld+json">
       {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -215,7 +217,7 @@
   }
 }
     </script>
-    <script type="application/ld+json">
+<script type="application/ld+json">
       {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -241,464 +243,624 @@
   ]
 }
     </script>
-  </head>
-  <body class="duration-page">
-    <a class="skip" href="#main">本文へ移動</a>
-    <div id="header">
-    </div>
-    <nav class="breadcrumb" aria-label="パンくずリスト">
-      <a href="index.html">ホーム</a> &gt; <a href="column.html">コラム</a> &gt; 債券のデュレーション
+<style id="article-layout-refresh">
+/* Article layout refresh — scoped to this article only. */
+body.layout-refresh {
+  --lr-accent:#176bbb;
+  --lr-accent-ink:#154968;
+  --lr-border:#dbe6ef;
+  --lr-text:#243b4d;
+  --lr-muted:#5b7182;
+  --lr-shadow:0 7px 24px rgba(17,52,82,.055);
+}
+body.layout-refresh .container { align-items:flex-start; gap:24px; }
+body.layout-refresh #main {
+  flex:1 1 0; width:auto; max-width:1120px; min-width:0;
+  padding:clamp(12px,2.2vw,24px);
+  border:1px solid rgba(219,230,239,.85); border-radius:20px;
+  background:rgba(250,252,255,.95);
+  box-shadow:0 10px 32px rgba(16,42,67,.06);
+  overflow:visible;
+}
+body.layout-refresh #main > article { min-width:0; }
+body.layout-refresh #main .breadcrumb { font-size:.88rem; line-height:1.5; margin:0 0 16px; padding:10px 14px; }
+body.layout-refresh .layout-hero {
+  position:relative; margin:0 0 20px; padding:clamp(18px,2.7vw,30px);
+  border:1px solid #d4e4f2; border-radius:22px; overflow:hidden;
+  background:radial-gradient(circle at 100% 0%,rgba(27,116,216,.105),transparent 40%),linear-gradient(160deg,#fff 0%,#f1f8ff 100%);
+  box-shadow:var(--lr-shadow);
+}
+body.layout-refresh .layout-hero > p:first-child:not(.formula) {
+  display:inline-block; margin:0 0 10px; color:#176bbb;
+  font-size:.88rem; font-weight:750; letter-spacing:.025em;
+}
+body.layout-refresh .layout-hero h1, body.layout-refresh .layout-hero .title {
+  margin:0 0 14px; font-size:clamp(1.55rem,2.4vw,2.25rem);
+  line-height:1.5; letter-spacing:-.018em; color:#103753;
+}
+body.layout-refresh .layout-hero p { line-height:1.85; margin:10px 0; color:var(--lr-text); }
+body.layout-refresh .layout-hero time { color:var(--lr-muted); }
+body.layout-refresh .layout-hero img.hero-img,
+body.layout-refresh .layout-hero img.hero-image,
+body.layout-refresh .layout-hero img:not([class]) {
+  display:block; width:100%; max-width:850px; height:auto;
+  margin:18px auto 8px; border:1px solid #d8e5ef;
+  border-radius:15px; object-fit:contain; background:#fff;
+  box-shadow:0 4px 16px rgba(15,40,65,.045);
+}
+body.layout-refresh .layout-hero .hero-intro { margin:12px 0 0; }
+body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc {
+  margin:0 0 18px; padding:clamp(16px,2vw,25px);
+  border:1px solid var(--lr-border); border-radius:19px;
+  background:#fff; box-shadow:var(--lr-shadow);
+  transform:none;
+}
+body.layout-refresh .anime-item:hover { transform:none; box-shadow:var(--lr-shadow); }
+body.layout-refresh .anime-item .anime-title,
+body.layout-refresh .toc > .anime-title {
+  margin:0 0 16px; padding:0 0 12px 14px;
+  border:0; border-left:5px solid #1679c5; border-bottom:1px solid #e7eef5;
+  border-radius:0; background:transparent; color:#123e5a;
+  font-size:clamp(1.18rem,1.5vw,1.46rem); line-height:1.5;
+}
+body.layout-refresh .anime-item h3 { color:#164968; font-size:1.08rem; line-height:1.5; margin:24px 0 10px; }
+body.layout-refresh #main p,body.layout-refresh #main li,body.layout-refresh #main dd { line-height:1.88; overflow-wrap:anywhere; }
+body.layout-refresh #main a { color:#0867a8; text-underline-offset:3px; }
+body.layout-refresh #main a:focus-visible,body.layout-refresh #main summary:focus-visible { outline:3px solid #80b8f3; outline-offset:3px; }
+body.layout-refresh .toc { background:linear-gradient(180deg,#f9fcff,#f1f7ff); }
+body.layout-refresh .toc ul,body.layout-refresh .toc ol {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px 12px; columns:auto; padding:0; margin:0; list-style:none; counter-reset:toc;
+}
+body.layout-refresh .toc li { margin:0!important; min-width:0; list-style:none; }
+body.layout-refresh .toc li a {
+  display:flex; align-items:center; min-height:44px;
+  padding:10px 13px; border:1px solid #dbe7f2; border-radius:11px;
+  background:#fff; color:#174869; font-size:.93rem; font-weight:650;
+  line-height:1.5; text-decoration:none;
+  transition:border-color .2s,background-color .2s,box-shadow .2s;
+}
+body.layout-refresh .toc li a:hover { border-color:#a7caed; background:#edf6ff; box-shadow:0 2px 10px rgba(23,107,187,.08); }
+body.layout-refresh .table-responsive { max-width:100%; min-width:0; margin:18px 0; }
+body.layout-refresh .table-scroll {
+  width:100%; max-width:100%; overflow-x:auto; overflow-y:hidden;
+  -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain;
+  margin:16px 0; border:1px solid #d0deeb; border-radius:12px;
+  background:#fff;
+}
+body.layout-refresh .table-responsive .table-scroll { margin:0; }
+body.layout-refresh .table-scroll table,body.layout-refresh .table-scroll .hub-table,body.layout-refresh .table-scroll .table-modern {
+  border-collapse:collapse; width:100%; max-width:none; font-size:.92rem;
+  letter-spacing:normal; line-height:1.65;
+}
+body.layout-refresh .table-scroll table th,body.layout-refresh .table-scroll table td {
+  padding:12px 13px; border:1px solid #deE8f0;
+  vertical-align:top; text-align:left; overflow-wrap:anywhere; white-space:normal;
+}
+body.layout-refresh .table-scroll table thead th { background:#164e77; color:#fff; font-weight:700; }
+body.layout-refresh .table-scroll table tbody th { background:#eff6fb; color:#174869; font-weight:700; }
+body.layout-refresh .table-scroll table tbody tr:nth-child(even) td { background:#fafcff; }
+body.layout-refresh .formula { border:1px solid #d4e8f8; border-left:5px solid #257abd; background:#eff7ff; border-radius:10px; padding:16px 18px; overflow-wrap:anywhere; }
+body.layout-refresh .note { border-radius:10px; padding:15px 18px; }
+body.layout-refresh .anime-item details { border:1px solid #dbe7f0; background:#fafdff; border-radius:11px; padding:0; margin:10px 0; overflow:hidden; }
+body.layout-refresh .anime-item details > summary { display:block; list-style:none; position:relative; padding:14px 45px 14px 16px; color:#164768; cursor:pointer; font-weight:750; line-height:1.55; }
+body.layout-refresh .anime-item details > summary::-webkit-details-marker { display:none; }
+body.layout-refresh .anime-item details > summary::after { content:'+'; position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:1.5rem; color:#176bbb; }
+body.layout-refresh .anime-item details[open] > summary { background:#eef7ff; border-bottom:1px solid #dbe7f0; }
+body.layout-refresh .anime-item details[open] > summary::after { content:'−'; }
+body.layout-refresh .anime-item details > :not(summary) { margin:12px 16px!important; }
+body.layout-refresh .related,body.layout-refresh .related-grid,body.layout-refresh .link-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px;
+}
+body.layout-refresh .related > a,body.layout-refresh .related-grid > a,body.layout-refresh .link-card {
+  display:block; border:1px solid #d3e3f0; background:linear-gradient(150deg,#fff,#f3f9ff);
+  border-radius:12px; padding:14px 16px; text-decoration:none;
+  font-weight:650; min-width:0;
+}
+body.layout-refresh .related > a:hover,body.layout-refresh .related-grid > a:hover,body.layout-refresh .link-card:hover { border-color:#9bc6e8; background:#eaf5ff; }
+body.layout-refresh .related-grid small { font-weight:400; line-height:1.55; }
+body.layout-refresh section[id] { scroll-margin-top:90px; }
+body.layout-refresh #main .anime-item img:not(.hero-img) { max-width:100%; height:auto; }
+body.layout-refresh .checklist { padding-left:0; }
+body.layout-refresh .checklist li { list-style:none; margin:6px 0; padding:7px 11px; border-radius:8px; background:#f5f9fc; }
+body.layout-refresh .table-box__hint { color:#587186; font-size:.8rem; }
+@media (min-width:769px) {
+  body.layout-refresh #sidebar { flex:0 0 240px; min-width:240px; }
+}
+@media (max-width:768px) {
+  body.layout-refresh .container { display:flex; flex-direction:column; gap:12px; padding:10px; }
+  body.layout-refresh #main { order:1; width:100%; max-width:100%; padding:12px; }
+  body.layout-refresh #sidebar { order:2; width:100%; max-width:100%; }
+  body.layout-refresh .layout-hero { padding:18px 15px; border-radius:16px; }
+  body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc { padding:17px 14px; border-radius:15px; margin-bottom:14px; }
+  body.layout-refresh .toc ul,body.layout-refresh .toc ol { grid-template-columns:1fr; gap:7px; }
+  body.layout-refresh .toc li a { min-height:42px; font-size:.92rem; }
+  body.layout-refresh .related,body.layout-refresh .related-grid,body.layout-refresh .link-grid { grid-template-columns:1fr; }
+  body.layout-refresh .table-scroll table,body.layout-refresh .table-scroll .hub-table,body.layout-refresh .table-scroll .table-modern { font-size:.85rem; }
+  body.layout-refresh .table-scroll table th,body.layout-refresh .table-scroll table td { padding:10px 11px; }
+}
+@media (max-width:380px) {
+  body.layout-refresh #main { padding:8px; }
+  body.layout-refresh .anime-item:not(.layout-hero),body.layout-refresh .toc { padding:14px 11px; }
+}
+@media (prefers-reduced-motion:reduce) { body.layout-refresh .toc li a { transition:none; } }
+/* Duration article special layout: preserve its flow diagram, bars and SVG. */
+body.layout-refresh.duration-page .container { max-width:1400px; margin:30px auto 50px; }
+body.layout-refresh.duration-page .container #sidebar { order:0; }
+body.layout-refresh.duration-page .container #main { order:1; }
+body.layout-refresh.duration-page .toc { margin:0 0 18px; }
+body.layout-refresh.duration-page .toc > strong { display:block; font-size:1.3rem; margin:0 0 14px; padding:0 0 12px 14px; border-left:5px solid #1679c5; border-bottom:1px solid #e7eef5; color:#123e5a; }
+body.layout-refresh.duration-page .toc ol { columns:auto; }
+body.layout-refresh.duration-page .bars { overflow:hidden; }
+body.layout-refresh.duration-page .bars>div { min-width:0; }
+body.layout-refresh.duration-page .bars i { max-width:100%; }
+body.layout-refresh.duration-page .process { gap:9px; }
+body.layout-refresh.duration-page .process span { min-width:min(100%,145px); }
+body.layout-refresh.duration-page .anime-item .anime-title { background:transparent; color:#123e5a; border-radius:0; }
+body.layout-refresh.duration-page .layout-hero > img { fetchpriority:high; }
+@media(max-width:768px) {
+  body.layout-refresh.duration-page .container { margin:10px auto 30px; padding:10px; display:flex; }
+  body.layout-refresh.duration-page .container #main { order:1; }
+  body.layout-refresh.duration-page .container #sidebar { order:2; }
+}
+</style></head>
+<body class="duration-page layout-refresh">
+<a class="skip" href="#main">本文へ移動</a>
+<div id="header">
+</div>
+<nav aria-label="パンくずリスト" class="breadcrumb">
+<a href="index.html">ホーム</a> &gt; <a href="column.html">コラム</a> &gt; 債券のデュレーション
     </nav>
-    <div class="container">
-      <main id="main">
-        <article>
-          <header>
-            <p>
+<div class="container">
+<main id="main">
+<article>
+<header class="layout-hero">
+<p>
               債券・金利・金融市場
             </p>
-            <h1>
+<h1>
               債券のデュレーションとは？金利上昇で債券価格が下がる仕組みとリスクの見方を初心者向けに解説
             </h1>
-            <p>
-              <time datetime="2026-11-02">公開日：2026年11月2日</time>　<time datetime="2026-11-02">更新日：2026年11月2日</time>
-            </p>
-            <img src="sonota/saiken-duration-card.webp" width="1200" height="630" style="width:100%;height:auto;border-radius:8px" alt="金利上昇と債券価格下落の関係。修正デュレーション2・5・10では利回り1％ポイント上昇時に価格が約2％・5％・10％下落する一次近似の比較図" decoding="async">
-            <p>
+<p>
+<time datetime="2026-11-02">公開日：2026年11月2日</time>　<time datetime="2026-11-02">更新日：2026年11月2日</time>
+</p>
+<img alt="金利上昇と債券価格下落の関係。修正デュレーション2・5・10では利回り1％ポイント上昇時に価格が約2％・5％・10％下落する一次近似の比較図" decoding="async" fetchpriority="high" height="630" src="sonota/saiken-duration-card.webp" style="width:100%;height:auto;border-radius:8px" width="1200"/>
+<p>
               同じ金利上昇でも、債券ごとに値下がり幅が違うのはなぜでしょうか。この記事ではデュレーションの種類、計算例、残存期間との違い、債券ETFの見方まで整理します。
             </p>
-          </header>
-          <nav class="toc" aria-label="この記事の目次">
-            <strong>この記事の目次</strong>
-            <ol>
-              <li>
-                <a href="#what">デュレーションとは？</a>
-              </li>
-              <li>
-                <a href="#inverse">なぜ金利が上がると債券価格は下がる？</a>
-              </li>
-              <li>
-                <a href="#types">デュレーションの種類を比較</a>
-              </li>
-              <li>
-                <a href="#formula">修正デュレーションの計算例</a>
-              </li>
-              <li>
-                <a href="#comparison">デュレーション別の価格変動比較</a>
-              </li>
-              <li>
-                <a href="#maturity">残存期間とデュレーションの違い</a>
-              </li>
-              <li>
-                <a href="#zero">ゼロクーポン債との関係</a>
-              </li>
-              <li>
-                <a href="#convexity">コンベクシティとは？</a>
-              </li>
-              <li>
-                <a href="#risks">デュレーションが長い債券は危険？</a>
-              </li>
-              <li>
-                <a href="#etf">債券ETF・債券投資信託での見方</a>
-              </li>
-              <li>
-                <a href="#news">金融ニュースでの使い方</a>
-              </li>
-              <li>
-                <a href="#check">初心者向けチェックリスト</a>
-              </li>
-              <li>
-                <a href="#faq">FAQ</a>
-              </li>
-              <li>
-                <a href="#summary">まとめ</a>
-              </li>
-              <li>
-                <a href="#related">関連記事</a>
-              </li>
-            </ol>
-          </nav>
-          <section class="anime-item" id="what">
-            <h2 class="anime-title">
+</header>
+<nav aria-label="この記事の目次" class="toc">
+<strong>この記事の目次</strong>
+<ol>
+<li>
+<a href="#what">デュレーションとは？</a>
+</li>
+<li>
+<a href="#inverse">なぜ金利が上がると債券価格は下がる？</a>
+</li>
+<li>
+<a href="#types">デュレーションの種類を比較</a>
+</li>
+<li>
+<a href="#formula">修正デュレーションの計算例</a>
+</li>
+<li>
+<a href="#comparison">デュレーション別の価格変動比較</a>
+</li>
+<li>
+<a href="#maturity">残存期間とデュレーションの違い</a>
+</li>
+<li>
+<a href="#zero">ゼロクーポン債との関係</a>
+</li>
+<li>
+<a href="#convexity">コンベクシティとは？</a>
+</li>
+<li>
+<a href="#risks">デュレーションが長い債券は危険？</a>
+</li>
+<li>
+<a href="#etf">債券ETF・債券投資信託での見方</a>
+</li>
+<li>
+<a href="#news">金融ニュースでの使い方</a>
+</li>
+<li>
+<a href="#check">初心者向けチェックリスト</a>
+</li>
+<li>
+<a href="#faq">FAQ</a>
+</li>
+<li>
+<a href="#summary">まとめ</a>
+</li>
+<li>
+<a href="#related">関連記事</a>
+</li>
+</ol>
+</nav>
+<section class="anime-item" id="what">
+<h2 class="anime-title">
               1. デュレーションとは？
             </h2>
-            <p>
+<p>
               デュレーションは、債券の利払い・償還と金利変化を考えるための指標です。特に<strong>金利が変わったとき債券価格がどれほど動きやすいか</strong>を把握する際に使います。
             </p>
-            <p>
+<p>
               ただし「マコーレー」「修正」「実効」では意味が異なります。資料の「デュレーション」がどの種類か、最初に確認しましょう。
             </p>
-          </section>
-          <section class="anime-item" id="inverse">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="inverse">
+<h2 class="anime-title">
               2. なぜ金利が上がると債券価格は下がる？
             </h2>
-            <p>
+<p>
               市場で新たに発行される債券の利回りが上がると、従来の低い固定クーポンを受け取る債券は相対的に魅力が下がります。売買価格が下がることで、購入価格に対する利回りが新しい市場環境に近づきます。
             </p>
-            <div class="process">
-              <span>市場利回りが上昇 ↑</span><b>→</b><span>既存の固定利払いの相対的魅力が低下</span><b>→</b><span>既存債券の価格が下落 ↓</span>
-            </div>
-            <p>
+<div class="process">
+<span>市場利回りが上昇 ↑</span><b>→</b><span>既存の固定利払いの相対的魅力が低下</span><b>→</b><span>既存債券の価格が下落 ↓</span>
+</div>
+<p>
               詳しい基礎は<a href="kokusai-kakaku-rimawari.html">国債価格・利回り・長期金利の関係</a>を参照してください。これは固定利付債の基本的な説明です。変動利付債は利払いが見直されるため、価格の動き方が異なります。
             </p>
-          </section>
-          <section class="anime-item" id="types">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="types">
+<h2 class="anime-title">
               3. デュレーションの種類を比較
             </h2>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>種類</th><th>意味</th><th>単位・表示</th><th>主な用途</th><th>注意点</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>マコーレー・デュレーション</th><td>利息と償還金の現在価値を重みとした、キャッシュフロー受取時点の加重平均</td><td>年</td><td>回収時点の時間的な特徴の把握</td><td>その数値を直接「利回り1％ポイント変化時の価格変化率」と読まない</td>
-                  </tr>
-                  <tr>
-                    <th>修正デュレーション</th><td>利回りの小幅な変化に対する価格の一次感応度</td><td>通常は年に相当する値（表示は数値の場合も）</td><td>価格変化率の概算</td><td>利回りの変化幅は小数で計算。大幅変化には近似誤差</td>
-                  </tr>
-                  <tr>
-                    <th>実効デュレーション</th><td>金利変化を与えて価格を再評価し、必要に応じてキャッシュフローの変化も反映した感応度</td><td>通常は年に相当する値</td><td>期限前償還・オプション付き債券など</td><td>金利シナリオや評価モデルに依存。修正デュレーションと単純比較できない場合がある</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
+<div aria-label="3. デュレーションの種類を比較の表" class="table-scroll" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>種類</th><th>意味</th><th>単位・表示</th><th>主な用途</th><th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>マコーレー・デュレーション</th><td>利息と償還金の現在価値を重みとした、キャッシュフロー受取時点の加重平均</td><td>年</td><td>回収時点の時間的な特徴の把握</td><td>その数値を直接「利回り1％ポイント変化時の価格変化率」と読まない</td>
+</tr>
+<tr>
+<th>修正デュレーション</th><td>利回りの小幅な変化に対する価格の一次感応度</td><td>通常は年に相当する値（表示は数値の場合も）</td><td>価格変化率の概算</td><td>利回りの変化幅は小数で計算。大幅変化には近似誤差</td>
+</tr>
+<tr>
+<th>実効デュレーション</th><td>金利変化を与えて価格を再評価し、必要に応じてキャッシュフローの変化も反映した感応度</td><td>通常は年に相当する値</td><td>期限前償還・オプション付き債券など</td><td>金利シナリオや評価モデルに依存。修正デュレーションと単純比較できない場合がある</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
               単純な固定利付債では修正デュレーションを用いる場面が多く、オプション性を持つ債券では実効デュレーションが有用です。各運用会社の定義も確認しましょう。
             </p>
-          </section>
-          <section class="anime-item" id="formula">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="formula">
+<h2 class="anime-title">
               4. 修正デュレーションの計算例
             </h2>
-            <div class="formula">
+<div class="formula">
               債券価格の変化率 ≒ −修正デュレーション × 利回りの変化幅
             </div>
-            <p>
+<p>
               架空の債券の修正デュレーションが<strong>5</strong>の場合、利回りが<strong>1％ポイント上昇（＋0.01）</strong>すると、−5×0.01＝<strong>約−5％</strong>。逆に1％ポイント低下（−0.01）なら約＋5％です。
             </p>
-            <p>
-              <strong>「1％ポイントの上昇」と「利回りが1％増える（相対変化）」は異なります。</strong>たとえば利回り2％→3％は＋1％ポイントです。これは小幅変化を前提とした一次近似であり、実際の値動きを保証しません。
+<p>
+<strong>「1％ポイントの上昇」と「利回りが1％増える（相対変化）」は異なります。</strong>たとえば利回り2％→3％は＋1％ポイントです。これは小幅変化を前提とした一次近似であり、実際の値動きを保証しません。
             </p>
-          </section>
-          <section class="anime-item" id="comparison">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="comparison">
+<h2 class="anime-title">
               5. デュレーション別の価格変動比較
             </h2>
-            <p>
+<p>
               その他の条件を一定とし、各債券の利回りが一律に1％ポイント上昇したと仮定します。
             </p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>修正デュレーション</th><th>利回り＋1％ポイント時の価格変化（概算）</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>2</td><td>約−2％</td>
-                  </tr>
-                  <tr>
-                    <td>5</td><td>約−5％</td>
-                  </tr>
-                  <tr>
-                    <td>10</td><td>約−10％</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <figure>
-              <div class="bars" role="img" aria-label="修正デュレーション2、5、10に対する価格下落率の一次近似がそれぞれ約2％、5％、10％である棒グラフ">
-                <div>
-                  <span>2</span><i style="width:20%"></i><b>−2％</b>
-                </div>
-                <div>
-                  <span>5</span><i style="width:50%"></i><b>−5％</b>
-                </div>
-                <div>
-                  <span>10</span><i style="width:100%"></i><b>−10％</b>
-                </div>
-              </div>
-              <figcaption>
+<div aria-label="5. デュレーション別の価格変動比較の表" class="table-scroll" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>修正デュレーション</th><th>利回り＋1％ポイント時の価格変化（概算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td><td>約−2％</td>
+</tr>
+<tr>
+<td>5</td><td>約−5％</td>
+</tr>
+<tr>
+<td>10</td><td>約−10％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<div aria-label="修正デュレーション2、5、10に対する価格下落率の一次近似がそれぞれ約2％、5％、10％である棒グラフ" class="bars" role="img">
+<div>
+<span>2</span><i style="width:20%"></i><b>−2％</b>
+</div>
+<div>
+<span>5</span><i style="width:50%"></i><b>−5％</b>
+</div>
+<div>
+<span>10</span><i style="width:100%"></i><b>−10％</b>
+</div>
+</div>
+<figcaption>
                 図：修正デュレーションが長いほど、同じ利回り変化に対する価格変動が大きくなりやすい（架空の一次近似）。
               </figcaption>
-            </figure>
-          </section>
-          <section class="anime-item" id="maturity">
-            <h2 class="anime-title">
+</figure>
+</section>
+<section class="anime-item" id="maturity">
+<h2 class="anime-title">
               6. 残存期間とデュレーションの違い
             </h2>
-            <p>
-              <strong>残存期間</strong>は償還までの時間、<strong>マコーレー・デュレーション</strong>は利息と償還金を受け取るタイミングの現在価値加重平均です。固定利付債では償還前にクーポンを受け取るため、通常、マコーレー・デュレーションは残存期間より短くなります。
+<p>
+<strong>残存期間</strong>は償還までの時間、<strong>マコーレー・デュレーション</strong>は利息と償還金を受け取るタイミングの現在価値加重平均です。固定利付債では償還前にクーポンを受け取るため、通常、マコーレー・デュレーションは残存期間より短くなります。
             </p>
-            <p>
+<p>
               クーポンが高いほど早期に受け取るキャッシュフローの重みが増え、一般に短くなる傾向があります。利回りや償還までの期間も影響します。同じ残存期間でもクーポン条件が違えばデュレーションは異なります。
             </p>
-          </section>
-          <section class="anime-item" id="zero">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="zero">
+<h2 class="anime-title">
               7. ゼロクーポン債との関係
             </h2>
-            <p>
+<p>
               途中の利払いがないゼロクーポン債は、原則として満期時にだけキャッシュフローを受け取ります。このため<strong>マコーレー・デュレーションは残存期間と一致</strong>します。ただし修正デュレーションは利回りの水準・複利の扱いに応じて調整されるため、残存期間と同じとは限りません。
             </p>
-          </section>
-          <section class="anime-item" id="convexity">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="convexity">
+<h2 class="anime-title">
               8. コンベクシティとは？
             </h2>
-            <p>
+<p>
               債券価格と利回りの関係は直線ではなく、一般に曲線を描きます。修正デュレーションは現在の点に引いた接線の傾きを使う一次近似です。コンベクシティは、この<strong>曲がり具合</strong>を捉える指標です。
             </p>
-            <figure>
-              <svg viewBox="0 0 680 290" role="img" aria-label="横軸が利回り、縦軸が債券価格。曲線と一次近似の接線が利回りの変化に伴って離れることを示す模式図">
-                <line x1="55" y1="245" x2="650" y2="245" stroke="#31536c" stroke-width="2"/><line x1="55" y1="245" x2="55" y2="20" stroke="#31536c" stroke-width="2"/><path d="M85 35 Q230 175 625 228" stroke="#168f7c" fill="none" stroke-width="5"/><path d="M90 78 L615 255" stroke="#d2a347" stroke-width="4" stroke-dasharray="10 7"/><text x="14" y="20" font-size="18">価格</text><text x="575" y="278" font-size="18">利回り →</text><text x="380" y="100" font-size="17" fill="#168f7c">実際の曲線（模式図）</text><text x="340" y="220" font-size="16" fill="#a67822">一次近似の直線</text>
-              </svg>
-              <figcaption>
+<figure>
+<svg aria-label="横軸が利回り、縦軸が債券価格。曲線と一次近似の接線が利回りの変化に伴って離れることを示す模式図" role="img" viewbox="0 0 680 290">
+<line stroke="#31536c" stroke-width="2" x1="55" x2="650" y1="245" y2="245"></line><line stroke="#31536c" stroke-width="2" x1="55" x2="55" y1="245" y2="20"></line><path d="M85 35 Q230 175 625 228" fill="none" stroke="#168f7c" stroke-width="5"></path><path d="M90 78 L615 255" stroke="#d2a347" stroke-dasharray="10 7" stroke-width="4"></path><text font-size="18" x="14" y="20">価格</text><text font-size="18" x="575" y="278">利回り →</text><text fill="#168f7c" font-size="17" x="380" y="100">実際の曲線（模式図）</text><text fill="#a67822" font-size="16" x="340" y="220">一次近似の直線</text>
+</svg>
+<figcaption>
                 模式図：利回りの変化が大きくなるほど、接線による概算と実際の曲線との差が生じ得ます。オプション付き債券では形が異なる場合があります。
               </figcaption>
-            </figure>
-          </section>
-          <section class="anime-item" id="risks">
-            <h2 class="anime-title">
+</figure>
+</section>
+<section class="anime-item" id="risks">
+<h2 class="anime-title">
               9. デュレーションが長い債券は危険？
             </h2>
-            <p>
+<p>
               長いデュレーションは金利変動に対する価格感応度が高いことを示しますが、債券の危険性すべてを表す数値ではありません。
             </p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>リスク</th><th>確認したいこと</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>金利変動</th><td>市場利回りの変化で時価が上下する</td>
-                  </tr>
-                  <tr>
-                    <th>信用</th><td>発行体の支払能力や信用スプレッドの変化</td>
-                  </tr>
-                  <tr>
-                    <th>流動性</th><td>希望する価格で売却できるか</td>
-                  </tr>
-                  <tr>
-                    <th>為替</th><td>外貨建て資産の円換算価値</td>
-                  </tr>
-                  <tr>
-                    <th>インフレ</th><td>受け取る利息・元本の購買力低下</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
+<div aria-label="9. デュレーションが長い債券は危険？の表" class="table-scroll" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>リスク</th><th>確認したいこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>金利変動</th><td>市場利回りの変化で時価が上下する</td>
+</tr>
+<tr>
+<th>信用</th><td>発行体の支払能力や信用スプレッドの変化</td>
+</tr>
+<tr>
+<th>流動性</th><td>希望する価格で売却できるか</td>
+</tr>
+<tr>
+<th>為替</th><td>外貨建て資産の円換算価値</td>
+</tr>
+<tr>
+<th>インフレ</th><td>受け取る利息・元本の購買力低下</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
               短いデュレーションでも信用力の低い発行体や流動性の乏しい債券には別のリスクがあります。
             </p>
-          </section>
-          <section class="anime-item" id="etf">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="etf">
+<h2 class="anime-title">
               10. 債券ETF・債券投資信託での見方
             </h2>
-            <p>
+<p>
               ファンドの月次レポートなどにあるデュレーションは、保有債券全体の金利感応度を把握する参考になります。<strong>平均残存年数とは別項目</strong>であることがあり、実効・修正などの定義も確認しましょう。
             </p>
-            <p>
+<p>
               実際の基準価額は、分配金、信託報酬、信用スプレッド、為替、組入債券の入れ替え、利回り曲線の変化などの影響を受けるため、デュレーション×金利変化だけでは決まりません。
             </p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>個別債券の満期保有</th><th>債券ETF・投資信託</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>所定の償還日があり、契約どおり償還されれば額面償還を受ける。ただし途中売却価格は変動</td><td>通常、ファンド自体に個別債券のような満期はなく、組入銘柄を入れ替えながら運用する</td>
-                  </tr>
-                  <tr>
-                    <td>満期保有でも発行体の信用リスク・インフレリスク・機会費用などは残る</td><td>基準価額が変動し続け、費用・分配・為替等も影響する</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-          <section class="anime-item" id="news">
-            <h2 class="anime-title">
+<div aria-label="10. 債券ETF・債券投資信託での見方の表" class="table-scroll" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>個別債券の満期保有</th><th>債券ETF・投資信託</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所定の償還日があり、契約どおり償還されれば額面償還を受ける。ただし途中売却価格は変動</td><td>通常、ファンド自体に個別債券のような満期はなく、組入銘柄を入れ替えながら運用する</td>
+</tr>
+<tr>
+<td>満期保有でも発行体の信用リスク・インフレリスク・機会費用などは残る</td><td>基準価額が変動し続け、費用・分配・為替等も影響する</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="anime-item" id="news">
+<h2 class="anime-title">
               11. 金融ニュースでの使い方
             </h2>
-            <ul>
-              <li>
-                <strong>長期金利が上昇：</strong>対象年限の利回りと保有債券のデュレーションを確認する。
+<ul>
+<li>
+<strong>長期金利が上昇：</strong>対象年限の利回りと保有債券のデュレーションを確認する。
               </li>
-              <li>
-                <strong>中央銀行が利上げ：</strong>政策金利と個別債券の利回りは必ずしも同幅では動かない。
+<li>
+<strong>中央銀行が利上げ：</strong>政策金利と個別債券の利回りは必ずしも同幅では動かない。
               </li>
-              <li>
-                <strong>国債が売られた：</strong>価格低下と利回り上昇の基本関係を確認する。
+<li>
+<strong>国債が売られた：</strong>価格低下と利回り上昇の基本関係を確認する。
               </li>
-              <li>
-                <strong>債券ETFが下落：</strong>金利以外に信用スプレッド、為替、分配落ちなどを確認する。
+<li>
+<strong>債券ETFが下落：</strong>金利以外に信用スプレッド、為替、分配落ちなどを確認する。
               </li>
-              <li>
-                <strong>イールドカーブが変化：</strong>短期・中期・長期の利回りがそれぞれ違う幅で動くことを確認する。
+<li>
+<strong>イールドカーブが変化：</strong>短期・中期・長期の利回りがそれぞれ違う幅で動くことを確認する。
               </li>
-            </ul>
-            <p>
+</ul>
+<p>
               関連：<a href="yield-curve-toha.html">イールドカーブとは？</a>、<a href="chouki-kinri-toha.html">長期金利とは？</a>、<a href="kinri-shurui-kankei.html">金利の種類と関係</a>。
             </p>
-          </section>
-          <section class="anime-item" id="check">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="check">
+<h2 class="anime-title">
               12. 初心者向けチェックリスト
             </h2>
-            <ul class="checks">
-              <li>
+<ul class="checks">
+<li>
                 デュレーションの種類を確認した
               </li>
-              <li>
+<li>
                 残存期間と混同していない
               </li>
-              <li>
+<li>
                 金利上昇時の概算を想定した
               </li>
-              <li>
+<li>
                 信用リスクを確認した
               </li>
-              <li>
+<li>
                 外貨建ての場合、為替リスクを確認した
               </li>
-              <li>
+<li>
                 債券ETFの組入債券・運用方針を確認した
               </li>
-              <li>
+<li>
                 利回りの変化幅と価格変化率を混同していない
               </li>
-            </ul>
-          </section>
-          <section class="anime-item" id="faq">
-            <h2 class="anime-title">
+</ul>
+</section>
+<section class="anime-item" id="faq">
+<h2 class="anime-title">
               13. よくある質問（FAQ）
             </h2>
-            <details>
-              <summary>債券のデュレーションとは何ですか？</summary>
-              <p>
+<details>
+<summary>債券のデュレーションとは何ですか？</summary>
+<p>
                 利息・償還金の受取時点や、金利変化に対する価格感応度を考える指標の総称です。種類によって定義が異なります。
               </p>
-            </details>
-            <details>
-              <summary>デュレーションが長いとどうなりますか？</summary>
-              <p>
+</details>
+<details>
+<summary>デュレーションが長いとどうなりますか？</summary>
+<p>
                 他の条件が同じなら、一般に利回りの変化による価格変動が大きくなりやすくなります。
               </p>
-            </details>
-            <details>
-              <summary>残存期間とデュレーションは同じですか？</summary>
-              <p>
+</details>
+<details>
+<summary>残存期間とデュレーションは同じですか？</summary>
+<p>
                 同じではありません。残存期間は償還までの時間で、デュレーションはキャッシュフローの構成や利回りも反映します。
               </p>
-            </details>
-            <details>
-              <summary>修正デュレーションとは何ですか？</summary>
-              <p>
+</details>
+<details>
+<summary>修正デュレーションとは何ですか？</summary>
+<p>
                 利回りの小幅な変化に対する債券価格の変化率を一次近似するための指標です。
               </p>
-            </details>
-            <details>
-              <summary>デュレーション5とはどういう意味ですか？</summary>
-              <p>
+</details>
+<details>
+<summary>デュレーション5とはどういう意味ですか？</summary>
+<p>
                 修正デュレーション5なら、利回りが1％ポイント上昇すると価格が約5％下がるという概算です。種類が不明なら断定できません。
               </p>
-            </details>
-            <details>
-              <summary>金利が1％上がると債券価格は何％下がりますか？</summary>
-              <p>
+</details>
+<details>
+<summary>金利が1％上がると債券価格は何％下がりますか？</summary>
+<p>
                 一律には決まりません。修正デュレーション、どの利回りが何％ポイント変化したか、コンベクシティなどによります。
               </p>
-            </details>
-            <details>
-              <summary>コンベクシティとは何ですか？</summary>
-              <p>
+</details>
+<details>
+<summary>コンベクシティとは何ですか？</summary>
+<p>
                 債券価格と利回りの曲線的な関係を捉える指標で、一次近似の誤差を考える助けになります。
               </p>
-            </details>
-            <details>
-              <summary>債券ETFにもデュレーションはありますか？</summary>
-              <p>
+</details>
+<details>
+<summary>債券ETFにもデュレーションはありますか？</summary>
+<p>
                 あります。保有債券全体の金利感応度を表す参考値ですが、算出定義や運用方針を確認する必要があります。
               </p>
-            </details>
-            <details>
-              <summary>満期まで保有すれば金利変動リスクはありませんか？</summary>
-              <p>
+</details>
+<details>
+<summary>満期まで保有すれば金利変動リスクはありませんか？</summary>
+<p>
                 途中売却しなければ時価変動による売却損益を確定させずに済みますが、信用リスク、インフレリスク、機会費用は残ります。
               </p>
-            </details>
-          </section>
-          <section class="anime-item" id="summary">
-            <h2 class="anime-title">
+</details>
+</section>
+<section class="anime-item" id="summary">
+<h2 class="anime-title">
               14. まとめ
             </h2>
-            <p>
+<p>
               デュレーションは、債券の金利変動リスクを理解するための重要な手掛かりです。残存期間と混同せず、マコーレー・修正・実効の違いを確かめましょう。
             </p>
-            <p>
+<p>
               修正デュレーションによる「−デュレーション×利回り変化幅」は便利な概算ですが、コンベクシティによる曲線性、信用・為替など他の要因によって実際の価格変動は異なります。
             </p>
-          </section>
-          <section class="anime-item" id="related">
-            <h2 class="anime-title">
+</section>
+<section class="anime-item" id="related">
+<h2 class="anime-title">
               関連記事
             </h2>
-            <div class="link-grid">
-              <div class="link-card">
-                <a href="kokusai-kakaku-rimawari.html"><strong>国債価格・利回り・長期金利の関係</strong></a>
-              </div>
-              <div class="link-card">
-                <a href="kokusai-toha.html"><strong>国債とは？</strong></a>
-              </div>
-              <div class="link-card">
-                <a href="chouki-kinri-toha.html"><strong>長期金利とは？</strong></a>
-              </div>
-              <div class="link-card">
-                <a href="kokusai-nyusatsu-toha.html"><strong>国債入札とは？</strong></a>
-              </div>
-              <div class="link-card">
-                <a href="yield-curve-toha.html"><strong>イールドカーブとは？</strong></a>
-              </div>
-              <div class="link-card">
-                <a href="kinri-shurui-kankei.html"><strong>金利の種類と関係</strong></a>
-              </div>
-            </div>
-          </section>
-          <section class="anime-item" id="sources">
-            <h2 class="anime-title">
+<div class="link-grid">
+<div class="link-card">
+<a href="kokusai-kakaku-rimawari.html"><strong>国債価格・利回り・長期金利の関係</strong></a>
+</div>
+<div class="link-card">
+<a href="kokusai-toha.html"><strong>国債とは？</strong></a>
+</div>
+<div class="link-card">
+<a href="chouki-kinri-toha.html"><strong>長期金利とは？</strong></a>
+</div>
+<div class="link-card">
+<a href="kokusai-nyusatsu-toha.html"><strong>国債入札とは？</strong></a>
+</div>
+<div class="link-card">
+<a href="yield-curve-toha.html"><strong>イールドカーブとは？</strong></a>
+</div>
+<div class="link-card">
+<a href="kinri-shurui-kankei.html"><strong>金利の種類と関係</strong></a>
+</div>
+</div>
+</section>
+<section class="anime-item" id="sources">
+<h2 class="anime-title">
               参考資料・注意事項
             </h2>
-            <p>
+<p>
               関連する制度や市場データは<a href="https://www.mof.go.jp/jgbs/" rel="noopener noreferrer">財務省 国債</a>、<a href="https://www.boj.or.jp/" rel="noopener noreferrer">日本銀行</a>、<a href="https://www.jsda.or.jp/" rel="noopener noreferrer">日本証券業協会</a>などの公式情報を参照してください。本記事のデュレーション2・5・10の数値例は架空の一次近似であり、特定商品の実績・予測ではありません。
             </p>
-            <p class="source-note">
+<p class="source-note">
               本記事は金融教育を目的とした一般情報であり、特定の金融商品の売買を推奨するものではありません。正確性や将来の結果を保証しません。投資判断は各商品の最新の開示資料を確認のうえ、ご自身の責任で行ってください。
             </p>
-          </section>
-        </article>
-      </main>
-      <aside id="sidebar" aria-label="サイドバー">
-      </aside>
-    </div>
-    <div id="footer">
-    </div>
-    <script defer src="header.js">
-    </script>
-    <script defer src="footer.js">
-    </script>
-    <script defer src="sidebar.js">
-    </script>
-  </body>
+</section>
+</article>
+</main>
+<aside aria-label="サイドバー" id="sidebar">
+</aside>
+</div>
+<div id="footer">
+</div>
+<script defer="" src="header.js">
+</script>
+<script defer="" src="footer.js">
+</script>
+<script defer="" src="sidebar.js">
+</script>
+</body>
 </html>

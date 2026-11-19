@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0653a6"><meta name="author" content="ミルクティー情報発信"><meta name="robots" content="index,follow"><title>のれんとは？減損損失が発生する理由と企業の利益・キャッシュフローへの影響を初心者向けに解説</title><meta name="description" content="のれんとは何かを企業買収の数値例で解説。日本基準とIFRSの償却・減損の違い、減損損失が営業利益・純利益・キャッシュフローに与える影響、決算書の確認方法を整理します。"><link rel="canonical" href="https://tousiportal.jp/noren-toha.html"><meta property="og:type" content="article"><meta property="og:title" content="のれんとは？減損損失が発生する理由と企業の利益・キャッシュフローへの影響を初心者向けに解説"><meta property="og:description" content="のれんとは何かを企業買収の数値例で解説。日本基準とIFRSの償却・減損の違い、減損損失が営業利益・純利益・キャッシュフローに与える影響、決算書の確認方法を整理します。"><meta property="og:url" content="https://tousiportal.jp/noren-toha.html"><meta property="og:image" content="https://tousiportal.jp/sonota/noren-toha-ogp.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="のれんの発生と減損損失、利益・キャッシュフローの関係を示す図解"><meta property="og:site_name" content="投資ポータル.jp"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@QwZd0ksG2138610"><meta name="twitter:title" content="のれんとは？減損損失が発生する理由と企業の利益・キャッシュフローへの影響を初心者向けに解説"><meta name="twitter:description" content="のれんとは何かを企業買収の数値例で解説。日本基準とIFRSの償却・減損の違い、減損損失が営業利益・純利益・キャッシュフローに与える影響、決算書の確認方法を整理します。"><meta name="twitter:image" content="https://tousiportal.jp/sonota/noren-toha-ogp.webp"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="menu-card.css"><link rel="stylesheet" href="sidebar.css"><link rel="stylesheet" href="table.css"><link rel="stylesheet" href="header.css">
+  <style>
+    .goodwill-page #main {
+      width:100%;
+      max-width:1120px;
+      min-width:0;
+      padding:22px;
+      background:#f7fafc
+    }
+    .goodwill-page .anime-item {
+      padding:24px;
+      margin:18px 0;
+      background:#fff;
+      border:1px solid #d4e0e8;
+      box-shadow:none
+    }
+    .goodwill-page .title {
+      font-size:clamp(1.5rem,3vw,2.2rem);
+      color:#103753;
+      line-height:1.5
+    }
+    .goodwill-page .anime-title {
+      color:#12465f;
+      border-color:#087f8c
+    }
+    .goodwill-page #main p,.goodwill-page #main li {
+      line-height:1.9;
+      margin:12px 0
+    }
+    .goodwill-page #main a {
+      color:#075e9b;
+      text-decoration:underline;
+      overflow-wrap:anywhere
+    }
+    .goodwill-page .hero-image {
+      display:block;
+      width:100%;
+      max-width:860px;
+      height:auto;
+      margin:15px auto;
+      border-radius:12px
+    }
+    .goodwill-page .meta,.goodwill-page figcaption {
+      color:#526574;
+      font-size:.9rem
+    }
+    .goodwill-page .toc ul {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:6px 20px
+    }
+    .goodwill-page .table-scroll {
+      overflow-x:auto;
+      max-width:100%;
+      margin:16px 0;
+      border:1px solid #d4e0e8;
+      border-radius:8px
+    }
+    .goodwill-page .hub-table {
+      min-width:620px;
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+      font-size:.92rem
+    }
+    .goodwill-page .hub-table th,.goodwill-page .hub-table td {
+      border:1px solid #d4e0e8;
+      padding:12px;
+      text-align:left;
+      vertical-align:top
+    }
+    .goodwill-page .hub-table thead th {
+      background:#16465f;
+      color:#fff
+    }
+    .goodwill-page .hub-table tbody th {
+      background:#f0f6f9
+    }
+    .goodwill-page .hub-table caption {
+      padding:10px;
+      text-align:left;
+      font-weight:700
+    }
+    .goodwill-page .formula,.goodwill-page .note {
+      background:#eaf7f6;
+      border-left:5px solid #087f8c;
+      padding:16px;
+      border-radius:6px
+    }
+    .goodwill-page .formula {
+      font-weight:700;
+      font-size:1.12rem
+    }
+    .goodwill-page details {
+      border:1px solid #d0e0e9;
+      border-radius:8px;
+      padding:12px 16px;
+      margin:10px 0
+    }
+    .goodwill-page summary {
+      cursor:pointer;
+      font-weight:700;
+      color:#12465f
+    }
+    .goodwill-page .related {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px
+    }
+    .goodwill-page .related a {
+      display:block;
+      padding:14px;
+      border:1px solid #cddfeb;
+      border-radius:9px;
+      background:#f5faff
+    }
+    .goodwill-page section[id] {
+      scroll-margin-top:85px
+    }
+    .goodwill-page .checklist {
+      columns:2;
+      column-gap:22px
+    }
+    .goodwill-page .checklist li {
+      break-inside:avoid
+    }
+    @media(max-width:768px) {
+      .goodwill-page #main {
+        padding:10px
+      }
+      .goodwill-page .anime-item {
+        padding:16px 12px
+      }
+      .goodwill-page .toc ul,.goodwill-page .related {
+        grid-template-columns:1fr
+      }
+      .goodwill-page .checklist {
+        columns:1
+      }
+      .goodwill-page .hub-table {
+        min-width:560px
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://tousiportal.jp/noren-toha.html#article",
+      "headline": "のれんとは？減損損失が発生する理由と企業の利益・キャッシュフローへの影響を初心者向けに解説",
+      "description": "のれんとは何かを企業買収の数値例で解説。日本基準とIFRSの償却・減損の違い、減損損失が営業利益・純利益・キャッシュフローに与える影響、決算書の確認方法を整理します。",
+      "datePublished": "2026-11-18",
+      "dateModified": "2026-11-18",
+      "inLanguage": "ja",
+      "articleSection": "株式市場・企業／企業分析・決算",
+      "image": [
+        "https://tousiportal.jp/sonota/noren-toha-ogp.webp"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tousiportal.jp/noren-toha.html"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "ミルクティー",
+        "url": "https://tousiportal.jp/profile.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "投資ポータル.jp",
+        "url": "https://tousiportal.jp/"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://tousiportal.jp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "記事一覧",
+          "item": "https://tousiportal.jp/column.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "のれんとは？",
+          "item": "https://tousiportal.jp/noren-toha.html"
+        }
+      ]
+    }
+  </script>
+</head>
+<body class="goodwill-page">
+  <div id="header">
+  </div>
+  <div class="container">
+    <aside id="sidebar">
+    </aside>
+    <main id="main" tabindex="-1">
+      <nav aria-label="パンくず">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">ホーム</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="column.html">記事</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        のれんとは？
+      </li>
+    </ol>
+  </nav>
+  <p class="meta">
+    株式市場・企業 ／ 企業分析・決算
+  </p>
+  <h1 class="title">
+    のれんとは？減損損失が発生する理由と企業の利益・キャッシュフローへの影響を初心者向けに解説
+  </h1>
+  <p class="meta">
+    公開・更新：<time datetime="2026-11-18">2026年11月18日</time> ／ <a href="profile.html">管理人プロフィール</a>
+</p>
+<p>
+  <strong>のれんとは、企業買収で取得した純資産などを超えて支払った対価のうち、会計上の要件に従って認識される部分です。</strong>買収が期待どおりに進まないと減損損失が生じる場合があります。利益と現金の違いまで、順番に整理します。
+</p>
+<figure>
+  <img class="hero-image" src="sonota/noren-toha.webp" width="1200" height="630" fetchpriority="high" decoding="async" alt="企業買収によるのれんの発生と減損損失、利益・キャッシュフローの関係を示した金融教育図解">
+  <figcaption>
+    図は概念例です。企業結合・減損の実際の判定は適用会計基準に従います。
+  </figcaption>
+</figure>
+<section class="anime-item toc">
+  <h2 class="anime-title">
+    この記事の内容
+  </h2>
+  <ul>
+    <li>
+      <a href="#definition">のれんとは？</a>
+  </li>
+  <li>
+    <a href="#mechanism">のれんが発生する仕組み</a>
+</li>
+<li>
+  <a href="#why-premium">なぜ純資産より高く買収する？</a>
+</li>
+<li>
+  <a href="#intangibles">のれんと無形資産の違い</a>
+</li>
+<li>
+  <a href="#amortization">のれんの償却とは？</a>
+</li>
+<li>
+  <a href="#standards">日本基準とIFRSの違い</a>
+</li>
+<li>
+  <a href="#impairment">減損損失とは？</a>
+</li>
+<li>
+  <a href="#causes">なぜのれんの減損が発生する？</a>
+</li>
+<li>
+  <a href="#example">減損損失を数値で理解する</a>
+</li>
+<li>
+  <a href="#profit">減損損失は営業利益・純利益にどう影響する？</a>
+</li>
+<li>
+  <a href="#cash">減損損失が発生すると現金も減る？</a>
+</li>
+<li>
+  <a href="#operating-cf">減損損失と営業キャッシュフローの関係</a>
+</li>
+<li>
+  <a href="#ebitda">のれんとEBITDAの関係</a>
+</li>
+<li>
+  <a href="#returns">のれんとROIC・ROE・ROAの関係</a>
+</li>
+<li>
+  <a href="#risk">のれんが大きい企業は危険？</a>
+</li>
+<li>
+  <a href="#equity">のれんと自己資本比率・財務健全性</a>
+</li>
+<li>
+  <a href="#post-acquisition">買収後に確認したい決算情報</a>
+</li>
+<li>
+  <a href="#statements">決算書のどこを確認する？</a>
+</li>
+<li>
+  <a href="#cautions">のれんを見るときの注意点</a>
+</li>
+<li>
+  <a href="#checklist">初心者向けチェックリスト</a>
+</li>
+<li>
+  <a href="#faq">よくある質問（FAQ）</a>
+</li>
+<li>
+  <a href="#summary">まとめ</a>
+</li>
+</ul>
+</section>
+<section class="anime-item" id="definition">
+  <h2 class="anime-title">
+    のれんとは？
+  </h2>
+  <p>
+    <strong>のれんは、企業買収などで支払った取得対価のうち、取得した識別可能な資産・負債の公正価値などだけでは説明できない部分を表す会計上の資産</strong>です。取得対価が識別可能純資産の公正価値等を上回る企業結合で認識されます。
+</p>
+<p>
+  買収先の収益力やシナジーへの期待などが背景にありますが、<strong>のれん＝ブランド価値そのもの、あるいは将来利益そのもの</strong>ではありません。
+</p>
+</section>
+<section class="anime-item" id="mechanism">
+  <h2 class="anime-title">
+    のれんが発生する仕組み
+  </h2>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="架空企業の買収例">
+    <table class="hub-table">
+      <caption>
+        架空企業の買収例
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            項目
+          </th>
+          <th scope="col">
+            金額
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            買収対価
+          </th>
+          <td>
+            150億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            識別可能な資産の公正価値
+          </th>
+          <td>
+            200億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            引き受けた負債の公正価値
+          </th>
+          <td>
+            100億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            識別可能純資産
+          </th>
+          <td>
+            200億円－100億円＝100億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            のれん
+          </th>
+          <td>
+            150億円－100億円＝50億円
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="formula">
+    150億円－（200億円－100億円）＝50億円
+  </p>
+  <p class="note">
+    取得持分100％で非支配持分などの複雑な要素を省いた概念例です。企業結合時には資産・負債の公正価値評価や識別可能無形資産の認識などを行うため、<strong>買収対価と帳簿上の純資産の差額が、そのまま必ずのれんになるわけではありません。</strong>
+</p>
+</section>
+<section class="anime-item" id="why-premium">
+  <h2 class="anime-title">
+    なぜ純資産より高く買収する？
+  </h2>
+  <p>
+    買い手が将来得られると期待する便益が、個別に識別できる純資産の金額を上回る場合があります。
+  </p>
+  <ul>
+    <li>
+      将来の収益力や成長機会への期待
+    </li>
+    <li>
+      顧客基盤、販売網、取引関係
+    </li>
+    <li>
+      技術・ノウハウ、人材・組織の力
+    </li>
+    <li>
+      事業間の相乗効果（シナジー）
+    </li>
+    <li>
+      市場シェアの拡大
+    </li>
+  </ul>
+  <p>
+    ただし、特許や一定の顧客関連資産など、識別可能な無形資産はのれんと分けて認識される場合があります。高値で買収したからといって成功が保証されるわけではありません。
+  </p>
+</section>
+<section class="anime-item" id="intangibles">
+  <h2 class="anime-title">
+    のれんと無形資産の違い
+  </h2>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="のれんと識別可能無形資産の比較">
+    <table class="hub-table">
+      <caption>
+        のれんと識別可能無形資産の比較
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            項目
+          </th>
+          <th scope="col">
+            のれん
+          </th>
+          <th scope="col">
+            識別可能な無形資産
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            主な認識場面
+          </th>
+          <td>
+            企業結合
+          </td>
+          <td>
+            取得・開発・企業結合など
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            個別識別
+          </th>
+          <td>
+            原則、個別識別できない残余部分
+          </td>
+          <td>
+            識別可能要件を満たす
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            例
+          </th>
+          <td>
+            買収による超過収益力等の残余
+          </td>
+          <td>
+            特許権・商標権・顧客関連資産など
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            償却
+          </th>
+          <td>
+            会計基準による
+          </td>
+          <td>
+            耐用年数・基準による
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            減損
+          </th>
+          <td>
+            対象
+          </td>
+          <td>
+            対象となる場合がある
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    自社が長年かけて築いたブランド価値は、通常そのまま貸借対照表の「のれん」として計上されません。
+  </p>
+</section>
+<section class="anime-item" id="amortization">
+  <h2 class="anime-title">
+    のれんの償却とは？
+  </h2>
+  <p>
+    のれんの償却は、認識したのれんを一定期間にわたって費用配分する会計処理です。<strong>日本基準では原則として20年以内の効果が及ぶ期間にわたり規則的に償却</strong>します。
+</p>
+<p class="formula">
+  のれん50億円 ÷ 10年 ＝ 年間償却費5億円
+</p>
+<p>
+  定額法で単純化した例です。毎年5億円が会計上の費用となりますが、償却のたびに5億円を新たに支払うわけではありません。実際の処理は適用基準・取得条件等に従います。
+</p>
+</section>
+<section class="anime-item" id="standards">
+  <h2 class="anime-title">
+    日本基準とIFRSの違い
+  </h2>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="日本基準とIFRSののれん会計比較">
+    <table class="hub-table">
+      <caption>
+        日本基準とIFRSののれん会計比較
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            項目
+          </th>
+          <th scope="col">
+            日本基準
+          </th>
+          <th scope="col">
+            IFRS
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            定期償却
+          </th>
+          <td>
+            原則あり
+          </td>
+          <td>
+            なし
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            償却期間
+          </th>
+          <td>
+            原則20年以内
+          </td>
+          <td>
+            定期償却しない
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            減損
+          </th>
+          <td>
+            兆候の把握など所定の要件に従い判定
+          </td>
+          <td>
+            のれんを含むCGU等を少なくとも年1回、および兆候がある場合にテスト
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            利益への影響
+          </th>
+          <td>
+            償却費が継続的に発生し得る。減損もあり得る
+          </td>
+          <td>
+            償却費なし。減損損失が発生し得る
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    IFRSでは、のれんを配分した資金生成単位（CGU）またはCGUグループについて、IAS 36に従い減損テストを行います。日本基準でも減損処理が必要な場合がありますが、判定手順は同一ではありません。
+  </p>
+  <p>
+    米国基準も原則としてのれんを定期償却せず減損を検討しますが、一定の企業向けの会計上の選択肢などがあり、一律に扱えません。2026年11月18日現在の適用基準と将来の提案は区別して読む必要があります。
+  </p>
+</section>
+<section class="anime-item" id="impairment">
+  <h2 class="anime-title">
+    減損損失とは？
+  </h2>
+  <p>
+    <strong>減損損失</strong>とは、資産の帳簿価額について回収可能性などを評価した結果、適用基準の要件に従って認識する損失です。
+</p>
+<ul>
+  <li>
+    <strong>帳簿価額：</strong>会計帳簿に計上されている金額
+</li>
+<li>
+  <strong>将来キャッシュフローの見積もり：</strong>事業が今後生み出す現金の予測
+</li>
+<li>
+  <strong>回収可能価額：</strong>IFRSでは処分コスト控除後の公正価値と使用価値の高い方
+</li>
+<li>
+  <strong>減損損失：</strong>基準に従い認識する帳簿価額の切下げ額
+</li>
+</ul>
+<p>
+  日本基準では減損の兆候、認識判定、測定という段階を踏み、IFRSとは判定の仕組みが異なります。
+</p>
+</section>
+<section class="anime-item" id="causes">
+  <h2 class="anime-title">
+    なぜのれんの減損が発生する？
+  </h2>
+  <p>
+    買収時に見込んだ収益力を回収できない可能性が高まると、のれんを含む資産の価値を見直す必要が生じます。
+  </p>
+  <ul>
+    <li>
+      買収先の売上・利益の悪化
+    </li>
+    <li>
+      想定したシナジーが実現しない
+    </li>
+    <li>
+      景気・市場環境の悪化、競争激化
+    </li>
+    <li>
+      事業計画の未達、将来キャッシュフロー予測の下方修正
+    </li>
+    <li>
+      金利上昇などに伴う割引率や評価額への影響
+    </li>
+  </ul>
+  <p class="note">
+    これらは兆候・評価要因の例であり、発生しただけで必ず減損損失を計上するわけではありません。
+  </p>
+</section>
+<section class="anime-item" id="example">
+  <h2 class="anime-title">
+    減損損失を数値で理解する
+  </h2>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="IFRSにおけるCGUの減損計算の概念例">
+    <table class="hub-table">
+      <caption>
+        IFRSにおけるCGUの減損計算の概念例
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            IFRSの架空例
+          </th>
+          <th scope="col">
+            金額
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            のれんを含むCGUの帳簿価額
+          </th>
+          <td>
+            200億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            回収可能価額
+          </th>
+          <td>
+            160億円
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            減損損失
+          </th>
+          <td>
+            40億円
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="formula">
+    200億円－160億円＝40億円
+  </p>
+  <p>
+    IFRSでは、CGUに認識した減損損失は<strong>まず配分されたのれんを減額</strong>し、残額を所定の制約の下で他の資産に配分します。したがって40億円すべてが必ずのれんの減損になるわけではありません。日本基準の減損判定にこの式をそのまま当てはめないでください。
+</p>
+</section>
+<section class="anime-item" id="profit">
+  <h2 class="anime-title">
+    減損損失は営業利益・純利益にどう影響する？
+  </h2>
+  <p>
+    減損損失は損益に認識され、一般に税引前利益を押し下げます。税効果などにより純利益への影響額は同額とは限りません。
+  </p>
+  <p>
+    日本基準では固定資産の減損損失が<strong>特別損失</strong>に表示される場合があります。IFRSでは日本基準の経常利益・特別損益という区分を前提とせず、表示方法によって営業利益への影響も異なります。
+</p>
+<p>
+  したがって「40億円の減損＝営業利益が必ず40億円減る」とは言えません。利益区分の基礎は<a href="eigyou-keijou-junrieki-chigai.html">営業利益・経常利益・純利益の違い</a>も参照してください。
+</p>
+</section>
+<section class="anime-item" id="cash">
+  <h2 class="anime-title">
+    減損損失が発生すると現金も減る？
+  </h2>
+  <p>
+    <strong>のれんの減損は通常、計上した時点で同額の現金支出を直接伴いません。</strong>例えば40億円の減損を認識しても、「減損処理のために40億円を支払う」わけではありません。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="減損損失と現金支出の違い">
+  <table class="hub-table">
+    <caption>
+      減損損失と現金支出の違い
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">
+          区分
+        </th>
+        <th scope="col">
+          40億円の減損例
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          当期の損益
+        </th>
+        <td>
+          損失として反映（税効果等は別）
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          減損計上そのものの現金支出
+        </th>
+        <td>
+          通常なし
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          買収対価の支払い
+        </th>
+        <td>
+          買収時の別の現金取引
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          将来の事業CF
+        </th>
+        <td>
+          業績悪化により減る可能性あり
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  買収時の現金支払い、買収後の運営費用、将来の資金不足はそれぞれ別の問題です。非資金損失であっても、背景の事業悪化を軽視できません。
+</p>
+</section>
+<section class="anime-item" id="operating-cf">
+  <h2 class="anime-title">
+    減損損失と営業キャッシュフローの関係
+  </h2>
+  <p>
+    営業CFを間接法で計算する場合、税引前利益等を出発点に、損益に含まれる非資金項目として減損損失を<strong>加算調整する場合があります</strong>。これは利益計算に含めた損失を現金収支の計算上戻す操作であり、現金が新たに流入した意味ではありません。
+</p>
+<p>
+  出発点や表示方法は会計基準・企業の方針で異なります。現金創出力の理解には<a href="free-cash-flow-toha.html">フリーキャッシュフローとは？</a>を参照してください。
+</p>
+</section>
+<section class="anime-item" id="ebitda">
+  <h2 class="anime-title">
+    のれんとEBITDAの関係
+  </h2>
+  <p>
+    日本基準ののれん償却費は、一般的なEBITDAの計算では償却費として足し戻される場合があります。IFRSでは通常、のれんの定期償却自体がありません。
+  </p>
+  <p>
+    一方、減損損失を<strong>調整後EBITDA</strong>から除外する企業もありますが、EBITDA・調整後EBITDAの定義や調整項目は企業によって異なります。<strong>減損損失が必ず除外されるとは限りません。</strong>比較前に算出方法・調整項目を確認しましょう。詳しくは<a href="ebitda-toha.html">EBITDAとは？</a>へ。
+</p>
+</section>
+<section class="anime-item" id="returns">
+  <h2 class="anime-title">
+    のれんとROIC・ROE・ROAの関係
+  </h2>
+  <p>
+    買収でのれんが計上されると資産や投下資本の額に影響し、償却・減損は利益に影響します。減損は税効果などを通じて自己資本にも影響する場合があります。
+  </p>
+  <p>
+    ROICは定義が複数あり、のれんを投下資本に含める指標と除外する指標では結果が変わります。減損後に分母が縮小し、翌期以降のROAやROICが見かけ上改善する場合もありますが、事業が改善した証拠とは限りません。詳しくは<a href="roic-roe-roa-chigai.html">ROIC・ROE・ROAの違い</a>へ。
+</p>
+</section>
+<section class="anime-item" id="risk">
+  <h2 class="anime-title">
+    のれんが大きい企業は危険？
+  </h2>
+  <p>
+    のれんが大きいだけで危険とは判断できません。買収を成長戦略として活用する企業もあります。重要なのは買収対価に見合う成果が出ているかです。
+  </p>
+  <ul>
+    <li>
+      買収先の収益力と買収価格の妥当性
+    </li>
+    <li>
+      総資産に占めるのれんの割合と自己資本との関係
+    </li>
+    <li>
+      買収後の売上・利益、将来キャッシュフローの見通し
+    </li>
+    <li>
+      過去の減損履歴と買収後の業績推移
+    </li>
+  </ul>
+  <p>
+    単一の比率ではなく、複数年の推移と事業内容を合わせて見ます。
+  </p>
+</section>
+<section class="anime-item" id="equity">
+  <h2 class="anime-title">
+    のれんと自己資本比率・財務健全性
+  </h2>
+  <p>
+    のれんの計上や減損により、総資産、利益、自己資本などが変動する場合があります。買収を借入で賄ったかどうかも財務構造に関係します。
+  </p>
+  <p>
+    分析では、のれんなどを自己資本から控除した<strong>有形純資産</strong>を補助的に見ることがあります。ただし、無形の競争力が重要な企業を、有形純資産が少ないという理由だけで危険と評価するのは適切ではありません。<a href="jiko-shihon-hiritsu-toha.html">自己資本比率とD/Eレシオ</a>も参考にしてください。
+</p>
+</section>
+<section class="anime-item" id="post-acquisition">
+  <h2 class="anime-title">
+    買収後に確認したい決算情報
+  </h2>
+  <ul>
+    <li>
+      買収金額と買収対象企業の事業内容
+    </li>
+    <li>
+      のれんの計上額、識別可能無形資産の内訳
+    </li>
+    <li>
+      のれんの償却方針、減損の有無と理由
+    </li>
+    <li>
+      買収後の売上高・利益と事業計画の進捗
+    </li>
+    <li>
+      営業キャッシュフローの推移
+    </li>
+    <li>
+      買収に関連する有利子負債と返済計画
+    </li>
+  </ul>
+</section>
+<section class="anime-item" id="statements">
+  <h2 class="anime-title">
+    決算書のどこを確認する？
+  </h2>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="決算書別の確認場所">
+    <table class="hub-table">
+      <caption>
+        決算書別の確認場所
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            資料
+          </th>
+          <th scope="col">
+            確認ポイント
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            貸借対照表（B/S）
+          </th>
+          <td>
+            のれん・無形資産・総資産・自己資本
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            損益計算書（P/L）
+          </th>
+          <td>
+            のれん償却費・減損損失・営業利益・税引前利益・当期純利益
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            キャッシュフロー計算書（C/F）
+          </th>
+          <td>
+            買収による現金支出・営業CF・非資金損失の調整
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            注記・開示資料
+          </th>
+          <td>
+            企業結合、のれん増減、減損理由、セグメント、買収先の業績
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    表示科目や開示の粒度は日本基準・IFRSや企業の状況で異なります。有価証券報告書の注記、決算説明資料も併せて確認しましょう。
+  </p>
+</section>
+<section class="anime-item" id="cautions">
+  <h2 class="anime-title">
+    のれんを見るときの注意点
+  </h2>
+  <ul>
+    <li>
+      買収価格は高すぎなかったか、将来利益の見積もりは妥当か
+    </li>
+    <li>
+      のれんが増えた理由、買収先の業績悪化の有無
+    </li>
+    <li>
+      減損の理由が一時的な評価見直しか、構造的な事業問題か
+    </li>
+    <li>
+      会計基準の違いを考慮しているか
+    </li>
+    <li>
+      調整後EBITDAを過信せず、営業CFの推移を確認したか
+    </li>
+    <li>
+      買収による借入金・金利負担が増えていないか
+    </li>
+  </ul>
+  <p>
+    減損が出た企業が必ず赤字や経営危機に陥るわけではありません。減損の背景と、その後の事業回復力を見極めることが大切です。
+  </p>
+</section>
+<section class="anime-item" id="checklist">
+  <h2 class="anime-title">
+    初心者向けチェックリスト
+  </h2>
+  <ul class="checklist">
+    <li>
+      □ のれんの発生理由を理解した
+    </li>
+    <li>
+      □ 買収金額と取得した純資産を確認した
+    </li>
+    <li>
+      □ 日本基準かIFRSか確認した
+    </li>
+    <li>
+      □ のれんの償却方針を確認した
+    </li>
+    <li>
+      □ 減損損失の有無と理由を確認した
+    </li>
+    <li>
+      □ 減損と現金支出を区別した
+    </li>
+    <li>
+      □ 買収後の利益推移を確認した
+    </li>
+    <li>
+      □ 営業キャッシュフローを確認した
+    </li>
+    <li>
+      □ 買収関連の負債を確認した
+    </li>
+    <li>
+      □ ROIC・ROE・ROAも合わせて確認した
+    </li>
+  </ul>
+</section>
+<section class="anime-item" id="faq">
+  <h2 class="anime-title">
+    よくある質問（FAQ）
+  </h2>
+  <details>
+    <summary>
+      のれんとは何ですか？
+    </summary>
+    <p>
+      企業結合で、取得対価が識別可能純資産の公正価値等を上回る場合に認識される会計上の資産です。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんはなぜ発生するのですか？
+    </summary>
+    <p>
+      将来の収益力やシナジーなどを期待して、識別可能純資産の価値を上回る対価を支払うことなどが背景です。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんと無形資産は何が違いますか？
+    </summary>
+    <p>
+      のれんは識別可能な資産を認識した後の残余部分で、特許など識別可能な無形資産とは区別します。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんはブランド価値のことですか？
+    </summary>
+    <p>
+      いいえ。ブランド価値そのものではなく、識別可能な資産を区別した後に残る会計上の金額です。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんの償却とは何ですか？
+    </summary>
+    <p>
+      のれんを一定期間にわたり費用配分する処理です。日本基準では原則20年以内に規則的に償却します。
+    </p>
+  </details>
+  <details>
+    <summary>
+      日本基準とIFRSでは何が違いますか？
+    </summary>
+    <p>
+      日本基準は原則として定期償却を行い、IFRSは定期償却せず年次等の減損テストを行います。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんの減損損失とは何ですか？
+    </summary>
+    <p>
+      回収可能性などを評価し、基準に従ってのれんを含む資産の帳簿価額を切り下げる損失です。
+    </p>
+  </details>
+  <details>
+    <summary>
+      減損損失が出ると営業利益は減りますか？
+    </summary>
+    <p>
+      損益を押し下げますが、営業利益に反映されるかは会計基準・表示区分によります。
+    </p>
+  </details>
+  <details>
+    <summary>
+      減損損失が出ると現金も減りますか？
+    </summary>
+    <p>
+      計上そのものは通常、同額の現金支出を直接伴いません。
+    </p>
+  </details>
+  <details>
+    <summary>
+      減損損失は営業キャッシュフローに影響しますか？
+    </summary>
+    <p>
+      間接法では非資金損失として加算調整される場合があります。現金流入が生じたわけではありません。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんが大きい企業は危険ですか？
+    </summary>
+    <p>
+      金額だけでは判断できません。買収後の収益力やCF、財務健全性と合わせて評価します。
+    </p>
+  </details>
+  <details>
+    <summary>
+      減損損失が発生した企業は赤字になりますか？
+    </summary>
+    <p>
+      必ずしも赤字になりません。他の利益や税効果、損失額によって結果が異なります。
+    </p>
+  </details>
+  <details>
+    <summary>
+      のれんは決算書のどこで確認できますか？
+    </summary>
+    <p>
+      貸借対照表の資産項目や企業結合・減損に関する注記などを確認します。
+    </p>
+  </details>
+  <details>
+    <summary>
+      買収が成功したかどうかは何を見ればよいですか？
+    </summary>
+    <p>
+      買収後の売上・利益、営業CF、シナジーの実現、負債、事業計画の進捗を確認します。
+    </p>
+  </details>
+</section>
+<section class="anime-item" id="summary">
+  <h2 class="anime-title">
+    まとめ
+  </h2>
+  <ul>
+    <li>
+      <strong>のれん</strong>は、企業買収などで認識される会計上の資産です。
+  </li>
+  <li>
+    <strong>日本基準とIFRS</strong>では、定期償却・減損の仕組みが異なります。
+</li>
+<li>
+  <strong>減損損失</strong>は利益を押し下げますが、計上時に同額の現金支出を直接伴うとは限りません。
+</li>
+<li>
+  <strong>企業分析</strong>では、のれんの額だけでなく買収後の収益力・キャッシュフロー・財務健全性を総合的に確認しましょう。
+</li>
+</ul>
+</section>
+<section class="anime-item">
+  <h2 class="anime-title">
+    関連記事
+  </h2>
+  <div class="related">
+    <a href="eigyou-keijou-junrieki-chigai.html">営業利益・経常利益・純利益の違い →</a><a href="ebitda-toha.html">EBITDAとは？ →</a><a href="free-cash-flow-toha.html">フリーキャッシュフローとは？ →</a><a href="roic-roe-roa-chigai.html">ROIC・ROE・ROAの違い →</a><a href="jiko-shihon-hiritsu-toha.html">自己資本比率とは？ →</a><a href="jishakabu-kai-toha.html">自社株買いとは？ →</a>
+</div>
+</section>
+<section class="anime-item">
+  <h2 class="anime-title">
+    一次情報・参考資料
+  </h2>
+  <ul>
+    <li>
+      <a href="https://www.asb-j.jp/jp/" rel="noopener noreferrer">企業会計基準委員会（ASBJ）</a>：企業結合に関する会計基準、固定資産の減損に係る会計基準等の公表主体
+  </li>
+  <li>
+    <a href="https://www.ifrs.org/issued-standards/list-of-standards/ifrs-3-business-combinations/" rel="noopener noreferrer">IFRS Foundation：IFRS 3 Business Combinations</a>
+</li>
+<li>
+  <a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/" rel="noopener noreferrer">IFRS Foundation：IAS 36 Impairment of Assets</a>
+</li>
+<li>
+  <a href="https://disclosure2.edinet-fsa.go.jp/" rel="noopener noreferrer">金融庁 EDINET</a>：有価証券報告書などの開示資料
+</li>
+</ul>
+<p class="meta">
+  会計基準の具体的な適用にあたっては、各基準の正式本文・改正履歴・企業の採用基準をご確認ください。
+</p>
+</section>
+<section class="anime-item">
+  <h2 class="anime-title">
+    ご利用にあたっての注意事項
+  </h2>
+  <p>
+    本記事は金融教育を目的とする一般的な情報提供であり、特定銘柄の売買を推奨するものではありません。架空の数値例は実在企業の決算を示すものではありません。投資判断では最新の企業開示資料等をご確認ください。
+  </p>
+</section>
+</main>
+</div>
+<div id="footer">
+</div>
+<script src="include.js" defer>
+</script>
+<script src="sidebar.js" defer>
+</script>
+</body>
+</html>

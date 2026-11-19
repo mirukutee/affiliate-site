@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0653a6">
+    <title>信用格付けとは？AAA・BBBの違いと投資適格・格下げが債券価格に与える影響を初心者向けに解説</title>
+    <meta name="description" content="信用格付けAAA・AA・A・BBB・BBの違い、投資適格の境界、格下げと債券価格・信用スプレッドの関係を図表と計算例で初心者向けに解説。">
+    <meta name="author" content="ミルクティー情報発信">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tousiportal.jp/credit-rating-toha.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="信用格付けとは？AAA・BBBの違いと投資適格・格下げが債券価格に与える影響を初心者向けに解説">
+    <meta property="og:description" content="信用格付けAAA・AA・A・BBB・BBの違い、投資適格の境界、格下げと債券価格・信用スプレッドの関係を図表と計算例で初心者向けに解説。">
+    <meta property="og:url" content="https://tousiportal.jp/credit-rating-toha.html">
+    <meta property="og:image" content="https://tousiportal.jp/sonota/credit-rating-toha-ogp.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="信用格付けAAA・BBB・BBの境界と格下げによる債券価格への影響">
+    <meta property="og:site_name" content="投資ポータル.jp">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@QwZd0ksG2138610">
+    <meta name="twitter:title" content="信用格付けとは？AAA・BBBの違いと投資適格・格下げが債券価格に与える影響を初心者向けに解説">
+    <meta name="twitter:description" content="信用格付けAAA・AA・A・BBB・BBの違い、投資適格の境界、格下げと債券価格・信用スプレッドの関係を図表と計算例で初心者向けに解説。">
+    <meta name="twitter:image" content="https://tousiportal.jp/sonota/credit-rating-toha-ogp.webp">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-card.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+      .rating-page #main {
+        min-width:0;
+        width:100%;
+        max-width:1120px;
+        padding:24px;
+        background:#f7fafc
+      }
+      .rating-page .anime-item {
+        padding:25px;
+        margin:20px 0;
+        background:#fff;
+        border:1px solid #d4e0e8;
+        box-shadow:none
+      }
+      .rating-page .title {
+        font-size:clamp(1.5rem,3vw,2.2rem);
+        line-height:1.5;
+        color:#103753
+      }
+      .rating-page .anime-title {
+        color:#12465f;
+        border-color:#087f8c;
+        font-size:1.35rem
+      }
+      .rating-page #main p,.rating-page #main li {
+        line-height:1.9
+      }
+      .rating-page #main a {
+        color:#075e9b;
+        overflow-wrap:anywhere
+      }
+      .rating-page .meta {
+        color:#526574;
+        font-size:.9rem
+      }
+      .rating-page .hero-image {
+        width:100%;
+        max-width:860px;
+        height:auto;
+        display:block;
+        margin:0 auto;
+        border-radius:12px
+      }
+      .rating-page .toc ul {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:5px 18px
+      }
+      .rating-page .table-scroll {
+        overflow-x:auto;
+        max-width:100%;
+        margin:16px 0;
+        border:1px solid #cbdce6;
+        border-radius:8px
+      }
+      .rating-page .hub-table {
+        border-collapse:collapse;
+        width:100%;
+        min-width:620px;
+        font-size:.93rem
+      }
+      .rating-page .hub-table th,.rating-page .hub-table td {
+        padding:12px;
+        border:1px solid #d5e0e7;
+        text-align:left;
+        vertical-align:top
+      }
+      .rating-page .hub-table thead th {
+        background:#16465f;
+        color:white
+      }
+      .rating-page .hub-table tbody th {
+        background:#eef6fa;
+        color:#16465f
+      }
+      .rating-page .note,.rating-page .formula {
+        padding:16px;
+        border-left:4px solid #087f8c;
+        background:#eff8f8;
+        border-radius:0 8px 8px 0
+      }
+      .rating-page .formula {
+        font-weight:750
+      }
+      .rating-page .flow {
+        list-style:none;
+        padding:0
+      }
+      .rating-page .flow li {
+        padding:12px 18px;
+        margin:0 0 12px;
+        background:#eef7fa;
+        border:1px solid #cce1e9;
+        border-radius:8px
+      }
+      .rating-page .flow li:not(:last-child):after {
+        content:' ↓';
+        color:#087f8c
+      }
+      .rating-page .flow strong {
+        display:block
+      }
+      .rating-page details {
+        padding:12px 16px;
+        border:1px solid #d0e0e9;
+        border-radius:8px;
+        margin:10px 0
+      }
+      .rating-page summary {
+        cursor:pointer;
+        font-weight:700;
+        color:#12465f
+      }
+      .rating-page .related {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px
+      }
+      .rating-page .related a {
+        padding:14px;
+        border:1px solid #cddfeb;
+        border-radius:9px;
+        background:#f5faff
+      }
+      .rating-page section[id] {
+        scroll-margin-top:90px
+      }
+      @media(max-width:768px) {
+        .rating-page #main {
+          padding:10px
+        }
+        .rating-page .anime-item {
+          padding:17px 13px
+        }
+        .rating-page .toc ul,.rating-page .related {
+          grid-template-columns:1fr
+        }
+        .rating-page .hub-table {
+          min-width:570px
+        }
+        .rating-page .anime-title {
+          font-size:1.18rem
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://tousiportal.jp/credit-rating-toha.html#article",
+      "headline": "信用格付けとは？AAA・BBBの違いと投資適格・格下げが債券価格に与える影響を初心者向けに解説",
+      "description": "信用格付けAAA・AA・A・BBB・BBの違い、投資適格の境界、格下げと債券価格・信用スプレッドの関係を図表と計算例で初心者向けに解説。",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "inLanguage": "ja",
+      "articleSection": "債券・金融市場",
+      "image": [
+      "https://tousiportal.jp/sonota/credit-rating-toha-ogp.webp"
+      ],
+      "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://tousiportal.jp/credit-rating-toha.html"
+      },
+      "author": {
+      "@type": "Person",
+      "name": "ミルクティー",
+      "url": "https://tousiportal.jp/profile.html"
+      },
+      "publisher": {
+      "@type": "Organization",
+      "name": "投資ポータル.jp",
+      "url": "https://tousiportal.jp/"
+      }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+      },
+      {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "記事一覧",
+      "item": "https://tousiportal.jp/column.html"
+      },
+      {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "信用格付けとは？",
+      "item": "https://tousiportal.jp/credit-rating-toha.html"
+      }
+      ]
+      }
+    </script>
+  </head>
+  <body class="rating-page">
+    <div id="header">
+    </div>
+    <div class="container">
+      <aside id="sidebar">
+      </aside>
+      <main id="main" tabindex="-1">
+        <nav aria-label="パンくず">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb-item"><a href="column.html">記事</a></li>
+            <li class="breadcrumb-item" aria-current="page">信用格付けとは？</li>
+          </ol>
+        </nav>
+        <p class="meta">債券 ／ 金融市場 ／ 金融商品の基礎</p>
+        <h1 class="title">信用格付けとは？AAA・BBBの違いと投資適格・格下げが債券価格に与える影響を初心者向けに解説</h1>
+        <p class="meta">公開・更新：<time datetime="2026-11-19">2026年11月19日</time> ／ <a href="profile.html">管理人プロフィール</a></p>
+        <p>AAA・BBB・BBの違いは何でしょうか。投資適格の境界から、格下げが信用スプレッドや債券価格に与える影響まで順番に解説します。</p>
+        <figure>
+          <img class="hero-image" src="sonota/credit-rating-toha.webp" width="1200" height="630" fetchpriority="high" alt="信用格付けAAA・AA・A・BBB・BBの階段図と投資適格の境界">
+          <figcaption>格付けは信用リスクの参考情報であり、元本保証ではありません。</figcaption>
+        </figure>
+        <section class="anime-item toc">
+          <h2 class="anime-title">目次</h2>
+          <ul>
+            <li><a href="#s1">信用格付けとは？</a></li>
+            <li><a href="#s2">信用格付けの一覧表</a></li>
+            <li><a href="#s3">AAA・AA・A・BBBの違い</a></li>
+            <li><a href="#s4">投資適格と投機的格付けの違い</a></li>
+            <li><a href="#s5">BBBとBBの違い</a></li>
+            <li><a href="#s6">格付け会社とは？</a></li>
+            <li><a href="#s7">S&amp;P・Moody’s・Fitchの格付け記号の違い</a></li>
+            <li><a href="#s8">発行体格付けと個別債券格付けの違い</a></li>
+            <li><a href="#s9">信用格付けはどのように決まる？</a></li>
+            <li><a href="#s10">格付けと債務不履行（デフォルト）の関係</a></li>
+            <li><a href="#s11">格付けと債券利回りの関係</a></li>
+            <li><a href="#s12">信用スプレッドとは？</a></li>
+            <li><a href="#s13">格下げされると債券価格はどうなる？</a></li>
+            <li><a href="#s14">格下げと債券価格の数値例</a></li>
+            <li><a href="#s15">格上げされると債券価格は上昇する？</a></li>
+            <li><a href="#s16">格付けの見通し（アウトルック）とウォッチとは？</a></li>
+            <li><a href="#s17">国債と社債の格付けの違い</a></li>
+            <li><a href="#s18">債券ETFと信用格付けの関係</a></li>
+            <li><a href="#s19">投資適格債券ETFとハイイールド債券ETF</a></li>
+            <li><a href="#s20">信用格付けの限界と注意点</a></li>
+            <li><a href="#s21">決算書や公式資料のどこを確認する？</a></li>
+            <li><a href="#s22">初心者向けチェックリスト</a></li>
+            <li><a href="#s23">よくある質問（FAQ）</a></li>
+            <li><a href="#s24">まとめ</a></li>
+          </ul>
+        </section>
+        <section class="anime-item" id="s1">
+          <h2 class="anime-title">信用格付けとは？</h2>
+          <p><strong>信用格付け</strong>とは、国・企業などの発行体や債券等について、格付け会社が信用力・債務履行能力を評価した意見です。債務不履行（デフォルト）などの信用リスクを理解する参考になります。</p>
+          <p class="note"><strong>最初に結論：</strong>格付けは元本保証ではなく、将来のデフォルトや価格変動、投資収益を確約しません。格付け会社・評価対象・格付けの種類により意味も異なります。</p>
+        </section>
+        <section class="anime-item" id="s2">
+          <h2 class="anime-title">信用格付けの一覧表</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="比較表：長期格付け（S&amp;P・Fitch型）">
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th scope="col">長期格付け（S&P・Fitch型）</th>
+                  <th scope="col">一般的な区分</th>
+                  <th scope="col">初心者向けの説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">AAA</th>
+                  <td>投資適格</td>
+                  <td>最上位の信用評価</td>
+                </tr>
+                <tr>
+                  <th scope="row">AA</th>
+                  <td>投資適格</td>
+                  <td>非常に高い信用評価</td>
+                </tr>
+                <tr>
+                  <th scope="row">A</th>
+                  <td>投資適格</td>
+                  <td>高い信用評価</td>
+                </tr>
+                <tr>
+                  <th scope="row">BBB</th>
+                  <td>投資適格</td>
+                  <td>投資適格の下限を含む区分</td>
+                </tr>
+                <tr>
+                  <th scope="row">BB</th>
+                  <td>投機的格付け</td>
+                  <td>投資適格を下回る区分</td>
+                </tr>
+                <tr>
+                  <th scope="row">B</th>
+                  <td>投機的格付け</td>
+                  <td>信用リスクが比較的高い区分</td>
+                </tr>
+                <tr>
+                  <th scope="row">CCC以下</th>
+                  <td>投機的格付け等</td>
+                  <td>債務履行に関する懸念が大きい区分</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="formula">BBB－以上：投資適格 ／ BB＋以下：投機的格付け</p>
+          <p>AA～CCCなどには「＋」「－」の細分化があります。デフォルト等を示すD・RDなどの特殊区分もあります。記号や定義は会社・格付け尺度ごとに公式説明を確認してください。</p>
+        </section>
+        <section class="anime-item" id="s3">
+          <h2 class="anime-title">AAA・AA・A・BBBの違い</h2>
+          <p><strong>AAA</strong>は最上位、<strong>AA</strong>は非常に高い、<strong>A</strong>は高い、<strong>BBB</strong>は一定の債務履行能力が評価される一方、上位より環境悪化の影響を受けやすい区分です。</p>
+          <p>相対的な信用力を表す意見であり、将来の不履行確率を完全に予測するものではありません。「AAAなら絶対安全」「BBBなら危険」とは言えません。</p>
+        </section>
+        <section class="anime-item" id="s4">
+          <h2 class="anime-title">投資適格と投機的格付けの違い</h2>
+          <p>投資適格は格付け尺度上、一定以上の信用力があると評価された区分。投機的格付けは、より高い信用リスクや不確実性があると評価された区分です。</p>
+          <p>「投資適格」は投資家個人にとっての適切性や損失のなさを保証しません。投機的格付けも投資目的や許容リスクによって評価が異なり、一律に不適切とは限りません。</p>
+        </section>
+        <section class="anime-item" id="s5">
+          <h2 class="anime-title">BBBとBBの違い</h2>
+          <p><strong>BBB－</strong>は一般的な投資適格の下限、<strong>BB＋</strong>は投機的格付けの上限です。BBB－からBB＋に下がると、投資適格から投機的格付けへ移ることがあります。</p>
+          <p>このように投資適格から投機的格付けへ転落した債券は<strong>フォーリン・エンジェル（Fallen Angel）</strong>と呼ばれます。機関投資家の保有制限や指数採用条件に影響する場合もありますが、市場が悪化を事前に織り込んでいれば、発表後に必ず下落するとは限りません。</p>
+        </section>
+        <section class="anime-item" id="s6">
+          <h2 class="anime-title">格付け会社とは？</h2>
+          <p>代表的な会社には<strong>S&P Global Ratings、Moody’s Ratings、Fitch Ratings、格付投資情報センター（R&amp;I）、日本格付研究所（JCR）</strong>があります。対象、方法、記号体系に違いがあり、同じ発行体でも評価が異なることがあります。</p>
+          <p>格付け会社は元本・利息の支払いを保証する機関ではありません。</p>
+        </section>
+        <section class="anime-item" id="s7">
+          <h2 class="anime-title">S&P・Moody’s・Fitchの格付け記号の違い</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="比較表：S&amp;P・Fitch型">
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th scope="col">S&P・Fitch型</th>
+                  <th scope="col">Moody’s型</th>
+                  <th scope="col">一般的な区分</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">AAA</th>
+                  <td>Aaa</td>
+                  <td>投資適格</td>
+                </tr>
+                <tr>
+                  <th scope="row">AA</th>
+                  <td>Aa</td>
+                  <td>投資適格</td>
+                </tr>
+                <tr>
+                  <th scope="row">A</th>
+                  <td>A</td>
+                  <td>投資適格</td>
+                </tr>
+                <tr>
+                  <th scope="row">BBB</th>
+                  <td>Baa</td>
+                  <td>投資適格</td>
+                </tr>
+                <tr>
+                  <th scope="row">BB</th>
+                  <td>Ba</td>
+                  <td>投機的格付け</td>
+                </tr>
+                <tr>
+                  <th scope="row">B</th>
+                  <td>B</td>
+                  <td>投機的格付け</td>
+                </tr>
+                <tr>
+                  <th scope="row">CCC</th>
+                  <td>Caa</td>
+                  <td>投機的格付け</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>細分化の例は<strong>BBB＋・BBB・BBB－</strong>と<strong>Baa1・Baa2・Baa3</strong>。投資適格の下限はそれぞれBBB－、Baa3です。これは主要な長期格付けの概略対応であり、すべての尺度・定義・評価方法が一致するわけではありません。</p>
+        </section>
+        <section class="anime-item" id="s8">
+          <h2 class="anime-title">発行体格付けと個別債券格付けの違い</h2>
+          <h3>発行体格付け</h3>
+          <p>国や企業など発行体の信用力や債務履行能力を、対象となる債務の範囲などに応じて評価します。</p>
+          <h3>個別債券格付け</h3>
+          <p>特定の債券・債務を評価します。担保、保証、優先順位、劣後性、契約条件、想定損失・回収率などによって同一企業の債券でも格付けが違う場合があります。</p>
+          <p class="note">発行体の格付けを、その企業が発行する全債券の格付けと同一視しないことが大切です。</p>
+        </section>
+        <section class="anime-item" id="s9">
+          <h2 class="anime-title">信用格付けはどのように決まる？</h2>
+          <p>収益力、キャッシュフロー、有利子負債、財務健全性、事業環境、競争力、資金調達能力、経営方針、景気変動への耐性、国・地域の制度・経済環境などを総合的に評価します。具体的な方法は格付け会社や評価対象で異なります。</p>
+          <p>財務分析の基礎は<a href="jiko-shihon-hiritsu-toha.html">自己資本比率</a>、<a href="free-cash-flow-toha.html">フリーキャッシュフロー</a>、<a href="ebitda-toha.html">EBITDA</a>も参考になります。</p>
+        </section>
+        <section class="anime-item" id="s10">
+          <h2 class="anime-title">格付けと債務不履行（デフォルト）の関係</h2>
+          <p>デフォルトとは契約に従った元利金の支払いなどが履行されない状態を指します。高格付けでも発生する可能性はゼロではありません。実際の損失は担保、弁済順位、回収率、債券条件で変わります。格付けだけで将来の不履行を完全に予測できません。</p>
+        </section>
+        <section class="anime-item" id="s11">
+          <h2 class="anime-title">格付けと債券利回りの関係</h2>
+          <p>信用リスクが高いと評価されるほど、投資家が高い利回りを要求する傾向があります。ただし利回りは市場金利、残存期間、流動性、通貨、需給、税制、契約条件でも変化します。異なる条件の債券で「低格付け＝必ず高利回り」とは限りません。</p>
+        </section>
+        <section class="anime-item" id="s12">
+          <h2 class="anime-title">信用スプレッドとは？</h2>
+          <p>信用スプレッドは信用リスクなどが異なる債券の利回り差を分析する指標です。詳しくは<a href="credit-spread-toha.html">信用スプレッドとは？</a>を参照してください。</p>
+          <p class="formula">架空例：社債3.5％ − 比較対象の国債2.0％ ＝ 1.5％ポイント ＝ 150bp</p>
+          <p>1bpは0.01％ポイント。実際の比較では通貨・残存期間・参照金利・算出方法を揃える必要があります。差のすべてが純粋なデフォルトリスクの対価ではなく、流動性等も反映されます。</p>
+        </section>
+        <section class="anime-item" id="s13">
+          <h2 class="anime-title">格下げされると債券価格はどうなる？</h2>
+          <p>信用力悪化で投資家の要求利回りが上がれば、既発の固定利付債券の価格には下落圧力がかかります。</p>
+          <ol class="flow">
+            <li><strong>信用力の悪化</strong>収益や資金繰りへの懸念が高まる</li>
+            <li><strong>格下げ・信用リスクへの懸念</strong>信用評価や市場の認識が変化</li>
+            <li><strong>信用スプレッド拡大</strong>比較対象に対する上乗せ利回りが拡大</li>
+            <li><strong>要求利回りの上昇</strong>投資家がより高い利回りを求める</li>
+            <li><strong>債券価格への下落圧力</strong>既発債の割引現在価値が低下</li>
+          </ol>
+          <p class="note">これは概念的な経路です。市場が格下げ前に織り込んでいる場合や、国債利回りが同時に低下する場合など、発表後の価格が必ず下がるわけではありません。<a href="kokusai-kakaku-rimawari.html">国債価格・利回り・長期金利の関係</a>も参考になります。</p>
+        </section>
+        <section class="anime-item" id="s14">
+          <h2 class="anime-title">格下げと債券価格の数値例</h2>
+          <p>架空の固定利付社債を仮定します。額面100万円、年2％の利払い（毎年2万円）、残存5年、年1回利払い、満期額面償還。要求利回りが2％から3％に上がる場合です。</p>
+          <p class="formula">価格 ＝ 20,000×Σ（1÷1.03<sup>t</sup>、t＝1～5）＋1,000,000÷1.03<sup>5</sup><br>≒ 954,203円</p>
+          <p>利回り2％のときは100万円、3％では約954,203円。差は約45,797円（約4.58％の下落）です。これは信用スプレッド拡大などによる<strong>利回り変化を仮定した計算例</strong>であり、格下げ時の実測値ではありません。市場金利・残存期間・信用スプレッドなどで変わります。<a href="saiken-duration-toha.html">債券のデュレーション</a>も参考にしてください。</p>
+        </section>
+        <section class="anime-item" id="s15">
+          <h2 class="anime-title">格上げされると債券価格は上昇する？</h2>
+          <p>信用リスクへの懸念が後退してスプレッドが縮小すれば、固定利付債券の価格に上昇圧力がかかる場合があります。ただし事前の織り込み、市場金利の上昇、流動性、需給によっては上がらないこともあります。</p>
+        </section>
+        <section class="anime-item" id="s16">
+          <h2 class="anime-title">格付けの見通し（アウトルック）とウォッチとは？</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="比較表：項目">
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th scope="col">項目</th>
+                  <th scope="col">意味</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">格付け（Rating）</th>
+                  <td>現在の信用力についての格付け会社の意見</td>
+                </tr>
+                <tr>
+                  <th scope="row">見通し（Outlook）</th>
+                  <td>将来の格付け方向性に関する評価。安定的・ポジティブ・ネガティブなど</td>
+                </tr>
+                <tr>
+                  <th scope="row">ウォッチ（CreditWatch / Rating Watch）</th>
+                  <td>特定の事象を背景に格付け変更の可能性を重点的に検討</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>名称、対象期間、運用方法は会社ごとに異なります。ネガティブ・アウトルックでも必ず格下げされるわけではありません。</p>
+        </section>
+        <section class="anime-item" id="s17">
+          <h2 class="anime-title">国債と社債の格付けの違い</h2>
+          <h3>国債</h3>
+          <p>国の財政状況、成長力、債務負担、政治・制度環境、通貨・金融制度などが評価対象になります。自国通貨建てと外貨建てでは評価が異なる場合があります。</p>
+          <h3>社債</h3>
+          <p>企業の収益力、キャッシュフロー、負債、事業環境、資金調達能力などを重視します。国債も元本保証とは限りません。<a href="kokusai-nyusatsu-toha.html">国債入札</a>、<a href="kinri-shurui-kankei.html">金利の種類</a>、<a href="yield-curve-toha.html">イールドカーブ</a>も関連します。</p>
+        </section>
+        <section class="anime-item" id="s18">
+          <h2 class="anime-title">債券ETFと信用格付けの関係</h2>
+          <p>債券ETFは複数の債券を保有するため、<strong>組入債券の格付け構成</strong>を見る必要があります。投資適格・投機的格付け比率、国債・社債比率、国・地域、業種、発行体集中度、信用スプレッドへの感応度、デュレーションを確認しましょう。</p>
+          <p>運用会社の月次資料・組入銘柄一覧に構成が示される場合があります。平均格付けが高くてもETFの元本は保証されません。また「ETF自体への信用格付け」と「組入債券の平均格付け」は別です。</p>
+        </section>
+        <section class="anime-item" id="s19">
+          <h2 class="anime-title">投資適格債券ETFとハイイールド債券ETF</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="比較表：項目">
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th scope="col">項目</th>
+                  <th scope="col">投資適格債券ETF</th>
+                  <th scope="col">ハイイールド債券ETF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">主な組入対象</th>
+                  <td>投資適格債券</td>
+                  <td>投機的格付け債券</td>
+                </tr>
+                <tr>
+                  <th scope="row">信用リスク</th>
+                  <td>相対的に低い傾向</td>
+                  <td>相対的に高い傾向</td>
+                </tr>
+                <tr>
+                  <th scope="row">利回り</th>
+                  <td>市場環境等による</td>
+                  <td>信用リスク等を反映する傾向</td>
+                </tr>
+                <tr>
+                  <th scope="row">景気悪化の影響</th>
+                  <td>商品による</td>
+                  <td>スプレッド拡大の影響を受けやすい場合</td>
+                </tr>
+                <tr>
+                  <th scope="row">金利リスク</th>
+                  <td>あり</td>
+                  <td>あり</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>投資適格債券ETFが必ず安全というわけでも、ハイイールド債券ETFが必ず高収益というわけでもありません。<a href="keiki-koutai-recession-toha.html">景気後退</a>、<a href="risk-off.html">リスクオフ</a>も参考になります。</p>
+        </section>
+        <section class="anime-item" id="s20">
+          <h2 class="anime-title">信用格付けの限界と注意点</h2>
+          <ul>
+            <li>将来のデフォルトや損失の保証ではない</li>
+            <li>格付け変更が市場価格の変化より遅れることがある</li>
+            <li>会社ごとに評価が異なる場合がある</li>
+            <li>信用リスクと価格変動リスクは別の概念</li>
+            <li>同じ格付けでも期間・弁済順位・担保でリスクが異なる</li>
+            <li>発行体が格付け費用を負担する場合など、報酬体系と利益相反管理は制度上の論点</li>
+          </ul>
+          <p>格付けは有用な情報の一つですが、投資判断の唯一の基準にはなりません。</p>
+        </section>
+        <section class="anime-item" id="s21">
+          <h2 class="anime-title">決算書や公式資料のどこを確認する？</h2>
+          <p>格付け会社の公式発表、発行体IR、社債の発行登録書・目論見書、有価証券報告書、決算短信、ETF月次運用報告書・組入銘柄・格付け構成資料を確認します。</p>
+          <p><strong>発表日、対象発行体・債務、長期・短期、通貨、格付け見通し、発行体格付けか個別債券格付けか</strong>を取り違えないようにしましょう。</p>
+        </section>
+        <section class="anime-item" id="s22">
+          <h2 class="anime-title">初心者向けチェックリスト</h2>
+          <ul class="checks">
+            <li>□ 格付け会社はどこか</li>
+            <li>□ 発行体か個別債券か</li>
+            <li>□ 長期か短期か</li>
+            <li>□ 投資適格か投機的格付けか</li>
+            <li>□ 格付け見通しはどうか</li>
+            <li>□ 変更履歴はあるか</li>
+            <li>□ 信用スプレッドの推移</li>
+            <li>□ 残存期間</li>
+            <li>□ 弁済順位と担保</li>
+            <li>□ 発行体の財務健全性</li>
+            <li>□ ETFの組入格付け構成</li>
+            <li>□ 為替リスクと流動性リスク</li>
+          </ul>
+          <p>外貨建て債券については<a href="kawase-hedge-ari-nashi.html">為替ヘッジあり・なしの違い</a>も確認しましょう。</p>
+        </section>
+        <section class="anime-item" id="s23">
+          <h2 class="anime-title">よくある質問（FAQ）</h2>
+          <details>
+            <summary>信用格付けとは何ですか？</summary>
+            <p>発行体や債券の信用力を格付け会社が評価した意見です。</p>
+          </details>
+          <details>
+            <summary>AAAとBBBでは何が違いますか？</summary>
+            <p>どちらも一般に投資適格ですが、AAAは最上位、BBBは下限を含む区分です。</p>
+          </details>
+          <details>
+            <summary>BBBは投資適格ですか？</summary>
+            <p>S&P・Fitch型の長期格付けではBBB－以上が一般に投資適格です。</p>
+          </details>
+          <details>
+            <summary>BBB－とBB＋の違いは何ですか？</summary>
+            <p>前者は投資適格の下限、後者は投機的格付けの上限です。</p>
+          </details>
+          <details>
+            <summary>投資適格とは安全な債券という意味ですか？</summary>
+            <p>いいえ。元本保証や価格変動がないことを意味しません。</p>
+          </details>
+          <details>
+            <summary>投機的格付けとは何ですか？</summary>
+            <p>投資適格を下回り、相対的に信用リスクが高いと評価される区分です。</p>
+          </details>
+          <details>
+            <summary>S&PとMoody’sでは記号が違いますか？</summary>
+            <p>はい。S&PのBBB－に概ね対応するMoody’sの記号はBaa3です。</p>
+          </details>
+          <details>
+            <summary>発行体格付けと社債格付けは同じですか？</summary>
+            <p>必ずしも同じではありません。担保や弁済順位などで異なる場合があります。</p>
+          </details>
+          <details>
+            <summary>格付けが高ければ元本は保証されますか？</summary>
+            <p>保証されません。</p>
+          </details>
+          <details>
+            <summary>格下げされると債券価格は必ず下がりますか？</summary>
+            <p>必ずではありません。市場の事前織り込みや金利変化にも左右されます。</p>
+          </details>
+          <details>
+            <summary>格上げされると債券価格は上がりますか？</summary>
+            <p>上昇圧力がかかる場合がありますが、必ず上がるわけではありません。</p>
+          </details>
+          <details>
+            <summary>信用スプレッドとは何ですか？</summary>
+            <p>比較対象の債券に対する利回り差を分析する指標です。</p>
+          </details>
+          <details>
+            <summary>ネガティブ・アウトルックとは何ですか？</summary>
+            <p>将来の格下げ方向への可能性を示す見通しで、格下げの確約ではありません。</p>
+          </details>
+          <details>
+            <summary>フォーリン・エンジェルとは何ですか？</summary>
+            <p>投資適格から投機的格付けへ下がった債券などを指します。</p>
+          </details>
+          <details>
+            <summary>国債にも信用格付けはありますか？</summary>
+            <p>あります。国の財政や制度環境などが評価されます。</p>
+          </details>
+          <details>
+            <summary>債券ETFの格付けはどこで確認できますか？</summary>
+            <p>運用会社の公式月次資料や組入債券の格付け構成資料などを確認します。</p>
+          </details>
+        </section>
+        <section class="anime-item" id="s24">
+          <h2 class="anime-title">まとめ</h2>
+          <ol>
+            <li>信用格付けは国・企業・債券などの信用力を評価する参考情報です。</li>
+            <li>一般的にBBB－以上が投資適格、BB＋以下が投機的格付けです。</li>
+            <li>格下げや信用力悪化はスプレッド・債券価格に影響し得ますが、値動きは決まりません。</li>
+            <li>利回り・期間・財務健全性・流動性・為替リスクなどを総合的に確認しましょう。</li>
+          </ol>
+        </section>
+        <section class="anime-item">
+          <h2 class="anime-title">関連記事</h2>
+          <div class="related">
+            <a href="credit-spread-toha.html">信用スプレッドを詳しく読む</a><a href="saiken-duration-toha.html">デュレーションを詳しく読む</a><a href="kokusai-kakaku-rimawari.html">国債価格・利回りを詳しく読む</a><a href="kinri-shurui-kankei.html">金利の種類を詳しく読む</a><a href="kokusai-nyusatsu-toha.html">国債入札を詳しく読む</a><a href="yield-curve-toha.html">イールドカーブを詳しく読む</a><a href="keiki-koutai-recession-toha.html">景気後退を詳しく読む</a><a href="risk-off.html">リスクオフを詳しく読む</a><a href="jiko-shihon-hiritsu-toha.html">自己資本比率を詳しく読む</a><a href="free-cash-flow-toha.html">フリーキャッシュフローを詳しく読む</a><a href="ebitda-toha.html">EBITDAを詳しく読む</a><a href="kawase-hedge-ari-nashi.html">為替ヘッジを詳しく読む</a></div>
+        </section>
+        <section class="anime-item">
+          <h2 class="anime-title">参考資料・一次情報</h2>
+          <p>格付けの説明は各社公式資料を参考に初心者向けに簡略化しています。公式定義の逐語訳ではありません。</p>
+          <ul>
+            <li><a href="https://www.spglobal.com/ratings/_division-assets/pdfs/guide-to-credit-rating-essentials.pdf" rel="noopener noreferrer" target="_blank">S&P Global Ratings｜Guide to Credit Rating Essentials</a></li>
+            <li><a href="https://www.moodys.com/web/en/us/solutions/ratings/understanding-ratings.html" rel="noopener noreferrer" target="_blank">Moody’s Ratings｜Understanding Credit Ratings</a></li>
+            <li><a href="https://your.fitchratings.com/rating-definition-2.html" rel="noopener noreferrer" target="_blank">Fitch Ratings｜Ratings Definitions</a></li>
+          </ul>
+        </section>
+        <section class="anime-item">
+          <h2 class="anime-title">免責事項</h2>
+          <p>本記事は一般的な金融教育を目的とし、特定の金融商品・証券会社の推奨や投資助言ではありません。投資には価格変動、信用、金利、為替、流動性などのリスクがあります。最新の公式資料をご確認ください。</p>
+        </section>
+      </main>
+    </div>
+    <div id="footer">
+    </div>
+    <script defer src="include.js">
+    </script>
+    <script defer src="sidebar.js">
+    </script>
+  </body>
+</html>

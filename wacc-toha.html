@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="#0653a6" name="theme-color">
+  <meta content="telephone=no" name="format-detection">
+  <title>
+   WACC（加重平均資本コスト）とは？計算方法とROIC・企業価値との関係を初心者向けに解説
+  </title>
+  <meta content="WACC（加重平均資本コスト）とは、企業の株主資本コストと税引後負債コストを加重平均した指標です。計算方法や数値例、ROICとの違い、金利・企業価値・DCF法との関係を初心者向けにわかりやすく解説します。" name="description">
+  <meta content="ミルクティー情報発信" name="author">
+  <meta content="index,follow" name="robots">
+  <link href="https://tousiportal.jp/wacc-toha.html" rel="canonical">
+  <meta content="article" property="og:type">
+  <meta content="WACC（加重平均資本コスト）とは？計算方法とROIC・企業価値との関係を初心者向けに解説" property="og:title">
+  <meta content="WACC（加重平均資本コスト）とは、企業の株主資本コストと税引後負債コストを加重平均した指標です。計算方法や数値例、ROICとの違い、金利・企業価値・DCF法との関係を初心者向けにわかりやすく解説します。" property="og:description">
+  <meta content="https://tousiportal.jp/wacc-toha.html" property="og:url">
+  <meta content="https://tousiportal.jp/sonota/wacc-toha-ogp.webp" property="og:image">
+  <meta content="1200" property="og:image:width">
+  <meta content="630" property="og:image:height">
+  <meta content="WACC（加重平均資本コスト）とは？計算方法・ROIC・企業価値との関係" property="og:image:alt">
+  <meta content="投資ポータル.jp" property="og:site_name">
+  <meta content="ja_JP" property="og:locale">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="@QwZd0ksG2138610" name="twitter:site">
+  <meta content="@QwZd0ksG2138610" name="twitter:creator">
+  <meta content="WACC（加重平均資本コスト）とは？計算方法とROIC・企業価値との関係を初心者向けに解説" name="twitter:title">
+  <meta content="WACC（加重平均資本コスト）とは、企業の株主資本コストと税引後負債コストを加重平均した指標です。計算方法や数値例、ROICとの違い、金利・企業価値・DCF法との関係を初心者向けにわかりやすく解説します。" name="twitter:description">
+  <meta content="https://tousiportal.jp/sonota/wacc-toha-ogp.webp" name="twitter:image">
+  <meta content="WACC（加重平均資本コスト）とは？計算方法・ROIC・企業価値との関係" name="twitter:image:alt">
+  <link href="/favicon.ico" rel="icon" type="image/x-icon">
+   <link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+   <link href="/favicon-48.png" rel="icon" sizes="48x48" type="image/png">
+   <link href="/favicon-192.png" rel="icon" sizes="192x192" type="image/png">
+   <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+   <link href="style.css" rel="stylesheet">
+   <link href="menu-card.css" rel="stylesheet">
+   <link href="sidebar.css" rel="stylesheet">
+   <link href="table.css" rel="stylesheet">
+   <link href="header.css" rel="stylesheet">
+   <link crossorigin href="https://cdnjs.cloudflare.com" rel="preconnect">
+   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet">
+   <style>
+    .wacc-page #main{min-width:0;width:100%;max-width:1120px;overflow:visible;padding:24px;background:#f7fafc}
+    .wacc-page .anime-item{padding:26px;margin:20px 0;background:#fff;border:1px solid #d4e0e8;box-shadow:none}
+    .wacc-page .title{font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.55;color:#103753;margin:12px 0 18px}
+    .wacc-page .anime-title{font-size:1.45rem;line-height:1.55;color:#123f5b;border-color:#087f8c}
+    .wacc-page #main p,.wacc-page #main li,.wacc-page #main dd{font-size:1rem;line-height:1.95}
+    .wacc-page #main p{margin:12px 0}.wacc-page #main li{margin:8px 0}
+    .wacc-page #main h3{font-size:1.12rem;color:#124a69;margin:24px 0 8px}
+    .wacc-page #main a{color:#075e9b;text-underline-offset:3px;overflow-wrap:anywhere}
+    .wacc-page .eyebrow{font-weight:700;letter-spacing:.12em;color:#087781;font-size:.85rem!important}
+    .wacc-page .meta,.wacc-page .source-note{font-size:.86rem!important;color:#526574}
+    .wacc-page .note,.wacc-page .formula,.wacc-page .readmore{padding:15px 18px;border-left:4px solid #16848b;background:#eff8f8;border-radius:0 8px 8px 0;margin:16px 0}
+    .wacc-page .note--gold{border-color:#b18428;background:#fff8e8}.wacc-page .formula{font-weight:700;font-size:1.12rem;line-height:1.8}.wacc-page .readmore{border-color:#448cc3;background:#f0f7fd}
+    .wacc-page .toc ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;padding-left:22px}
+    .wacc-page .table-scroll{overflow-x:auto;max-width:100%;border:1px solid #cbdce6;border-radius:8px;margin:16px 0;overscroll-behavior-x:contain}
+    .wacc-page .hub-table{border-collapse:collapse;width:100%;min-width:760px;table-layout:fixed;font-size:.94rem;line-height:1.8;background:#fff}
+    .wacc-page .hub-table caption{text-align:left;padding:14px;font-weight:700;color:#174661;background:#eef5fa;caption-side:top}
+    .wacc-page .hub-table th,.wacc-page .hub-table td{border:1px solid #d5e0e7;padding:14px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+    .wacc-page .hub-table thead th{color:#fff;background:#16465f}.wacc-page .hub-table tbody th{background:#f0f6f9;color:#16465f;width:22%}.wacc-page .hub-table tbody tr:nth-child(even) td{background:#f8fbfc}
+    .wacc-page .hero-image{display:block;width:100%;max-width:860px;height:auto;margin:0 auto;border:1px solid #d9e4ee;border-radius:12px}
+    .wacc-page .flow{list-style:none;counter-reset:step;padding:0!important;margin:20px 0}.wacc-page .flow li{counter-increment:step;position:relative;padding:18px 20px 18px 64px;background:#f1f7fa;border:1px solid #d0e0e9;border-radius:8px;margin:0 0 24px!important}.wacc-page .flow li:before{content:counter(step);position:absolute;left:16px;top:18px;background:#12627d;color:#fff;border-radius:50%;width:32px;height:32px;text-align:center;line-height:32px}.wacc-page .flow li:not(:last-child):after{content:'↓';position:absolute;bottom:-29px;left:29px;color:#12627d;font-size:24px}.wacc-page .flow strong{display:block}
+    .wacc-page .link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.wacc-page .link-card{border:1px solid #ccdee9;border-radius:8px;padding:15px;background:#f8fbfd}.wacc-page .link-card p{font-size:.92rem!important;margin:8px 0 0!important}.wacc-page dt{font-weight:700;color:#154c67;margin-top:20px}.wacc-page dd{margin:6px 0 18px}.wacc-page section[id]{scroll-margin-top:90px}.wacc-page .source-list{padding-left:22px}.wacc-page .source-list li{font-size:.9rem!important}
+    @media(max-width:768px){.wacc-page #main{padding:12px;max-width:100%}.wacc-page .anime-item{padding:18px 14px}.wacc-page .anime-title{font-size:1.2rem}.wacc-page .toc ul,.wacc-page .link-grid{grid-template-columns:1fr}.wacc-page #main p,.wacc-page #main li,.wacc-page #main dd{font-size:.96rem}.wacc-page .hub-table{font-size:.9rem}.wacc-page .flow li{padding-left:58px}.wacc-page .breadcrumb{font-size:.8rem}}
+    @media print{#header,#sidebar,#footer,.skip,.toc{display:none!important}.wacc-page .container{display:block;margin:0;padding:0}.wacc-page #main{max-width:none;padding:0}.wacc-page .table-scroll{overflow:visible}.wacc-page .hub-table{min-width:0;font-size:9pt}}
+  
+
+.wacc-page #main{flex:1 1 0;overflow-wrap:anywhere}.wacc-page .anime-item:hover{transform:none;box-shadow:none}.wacc-page .anime-item{min-width:0}.wacc-page #main a{text-decoration:underline}.wacc-page .hub-table{min-width:520px;table-layout:auto;letter-spacing:normal}.wacc-page .hub-table.two-col{min-width:0}.wacc-page .hub-table th,.wacc-page .hub-table td{white-space:normal;word-break:normal}.wacc-page .hub-table tbody th{width:auto}.wacc-page .hub-table .num{text-align:right;font-variant-numeric:tabular-nums}.wacc-page .table-scroll:focus-visible{outline:2px solid #087f8c;outline-offset:3px}.wacc-page .formula{overflow-wrap:anywhere}.wacc-page .diagram{margin:20px 0;padding:16px;background:#f4f9fb;border:1px solid #d4e0e8;border-radius:12px}.wacc-page .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.wacc-page .node{padding:12px;text-align:center;border:1px solid #bfd9df;border-radius:8px;background:#fff;color:#153e54;line-height:1.7}.wacc-page .node span{display:block;color:#087f8c;font-weight:700}.wacc-page .result{background:#105c65;color:white;font-weight:700}.wacc-page .arrow{text-align:center;color:#087f8c;font-weight:700;font-size:1.4rem}.wacc-page figcaption{font-size:.88rem;color:#526574;line-height:1.65;margin:10px 0 0}.wacc-page .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem}.wacc-page .key:before{content:'';display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px}.wacc-page .roic-key:before,.wacc-page .bar.roic{background:#087f8c}.wacc-page .wacc-key:before,.wacc-page .bar.wacc{background:#8b621e}.wacc-page .bar-group{margin:15px 0}.wacc-page .bar-row{display:grid;grid-template-columns:50px minmax(0,1fr);align-items:center;gap:6px;margin:5px 0;font-size:.85rem}.wacc-page .track{background:#e1e9ee;border-radius:5px}.wacc-page .bar{color:white;padding:4px 7px;border-radius:5px;min-width:0;white-space:nowrap;text-align:right}.wacc-page .concept{width:100%;height:auto;display:block;max-width:650px;margin:auto}.wacc-page details{border:1px solid #d4e0e8;border-radius:8px;margin:10px 0;padding:12px 15px}.wacc-page summary{cursor:pointer;font-weight:700;color:#154c67}.wacc-page .checklist{columns:2;column-gap:30px;list-style:none;padding-left:0}.wacc-page .checklist li{break-inside:avoid}.wacc-page .review-card img{width:300px;height:auto;max-width:100%}.wacc-page #header{min-height:183.75px}@media(min-width:769px){.wacc-page #sidebar{flex:0 0 240px;min-width:240px}}@media(max-width:768px){.wacc-page .pair{grid-template-columns:1fr}.wacc-page .checklist{columns:1}.wacc-page .diagram{padding:10px}.wacc-page .hub-table{font-size:.9rem}.wacc-page .hub-table th,.wacc-page .hub-table td{padding:10px 8px}}@media print{.wacc-page .hub-table{min-width:0}.wacc-page .diagram{break-inside:avoid}}
+   </style>
+   <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/wacc-toha.html#article",
+  "headline": "WACC（加重平均資本コスト）とは？計算方法とROIC・企業価値との関係を初心者向けに解説",
+  "description": "WACC（加重平均資本コスト）とは、企業の株主資本コストと税引後負債コストを加重平均した指標です。計算方法や数値例、ROICとの違い、金利・企業価値・DCF法との関係を初心者向けにわかりやすく解説します。",
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "inLanguage": "ja",
+  "articleSection": "企業分析・財務指標",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/wacc-toha.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "投資ポータル.jp",
+    "url": "https://tousiportal.jp/"
+  },
+  "image": [
+    "https://tousiportal.jp/sonota/wacc-toha-ogp.webp"
+  ]
+}
+   </script>
+   <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "記事一覧",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "WACCとは？",
+      "item": "https://tousiportal.jp/wacc-toha.html"
+    }
+  ]
+}
+   </script>
+  </link>
+ </head>
+ <body class="wacc-page" id="top">
+  <a class="skip" href="#main">
+   本文へ移動
+  </a>
+  <div id="header">
+  </div>
+  <div class="container">
+   <aside id="sidebar">
+   </aside>
+   <main id="main" tabindex="-1">
+    <nav aria-label="breadcrumb">
+     <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+       <a href="index.html">
+        ホーム
+       </a>
+      </li>
+      <li class="breadcrumb-item">
+       <a href="column.html">
+        記事一覧
+       </a>
+      </li>
+      <li aria-current="page" class="breadcrumb-item active">
+       WACCとは？
+      </li>
+     </ol>
+    </nav>
+    <p class="eyebrow">
+     企業分析・財務指標
+    </p>
+    <h1 class="title">
+     WACC（加重平均資本コスト）とは？計算方法とROIC・企業価値との関係を初心者向けに解説
+    </h1>
+    <p class="meta">
+     公開・最終更新：
+     <time datetime="2026-11-26">
+      2026年11月26日
+     </time>
+     ／
+     <a href="profile.html">
+      管理人プロフィール
+     </a>
+    </p>
+    <p>
+     企業の決算や中期経営計画に登場するWACC。「利益が出ているのに資本コストを下回る」とはどういう意味でしょうか。株主資本と負債の違いから計算方法、ROICとの比較、DCF法との関係まで、架空の数値例と図解を使って整理します。
+    </p>
+    <figure>
+     <img alt="WACC（加重平均資本コスト）の計算方法と株主資本コスト・負債コスト・ROIC・企業価値の関係を初心者向けに解説" class="hero-image" decoding="async" fetchpriority="high" height="630" src="sonota/wacc-toha.webp" width="1200">
+     <figcaption>
+      WACCは企業の資本コストの推計値。ROICとの比較や企業価値評価に利用されます。
+     </figcaption>
+    </figure>
+    <section aria-labelledby="toc-title" class="anime-item toc">
+     <h2 class="anime-title" id="toc-title">
+      目次
+     </h2>
+     <ul>
+      <li>
+       <a href="#definition">
+        WACC（加重平均資本コスト）とは？
+       </a>
+      </li>
+      <li>
+       <a href="#capital">
+        資本コストとは？なぜ自己資本にもコストがあるのか？
+       </a>
+      </li>
+      <li>
+       <a href="#formula">
+        WACCの計算方法・計算式
+       </a>
+      </li>
+      <li>
+       <a href="#example">
+        WACCを実際に計算してみよう
+       </a>
+      </li>
+      <li>
+       <a href="#tax">
+        なぜ負債コストには税効果を反映するのか？
+       </a>
+      </li>
+      <li>
+       <a href="#equity">
+        株主資本コストはどのように求めるのか？
+       </a>
+      </li>
+      <li>
+       <a href="#debt">
+        負債コストはどのように求めるのか？
+       </a>
+      </li>
+      <li>
+       <a href="#roic">
+        ROICとWACCの関係・ROICスプレッド
+       </a>
+      </li>
+      <li>
+       <a href="#profit">
+        黒字でも資本コストを上回れない場合がある
+       </a>
+      </li>
+      <li>
+       <a href="#level">
+        WACCは高い方がよい？低い方がよい？
+       </a>
+      </li>
+      <li>
+       <a href="#leverage">
+        借入金を増やせばWACCは下がるのか？
+       </a>
+      </li>
+      <li>
+       <a href="#dcf">
+        WACCと企業価値・DCF法の関係
+       </a>
+      </li>
+      <li>
+       <a href="#jpx">
+        なぜ東京証券取引所は資本コストを意識した経営を求めているのか？
+       </a>
+      </li>
+      <li>
+       <a href="#compare">
+        WACC・ROIC・ROE・ROAの違い
+       </a>
+      </li>
+      <li>
+       <a href="#documents">
+        WACCを企業分析で確認する方法
+       </a>
+      </li>
+      <li>
+       <a href="#misconceptions">
+        初心者が誤解しやすいポイント
+       </a>
+      </li>
+      <li>
+       <a href="#risks">
+        投資における注意点
+       </a>
+      </li>
+      <li>
+       <a href="#check">
+        初心者向けチェックリスト
+       </a>
+      </li>
+      <li>
+       <a href="#faq">
+        よくある質問（FAQ）
+       </a>
+      </li>
+      <li>
+       <a href="#summary">
+        まとめ
+       </a>
+      </li>
+      <li>
+       <a href="#related">
+        関連記事・関連教材
+       </a>
+      </li>
+      <li>
+       <a href="#sources">
+        参考資料・出典
+       </a>
+      </li>
+     </ul>
+    </section>
+    <section aria-labelledby="definition-title" class="anime-item" id="definition">
+     <h2 class="anime-title" id="definition-title">
+      WACC（加重平均資本コスト）とは？
+     </h2>
+     <p>
+      WACC（Weighted Average Cost of Capital、ワック）とは、企業が事業に必要な資金を確保する際の資本コストを、資金調達手段の構成比率に応じて加重平均した指標です。
+     </p>
+     <p>
+      企業は株式の発行や内部留保（過去の利益の蓄積）などの株主資本を活用し、銀行借入や社債の発行によっても資金を確保します。銀行や債券投資家は利息などを求め、株主は配当や株価上昇による投資収益を期待しています。
+     </p>
+     <p>
+      <strong>
+       WACCは、企業が事業を通じてどの程度の収益を生み出す必要があるのかを考えるための基準
+      </strong>
+      です。資金提供者全体が事業リスクに応じて要求する収益率を反映した推計値であり、実際に支払う利息の平均値や会計上の費用そのものではありません。
+     </p>
+     <figure class="diagram">
+      <div class="pair">
+       <div class="node">
+        <strong>
+         株主からの資金・内部留保
+        </strong>
+        <span>
+         &darr;
+        </span>
+        株主資本コスト
+       </div>
+       <div class="node">
+        <strong>
+         銀行・債券投資家からの資金
+        </strong>
+        <span>
+         &darr;
+        </span>
+        税引後負債コスト
+       </div>
+      </div>
+      <div class="arrow">
+       &darr;
+      </div>
+      <div class="node">
+       資本構成比率に応じて加重平均
+      </div>
+      <div class="arrow">
+       &darr;
+      </div>
+      <div class="node result">
+       WACC（加重平均資本コスト）
+      </div>
+      <figcaption>
+       図解①：二つの資本コストを資本構成で重み付けする基本構造。
+      </figcaption>
+     </figure>
+    </section>
+    <section aria-labelledby="capital-title" class="anime-item" id="capital">
+     <h2 class="anime-title" id="capital-title">
+      資本コストとは？なぜ自己資本にもコストがあるのか？
+     </h2>
+     <p>
+      借入金には契約に基づく利息や返済義務があります。一方、普通株式には原則として同じような利息や元本返済義務はありません。それでも株主はリスクを負っているため、それに見合う収益を求めます。
+     </p>
+     <p>
+      例えば、同じ程度のリスクで別の企業への投資から年8％の期待収益率が得られると考える株主は、投資先を選ぶ際にその水準を参考にします。企業が内部留保を事業に使う場合も、株主に還元して別の投資機会に振り向ける選択肢を手放しています。このような
+      <strong>
+       機会費用
+      </strong>
+      も株主資本コストの考え方に含まれます。返済義務がないことと無料であることは別です。
+     </p>
+     <div aria-label="資本コストとは？なぜ自己資本にもコストがあるのか？の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table">
+       <thead>
+        <tr>
+         <th scope="col">
+          比較項目
+         </th>
+         <th scope="col">
+          株主資本
+         </th>
+         <th scope="col">
+          有利子負債
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          主な資金提供者
+         </th>
+         <td>
+          株主
+         </td>
+         <td>
+          銀行・債券投資家
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          求めるもの
+         </th>
+         <td>
+          配当・値上がり益などを含む期待収益
+         </td>
+         <td>
+          利息・元本返済など
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          元本返済義務
+         </th>
+         <td>
+          原則としてなし
+         </td>
+         <td>
+          契約に基づきあり
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          企業清算時の立場
+         </th>
+         <td>
+          原則として債権者より後順位
+         </td>
+         <td>
+          原則として株主より優先
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          資本コストの性質
+         </th>
+         <td>
+          株主が要求する期待収益率
+         </td>
+         <td>
+          現時点の負債調達コスト
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税務上の扱い
+         </th>
+         <td>
+          配当は原則として損金にならない
+         </td>
+         <td>
+          支払利息は一定の条件で損金算入可能
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      普通株式と一般的な有利子負債を前提とした比較です。優先株式・劣後債などには異なる条件があり、税務上も制限があります。
+     </p>
+    </section>
+    <section aria-labelledby="formula-title" class="anime-item" id="formula">
+     <h2 class="anime-title" id="formula-title">
+      WACCの計算方法・計算式
+     </h2>
+     <p>
+      普通株式と有利子負債で資金を確保する企業を想定すると、基本式は次のようになります。
+     </p>
+     <p class="formula">
+      WACC ＝ E &divide;（E＋D）&times; R
+      <sub>
+       e
+      </sub>
+      ＋ D &divide;（E＋D）&times; R
+      <sub>
+       d
+      </sub>
+      &times;（1－T）
+     </p>
+     <div aria-label="WACCの計算方法・計算式の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          記号
+         </th>
+         <th scope="col">
+          意味
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          E
+         </th>
+         <td>
+          株主資本の時価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          D
+         </th>
+         <td>
+          有利子負債の時価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          Re
+         </th>
+         <td>
+          株主資本コスト
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          Rd
+         </th>
+         <td>
+          税引前負債コスト
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          T
+         </th>
+         <td>
+          限界税率など、利用可能な税効果を反映する税率
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          E＋D
+         </th>
+         <td>
+          株主資本と有利子負債の合計
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      資本構成の重みには原則として
+      <strong>
+       時価
+      </strong>
+      を使います。上場企業の普通株式なら時価総額（株価&times;自己株式を除く発行済株式数など）が参考になります。負債の時価が得にくい場合は、金利や残存期間などを考慮し、合理的な近似として簿価を用いることもあります。将来の目標資本構成を使う方法もあります。
+     </p>
+     <p>
+      総負債には買掛金なども含まれるため、有利子負債と同じではありません。貸借対照表の自己資本比率をそのまま重みとして使うとも限りません。優先株式などがあれば、その資本コストと構成比率も考慮します。
+     </p>
+     <p>
+      関連：
+      <a href="jiko-shihon-hiritsu-toha.html">
+       自己資本比率・D/Eレシオ・有利子負債の違い
+      </a>
+      。WACCは算定条件によって変わる推計値です。
+     </p>
+    </section>
+    <section aria-labelledby="example-title" class="anime-item" id="example">
+     <h2 class="anime-title" id="example-title">
+      WACCを実際に計算してみよう
+     </h2>
+     <p>
+      次の数値はすべて説明用の架空例であり、実在企業のデータではありません。
+     </p>
+     <div aria-label="WACCを実際に計算してみようの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          項目
+         </th>
+         <th scope="col" style="text-align:right">
+          数値
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          株主資本の時価
+         </th>
+         <td class="num" style="text-align:right">
+          60億円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          有利子負債の時価
+         </th>
+         <td class="num" style="text-align:right">
+          40億円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          株主資本コスト
+         </th>
+         <td class="num" style="text-align:right">
+          8％
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税引前負債コスト
+         </th>
+         <td class="num" style="text-align:right">
+          3％
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税率
+         </th>
+         <td class="num" style="text-align:right">
+          30％
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <ol>
+      <li>
+       株主資本の構成比率：60&divide;100＝60％
+      </li>
+      <li>
+       有利子負債の構成比率：40&divide;100＝40％
+      </li>
+      <li>
+       税引後負債コスト：3％&times;（1－0.30）＝2.1％
+      </li>
+      <li>
+       各コストを重み付け：0.6&times;8％＋0.4&times;2.1％
+      </li>
+     </ol>
+     <div class="formula">
+      WACC ＝ 4.8％ ＋ 0.84％ ＝
+      <strong>
+       5.64％
+      </strong>
+     </div>
+     <p>
+      この企業の平均的な事業リスクに見合う資本コストは、設定した条件では年5.64％と推計されます。ただし、売上高営業利益率などの会計上の利益率が5.64％なら十分という意味ではありません。後述するROICなど、利益と資本の対象が整合した指標と比較します。
+     </p>
+    </section>
+    <section aria-labelledby="tax-title" class="anime-item" id="tax">
+     <h2 class="anime-title" id="tax-title">
+      なぜ負債コストには税効果を反映するのか？
+     </h2>
+     <p>
+      支払利息が損金に算入できれば課税所得が減り、法人税等の負担が小さくなる場合があります。この税効果を織り込むため、基本式では税引前負債コストに（1－T）を掛けます。
+     </p>
+     <div aria-label="なぜ負債コストには税効果を反映するのか？の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          項目
+         </th>
+         <th scope="col" style="text-align:right">
+          架空の数値例
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          支払利息
+         </th>
+         <td class="num" style="text-align:right">
+          100万円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税率
+         </th>
+         <td class="num" style="text-align:right">
+          30％
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税負担の減少額
+         </th>
+         <td class="num" style="text-align:right">
+          30万円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          税効果を考慮した負担額
+         </th>
+         <td class="num" style="text-align:right">
+          70万円
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      実際に債権者へ支払う利息が70万円になるわけではありません。利息全額が損金算入でき、税効果を十分利用できると仮定した場合の実質負担です。赤字企業や利息の損金算入制限がある企業では、税効果がすぐに得られない、または小さくなる場合があります。国・地域による税制の違いにも注意が必要です。
+     </p>
+    </section>
+    <section aria-labelledby="equity-title" class="anime-item" id="equity">
+     <h2 class="anime-title" id="equity-title">
+      株主資本コストはどのように求めるのか？
+     </h2>
+     <p>
+      株主資本コストは借入金利のように契約で決まるものではありません。市場データなどから推計する代表的な方法がCAPM（資本資産価格モデル）です。
+     </p>
+     <p class="formula">
+      株主資本コスト ＝ リスクフリーレート ＋ &beta; &times; 株式リスクプレミアム
+     </p>
+     <ul>
+      <li>
+       リスクフリーレート：信用リスクが極めて低い資産などを基準とする収益率。評価通貨などに合う国債利回りを参考にする場合があります。
+      </li>
+      <li>
+       &beta;（ベータ）：市場全体の変動に対する個別株の感応度。企業のあらゆるリスクではなく、市場リスクに対する感応度を表します。
+      </li>
+      <li>
+       株式リスクプレミアム：株式市場に投資する際にリスクフリーレートを上回って期待される収益率。
+      </li>
+     </ul>
+     <p>
+      架空例：リスクフリーレート2％、&beta;1.2、株式リスクプレミアム5％なら、
+      <strong>
+       2％＋1.2&times;5％＝8％
+      </strong>
+      です。
+     </p>
+     <p>
+      使用する金利の期間、&beta;の推計期間・市場指数、株式リスクプレミアムの見積もり方などによって結果は変わります。配当割引モデルに基づく推計や複数のリスク要因を用いるモデルも存在します。
+     </p>
+    </section>
+    <section aria-labelledby="debt-title" class="anime-item" id="debt">
+     <h2 class="anime-title" id="debt-title">
+      負債コストはどのように求めるのか？
+     </h2>
+     <p>
+      負債コストは、現時点で同程度のリスクと条件の資金を調達するとしたら、どれほどのコストがかかるかを考えます。次の項目が参考になります。
+     </p>
+     <ul>
+      <li>
+       現在の借入金利、社債の市場利回り
+      </li>
+      <li>
+       国債などの基準金利、信用スプレッド、信用格付け
+      </li>
+      <li>
+       財務健全性、借入期間、担保・保証の有無、金融市場の状況
+      </li>
+     </ul>
+     <p>
+      信用スプレッドは、信用リスクなどに応じて基準となる金利に上乗せされる利回り差です。信用力が悪化すると調達コストが高まる場合があります。ただし社債利回りには流動性などの要因も含まれます。
+     </p>
+     <p>
+      過去の支払利息&divide;有利子負債（期間平均など）は参考になりますが、過去の契約金利を反映するため、今の市場金利や信用リスクと一致するとは限りません。
+     </p>
+     <p>
+      関連記事：
+      <a href="credit-rating-toha.html">
+       信用格付け
+      </a>
+      ・
+      <a href="credit-spread-toha.html">
+       信用スプレッド
+      </a>
+      ・
+      <a href="chouki-kinri-toha.html">
+       長期金利
+      </a>
+      ・
+      <a href="jiko-shihon-hiritsu-toha.html">
+       自己資本比率
+      </a>
+      。
+     </p>
+    </section>
+    <section aria-labelledby="roic-title" class="anime-item" id="roic">
+     <h2 class="anime-title" id="roic-title">
+      ROICとWACCの関係・ROICスプレッド
+     </h2>
+     <p>
+      ROIC（投下資本利益率）は事業に投じた資本がどの程度の利益を生んでいるかを表します。WACCは、その資本に対して資金提供者が求める収益率の推計値です。
+     </p>
+     <div aria-label="ROICとWACCの関係・ROICスプレッドの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table">
+       <thead>
+        <tr>
+         <th scope="col">
+          比較項目
+         </th>
+         <th scope="col">
+          ROIC
+         </th>
+         <th scope="col">
+          WACC
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          日本語名称
+         </th>
+         <td>
+          投下資本利益率
+         </td>
+         <td>
+          加重平均資本コスト
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          主な意味
+         </th>
+         <td>
+          事業の資本収益性
+         </td>
+         <td>
+          資金提供者の要求収益率
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          主な算出要素
+         </th>
+         <td>
+          税引後営業利益・投下資本
+         </td>
+         <td>
+          株主資本コスト・負債コスト・資本構成
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          主な利用目的
+         </th>
+         <td>
+          資本効率の評価
+         </td>
+         <td>
+          投資判断・企業価値評価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          数値の性質
+         </th>
+         <td>
+          実績値または将来予測値
+         </td>
+         <td>
+          市場データなどに基づく推計値
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="formula">
+      ROIC ＝ NOPAT（税引後営業利益）&divide; 投下資本 &times; 100（％）
+     </p>
+     <p>
+      投下資本の定義や期首・期末平均の扱いなどには複数の方法があります。詳しくは
+      <a href="roic-roe-roa-chigai.html">
+       ROIC・ROE・ROAの違い
+      </a>
+      をご覧ください。
+     </p>
+     <h3>
+      ROICスプレッドとは？
+     </h3>
+     <p class="formula">
+      ROICスプレッド ＝ ROIC － WACC
+     </p>
+     <div aria-label="ROICとWACCの関係・ROICスプレッドの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          状態
+         </th>
+         <th scope="col">
+          解釈
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          ROIC ＞ WACC
+         </th>
+         <td>
+          資本コストを上回る収益を生み出している
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROIC ＝ WACC
+         </th>
+         <td>
+          資本コストに見合う収益を生み出している
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROIC ＜ WACC
+         </th>
+         <td>
+          資本コストに対して収益性が不足している
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div aria-label="ROICとWACCの関係・ROICスプレッドの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table">
+       <thead>
+        <tr>
+         <th scope="col">
+          架空の企業
+         </th>
+         <th scope="col" style="text-align:right">
+          ROIC
+         </th>
+         <th scope="col" style="text-align:right">
+          WACC
+         </th>
+         <th scope="col" style="text-align:right">
+          ROICスプレッド
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          A社
+         </th>
+         <td class="num" style="text-align:right">
+          10％
+         </td>
+         <td class="num" style="text-align:right">
+          6％
+         </td>
+         <td class="num" style="text-align:right">
+          ＋4％ポイント
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          B社
+         </th>
+         <td class="num" style="text-align:right">
+          6％
+         </td>
+         <td class="num" style="text-align:right">
+          6％
+         </td>
+         <td class="num" style="text-align:right">
+          0％ポイント
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          C社
+         </th>
+         <td class="num" style="text-align:right">
+          3％
+         </td>
+         <td class="num" style="text-align:right">
+          6％
+         </td>
+         <td class="num" style="text-align:right">
+          －3％ポイント
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <figure class="diagram bars">
+      <div class="legend">
+       <span class="key roic-key">
+        ROIC
+       </span>
+       <span class="key wacc-key">
+        WACC
+       </span>
+      </div>
+      <div class="bar-group">
+       <strong>
+        A社：＋4％ポイント
+       </strong>
+       <div class="bar-row">
+        <span>
+         ROIC
+        </span>
+        <div class="track">
+         <div class="bar roic" style="width:100%">
+          10％
+         </div>
+        </div>
+       </div>
+       <div class="bar-row">
+        <span>
+         WACC
+        </span>
+        <div class="track">
+         <div class="bar wacc" style="width:60%">
+          6％
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bar-group">
+       <strong>
+        B社：0％ポイント
+       </strong>
+       <div class="bar-row">
+        <span>
+         ROIC
+        </span>
+        <div class="track">
+         <div class="bar roic" style="width:60%">
+          6％
+         </div>
+        </div>
+       </div>
+       <div class="bar-row">
+        <span>
+         WACC
+        </span>
+        <div class="track">
+         <div class="bar wacc" style="width:60%">
+          6％
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="bar-group">
+       <strong>
+        C社：－3％ポイント
+       </strong>
+       <div class="bar-row">
+        <span>
+         ROIC
+        </span>
+        <div class="track">
+         <div class="bar roic" style="width:30%">
+          3％
+         </div>
+        </div>
+       </div>
+       <div class="bar-row">
+        <span>
+         WACC
+        </span>
+        <div class="track">
+         <div class="bar wacc" style="width:60%">
+          6％
+         </div>
+        </div>
+       </div>
+      </div>
+      <figcaption>
+       図解②：同一の0〜10％の尺度で比較した架空例。差は％ではなく％ポイント。
+      </figcaption>
+     </figure>
+     <p>
+      ROICがWACCを持続的に上回れば経済的な付加価値を生み出すと考えられます。ただし、比較する事業・リスク・期間・会計調整をそろえる必要があります。一時点の差だけで企業価値や株価の将来を断定せず、今後の収益性や成長投資も確認しましょう。
+     </p>
+    </section>
+    <section aria-labelledby="profit-title" class="anime-item" id="profit">
+     <h2 class="anime-title" id="profit-title">
+      黒字でも資本コストを上回れない場合がある
+     </h2>
+     <p>
+      架空の企業が100億円の投下資本で年間4億円のNOPAT（税引後営業利益）を得たとします。ROICは4％、WACCは6％と仮定します。
+     </p>
+     <div aria-label="黒字でも資本コストを上回れない場合があるの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          項目
+         </th>
+         <th scope="col" style="text-align:right">
+          数値
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          投下資本
+         </th>
+         <td class="num" style="text-align:right">
+          100億円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          NOPAT
+         </th>
+         <td class="num" style="text-align:right">
+          4億円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROIC
+         </th>
+         <td class="num" style="text-align:right">
+          4％
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          WACC
+         </th>
+         <td class="num" style="text-align:right">
+          6％
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          資本コスト相当額
+         </th>
+         <td style="text-align:right">
+          100億円&times;6％＝6億円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          経済的な付加価値（簡易）
+         </th>
+         <td style="text-align:right">
+          4億円－6億円＝－2億円
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="formula">
+      経済的な付加価値（簡易）＝（ROIC－WACC）&times;投下資本
+     </p>
+     <p>
+      比率を小数に直して計算すると、（0.04－0.06）&times;100億円＝－2億円です。営業利益が黒字でも、資本提供者の要求収益率を満たしていないことがあります。この金額は会計上の損失や実際の現金流出ではありません。EVA（経済的付加価値）などの実務計算では会計上の調整が加わる場合があります。
+     </p>
+     <p>
+      研究開発や設備投資が先行して一時的にROICが低くなることもあります。ROICがWACCを下回ったからといって直ちに倒産する、投資対象として不適切である、という意味ではありません。黒字と現金の関係については
+      <a href="free-cash-flow-toha.html">
+       フリーキャッシュフロー
+      </a>
+      も参考になります。
+     </p>
+    </section>
+    <section aria-labelledby="level-title" class="anime-item" id="level">
+     <h2 class="anime-title" id="level-title">
+      WACCは高い方がよい？低い方がよい？
+     </h2>
+     <p>
+      一般に、他の条件が同じならWACCが低いほど資本コストの負担は小さく、要求収益率を上回る事業を行いやすくなります。ただし、低さだけで企業の良し悪しは判断できません。
+     </p>
+     <div aria-label="WACCは高い方がよい？低い方がよい？の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          上昇する可能性のある要因
+         </th>
+         <th scope="col">
+          低下する可能性のある要因
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          市場金利の上昇
+         </th>
+         <td>
+          市場金利の低下
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          信用格付けの低下・信用スプレッド拡大
+         </th>
+         <td>
+          信用力の改善・信用スプレッド縮小
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          株式リスクプレミアムの上昇
+         </th>
+         <td>
+          株式リスクプレミアムの低下
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          事業リスクの増大
+         </th>
+         <td>
+          事業リスクの低下
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          財務状況の悪化・過度な負債依存
+         </th>
+         <td>
+          財務の安定・適切な資本構成
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      市場金利の上昇はリスクフリーレートや新規負債コストを押し上げる可能性がありますが、他の要素が逆に動けばWACCが上昇するとは限りません。
+      <a href="kinri-shurui-kankei.html">
+       金利の種類と関係
+      </a>
+      をあわせて読むと理解しやすくなります。
+     </p>
+     <p>
+      <strong>
+       すべての企業に共通する絶対的な適正値はありません。
+      </strong>
+      業種、国・地域、通貨、事業リスク、財務構成が異なる企業の数値を単純に比較しないようにしましょう。
+     </p>
+    </section>
+    <section aria-labelledby="leverage-title" class="anime-item" id="leverage">
+     <h2 class="anime-title" id="leverage-title">
+      借入金を増やせばWACCは下がるのか？
+     </h2>
+     <p>
+      一般的な事業会社では債権者が株主より優先されるため、負債コストは株主資本コストより低い場合が多く、税効果もあります。適度な負債利用によりWACCを低下させられる可能性があります。
+     </p>
+     <p>
+      しかし、過度な借入は支払利息・返済負担を増やし、資金繰りや経営の自由度を悪化させます。財務リスクが高まると信用格付けが下がり、新たな借入金利が上昇する場合があります。株主もより高い収益率を要求する可能性があるため、WACCがかえって上昇することがあります。
+     </p>
+     <figure class="diagram">
+      <svg aria-labelledby="curve-title curve-desc" class="concept" role="img" viewbox="0 0 560 290">
+       <title id="curve-title">
+        負債比率とWACCの概念図
+       </title>
+       <desc id="curve-desc">
+        負債の税効果などでWACCが下がる可能性があり、過度な負債で財務リスクが高まると上昇する場合があるというU字型の概念図。実測値ではない。
+       </desc>
+       <path d="M65 30V235H530" fill="none" stroke="#25465c" stroke-width="2">
+       </path>
+       <path d="M85 75 C170 170 220 195 280 185 S425 145 500 45" fill="none" stroke="#087f8c" stroke-linecap="round" stroke-width="5">
+       </path>
+       <g fill="#173a56" font-size="17">
+        <text x="12" y="20">
+         WACC
+        </text>
+        <text x="430" y="264">
+         負債比率
+        </text>
+        <text x="80" y="57">
+         高
+        </text>
+        <text x="70" y="229">
+         低
+        </text>
+        <text x="75" y="264">
+         低
+        </text>
+        <text x="510" y="232">
+         高
+        </text>
+        <text x="110" y="112">
+         税効果など
+        </text>
+        <text x="332" y="75">
+         財務リスクの上昇
+        </text>
+        <text x="320" y="96">
+         株主・負債コスト上昇
+        </text>
+       </g>
+      </svg>
+      <figcaption>
+       図解③：理論的な関係の一例（実測値ではありません）。企業によって形状は異なり、一定の最適負債比率が存在することを保証しません。
+      </figcaption>
+     </figure>
+     <p>
+      実際には借入の条件、事業の現金創出力、返済余力が重要です。
+      <a href="jiko-shihon-hiritsu-toha.html">
+       自己資本比率・D/Eレシオ・有利子負債
+      </a>
+      、
+      <a href="credit-rating-toha.html">
+       信用格付け
+      </a>
+      も確認しましょう。
+     </p>
+    </section>
+    <section aria-labelledby="dcf-title" class="anime-item" id="dcf">
+     <h2 class="anime-title" id="dcf-title">
+      WACCと企業価値・DCF法の関係
+     </h2>
+     <p>
+      DCF法（Discounted Cash Flow法）は、企業が将来生み出すと予想されるキャッシュフローを現在価値に割り引いて評価する方法です。将来の現金は受け取るまでの時間や不確実性を考慮する必要があります。
+     </p>
+     <p class="formula">
+      現在価値 ＝ 将来キャッシュフロー &divide;（1＋割引率）
+      <sup>
+       経過年数
+      </sup>
+     </p>
+     <p>
+      1年後に110万円のキャッシュフローが得られると仮定した場合：
+     </p>
+     <div aria-label="WACCと企業価値・DCF法の関係の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          割引率
+         </th>
+         <th scope="col" style="text-align:right">
+          現在価値
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          5％
+         </th>
+         <td style="text-align:right">
+          約104.76万円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          10％
+         </th>
+         <td class="num" style="text-align:right">
+          100万円
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          15％
+         </th>
+         <td style="text-align:right">
+          約95.65万円
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      他の条件が同じで、将来キャッシュフローがプラスの場合、割引率が高いほど現在価値は低くなります。事業に帰属するフリーキャッシュフロー（FCFF）を評価するときは、その事業リスクと整合したWACCを割引率として使います。
+     </p>
+     <figure class="diagram">
+      <div class="node">
+       市場金利・信用リスク・資本構成
+      </div>
+      <div class="arrow">
+       &darr;
+      </div>
+      <div class="node result">
+       WACC（FCFFに対応する割引率）
+      </div>
+      <div class="arrow">
+       &darr;
+      </div>
+      <div class="pair">
+       <div class="node">
+        <strong>
+         WACC上昇
+        </strong>
+        <span>
+         &darr;
+        </span>
+        割引率上昇
+        <span>
+         &darr;
+        </span>
+        現在価値低下
+        <span>
+         &darr;
+        </span>
+        事業価値の評価額が低下する可能性
+       </div>
+       <div class="node">
+        <strong>
+         WACC低下
+        </strong>
+        <span>
+         &darr;
+        </span>
+        割引率低下
+        <span>
+         &darr;
+        </span>
+        現在価値上昇
+        <span>
+         &darr;
+        </span>
+        事業価値の評価額が上昇する可能性
+       </div>
+      </div>
+      <figcaption>
+       図解④：将来のプラスのキャッシュフロー等の前提を一定とした関係。実際の株価の動きを保証するものではありません。
+      </figcaption>
+     </figure>
+     <h3>
+      キャッシュフローと割引率をそろえる
+     </h3>
+     <div aria-label="WACCと企業価値・DCF法の関係の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          評価対象
+         </th>
+         <th scope="col">
+          割引率
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          FCFF：株主と債権者など資金提供者全体に帰属する事業キャッシュフロー
+         </th>
+         <td>
+          WACC
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          FCFE：株主に帰属するキャッシュフロー
+         </th>
+         <td>
+          株主資本コスト
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      会計上の営業CFや簡便的なFCFをそのままFCFFとみなすことはできません。事業価値と株主価値、実際の時価総額も別物です。事業価値から株主価値を考える際には、非事業用資産や負債などを調整する必要があります。
+     </p>
+     <p>
+      通貨、事業リスク、名目・実質の前提を割引率とキャッシュフローでそろえましょう。例えば名目の円建てキャッシュフローには整合する名目の円建て割引率を使用します。成長率や将来の利益・投資の見通しも評価を変えるため、WACCの変化だけで株価が同じ方向へ動くとは限りません。
+     </p>
+     <p>
+      関連：
+      <a href="free-cash-flow-toha.html">
+       フリーキャッシュフロー
+      </a>
+      ・
+      <a href="ebitda-toha.html">
+       EBITDA
+      </a>
+      ・
+      <a href="unten-shihon-toha.html">
+       運転資本
+      </a>
+      。
+     </p>
+    </section>
+    <section aria-labelledby="jpx-title" class="anime-item" id="jpx">
+     <h2 class="anime-title" id="jpx-title">
+      なぜ東京証券取引所は資本コストを意識した経営を求めているのか？
+     </h2>
+     <p>
+      東京証券取引所は2023年3月から、プライム市場・スタンダード市場の上場会社に資本コストや株価を意識した経営への対応を求めています。2026年4月28日の要請更新では、経営資源の配分を中心に投資家の期待や取組みのポイントが整理され、10月27日には4年目の現状と今後の取組みが公表されました。公式ページでは11月13日に10月末時点の開示企業一覧が更新されています（2026年11月26日確認）。
+     </p>
+     <p>
+      企業が自社の資本コスト、資本収益性、市場評価を把握して課題を分析し、成長投資・収益性改善・株主還元などへの経営資源の配分を検討することが重要です。投資家との対話を通じた継続的な見直しも、中長期的な企業価値向上につながります。
+     </p>
+     <p>
+      この要請はPBR（株価純資産倍率）が1倍未満の企業だけを対象とするものではなく、一律のWACCやROIC目標を義務付けるものでもありません。配当や
+      <a href="jishakabu-kai-toha.html">
+       自社株買い
+      </a>
+      を増やせば解決するという話ではなく、事業の持続的な価値向上が目的です。
+     </p>
+     <p>
+      公式資料：
+      <a href="https://www.jpx.co.jp/equities/follow-up/02.html">
+       JPX 資本コストや株価を意識した経営の実現に向けた対応
+      </a>
+      （具体的な公表資料は末尾の参考資料参照）。
+     </p>
+    </section>
+    <section aria-labelledby="compare-title" class="anime-item" id="compare">
+     <h2 class="anime-title" id="compare-title">
+      WACC・ROIC・ROE・ROAの違い
+     </h2>
+     <div aria-label="WACC・ROIC・ROE・ROAの違いの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table">
+       <thead>
+        <tr>
+         <th scope="col">
+          指標
+         </th>
+         <th scope="col">
+          主な意味
+         </th>
+         <th scope="col">
+          主な用途
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          WACC
+         </th>
+         <td>
+          加重平均資本コスト
+         </td>
+         <td>
+          資本コスト・企業価値評価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          株主資本コスト
+         </th>
+         <td>
+          株主が要求する期待収益率
+         </td>
+         <td>
+          株主価値評価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROIC
+         </th>
+         <td>
+          投下資本に対する収益性
+         </td>
+         <td>
+          事業の資本効率
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROE
+         </th>
+         <td>
+          自己資本に対する収益性
+         </td>
+         <td>
+          株主資本の効率
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROA
+         </th>
+         <td>
+          総資産に対する収益性
+         </td>
+         <td>
+          資産の利用効率
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      原則として、
+      <strong>
+       ROICとWACC、ROEと株主資本コスト
+      </strong>
+      を対応させます。ROEは株主に帰属する利益を自己資本と比較するのに対し、WACCは株主・債権者など全体の要求収益率を表すため、ROEとWACCを直接比較することは一般的に適切ではありません。
+     </p>
+     <p>
+      計算方法や使い分けは
+      <a href="roic-roe-roa-chigai.html">
+       ROIC・ROE・ROAの違い
+      </a>
+      で詳しく解説しています。
+     </p>
+    </section>
+    <section aria-labelledby="documents-title" class="anime-item" id="documents">
+     <h2 class="anime-title" id="documents-title">
+      WACCを企業分析で確認する方法
+     </h2>
+     <p>
+      WACCは財務諸表に必ず記載される確定的な会計数値ではありません。企業がWACCを直接公表しない場合もあります。まず企業公式IRサイトで、以下の資料を探します。
+     </p>
+     <ul>
+      <li>
+       統合報告書・中期経営計画・決算説明資料
+      </li>
+      <li>
+       有価証券報告書・コーポレート・ガバナンス報告書
+      </li>
+      <li>
+       資本コストや株価を意識した経営に関する開示資料
+      </li>
+     </ul>
+     <p>
+      「WACC」「資本コスト」「ROICスプレッド」「資本効率」などの語句を資料内で検索すると見つけやすくなります。開示がある場合、以下の条件を確認しましょう。
+     </p>
+     <div aria-label="WACCを企業分析で確認する方法の比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          確認項目
+         </th>
+         <th scope="col">
+          見るポイント
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          算定時点・方法
+         </th>
+         <td>
+          いつ、どの手法で推計したか
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          株主資本コスト・負債コスト
+         </th>
+         <td>
+          金利・&beta;・リスクプレミアム・信用リスクなどの前提
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          資本構成・税率
+         </th>
+         <td>
+          時価か簿価か、目標構成か、利用可能な税効果か
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROICとの関係
+         </th>
+         <td>
+          期間や対象事業、計算定義がそろっているか
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          目標値か推計値か
+         </th>
+         <td>
+          経営目標と現時点の推計を区別
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          全社か事業別か
+         </th>
+         <td>
+          リスクの異なる事業が混在していないか
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          過去の推移
+         </th>
+         <td>
+          前提条件の変更や市場環境の変化を確認
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      会社側が示すWACCも算定時点と仮定に基づく推計です。公表していない場合は必要なデータや仮定が得られる範囲で推計し、無理に確定値を求めないことが大切です。
+     </p>
+    </section>
+    <section aria-labelledby="misconceptions-title" class="anime-item" id="misconceptions">
+     <h2 class="anime-title" id="misconceptions-title">
+      初心者が誤解しやすいポイント
+     </h2>
+     <div aria-label="初心者が誤解しやすいポイントの比較表（横スクロール可）" class="table-scroll" role="region" tabindex="0">
+      <table class="hub-table two-col">
+       <thead>
+        <tr>
+         <th scope="col">
+          誤解
+         </th>
+         <th scope="col">
+          正しい理解
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">
+          WACCは企業の借入金利
+         </th>
+         <td>
+          株主資本コストと税引後負債コストの加重平均
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          自己資本にはコストがない
+         </th>
+         <td>
+          株主の要求収益率や機会費用が存在する
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          配当利回りが株主資本コスト
+         </th>
+         <td>
+          値上がり益などを含めた期待収益を考える
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          財務諸表からそのまま確認できる
+         </th>
+         <td>
+          市場データなどに基づく推計が必要
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          資本構成比率は必ず簿価で計算
+         </th>
+         <td>
+          原則は時価
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          WACCは低ければ低いほどよい
+         </th>
+         <td>
+          事業リスクや収益性との関係も重要
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          借金を増やせばWACCを下げられる
+         </th>
+         <td>
+          財務リスク増大により逆に高まる場合もある
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          ROICがWACCを上回れば必ず株価が上がる
+         </th>
+         <td>
+          将来業績や市場予想、株価水準にも左右される
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          黒字企業は必ず企業価値を高めている
+         </th>
+         <td>
+          資本コストに見合う収益かも重要
+         </td>
+        </tr>
+        <tr>
+         <th scope="row">
+          全企業に共通する適正値がある
+         </th>
+         <td>
+          業種・市場環境・事業リスクなどで異なる
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section aria-labelledby="risks-title" class="anime-item" id="risks">
+     <h2 class="anime-title" id="risks-title">
+      投資における注意点
+     </h2>
+     <ul>
+      <li>
+       WACCは唯一の正解がある数値ではなく、金利・株価・市場環境や株主資本コストの推計手法によって変わります。
+      </li>
+      <li>
+       異なる業種・事業リスクの企業を単純比較しないようにしましょう。全社WACCが全事業やすべての投資案件に適切とは限りません。
+      </li>
+      <li>
+       成長企業や赤字企業は現在の収益性だけで評価できず、過去のROICが将来も維持される保証もありません。
+      </li>
+      <li>
+       企業価値評価は将来予測や前提の変化に敏感です。複数の条件で結果がどう変わるかも確認します。
+      </li>
+      <li>
+       銀行などの金融機関では負債が事業そのものに深く関わるため、一般事業会社と同じROIC・WACCやFCFFによる評価が適切とは限りません。
+      </li>
+      <li>
+       ROICとWACCの差だけで投資を判断せず、財務健全性、将来の収益、株価に織り込まれた期待なども考慮しましょう。
+      </li>
+     </ul>
+    </section>
+    <section aria-labelledby="check-title" class="anime-item" id="check">
+     <h2 class="anime-title" id="check-title">
+      初心者向けチェックリスト
+     </h2>
+     <ul class="checklist">
+      <li>
+       &square; WACCの算定前提を確認したか
+      </li>
+      <li>
+       &square; 株主資本コストと負債コストを区別したか
+      </li>
+      <li>
+       &square; 時価と簿価の違いを理解したか
+      </li>
+      <li>
+       &square; 税効果が考慮されているか
+      </li>
+      <li>
+       &square; WACCとROICを整合した条件で比較したか
+      </li>
+      <li>
+       &square; ROICスプレッドの過去の推移を確認したか
+      </li>
+      <li>
+       &square; 成長投資や将来の収益性を考慮したか
+      </li>
+      <li>
+       &square; 金利や信用格付けの変化を確認したか
+      </li>
+      <li>
+       &square; 財務健全性を確認したか
+      </li>
+      <li>
+       &square; 同業他社との比較条件が整合しているか
+      </li>
+      <li>
+       &square; 一つの財務指標だけで投資判断をしていないか
+      </li>
+     </ul>
+    </section>
+    <section aria-labelledby="faq-title" class="anime-item" id="faq">
+     <h2 class="anime-title" id="faq-title">
+      よくある質問（FAQ）
+     </h2>
+     <details>
+      <summary>
+       WACCとは何ですか？
+      </summary>
+      <p>
+       株主資本コストと税引後負債コストを資本構成に応じて加重平均した、資金提供者全体の要求収益率の推計値です。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCは何と読みますか？
+      </summary>
+      <p>
+       一般に「ワック」と読みます。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCはどのように計算しますか？
+      </summary>
+      <p>
+       株主資本比率&times;株主資本コスト＋有利子負債比率&times;税引前負債コスト&times;（1－税率）です。構成比率は原則時価ベースです。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCが5％とはどういう意味ですか？
+      </summary>
+      <p>
+       一定の仮定に基づき、事業の資本コストが年5％と推計されるという意味です。実際に利息を5％支払うという意味ではありません。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCは何％であれば適正ですか？
+      </summary>
+      <p>
+       全企業に共通の適正値はありません。通貨、事業リスク、資本構成、金利などによって変わります。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCは低い方がよいですか？
+      </summary>
+      <p>
+       他の条件が同じなら資本コストの負担は小さくなりますが、収益性やリスクも併せて確認します。
+      </p>
+     </details>
+     <details>
+      <summary>
+       なぜ株主資本にもコストがあるのですか？
+      </summary>
+      <p>
+       株主は投資リスクに見合う収益を求め、他の投資先を選ぶ機会もあるためです。
+      </p>
+     </details>
+     <details>
+      <summary>
+       なぜ負債コストは税引後で計算するのですか？
+      </summary>
+      <p>
+       支払利息が損金算入できる場合、税負担が軽くなるためです。利用可能な税効果を前提に計算します。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCとROICは何が違うのですか？
+      </summary>
+      <p>
+       WACCは要求収益率の推計、ROICは事業に投下した資本に対する利益率です。
+      </p>
+     </details>
+     <details>
+      <summary>
+       ROICがWACCを下回るとどうなりますか？
+      </summary>
+      <p>
+       資本コストを満たす収益性が不足する状態です。ただし一時的な成長投資もあり、直ちに倒産するという意味ではありません。
+      </p>
+     </details>
+     <details>
+      <summary>
+       金利が上昇するとWACCも上昇しますか？
+      </summary>
+      <p>
+       上昇する可能性はありますが、信用スプレッドや株式リスクプレミアム、資本構成も影響するため必ずではありません。
+      </p>
+     </details>
+     <details>
+      <summary>
+       借入金を増やすとWACCは下がりますか？
+      </summary>
+      <p>
+       一定の条件で下がることはありますが、過度な借入により財務リスクが上昇すれば逆に高まることもあります。
+      </p>
+     </details>
+     <details>
+      <summary>
+       WACCはどこで確認できますか？
+      </summary>
+      <p>
+       統合報告書、中期経営計画、決算説明資料などに掲載される場合があります。公表していない企業もあります。
+      </p>
+     </details>
+     <details>
+      <summary>
+       なぜDCF法ではWACCを使用するのですか？
+      </summary>
+      <p>
+       FCFFを評価する場合、事業のリスクと整合する資金提供者全体の要求収益率で割り引くためです。FCFEには株主資本コストを使います。
+      </p>
+     </details>
+    </section>
+    <section aria-labelledby="summary-title" class="anime-item" id="summary">
+     <h2 class="anime-title" id="summary-title">
+      まとめ
+     </h2>
+     <ul>
+      <li>
+       WACCは株主資本コストと税引後負債コストを構成比率で加重平均した推計値です。
+      </li>
+      <li>
+       自己資本にも株主が求める期待収益率や機会費用があります。
+      </li>
+      <li>
+       ROICとWACCの差は資本効率と経済的な価値創出を考える基準です。
+      </li>
+      <li>
+       WACCはFCFFを対象とするDCF法の割引率に使われます。
+      </li>
+      <li>
+       金利・信用リスク・資本構成によって変動し、前提条件や他の財務指標との整合性が重要です。
+      </li>
+     </ul>
+     <p>
+      WACCを単独で見るのではなく、ROIC、フリーキャッシュフロー、財務健全性と組み合わせることで、企業がどのように資本を活用し、価値を高めようとしているのかを理解しやすくなります。
+     </p>
+    </section>
+    <section aria-labelledby="related-title" class="anime-item" id="related">
+     <h2 class="anime-title" id="related-title">
+      関連記事・関連教材
+     </h2>
+     <div class="link-grid">
+      <div class="link-card">
+       <a href="roic-roe-roa-chigai.html">
+        <strong>
+         ROIC・ROE・ROAの違い
+        </strong>
+       </a>
+       <p>
+        資本効率と収益性を比較
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="free-cash-flow-toha.html">
+        <strong>
+         フリーキャッシュフローとは？
+        </strong>
+       </a>
+       <p>
+        現金創出力と企業価値
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="jiko-shihon-hiritsu-toha.html">
+        <strong>
+         自己資本比率・D/Eレシオ・有利子負債
+        </strong>
+       </a>
+       <p>
+        財務健全性と資本構成
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="credit-rating-toha.html">
+        <strong>
+         信用格付けとは？
+        </strong>
+       </a>
+       <p>
+        信用リスクの見方
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="credit-spread-toha.html">
+        <strong>
+         信用スプレッドとは？
+        </strong>
+       </a>
+       <p>
+        基準金利と信用リスク
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="chouki-kinri-toha.html">
+        <strong>
+         長期金利とは？
+        </strong>
+       </a>
+       <p>
+        市場金利と株価
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="ebitda-toha.html">
+        <strong>
+         EBITDAとは？
+        </strong>
+       </a>
+       <p>
+        企業の収益力の見方
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="eigyou-keijou-junrieki-chigai.html">
+        <strong>
+         営業利益・経常利益・純利益の違い
+        </strong>
+       </a>
+       <p>
+        利益の種類を整理
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="noren-toha.html">
+        <strong>
+         のれんとは？
+        </strong>
+       </a>
+       <p>
+        買収と減損の影響
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="unten-shihon-toha.html">
+        <strong>
+         運転資本とは？
+        </strong>
+       </a>
+       <p>
+        事業資金と現金の関係
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="haitou-seikou-rimawari-doe-chigai.html">
+        <strong>
+         配当性向・配当利回り・DOE
+        </strong>
+       </a>
+       <p>
+        株主還元の指標
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="jishakabu-kai-toha.html">
+        <strong>
+         自社株買いとは？
+        </strong>
+       </a>
+       <p>
+        資本政策の基本
+       </p>
+      </div>
+      <div class="link-card">
+       <a href="kinri-shurui-kankei.html">
+        <strong>
+         金利の種類と関係
+        </strong>
+       </a>
+       <p>
+        金利の全体像
+       </p>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="sources-title" class="anime-item" id="sources">
+     <h2 class="anime-title" id="sources-title">
+      参考資料・出典
+     </h2>
+     <ul class="source-list">
+      <li>
+       <a href="https://www.jpx.co.jp/equities/follow-up/02.html" rel="noopener noreferrer">
+        日本取引所グループ：資本コストや株価を意識した経営の実現に向けた対応
+       </a>
+       ：対象市場・開示一覧・関連資料
+      </li>
+      <li>
+       <a href="https://www.jpx.co.jp/news/1020/20240201-01.html" rel="noopener noreferrer">
+        東京証券取引所：投資者の視点を踏まえたポイントと事例（2024年2月1日）
+       </a>
+       ：投資家の視点
+      </li>
+      <li>
+       <a href="https://www.jpx.co.jp/news/1020/20260428-01.html" rel="noopener noreferrer">
+        東京証券取引所：要請のアップデート（2026年4月28日）
+       </a>
+       ：経営資源の配分
+      </li>
+      <li>
+       <a href="https://www.jpx.co.jp/corporate/news/news-releases/1020/20261027-01.html" rel="noopener noreferrer">
+        東京証券取引所：4年目の現状と今後の取組み（2026年10月27日）
+       </a>
+       ：取組みの進捗
+      </li>
+      <li>
+       <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/definitions.html" rel="noopener noreferrer">
+        NYU Stern / Aswath Damodaran：Financial Ratios and Measures
+       </a>
+       ：WACC・CAPM・時価・負債コストの定義
+      </li>
+      <li>
+       <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/lectures/capstr.html" rel="noopener noreferrer">
+        NYU Stern / Aswath Damodaran：Capital Structure
+       </a>
+       ：資本構成・税効果・負債とリスク
+      </li>
+      <li>
+       <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/val.html" rel="noopener noreferrer">
+        NYU Stern / Aswath Damodaran：Discounted Cashflow Valuation
+       </a>
+       ：DCF・FCFF・FCFEと割引率
+      </li>
+     </ul>
+     <p class="source-note">
+      確認日：2026年11月26日。本文の計算例・図解はすべて説明用の架空例または概念図であり、実在企業・業種平均の数値ではありません。
+     </p>
+    </section>
+    <section aria-labelledby="review-entry-title" class="anime-item" id="review-entry">
+     <h2 class="anime-title" id="review-entry-title">
+      一般ユーザー目線の体験でおすすめの会社をご紹介
+     </h2>
+     <div class="review">
+      <a class="review-card" href="userreview.html">
+       <img alt="証券・FX・仮想通貨の個人レビュー" decoding="async" height="250" loading="lazy" src="Xcard/review_300x250.jpg" width="300">
+        <span>
+         証券・FX・仮想通貨の個人レビューを見る
+        </span>
+       </img>
+      </a>
+     </div>
+    </section>
+    <section aria-labelledby="caution-title" class="anime-item" id="caution">
+     <h2 class="anime-title" id="caution-title">
+      ご利用にあたっての注意事項
+     </h2>
+     <p>
+      本記事は金融教育・情報提供を目的とし、特定の有価証券の購入や投資を勧誘するものではありません。株式投資には価格変動等による損失の可能性があります。制度・税務上の取扱いは状況によって異なります。最新の開示資料等を確認し、ご自身の判断と責任でお取引ください。
+     </p>
+    </section>
+   </main>
+  </div>
+  <div id="footer">
+  </div>
+  <script defer src="include.js">
+  </script>
+  <script defer src="sidebar.js">
+  </script>
+ </body>
+</html>

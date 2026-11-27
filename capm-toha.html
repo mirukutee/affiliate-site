@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0653a6">
+<link rel="canonical" href="https://tousiportal.jp/capm-toha.html"><title>CAPM（資本資産価格モデル）とは？株主資本コストの計算方法とβ・株式リスクプレミアムの関係を初心者向けに解説</title>
+<meta name="description" content="CAPM（資本資産価格モデル）とは、市場リスクと期待収益率の関係を説明する金融理論です。リスクフリーレート、β、株式リスクプレミアムの意味や計算方法、WACC・分散投資・企業価値評価との関係を初心者向けに解説します。">
+<meta name="author" content="ミルクティー情報発信">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CAPM（資本資産価格モデル）とは？株主資本コストの計算方法とβ・株式リスクプレミアムの関係を初心者向けに解説">
+<meta property="og:description" content="CAPM（資本資産価格モデル）とは、市場リスクと期待収益率の関係を説明する金融理論です。リスクフリーレート、β、株式リスクプレミアムの意味や計算方法、WACC・分散投資・企業価値評価との関係を初心者向けに解説します。">
+<meta property="og:url" content="https://tousiportal.jp/capm-toha.html">
+<meta property="og:image" content="https://tousiportal.jp/sonota/capm-toha-ogp.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CAPM（資本資産価格モデル）とβ・リスクフリーレート・株式リスクプレミアムによる株主資本コストの計算方法を初心者向けに解説">
+<meta property="og:site_name" content="投資ポータル.jp">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@QwZd0ksG2138610">
+<meta name="twitter:creator" content="@QwZd0ksG2138610">
+<meta name="twitter:title" content="CAPM（資本資産価格モデル）とは？株主資本コストの計算方法とβ・株式リスクプレミアムの関係を初心者向けに解説">
+<meta name="twitter:description" content="CAPM（資本資産価格モデル）とは、市場リスクと期待収益率の関係を説明する金融理論です。リスクフリーレート、β、株式リスクプレミアムの意味や計算方法、WACC・分散投資・企業価値評価との関係を初心者向けに解説します。">
+<meta name="twitter:image" content="https://tousiportal.jp/sonota/capm-toha-ogp.webp">
+<meta name="twitter:image:alt" content="CAPM（資本資産価格モデル）とβ・リスクフリーレート・株式リスクプレミアムによる株主資本コストの計算方法を初心者向けに解説">
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu-card.css">
+<link rel="stylesheet" href="sidebar.css">
+<link rel="stylesheet" href="table.css">
+<link rel="stylesheet" href="header.css">
+<style>
+    .capm-page #main{min-width:0;width:100%;max-width:1120px;overflow:visible;padding:24px;background:#f7fafc}
+    .capm-page .anime-item{padding:26px;margin:20px 0;background:#fff;border:1px solid #d4e0e8;box-shadow:none}
+    .capm-page .title{font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.55;color:#103753;margin:12px 0 18px}
+    .capm-page .anime-title{font-size:1.45rem;line-height:1.55;color:#123f5b;border-color:#087f8c}
+    .capm-page #main p,.capm-page #main li,.capm-page #main dd{font-size:1rem;line-height:1.95}
+    .capm-page #main p{margin:12px 0}.capm-page #main li{margin:8px 0}
+    .capm-page #main h3{font-size:1.12rem;color:#124a69;margin:24px 0 8px}
+    .capm-page #main a{color:#075e9b;text-underline-offset:3px;overflow-wrap:anywhere}
+    .capm-page .eyebrow{font-weight:700;letter-spacing:.12em;color:#087781;font-size:.85rem!important}
+    .capm-page .meta,.capm-page .source-note{font-size:.86rem!important;color:#526574}
+    .capm-page .note,.capm-page .formula,.capm-page .readmore{padding:15px 18px;border-left:4px solid #16848b;background:#eff8f8;border-radius:0 8px 8px 0;margin:16px 0}
+    .capm-page .note--gold{border-color:#b18428;background:#fff8e8}.capm-page .formula{font-weight:700;font-size:1.12rem;line-height:1.8}.capm-page .readmore{border-color:#448cc3;background:#f0f7fd}
+    .capm-page .toc ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;padding-left:22px}
+    .capm-page .table-scroll{overflow-x:auto;max-width:100%;border:1px solid #cbdce6;border-radius:8px;margin:16px 0;overscroll-behavior-x:contain}
+    .capm-page .hub-table{border-collapse:collapse;width:100%;min-width:760px;table-layout:fixed;font-size:.94rem;line-height:1.8;background:#fff}
+    .capm-page .hub-table caption{text-align:left;padding:14px;font-weight:700;color:#174661;background:#eef5fa;caption-side:top}
+    .capm-page .hub-table th,.capm-page .hub-table td{border:1px solid #d5e0e7;padding:14px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+    .capm-page .hub-table thead th{color:#fff;background:#16465f}.capm-page .hub-table tbody th{background:#f0f6f9;color:#16465f;width:22%}.capm-page .hub-table tbody tr:nth-child(even) td{background:#f8fbfc}
+    .capm-page .hero-image{display:block;width:100%;max-width:860px;height:auto;margin:0 auto;border:1px solid #d9e4ee;border-radius:12px}
+    .capm-page .flow{list-style:none;counter-reset:step;padding:0!important;margin:20px 0}.capm-page .flow li{counter-increment:step;position:relative;padding:18px 20px 18px 64px;background:#f1f7fa;border:1px solid #d0e0e9;border-radius:8px;margin:0 0 24px!important}.capm-page .flow li:before{content:counter(step);position:absolute;left:16px;top:18px;background:#12627d;color:#fff;border-radius:50%;width:32px;height:32px;text-align:center;line-height:32px}.capm-page .flow li:not(:last-child):after{content:'↓';position:absolute;bottom:-29px;left:29px;color:#12627d;font-size:24px}.capm-page .flow strong{display:block}
+    .capm-page .link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.capm-page .link-card{border:1px solid #ccdee9;border-radius:8px;padding:15px;background:#f8fbfd}.capm-page .link-card p{font-size:.92rem!important;margin:8px 0 0!important}.capm-page dt{font-weight:700;color:#154c67;margin-top:20px}.capm-page dd{margin:6px 0 18px}.capm-page section[id]{scroll-margin-top:90px}.capm-page .source-list{padding-left:22px}.capm-page .source-list li{font-size:.9rem!important}
+    @media(max-width:768px){.capm-page #main{padding:12px;max-width:100%}.capm-page .anime-item{padding:18px 14px}.capm-page .anime-title{font-size:1.2rem}.capm-page .toc ul,.capm-page .link-grid{grid-template-columns:1fr}.capm-page #main p,.capm-page #main li,.capm-page #main dd{font-size:.96rem}.capm-page .hub-table{font-size:.9rem}.capm-page .flow li{padding-left:58px}.capm-page .breadcrumb{font-size:.8rem}}
+    @media print{#header,#sidebar,#footer,.skip,.toc{display:none!important}.capm-page .container{display:block;margin:0;padding:0}.capm-page #main{max-width:none;padding:0}.capm-page .table-scroll{overflow:visible}.capm-page .hub-table{min-width:0;font-size:9pt}}
+  
+
+.capm-page .anime-item:hover {transform:none;box-shadow:none}
+.capm-page #main{flex:1 1 0;min-width:0;overflow-wrap:anywhere}
+.capm-page .hub-table{min-width:550px;table-layout:auto;letter-spacing:normal}
+.capm-page .hub-table th{white-space:normal}
+.capm-page .hub-table tbody th{width:auto}
+.capm-page .capm-figure{padding:14px;margin:18px 0;background:#f7fbfd;border:1px solid #d4e0e8;border-radius:12px}
+.capm-page .capm-figure svg{display:block;width:100%;height:auto;max-width:720px;margin:auto;font-family:inherit}
+.capm-page figcaption{font-size:.86rem;line-height:1.7;color:#526574;margin:10px 0 0}
+.capm-page .capm-equation{display:grid;grid-template-columns:1fr auto 1.5fr auto 1fr;gap:8px;align-items:center;text-align:center}
+.capm-page .capm-part{padding:14px 10px;border:1px solid #cbdce6;border-radius:10px;text-align:center;line-height:1.7;font-weight:700;color:#143e56;background:#eaf4fc;overflow-wrap:anywhere}
+.capm-page .capm-part small{display:block;font-weight:400;font-size:.82rem}
+.capm-page .erp{background:#fff5df;border-color:#dfc487;color:#694c13}
+.capm-page .result{background:#e4f4f0;border-color:#9bcfc2;color:#125b52}
+.capm-page .capm-route{display:grid;gap:8px;text-align:center;max-width:720px;margin:auto}
+.capm-page .capm-branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.capm-page .capm-branches>div{display:grid;gap:8px}
+.capm-page details{border:1px solid #d4e0e8;border-radius:8px;margin:10px 0;padding:13px 16px}
+.capm-page summary{cursor:pointer;font-weight:700;color:#154c67}
+.capm-page .checklist{list-style:none;padding-left:0}
+.capm-page .checklist li{padding:8px 12px;border-radius:6px;background:#f3f8fb}
+.capm-page .checklist li::before{content:'□ ';color:#087f8c;font-weight:bold}
+.capm-page .table-scroll:focus-visible{outline:2px solid #087f8c;outline-offset:2px}
+.capm-page .review-card img{width:100%;max-width:300px;height:auto}
+@media(max-width:768px){.capm-page #main{flex:auto}.capm-page .capm-equation{grid-template-columns:1fr}.capm-page .capm-figure{padding:7px}.capm-page .capm-branches{gap:6px}.capm-page .capm-part{padding:10px 5px;font-size:.84rem}.capm-page .hub-table{min-width:530px}.capm-page .hub-table td,.capm-page .hub-table th{padding:9px}}
+
+@media(max-width:560px){.capm-page .capm-figure.capm-chart{overflow-x:auto}.capm-page .capm-chart svg{min-width:500px}.capm-page .capm-chart figcaption{max-width:100%;overflow-wrap:anywhere}}
+.capm-page .capm-chart:focus-visible{outline:2px solid #087f8c;outline-offset:2px}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://tousiportal.jp/capm-toha.html#article",
+  "headline": "CAPM（資本資産価格モデル）とは？株主資本コストの計算方法とβ・株式リスクプレミアムの関係を初心者向けに解説",
+  "description": "CAPM（資本資産価格モデル）とは、市場リスクと期待収益率の関係を説明する金融理論です。リスクフリーレート、β、株式リスクプレミアムの意味や計算方法、WACC・分散投資・企業価値評価との関係を初心者向けに解説します。",
+  "datePublished": "2026-11-27",
+  "dateModified": "2026-11-27",
+  "inLanguage": "ja",
+  "articleSection": "企業分析・財務指標",
+  "image": [
+    "https://tousiportal.jp/sonota/capm-toha-ogp.webp"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tousiportal.jp/capm-toha.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "ミルクティー",
+    "url": "https://tousiportal.jp/profile.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "投資ポータル.jp",
+    "url": "https://tousiportal.jp/"
+  }
+}
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://tousiportal.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "記事",
+      "item": "https://tousiportal.jp/column.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CAPMとは？",
+      "item": "https://tousiportal.jp/capm-toha.html"
+    }
+  ]
+}
+</script>
+</head>
+<body class="capm-page" id="top"><a class="skip" href="#main">本文へ移動</a>
+<div id="header">
+</div>
+<div class="container">
+<aside id="sidebar">
+</aside>
+<main id="main" tabindex="-1">
+<nav aria-label="パンくず">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">ホーム</a>
+</li>
+<li class="breadcrumb-item"><a href="column.html">記事</a>
+</li>
+<li class="breadcrumb-item active" aria-current="page">CAPMとは？
+</li>
+</ol>
+</nav>
+<p class="eyebrow">企業分析・財務指標
+</p>
+<h1 class="title">CAPM（資本資産価格モデル）とは？株主資本コストの計算方法とβ・株式リスクプレミアムの関係を初心者向けに解説
+</h1>
+<p class="meta">公開・最終更新：<time datetime="2026-11-27">2026年11月27日</time> ／ <a href="profile.html">管理人プロフィール</a>
+</p>
+<p>企業の株主資本コストはどのように決まるのでしょうか。CAPMは、株式市場のリスクと期待収益率の関係を整理するモデルです。βや株式リスクプレミアムの意味から、WACC・企業価値評価へのつながりまで、架空の計算例と図解で学びます。
+</p>
+<figure><img class="hero-image" src="sonota/capm-toha.webp" width="1200" height="630" alt="CAPM（資本資産価格モデル）とβ・リスクフリーレート・株式リスクプレミアムによる株主資本コストの計算方法を初心者向けに解説" decoding="async" fetchpriority="high">
+<figcaption>市場リスクに見合う期待収益率を推計するCAPM。投資成果の保証ではありません。
+</figcaption>
+</figure>
+<section class="anime-item toc">
+<h2 class="anime-title">目次
+</h2>
+<ul>
+<li><a href="#definition">CAPM（資本資産価格モデル）とは？</a>
+</li>
+<li><a href="#risk-return">なぜ投資家はリスクに見合った収益を求めるのか？</a>
+</li>
+<li><a href="#formula">CAPMの計算方法・計算式</a>
+</li>
+<li><a href="#risk-free">リスクフリーレートとは？</a>
+</li>
+<li><a href="#beta">β（ベータ）とは？市場との連動性</a>
+</li>
+<li><a href="#beta-calc">βの計算方法と推計条件</a>
+</li>
+<li><a href="#erp">株式リスクプレミアムとは？</a>
+</li>
+<li><a href="#example">CAPMを実際に計算してみよう</a>
+</li>
+<li><a href="#sml">証券市場線（SML）とは？</a>
+</li>
+<li><a href="#risk-types">システマティックリスクと非システマティックリスク</a>
+</li>
+<li><a href="#diversification">CAPMと分散投資の関係</a>
+</li>
+<li><a href="#wacc">CAPMとWACCの関係</a>
+</li>
+<li><a href="#roe-roic">CAPMとROE・ROICの関係</a>
+</li>
+<li><a href="#dcf">CAPMとDCF法・企業価値評価の関係</a>
+</li>
+<li><a href="#sensitivity">金利や市場環境が変わるとどうなる？</a>
+</li>
+<li><a href="#jpx">日本企業の資本コスト経営とCAPM</a>
+</li>
+<li><a href="#limitations">CAPMの前提条件と限界</a>
+</li>
+<li><a href="#misunderstandings">初心者が誤解しやすいポイントと注意点</a>
+</li>
+<li><a href="#checklist">初心者向けチェックリスト</a>
+</li>
+<li><a href="#faq">FAQ｜よくある質問</a>
+</li>
+<li><a href="#summary">まとめ</a>
+</li>
+<li><a href="#related">関連記事・関連教材</a>
+</li>
+<li><a href="#sources">参考資料・出典</a>
+</li>
+</ul>
+</section>
+<section class="anime-item" id="definition" aria-labelledby="definition-title">
+<h2 class="anime-title" id="definition-title">CAPM（資本資産価格モデル）とは？
+</h2>
+<p>CAPM（Capital Asset Pricing Model、キャップエムなどと読む）は、資産の市場全体に対するリスクと期待収益率の関係を説明するモデルです。日本語では資本資産価格モデル、資本資産評価モデルなどと呼ばれます。
+</p>
+<p>市場全体の値動きにどの程度反応する資産なのかを考え、それに見合う期待収益率を推計します。企業分析では、株主が資金提供に対して求める収益率、つまり<strong>株主資本コスト</strong>を見積もる代表的な方法です。
+</p>
+<p>現代ポートフォリオ理論を背景に、William Sharpe、John Lintner、Jan Mossinらが1960年代に発展させました。WACCやDCF法にもつながりますが、将来の株価や実際の収益率を正確に予測するものではありません。<a href="#sources">参考資料</a>
+</p>
+</section>
+<section class="anime-item" id="risk-return" aria-labelledby="risk-return-title">
+<h2 class="anime-title" id="risk-return-title">なぜ投資家はリスクに見合った収益を求めるのか？
+</h2>
+<p>同じ期間、同じ通貨で投資先を考えるとき、結果が不確かな資産を選ぶには、それに見合う収益を期待したいと考えるのが自然です。CAPMでは特に、市場と一緒に動くことで分散後も残るリスクに注目します。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="架空の投資対象の比較（横スクロール可）">
+<table class="hub-table">
+<caption>架空の投資対象の比較
+</caption>
+<thead>
+<tr><th scope="col">投資対象</th><th scope="col">リスクの特徴</th><th scope="col">想定期待収益率</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">リスクの極めて低い資産</th><td>比較的小さい</td><td>2％</td>
+</tr>
+<tr><th scope="row">市場平均に近い株式投資</th><td>市場変動リスクがある</td><td>7％</td>
+</tr>
+<tr><th scope="row">市場感応度が高い株式</th><td>市場変動の影響を受けやすい</td><td>9.5％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>すべて説明用の仮定です。実際の商品利回りや将来の投資成果ではありません。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="収益率とリスクの違い（横スクロール可）">
+<table class="hub-table">
+<caption>収益率とリスクの違い
+</caption>
+<thead>
+<tr><th scope="col">用語</th><th scope="col">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">期待収益率</th><td>将来の収益率を確率や予想に基づいて見積もった値</td>
+</tr>
+<tr><th scope="row">実現収益率</th><td>投資後に実際に得た収益率</td>
+</tr>
+<tr><th scope="row">要求収益率</th><td>そのリスクを引き受けるために投資家が必要と考える収益率</td>
+</tr>
+<tr><th scope="row">損失の可能性</th><td>実際の収益率がマイナスになることもある</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>基本CAPMの均衡では期待収益率と要求収益率が対応しますが、現実に投資家がそれぞれ予想する収益率と要求する収益率は異なり得ます。値動きが激しいだけで期待収益率が高くなるわけではありません。関連：<a href="risuku-to-return.html">リスクとリターンの関係</a>
+</p>
+</section>
+<section class="anime-item" id="formula" aria-labelledby="formula-title">
+<h2 class="anime-title" id="formula-title">CAPMの計算方法・計算式
+</h2>
+<p>まず、リスクのない基準資産で得られる収益率を出発点とし、市場リスクを引き受ける分の追加収益率を考えます。
+</p>
+<figure class="capm-figure">
+<div class="capm-equation">
+<div class="capm-part rf"><strong>リスクフリーレート</strong><small>基準となる収益率</small>
+</div><span>＋</span>
+<div class="capm-part erp"><strong>β × 株式リスクプレミアム</strong><small>市場リスクに対応する上乗せ</small>
+</div><span>＝</span>
+<div class="capm-part result"><strong>期待収益率</strong><small>株主資本コストの推計にも使用</small>
+</div>
+</div>
+<figcaption>CAPMの基本構造（株式市場を代理とする場合）
+</figcaption>
+</figure>
+<p class="formula">E(R<sub>i</sub>) ＝ R<sub>f</sub> ＋ β<sub>i</sub> ×［E(R<sub>m</sub>) − R<sub>f</sub>］
+</p>
+<p class="formula">株主資本コスト ＝ リスクフリーレート ＋ β × 株式リスクプレミアム
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="計算式の記号（横スクロール可）">
+<table class="hub-table">
+<caption>計算式の記号
+</caption>
+<thead>
+<tr><th scope="col">記号</th><th scope="col">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">E(Ri)</th><td>対象資産の期待収益率</td>
+</tr>
+<tr><th scope="row">Rf</th><td>リスクフリーレート</td>
+</tr>
+<tr><th scope="row">βi</th><td>対象資産の市場リスクへの感応度</td>
+</tr>
+<tr><th scope="row">E(Rm)</th><td>市場ポートフォリオの期待収益率</td>
+</tr>
+<tr><th scope="row">E(Rm) − Rf</th><td>市場リスクプレミアム</td>
+</tr>
+<tr><th scope="row">βi ×［E(Rm) − Rf］</th><td>対象資産の市場リスクに対応する期待超過収益率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>理論上の市場ポートフォリオはリスクのある資産全体を含むものです。実務では株価指数などを代理にするため、市場リスクプレミアムを株式リスクプレミアムとして扱うことが一般的です。両者を厳密に同一とは考えません。
+</p>
+</section>
+<section class="anime-item" id="risk-free" aria-labelledby="risk-free-title">
+<h2 class="anime-title" id="risk-free-title">リスクフリーレートとは？
+</h2>
+<p>Risk-Free Rate（Rf）は、理論上、対象通貨・対象期間において収益率が確実な資産の収益率です。実務では信用リスクが極めて低い国の国債利回りを近似値として用いる場合があります。円建て評価なら日本国債、ドル建てなら米国債などが候補です。企業の長期評価では長期国債利回りが参考になります。
+</p>
+<ul>
+<li>評価対象のキャッシュフローと同じ通貨・適切な期間の金利を使う。
+</li>
+<li>名目キャッシュフローには名目割引率、実質キャッシュフローには実質割引率を対応させる。
+</li>
+<li>国債でも発行国の信用リスク、満期前の価格変動、インフレによる購買力低下がある。クーポンの再投資リスクにも注意する。
+</li>
+<li>政策金利そのものではなく、短期金利と長期金利も無条件に置き換えられない。
+</li>
+</ul>
+<p>本記事の2％などは架空の年率です。実際の金利水準は掲載していません。関連：<a href="chouki-kinri-toha.html">長期金利</a> ／ <a href="seisaku-kinri-toha.html">政策金利</a> ／ <a href="jisshitsu-kinri-toha.html">実質金利</a> ／ <a href="kokusai-kakaku-rimawari.html">国債価格と利回り</a> ／ <a href="kinri-shurui-kankei.html">金利の種類と関係</a>
+</p>
+</section>
+<section class="anime-item" id="beta" aria-labelledby="beta-title">
+<h2 class="anime-title" id="beta-title">β（ベータ）とは？市場との連動性
+</h2>
+<p>βは市場収益率が変わるとき、対象資産の収益率がどの程度変化する傾向があるかを表す指標です。β＝1.5なら、市場収益率が1％ポイント高くなったとき、線形関係で説明される個別株収益率の変化は＋1.5％ポイントです。市場が下落する方向でも感応度が働きます。
+</p>
+<figure class="capm-figure capm-chart" tabindex="0" aria-labelledby="beta-bars-caption"><svg viewBox="0 0 640 360" role="img" aria-label="βによる市場連動部分の違い：市場収益率が1％ポイント変化した場合。個別株の実際の値動きではありません。" xmlns="http://www.w3.org/2000/svg"><text x="30" y="28" text-anchor="start" fill="#173a56" font-size="17">市場収益率が1％ポイント上昇した場合</text><text x="35" y="92" text-anchor="start" fill="#173a56" font-size="17">β＝0.5</text><rect x="155" y="65" width="125.0" height="42" rx="6" fill="#448cc3"/><text x="290.0" y="92" text-anchor="start" fill="#173a56" font-size="17">＋0.5％pt</text><text x="35" y="175" text-anchor="start" fill="#173a56" font-size="17">β＝1</text><rect x="155" y="148" width="250" height="42" rx="6" fill="#087f8c"/><text x="415" y="175" text-anchor="start" fill="#173a56" font-size="17">＋1％pt</text><text x="35" y="258" text-anchor="start" fill="#173a56" font-size="17">β＝1.5</text><rect x="155" y="231" width="375.0" height="42" rx="6" fill="#b18428"/><text x="540.0" y="258" text-anchor="start" fill="#173a56" font-size="17">＋1.5％pt</text><text x="35" y="335" text-anchor="start" fill="#173a56" font-size="16">市場連動部分のみ（その他の変動要因は含まない）</text></svg>
+<figcaption id="beta-bars-caption">βによる市場連動部分の違い：市場収益率が1％ポイント変化した場合。個別株の実際の値動きではありません。
+</figcaption>
+</figure>
+<div class="table-scroll" tabindex="0" role="region" aria-label="βの基本的な意味（横スクロール可）">
+<table class="hub-table">
+<caption>βの基本的な意味
+</caption>
+<thead>
+<tr><th scope="col">β</th><th scope="col">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">β＝1</th><td>市場と同程度の感応度</td>
+</tr>
+<tr><th scope="row">β＞1</th><td>市場変動に対する感応度が比較的大きい</td>
+</tr>
+<tr><th scope="row">0＜β＜1</th><td>市場変動に対する感応度が比較的小さい</td>
+</tr>
+<tr><th scope="row">β＝0</th><td>市場収益率との線形な共変動がない</td>
+</tr>
+<tr><th scope="row">β＜0</th><td>市場と逆方向に連動する傾向</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="note note--gold">βは個別株の値動き全体の大きさではありません。β＝1でも市場と完全に同じ値動きにはならず、β＝0でも価格変動や損失はあり得ます。負のβでも毎回逆方向に動くとは限らず、高いβが高い利益を保証するものでもありません。
+</p>
+</section>
+<section class="anime-item" id="beta-calc" aria-labelledby="beta-calc-title">
+<h2 class="anime-title" id="beta-calc-title">βの計算方法と推計条件
+</h2>
+<p class="formula">β<sub>i</sub> ＝ Cov(R<sub>i</sub>, R<sub>m</sub>) ÷ Var(R<sub>m</sub>)
+</p>
+<p>Covは対象資産と市場の収益率の共分散（一緒に変動する傾向）、Varは市場収益率の分散（平均からのばらつきの二乗の平均に対応する量）です。分散が正の場合、共分散を市場の分散で割ることで市場への感応度を求めます。
+</p>
+<p class="formula">0.0006 ÷ 0.0004 ＝ 1.5
+</p>
+<p>収益率を小数で扱った架空の例です。共分散が0.0006、市場収益率の分散が0.0004ならβは1.5となります。散布図では市場収益率を横軸、個別株収益率を縦軸とし、切片を含む回帰直線の傾きがβに相当します。
+</p>
+<figure class="capm-figure capm-chart" tabindex="0" aria-labelledby="beta-scatter-caption"><svg viewBox="0 0 640 360" role="img" aria-label="架空の収益率の散布図。回帰直線の傾きがβ＝1.5に相当します。本文の共分散・分散とは別の説明用データです。" xmlns="http://www.w3.org/2000/svg"><text x="15" y="24" text-anchor="start" fill="#173a56" font-size="17">個別株の収益率（％）</text><line x1="50" y1="175" x2="590" y2="175" stroke="#173a56" stroke-width="2" /><line x1="320" y1="34" x2="320" y2="310" stroke="#173a56" stroke-width="2" /><text x="140" y="197" text-anchor="middle" fill="#173a56" font-size="15">-2</text><text x="230" y="197" text-anchor="middle" fill="#173a56" font-size="15">-1</text><text x="320" y="197" text-anchor="middle" fill="#173a56" font-size="15">0</text><text x="410" y="197" text-anchor="middle" fill="#173a56" font-size="15">1</text><text x="500" y="197" text-anchor="middle" fill="#173a56" font-size="15">2</text><text x="305" y="279" text-anchor="end" fill="#173a56" font-size="14">-3</text><text x="305" y="246" text-anchor="end" fill="#173a56" font-size="14">-2</text><text x="305" y="213" text-anchor="end" fill="#173a56" font-size="14">-1</text><text x="305" y="147" text-anchor="end" fill="#173a56" font-size="14">1</text><text x="305" y="114" text-anchor="end" fill="#173a56" font-size="14">2</text><text x="305" y="81" text-anchor="end" fill="#173a56" font-size="14">3</text><line x1="95.0" y1="298.75" x2="545.0" y2="51.25" stroke="#087f8c" stroke-width="3" /><circle cx="140" cy="254.2" r="5" fill="#b18428"/><circle cx="185.0" cy="265.75" r="5" fill="#b18428"/><circle cx="230" cy="214.6" r="5" fill="#b18428"/><circle cx="275.0" cy="212.95" r="5" fill="#b18428"/><circle cx="320" cy="175.0" r="5" fill="#b18428"/><circle cx="365.0" cy="163.45" r="5" fill="#b18428"/><circle cx="410" cy="115.6" r="5" fill="#b18428"/><circle cx="455.0" cy="117.25" r="5" fill="#b18428"/><circle cx="500" cy="56.2" r="5" fill="#b18428"/><text x="580" y="58" text-anchor="end" fill="#173a56" font-size="16">回帰直線：傾き1.5</text><text x="595" y="340" text-anchor="end" fill="#173a56" font-size="17">市場の収益率（％）</text></svg>
+<figcaption id="beta-scatter-caption">架空の収益率の散布図。回帰直線の傾きがβ＝1.5に相当します。本文の共分散・分散とは別の説明用データです。
+</figcaption>
+</figure>
+<ul>
+<li>市場の代理指数（TOPIX、S&amp;P500など）と通貨
+</li>
+<li>過去データの期間、日次・週次・月次の頻度
+</li>
+<li>配当や株式分割の調整方法
+</li>
+<li>企業の事業構成や借入など財務構成の変化
+</li>
+</ul>
+<p>これらによって推計値は異なります。理論上の市場ポートフォリオを株価指数で完全に観測できるわけではありません。同業他社のβから事業リスクを推計し、自社の財務レバレッジに合わせて調整するボトムアップ・ベータという方法もあります。アンレバードβ・レバードβの詳しい計算はここでは扱いません。
+</p>
+</section>
+<section class="anime-item" id="erp" aria-labelledby="erp-title">
+<h2 class="anime-title" id="erp-title">株式リスクプレミアムとは？
+</h2>
+<p>株式リスクプレミアム（Equity Risk Premium：ERP）とは、株式市場のリスクを負うことに対して、リスクフリーレートよりも上乗せして期待する収益率です。
+</p>
+<p class="formula">株式リスクプレミアム ＝ 株式市場の期待収益率 − リスクフリーレート
+</p>
+<p>株式市場の期待収益率が7％、リスクフリーレートが2％なら、差は5％ポイント（年率の差）です。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="ERPの代表的な推計方法（横スクロール可）">
+<table class="hub-table">
+<caption>ERPの代表的な推計方法
+</caption>
+<thead>
+<tr><th scope="col">方法</th><th scope="col">考え方</th><th scope="col">注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">過去の実績</th><td>株式と安全性の高い資産の過去収益率の差</td><td>期間、算術・幾何平均などで異なる</td>
+</tr>
+<tr><th scope="row">インプライド・リスクプレミアム</th><td>現在の市場価格と将来CFの想定から逆算</td><td>成長率や評価モデルなどに依存</td>
+</tr>
+<tr><th scope="row">投資家への調査</th><td>投資家や専門家の期待を調べる</td><td>回答者や調査時期に依存</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ERPは世界共通の固定値ではなく、将来の期待値と過去の実績も別です。不確実性が増して投資家の要求収益率が高まるとERPが上昇する場合がありますが、必ずそうなるとは限りません。債券の<a href="credit-spread-toha.html">信用スプレッド</a>は信用リスク等を反映する債券利回りの差であり、株式ERPとは別の概念です。
+</p>
+</section>
+<section class="anime-item" id="example" aria-labelledby="example-title">
+<h2 class="anime-title" id="example-title">CAPMを実際に計算してみよう
+</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="説明用の前提（架空・年率）（横スクロール可）">
+<table class="hub-table">
+<caption>説明用の前提（架空・年率）
+</caption>
+<thead>
+<tr><th scope="col">項目</th><th scope="col">数値</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">リスクフリーレート</th><td>2％</td>
+</tr>
+<tr><th scope="row">β</th><td>1.2</td>
+</tr>
+<tr><th scope="row">株式リスクプレミアム</th><td>5％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="formula">2％ ＋ 1.2 × 5％ ＝ 2％ ＋ 6％ ＝ <strong>8％</strong>
+</p>
+<p>この場合、株主資本コストは年率8％と推計されます。これは株主が求める総収益率（配当と値上がり益など）のモデル上の見積もりで、企業が毎年8％の配当を払う義務を意味せず、実際に8％儲かる保証もありません。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="β別の期待収益率（Rf＝2％、ERP＝5％）（横スクロール可）">
+<table class="hub-table">
+<caption>β別の期待収益率（Rf＝2％、ERP＝5％）
+</caption>
+<thead>
+<tr><th scope="col">β</th><th scope="col">計算式</th><th scope="col">期待収益率</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">-0.5</th><td>2％ − 0.5 × 5％</td><td>-0.5％</td>
+</tr>
+<tr><th scope="row">0</th><td>2％ ＋ 0 × 5％</td><td>2％</td>
+</tr>
+<tr><th scope="row">0.5</th><td>2％ ＋ 0.5 × 5％</td><td>4.5％</td>
+</tr>
+<tr><th scope="row">1</th><td>2％ ＋ 1 × 5％</td><td>7％</td>
+</tr>
+<tr><th scope="row">1.2</th><td>2％ ＋ 1.2 × 5％</td><td>8％</td>
+</tr>
+<tr><th scope="row">1.5</th><td>2％ ＋ 1.5 × 5％</td><td>9.5％</td>
+</tr>
+<tr><th scope="row">2</th><td>2％ ＋ 2 × 5％</td><td>12％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ERPが正なら、他の条件が同じときβが高いほど要求収益率は高くなります。負のβの資産には市場リスクを相殺する性質があるため、モデル上はリスクフリーレートを下回る期待収益率（この例では−0.5％）となる場合があります。すべて架空の計算であり、実在する銘柄の値ではありません。
+</p>
+</section>
+<section class="anime-item" id="sml" aria-labelledby="sml-title">
+<h2 class="anime-title" id="sml-title">証券市場線（SML）とは？
+</h2>
+<p>証券市場線（Security Market Line：SML）はCAPMが示すβと期待収益率の関係を直線にしたものです。縦軸との交点はRf、傾きは市場リスクプレミアム、β＝1の点は市場ポートフォリオの期待収益率を示します。
+</p>
+<figure class="capm-figure capm-chart" tabindex="0" aria-labelledby="sml-graph-caption"><svg viewBox="0 0 640 360" role="img" aria-label="証券市場線（SML）：Rf＝2％、ERP＝5％の仮定に基づく理論値。実測データではありません。" xmlns="http://www.w3.org/2000/svg"><text x="20" y="24" text-anchor="start" fill="#173a56" font-size="17">期待収益率（％）</text><line x1="70" y1="292" x2="570" y2="292" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="298" text-anchor="end" fill="#173a56" font-size="17">0</text><line x1="70" y1="252" x2="570" y2="252" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="258" text-anchor="end" fill="#173a56" font-size="17">2</text><line x1="70" y1="212" x2="570" y2="212" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="218" text-anchor="end" fill="#173a56" font-size="17">4</text><line x1="70" y1="172" x2="570" y2="172" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="178" text-anchor="end" fill="#173a56" font-size="17">6</text><line x1="70" y1="132" x2="570" y2="132" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="138" text-anchor="end" fill="#173a56" font-size="17">8</text><line x1="70" y1="92" x2="570" y2="92" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="98" text-anchor="end" fill="#173a56" font-size="17">10</text><line x1="70" y1="52" x2="570" y2="52" stroke="#d8e4ec" stroke-width="1" /><text x="60" y="58" text-anchor="end" fill="#173a56" font-size="17">12</text><line x1="70" y1="32" x2="70" y2="292" stroke="#173a56" stroke-width="2" /><line x1="70" y1="292" x2="590" y2="292" stroke="#173a56" stroke-width="2" /><line x1="70" y1="252" x2="570" y2="52" stroke="#087f8c" stroke-width="4" /><circle cx="70" cy="252" r="5" fill="#087f8c"/><text x="70" y="314" text-anchor="middle" fill="#173a56" font-size="17">0</text><text x="78" y="242" text-anchor="start" fill="#173a56" font-size="16">2％</text><circle cx="195.0" cy="202.0" r="5" fill="#087f8c"/><text x="195.0" y="314" text-anchor="middle" fill="#173a56" font-size="17">0.5</text><text x="203.0" y="192.0" text-anchor="start" fill="#173a56" font-size="16">4.5％</text><circle cx="320" cy="152" r="5" fill="#087f8c"/><text x="320" y="314" text-anchor="middle" fill="#173a56" font-size="17">1</text><text x="328" y="142" text-anchor="start" fill="#173a56" font-size="16">7％</text><circle cx="445.0" cy="102.0" r="5" fill="#087f8c"/><text x="445.0" y="314" text-anchor="middle" fill="#173a56" font-size="17">1.5</text><text x="453.0" y="92.0" text-anchor="start" fill="#173a56" font-size="16">9.5％</text><circle cx="570" cy="52" r="5" fill="#087f8c"/><text x="570" y="314" text-anchor="middle" fill="#173a56" font-size="17">2</text><text x="578" y="42" text-anchor="start" fill="#173a56" font-size="16">12％</text><text x="585" y="342" text-anchor="end" fill="#173a56" font-size="17">β（市場感応度）</text><text x="90" y="263" text-anchor="start" fill="#173a56" font-size="15">切片：2％</text><text x="305" y="80" text-anchor="start" fill="#173a56" font-size="15">傾き：5％ポイント / β 1</text></svg>
+<figcaption id="sml-graph-caption">証券市場線（SML）：Rf＝2％、ERP＝5％の仮定に基づく理論値。実測データではありません。
+</figcaption>
+</figure>
+<p>別の方法で推計した期待収益率がSMLより上にある場合、その推計がCAPMの要求収益率を上回ると解釈できます。ただし期待収益率は観測済みの確定値ではなく、それだけで割安や購入すべき資産だとは断定できません。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="SMLとCMLの違い（横スクロール可）">
+<table class="hub-table">
+<caption>SMLとCMLの違い
+</caption>
+<thead>
+<tr><th scope="col">比較項目</th><th scope="col">証券市場線（SML）</th><th scope="col">資本市場線（CML）</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">横軸</th><td>β</td><td>収益率の標準偏差</td>
+</tr>
+<tr><th scope="row">縦軸</th><td>期待収益率</td><td>期待収益率</td>
+</tr>
+<tr><th scope="row">対象</th><td>個別資産やポートフォリオ</td><td>理論上の効率的なポートフォリオ</td>
+</tr>
+<tr><th scope="row">リスクの考え方</th><td>市場リスクへの感応度</td><td>ポートフォリオ全体の変動リスク</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>CMLはリスクフリー資産と市場ポートフォリオの組み合わせによる効率的な投資機会を表します。個別株のβを横軸とするSMLとは区別しましょう。
+</p>
+</section>
+<section class="anime-item" id="risk-types" aria-labelledby="risk-types-title">
+<h2 class="anime-title" id="risk-types-title">システマティックリスクと非システマティックリスク
+</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="市場リスクと企業固有リスク（横スクロール可）">
+<table class="hub-table">
+<caption>市場リスクと企業固有リスク
+</caption>
+<thead>
+<tr><th scope="col">比較項目</th><th scope="col">システマティックリスク</th><th scope="col">非システマティックリスク</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">意味</th><td>市場全体に共通するリスク</td><td>個別企業・事業などの固有リスク</td>
+</tr>
+<tr><th scope="row">発生要因</th><td>景気後退、金融政策、金利、インフレ、市場混乱、広範な地政学リスク</td><td>業績悪化、不祥事、品質問題、経営戦略の失敗、取引先への依存</td>
+</tr>
+<tr><th scope="row">分散投資による軽減</th><td>一般的な分散投資では除去が難しい</td><td>適切な分散投資で軽減できる</td>
+</tr>
+<tr><th scope="row">CAPMとの関係</th><td>βを通じて期待収益率に反映</td><td>基本モデルでは独立した上乗せの対象外</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>特定企業の問題が市場全体に波及することもあるため、実際の分類は単純ではありません。システミックリスクは金融システムの機能不全が連鎖するリスクなどを指し、システマティックリスクとは異なる用語です。
+</p>
+</section>
+<section class="anime-item" id="diversification" aria-labelledby="diversification-title">
+<h2 class="anime-title" id="diversification-title">CAPMと分散投資の関係
+</h2>
+<p>一社に集中すれば、その会社の業績悪化や不祥事の影響を大きく受けます。異なる企業や業種に分散すれば、固有の変動が互いに打ち消されることがあります。基本CAPMでは十分な分散を前提とし、分散しても残る市場リスクに対して期待収益率の上乗せが求められます。
+</p>
+<figure class="capm-figure capm-chart" tabindex="0" aria-labelledby="div-graph-caption"><svg viewBox="0 0 640 360" role="img" aria-label="分散投資とリスクの概念図。同程度の市場感応度と独立した固有リスクを仮定した例で、特定銘柄数でリスクが消えることを示しません。" xmlns="http://www.w3.org/2000/svg"><text x="20" y="24" text-anchor="start" fill="#173a56" font-size="17">ポートフォリオ全体のリスク（概念）</text><line x1="75" y1="38" x2="75" y2="285" stroke="#173a56" stroke-width="2" /><line x1="75" y1="285" x2="590" y2="285" stroke="#173a56" stroke-width="2" /><path d="M75 285 L75 69.42 L87.70 125.78 L100.40 149.69 L113.10 163.40 L125.80 172.42 L138.50 178.86 L151.20 183.70 L163.90 187.50 L176.60 190.56 L189.30 193.08 L202.00 195.19 L214.70 196.99 L227.40 198.54 L240.10 199.90 L252.80 201.09 L265.50 202.14 L278.20 203.08 L290.90 203.93 L303.60 204.70 L316.30 205.39 L329.00 206.03 L341.70 206.61 L354.40 207.14 L367.10 207.63 L379.80 208.09 L392.50 208.51 L405.20 208.91 L417.90 209.28 L430.60 209.62 L443.30 209.94 L456.00 210.25 L468.70 210.53 L481.40 210.80 L494.10 211.06 L506.80 211.30 L519.50 211.52 L532.20 211.74 L544.90 211.95 L557.60 212.14 L570.30 212.33 L570 285 Z" fill="#e8f3f6"/><rect x="75" y="220" width="495" height="65" fill="#c9e4e6"/><line x1="75" y1="220" x2="570" y2="220" stroke="#087f8c" stroke-width="2" stroke-dasharray="7 5"/><polyline points="75.00,69.42 87.70,125.78 100.40,149.69 113.10,163.40 125.80,172.42 138.50,178.86 151.20,183.70 163.90,187.50 176.60,190.56 189.30,193.08 202.00,195.19 214.70,196.99 227.40,198.54 240.10,199.90 252.80,201.09 265.50,202.14 278.20,203.08 290.90,203.93 303.60,204.70 316.30,205.39 329.00,206.03 341.70,206.61 354.40,207.14 367.10,207.63 379.80,208.09 392.50,208.51 405.20,208.91 417.90,209.28 430.60,209.62 443.30,209.94 456.00,210.25 468.70,210.53 481.40,210.80 494.10,211.06 506.80,211.30 519.50,211.52 532.20,211.74 544.90,211.95 557.60,212.14 570.30,212.33" fill="none" stroke="#12627d" stroke-width="4"/><line x1="75" y1="38" x2="75" y2="285" stroke="#173a56" stroke-width="2" /><line x1="75" y1="285" x2="590" y2="285" stroke="#173a56" stroke-width="2" /><text x="335" y="267" text-anchor="middle" fill="#173a56" font-size="17">市場全体に共通するリスク</text><text x="375" y="162" text-anchor="middle" fill="#173a56" font-size="16">企業固有リスクの影響が縮小</text><text x="75" y="308" text-anchor="start" fill="#173a56" font-size="17">少ない</text><text x="570" y="308" text-anchor="end" fill="#173a56" font-size="17">多い</text><text x="330" y="342" text-anchor="middle" fill="#173a56" font-size="17">分散する銘柄数</text></svg>
+<figcaption id="div-graph-caption">分散投資とリスクの概念図。同程度の市場感応度と独立した固有リスクを仮定した例で、特定銘柄数でリスクが消えることを示しません。
+</figcaption>
+</figure>
+<p>銘柄数を増やすだけで必ずリスクが下がるわけではありません。同じ業種に集中していれば相関が高くなる場合があります。株式比率を変えたり異なる資産を組み合わせたりすることで市場リスクへの感応度自体も調整できる場合があります。
+</p>
+<p>関連：<a href="bunsantousi-kaisetu.html">分散投資</a> ／ <a href="sector-tousi-toha.html">セクター投資</a> ／ <a href="bunsantousi-sector-kaisetu.html">セクター分散</a> ／ <a href="shikin-kanri-toha.html">資金管理・リスク管理</a>
+</p>
+</section>
+<section class="anime-item" id="wacc" aria-labelledby="wacc-title">
+<h2 class="anime-title" id="wacc-title">CAPMとWACCの関係
+</h2>
+<p>CAPMで求めた株主資本コストは、企業全体の資金調達コストを推計するWACC（加重平均資本コスト）の構成要素になります。株主資本と有利子負債の時価比率で重み付けし、負債の税効果を考慮します。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="CAPMとWACCの比較（横スクロール可）">
+<table class="hub-table">
+<caption>CAPMとWACCの比較
+</caption>
+<thead>
+<tr><th scope="col">項目</th><th scope="col">CAPM</th><th scope="col">WACC</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">日本語名称</th><td>資本資産価格モデル</td><td>加重平均資本コスト</td>
+</tr>
+<tr><th scope="row">性質</th><td>リスクと期待収益率のモデル</td><td>企業全体の資本コストの推計値</td>
+</tr>
+<tr><th scope="row">目的</th><td>株主資本コストなどの推計</td><td>株主資本と負債を合わせたコスト</td>
+</tr>
+<tr><th scope="row">計算要素</th><td>Rf・β・市場リスクプレミアム</td><td>株主資本コスト・負債コスト・資本構成・税率</td>
+</tr>
+<tr><th scope="row">主な利用場面</th><td>株主価値評価・投資理論</td><td>事業価値評価・資本効率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="WACCの架空例（前回教材と共通の設定）（横スクロール可）">
+<table class="hub-table">
+<caption>WACCの架空例（前回教材と共通の設定）
+</caption>
+<thead>
+<tr><th scope="col">項目</th><th scope="col">数値</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">株主資本コスト（CAPM）</th><td>8％</td>
+</tr>
+<tr><th scope="row">株主資本の時価</th><td>60億円</td>
+</tr>
+<tr><th scope="row">有利子負債の時価</th><td>40億円</td>
+</tr>
+<tr><th scope="row">税引前負債コスト</th><td>3％</td>
+</tr>
+<tr><th scope="row">税率</th><td>30％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="formula">WACC ＝ 0.6 × 8％ ＋ 0.4 × 3％ ×（1 − 0.30）<br>＝ 4.8％ ＋ 0.84％ ＝ <strong>5.64％</strong>
+</p>
+<p>税引後負債コストは2.1％です。資本構成と税効果の詳細は<a href="wacc-toha.html">WACC（加重平均資本コスト）とは？</a>で整理しています。
+</p>
+</section>
+<section class="anime-item" id="roe-roic" aria-labelledby="roe-roic-title">
+<h2 class="anime-title" id="roe-roic-title">CAPMとROE・ROICの関係
+</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="収益性と比較すべき資本コスト（横スクロール可）">
+<table class="hub-table">
+<caption>収益性と比較すべき資本コスト
+</caption>
+<thead>
+<tr><th scope="col">収益性の指標</th><th scope="col">対応する資本コスト</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">ROE（自己資本利益率）</th><td>株主資本コスト</td>
+</tr>
+<tr><th scope="row">ROIC（投下資本利益率）</th><td>WACC</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>株主の要求収益率に対して企業がどの程度の資本収益性を上げているかを考える場合、ROEと株主資本コストとの差（エクイティスプレッド）が参考になります。
+</p>
+<p class="formula">エクイティスプレッド ＝ ROE − 株主資本コスト
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="エクイティスプレッド（架空例）（横スクロール可）">
+<table class="hub-table">
+<caption>エクイティスプレッド（架空例）
+</caption>
+<thead>
+<tr><th scope="col">企業</th><th scope="col">ROE</th><th scope="col">株主資本コスト</th><th scope="col">差</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">A社</th><td>12％</td><td>8％</td><td>＋4％ポイント</td>
+</tr>
+<tr><th scope="row">B社</th><td>8％</td><td>8％</td><td>0％ポイント</td>
+</tr>
+<tr><th scope="row">C社</th><td>5％</td><td>8％</td><td>−3％ポイント</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>過去の実績ROEと将来の要求収益率では期間や前提が異なります。株価には成長性、財務レバレッジ、収益の持続性、市場予想、現在の株価なども影響するため、差の正負だけで将来の株価は判断できません。ROICスプレッドはROIC−WACCで、比較対象が異なります。関連：<a href="roic-roe-roa-chigai.html">ROIC・ROE・ROAの違い</a> ／ <a href="jiko-shihon-hiritsu-toha.html">自己資本比率・D/Eレシオ・有利子負債</a>
+</p>
+</section>
+<section class="anime-item" id="dcf" aria-labelledby="dcf-title">
+<h2 class="anime-title" id="dcf-title">CAPMとDCF法・企業価値評価の関係
+</h2>
+<p>DCF（Discounted Cash Flow）法では、将来のキャッシュフローを対応する割引率で現在価値に換算します。誰に帰属する現金の流れかによって使う割引率が変わります。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="キャッシュフローと割引率（横スクロール可）">
+<table class="hub-table">
+<caption>キャッシュフローと割引率
+</caption>
+<thead>
+<tr><th scope="col">評価対象</th><th scope="col">割引率</th><th scope="col">評価の対象</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">FCFE（株主に帰属するフリーキャッシュフロー）</th><td>株主資本コスト</td><td>株主価値</td>
+</tr>
+<tr><th scope="row">FCFF（株主・債権者に帰属するフリーキャッシュフロー）</th><td>WACC</td><td>事業価値</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="capm-figure">
+<div class="capm-route">
+<div class="capm-part rf">リスクフリーレート・β・株式リスクプレミアム
+</div><span>↓</span>
+<div class="capm-part erp">CAPM
+</div><span>↓</span>
+<div class="capm-part result">株主資本コスト（例：8％）
+</div><span>↓　　↓</span>
+<div class="capm-branches">
+<div>
+<div class="capm-part rf">FCFEを割引<br>株主資本コスト
+</div><span>↓</span>
+<div class="capm-part result">株主価値
+</div>
+</div>
+<div>
+<div class="capm-part erp">税引後負債コスト・資本構成を加味<br>WACC（例：5.64％）
+</div><span>↓</span>
+<div class="capm-part rf">FCFFを割引
+</div><span>↓</span>
+<div class="capm-part result">事業価値
+</div>
+</div>
+</div>
+</div>
+<figcaption>CAPMからDCF評価までの2つの経路。評価対象と割引率を対応させます。
+</figcaption>
+</figure>
+<p>例えば1年後の正の現金100円を8％で割り引くと約92.59円、9％なら約91.74円です。同じ正のキャッシュフローなら割引率が上がるほど現在価値は下がります。ただし実際にはキャッシュフローや成長率、市場予想、需給も変化します。
+</p>
+<p class="note note--gold">一般的なFCF（営業CF−設備投資など）を無条件にFCFF・FCFEと同じものとして割り引かないでください。定義と資金提供者への帰属が重要です。
+</p>
+<p>関連：<a href="free-cash-flow-toha.html">フリーキャッシュフローとは？</a> ／ <a href="ebitda-toha.html">EBITDAとは？</a>
+</p>
+</section>
+<section class="anime-item" id="sensitivity" aria-labelledby="sensitivity-title">
+<h2 class="anime-title" id="sensitivity-title">金利や市場環境が変わるとどうなる？
+</h2>
+<p>CAPMの推計値は、基準金利、市場リスクへの感応度、リスクプレミアムの変化に応じて動きます。各ケースを基準から独立して比較します。
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="株主資本コストの感応度（独立した架空の仮定）（横スクロール可）">
+<table class="hub-table">
+<caption>株主資本コストの感応度（独立した架空の仮定）
+</caption>
+<thead>
+<tr><th scope="col">想定状況</th><th scope="col">Rf</th><th scope="col">β</th><th scope="col">ERP</th><th scope="col">株主資本コスト</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">基準ケース</th><td>2％</td><td>1.2</td><td>5％</td><td>8％</td>
+</tr>
+<tr><th scope="row">基準金利の上昇</th><td>3％</td><td>1.2</td><td>5％</td><td>9％</td>
+</tr>
+<tr><th scope="row">ERPの上昇</th><td>2％</td><td>1.2</td><td>6％</td><td>9.2％</td>
+</tr>
+<tr><th scope="row">βの上昇</th><td>2％</td><td>1.5</td><td>5％</td><td>9.5％</td>
+</tr>
+<tr><th scope="row">基準金利の低下</th><td>1％</td><td>1.2</td><td>5％</td><td>7％</td>
+</tr>
+<tr><th scope="row">複数の要素が変化</th><td>3％</td><td>1.5</td><td>6％</td><td>12％</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>他の条件が一定ならRfの上昇は株主資本コストを上昇させる。
+</li>
+<li>ERPが正ならβの上昇は株主資本コストを上昇させる。
+</li>
+<li>βが正ならERPの上昇は株主資本コストを上昇させる。
+</li>
+</ul>
+<p>実際の市場では複数の要素が同時に変わり、金利上昇と同じ幅で株主資本コストが上がるとは限りません。WACCや現在価値の変化につながる場合があります。関連：<a href="kinri-joushou-toha.html">金利上昇</a> ／ <a href="risk-off.html">リスクオフ</a> ／ <a href="keiki-koutai-recession-toha.html">景気後退</a>
+</p>
+</section>
+<section class="anime-item" id="jpx" aria-labelledby="jpx-title">
+<h2 class="anime-title" id="jpx-title">日本企業の資本コスト経営とCAPM
+</h2>
+<p>東証は2023年3月からプライム・スタンダード市場の上場会社に、資本コストと資本収益性の把握、経営改善の計画・開示、投資家との継続的な対話を求めています。2026年4月のアップデートでは経営資源の配分にも重点が置かれました。
+</p>
+<p>CAPMで株主資本コストを推計しROEと比較する、WACCを推計しROICと比較する、といった考え方は事業投資や経営資源配分、収益性改善を検討する手掛かりになります。東証の要請はCAPMの採用や一律の資本コスト設定を義務付けるものではありません。<a href="#source-jpx">東証公式資料</a>
+</p>
+<h3>JPXプライム150指数での実務例
+</h3>
+<p>JPXプライム150指数は、エクイティスプレッドとPBRを用いて価値創造を評価する指数です。2026年7月24日版の算出要領では、対象銘柄の株主資本コストに日本国債10年利回りとβ、TOPIXの長期年率換算リターンを使うCAPM型の式を採用しています。βは原則として直近60か月の月次収益率から推計し、0.5～2.0に調整する規定もあります。これは指数のための独自の推計ルールであり、全企業に共通する唯一の計算法ではありません。<a href="#source-jpx-index">公式算出要領</a>
+</p>
+<p>定期入替では時価総額上位を対象とし、推定エクイティスプレッドとPBRの二つの基準を使います。指数・構成銘柄への投資を推奨するものではありません。
+</p>
+</section>
+<section class="anime-item" id="limitations" aria-labelledby="limitations-title">
+<h2 class="anime-title" id="limitations-title">CAPMの前提条件と限界
+</h2>
+<h3>基本モデルの前提
+</h3>
+<ul>
+<li>合理的でリスク回避的な投資家が期待収益率と分散に基づいて選択する。
+</li>
+<li>投資期間や市場に対する期待が共通している。
+</li>
+<li>十分な分散ができ、資産を取引・分割できる。
+</li>
+<li>税金・取引費用などの摩擦がなく、同じリスクフリーレートで借入・貸付が可能とする。
+</li>
+</ul>
+<p>これらは基本形を説明するための単純化です。拡張モデルでは前提が変わることがあります。
+</p>
+<h3>現実の市場との違い
+</h3>
+<ul>
+<li>将来予測は投資家ごとに異なり、理論上の市場ポートフォリオを完全に観測しにくい。
+</li>
+<li>βは指数や推計期間に依存し、事業構造の変化などで時間とともに変わる。
+</li>
+<li>ERPの推計方法によって値が異なり、株主資本コストに唯一の正解はない。
+</li>
+<li>企業規模、割安度、収益性や投資家行動、市場の非効率性なども収益率に影響し得る。
+</li>
+</ul>
+<p>FamaとFrench（2004）はCAPMの実証結果が理論の予測と十分には一致せず、市場ポートフォリオの代理を用いた検証にも課題があると論じています。実務で広く使われてきたことと、現実を正確に説明できるかは別の問題です。<a href="#source-ff">研究資料</a>
+</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="代表的な発展・代替モデル（横スクロール可）">
+<table class="hub-table">
+<caption>代表的な発展・代替モデル
+</caption>
+<thead>
+<tr><th scope="col">モデル</th><th scope="col">基本的な考え方</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">ファーマ・フレンチ3ファクターモデル</th><td>市場要因に企業規模と簿価時価比の要因を加える</td>
+</tr>
+<tr><th scope="row">ファーマ・フレンチ5ファクターモデル</th><td>3要因に収益性と投資の要因を加える</td>
+</tr>
+<tr><th scope="row">APT（裁定価格理論）</th><td>複数の共通リスク要因と裁定機会がないことに基づく</td>
+</tr>
+<tr><th scope="row">その他のマルチファクターモデル</th><td>複数の要因で収益率を説明する</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>CAPMは簡潔で比較の出発点に使えますが、前提や推計の不確実性を意識して、別の方法や感応度分析と併用することが重要です。
+</p>
+</section>
+<section class="anime-item" id="misunderstandings" aria-labelledby="misunderstandings-title">
+<h2 class="anime-title" id="misunderstandings-title">初心者が誤解しやすいポイントと注意点
+</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="よくある誤解（横スクロール可）">
+<table class="hub-table">
+<caption>よくある誤解
+</caption>
+<thead>
+<tr><th scope="col">誤解</th><th scope="col">正しい理解</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">株価を正確に予測できる</th><td>リスクに対応する期待収益率のモデル</td>
+</tr>
+<tr><th scope="row">8％なら毎年8％儲かる</th><td>実現収益率は保証されない</td>
+</tr>
+<tr><th scope="row">βは価格変動全体の大きさ</th><td>市場への感応度</td>
+</tr>
+<tr><th scope="row">β＝1なら市場と同じ値動き</th><td>感応度が1という意味</td>
+</tr>
+<tr><th scope="row">β＝0なら無リスク</th><td>企業固有の変動や損失はあり得る</td>
+</tr>
+<tr><th scope="row">高βなら必ず利益が大きい</th><td>条件付きで要求収益率が高くなる</td>
+</tr>
+<tr><th scope="row">国債は完全に無リスク</th><td>信用・価格・インフレ等のリスクがある</td>
+</tr>
+<tr><th scope="row">ERPは固定値</th><td>市場・時点・方法で異なる</td>
+</tr>
+<tr><th scope="row">株主資本コスト＝配当利回り</th><td>値上がり益も含む要求収益率</td>
+</tr>
+<tr><th scope="row">CAPM＝WACC</th><td>モデルと企業全体の資本コストは異なる</td>
+</tr>
+<tr><th scope="row">分散で全リスクをなくせる</th><td>市場全体に共通するリスクは残る</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>過去のβや収益率をそのまま将来に当てはめず、通貨・期間・推計方法の整合性を確認してください。期待収益率の高さやβの低さだけで投資対象を選ばず、業績、財務健全性、収益性、株価水準なども確認しましょう。
+</p>
+</section>
+<section class="anime-item" id="checklist" aria-labelledby="checklist-title">
+<h2 class="anime-title" id="checklist-title">初心者向けチェックリスト
+</h2>
+<p>企業の開示資料や金融理論を読むときの確認項目です。売買を促すものではありません。
+</p>
+<ul class="checklist">
+<li>リスクフリーレートの意味を理解したか
+</li>
+<li>国債利回りの通貨・期間を確認したか
+</li>
+<li>βが市場感応度であることを理解したか
+</li>
+<li>βの算定期間と市場指数を確認したか
+</li>
+<li>ERPの推計方法を確認したか
+</li>
+<li>期待収益率と実現収益率を区別したか
+</li>
+<li>市場リスクと企業固有リスクを区別したか
+</li>
+<li>株主資本コストとWACCを区別したか
+</li>
+<li>ROEと株主資本コストの比較条件を確認したか
+</li>
+<li>CAPMの前提と限界を理解したか
+</li>
+<li>一つの指標だけで投資判断していないか
+</li>
+</ul>
+</section>
+<section class="anime-item" id="faq" aria-labelledby="faq-title">
+<h2 class="anime-title" id="faq-title">FAQ｜よくある質問
+</h2>
+<details>
+<summary>CAPMとは何ですか？
+</summary>
+<p>市場リスクと期待収益率の関係を説明する金融理論です。
+</p>
+</details>
+<details>
+<summary>CAPMは何と読みますか？
+</summary>
+<p>キャップエムなどと読みます。
+</p>
+</details>
+<details>
+<summary>CAPMはどのように計算しますか？
+</summary>
+<p>リスクフリーレート＋β×市場リスクプレミアムです。
+</p>
+</details>
+<details>
+<summary>CAPMは何のために使われるのですか？
+</summary>
+<p>株主資本コストの推計、リスクと期待収益率の理解、企業価値評価などに使われます。
+</p>
+</details>
+<details>
+<summary>βとは何ですか？
+</summary>
+<p>市場収益率に対する対象資産の感応度です。
+</p>
+</details>
+<details>
+<summary>βが1より大きいとは？
+</summary>
+<p>市場への線形な感応度が比較的大きいという意味です。
+</p>
+</details>
+<details>
+<summary>βが0の資産は安全ですか？
+</summary>
+<p>いいえ。企業固有リスクなどは残ります。
+</p>
+</details>
+<details>
+<summary>βがマイナスになることはありますか？
+</summary>
+<p>あります。市場と逆方向の共変動がある場合です。毎回逆方向に動く保証はありません。
+</p>
+</details>
+<details>
+<summary>リスクフリーレートには何を使いますか？
+</summary>
+<p>通貨や評価期間に対応する、信用リスクの低い国の国債利回りなどを近似値として用います。
+</p>
+</details>
+<details>
+<summary>株式リスクプレミアムとは何ですか？
+</summary>
+<p>株式市場の期待収益率からリスクフリーレートを引いた期待超過収益率です。
+</p>
+</details>
+<details>
+<summary>CAPMとWACCは何が違いますか？
+</summary>
+<p>CAPMは株主資本コストなどの推計モデル、WACCは株主資本と負債を合わせた資本コストです。
+</p>
+</details>
+<details>
+<summary>CAPMで計算した収益率は実際に得られますか？
+</summary>
+<p>保証されません。実際には市場や企業の状況で変化します。
+</p>
+</details>
+<details>
+<summary>金利上昇は株主資本コストにどう影響しますか？
+</summary>
+<p>他の条件が一定で基準金利が上昇すれば推計値は上がります。実際にはERPやβも変化します。
+</p>
+</details>
+<details>
+<summary>CAPMにはどのような限界がありますか？
+</summary>
+<p>市場の代理指数、β、ERP、理論上の前提などに不確実性があり、実際の収益率を十分説明できない場合があります。
+</p>
+</details>
+</section>
+<section class="anime-item" id="summary" aria-labelledby="summary-title">
+<h2 class="anime-title" id="summary-title">まとめ
+</h2>
+<ul>
+<li>CAPMは市場リスクと期待収益率の関係を説明する金融理論。
+</li>
+<li>リスクフリーレート・β・株式リスクプレミアムから期待収益率を推計する。
+</li>
+<li>βは市場全体の値動きへの感応度であり、企業固有のリスクは適切な分散によって軽減できる場合がある。
+</li>
+<li>CAPMは株主資本コストを推計する代表的な方法で、WACCやDCF法、ROEとの比較に応用できる。
+</li>
+<li>理論上の前提と実証上の限界があり、推計値は実際の投資成果を保証しない。
+</li>
+</ul>
+<p>数式を覚えるだけでなく、リスクの種類と資金提供者が求める収益率の関係を理解することが、企業の資本コストや価値評価を学ぶ第一歩です。
+</p>
+</section>
+<section class="anime-item" id="related" aria-labelledby="related-title">
+<h2 class="anime-title" id="related-title">関連記事・関連教材
+</h2>
+<div class="link-grid">
+<div class="link-card"><a href="wacc-toha.html">WACCとは？</a>
+<p>企業全体の資本コスト
+</p>
+</div>
+<div class="link-card"><a href="roic-roe-roa-chigai.html">ROIC・ROE・ROAの違い</a>
+<p>資本効率の評価
+</p>
+</div>
+<div class="link-card"><a href="free-cash-flow-toha.html">フリーキャッシュフローとは？</a>
+<p>利益と現金の違い
+</p>
+</div>
+<div class="link-card"><a href="jiko-shihon-hiritsu-toha.html">自己資本比率とは？</a>
+<p>財務健全性と負債
+</p>
+</div>
+<div class="link-card"><a href="kokusai-kakaku-rimawari.html">国債価格・利回り・長期金利</a>
+<p>金利の仕組みを図解
+</p>
+</div>
+<div class="link-card"><a href="sector-tousi-toha.html">セクター投資とは？</a>
+<p>業種分散の基礎
+</p>
+</div>
+<div class="link-card"><a href="risk-off.html">リスクオフとは？</a>
+<p>市場リスクと資産価格
+</p>
+</div>
+<div class="link-card"><a href="bunsantousi-kaisetu.html">分散投資とは？</a>
+<p>分散の基本
+</p>
+</div>
+</div>
+</section>
+<section class="anime-item" id="sources" aria-labelledby="sources-title">
+<h2 class="anime-title" id="sources-title">参考資料・出典
+</h2>
+<ul class="source-list">
+<li id="source-sharpe"><a href="https://doi.org/10.1111/j.1540-6261.1964.tb02865.x">William F. Sharpe（1964）: Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk</a>：CAPMの理論的背景・原著論文
+</li>
+<li id="source-ff"><a href="https://mba.tuck.dartmouth.edu/bespeneckbo/default/AFA611-Eckbo%20web%20site/AFA611-S6B-FamaFrench-CAPM-JEP04.pdf">Fama &amp; French（2004）: The Capital Asset Pricing Model: Theory and Evidence</a>：理論と実証上の課題（大学公開PDF、DOI: 10.1257/0895330042162430）
+</li>
+<li id="source-nyu"><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/dcfinput.html">Aswath Damodaran（NYU Stern）: Estimating Inputs for Valuation</a>：株主資本コスト・割引率の実務
+</li>
+<li id="source-risk"><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/risk.html">Aswath Damodaran: The CAPM in Practice</a>：Rf・ERP・βの推計
+</li>
+<li id="source-discount"><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/discountrates.htm">Aswath Damodaran: Discount Rates</a>：事業リスクと株主リスク・割引率
+</li>
+<li id="source-jpx"><a href="https://www.jpx.co.jp/equities/follow-up/02.html">日本取引所グループ：資本コストや株価を意識した経営の実現に向けた対応</a>：東証の要請と投資家との対話
+</li>
+<li id="source-jpx-overview"><a href="https://www.jpx.co.jp/markets/indices/jpx-prime150/">日本取引所グループ：JPXプライム150指数</a>：指数の概要と評価軸
+</li>
+<li id="source-jpx-index"><a href="https://www.jpx.co.jp/markets/indices/line-up/files/cal2_37_jpx150.pdf">JPX総研：東証指数算出要領（JPXプライム150指数編、2026年7月24日版）</a>：選定方法・株主資本コストの算定（特に8～9ページ）
+</li>
+</ul>
+<p>確認日：2026年11月27日。本文の数値・グラフは説明用の架空例であり、実際の市場データや企業の推計値ではありません。
+</p>
+</section>
+<section class="anime-item" aria-labelledby="review-entry-title">
+<h2 class="anime-title" id="review-entry-title">一般ユーザー目線の体験でおすすめの会社をご紹介
+</h2>
+<div class="review"><a class="review-card" href="userreview.html"><img src="Xcard/review_300x250.jpg" width="300" height="250" alt="証券・FX・仮想通貨の個人レビュー" decoding="async" loading="lazy"><span>証券・FX・仮想通貨の個人レビューを見る</span></a>
+</div>
+</section>
+<section class="anime-item" aria-labelledby="caution-title">
+<h2 class="anime-title" id="caution-title">ご利用にあたっての注意事項
+</h2>
+<p>本記事は金融教育・一般的な情報提供を目的とし、特定の有価証券や金融商品の購入・売却を勧誘するものではありません。株式投資には価格変動等による損失の可能性があります。推計値は将来の成果を保証しません。最新の公式資料・企業開示等を確認し、ご自身の判断と責任でお取引ください。
+</p>
+</section>
+</main>
+</div>
+<div id="footer">
+</div>
+<script defer src="include.js">
+</script>
+<script defer src="sidebar.js">
+</script>
+</body>
+</html>
